@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
     private void Awake() {
         if (Instance!=null)
         {
-            Debug.Log("more than one player instance"); 
+            Debug.LogError("more than one player instance"); 
         }
         Instance = this;
     }
@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
     private void GameInput_OnInteractioAction(object sender,System.EventArgs e) {
         //receive the board message, and take actions
         if (selectedCounter != null) {
-            selectedCounter.Interact();
+            selectedCounter.Interact(this);
         }
     }
 
@@ -84,6 +84,7 @@ public class Player : MonoBehaviour
         }
     }
     private void HandleMovement() {
+        //Get location updates through the input system package
         Vector2 inputVector = gameInput.GetMoveVector();
 
         //transfer to game coordinate
@@ -104,20 +105,21 @@ public class Player : MonoBehaviour
             if (canMove) {
                 moveDir = moveDirX;
             } else {
+                //try z axis
                 Vector3 moveDirZ = new Vector3(0, 0, moveDir.z).normalized;
                 canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirZ, moveDistance);
                 if (canMove) {
                     moveDir = moveDirZ;
-                } else {
                 }
             }
         }
 
+        //update location
         if (canMove) {
             transform.position += moveDir * moveDistance;
         }
 
-
+        //update animation flag
         isWalking = moveDir != Vector3.zero;
 
         //update dirction
