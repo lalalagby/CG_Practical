@@ -13,24 +13,26 @@ Data      : 16.08.2023
 */
 
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour,IHeyTeaObjectParents
 {
     //singleton mode
     public static Player Instance {get;private set;}
 
     public event EventHandler<OnSelectedCounterChangedEventsArgs> OnSelectedCounterChanged;
     public class OnSelectedCounterChangedEventsArgs : EventArgs {
-        public ClearCounter selectedCounter;
+        public BaseCounter selectedCounter;
     }
 
     //define the player's move speed
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private GameInput gameInput;
     [SerializeField] private LayerMask countersLayerMask;
+    [SerializeField] private Transform heyTeaObjectHoldPoint;
 
     private bool isWalking;
     private Vector3 lastInteractDir;
-    private ClearCounter selectedCounter;
+    private BaseCounter selectedCounter;
+    private HeyTeaObject heyTeaObject;
 
     private void Awake() {
         if (Instance!=null)
@@ -71,7 +73,7 @@ public class Player : MonoBehaviour
 
         float interactDistance = 2f;
         if (Physics.Raycast(transform.position, lastInteractDir, out RaycastHit raycastHit, interactDistance, countersLayerMask)) {
-            if (raycastHit.transform.TryGetComponent(out ClearCounter clearCounter)) {
+            if (raycastHit.transform.TryGetComponent(out BaseCounter clearCounter)) {
                 //has clear counter
                 if(clearCounter != selectedCounter) {
                     SetSelectedCounter( clearCounter);
@@ -127,11 +129,30 @@ public class Player : MonoBehaviour
         transform.forward = Vector3.Slerp(transform.forward, moveDir, rotatedSpeed * Time.deltaTime);
     }
 
-    private void SetSelectedCounter(ClearCounter selectedCounter) {
-        this.selectedCounter = selectedCounter;
+    private void SetSelectedCounter(BaseCounter baseCounter) {
+        this.selectedCounter = baseCounter;
 
         OnSelectedCounterChanged?.Invoke(this, new OnSelectedCounterChangedEventsArgs {
-            selectedCounter = selectedCounter
+            selectedCounter = baseCounter
         });
+    }
+
+    public Transform GetHeyTeaObjectFollowTransform() {
+        return heyTeaObjectHoldPoint;
+    }
+    public void SetHeyTeaObject(HeyTeaObject heyTeaObject) {
+        this.heyTeaObject = heyTeaObject;
+    }
+
+    public HeyTeaObject GetHeyTeaObject() {
+        return heyTeaObject;
+    }
+
+    public void ClearHeyTeaObject() {
+        heyTeaObject = null;
+    }
+
+    public bool HasHeyTeaObject() {
+        return heyTeaObject != null;
     }
 }

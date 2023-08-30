@@ -12,8 +12,8 @@ Data      : 28.08.2023
 
 public class SelectedCounterVisual : MonoBehaviour
 {
-    [SerializeField] private ClearCounter clearCounter;
-    [SerializeField] private GameObject visualGameObject;
+    [SerializeField] private BaseCounter baseCounter;
+    [SerializeField] private GameObject[] visualGameObjectArray;
 
     //Add a subscriber to the player selected counter event
     private void Start() {
@@ -22,7 +22,7 @@ public class SelectedCounterVisual : MonoBehaviour
 
     //Change the appearance of the locker when a message is received
     private void Player_OnSelectedCounterChanged(object render,Player.OnSelectedCounterChangedEventsArgs e) {
-        if (e.selectedCounter == clearCounter) {
+        if (e.selectedCounter == baseCounter) {
             Show();
         } else {
             Hide();
@@ -30,9 +30,13 @@ public class SelectedCounterVisual : MonoBehaviour
     }
 
     private void Show() {
-        visualGameObject.SetActive(true);
+        foreach(GameObject gameObject in visualGameObjectArray) {
+            gameObject.SetActive(true);
+        }
     }
     private void Hide() {
-        visualGameObject.SetActive(false);
+        foreach (GameObject gameObject in visualGameObjectArray) {
+            gameObject.SetActive(false);
+        }
     }
 }
