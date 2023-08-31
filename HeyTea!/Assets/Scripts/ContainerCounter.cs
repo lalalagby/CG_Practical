@@ -4,8 +4,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+/*
+File Name : ContainerCounter.cs
+Function  : Container interaction class
+Author    : Yong Wu
+Data      : 28.08.2023
+
+*/
+
 public class ContainerCounter : BaseCounter 
 {
+    //Define events for cabinet crawling
     public event EventHandler OnPlayerGrabbedObject;
 
     [SerializeField] private HeyTeaObjectSO heyTeaObjectSO;
@@ -17,6 +26,8 @@ public class ContainerCounter : BaseCounter
             }
         } else {
             if (!HasHeyTeaObject()) {
+                //When the player has nothing in their hands and there is nothing on the cabinet, 
+                //create a new item and broadcast the animation event captured by the cabinet
                 Transform heyTeaTransform = Instantiate(heyTeaObjectSO.prefab);
                 heyTeaTransform.GetComponent<HeyTeaObject>().SetHeyTeaObjectParents(player);
                 OnPlayerGrabbedObject?.Invoke(this, EventArgs.Empty);

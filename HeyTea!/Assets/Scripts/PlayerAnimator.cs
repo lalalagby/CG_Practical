@@ -20,10 +20,12 @@ public class PlayerAnimator : MonoBehaviour
     private Animator animator;
 
     private void Awake() {
+        //Obtain the animation state machine of the player
         animator = GetComponent<Animator>();
         animator.SetBool(IS_WALKING, player.IsWalking());
     }
 
+    //Perform animation demonstrations by obtaining the iswalking state.
     private void Update() {
         animator.SetBool(IS_WALKING, player.IsWalking());
     }

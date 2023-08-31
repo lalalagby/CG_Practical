@@ -17,6 +17,7 @@ public class SelectedCounterVisual : MonoBehaviour
 
     //Add a subscriber to the player selected counter event
     private void Start() {
+        //Subscribe to events where players can interact with cabinet changes
         Player.Instance.OnSelectedCounterChanged += Player_OnSelectedCounterChanged;
     }
 

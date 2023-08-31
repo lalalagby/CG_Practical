@@ -2,6 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+File Name : ContainerCounter.cs
+Function  : Material category
+Author    : Yong Wu
+Data      : 28.08.2023
+
+*/
 public class HeyTeaObject : MonoBehaviour
 {
     [SerializeField] private HeyTeaObjectSO heyTeaObjectSO;
@@ -12,6 +19,7 @@ public class HeyTeaObject : MonoBehaviour
         return heyTeaObjectSO;
     }
 
+    //Convert the owner and location of this item by passing in the owner.
     public void SetHeyTeaObjectParents(IHeyTeaObjectParents heyTeaObjectParent) {
         //Clear the record of the old counter 
         if (this.heyTeaObjectParent != null) {
