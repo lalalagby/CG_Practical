@@ -28,8 +28,8 @@ public class ContainerCounter : BaseCounter
             if (!HasHeyTeaObject()) {
                 //When the player has nothing in their hands and there is nothing on the cabinet, 
                 //create a new item and broadcast the animation event captured by the cabinet
-                Transform heyTeaTransform = Instantiate(heyTeaObjectSO.prefab);
-                heyTeaTransform.GetComponent<HeyTeaObject>().SetHeyTeaObjectParents(player);
+                HeyTeaObject.SpawnHeyTeaObejct(heyTeaObjectSO, player);
+
                 OnPlayerGrabbedObject?.Invoke(this, EventArgs.Empty);
             } else {
                 this.GetHeyTeaObject().SetHeyTeaObjectParents(player);

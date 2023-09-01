@@ -22,6 +22,8 @@ public class BaseCounter : MonoBehaviour, IHeyTeaObjectParents {
     //Virtual functions for interacting with users
     public virtual void Interact(Player player) { }
 
+    public virtual void InteractC(Player player) { }
+
     //Control interface function for item ownership
     public Transform GetHeyTeaObjectFollowTransform() {
         return counterTopPoint;

@@ -13,6 +13,7 @@ Data      : 27.08.2023
 public class GameInput : MonoBehaviour
 {
     public event EventHandler OnInteractAction;
+    public event EventHandler OnInteractCAction;
     private PlayerInputActions playerInputActions;
 
     private void Awake() {
@@ -21,12 +22,19 @@ public class GameInput : MonoBehaviour
 
         //Subscribe to user input events
         playerInputActions.Player.Interact.performed += Interact_Performed;
+        playerInputActions.Player.InteractC.performed += InteractC_Performed;
     }
 
     //publisher and subscriber to listen the interaction type action.
     private void Interact_Performed(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
         //if the suscriber number is not zero, then we can board this message.
         OnInteractAction?.Invoke(this, EventArgs.Empty);
+    }
+
+    //cutting action
+    private void InteractC_Performed(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
+        //if the suscriber number is not zero, then we can board this message.
+        OnInteractCAction?.Invoke(this, EventArgs.Empty);
     }
 
     public Vector2 GetMoveVector() {

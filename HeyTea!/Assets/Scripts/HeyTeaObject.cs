@@ -41,4 +41,19 @@ public class HeyTeaObject : MonoBehaviour
     public IHeyTeaObjectParents GetHeyTeaObjectParents() {
         return heyTeaObjectParent;
     }
+
+    public void DestroySelf() {
+        heyTeaObjectParent.ClearHeyTeaObject();
+        Destroy(gameObject);
+    }
+
+    public static HeyTeaObject SpawnHeyTeaObejct(HeyTeaObjectSO heyTeaObjectSO,IHeyTeaObjectParents heyTeaObjectParents) {
+        Transform heyTeaTransform = Instantiate(heyTeaObjectSO.prefab);
+
+        HeyTeaObject heyTeaObject = heyTeaTransform.GetComponent<HeyTeaObject>();
+
+        heyTeaObject.SetHeyTeaObjectParents(heyTeaObjectParents);
+
+        return heyTeaObject;
+    }
 }
