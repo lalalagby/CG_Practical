@@ -48,14 +48,22 @@ public class Player : MonoBehaviour,IHeyTeaObjectParents
     }
     public void Start() {
         //As a subscriber to the game input event
-        gameInput.OnInteractAction += GameInput_OnInteractioAction;
+        gameInput.OnInteractAction += GameInput_OnInteractionAction;
+        gameInput.OnInteractHoldAction += GameInput_OnInteractionHoldAction;
     }
 
     //The response function after receiving subscribed events.
-    private void GameInput_OnInteractioAction(object sender,System.EventArgs e) {
+    private void GameInput_OnInteractionAction(object sender,System.EventArgs e) {
         //receive the board message, and take actions
         if (selectedCounter != null) {
             selectedCounter.Interact(this);
+        }
+    }
+
+    private void GameInput_OnInteractionHoldAction(object sender, GameInput.OnInteractHoldActionEventArgs e) {
+        //receive the board message, and take actions
+        if (selectedCounter != null) {
+            selectedCounter.InteractHold(this,e.Time);
         }
     }
 
@@ -117,14 +125,14 @@ public class Player : MonoBehaviour,IHeyTeaObjectParents
         if (!canMove) {
             //first attempt x axis
             Vector3 moveDirX = new Vector3(moveDir.x, 0, 0).normalized;
-            canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirX, moveDistance);
+            canMove = moveDir.x != 0 && !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirX, moveDistance);
 
             if (canMove) {
                 moveDir = moveDirX;
             } else {
                 //try z axis
                 Vector3 moveDirZ = new Vector3(0, 0, moveDir.z).normalized;
-                canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirZ, moveDistance);
+                canMove = moveDir.z != 0 &&!Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDirZ, moveDistance);
                 if (canMove) {
                     moveDir = moveDirZ;
                 }
