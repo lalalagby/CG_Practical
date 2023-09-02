@@ -21,6 +21,8 @@ public class GameInput : MonoBehaviour
     private PlayerInputActions playerInputActions;
 
     private bool isHolding;
+    private float sendInterval = 0.1f;
+    private float cumulativeTime = 0f;
 
     private void Awake() {
         playerInputActions = new PlayerInputActions();
@@ -33,8 +35,15 @@ public class GameInput : MonoBehaviour
     }
 
     private void Update() {
-        if (isHolding) {
-            OnInteractHoldAction?.Invoke(this, new OnInteractHoldActionEventArgs { Time=Time.deltaTime});
+        //if user is holding interact key,we will send subsribtion per interval;
+        if (isHolding ) {
+            if(cumulativeTime >= sendInterval) {
+                OnInteractHoldAction?.Invoke(this, new OnInteractHoldActionEventArgs { Time = sendInterval });
+                cumulativeTime = 0f;
+            } else {
+                cumulativeTime += Time.deltaTime;
+            }
+            
         } 
     }
 
