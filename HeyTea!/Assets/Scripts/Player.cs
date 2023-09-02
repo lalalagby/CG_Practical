@@ -49,7 +49,7 @@ public class Player : MonoBehaviour,IHeyTeaObjectParents
     public void Start() {
         //As a subscriber to the game input event
         gameInput.OnInteractAction += GameInput_OnInteractionAction;
-        gameInput.OnInteractCAction += GameInput_OnInteractionCAction;
+        gameInput.OnInteractHoldAction += GameInput_OnInteractionHoldAction;
     }
 
     //The response function after receiving subscribed events.
@@ -60,10 +60,10 @@ public class Player : MonoBehaviour,IHeyTeaObjectParents
         }
     }
 
-    private void GameInput_OnInteractionCAction(object sender, System.EventArgs e) {
+    private void GameInput_OnInteractionHoldAction(object sender, GameInput.OnInteractHoldActionEventArgs e) {
         //receive the board message, and take actions
         if (selectedCounter != null) {
-            selectedCounter.InteractC(this);
+            selectedCounter.InteractHold(this,e.Time);
         }
     }
 

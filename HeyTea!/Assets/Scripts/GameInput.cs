@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.Interactions;
 
 /*
 File Name : GameInput.cs
@@ -13,8 +14,13 @@ Data      : 27.08.2023
 public class GameInput : MonoBehaviour
 {
     public event EventHandler OnInteractAction;
-    public event EventHandler OnInteractCAction;
+    public event EventHandler<OnInteractHoldActionEventArgs> OnInteractHoldAction;
+    public class OnInteractHoldActionEventArgs : EventArgs {
+        public float Time;
+    }
     private PlayerInputActions playerInputActions;
+
+    private bool isHolding;
 
     private void Awake() {
         playerInputActions = new PlayerInputActions();
@@ -22,7 +28,14 @@ public class GameInput : MonoBehaviour
 
         //Subscribe to user input events
         playerInputActions.Player.Interact.performed += Interact_Performed;
-        playerInputActions.Player.InteractC.performed += InteractC_Performed;
+        playerInputActions.Player.InteractC.performed += InteractHold_Performed;
+        playerInputActions.Player.InteractC.canceled += InteractHold_Canceled;
+    }
+
+    private void Update() {
+        if (isHolding) {
+            OnInteractHoldAction?.Invoke(this, new OnInteractHoldActionEventArgs { Time=Time.deltaTime});
+        } 
     }
 
     //publisher and subscriber to listen the interaction type action.
@@ -32,9 +45,18 @@ public class GameInput : MonoBehaviour
     }
 
     //cutting action
-    private void InteractC_Performed(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
+    private void InteractHold_Performed(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
         //if the suscriber number is not zero, then we can board this message.
-        OnInteractCAction?.Invoke(this, EventArgs.Empty);
+        if(obj.interaction is HoldInteraction) {
+            isHolding = true;
+        }
+    }
+
+    private void InteractHold_Canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
+        //if the suscriber number is not zero, then we can board this message.
+        if (obj.interaction is HoldInteraction) {
+            isHolding = false;
+        }
     }
 
     public Vector2 GetMoveVector() {

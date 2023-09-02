@@ -27,7 +27,11 @@ public class CuttingCounter : BaseCounter
     [SerializeField] private CuttingRecipeSO[] cuttingRecipeSOArray;
 
     //processing time
-    private int cuttingProgress;
+    private float cuttingProgress;
+    private int animationTime = 0;
+    private float animationInterval = 0.2f;
+
+
     public override void Interact(Player player) {
         if (!HasHeyTeaObject()) {
             //no object here
@@ -36,6 +40,7 @@ public class CuttingCounter : BaseCounter
                 if (HasRecipeWithInput(player.GetHeyTeaObject().GetHeyTeaObjectSO())) {
                     player.GetHeyTeaObject().SetHeyTeaObjectParents(this);
                     cuttingProgress = 0;
+                    animationTime = 0;
 
                     OnProgressChanged?.Invoke(this, new OnProgressChangedEventArgs {progressNormalized=(float)cuttingProgress/ GetCuttingRecipeSOWithInput(GetHeyTeaObject().GetHeyTeaObjectSO()).cuttingProgressMax });
                 }
@@ -50,12 +55,16 @@ public class CuttingCounter : BaseCounter
     }
 
    
-    public override void InteractC(Player player) {
+    public override void InteractHold(Player player, float timeInterval) {
         //only can cut some object that can be cut;
-        if (HasHeyTeaObject()&& HasRecipeWithInput(GetHeyTeaObject().GetHeyTeaObjectSO())) {
-            cuttingProgress++;
+        if (HasHeyTeaObject() && HasRecipeWithInput(GetHeyTeaObject().GetHeyTeaObjectSO())) {
+            cuttingProgress+=timeInterval;
 
-            OnCut?.Invoke(this, EventArgs.Empty);
+            if((int)(cuttingProgress/ animationInterval) > animationTime) {
+                OnCut?.Invoke(this, EventArgs.Empty);
+                animationTime = (int)(cuttingProgress / animationInterval);
+            }
+            
 
             CuttingRecipeSO cuttingRecipeSO = GetCuttingRecipeSOWithInput(GetHeyTeaObject().GetHeyTeaObjectSO());
 

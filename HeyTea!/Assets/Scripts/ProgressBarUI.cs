@@ -29,7 +29,7 @@ public class ProgressBarUI : MonoBehaviour
         barImage.fillAmount = e.progressNormalized;
 
         //When there is no cutting and the cutting is completed, the progress bar disappears, otherwise it keeps appearing.
-        if (e.progressNormalized == 0f || e.progressNormalized == 1f) {
+        if (e.progressNormalized == 0f || e.progressNormalized >= 1f) {
             Hide();
         } else {
             Show();
