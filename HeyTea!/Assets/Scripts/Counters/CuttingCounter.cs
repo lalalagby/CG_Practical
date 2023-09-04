@@ -78,6 +78,19 @@ public class CuttingCounter : BaseCounter
                 GetHeyTeaObject().DestroySelf();
                 HeyTeaObject.SpawnHeyTeaObejct(outputHeyTeaObjectSO, this);
             }
+        } else {
+            if(player.HasHeyTeaObject()){
+                if (player.GetHeyTeaObject().TryGetCup(out CupObject cupObject)) {
+                    if (cupObject.TryAddIngredient(GetHeyTeaObject().GetHeyTeaObjectSO(), (CupObject.MilkTeaMaterialType)GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
+                        GetHeyTeaObject().DestroySelf();
+                    }
+                }
+                if (this.GetHeyTeaObject().TryGetCup(out CupObject cupObject1)) {
+                    if (cupObject1.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (CupObject.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
+                        player.GetHeyTeaObject().DestroySelf();
+                    }
+                }
+            } 
         }
     }
 

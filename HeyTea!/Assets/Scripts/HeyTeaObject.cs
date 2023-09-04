@@ -29,7 +29,9 @@ public class HeyTeaObject : MonoBehaviour
         this.heyTeaObjectParent = heyTeaObjectParent;
 
         if (heyTeaObjectParent.HasHeyTeaObject()) {
-            Debug.LogError("Counter already has a object");
+            if(!heyTeaObjectParent.GetHeyTeaObject().TryGetCup(out CupObject cupObject)) {
+                Debug.LogError("Counter already has a object");
+            }
         }
 
         heyTeaObjectParent.SetHeyTeaObject(this);
@@ -45,6 +47,17 @@ public class HeyTeaObject : MonoBehaviour
     public void DestroySelf() {
         heyTeaObjectParent.ClearHeyTeaObject();
         Destroy(gameObject);
+    }
+
+    public bool TryGetCup(out CupObject cupObject) {
+        if(this is CupObject) {
+            cupObject = this as CupObject;
+            return true;
+        } else {
+            cupObject = null;
+            return false;
+        }
+        
     }
 
     public static HeyTeaObject SpawnHeyTeaObejct(HeyTeaObjectSO heyTeaObjectSO,IHeyTeaObjectParents heyTeaObjectParents) {

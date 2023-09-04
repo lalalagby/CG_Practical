@@ -23,6 +23,17 @@ public class ContainerCounter : BaseCounter
         if (player.HasHeyTeaObject()) {
             if (!HasHeyTeaObject()) {
                 player.GetHeyTeaObject().SetHeyTeaObjectParents(this);
+            } else {
+                if (player.GetHeyTeaObject().TryGetCup(out CupObject cupObject)) {
+                    if (cupObject.TryAddIngredient(GetHeyTeaObject().GetHeyTeaObjectSO(), (CupObject.MilkTeaMaterialType)GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
+                        GetHeyTeaObject().DestroySelf();
+                    }
+                }
+                if (this.GetHeyTeaObject().TryGetCup(out CupObject cupObject1)) {
+                    if (cupObject1.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (CupObject.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
+                        player.GetHeyTeaObject().DestroySelf();
+                    }
+                }
             }
         } else {
             if (!HasHeyTeaObject()) {

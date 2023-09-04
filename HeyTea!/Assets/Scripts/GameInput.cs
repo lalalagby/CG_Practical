@@ -56,7 +56,7 @@ public class GameInput : MonoBehaviour
     //cutting action
     private void InteractHold_Performed(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
         //if the suscriber number is not zero, then we can board this message.
-        if(obj.interaction is HoldInteraction) {
+        if (obj.interaction is HoldInteraction) {
             isHolding = true;
         }
     }
