@@ -30,9 +30,18 @@ public class CupObject : HeyTeaObject {
         public int[] currentNum;
         public MilkTeaMaterialType milkTeaMaterialType;
     }
+    [System.Serializable]
+    public struct ObjectBias {
+        public Vector3 postionBias;
+        public Vector3 rotationBias;
+        public Vector3 scaleFactor;
+        public MilkTeaMaterialType milkTeaMaterialType;
+    }
+    [SerializeField] private List<ObjectBias> objectBias = new List<ObjectBias>();
+
     //use the list to get the inspector
-    public List<MilkTeaMaterialQuota> milkTeaMaterialQuotasList = new List<MilkTeaMaterialQuota>();
-    public Dictionary<MilkTeaMaterialType, MilkTeaMaterialQuota> milkTeaMaterialQuotasDic = new Dictionary<MilkTeaMaterialType, MilkTeaMaterialQuota>();
+    [SerializeField] private List<MilkTeaMaterialQuota> milkTeaMaterialQuotasList = new List<MilkTeaMaterialQuota>();
+    [SerializeField] private Dictionary<MilkTeaMaterialType, MilkTeaMaterialQuota> milkTeaMaterialQuotasDic = new Dictionary<MilkTeaMaterialType, MilkTeaMaterialQuota>();
 
     //store the object that add in the milk tea
     private List<HeyTeaObjectSO> heyTeaObjectSOList;
