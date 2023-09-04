@@ -21,21 +21,41 @@ public class ContainerCounter : BaseCounter
     public override void Interact(Player player) {
         //Set the coordinates for placing objects based on the coordinate values of top and update the visual effect.
         if (player.HasHeyTeaObject()) {
+            //player hold something
             if (!HasHeyTeaObject()) {
-                player.GetHeyTeaObject().SetHeyTeaObjectParents(this);
+                //no thing in the counter
+                if (player.GetHeyTeaObject().TryGetCup(out CupObject cupObject)) {
+                    //if player hold cup,and the object in the counter can be placed in cup directily
+                    HeyTeaObject.SpawnHeyTeaObejct(heyTeaObjectSO, this);
+                    bool tag = cupObject.TryAddIngredient(GetHeyTeaObject().GetHeyTeaObjectSO(), (CupObject.MilkTeaMaterialType)GetHeyTeaObject().GetHeyTeaObjectSO().materialType);
+                    //if can be placed in cup directly
+                    if (tag) {
+                        OnPlayerGrabbedObject?.Invoke(this, EventArgs.Empty);
+                    }
+                    GetHeyTeaObject().DestroySelf();
+                    //if cant be placed in cup directly,put cup in the counter
+                    if (!tag) {
+                        player.GetHeyTeaObject().SetHeyTeaObjectParents(this);
+                    }
+                } else {
+                    player.GetHeyTeaObject().SetHeyTeaObjectParents(this);
+                }
             } else {
+                //has something in the counter
                 if (player.GetHeyTeaObject().TryGetCup(out CupObject cupObject)) {
                     if (cupObject.TryAddIngredient(GetHeyTeaObject().GetHeyTeaObjectSO(), (CupObject.MilkTeaMaterialType)GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
                         GetHeyTeaObject().DestroySelf();
                     }
-                }
-                if (this.GetHeyTeaObject().TryGetCup(out CupObject cupObject1)) {
-                    if (cupObject1.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (CupObject.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
-                        player.GetHeyTeaObject().DestroySelf();
+                } else {
+                    if (this.GetHeyTeaObject().TryGetCup(out  cupObject)) {
+                        if (cupObject.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (CupObject.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
+                            player.GetHeyTeaObject().DestroySelf();
+                        }
                     }
                 }
             }
         } else {
+            //player dont hold something
             if (!HasHeyTeaObject()) {
                 //When the player has nothing in their hands and there is nothing on the cabinet, 
                 //create a new item and broadcast the animation event captured by the cabinet

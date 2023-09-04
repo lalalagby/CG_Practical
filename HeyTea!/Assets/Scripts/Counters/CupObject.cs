@@ -73,23 +73,31 @@ public class CupObject : HeyTeaObject {
                     if (milkTeaMaterialQuota.currentNum[i]>= milkTeaMaterialQuotasDic[milkTeaMaterialType].maxNum[i]) {
                         tag = false;;
                     } else {
-                        //modify the number of object
-                        milkTeaMaterialQuota.currentNum[i]++;
-                        //modify the object list,later will use this list to show icon.
-                        heyTeaObjectSOList.Add(heyTeaObjectSO);
-                        if (milkTeaMaterialQuota.canMixed&& milkTeaMaterialQuota.maxNum.Last()==0) {
-                            //If this list can be mixed, then when all the ingredients have items, they will be mixed to become the last item on this list.
-                            if (milkTeaMaterialQuota.currentNum.Sum()== milkTeaMaterialQuota.maxNum.Count() - 1) {
-                                for(int j=0;j< milkTeaMaterialQuota.maxNum.Count() - 1; j++) {
-                                    milkTeaMaterialQuota.currentNum[i] = 0;
-                                    heyTeaObjectSOList.Remove(milkTeaMaterialQuota.heyTeaObjectSOArray[i]);
+                        if (milkTeaMaterialQuota.canMixed) {
+                            if(milkTeaMaterialQuota.currentNum[milkTeaMaterialQuota.maxNum.Count() - 1] == 0) {
+                                milkTeaMaterialQuota.currentNum[i]++;
+                                heyTeaObjectSOList.Add(heyTeaObjectSO);
+                                if (milkTeaMaterialQuota.currentNum.Sum() == milkTeaMaterialQuota.maxNum.Count() - 1) {
+                                    for (int j = 0; j < milkTeaMaterialQuota.maxNum.Count() - 1; j++) {
+                                        milkTeaMaterialQuota.currentNum[j] = 0;
+                                        heyTeaObjectSOList.Remove(milkTeaMaterialQuota.heyTeaObjectSOArray[j]);
+                                    }
+                                    milkTeaMaterialQuota.currentNum[milkTeaMaterialQuota.maxNum.Count() - 1]++;
+                                    heyTeaObjectSOList.Add(milkTeaMaterialQuota.heyTeaObjectSOArray[milkTeaMaterialQuota.maxNum.Count() - 1]);
                                 }
-                                milkTeaMaterialQuota.currentNum[milkTeaMaterialQuota.maxNum.Count() - 1] ++;
-                                heyTeaObjectSOList.Add(milkTeaMaterialQuota.heyTeaObjectSOArray[milkTeaMaterialQuota.maxNum.Count() - 1]);
+                                tag = true;
+                                return tag;
+                            } else {
+                                tag = false;
                             }
-                        }    
-                        tag = true;
-                        return tag;
+                        } else {
+                            //modify the number of object
+                            milkTeaMaterialQuota.currentNum[i]++; 
+                            //modify the object list,later will use this list to show icon.
+                            heyTeaObjectSOList.Add(heyTeaObjectSO);
+                            tag = true;
+                            return tag;
+                        }  
                     }
                 } 
             }

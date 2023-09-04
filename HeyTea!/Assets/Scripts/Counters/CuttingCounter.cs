@@ -50,6 +50,12 @@ public class CuttingCounter : BaseCounter
             if (!player.HasHeyTeaObject()) {
                 //player not carry something;
                 this.GetHeyTeaObject().SetHeyTeaObjectParents(player);
+            } else {
+                if (player.GetHeyTeaObject().TryGetCup(out CupObject cupObject)) {
+                    if (cupObject.TryAddIngredient(GetHeyTeaObject().GetHeyTeaObjectSO(), (CupObject.MilkTeaMaterialType)GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
+                        GetHeyTeaObject().DestroySelf();
+                    }
+                }
             }
         }
     }
@@ -74,9 +80,10 @@ public class CuttingCounter : BaseCounter
                 //has object in the chopping board
                 HeyTeaObjectSO outputHeyTeaObjectSO = GetOutputForInput(GetHeyTeaObject().GetHeyTeaObjectSO());
 
-
                 GetHeyTeaObject().DestroySelf();
+
                 HeyTeaObject.SpawnHeyTeaObejct(outputHeyTeaObjectSO, this);
+
             }
         } else {
             if(player.HasHeyTeaObject()){
@@ -85,9 +92,11 @@ public class CuttingCounter : BaseCounter
                         GetHeyTeaObject().DestroySelf();
                     }
                 }
-                if (this.GetHeyTeaObject().TryGetCup(out CupObject cupObject1)) {
-                    if (cupObject1.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (CupObject.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
-                        player.GetHeyTeaObject().DestroySelf();
+                if (this.HasHeyTeaObject()) {
+                    if (this.GetHeyTeaObject().TryGetCup(out cupObject)) {
+                        if (cupObject.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (CupObject.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
+                            player.GetHeyTeaObject().DestroySelf();
+                        }
                     }
                 }
             } 
