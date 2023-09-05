@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,6 +7,8 @@ using static CupObject;
 
 [System.Serializable]
 public class CupObject : HeyTeaObject {
+    public event EventHandler OnIngredinetAdded;
+
     /// <summary>
     /// teaBase:       tea or milkTea
     /// fruit:         fruit add,at most 2
@@ -15,8 +18,8 @@ public class CupObject : HeyTeaObject {
     public enum MilkTeaMaterialType {
         none,
         teaBase,
-        fruit,
         basicAdd,
+        fruit,
         ingredients,
     }
 
@@ -86,6 +89,7 @@ public class CupObject : HeyTeaObject {
                             if(milkTeaMaterialQuota.currentNum[milkTeaMaterialQuota.maxNum.Count() - 1] == 0) {
                                 milkTeaMaterialQuota.currentNum[i]++;
                                 heyTeaObjectSOList.Add(heyTeaObjectSO);
+
                                 if (milkTeaMaterialQuota.currentNum.Sum() == milkTeaMaterialQuota.maxNum.Count() - 1) {
                                     for (int j = 0; j < milkTeaMaterialQuota.maxNum.Count() - 1; j++) {
                                         milkTeaMaterialQuota.currentNum[j] = 0;
@@ -94,6 +98,9 @@ public class CupObject : HeyTeaObject {
                                     milkTeaMaterialQuota.currentNum[milkTeaMaterialQuota.maxNum.Count() - 1]++;
                                     heyTeaObjectSOList.Add(milkTeaMaterialQuota.heyTeaObjectSOArray[milkTeaMaterialQuota.maxNum.Count() - 1]);
                                 }
+
+                                OnIngredinetAdded?.Invoke(this, EventArgs.Empty);
+
                                 tag = true;
                                 return tag;
                             } else {
@@ -104,6 +111,9 @@ public class CupObject : HeyTeaObject {
                             milkTeaMaterialQuota.currentNum[i]++; 
                             //modify the object list,later will use this list to show icon.
                             heyTeaObjectSOList.Add(heyTeaObjectSO);
+
+                            OnIngredinetAdded?.Invoke(this, EventArgs.Empty);
+
                             tag = true;
                             return tag;
                         }  
@@ -116,5 +126,7 @@ public class CupObject : HeyTeaObject {
         return tag;
     }
 
-    
+    public Dictionary<MilkTeaMaterialType,MilkTeaMaterialQuota> GetMilkTeaMaterialDic() {
+        return milkTeaMaterialQuotasDic;
+    }
 }

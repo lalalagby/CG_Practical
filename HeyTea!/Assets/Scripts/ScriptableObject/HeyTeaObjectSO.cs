@@ -21,8 +21,8 @@ public class HeyTeaObjectSO : ScriptableObject
     public enum MilkTeaMaterialType {
         none,
         teaBase,
-        fruit,
         basicAdd,
+        fruit,
         ingredients,
     }
     public MilkTeaMaterialType materialType;
