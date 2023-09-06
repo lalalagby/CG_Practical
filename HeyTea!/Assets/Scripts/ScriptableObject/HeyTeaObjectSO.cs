@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,6 +25,18 @@ public class HeyTeaObjectSO : ScriptableObject
         basicAdd,
         fruit,
         ingredients,
+        unTreat,
     }
     public MilkTeaMaterialType materialType;
+
+    public object Clone() {
+        // 实现深拷贝
+        HeyTeaObjectSO heyTeaObjectSOClone = new HeyTeaObjectSO();
+        heyTeaObjectSOClone.prefab = prefab;
+        heyTeaObjectSOClone.sprite = sprite;
+        heyTeaObjectSOClone.objectName = objectName;
+        heyTeaObjectSOClone.materialType = materialType;
+        return heyTeaObjectSOClone;
+    }
+
 }

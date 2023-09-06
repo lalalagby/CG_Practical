@@ -24,9 +24,9 @@ public class SoupContainerCounter : BaseCounter
         //Set the coordinates for placing objects based on the coordinate values of top and update the visual effect.
         if (player.HasHeyTeaObject()) {
             if (!HasHeyTeaObject()) {
-                if (player.GetHeyTeaObject().TryGetCup(out CupObject cupObject)) {
+                if (player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwareObejct)) {
                     HeyTeaObject.SpawnHeyTeaObejct(heyTeaObjectSO, this);
-                    bool tag = cupObject.TryAddIngredient(GetHeyTeaObject().GetHeyTeaObjectSO(), (CupObject.MilkTeaMaterialType)GetHeyTeaObject().GetHeyTeaObjectSO().materialType);
+                    bool tag = kichenwareObejct.TryAddIngredient(GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)GetHeyTeaObject().GetHeyTeaObjectSO().materialType);
                     if (tag) {            
                         OnPlayerGrabbedObject?.Invoke(this, EventArgs.Empty);
                     }
@@ -38,15 +38,18 @@ public class SoupContainerCounter : BaseCounter
                     player.GetHeyTeaObject().SetHeyTeaObjectParents(this);
                 }
             } else {
-                if (player.GetHeyTeaObject().TryGetCup(out CupObject cupObject)) {
-                    if (cupObject.TryAddIngredient(GetHeyTeaObject().GetHeyTeaObjectSO(), (CupObject.MilkTeaMaterialType)GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
+                if (player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwareObejct)) {
+                    //player hold cup
+                    if (kichenwareObejct.TryAddIngredient(GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
                         GetHeyTeaObject().DestroySelf();
                     }
                 } else {
-                    if (this.GetHeyTeaObject().TryGetCup(out cupObject)) {
-                        if (cupObject.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (CupObject.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
-                            player.GetHeyTeaObject().DestroySelf();
-                        }
+                    if (this.GetHeyTeaObject().TryGetKichenware(out kichenwareObejct)) {
+                       {
+                            if (kichenwareObejct.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
+                                player.GetHeyTeaObject().DestroySelf();
+                            }
+                       }
                     }
                 }
             }

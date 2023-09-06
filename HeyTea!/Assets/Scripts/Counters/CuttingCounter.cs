@@ -12,14 +12,9 @@ Data      : 01.09.2023
 
 */
 
-public class CuttingCounter : BaseCounter
+public class CuttingCounter : BaseCounter,IHasProgress
 {
-    //Define the cutting progress bar and modify the progress event
-    public event EventHandler<OnProgressChangedEventArgs> OnProgressChanged;
-    //Event passing cutting progress
-    public class OnProgressChangedEventArgs : EventArgs {
-        public float progressNormalized;
-    }
+    public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
     //cut animation event
     public event EventHandler OnCut;
 
@@ -42,7 +37,7 @@ public class CuttingCounter : BaseCounter
                     cuttingProgress = 0;
                     animationTime = 0;
 
-                    OnProgressChanged?.Invoke(this, new OnProgressChangedEventArgs {progressNormalized=(float)cuttingProgress/ GetCuttingRecipeSOWithInput(GetHeyTeaObject().GetHeyTeaObjectSO()).cuttingProgressMax });
+                    OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { progressNormalized=(float)cuttingProgress/ GetCuttingRecipeSOWithInput(GetHeyTeaObject().GetHeyTeaObjectSO()).cuttingProgressMax });
                 }
             }
         } else {
@@ -51,8 +46,8 @@ public class CuttingCounter : BaseCounter
                 //player not carry something;
                 this.GetHeyTeaObject().SetHeyTeaObjectParents(player);
             } else {
-                if (player.GetHeyTeaObject().TryGetCup(out CupObject cupObject)) {
-                    if (cupObject.TryAddIngredient(GetHeyTeaObject().GetHeyTeaObjectSO(), (CupObject.MilkTeaMaterialType)GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
+                if (player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct cupObject)) {
+                    if (cupObject.TryAddIngredient(GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
                         GetHeyTeaObject().DestroySelf();
                     }
                 }
@@ -61,7 +56,7 @@ public class CuttingCounter : BaseCounter
     }
 
    
-    public override void InteractHold(Player player, float timeInterval) {
+    public override void OperationHold(Player player, float timeInterval) {
         //only can cut some object that can be cut;
         if (HasHeyTeaObject() && HasRecipeWithInput(GetHeyTeaObject().GetHeyTeaObjectSO())) {
             cuttingProgress+=timeInterval;
@@ -74,7 +69,7 @@ public class CuttingCounter : BaseCounter
 
             CuttingRecipeSO cuttingRecipeSO = GetCuttingRecipeSOWithInput(GetHeyTeaObject().GetHeyTeaObjectSO());
 
-            OnProgressChanged?.Invoke(this, new OnProgressChangedEventArgs { progressNormalized = (float)cuttingProgress / cuttingRecipeSO.cuttingProgressMax });
+            OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { progressNormalized = (float)cuttingProgress / cuttingRecipeSO.cuttingProgressMax });
 
             if (cuttingProgress >= cuttingRecipeSO.cuttingProgressMax) {
                 //has object in the chopping board
@@ -87,14 +82,14 @@ public class CuttingCounter : BaseCounter
             }
         } else {
             if(player.HasHeyTeaObject()){
-                if (player.GetHeyTeaObject().TryGetCup(out CupObject cupObject)) {
-                    if (cupObject.TryAddIngredient(GetHeyTeaObject().GetHeyTeaObjectSO(), (CupObject.MilkTeaMaterialType)GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
+                if (player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwareObject)) {
+                    if (kichenwareObject.TryAddIngredient(GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
                         GetHeyTeaObject().DestroySelf();
                     }
                 }
                 if (this.HasHeyTeaObject()) {
-                    if (this.GetHeyTeaObject().TryGetCup(out cupObject)) {
-                        if (cupObject.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (CupObject.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
+                    if (this.GetHeyTeaObject().TryGetKichenware(out kichenwareObject)) {
+                        if (kichenwareObject.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
                             player.GetHeyTeaObject().DestroySelf();
                         }
                     }

@@ -1,58 +1,100 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using static CuttingCounter;
 
-public class StoveCounter : BaseCounter
-{
+public class StoveCounter : BaseCounter,IHasProgress {
 
-    [SerializeField] private CookingRecipeSO[] cookingRecipeSOArray;
+    public event EventHandler<OnStateChangedEventArgs> OnStateChanged;
+    public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
 
-    private float cookingProgress;
+    public class OnStateChangedEventArgs : EventArgs {
+        public bool isCooking;
+    }
+
+    [SerializeField] private HeyTeaObjectSO heyTeaObjectSO;
+
+    private bool isCooking;
+    private float setInterval = 0.2f;
+    private float allTime;
+
+    private void Start() {
+        HeyTeaObject.SpawnHeyTeaObejct(heyTeaObjectSO, this);
+        isCooking = false;
+        OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { isCooking = false });
+        OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { isProcessing = isCooking });
+    }
+
+    private void Update() {
+        if (isCooking&&HasHeyTeaObject()) {
+            PotObject potObject = GetHeyTeaObject() as PotObject;
+            allTime += Time.deltaTime;
+            if (potObject.AddCurrentCookingProgress(Time.deltaTime)) {
+                isCooking = false;
+                OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { isCooking = false });
+            }
+            OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { progressNormalized = potObject.GetCookingProgressPercentage(), isProcessing = isCooking });
+        }
+    }
 
     public override void Interact(Player player) {
-        if (!HasHeyTeaObject()) {
-            //no object here
+        if (HasHeyTeaObject() && GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenware)) {
+            //has pot
             if (player.HasHeyTeaObject()) {
-                //player carry something that can be cut
-                if (HasRecipeWithInput(player.GetHeyTeaObject().GetHeyTeaObjectSO())) {
-                    player.GetHeyTeaObject().SetHeyTeaObjectParents(this);
-                    cookingProgress = 0;
-
-                    HeyTeaObjectSO outputHeyTeaObjectSO = GetOutputForInput(GetHeyTeaObject().GetHeyTeaObjectSO());
-                    GetHeyTeaObject().DestroySelf();
-                    HeyTeaObject.SpawnHeyTeaObejct(outputHeyTeaObjectSO, this);
+                //player has object
+                if (player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenware1)) {
+                    //if player has cup or pot,and the thing in pot can be put in cup
+                    if (kichenware.GetOutputHeyTeaObejct(out HeyTeaObjectSO inPotHeyTeaObjectSO) && kichenware1.TryAddIngredient(inPotHeyTeaObjectSO, (IKichenwareObejct.MilkTeaMaterialType)inPotHeyTeaObjectSO.materialType)) {
+                        HeyTeaObjectSO heyTeaObjectSOClone = (HeyTeaObjectSO)heyTeaObjectSO.Clone();
+                        GetHeyTeaObject().DestroySelf();
+                        HeyTeaObject.SpawnHeyTeaObejct(heyTeaObjectSOClone, this);
+                        isCooking = false;
+                        OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { isCooking = false });
+                        OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs {  isProcessing = isCooking });
+                    }
+                } else {
+                    if (kichenware.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
+                        player.GetHeyTeaObject().DestroySelf();
+                        isCooking = false;
+                        OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { isCooking = false });
+                        OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { isProcessing = isCooking });
+                    }
                 }
+            } else {
+                GetHeyTeaObject().SetHeyTeaObjectParents(player);
+                isCooking = false;
+                OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { isCooking = false });
+                OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { isProcessing = isCooking });
             }
         } else {
-            //has object here
-            if (!player.HasHeyTeaObject()) {
-                //player not carry something;
-                this.GetHeyTeaObject().SetHeyTeaObjectParents(player);
+            //not have thing, if player hold pot, can put pot
+            if (player.GetHeyTeaObject() as PotObject) {
+                player.GetHeyTeaObject().SetHeyTeaObjectParents(this);
+                isCooking = false;
+                OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { isCooking = false });
+                OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { isProcessing = isCooking });
             }
         }
     }
-
-    private bool HasRecipeWithInput(HeyTeaObjectSO inputHeyTeaObjectSO) {
-        CookingRecipeSO cookingRecipeSO = GetCookingRecipeSOWithInput(inputHeyTeaObjectSO);
-        return cookingRecipeSO != null;
-    }
-
-    private HeyTeaObjectSO GetOutputForInput(HeyTeaObjectSO inputHeyTeaObjectSO) {
-        CookingRecipeSO cookingRecipeSO = GetCookingRecipeSOWithInput(inputHeyTeaObjectSO);
-        if (cookingRecipeSO != null) {
-            return cookingRecipeSO.output;
-        } else {
-            return null;
+    public override void Operation(Player player) {
+        if (HasHeyTeaObject()) {
+            //has pot
+            PotObject potObject = GetHeyTeaObject() as PotObject;
+            if (potObject != null && potObject.GetHeyTeaObject().GetHeyTeaObjectSO()!= potObject.GetOutputForInput(potObject.GetHeyTeaObject().GetHeyTeaObjectSO())) {
+                //if the food can cook;
+                if (isCooking == false) {
+                    isCooking = true;
+                    allTime = 0;
+                    OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { isCooking = true }) ;
+                    OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { isProcessing = isCooking });
+                } else {
+                    isCooking = false;
+                    OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { isCooking = false });
+                    OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { isProcessing = isCooking });
+                }
+            }    
         }
-    }
-
-    private CookingRecipeSO GetCookingRecipeSOWithInput(HeyTeaObjectSO inputHeyTeaObjectSO) {
-        foreach (CookingRecipeSO cookingRecipeSO in cookingRecipeSOArray) {
-            if (cookingRecipeSO.input == inputHeyTeaObjectSO) {
-                return cookingRecipeSO;
-            }
-        }
-        return null;
     }
 }

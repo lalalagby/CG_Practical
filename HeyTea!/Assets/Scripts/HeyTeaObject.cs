@@ -29,7 +29,7 @@ public class HeyTeaObject : MonoBehaviour
         this.heyTeaObjectParent = heyTeaObjectParent;
 
         if (heyTeaObjectParent.HasHeyTeaObject()) {
-            if(!heyTeaObjectParent.GetHeyTeaObject().TryGetCup(out CupObject cupObject)) {
+            if((!heyTeaObjectParent.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwareObejct))) {
                 Debug.LogError("Counter already has a object");
             }
         }
@@ -49,12 +49,12 @@ public class HeyTeaObject : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public bool TryGetCup(out CupObject cupObject) {
-        if(this is CupObject) {
-            cupObject = this as CupObject;
+    public bool TryGetKichenware(out IKichenwareObejct kichenwareObejct) {
+        if(this is IKichenwareObejct) {
+            kichenwareObejct = this as IKichenwareObejct;
             return true;
         } else {
-            cupObject = null;
+            kichenwareObejct = null;
             return false;
         }
         

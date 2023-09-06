@@ -7,7 +7,7 @@ using UnityEngine;
 public class CookingRecipeSO :ScriptableObject
 {
     public HeyTeaObjectSO input;
+    public HeyTeaObjectSO midState;
     public HeyTeaObjectSO output;
     public float cookingTimerMax;
-    public float outputScale;
 }

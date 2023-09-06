@@ -27,7 +27,7 @@ public class CupIconUI : MonoBehaviour
             Destroy(child.gameObject);
         }
         var sortDic = from pair in cupObject.GetMilkTeaMaterialDic() orderby pair.Key ascending select pair;
-        foreach (KeyValuePair<CupObject.MilkTeaMaterialType,CupObject.MilkTeaMaterialQuota> entry in sortDic) {
+        foreach (KeyValuePair<IKichenwareObejct.MilkTeaMaterialType,CupObject.MilkTeaMaterialQuota> entry in sortDic) {
             for (int i= 0;i < entry.Value.heyTeaObjectSOArray.Count();i ++) {
                 if (entry.Value.currentNum[i] != 0) {
                     for(int j=0;j< entry.Value.currentNum[i]; j++) {

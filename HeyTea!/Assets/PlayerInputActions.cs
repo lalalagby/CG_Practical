@@ -46,7 +46,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""InteractC"",
+                    ""name"": ""Operation"",
                     ""type"": ""Button"",
                     ""id"": ""42f87749-a8f0-42ff-ae3c-fd000e7bda8d"",
                     ""expectedControlType"": ""Button"",
@@ -126,10 +126,10 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""4400ffac-b215-4b9f-b586-f38d276cc3ac"",
                     ""path"": ""<Keyboard>/e"",
-                    ""interactions"": ""Hold"",
+                    ""interactions"": ""Hold(pressPoint=0.2),Press(pressPoint=0.1)"",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""InteractC"",
+                    ""action"": ""Operation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -142,7 +142,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
-        m_Player_InteractC = m_Player.FindAction("InteractC", throwIfNotFound: true);
+        m_Player_Operation = m_Player.FindAction("Operation", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -206,14 +206,14 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Interact;
-    private readonly InputAction m_Player_InteractC;
+    private readonly InputAction m_Player_Operation;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
         public PlayerActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
-        public InputAction @InteractC => m_Wrapper.m_Player_InteractC;
+        public InputAction @Operation => m_Wrapper.m_Player_Operation;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -229,9 +229,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
-            @InteractC.started += instance.OnInteractC;
-            @InteractC.performed += instance.OnInteractC;
-            @InteractC.canceled += instance.OnInteractC;
+            @Operation.started += instance.OnOperation;
+            @Operation.performed += instance.OnOperation;
+            @Operation.canceled += instance.OnOperation;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -242,9 +242,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
-            @InteractC.started -= instance.OnInteractC;
-            @InteractC.performed -= instance.OnInteractC;
-            @InteractC.canceled -= instance.OnInteractC;
+            @Operation.started -= instance.OnOperation;
+            @Operation.performed -= instance.OnOperation;
+            @Operation.canceled -= instance.OnOperation;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -266,6 +266,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
-        void OnInteractC(InputAction.CallbackContext context);
+        void OnOperation(InputAction.CallbackContext context);
     }
 }

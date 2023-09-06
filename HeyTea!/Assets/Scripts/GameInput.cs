@@ -14,10 +14,12 @@ Data      : 27.08.2023
 public class GameInput : MonoBehaviour
 {
     public event EventHandler OnInteractAction;
-    public event EventHandler<OnInteractHoldActionEventArgs> OnInteractHoldAction;
-    public class OnInteractHoldActionEventArgs : EventArgs {
+    public event EventHandler<OnOperationHoldActionEventArgs> OperationHoldAction;
+    public class OnOperationHoldActionEventArgs : EventArgs {
         public float Time;
     }
+    public event EventHandler OperationAction;
+
     private PlayerInputActions playerInputActions;
 
     private bool isHolding;
@@ -30,15 +32,15 @@ public class GameInput : MonoBehaviour
 
         //Subscribe to user input events
         playerInputActions.Player.Interact.performed += Interact_Performed;
-        playerInputActions.Player.InteractC.performed += InteractHold_Performed;
-        playerInputActions.Player.InteractC.canceled += InteractHold_Canceled;
+        playerInputActions.Player.Operation.performed += Operation_Performed;
+        playerInputActions.Player.Operation.canceled += Operation_Canceled;
     }
 
     private void Update() {
         //if user is holding interact key,we will send subsribtion per interval;
         if (isHolding ) {
             if(cumulativeTime >= sendInterval) {
-                OnInteractHoldAction?.Invoke(this, new OnInteractHoldActionEventArgs { Time = sendInterval });
+                OperationHoldAction?.Invoke(this, new OnOperationHoldActionEventArgs { Time = sendInterval });
                 cumulativeTime = 0f;
             } else {
                 cumulativeTime += Time.deltaTime;
@@ -54,17 +56,21 @@ public class GameInput : MonoBehaviour
     }
 
     //cutting action
-    private void InteractHold_Performed(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
+    private void Operation_Performed(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
         //if the suscriber number is not zero, then we can board this message.
         if (obj.interaction is HoldInteraction) {
             isHolding = true;
-        }
+        } 
+        OperationAction?.Invoke(this, EventArgs.Empty);
+        
     }
 
-    private void InteractHold_Canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
+    private void Operation_Canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
         //if the suscriber number is not zero, then we can board this message.
         if (obj.interaction is HoldInteraction) {
             isHolding = false;
+        } else {
+
         }
     }
 

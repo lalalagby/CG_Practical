@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 /*
 File Name : ClearCounter.cs
@@ -28,19 +29,18 @@ public class ClearCounter : BaseCounter
                 this.GetHeyTeaObject().SetHeyTeaObjectParents(player);
             } else {
                 //if player hold the cup,so check whether the obeject can be placed in the cup.
-                if (player.GetHeyTeaObject().TryGetCup(out CupObject cupObject)) {
-                    if (cupObject.TryAddIngredient(GetHeyTeaObject().GetHeyTeaObjectSO(), (CupObject.MilkTeaMaterialType)GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
+                if (player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwareObejct)) {
+                    //player hold cup
+                    if (kichenwareObejct.TryAddIngredient(GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
                         GetHeyTeaObject().DestroySelf();
                     }
                 } else {
-                    //if cup is in the counter
-                    if (this.GetHeyTeaObject().TryGetCup(out CupObject cupObject1)) {
-                        if (cupObject1.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (CupObject.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
+                    if (this.GetHeyTeaObject().TryGetKichenware(out kichenwareObejct)) {
+                        if (kichenwareObejct.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
                             player.GetHeyTeaObject().DestroySelf();
                         }
                     }
                 }
-               
             }
         }
     }

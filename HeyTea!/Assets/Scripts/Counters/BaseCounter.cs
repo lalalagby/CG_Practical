@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,7 +23,9 @@ public class BaseCounter : MonoBehaviour, IHeyTeaObjectParents {
     //Virtual functions for interacting with users
     public virtual void Interact(Player player) { }
 
-    public virtual void InteractHold(Player player,float timeInterval) { }
+    public virtual void OperationHold(Player player,float timeInterval) { }
+
+    public virtual void Operation(Player player) {  }
 
     //Control interface function for item ownership
     public Transform GetHeyTeaObjectFollowTransform() {
