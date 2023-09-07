@@ -35,7 +35,10 @@ public class StoveCounter : BaseCounter,IHasProgress {
                 isCooking = false;
                 OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { isCooking = false });
             }
-            OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { progressNormalized = potObject.GetCookingProgressPercentage(), isProcessing = isCooking });
+            if (allTime >= setInterval) {
+                OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { progressNormalized = potObject.GetCookingProgressPercentage(), isProcessing = isCooking });
+                allTime = 0;
+            }
         }
     }
 

@@ -37,7 +37,7 @@ public class CuttingCounter : BaseCounter,IHasProgress
                     cuttingProgress = 0;
                     animationTime = 0;
 
-                    OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { progressNormalized=(float)cuttingProgress/ GetCuttingRecipeSOWithInput(GetHeyTeaObject().GetHeyTeaObjectSO()).cuttingProgressMax });
+                    OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { isProcessing = false, progressNormalized = (float)cuttingProgress / GetCuttingRecipeSOWithInput(GetHeyTeaObject().GetHeyTeaObjectSO()).cuttingProgressMax }); ;
                 }
             }
         } else {
@@ -69,7 +69,7 @@ public class CuttingCounter : BaseCounter,IHasProgress
 
             CuttingRecipeSO cuttingRecipeSO = GetCuttingRecipeSOWithInput(GetHeyTeaObject().GetHeyTeaObjectSO());
 
-            OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { progressNormalized = (float)cuttingProgress / cuttingRecipeSO.cuttingProgressMax });
+            OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { isProcessing =true ,progressNormalized = (float)cuttingProgress / cuttingRecipeSO.cuttingProgressMax });
 
             if (cuttingProgress >= cuttingRecipeSO.cuttingProgressMax) {
                 //has object in the chopping board

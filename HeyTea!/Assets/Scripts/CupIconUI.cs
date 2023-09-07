@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class CupIconUI : MonoBehaviour
 {
@@ -26,15 +27,15 @@ public class CupIconUI : MonoBehaviour
             }
             Destroy(child.gameObject);
         }
-        var sortDic = from pair in cupObject.GetMilkTeaMaterialDic() orderby pair.Key ascending select pair;
-        foreach (KeyValuePair<IKichenwareObejct.MilkTeaMaterialType,CupObject.MilkTeaMaterialQuota> entry in sortDic) {
-            for (int i= 0;i < entry.Value.heyTeaObjectSOArray.Count();i ++) {
-                if (entry.Value.currentNum[i] != 0) {
-                    for(int j=0;j< entry.Value.currentNum[i]; j++) {
-                        Transform iconTransform = Instantiate(iconTemplate, transform);
-                        iconTransform.gameObject.SetActive(true);
-                        iconTransform.GetComponent<CupIconSingleUI>().SetHeyTeaObjectSO(entry.Value.heyTeaObjectSOArray[i]);
-                    }
+
+        var sortList = cupObject.GetMilkTeaMaterialQuota().OrderBy(t => t.milkTeaMaterialType);
+
+        foreach(IKichenwareObejct.MilkTeaMaterialQuota milkTeaMaterialQuota in sortList) {
+            foreach(IKichenwareObejct.HeyTeaObejctStruct heyTeaObejctStruct in milkTeaMaterialQuota.heyTeaObejctStructArray) {
+                for(int i = 0; i < heyTeaObejctStruct.currentNum; i++) {
+                    Transform iconTransform = Instantiate(iconTemplate, transform);
+                    iconTransform.gameObject.SetActive(true);
+                    iconTransform.GetComponent<CupIconSingleUI>().SetHeyTeaObjectSO(heyTeaObejctStruct.heyTeaObjectSO);
                 }
             }
         }

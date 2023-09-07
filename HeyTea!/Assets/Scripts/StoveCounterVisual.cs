@@ -5,7 +5,7 @@ using UnityEngine;
 public class StoveCounterVisual : MonoBehaviour
 {
     [SerializeField] private GameObject stoveOnGameObject;
-    [SerializeField] private GameObject particlesGameObject;
+    [SerializeField] private GameObject steamParticleGameObject;
     [SerializeField] private StoveCounter stoveCounter;
 
     private void Start() {
@@ -14,6 +14,6 @@ public class StoveCounterVisual : MonoBehaviour
 
     private void StoveCounter_OnStateChanged(object render, StoveCounter.OnStateChangedEventArgs e) {
         stoveOnGameObject.SetActive(e.isCooking);
-        particlesGameObject.SetActive(e.isCooking);
+        steamParticleGameObject.SetActive(e.isCooking);
     }
 }
