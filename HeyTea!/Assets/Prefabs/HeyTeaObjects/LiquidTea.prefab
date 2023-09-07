@@ -31,7 +31,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2144346905135383722}
-  - {fileID: 1512332836486067882}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &-5044403681080441249
@@ -47,37 +46,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heyTeaObjectSO: {fileID: 11400000, guid: dc739a765f912a0498addc5fde2ef487, type: 2}
---- !u!1 &3013445813069614056
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1512332836486067882}
-  m_Layer: 0
-  m_Name: PlacementPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1512332836486067882
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3013445813069614056}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.576, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3405011949967877933}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1894037814114313025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -156,6 +124,11 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c1071cbf63a780c41b22eb4e6a2d4fd1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ec4cb6e4d69b6914fbc78d3ad91f12ae, type: 2}
     - target: {fileID: 919132149155446097, guid: c1071cbf63a780c41b22eb4e6a2d4fd1,
         type: 3}
       propertyPath: m_Name
