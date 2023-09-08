@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2265427495072611201
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7904468829355877705}
+  m_Layer: 0
+  m_Name: PlacementPointCooked
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7904468829355877705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2265427495072611201}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.171, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4758609249007011966}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4908017552289087709
 GameObject:
   m_ObjectHideFlags: 0
@@ -32,6 +63,7 @@ Transform:
   m_Children:
   - {fileID: 1602845060717037145}
   - {fileID: 6601488617502715087}
+  - {fileID: 7904468829355877705}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &-3901121489343306454
@@ -50,7 +82,60 @@ MonoBehaviour:
   cookingRecipeSOList:
   - {fileID: 11400000, guid: 07f174e7024e0ce4680659d5e2f4a78b, type: 2}
   - {fileID: 11400000, guid: a8ef62ef77e010a4482611afd8ed7026, type: 2}
-  counterTopPoint: {fileID: 6601488617502715087}
+  milkTeaMaterialQuotaList:
+  - heyTeaObejctStructArray:
+    - heyTeaObjectSO: {fileID: 11400000, guid: 05080f72ac84458429d7da2aa40374bf, type: 2}
+      heyTeaObject: {fileID: 0}
+      maxNum: 1
+      currentNum: 0
+    - heyTeaObjectSO: {fileID: 11400000, guid: ec451ef8a30a32e49938a50599ba7c5b, type: 2}
+      heyTeaObject: {fileID: 0}
+      maxNum: 1
+      currentNum: 0
+    - heyTeaObjectSO: {fileID: 11400000, guid: bc802d94bd25d47acb35b96b9a22101f, type: 2}
+      heyTeaObject: {fileID: 0}
+      maxNum: 1
+      currentNum: 0
+    - heyTeaObjectSO: {fileID: 11400000, guid: b3bbaa2443bdf604ba7fa4883e825f82, type: 2}
+      heyTeaObject: {fileID: 0}
+      maxNum: 1
+      currentNum: 0
+    totalSum: 1
+    canMixed: 0
+    milkTeaMaterialType: 5
+  - heyTeaObejctStructArray:
+    - heyTeaObjectSO: {fileID: 11400000, guid: 2892896e089594144aa5c23cb8cefabe, type: 2}
+      heyTeaObject: {fileID: 0}
+      maxNum: 1
+      currentNum: 0
+    - heyTeaObjectSO: {fileID: 11400000, guid: d4f9b0a7dfca79e4c91bfa7d17835cba, type: 2}
+      heyTeaObject: {fileID: 0}
+      maxNum: 1
+      currentNum: 0
+    totalSum: 1
+    canMixed: 0
+    milkTeaMaterialType: 4
+  heyTeaObjectTransformList:
+  - parentTransform: {fileID: 6601488617502715087}
+    postionBiasList:
+    - {x: 0, y: 0, z: 0}
+    rotationBiasList:
+    - {x: 0, y: 0, z: 0}
+    scaleFactorList:
+    - {x: 1, y: 1, z: 1}
+    milkTeaMaterialType: 5
+    maxShow: 1
+    maxStore: 1
+  - parentTransform: {fileID: 7904468829355877705}
+    postionBiasList:
+    - {x: 0, y: 0, z: 0}
+    rotationBiasList:
+    - {x: 0, y: 0, z: 0}
+    scaleFactorList:
+    - {x: 1, y: 1, z: 1}
+    milkTeaMaterialType: 4
+    maxShow: 1
+    maxStore: 1
 --- !u!1 &8321530403137857660
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,7 +146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6601488617502715087}
   m_Layer: 0
-  m_Name: PlacementPoint
+  m_Name: PlacementPointMidState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

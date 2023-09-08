@@ -156,6 +156,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cupObject: {fileID: -6683630554046057445}
   iconTemplate: {fileID: 7886145574785077474}
+--- !u!1 &2452620022947714612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5951044783923624411}
+  m_Layer: 0
+  m_Name: PlacementPointBasicAdd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5951044783923624411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2452620022947714612}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1634184896128949975}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2536147297982192873
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,6 +219,11 @@ Transform:
   m_Children:
   - {fileID: 2839095313381633620}
   - {fileID: 3380578499023330420}
+  - {fileID: 5951044783923624411}
+  - {fileID: 8060491764831040245}
+  - {fileID: 5403695622795148499}
+  - {fileID: 4648469393050860470}
+  - {fileID: 246689208851607449}
   - {fileID: 284165134602746213}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -210,17 +246,14 @@ MonoBehaviour:
       heyTeaObject: {fileID: 0}
       maxNum: 1
       currentNum: 0
-      isShowVisual: 0
     - heyTeaObjectSO: {fileID: 11400000, guid: dc739a765f912a0498addc5fde2ef487, type: 2}
       heyTeaObject: {fileID: 0}
       maxNum: 1
       currentNum: 0
-      isShowVisual: 0
     - heyTeaObjectSO: {fileID: 11400000, guid: 10be7db3df32a9c4aa6353b28c8c6ff6, type: 2}
       heyTeaObject: {fileID: 0}
       maxNum: 1
       currentNum: 0
-      isShowVisual: 0
     totalSum: 2
     canMixed: 1
     milkTeaMaterialType: 1
@@ -229,12 +262,10 @@ MonoBehaviour:
       heyTeaObject: {fileID: 0}
       maxNum: 2
       currentNum: 0
-      isShowVisual: 0
     - heyTeaObjectSO: {fileID: 11400000, guid: 5c810f636c28a184d9090f830a40cda4, type: 2}
       heyTeaObject: {fileID: 0}
       maxNum: 2
       currentNum: 0
-      isShowVisual: 0
     totalSum: 4
     canMixed: 0
     milkTeaMaterialType: 2
@@ -243,17 +274,14 @@ MonoBehaviour:
       heyTeaObject: {fileID: 0}
       maxNum: 1
       currentNum: 0
-      isShowVisual: 0
     - heyTeaObjectSO: {fileID: 11400000, guid: 19c8abef5e4d8254c8a7a55446aa4114, type: 2}
       heyTeaObject: {fileID: 0}
       maxNum: 1
       currentNum: 0
-      isShowVisual: 0
     - heyTeaObjectSO: {fileID: 11400000, guid: 7331a20b094af58449de956cab4456d4, type: 2}
       heyTeaObject: {fileID: 0}
       maxNum: 1
       currentNum: 0
-      isShowVisual: 0
     totalSum: 2
     canMixed: 0
     milkTeaMaterialType: 3
@@ -262,17 +290,16 @@ MonoBehaviour:
       heyTeaObject: {fileID: 0}
       maxNum: 1
       currentNum: 0
-      isShowVisual: 0
     - heyTeaObjectSO: {fileID: 11400000, guid: 2892896e089594144aa5c23cb8cefabe, type: 2}
       heyTeaObject: {fileID: 0}
       maxNum: 1
       currentNum: 0
-      isShowVisual: 0
     totalSum: 2
     canMixed: 0
     milkTeaMaterialType: 4
-  HeyTeaObjectTransformList:
-  - postionBiasList:
+  heyTeaObjectTransformList:
+  - parentTransform: {fileID: 3380578499023330420}
+    postionBiasList:
     - {x: 0, y: 0, z: 0}
     - {x: 0, y: 0, z: 0}
     - {x: 0, y: 0, z: 0}
@@ -288,8 +315,10 @@ MonoBehaviour:
     - {x: 1, y: 1, z: 1}
     - {x: 1, y: 1, z: 1}
     milkTeaMaterialType: 1
-    hasUsed: 0
-  - postionBiasList:
+    maxShow: 1
+    maxStore: 3
+  - parentTransform: {fileID: 5951044783923624411}
+    postionBiasList:
     - {x: 0, y: 0.05, z: -0.12}
     - {x: 0, y: 0.31, z: -0.13}
     - {x: 0, y: 0.57, z: -0.17}
@@ -305,12 +334,52 @@ MonoBehaviour:
     - {x: 0.6, y: 0.6, z: 0.6}
     - {x: 0.6, y: 0.6, z: 0.6}
     milkTeaMaterialType: 2
-    hasUsed: 0
-  - postionBiasList:
+    maxShow: 1
+    maxStore: 4
+  - parentTransform: {fileID: 8060491764831040245}
+    postionBiasList:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    rotationBiasList:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    scaleFactorList:
+    - {x: 1, y: 1, z: 1}
+    - {x: 1, y: 1, z: 1}
+    - {x: 1, y: 1, z: 1}
+    - {x: 1, y: 1, z: 1}
+    milkTeaMaterialType: 3
+    maxShow: 1
+    maxStore: 1
+  - parentTransform: {fileID: 5403695622795148499}
+    postionBiasList:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 0}
+    rotationBiasList:
+    - {x: 0, y: 180, z: 0}
+    - {x: 0, y: 180, z: 0}
+    - {x: 0, y: 180, z: 0}
+    - {x: 0, y: 180, z: 0}
+    scaleFactorList:
+    - {x: 1, y: 1, z: 1}
+    - {x: 1, y: 1, z: 1}
+    - {x: 1, y: 1, z: 1}
+    - {x: 1, y: 1, z: 1}
+    milkTeaMaterialType: 3
+    maxShow: 1
+    maxStore: 1
+  - parentTransform: {fileID: 4648469393050860470}
+    postionBiasList:
     - {x: 0.1, y: 0.057, z: 0.06}
     - {x: 0.12, y: 0.33, z: 0.075}
     - {x: 0.13, y: 0.58, z: 0.08}
-    - {x: 0.15, y: 0.66, z: 0.075}
+    - {x: 0.13, y: 0.66, z: 0.075}
     rotationBiasList:
     - {x: 0, y: 0, z: 0}
     - {x: 0, y: 0, z: 0}
@@ -322,8 +391,10 @@ MonoBehaviour:
     - {x: 0.8, y: 0.8, z: 0.8}
     - {x: 0.8, y: 0.8, z: 0.8}
     milkTeaMaterialType: 4
-    hasUsed: 0
-  - postionBiasList:
+    maxShow: 1
+    maxStore: 1
+  - parentTransform: {fileID: 246689208851607449}
+    postionBiasList:
     - {x: -0.1, y: 0.057, z: 0.06}
     - {x: -0.12, y: 0.33, z: 0.075}
     - {x: -0.13, y: 0.58, z: 0.08}
@@ -339,42 +410,70 @@ MonoBehaviour:
     - {x: 0.8, y: 0.8, z: 0.8}
     - {x: 0.8, y: 0.8, z: 0.8}
     milkTeaMaterialType: 4
-    hasUsed: 0
-  - postionBiasList:
-    - {x: 0, y: 0, z: 0}
-    - {x: 0, y: 0, z: 0}
-    - {x: 0, y: 0, z: 0}
-    - {x: 0, y: 0, z: 0}
-    rotationBiasList:
-    - {x: 0, y: 0, z: 0}
-    - {x: 0, y: 0, z: 0}
-    - {x: 0, y: 0, z: 0}
-    - {x: 0, y: 0, z: 0}
-    scaleFactorList:
-    - {x: 1, y: 1, z: 1}
-    - {x: 1, y: 1, z: 1}
-    - {x: 1, y: 1, z: 1}
-    - {x: 1, y: 1, z: 1}
-    milkTeaMaterialType: 3
-    hasUsed: 0
-  - postionBiasList:
-    - {x: 0, y: 0, z: 0}
-    - {x: 0, y: 0, z: 0}
-    - {x: 0, y: 0, z: 0}
-    - {x: 0, y: 0, z: 0}
-    rotationBiasList:
-    - {x: 0, y: 180, z: 0}
-    - {x: 0, y: 180, z: 0}
-    - {x: 0, y: 180, z: 0}
-    - {x: 0, y: 180, z: 0}
-    scaleFactorList:
-    - {x: 0, y: 0, z: 0}
-    - {x: 0, y: 0, z: 0}
-    - {x: 0, y: 0, z: 0}
-    - {x: 0, y: 0, z: 0}
-    milkTeaMaterialType: 3
-    hasUsed: 0
-  palcementPoint: {fileID: 3380578499023330420}
+    maxShow: 1
+    maxStore: 1
+--- !u!1 &3033814855943539339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4648469393050860470}
+  m_Layer: 0
+  m_Name: PlacementPointIngredient1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4648469393050860470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3033814855943539339}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1634184896128949975}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4216144658361961541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8060491764831040245}
+  m_Layer: 0
+  m_Name: PlacementPointFruit1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8060491764831040245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4216144658361961541}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1634184896128949975}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4489768410405487982
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,7 +484,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3380578499023330420}
   m_Layer: 0
-  m_Name: PlacementPoint
+  m_Name: PlacementPointTeaBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -608,6 +707,68 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &7160757841404826409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5403695622795148499}
+  m_Layer: 0
+  m_Name: PlacementPointFruit2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5403695622795148499
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7160757841404826409}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1634184896128949975}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7423327005541122069
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 246689208851607449}
+  m_Layer: 0
+  m_Name: PlacementPointIngredient2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &246689208851607449
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7423327005541122069}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1634184896128949975}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2372490285749619135
 PrefabInstance:
   m_ObjectHideFlags: 0

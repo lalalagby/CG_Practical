@@ -30,7 +30,6 @@ public interface IKichenwareObejct
         public HeyTeaObject heyTeaObject;
         public int maxNum;
         public int currentNum;
-        public bool isShowVisual;
     }
 
     [System.Serializable]
@@ -95,44 +94,74 @@ public interface IKichenwareObejct
 
     [System.Serializable]
     public struct HeyTeaObjectTransform {
+        public Transform parentTransform;
         public Vector3[] postionBiasList;
         public Vector3[] rotationBiasList;
         public Vector3[] scaleFactorList;
         public MilkTeaMaterialType milkTeaMaterialType;
-        public bool hasUsed;
+        public int maxShow;
+        public int maxStore;
 
-        public void SetTransform(Transform transform,Transform parentTransform,int layer) {
+        public void SetTransform(Transform transform) {
             transform.parent = parentTransform;
-            transform.localPosition = postionBiasList[layer];
-            transform.localEulerAngles = rotationBiasList[layer];
-            transform.localScale = scaleFactorList[layer];
+            transform.localPosition = postionBiasList[0];
+            transform.localEulerAngles = rotationBiasList[0];
+            transform.localScale = scaleFactorList[0];
+
+            if (parentTransform.childCount > maxShow) {
+                transform.gameObject.SetActive(false);
+                Debug.Log(transform.name + " is set " + false);
+            }
+            if (transform.childCount > 1) {
+                for (int i=0 ; i < transform.childCount;i ++) {
+                    GameObject child = transform.GetChild(i).gameObject;
+                    bool tag = child.activeSelf ? false:true ;
+                    child.gameObject.SetActive(tag);
+                    Debug.Log(child.name+" is set "+tag);
+                }
+            }
         }
 
-        public void ChangeTransform(Transform parentTransform, int layer) {
-            foreach(Transform child in parentTransform) {
+        public MilkTeaMaterialType GetMilkTeaMaterialType() {
+            return milkTeaMaterialType;
+        }
+
+        public void ResetLayer(int layer) {
+            for(int i = 0; i < parentTransform.childCount; i++) {
+                Transform child = parentTransform.GetChild(i);
                 child.localPosition = postionBiasList[layer];
                 child.localEulerAngles = rotationBiasList[layer];
                 child.localScale = scaleFactorList[layer];
+                child.parent = parentTransform;
             }
         }
+
+        public Transform GetParentTransform() {
+            return parentTransform;
+        }
+
        public bool CanSetParent(MilkTeaMaterialType milkTeaMaterialType) {
-            if (this.milkTeaMaterialType == milkTeaMaterialType && hasUsed == false) {
+            if (this.milkTeaMaterialType == milkTeaMaterialType&&parentTransform.childCount<maxStore) {
                 return true;
             } else {
                 return false;
             }
         }
-
-        public void SetUsed(bool used) {
-            this.hasUsed = used;
-        }
     }
 
     public bool TryAddIngredient(HeyTeaObjectSO heyTeaObjectSO, MilkTeaMaterialType milkTeaMaterialType);
 
-    public void Interact(IKichenwareObejct kichenwareObejct) {
+    public bool GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO) { heyTeaObjectSO = null;return false; }
 
+    public bool InteractWithOtherKichenware(IKichenwareObejct kichenwareObejct) {
+        if(kichenwareObejct.GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO)) {
+            return TryAddIngredient(heyTeaObjectSO, (MilkTeaMaterialType)heyTeaObjectSO.materialType);
+        } else {
+            return false;
+        }
     }
 
-    public bool GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO) { heyTeaObjectSO = null;return false; }
+    public void DestroyChild(HeyTeaObjectSO heyTeaObjectSO) {
+
+    }
 }

@@ -35,7 +35,8 @@ public class StoveCounter : BaseCounter,IHasProgress {
                 isCooking = false;
                 OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { isCooking = false });
             }
-            if (allTime >= setInterval) {
+            if (allTime >= setInterval||isCooking==false) {
+                Debug.Log(potObject.GetCookingProgressPercentage());
                 OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { progressNormalized = potObject.GetCookingProgressPercentage(), isProcessing = isCooking });
                 allTime = 0;
             }
@@ -43,41 +44,32 @@ public class StoveCounter : BaseCounter,IHasProgress {
     }
 
     public override void Interact(Player player) {
-        if (HasHeyTeaObject() && GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenware)) {
-            //has pot
-            if (player.HasHeyTeaObject()) {
-                //player has object
-                if (player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenware1)) {
-                    //if player has cup or pot,and the thing in pot can be put in cup
-                    if (kichenware.GetOutputHeyTeaObejct(out HeyTeaObjectSO inPotHeyTeaObjectSO) && kichenware1.TryAddIngredient(inPotHeyTeaObjectSO, (IKichenwareObejct.MilkTeaMaterialType)inPotHeyTeaObjectSO.materialType)) {
-                        HeyTeaObjectSO heyTeaObjectSOClone = (HeyTeaObjectSO)heyTeaObjectSO.Clone();
-                        GetHeyTeaObject().DestroySelf();
-                        HeyTeaObject.SpawnHeyTeaObejct(heyTeaObjectSOClone, this);
-                        isCooking = false;
-                        OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { isCooking = false });
-                        OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs {  isProcessing = isCooking });
+        if (HasHeyTeaObject()&&GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwareObejct)) {
+            //this counter only can have pot
+            if(player.HasHeyTeaObject()) {
+                //if player hold cup or pot
+                if(player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwarePlayerHold)) {
+                    if (!kichenwareObejct.InteractWithOtherKichenware(kichenwarePlayerHold)) {
+                        if (kichenwarePlayerHold.InteractWithOtherKichenware(kichenwareObejct)) {
+                            kichenwareObejct.GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO);
+                            kichenwareObejct.DestroyChild(heyTeaObjectSO);
+                        }
+                    } else {
+                        kichenwarePlayerHold.GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO);
+                        kichenwarePlayerHold.DestroyChild(heyTeaObjectSO);
                     }
                 } else {
-                    if (kichenware.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
+                    if(kichenwareObejct.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)){
                         player.GetHeyTeaObject().DestroySelf();
                         isCooking = false;
-                        OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { isCooking = false });
-                        OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { isProcessing = isCooking });
                     }
                 }
-            } else {
-                GetHeyTeaObject().SetHeyTeaObjectParents(player);
-                isCooking = false;
-                OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { isCooking = false });
-                OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { isProcessing = isCooking });
             }
         } else {
-            //not have thing, if player hold pot, can put pot
-            if (player.GetHeyTeaObject() as PotObject) {
-                player.GetHeyTeaObject().SetHeyTeaObjectParents(this);
-                isCooking = false;
-                OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { isCooking = false });
-                OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { isProcessing = isCooking });
+            if(player.HasHeyTeaObject()&& player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwarePlayerHold)) {
+                if (player.GetHeyTeaObject().GetHeyTeaObjectSO() == heyTeaObjectSO) {
+                    player.GetHeyTeaObject().SetHeyTeaObjectParents(this);
+                }
             }
         }
     }
@@ -85,19 +77,19 @@ public class StoveCounter : BaseCounter,IHasProgress {
         if (HasHeyTeaObject()) {
             //has pot
             PotObject potObject = GetHeyTeaObject() as PotObject;
-            if (potObject != null && potObject.GetHeyTeaObject().GetHeyTeaObjectSO()!= potObject.GetOutputForInput(potObject.GetHeyTeaObject().GetHeyTeaObjectSO())) {
+            if (potObject != null && potObject.CanCook()) {
                 //if the food can cook;
                 if (isCooking == false) {
                     isCooking = true;
                     allTime = 0;
-                    OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { isCooking = true }) ;
+                    OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { isCooking = true });
                     OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { isProcessing = isCooking });
                 } else {
                     isCooking = false;
                     OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { isCooking = false });
                     OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { isProcessing = isCooking });
                 }
-            }    
+            }
         }
     }
 }
