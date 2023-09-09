@@ -59,11 +59,13 @@ public class StoveCounter : BaseCounter,IHasProgress {
                         kichenwarePlayerHold.DestroyChild(heyTeaObjectSO);
                     }
                 } else {
-                    if(kichenwareObejct.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)){
+                    if (kichenwareObejct.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
                         player.GetHeyTeaObject().DestroySelf();
                         isCooking = false;
-                    }
+                    } 
                 }
+            } else {
+                GetHeyTeaObject().SetHeyTeaObjectParents(player);
             }
         } else {
             if(player.HasHeyTeaObject()&& player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwarePlayerHold)) {
