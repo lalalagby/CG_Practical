@@ -69,4 +69,43 @@ public class HeyTeaObject : MonoBehaviour
 
         return heyTeaObject;
     }
+
+    public static bool HeyTeaObejctInteract(HeyTeaObject heyTeaObject1,HeyTeaObject heyTeaObject2) {
+        if(heyTeaObject1.TryGetKichenware(out IKichenwareObejct kichenwareObejct1)) {
+            if(heyTeaObject2.TryGetKichenware(out IKichenwareObejct kichenwareObejct2)) {
+                if (kichenwareObejct1.InteractWithOtherKichenware(kichenwareObejct2)) {
+                    kichenwareObejct2.GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO);
+                    kichenwareObejct2.DestroyChild(heyTeaObjectSO);
+                    return true;
+                } else {
+                    if (kichenwareObejct2.InteractWithOtherKichenware(kichenwareObejct1)) {
+                        kichenwareObejct1.GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO);
+                        kichenwareObejct1.DestroyChild(heyTeaObjectSO);
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            } else {
+                if (kichenwareObejct1.TryAddIngredient(heyTeaObject2.GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)heyTeaObject2.GetHeyTeaObjectSO().materialType)) {
+                    heyTeaObject2.DestroySelf();
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        } else {
+            if(heyTeaObject2.TryGetKichenware(out IKichenwareObejct kichenwareObejct2)) {
+                if (kichenwareObejct2.TryAddIngredient(heyTeaObject1.GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)heyTeaObject1.GetHeyTeaObjectSO().materialType)) {
+                    heyTeaObject1.DestroySelf();
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                //both normal objects,cant interact
+                return false;
+            }
+        }
+    }
 }

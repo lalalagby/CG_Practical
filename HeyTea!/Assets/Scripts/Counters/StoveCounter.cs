@@ -36,7 +36,6 @@ public class StoveCounter : BaseCounter,IHasProgress {
                 OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { isCooking = false });
             }
             if (allTime >= setInterval||isCooking==false) {
-                Debug.Log(potObject.GetCookingProgressPercentage());
                 OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { progressNormalized = potObject.GetCookingProgressPercentage(), isProcessing = isCooking });
                 allTime = 0;
             }
@@ -47,23 +46,7 @@ public class StoveCounter : BaseCounter,IHasProgress {
         if (HasHeyTeaObject()&&GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwareObejct)) {
             //this counter only can have pot
             if(player.HasHeyTeaObject()) {
-                //if player hold cup or pot
-                if(player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwarePlayerHold)) {
-                    if (!kichenwareObejct.InteractWithOtherKichenware(kichenwarePlayerHold)) {
-                        if (kichenwarePlayerHold.InteractWithOtherKichenware(kichenwareObejct)) {
-                            kichenwareObejct.GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO);
-                            kichenwareObejct.DestroyChild(heyTeaObjectSO);
-                        }
-                    } else {
-                        kichenwarePlayerHold.GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO);
-                        kichenwarePlayerHold.DestroyChild(heyTeaObjectSO);
-                    }
-                } else {
-                    if (kichenwareObejct.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
-                        player.GetHeyTeaObject().DestroySelf();
-                        isCooking = false;
-                    } 
-                }
+                HeyTeaObject.HeyTeaObejctInteract(player.GetHeyTeaObject(), GetHeyTeaObject());
             } else {
                 GetHeyTeaObject().SetHeyTeaObjectParents(player);
             }

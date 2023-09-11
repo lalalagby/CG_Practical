@@ -29,18 +29,7 @@ public class ClearCounter : BaseCounter
                 this.GetHeyTeaObject().SetHeyTeaObjectParents(player);
             } else {
                 //if player hold the cup,so check whether the obeject can be placed in the cup.
-                if (player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwareObejct)) {
-                    //player hold cup
-                    if (kichenwareObejct.TryAddIngredient(GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
-                        GetHeyTeaObject().DestroySelf();
-                    }
-                } else {
-                    if (this.GetHeyTeaObject().TryGetKichenware(out kichenwareObejct)) {
-                        if (kichenwareObejct.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
-                            player.GetHeyTeaObject().DestroySelf();
-                        }
-                    }
-                }
+                HeyTeaObject.HeyTeaObejctInteract(player.GetHeyTeaObject(), GetHeyTeaObject());
             }
         }
     }
