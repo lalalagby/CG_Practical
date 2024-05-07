@@ -23,13 +23,11 @@ public class SoupContainerCounter : BaseCounter
     public override void Interact(Player player) {
         //Set the coordinates for placing objects based on the coordinate values of top and update the visual effect.
         if (player.HasHeyTeaObject()) {
-            if (HasHeyTeaObject()) {
-                HeyTeaObject.HeyTeaObejctInteract(player.GetHeyTeaObject(), GetHeyTeaObject());
-            } else {
+            if (!HasHeyTeaObject()) {
                 if (player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwareObejct)) {
                     HeyTeaObject.SpawnHeyTeaObejct(heyTeaObjectSO, this);
                     bool tag = kichenwareObejct.TryAddIngredient(GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)GetHeyTeaObject().GetHeyTeaObjectSO().materialType);
-                    if (tag) {
+                    if (tag) {            
                         OnPlayerGrabbedObject?.Invoke(this, EventArgs.Empty);
                     }
                     GetHeyTeaObject().DestroySelf();
@@ -39,10 +37,25 @@ public class SoupContainerCounter : BaseCounter
                 } else {
                     player.GetHeyTeaObject().SetHeyTeaObjectParents(this);
                 }
+            } else {
+                if (player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwareObejct)) {
+                    //player hold cup
+                    if (kichenwareObejct.TryAddIngredient(GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
+                        GetHeyTeaObject().DestroySelf();
+                    }
+                } else {
+                    if (this.GetHeyTeaObject().TryGetKichenware(out kichenwareObejct)) {
+                       {
+                            if (kichenwareObejct.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
+                                player.GetHeyTeaObject().DestroySelf();
+                            }
+                       }
+                    }
+                }
             }
         } else {
             if (HasHeyTeaObject()) {
-                GetHeyTeaObject().SetHeyTeaObjectParents(player);
+                this.GetHeyTeaObject().SetHeyTeaObjectParents(player);
             } 
         }
     }
