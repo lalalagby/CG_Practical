@@ -28,8 +28,12 @@ public class HeyTeaObject : MonoBehaviour
         //set the record of the new counter
         this.heyTeaObjectParent = heyTeaObjectParent;
 
+        // If heyTeaObjectParent has HeyTeaObject
         if (heyTeaObjectParent.HasHeyTeaObject()) {
-            Debug.LogError("Counter already has a object");
+            // The HeyTeaObject is not Kitchenware
+            if ((!heyTeaObjectParent.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwareObejct))) {
+                Debug.LogError("Counter already has a object");
+            }
         }
 
         heyTeaObjectParent.SetHeyTeaObject(this);
@@ -45,6 +49,17 @@ public class HeyTeaObject : MonoBehaviour
     public void DestroySelf() {
         heyTeaObjectParent.ClearHeyTeaObject();
         Destroy(gameObject);
+    }
+
+    public bool TryGetKichenware(out IKichenwareObejct kichenwareObejct) {
+        if(this is IKichenwareObejct) {
+            kichenwareObejct = this as IKichenwareObejct;
+            return true;
+        } else {
+            kichenwareObejct = null;
+            return false;
+        }
+        
     }
 
     public static HeyTeaObject SpawnHeyTeaObejct(HeyTeaObjectSO heyTeaObjectSO,IHeyTeaObjectParents heyTeaObjectParents) {
