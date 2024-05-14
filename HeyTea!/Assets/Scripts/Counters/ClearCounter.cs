@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
@@ -8,8 +9,9 @@ using UnityEngine.UIElements;
 File Name : ClearCounter.cs
 Function  : counter interacte action
 Author    : Yong Wu
-Data      : 28.08.2023
-
+Created   : 28.08.2023
+Last Modified by: Bingyu Guo
+Last Modification Date  :   10.05.2024
 */
 
 public class ClearCounter : BaseCounter
@@ -31,7 +33,7 @@ public class ClearCounter : BaseCounter
                 this.GetHeyTeaObject().SetHeyTeaObjectParents(player);
                 this.ClearHeyTeaObject();
             } else {    // The player has HeyTeaObject
-                // If player holds a cup
+                // If player holds a cup or a pot
                 if (player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwareObejct)) {
                     // Try to add HeyTeaObject from the counter to the player's container 
                     if (kichenwareObejct.TryAddIngredient(GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
@@ -39,7 +41,7 @@ public class ClearCounter : BaseCounter
                         GetHeyTeaObject().DestroySelf();
                     }
                 } else {    // The HeyTeaObject in the player's hand is not a cup
-                    // If the counter holds a cup
+                    // If the counter holds a cup or a pot
                     if (this.GetHeyTeaObject().TryGetKichenware(out kichenwareObejct)) {
                         // If the object on the counter is a container, try to add the player's objects to the counter's container
                         if (kichenwareObejct.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
@@ -51,5 +53,4 @@ public class ClearCounter : BaseCounter
             }
         }
     }
-
 }

@@ -7,13 +7,19 @@ File Name : ContainerCounter.cs
 Function  : Material category
 Author    : Yong Wu
 Data      : 28.08.2023
-
+Last Modified by: Bingyu Guo
+Last Modification Date  :   14.05.2024
 */
 public class HeyTeaObject : MonoBehaviour
 {
     [SerializeField] private HeyTeaObjectSO heyTeaObjectSO;
 
     private IHeyTeaObjectParents heyTeaObjectParent;
+
+    public void SetHeyTeaObjectSO(HeyTeaObjectSO heyTeaObjectSO)
+    {
+        this.heyTeaObjectSO = heyTeaObjectSO;
+    }
 
     public HeyTeaObjectSO GetHeyTeaObjectSO() {
         return heyTeaObjectSO;
@@ -59,7 +65,6 @@ public class HeyTeaObject : MonoBehaviour
             kichenwareObejct = null;
             return false;
         }
-        
     }
 
     public static HeyTeaObject SpawnHeyTeaObejct(HeyTeaObjectSO heyTeaObjectSO,IHeyTeaObjectParents heyTeaObjectParents) {

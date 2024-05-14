@@ -8,8 +8,9 @@ using UnityEngine;
 File Name : Player.cs
 Function  : user control
 Author    : Yong Wu
-Data      : 16.08.2023
-
+Created   : 16.08.2023
+Last Modified by: Bingyu Guo
+Last Modification Date  :   14.05.2024
 */
 
 

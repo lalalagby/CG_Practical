@@ -50,13 +50,13 @@ public class GameInput : MonoBehaviour
     }
 
     //publisher and subscriber to listen the interaction type action.
-    private void Interact_Performed(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
+    public void Interact_Performed(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
         //if the suscriber number is not zero, then we can board this message.
         OnInteractAction?.Invoke(this, EventArgs.Empty);
     }
 
     //cutting action
-    private void Operation_Performed(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
+    public void Operation_Performed(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
         //if the suscriber number is not zero, then we can board this message.
         if (obj.interaction is HoldInteraction) {
             isHolding = true;
@@ -65,7 +65,7 @@ public class GameInput : MonoBehaviour
         
     }
 
-    private void Operation_Canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
+    public void Operation_Canceled(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
         //if the suscriber number is not zero, then we can board this message.
         if (obj.interaction is HoldInteraction) {
             isHolding = false;

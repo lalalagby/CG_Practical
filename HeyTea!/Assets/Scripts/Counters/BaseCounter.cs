@@ -18,7 +18,7 @@ public class BaseCounter : MonoBehaviour, IHeyTeaObjectParents {
     [SerializeField] private Transform counterTopPoint;
 
     //Unified category of items
-    private HeyTeaObject heyTeaObject;
+    public HeyTeaObject heyTeaObject;
 
     //Virtual functions for interacting with users
     public virtual void Interact(Player player) { }

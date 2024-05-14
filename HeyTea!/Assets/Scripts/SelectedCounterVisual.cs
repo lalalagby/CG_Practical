@@ -7,7 +7,6 @@ File Name : SelectedCounter.cs
 Function  : Counter selected visualization
 Author    : Yong Wu
 Data      : 28.08.2023
-
 */
 
 public class SelectedCounterVisual : MonoBehaviour
@@ -21,8 +20,9 @@ public class SelectedCounterVisual : MonoBehaviour
         Player.Instance.OnSelectedCounterChanged += Player_OnSelectedCounterChanged;
     }
 
-    //Change the appearance of the locker when a message is received
-    private void Player_OnSelectedCounterChanged(object render,Player.OnSelectedCounterChangedEventsArgs e) {
+    // Change the appearance of the counter when a message is received
+    public void Player_OnSelectedCounterChanged(object render, Player.OnSelectedCounterChangedEventsArgs e) {
+        // If the selected counter is the current baseCounter, call the Show method to display the
         if (e.selectedCounter == baseCounter) {
             Show();
         } else {
@@ -30,12 +30,17 @@ public class SelectedCounterVisual : MonoBehaviour
         }
     }
 
-    private void Show() {
-        foreach(GameObject gameObject in visualGameObjectArray) {
+    // Show all GameObjects in the visualGameObjectArray array
+    public void Show() {
+        // Iterate through the visualGameObjectArray array, setting each GameObject to the active state
+        foreach (GameObject gameObject in visualGameObjectArray) {
             gameObject.SetActive(true);
         }
     }
-    private void Hide() {
+
+    // Hide all GameObjects in the visualGameObjectArray array
+    public void Hide() {
+        // Iterate through the visualGameObjectArray array, setting each GameObject to an inactive state
         foreach (GameObject gameObject in visualGameObjectArray) {
             gameObject.SetActive(false);
         }
