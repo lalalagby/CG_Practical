@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class StoveCounterVisual : MonoBehaviour
 {
-    [SerializeField] private GameObject stoveOnGameObject;
-    [SerializeField] private GameObject steamParticleGameObject;
-    [SerializeField] private StoveCounter stoveCounter;
+    [SerializeField] public GameObject stoveOnGameObject;
+    [SerializeField] public GameObject steamParticleGameObject;
+    [SerializeField] public StoveCounter stoveCounter;
 
     private void Start() {
         stoveCounter.OnStateChanged += StoveCounter_OnStateChanged;

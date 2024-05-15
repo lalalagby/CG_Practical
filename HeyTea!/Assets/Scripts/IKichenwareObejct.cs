@@ -38,32 +38,43 @@ public interface IKichenwareObejct
         public int totalSum;
         public bool canMixed;
         public MilkTeaMaterialType milkTeaMaterialType;
-        
-        public bool CanAdd(HeyTeaObjectSO heyTeaObjectSO) {
-            if (canMixed&& heyTeaObejctStructArray[heyTeaObejctStructArray.Count()-1].currentNum>= heyTeaObejctStructArray[heyTeaObejctStructArray.Count() - 1].maxNum) {
+
+        public bool CanAdd(HeyTeaObjectSO heyTeaObjectSO)
+        {
+            // Check if mixed and last element exceeds maxNum
+            if (canMixed && heyTeaObejctStructArray[heyTeaObejctStructArray.Length - 1].currentNum >= heyTeaObejctStructArray[heyTeaObejctStructArray.Length - 1].maxNum)
+            {
                 return false;
             }
-            int sum = 0;
-            foreach(HeyTeaObejctStruct heyTeaObejctStruct in heyTeaObejctStructArray) {
-                if(heyTeaObjectSO== heyTeaObejctStruct.heyTeaObjectSO) {
-                    //check the type
-                    if (heyTeaObejctStruct.currentNum >= heyTeaObejctStruct.maxNum) {
-                        return false;
-                    }
+
+            // Check if any element's currentNum exceeds maxNum
+            foreach (HeyTeaObejctStruct heyTeaObejctStruct in heyTeaObejctStructArray)
+            {
+                if (heyTeaObejctStruct.currentNum >= heyTeaObejctStruct.maxNum)
+                {
+                    return false;
                 }
+            }
+
+            // Check if total sum exceeds limit
+            int sum = 0;
+            foreach (HeyTeaObejctStruct heyTeaObejctStruct in heyTeaObejctStructArray)
+            {
                 sum += heyTeaObejctStruct.currentNum;
             }
-            if (sum >= totalSum) {
+            if (sum >= totalSum)
+            {
                 return false;
-            } else {
-                return true;
             }
+
+            return true;
         }
+
 
         public bool CheckMixed() {
             bool tag = true;
             if (canMixed) {
-                for(int i = 0; i < heyTeaObejctStructArray.Count() - 1; i++) {
+                for(int i = 0; i < heyTeaObejctStructArray.Count(); i++) {
                     if (heyTeaObejctStructArray[i].currentNum < heyTeaObejctStructArray[i].maxNum) {
                         tag = false;
                     }
@@ -72,7 +83,8 @@ public interface IKichenwareObejct
                 tag = false;
             }
             return tag;
-        } 
+        }
+
         public void ClearAll() {
             for (int i = 0; i < heyTeaObejctStructArray.Count(); i++) {
                 heyTeaObejctStructArray[i].heyTeaObject = null;

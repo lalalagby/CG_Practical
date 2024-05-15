@@ -10,7 +10,7 @@ public class CupObject : HeyTeaObject,IKichenwareObejct {
     public event EventHandler OnIngredinetAdded;
 
     
-    [SerializeField] private List<MilkTeaMaterialQuota> milkTeaMaterialQuotaList;
+    [SerializeField] public List<MilkTeaMaterialQuota> milkTeaMaterialQuotaList;
     [SerializeField] private List<HeyTeaObjectTransform> heyTeaObjectTransformList;
 
     //try to add something in the cup.
