@@ -13,50 +13,39 @@ Data      : 28.08.2023
 
 */
 
-public class SoupContainerCounter : BaseCounter 
+public class SoupContainerCounter : BaseCounter
 {
-    //Define events for cabinet crawling
+    // Define events for cabinet interactions
     public event EventHandler OnPlayerGrabbedObject;
 
     [SerializeField] private HeyTeaObjectSO heyTeaObjectSO;
 
-    public override void Interact(Player player) {
-        //Set the coordinates for placing objects based on the coordinate values of top and update the visual effect.
-        if (player.HasHeyTeaObject()) {
-            if (!HasHeyTeaObject()) {
-                if (player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwareObejct)) {
-                    HeyTeaObject.SpawnHeyTeaObejct(heyTeaObjectSO, this);
-                    bool tag = kichenwareObejct.TryAddIngredient(GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)GetHeyTeaObject().GetHeyTeaObjectSO().materialType);
-                    if (tag) {            
-                        OnPlayerGrabbedObject?.Invoke(this, EventArgs.Empty);
-                    }
-                    GetHeyTeaObject().DestroySelf();
-                    if (!tag) {
-                        player.GetHeyTeaObject().SetHeyTeaObjectParents(this);
-                    }
-                } else {
-                    player.GetHeyTeaObject().SetHeyTeaObjectParents(this);
+    public override void Interact(Player player)
+    {
+        // Player has an object in hand
+        if (player.HasHeyTeaObject())
+        {
+            // If the player is holding a kitchenware object
+            if (player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwareObject))
+            {
+                // Attempt to add ingredient to the kitchenware object
+                bool tag = kichenwareObject.TryAddIngredient(heyTeaObjectSO, (IKichenwareObejct.MilkTeaMaterialType)heyTeaObjectSO.materialType);
+                // If the interaction is successful, trigger the event and destroy the object in player's hand
+                if (tag)
+                {
+                    OnPlayerGrabbedObject?.Invoke(this, EventArgs.Empty);
+                    Debug.Log("Add ingredient to the kitchenware object.");
                 }
-            } else {
-                if (player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwareObejct)) {
-                    //player hold cup
-                    if (kichenwareObejct.TryAddIngredient(GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
-                        GetHeyTeaObject().DestroySelf();
-                    }
-                } else {
-                    if (this.GetHeyTeaObject().TryGetKichenware(out kichenwareObejct)) {
-                       {
-                            if (kichenwareObejct.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
-                                player.GetHeyTeaObject().DestroySelf();
-                            }
-                       }
-                    }
+                else
+                {
+                    Debug.Log("Cannot add ingredient to the kitchenware object.");
                 }
             }
-        } else {
-            if (HasHeyTeaObject()) {
-                this.GetHeyTeaObject().SetHeyTeaObjectParents(player);
-            } 
+        }
+        else
+        {
+            // Players can't take the milk or tea directly, they must have a kitchenware.
+            Debug.Log("Cannot grab this object.");
         }
     }
 }
