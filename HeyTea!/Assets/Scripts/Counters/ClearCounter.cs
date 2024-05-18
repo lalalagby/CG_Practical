@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 /*
 File Name : ClearCounter.cs
@@ -11,46 +12,57 @@ Function  : counter interacte action
 Author    : Yong Wu
 Created   : 28.08.2023
 Last Modified by: Bingyu Guo
-Last Modification Date  :   10.05.2024
+Last Modification Date  :   18.05.2024
 */
 
-public class ClearCounter : BaseCounter
-{
-    //Interaction functions for counter items
+public class ClearCounter : BaseCounter {
     public override void Interact(Player player) {
-        // If there is no HeyTeaObject on the counter
-        if (!HasHeyTeaObject()) {
-            // If the player carry HeyTeaObject
-            if (player.HasHeyTeaObject()) {
-                // Put the object from player to counter
-                player.GetHeyTeaObject().SetHeyTeaObjectParents(this);
-                player.ClearHeyTeaObject();
-            } 
-        } else {    // There is HeyTeaObject on the counter
-            // If the player does not carry HeyTeaObject
-            if (!player.HasHeyTeaObject()) {
-                // Put the object from counter to player
-                this.GetHeyTeaObject().SetHeyTeaObjectParents(player);
-                this.ClearHeyTeaObject();
-            } else {    // The player has HeyTeaObject
-                // If player holds a cup or a pot
-                if (player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwareObejct)) {
-                    // Try to add HeyTeaObject from the counter to the player's container 
-                    if (kichenwareObejct.TryAddIngredient(GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
-                        // Destroy HeyTeaObject on the counter
-                        GetHeyTeaObject().DestroySelf();
-                    }
-                } else {    // The HeyTeaObject in the player's hand is not a cup
-                    // If the counter holds a cup or a pot
-                    if (this.GetHeyTeaObject().TryGetKichenware(out kichenwareObejct)) {
-                        // If the object on the counter is a container, try to add the player's objects to the counter's container
-                        if (kichenwareObejct.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
-                            // Destroy bject in Player's hands
-                            player.GetHeyTeaObject().DestroySelf();
-                        }
-                    }
-                }
+
+        // Counter and Player both have HeyTeaObject.
+        if (HasHeyTeaObject() && player.HasHeyTeaObject()) {
+            print("Counter and Player both have HeyTeaObject.");
+            HandleBothHaveObjects(player);
+            return;
+        }
+
+        // Only Player has a HeyTeaObject
+        if (player.HasHeyTeaObject()) {
+            print("Only Player has a HeyTeaObject");
+            // Put the object from player to counter
+            player.GetHeyTeaObject().SetHeyTeaObjectParents(this);
+            player.ClearHeyTeaObject();
+            return;
+        }
+
+        // Only Counter has a HeyTeaObject
+        if (HasHeyTeaObject()) {
+            print("Only Counter has a HeyTeaObject");
+            // Put the object from counter to player
+            GetHeyTeaObject().SetHeyTeaObjectParents(player);
+            ClearHeyTeaObject();
+        }
+    }
+
+    // If Player and Counter both has HeyTeaObject
+    private void HandleBothHaveObjects(Player player)  {
+        // If Player has a kitchenware(cup)
+        if (player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct playerKichenware))  {
+            var ingredientSO = GetHeyTeaObject().GetHeyTeaObjectSO();
+            // Put ingredients from Counter to PlayerKitchenware
+            if (playerKichenware.TryAddIngredient(ingredientSO, (IKichenwareObejct.MilkTeaMaterialType)ingredientSO.materialType)) {
+                GetHeyTeaObject().DestroySelf();
+            }
+            return;
+        }
+
+        // If Counter has a kitchenware(cup)
+        if (GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct counterKichenware))  {
+            var ingredientSO = player.GetHeyTeaObject().GetHeyTeaObjectSO();
+            // Put ingredients from Player to CounterKitchenware
+            if (counterKichenware.TryAddIngredient(ingredientSO, (IKichenwareObejct.MilkTeaMaterialType)ingredientSO.materialType))  {
+                player.GetHeyTeaObject().DestroySelf();
             }
         }
     }
+
 }
