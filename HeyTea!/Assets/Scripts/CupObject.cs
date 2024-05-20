@@ -108,4 +108,18 @@ public class CupObject : HeyTeaObject,IKichenwareObejct {
         return milkTeaMaterialQuotaList;
     }
 
+    // Get HeyTeaObjectSO from this(Cup)
+    public bool GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO)  {
+
+        foreach (MilkTeaMaterialQuota milkTeaMaterialQuota in milkTeaMaterialQuotaList)  {
+            foreach (HeyTeaObejctStruct heyTeaObejctStruct in milkTeaMaterialQuota.heyTeaObejctStructArray)  {
+                if (heyTeaObejctStruct.currentNum > 0)  {
+                    heyTeaObjectSO = heyTeaObejctStruct.heyTeaObjectSO;
+                    return true;
+                }
+            }
+        }
+        heyTeaObjectSO = null;
+        return false;
+    }
 }

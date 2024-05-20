@@ -28,6 +28,7 @@ public class StoveCounter : BaseCounter,IHasProgress {
     }
 
     private void Update() {
+        // If StoveCounter has a Pot, and Ingredient is cooking in Pot
         if (isCooking&&HasHeyTeaObject()) {
             PotObject potObject = GetHeyTeaObject() as PotObject;
             allTime += Time.deltaTime;
@@ -44,43 +45,61 @@ public class StoveCounter : BaseCounter,IHasProgress {
     }
 
     public override void Interact(Player player) {
-        if (HasHeyTeaObject()&&GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwareObejct)) {
-            //this counter only can have pot
-            if(player.HasHeyTeaObject()) {
-                //if player hold cup or pot
-                if(player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwarePlayerHold)) {
-                    if (!kichenwareObejct.InteractWithOtherKichenware(kichenwarePlayerHold)) {
-                        if (kichenwarePlayerHold.InteractWithOtherKichenware(kichenwareObejct)) {
-                            kichenwareObejct.GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO);
-                            kichenwareObejct.DestroyChild(heyTeaObjectSO);
-                        }
-                    } else {
-                        kichenwarePlayerHold.GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO);
-                        kichenwarePlayerHold.DestroyChild(heyTeaObjectSO);
-                    }
-                } else {
-                    if (kichenwareObejct.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
-                        player.GetHeyTeaObject().DestroySelf();
-                        isCooking = false;
-                    } 
-                }
-            } else {
-                GetHeyTeaObject().SetHeyTeaObjectParents(player);
-            }
-        } else {
-            if(player.HasHeyTeaObject()&& player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwarePlayerHold)) {
-                if (player.GetHeyTeaObject().GetHeyTeaObjectSO() == heyTeaObjectSO) {
-                    player.GetHeyTeaObject().SetHeyTeaObjectParents(this);
-                }
-            }
+
+        // StoveCounter has Pot and Player has HeyTeaObject.
+        if (HasHeyTeaObject() && player.HasHeyTeaObject()) {
+            GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct pot);
+            HandleBothHaveObjects(player, pot);
+            return;
         }
-    }
-    public override void Operation(Player player) {
+
+        // Player has Pot, StoveCounter has nothing
+        if (player.HasHeyTeaObject() && player.GetHeyTeaObject() is PotObject) {
+            // Put the object from player to counter
+            player.GetHeyTeaObject().SetHeyTeaObjectParents(this);
+            player.ClearHeyTeaObject();
+            return;
+        }
+
+        // StoveCounter has Pot, Player has nothing
         if (HasHeyTeaObject()) {
-            //has pot
+            // Put the object from counter to player
+            GetHeyTeaObject().SetHeyTeaObjectParents(player);
+            ClearHeyTeaObject();
+            return;
+        }
+
+    }
+
+    // If Player and Counter both has HeyTeaObject
+    private void HandleBothHaveObjects(Player player, IKichenwareObejct pot) {
+        // If Player has a kitchenware(i.e. Cup)
+        if (player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct playerKitchenware)) {
+            // Try to put HeyTeaObject from pot to playerKitchenware (Only cooked Ingredients could be added into Cup)
+            if (playerKitchenware.InteractWithOtherKichenware(pot)) {
+                // Delete this HeyTeaObject from pot
+                pot.GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO);
+                pot.DestroyChild(heyTeaObjectSO);
+                return;
+            }
+            return;
+        }
+
+        // If Player has Food, try to put HeyTeaObject from Player to pot
+        if (pot.TryAddIngredient(player.GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)player.GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
+            player.GetHeyTeaObject().DestroySelf();
+            player.ClearHeyTeaObject();
+            isCooking = false;
+        }
+
+    }
+
+    public override void Operation(Player player) {
+        // If StoveCounter has Pot
+        if (HasHeyTeaObject()) {
             PotObject potObject = GetHeyTeaObject() as PotObject;
-            if (potObject != null && potObject.CanCook()) {
-                //if the food can cook;
+            // If Food can be cooked;
+            if (potObject.CanCook()) {
                 if (isCooking == false) {
                     isCooking = true;
                     allTime = 0;

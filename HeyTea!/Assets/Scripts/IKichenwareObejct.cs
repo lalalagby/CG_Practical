@@ -163,10 +163,13 @@ public interface IKichenwareObejct
 
     public bool TryAddIngredient(HeyTeaObjectSO heyTeaObjectSO, MilkTeaMaterialType milkTeaMaterialType);
 
-    public bool GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO) { heyTeaObjectSO = null;return false; }
+    public bool GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO) {heyTeaObjectSO = null;return false; }
 
+
+    // Put heyTeaObjectSO from kichenwareObejct to this
     public bool InteractWithOtherKichenware(IKichenwareObejct kichenwareObejct) {
-        if(kichenwareObejct.GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO)) {
+        Debug.Log("yes");
+        if (kichenwareObejct.GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO)) {
             return TryAddIngredient(heyTeaObjectSO, (MilkTeaMaterialType)heyTeaObjectSO.materialType);
         } else {
             return false;

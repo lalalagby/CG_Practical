@@ -54,7 +54,8 @@ public class HeyTeaObject : MonoBehaviour
 
     public void DestroySelf() {
         heyTeaObjectParent.ClearHeyTeaObject();
-        Destroy(gameObject);
+        DestroyImmediate(gameObject);
+        //Destroy(gameObject);
     }
 
     public bool TryGetKichenware(out IKichenwareObejct kichenwareObejct) {

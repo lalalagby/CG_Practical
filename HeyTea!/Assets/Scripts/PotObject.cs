@@ -108,7 +108,9 @@ public class PotObject : HeyTeaObject,IKichenwareObejct
         return null;
     }
 
+    // Get HeyTeaObjectSO from this(Pot)
     public bool GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO) {
+        
         foreach (MilkTeaMaterialQuota milkTeaMaterialQuota in milkTeaMaterialQuotaList) {
             foreach (HeyTeaObejctStruct heyTeaObejctStruct in milkTeaMaterialQuota.heyTeaObejctStructArray) {
                 if (heyTeaObejctStruct.currentNum > 0) {
@@ -234,4 +236,7 @@ public class PotObject : HeyTeaObject,IKichenwareObejct
         return null;
     }
 
+    public List<MilkTeaMaterialQuota> GetMilkTeaMaterialQuota()  {
+        return milkTeaMaterialQuotaList;
+    }
 }
