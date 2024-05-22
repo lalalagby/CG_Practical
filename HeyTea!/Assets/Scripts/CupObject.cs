@@ -14,7 +14,7 @@ public class CupObject : HeyTeaObject,IKichenwareObejct {
     [SerializeField] private List<HeyTeaObjectTransform> heyTeaObjectTransformList;
 
     //try to add something in the cup.
-    public bool TryAddIngredient(HeyTeaObjectSO heyTeaObjectSO, MilkTeaMaterialType milkTeaMaterialType) {
+    public bool TryAddIngredient(HeyTeaObjectSO heyTeaObjectSO, MilkTeaMaterialType milkTeaMaterialType) { 
         for(int i = 0; i < milkTeaMaterialQuotaList.Count(); i++) {
             if(milkTeaMaterialType== milkTeaMaterialQuotaList[i].milkTeaMaterialType) {
                 if (milkTeaMaterialQuotaList[i].CanAdd(heyTeaObjectSO)) {
@@ -109,17 +109,16 @@ public class CupObject : HeyTeaObject,IKichenwareObejct {
     }
 
     // Get HeyTeaObjectSO from this(Cup)
-    public bool GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO)  {
+    public List<HeyTeaObjectSO> GetOutputHeyTeaObejctSOList()  {
+        List<HeyTeaObjectSO> heyTeaObjectSOList = new List<HeyTeaObjectSO>();
 
         foreach (MilkTeaMaterialQuota milkTeaMaterialQuota in milkTeaMaterialQuotaList)  {
             foreach (HeyTeaObejctStruct heyTeaObejctStruct in milkTeaMaterialQuota.heyTeaObejctStructArray)  {
                 if (heyTeaObejctStruct.currentNum > 0)  {
-                    heyTeaObjectSO = heyTeaObejctStruct.heyTeaObjectSO;
-                    return true;
+                    heyTeaObjectSOList.Add(heyTeaObejctStruct.heyTeaObjectSO);
                 }
             }
         }
-        heyTeaObjectSO = null;
-        return false;
+        return heyTeaObjectSOList;
     }
 }

@@ -118,8 +118,8 @@ public class StoveCounterEditorTests {
 
     [TestCase("Assets/ScriptableObjectSO/HeyTeaObjectSO/PearlCooked.asset", "Assets/ScriptableObjectSO/HeyTeaObjectSO/RedBeanCooked.asset")]
     [TestCase("Assets/ScriptableObjectSO/HeyTeaObjectSO/RedBeanCooked.asset", "Assets/ScriptableObjectSO/HeyTeaObjectSO/PearlCooked.asset")]
-    //[TestCase("", "Assets/ScriptableObjectSO/HeyTeaObjectSO/PearlCooked.asset")]
-    //[TestCase("", "Assets/ScriptableObjectSO/HeyTeaObjectSO/RedBeanCooked.asset")]
+    [TestCase(null, "Assets/ScriptableObjectSO/HeyTeaObjectSO/PearlCooked.asset")]
+    [TestCase(null, "Assets/ScriptableObjectSO/HeyTeaObjectSO/RedBeanCooked.asset")]
     // [TC0704] StoveCounter has Pot with cooked Ingredient, Player has Cup with at most one differentingredient
     public void StoveCounterHasPotWithCookedIngredient_PlayerHasCupWhichCanBeAdded(string cupIngredientPath, string potIngredientPath) {
         // Arrange
@@ -144,8 +144,9 @@ public class StoveCounterEditorTests {
         Assert.IsTrue(player.HasHeyTeaObject());
         Assert.AreEqual(player.GetHeyTeaObject(), cup);
 
-        //Assert.IsTrue(cup.GetOutputHeyTeaObejct(out heyTeaObjectSO));
-        //Assert.AreEqual(heyTeaObjectSO, cupIngredientSO);
+        var heyTeaObjectSOList = cup.GetOutputHeyTeaObejctSOList();
+        Assert.AreEqual(heyTeaObjectSOList.FirstOrDefault(a => a == cupIngredientSO), cupIngredientSO);
+        Assert.AreEqual(heyTeaObjectSOList.FirstOrDefault(a => a == potIngredientSO), potIngredientSO);
 
         Assert.IsTrue(counter.GetHeyTeaObject());
         Assert.AreEqual(counter.GetHeyTeaObject(), pot);
@@ -294,8 +295,8 @@ public class StoveCounterEditorTests {
         Assert.IsTrue(player.HasHeyTeaObject());
         Assert.AreEqual(player.GetHeyTeaObject(), cup);
 
-        Assert.IsTrue(cup.GetOutputHeyTeaObejct(out heyTeaObjectSO));
-        Assert.AreEqual(heyTeaObjectSO, cupIngredientSO);
+        var heyTeaObjectSOList = cup.GetOutputHeyTeaObejctSOList();
+        Assert.AreEqual(heyTeaObjectSOList.FirstOrDefault(a => a == cupIngredientSO), cupIngredientSO);
 
         Assert.IsTrue(counter.GetHeyTeaObject());
         Assert.AreEqual(counter.GetHeyTeaObject(), pot);

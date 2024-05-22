@@ -42,28 +42,24 @@ public interface IKichenwareObejct
         public bool CanAdd(HeyTeaObjectSO heyTeaObjectSO)
         {
             // Check if mixed and last element exceeds maxNum
-            if (canMixed && heyTeaObejctStructArray[heyTeaObejctStructArray.Length - 1].currentNum >= heyTeaObejctStructArray[heyTeaObejctStructArray.Length - 1].maxNum)
-            {
+            if (canMixed && heyTeaObejctStructArray[heyTeaObejctStructArray.Length - 1].currentNum >= heyTeaObejctStructArray[heyTeaObejctStructArray.Length - 1].maxNum) {
                 return false;
             }
 
             // Check if any element's currentNum exceeds maxNum
-            foreach (HeyTeaObejctStruct heyTeaObejctStruct in heyTeaObejctStructArray)
-            {
-                if (heyTeaObejctStruct.currentNum >= heyTeaObejctStruct.maxNum)
-                {
+            foreach (HeyTeaObejctStruct heyTeaObejctStruct in heyTeaObejctStructArray) {
+                if (heyTeaObjectSO == heyTeaObejctStruct.heyTeaObjectSO && heyTeaObejctStruct.currentNum >= heyTeaObejctStruct.maxNum)  {
                     return false;
                 }
             }
 
             // Check if total sum exceeds limit
             int sum = 0;
-            foreach (HeyTeaObejctStruct heyTeaObejctStruct in heyTeaObejctStructArray)
-            {
+            foreach (HeyTeaObejctStruct heyTeaObejctStruct in heyTeaObejctStructArray)  {
                 sum += heyTeaObejctStruct.currentNum;
             }
-            if (sum >= totalSum)
-            {
+            
+            if (sum >= totalSum) {
                 return false;
             }
 
@@ -168,7 +164,6 @@ public interface IKichenwareObejct
 
     // Put heyTeaObjectSO from kichenwareObejct to this
     public bool InteractWithOtherKichenware(IKichenwareObejct kichenwareObejct) {
-        Debug.Log("yes");
         if (kichenwareObejct.GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO)) {
             return TryAddIngredient(heyTeaObjectSO, (MilkTeaMaterialType)heyTeaObjectSO.materialType);
         } else {
