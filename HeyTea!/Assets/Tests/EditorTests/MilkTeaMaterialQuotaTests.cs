@@ -41,10 +41,10 @@ public class MilkTeaMaterialQuotaTests
             heyTeaObejctStructArray = new HeyTeaObejctStruct[]
             {
                 new HeyTeaObejctStruct { currentNum = 5, maxNum = 5 },
-                new HeyTeaObejctStruct { currentNum = 4, maxNum = 5 }
+                new HeyTeaObejctStruct { currentNum = 5, maxNum = 5 }
             }
         };
-        HeyTeaObjectSO heyTeaObjectSO = new HeyTeaObjectSO(); // Provide necessary setup for HeyTeaObjectSO
+        HeyTeaObjectSO heyTeaObjectSO = ScriptableObject.CreateInstance<HeyTeaObjectSO>(); // Provide necessary setup for HeyTeaObjectSO
 
         // Act
         bool result = quota.CanAdd(heyTeaObjectSO);
@@ -67,7 +67,7 @@ public class MilkTeaMaterialQuotaTests
                 new HeyTeaObejctStruct { currentNum = 2, maxNum = 5 }
             }
         };
-        HeyTeaObjectSO heyTeaObjectSO = new HeyTeaObjectSO(); // Provide necessary setup for HeyTeaObjectSO
+        HeyTeaObjectSO heyTeaObjectSO = ScriptableObject.CreateInstance<HeyTeaObjectSO>(); // Provide necessary setup for HeyTeaObjectSO
 
         // Act
         bool result = quota.CanAdd(heyTeaObjectSO);
@@ -89,7 +89,7 @@ public class MilkTeaMaterialQuotaTests
                 new HeyTeaObejctStruct { currentNum = 5, maxNum = 5 }
             }
         };
-        HeyTeaObjectSO heyTeaObjectSO = new HeyTeaObjectSO(); // Provide necessary setup for HeyTeaObjectSO
+        HeyTeaObjectSO heyTeaObjectSO = ScriptableObject.CreateInstance<HeyTeaObjectSO>(); // Provide necessary setup for HeyTeaObjectSO
 
         // Act
         bool result = quota.CanAdd(heyTeaObjectSO);

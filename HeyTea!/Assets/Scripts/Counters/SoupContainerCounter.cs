@@ -10,7 +10,8 @@ File Name : SoupContainerCounter.cs
 Function  : Container interaction class
 Author    : Yong Wu
 Data      : 28.08.2023
-
+Last Modified by: Xinyue Cheng
+Last Modification Date  :   18.05.2024
 */
 
 public class SoupContainerCounter : BaseCounter
@@ -25,7 +26,7 @@ public class SoupContainerCounter : BaseCounter
         // Player has an object in hand
         if (player.HasHeyTeaObject())
         {
-            // If the player is holding a kitchenware object
+            // If the player is holding a cup
             if (player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwareObject))
             {
                 // Attempt to add ingredient to the kitchenware object
@@ -40,6 +41,10 @@ public class SoupContainerCounter : BaseCounter
                 {
                     Debug.Log("Cannot add ingredient to the kitchenware object.");
                 }
+            }
+            else
+            {
+                Debug.Log("Cannot put ingredient on SoupContainerCounter.");
             }
         }
         else
