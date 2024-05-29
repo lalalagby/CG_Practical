@@ -5,6 +5,20 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using static CuttingCounter;
 
+/*
+ * Glossary
+ * 
+ * HeyTeaObject: teaBase, basicAdd, ingredients, fruit, none, un treat
+ *      - teaBase: tea, milk, milktea
+ *      - basicAdd: sugar, ice
+ *      - ingredients: red bean cooked, pearl cooked
+ *      - fruit: orange slice, grape slice, strawberry slice
+ *      - none: pot, cup
+ *      - un treat: bagged pearl, bagged red bean, bagged sugar, grape, orange, strawberry, 
+ *      
+ * Function Description: StoveCounter can only has Pot, and interact with Player.
+ */
+
 public class StoveCounter : BaseCounter,IHasProgress {
 
     public event EventHandler<OnStateChangedEventArgs> OnStateChanged;

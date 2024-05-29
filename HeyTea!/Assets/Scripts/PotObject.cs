@@ -50,7 +50,7 @@ public class PotObject : HeyTeaObject,IKichenwareObejct
         return GetCookingRecipeSOWithInput(heyTeaObjectSO).midState;
     }
 
-    private int CheckTotalInpotNum() {
+    public int CheckTotalInpotNum() {
         int sum = 0;
         foreach(MilkTeaMaterialQuota milkTeaMaterialQuota in milkTeaMaterialQuotaList) {
             foreach(HeyTeaObejctStruct heyTeaObejctStruct in milkTeaMaterialQuota.heyTeaObejctStructArray) {
@@ -169,7 +169,6 @@ public class PotObject : HeyTeaObject,IKichenwareObejct
     public float GetCookingProgressPercentage() {
         return currentProgressTime / GetCookingTimeMax();
     }
-
 
 
     public new void DestroySelf() {

@@ -5,6 +5,18 @@ using System.Linq;
 using UnityEngine;
 using static IKichenwareObejct;
 
+/*
+ * Glossary
+ * 
+ * HeyTeaObject: teaBase, basicAdd, ingredients, fruit, none, un treat
+ *      - teaBase: tea, milk, milktea
+ *      - basicAdd: sugar, ice
+ *      - ingredients: red bean cooked, pearl cooked
+ *      - fruit: orange slice, grape slice, strawberry slice
+ *      - none: pot, cup
+ *      - un treat: bagged pearl, bagged red bean, bagged sugar, grape, orange, strawberry, 
+ */
+
 public class PotCounter : BaseCounter, IHasProgress
 {
     public event EventHandler<OnStateChangedEventArgs> OnStateChanged;
@@ -57,7 +69,6 @@ public class PotCounter : BaseCounter, IHasProgress
     }
 
     public override void Interact(Player player) {
-        print("interact");
         // If Player has HeyTeaObject
         if (player.HasHeyTeaObject()) {
             HeyTeaObject playerObject = player.GetHeyTeaObject();
