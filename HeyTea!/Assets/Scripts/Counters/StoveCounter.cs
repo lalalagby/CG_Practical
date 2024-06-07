@@ -80,7 +80,6 @@ public class StoveCounter : BaseCounter,IHasProgress {
             // Put the object from counter to player
             GetHeyTeaObject().SetHeyTeaObjectParents(player);
             ClearHeyTeaObject();
-            return;
         }
 
     }
@@ -105,7 +104,6 @@ public class StoveCounter : BaseCounter,IHasProgress {
             player.ClearHeyTeaObject();
             isCooking = false;
         }
-
     }
 
     public override void Operation(Player player) {
