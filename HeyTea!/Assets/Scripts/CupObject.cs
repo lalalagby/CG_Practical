@@ -15,8 +15,6 @@ public class CupObject : HeyTeaObject,IKichenwareObejct {
 
     // try to add something in the cup
     public bool TryAddIngredient(HeyTeaObjectSO heyTeaObjectSO, MilkTeaMaterialType milkTeaMaterialType) { 
-        if (heyTeaObjectSO is null) return false;
-
         for (int i = 0; i < milkTeaMaterialQuotaList.Count(); i++) {
             if(milkTeaMaterialType== milkTeaMaterialQuotaList[i].milkTeaMaterialType) {
                 if (milkTeaMaterialQuotaList[i].CanAdd(heyTeaObjectSO)) {
