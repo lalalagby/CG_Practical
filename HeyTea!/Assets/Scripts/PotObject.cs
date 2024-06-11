@@ -20,17 +20,27 @@ public class PotObject : HeyTeaObject,IKichenwareObejct
     private float currentProgressTime;
 
     public bool TryAddIngredient(HeyTeaObjectSO heyTeaObjectSO, MilkTeaMaterialType milkTeaMaterialType) {
+        // Check if the number of ingredients in the Pot is greater than or equal to the totalInpotNum.
+        // If so, no more ingredients can be added to the Pot. 
         if (CheckTotalInpotNum() >= totalInpotNum) {
             return false;
         }
+
+
         for (int i = 0; i < milkTeaMaterialQuotaList.Count(); i++) {
+
             if (milkTeaMaterialType == milkTeaMaterialQuotaList[i].milkTeaMaterialType) {
+
                 if (HasRecipeWithInput(heyTeaObjectSO)) {
                     HeyTeaObject heyTeaObject = SpawnHeyTeaObejct(GetMidStateForInput(heyTeaObjectSO), milkTeaMaterialType);
+
+                    // Check if heyTeaObject is instantiated successfully.
                     if (heyTeaObject == null) {
                         Debug.Log("Create object failed");
                         return false;
                     }
+
+                    // 
                     if (milkTeaMaterialQuotaList[i].AddHeyTeaObject(heyTeaObject)) {
                         for (int j = 0; j < heyTeaObjectTransformList.Count; j++) {
                             heyTeaObjectTransformList[j].ResetLayer(GetLayer());

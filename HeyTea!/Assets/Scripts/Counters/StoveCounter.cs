@@ -84,17 +84,16 @@ public class StoveCounter : BaseCounter,IHasProgress {
 
     }
 
-    // If Player and Counter both has HeyTeaObject
+    // Player has HeyTeaObject and Counter has a Pot
     private void HandleBothHaveObjects(Player player, IKichenwareObejct pot) {
-        // If Player has a kitchenware(i.e. Cup)
-        if (player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct playerKitchenware)) {
-            // Try to put HeyTeaObject from pot to playerKitchenware (Only cooked Ingredients could be added into Cup)
-            if (playerKitchenware.InteractWithOtherKichenware(pot)) {
-                // Delete this HeyTeaObject from pot
-                pot.GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO);
-                pot.DestroyChild(heyTeaObjectSO);
-                return;
-            }
+        var flag =  player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct cup);
+
+        // If Player has a Cup: Try to put HeyTeaObject from pot to playerKitchenware (Only cooked Ingredients could be added into Cup)
+        // The interaction will be happened between pot and cup, rather than stovecounter and player
+        if (flag && cup.InteractWithOtherKichenware(pot)) {
+            // Delete this HeyTeaObject from pot
+            pot.GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO);
+            pot.DestroyChild(heyTeaObjectSO);
             return;
         }
 
@@ -104,7 +103,7 @@ public class StoveCounter : BaseCounter,IHasProgress {
             player.ClearHeyTeaObject();
             isCooking = false;
         }
-    }
+}
 
     public override void Operation(Player player) {
         // If StoveCounter has Pot
