@@ -13,9 +13,9 @@ public class CupObject : HeyTeaObject,IKichenwareObejct {
     [SerializeField] public List<MilkTeaMaterialQuota> milkTeaMaterialQuotaList;
     [SerializeField] private List<HeyTeaObjectTransform> heyTeaObjectTransformList;
 
-    //try to add something in the cup.
+    // try to add something in the cup
     public bool TryAddIngredient(HeyTeaObjectSO heyTeaObjectSO, MilkTeaMaterialType milkTeaMaterialType) { 
-        for(int i = 0; i < milkTeaMaterialQuotaList.Count(); i++) {
+        for (int i = 0; i < milkTeaMaterialQuotaList.Count(); i++) {
             if(milkTeaMaterialType== milkTeaMaterialQuotaList[i].milkTeaMaterialType) {
                 if (milkTeaMaterialQuotaList[i].CanAdd(heyTeaObjectSO)) {
                     HeyTeaObject heyTeaObject = SpawnHeyTeaObejct(heyTeaObjectSO, milkTeaMaterialType);
