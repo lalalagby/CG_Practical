@@ -24,34 +24,31 @@ public class SoupContainerCounter : BaseCounter
 
     public override void Interact(Player player)
     {
-        // Player has an object in hand
-        if (player.HasHeyTeaObject())
+        // To see if player has heytea object
+        if (player.HasHeyTeaObject() == false)
         {
-            // If the player is holding a cup
-            if (player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwareObject))
+            Debug.Log("Player is not holding any object.");
+            return;
+        }
+
+        // Try to get the kichenware object from player's hand
+        if (player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwareObject))
+        {
+            // Attempt to add ingredient to the kitchenware object
+            bool tag = kichenwareObject.TryAddIngredient(heyTeaObjectSO, (IKichenwareObejct.MilkTeaMaterialType)heyTeaObjectSO.materialType);
+
+            // If the kitchenware object is a cup, trigger the event
+            if (tag)
             {
-                // Attempt to add ingredient to the kitchenware object
-                bool tag = kichenwareObject.TryAddIngredient(heyTeaObjectSO, (IKichenwareObejct.MilkTeaMaterialType)heyTeaObjectSO.materialType);
-                // If the interaction is successful, trigger the event and destroy the object in player's hand
-                if (tag)
-                {
-                    OnPlayerGrabbedObject?.Invoke(this, EventArgs.Empty);
-                    Debug.Log("Add ingredient to the kitchenware object.");
-                }
-                else
-                {
-                    Debug.Log("Cannot add ingredient to the kitchenware object.");
-                }
-            }
-            else
-            {
-                Debug.Log("Cannot put ingredient on SoupContainerCounter.");
+                OnPlayerGrabbedObject?.Invoke(this, EventArgs.Empty);
+                Debug.Log("Add ingredient to the cup.");
+                return;
             }
         }
         else
         {
-            // Players can't take the milk or tea directly, they must have a kitchenware.
-            Debug.Log("Cannot grab this object.");
+            Debug.Log("Player is not holding a cup. Cannot interact with SoupContainerCounter.");
+            return;
         }
     }
 }

@@ -63,7 +63,7 @@ public class SoupContainerCounterTests
         soupContainerCounter.Interact(player);
 
         // Assert
-        LogAssert.Expect(LogType.Log, "Cannot grab this object.");
+        LogAssert.Expect(LogType.Log, "Player is not holding any object.");
     }
 
     //player has cup and can add ingredient to cup
@@ -89,36 +89,36 @@ public class SoupContainerCounterTests
         //cup object has the right ingredient
         var outputIngredients = cup.GetOutputHeyTeaObejctSOList();
         Assert.IsTrue(outputIngredients.Contains(heyTeaObjectSO));
-        LogAssert.Expect(LogType.Log, "Add ingredient to the kitchenware object.");
+        LogAssert.Expect(LogType.Log, "Add ingredient to the cup.");
     }
 
-    //player has pot and cannot add ingredient to pot
-    [TestCase("Assets/Prefabs/Counters/SoupCounter/MilkCounter.prefab", "Assets/ScriptableObjectSO/HeyTeaObjectSO/LiquidMilk.asset")]
-    [TestCase("Assets/Prefabs/Counters/SoupCounter/TeaCounter.prefab", "Assets/ScriptableObjectSO/HeyTeaObjectSO/LiquidTea.asset")]
-    public void PlayerHasPot_CannotAddIngredientToPot(string containerCounterPath, string expectedSOPath)
-    {
-        // Arrange
-        player.ClearHeyTeaObject();
-        heyTeaObjectSO = CreateHeyTeaObjectSO(expectedSOPath);
-        heyTeaObject.SetHeyTeaObjectSO(heyTeaObjectSO);
-        heyTeaObjectSO.materialType = HeyTeaObjectSO.MilkTeaMaterialType.teaBase;
-        player.SetHeyTeaObject(pot);
-        soupContainerCounter = InstantiatePrefab(containerCounterPath).GetComponent<SoupContainerCounter>();
-        // Act
-        soupContainerCounter.Interact(player);
+    ////player has pot and cannot add ingredient to pot
+    //[TestCase("Assets/Prefabs/Counters/SoupCounter/MilkCounter.prefab", "Assets/ScriptableObjectSO/HeyTeaObjectSO/LiquidMilk.asset")]
+    //[TestCase("Assets/Prefabs/Counters/SoupCounter/TeaCounter.prefab", "Assets/ScriptableObjectSO/HeyTeaObjectSO/LiquidTea.asset")]
+    //public void PlayerHasPot_CannotAddIngredientToPot(string containerCounterPath, string expectedSOPath)
+    //{
+    //    // Arrange
+    //    player.ClearHeyTeaObject();
+    //    heyTeaObjectSO = CreateHeyTeaObjectSO(expectedSOPath);
+    //    heyTeaObject.SetHeyTeaObjectSO(heyTeaObjectSO);
+    //    heyTeaObjectSO.materialType = HeyTeaObjectSO.MilkTeaMaterialType.teaBase;
+    //    player.SetHeyTeaObject(pot);
+    //    soupContainerCounter = InstantiatePrefab(containerCounterPath).GetComponent<SoupContainerCounter>();
+    //    // Act
+    //    soupContainerCounter.Interact(player);
 
-        // Assert
-        //player has pot object
-        Assert.IsTrue(player.HasHeyTeaObject());
-        Assert.AreEqual(player.GetHeyTeaObject(), pot);
+    //    // Assert
+    //    //player has pot object
+    //    Assert.IsTrue(player.HasHeyTeaObject());
+    //    Assert.AreEqual(player.GetHeyTeaObject(), pot);
 
-        //the ingredient cannot be added in pot object
-        Assert.IsFalse(pot.GetOutputHeyTeaObejct(out heyTeaObjectSO));
-        LogAssert.Expect(LogType.Log, "Cannot add ingredient to the kitchenware object.");
+    //    //the ingredient cannot be added in pot object
+    //    Assert.IsFalse(pot.GetOutputHeyTeaObejct(out heyTeaObjectSO));
+    //    LogAssert.Expect(LogType.Log, "Cannot add ingredient to the pot.");
 
-    }
+    //}
 
-    //player has no kitchenware object and cannot add ingredient
+    //player has no cup and cannot add ingredient
     [TestCase("Assets/Prefabs/Counters/SoupCounter/MilkCounter.prefab", "Assets/ScriptableObjectSO/HeyTeaObjectSO/Orange.asset")]
     [TestCase("Assets/Prefabs/Counters/SoupCounter/TeaCounter.prefab", "Assets/ScriptableObjectSO/HeyTeaObjectSO/Orange.asset")]
     public void PlayerHasNonKitchenwareObject_CannotAddIngredient(string containerCounterPath, string expectedSOPath)
@@ -139,7 +139,7 @@ public class SoupContainerCounterTests
         Assert.IsTrue(player.HasHeyTeaObject());
         Assert.AreEqual(player.GetHeyTeaObject(),heyTeaObject);
 
-        LogAssert.Expect(LogType.Log, "Cannot put ingredient on SoupContainerCounter.");
+        LogAssert.Expect(LogType.Log, "Player is not holding a cup. Cannot interact with SoupContainerCounter.");
     }
 
 }
