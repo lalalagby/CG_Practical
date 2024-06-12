@@ -2,30 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
-File Name : Player.cs
-Function  : convert the animation state machine.
-Author    : Yong Wu
-Data      : 27.08.2023
-
-*/
+/**
+ * @author Yong Wu
+ * 
+ * @brief Controls the player's animation state machine.
+ * 
+ * @details This class changes the animation state of the Player based on whether they are walking or not.
+ */
 
 public class PlayerAnimator : MonoBehaviour
 {
-    //use IsWalking to change the state. 
-    private const string IS_WALKING = "IsWalking";
+    private const string IS_WALKING = "IsWalking";  //!< Constant string representing the walking state in the animator.
 
-    [SerializeField] private Player player;
+    [SerializeField] private Player player; //!< Reference to the Player component.
 
-    private Animator animator;
+    private Animator animator;  //!< Reference to the Animator component.
 
+    /**
+     * @brief Initializes the PlayerAnimator.
+     * 
+     * @details This method is called when the script instance is being loaded. 
+     *          It obtains the Animator component and sets the initial walking state based on the Player's state.
+     */
     private void Awake() {
         //Obtain the animation state machine of the player
         animator = GetComponent<Animator>();
         animator.SetBool(IS_WALKING, player.IsWalking());
     }
 
-    //Perform animation demonstrations by obtaining the iswalking state.
+    /**
+     * @brief Updates the animation state.
+     * 
+     * @details This method is called once per frame and updates the animation state 
+     *          based on whether the Player is walking.
+     */
     private void Update() {
         animator.SetBool(IS_WALKING, player.IsWalking());
     }

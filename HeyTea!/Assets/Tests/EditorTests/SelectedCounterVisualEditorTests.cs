@@ -4,11 +4,14 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-/*
-File Name : SelectedCounterEditorTests.cs
-Author    : Bingyu Guo
-Created   : 14.05.2024
-*/
+/**
+ * @author Bingyu Guo
+ * 
+ * @brief Unit tests for the SelectedCounterVisual class.
+ * 
+ * @details This class contains unit tests for various functionalities of the SelectedCounterVisual class,
+ *          ensuring that the visual elements are correctly shown or hidden based on the SelectedCounter.
+ */
 public class SelectedCounterVisualEditorTests
 {
     private GameObject selectedCounterVisualObject;
@@ -16,6 +19,11 @@ public class SelectedCounterVisualEditorTests
     private BaseCounter baseCounter;
     private GameObject[] visualGameObjectArray;
 
+    /**
+     * @brief Sets up the test environment before each test.
+     * 
+     * @details This method initializes the SelectedCounterVisual, BaseCounter, and visual GameObject array for testing.
+     */
     [SetUp]
     public void Setup()
     {
@@ -32,6 +40,11 @@ public class SelectedCounterVisualEditorTests
         selectedCounterVisualObject.GetComponent<SelectedCounterVisual>().GetType().GetField("visualGameObjectArray", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance).SetValue(selectedCounterVisual, visualGameObjectArray);
     }
 
+    /**
+     * @brief Tests if Show activates all GameObjects in the visualGameObjectArray.
+     * 
+     * @details This test case verifies that the Show method sets all GameObjects in the visualGameObjectArray to active.
+     */
     [Test]
     public void Show_ActivatesVisualGameObjectArray()
     {
@@ -45,6 +58,11 @@ public class SelectedCounterVisualEditorTests
         }
     }
 
+    /**
+     * @brief Tests if Hide deactivates all GameObjects in the visualGameObjectArray.
+     * 
+     * @details This test case verifies that the Hide method sets all GameObjects in the visualGameObjectArray to inactive.
+     */
     [Test]
     public void Hide_DeactivatesVisualGameObjectArray()
     {
@@ -58,6 +76,12 @@ public class SelectedCounterVisualEditorTests
         }
     }
 
+    /**
+     * @brief Tests if Player_OnSelectedCounterChanged sets visuals active when the SelectedCounter is the BaseCounter.
+     * 
+     * @details This test case verifies that the Player_OnSelectedCounterChanged method activates all GameObjects 
+     *          in the visualGameObjectArray when the SelectedCounter is the BaseCounter.
+     */
     [Test]
     public void Player_OnSelectedCounterChanged_SetsVisualsActive_WhenSelectedCounterIsBaseCounter()
     {
@@ -74,6 +98,12 @@ public class SelectedCounterVisualEditorTests
         }
     }
 
+    /**
+     * @brief Tests if Player_OnSelectedCounterChanged sets visuals inactive when the SelectedCounter is not the BaseCounter.
+     * 
+     * @details This test case verifies that the Player_OnSelectedCounterChanged method deactivates all GameObjects 
+     *          in the visualGameObjectArray when the SelectedCounter is not the BaseCounter.
+     */
     [Test]
     public void Player_OnSelectedCounterChanged_SetsVisualsInactive_WhenSelectedCounterIsNotBaseCounter()
     {

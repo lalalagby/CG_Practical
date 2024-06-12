@@ -5,20 +5,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using static CuttingCounter;
 
-/*
- * Glossary
- * 
- * HeyTeaObject: teaBase, basicAdd, ingredients, fruit, none, un treat
- *      - teaBase: tea, milk, milktea
- *      - basicAdd: sugar, ice
- *      - ingredients: red bean cooked, pearl cooked
- *      - fruit: orange slice, grape slice, strawberry slice
- *      - none: pot, cup
- *      - un treat: bagged pearl, bagged red bean, bagged sugar, grape, orange, strawberry, 
- *      
- * Function Description: StoveCounter can only has Pot, and interact with Player.
- */
-
 /**
  * @author Yong Wu, Bingyu Guo
  * 
@@ -108,11 +94,14 @@ public class StoveCounter : BaseCounter,IHasProgress {
         }
 
         // Player has Pot, StoveCounter has nothing
-        if (player.HasHeyTeaObject() && player.GetHeyTeaObject() is PotObject) {
-            // Put the object from player to counter
-            player.GetHeyTeaObject().SetHeyTeaObjectParents(this);
-            player.ClearHeyTeaObject();
-            return;
+        if (player.HasHeyTeaObject() ) {
+            if (player.GetHeyTeaObject() is PotObject) {
+                // Put the object from player to counter
+                player.GetHeyTeaObject().SetHeyTeaObjectParents(this);
+                player.ClearHeyTeaObject();
+                return;
+            }
+               
         }
 
         // StoveCounter has Pot, Player has nothing

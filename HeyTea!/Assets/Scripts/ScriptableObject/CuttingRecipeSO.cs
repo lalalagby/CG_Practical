@@ -2,20 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
-File Name : CuttingRecipeSO.cs
-Function  : Define a new association method so that the items after cutting, 
-            the items before cutting, and the cutting time can be obtained
-Author    : Yong Wu
-Data      : 01.09.2023
-
-*/
-
+/**
+ * @author Yong Wu
+ * 
+ * @brief ScriptableObject that defines a cutting recipe in the game.
+ * 
+ * @details This class stores the data for a cutting recipe, including the input item, output item, and the maximum cutting progress.
+ */
 [CreateAssetMenu()]
 public class CuttingRecipeSO : ScriptableObject
 {
 
-    public HeyTeaObjectSO input;
-    public HeyTeaObjectSO output;
-    public int cuttingProgressMax;
+    public HeyTeaObjectSO input;    //!< The input HeyTeaObjectSO required for the cutting recipe.
+    public HeyTeaObjectSO output;   //!< The output HeyTeaObjectSO produced by the cutting recipe.
+    public int cuttingProgressMax;  //!< The maximum cutting progress required to complete the recipe.
 }

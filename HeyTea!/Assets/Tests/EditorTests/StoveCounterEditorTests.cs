@@ -6,6 +6,8 @@ using static IKichenwareObejct;
 
 
 /**
+ * @author Bingyu Guo
+ * 
  * @brief Unit tests for the StoveCounter class.
  * 
  * @details This class contains unit tests for various interaction scenarios involving the StoveCounter class,
@@ -228,7 +230,7 @@ public class StoveCounterEditorTests {
     }
 
     /**
-     * @brief Tests the scenario where the StoveCounter has nothing, but the Player has food.
+     * @brief [TC0706] Tests the scenario where the StoveCounter has nothing, but the Player has food.
      * 
      * @details This test case checks that nothing changes when the Player has a food object that cannot be added to the StoveCounter.
      * 

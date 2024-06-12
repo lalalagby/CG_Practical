@@ -1,14 +1,13 @@
 using NUnit.Framework;
 using UnityEngine;
 using static UnityEngine.Terrain;
-/**
- 
- */
 
 /**
+ * @author Bingyu Guo
+ * 
  * @brief Unit tests for the ClearCounter class.
  * 
- * @detials Class contains unit tests for various interaction scenarios involving the ClearCounter class,
+ * @details Class contains unit tests for various interaction scenarios involving the ClearCounter class,
  *          such as transferring HeyTeaObject between the Player and the ClearCounter, and ensuring correct state changes.
  * 
  * @note
@@ -33,7 +32,7 @@ public class ClearCounterEditorTests
     /**
      * @brief Sets up the test environment before each test.
      * 
-     * @detials This method initializes the ClearCounter, Player, HeyTeaObject instances, and their corresponding ScriptableObjects.
+     * @details This method initializes the ClearCounter, Player, HeyTeaObject instances, and their corresponding ScriptableObjects.
      */
     [SetUp]
     public void Setup() {   
