@@ -1,0 +1,221 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Universal.\+Tiling\+Job Struct Reference}
+\hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job}{}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job}\index{UnityEngine.Rendering.Universal.TilingJob@{UnityEngine.Rendering.Universal.TilingJob}}
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Universal.\+Tiling\+Job\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a549d8385451ae16eab9df48d4cb71469}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a549d8385451ae16eab9df48d4cb71469} 
+void {\bfseries Execute} (int job\+Index)
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a7cdefae897aae6ba4389609d57579451}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a7cdefae897aae6ba4389609d57579451} 
+void {\bfseries Tile\+Light} (int light\+Index)
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a8bce14c089a356ae707c99929b8c48ec}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a8bce14c089a356ae707c99929b8c48ec} 
+void {\bfseries Tile\+Light\+Orthographic} (int light\+Index)
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a099687f3f0bc2cff168f6f1f4b162214}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a099687f3f0bc2cff168f6f1f4b162214} 
+void {\bfseries Tile\+Reflection\+Probe} (int index)
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a9726e5e98cda463706868d8505886c2c}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a9726e5e98cda463706868d8505886c2c} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} {\bfseries View\+To\+Tile\+Space} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} position\+VS)
+\begin{DoxyCompactList}\small\item\em Project onto Z=1, scale and offset into \mbox{[}0, tile\+Count\mbox{]}. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a9a69ac6d18a006ac4ca33e6ce54e5200}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a9a69ac6d18a006ac4ca33e6ce54e5200} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} {\bfseries View\+To\+Tile\+Space\+Orthographic} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} position\+VS)
+\begin{DoxyCompactList}\small\item\em Project onto Z=1, scale and offset into \mbox{[}0, tile\+Count\mbox{]}. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a9bfcd9b9cb004fb808a219504a66de38}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a9bfcd9b9cb004fb808a219504a66de38} 
+void {\bfseries ExpandY} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} position\+VS)
+\begin{DoxyCompactList}\small\item\em Expands the tile Y range and the X range in the row containing the position. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_aaf8d759aecc7789b9ea477ae760fd112}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_aaf8d759aecc7789b9ea477ae760fd112} 
+void {\bfseries Expand\+Orthographic} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} position\+VS)
+\begin{DoxyCompactList}\small\item\em Expands the tile Y range and the X range in the row containing the position. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a0e240a6bc552855fb2a2dde30a9032a2}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a0e240a6bc552855fb2a2dde30a9032a2} 
+void {\bfseries Expand\+Range\+Orthographic} (ref \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_inclusive_range}{Inclusive\+Range}} range, float x\+VS)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_aace5b666f435de38ac868207bfae3357}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_aace5b666f435de38ac868207bfae3357} 
+static float {\bfseries square} (float x)
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_abc6529dd1233b1b9e4a2937739c98f2f}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_abc6529dd1233b1b9e4a2937739c98f2f} 
+static void {\bfseries Get\+Sphere\+Horizon} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} center, float radius, float near, float clip\+Radius, out \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} p0, out \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} p1)
+\begin{DoxyCompactList}\small\item\em Finds the two horizon points seen from (0, 0) of a sphere projected onto either XZ or YZ. Takes clipping into account. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a920aeb2c5ac38d0410ee59829f01002c}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a920aeb2c5ac38d0410ee59829f01002c} 
+static void {\bfseries Get\+Sphere\+YPlane\+Horizon} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} center, float sphere\+Radius, float near, float clip\+Radius, float y, out \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} left, out \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} right)
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_aeb63fc5a4004cb0beabab4368724fb89}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_aeb63fc5a4004cb0beabab4368724fb89} 
+static bool {\bfseries Get\+Circle\+Clip\+Points} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} circle\+Center, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} circle\+Normal, float circle\+Radius, float near, out \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} p0, out \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} p1)
+\begin{DoxyCompactList}\small\item\em Finds the two points of intersection of a 3D circle and the near plane. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a678b0ecf9decdc7c9decea7ab1cff7b1}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a678b0ecf9decdc7c9decea7ab1cff7b1} 
+static float {\bfseries Intersect\+Ellipse\+Line} (float a, float b, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} line)
+\item 
+static void \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a5aaf0cd1ed32ed24a039a3519f69c321}{Get\+Projected\+Circle\+Horizon}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} center, float radius, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} U, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} V, out \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} uv1, out \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} uv2)
+\begin{DoxyCompactList}\small\item\em Calculates the horizon of a circle orthogonally projected to a plane as seen from the origin on the plane. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_ab86eed3a7cf0ee44eece05b3ef28e9de}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_ab86eed3a7cf0ee44eece05b3ef28e9de} 
+static bool {\bfseries Intersect\+Circle\+YPlane} (float y, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} circle\+Center, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} circle\+Normal, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} circleU, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} circleV, float circle\+Radius, out \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} p1, out \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} p2)
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a5965b675e7687352015c2ef5531b8cda}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a5965b675e7687352015c2ef5531b8cda} 
+static void {\bfseries Get\+Cone\+Side\+Tangent\+Points} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} vertex, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} axis, float cos\+Half\+Angle, float circle\+Radius, float cone\+Height, float range, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} circleU, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} circleV, out \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} l1, out \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} l2)
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a090d6f76c265869869c13670b727aaaa}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a090d6f76c265869869c13670b727aaaa} 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} {\bfseries Evaluate\+Near\+Conic} (float near, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} o, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} d, float r, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} u, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} v, float theta)
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a98afedc50609c65d8f17c3a61057f5a4}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a98afedc50609c65d8f17c3a61057f5a4} 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} {\bfseries Find\+Near\+Conic\+Tangent\+Theta} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} o, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} d, float r, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} u, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} v)
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a7a8ddb3b700ae7c08a3b6ecfa3cd188d}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a7a8ddb3b700ae7c08a3b6ecfa3cd188d} 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} {\bfseries Find\+Near\+Conic\+YTheta} (float near, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} o, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} d, float r, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} u, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} v, float y)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a743a90c0f654322ada5b4fbab86b3047}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a743a90c0f654322ada5b4fbab86b3047} 
+Native\+Array$<$ Visible\+Light $>$ {\bfseries lights}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a13c2f1dad0a5d6e246f6bfa58f7d7032}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a13c2f1dad0a5d6e246f6bfa58f7d7032} 
+Native\+Array$<$ Visible\+Reflection\+Probe $>$ {\bfseries reflection\+Probes}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a948e3250d7f362223058dc99e99dc0f9}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a948e3250d7f362223058dc99e99dc0f9} 
+Native\+Array$<$ \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_inclusive_range}{Inclusive\+Range}} $>$ {\bfseries tile\+Ranges}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a23358f9b27c8f378943482e98b508493}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a23358f9b27c8f378943482e98b508493} 
+int {\bfseries items\+Per\+Tile}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a3c897acd63c2e5eacb44789cbf2b7bb9}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a3c897acd63c2e5eacb44789cbf2b7bb9} 
+int {\bfseries ranges\+Per\+Item}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_aad2591db92f20999a418ef69ea24d4af}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_aad2591db92f20999a418ef69ea24d4af} 
+\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_fixed2}{Fixed2}}$<$ \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float4x4}{float4x4}} $>$ {\bfseries world\+To\+Views}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a83dfe428e5f466578634a29009019d36}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a83dfe428e5f466578634a29009019d36} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float4}{float4}} {\bfseries center\+Offset}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a2037623469c1fa1f61d244691fb16817}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a2037623469c1fa1f61d244691fb16817} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} {\bfseries tile\+Scale}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a1c4e3e31e43237c554b5fd470e6c88a0}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a1c4e3e31e43237c554b5fd470e6c88a0} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} {\bfseries tile\+Scale\+Inv}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a4ce067bc72de140d73ea675f9b2d2065}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a4ce067bc72de140d73ea675f9b2d2065} 
+\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_fixed2}{Fixed2}}$<$ \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} $>$ {\bfseries view\+Plane\+Half\+Sizes}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a60ef9928a59ef501febb9781cdb26d8b}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a60ef9928a59ef501febb9781cdb26d8b} 
+\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_fixed2}{Fixed2}}$<$ \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} $>$ {\bfseries view\+Plane\+Half\+Size\+Invs}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_ac006229420aefc8b3605b3d5762a14ac}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_ac006229420aefc8b3605b3d5762a14ac} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int2}{int2}} {\bfseries tile\+Count}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a53806d7298f1d58a2eb15d0873b978d8}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a53806d7298f1d58a2eb15d0873b978d8} 
+float {\bfseries near}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a6232b97c1c3ab3b43f4a8d1abce8e9f8}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a6232b97c1c3ab3b43f4a8d1abce8e9f8} 
+bool {\bfseries is\+Orthographic}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_ac620f6ef87bd1876c3270babcb245f69}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_ac620f6ef87bd1876c3270babcb245f69} 
+\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_inclusive_range}{Inclusive\+Range}} {\bfseries m\+\_\+\+Tile\+YRange}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_ac2de061b762260d7624380fe72b4b606}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_ac2de061b762260d7624380fe72b4b606} 
+int {\bfseries m\+\_\+\+Offset}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_afa257e623f22ff902d324da1469f694f}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_afa257e623f22ff902d324da1469f694f} 
+int {\bfseries m\+\_\+\+View\+Index}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a185711d103e2a4a39c96084a05a4362c}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a185711d103e2a4a39c96084a05a4362c} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} {\bfseries m\+\_\+\+Center\+Offset}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_ac2924b8a6d787ef93592b80c75bec43d}{k\+\_\+\+Cube\+Points}}
+\item 
+static readonly \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int4}{int4}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_aa8a6d83f9025f5bc36b09d6d3130d47a}{k\+\_\+\+Cube\+Line\+Indices}}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a619b27bb7211757eb90b27d269a37178}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a619b27bb7211757eb90b27d269a37178} 
+static {\bfseries float}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a5aaf0cd1ed32ed24a039a3519f69c321}\index{UnityEngine.Rendering.Universal.TilingJob@{UnityEngine.Rendering.Universal.TilingJob}!GetProjectedCircleHorizon@{GetProjectedCircleHorizon}}
+\index{GetProjectedCircleHorizon@{GetProjectedCircleHorizon}!UnityEngine.Rendering.Universal.TilingJob@{UnityEngine.Rendering.Universal.TilingJob}}
+\doxysubsubsection{\texorpdfstring{GetProjectedCircleHorizon()}{GetProjectedCircleHorizon()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_a5aaf0cd1ed32ed24a039a3519f69c321} 
+static void Unity\+Engine.\+Rendering.\+Universal.\+Tiling\+Job.\+Get\+Projected\+Circle\+Horizon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}}}]{center}{, }\item[{float}]{radius}{, }\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}}}]{U}{, }\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}}}]{V}{, }\item[{out \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}}}]{uv1}{, }\item[{out \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}}}]{uv2}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Calculates the horizon of a circle orthogonally projected to a plane as seen from the origin on the plane. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center} & The center of the circle projected onto the plane.\\
+\hline
+{\em radius} & The radius of the circle.\\
+\hline
+{\em U} & The major axis of the ellipse formed by the projection of the circle.\\
+\hline
+{\em V} & The minor axis of the ellipse formed by the projection of the circle.\\
+\hline
+{\em uv1} & The first horizon point expressed as factors of {\itshape U}  and {\itshape V} .\\
+\hline
+{\em uv2} & The second horizon point expressed as factors of {\itshape U}  and {\itshape V} .\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_aa8a6d83f9025f5bc36b09d6d3130d47a}\index{UnityEngine.Rendering.Universal.TilingJob@{UnityEngine.Rendering.Universal.TilingJob}!k\_CubeLineIndices@{k\_CubeLineIndices}}
+\index{k\_CubeLineIndices@{k\_CubeLineIndices}!UnityEngine.Rendering.Universal.TilingJob@{UnityEngine.Rendering.Universal.TilingJob}}
+\doxysubsubsection{\texorpdfstring{k\_CubeLineIndices}{k\_CubeLineIndices}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_aa8a6d83f9025f5bc36b09d6d3130d47a} 
+readonly \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int4}{int4}} \mbox{[}$\,$\mbox{]} Unity\+Engine.\+Rendering.\+Universal.\+Tiling\+Job.\+k\+\_\+\+Cube\+Line\+Indices\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}(0,\ 4,\ 2,\ 1),}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}(3,\ 7,\ 1,\ 2),}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}(5,\ 1,\ 7,\ 4),}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}(6,\ 2,\ 4,\ 7),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_ac2924b8a6d787ef93592b80c75bec43d}\index{UnityEngine.Rendering.Universal.TilingJob@{UnityEngine.Rendering.Universal.TilingJob}!k\_CubePoints@{k\_CubePoints}}
+\index{k\_CubePoints@{k\_CubePoints}!UnityEngine.Rendering.Universal.TilingJob@{UnityEngine.Rendering.Universal.TilingJob}}
+\doxysubsubsection{\texorpdfstring{k\_CubePoints}{k\_CubePoints}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_tiling_job_ac2924b8a6d787ef93592b80c75bec43d} 
+readonly \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} \mbox{[}$\,$\mbox{]} Unity\+Engine.\+Rendering.\+Universal.\+Tiling\+Job.\+k\+\_\+\+Cube\+Points\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}(-\/1,\ -\/1,\ -\/1),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}(-\/1,\ -\/1,\ +1),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}(-\/1,\ +1,\ -\/1),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}(-\/1,\ +1,\ +1),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}(+1,\ -\/1,\ -\/1),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}(+1,\ -\/1,\ +1),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}(+1,\ +1,\ -\/1),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}(+1,\ +1,\ +1),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/\+Tiling/Tiling\+Job.\+cs\end{DoxyCompactItemize}

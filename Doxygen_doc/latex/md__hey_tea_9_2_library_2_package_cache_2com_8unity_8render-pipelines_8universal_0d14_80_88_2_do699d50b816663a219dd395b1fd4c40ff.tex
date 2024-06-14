@@ -1,0 +1,48 @@
+\chapter{Injection points}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do699d50b816663a219dd395b1fd4c40ff}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do699d50b816663a219dd395b1fd4c40ff}\index{Injection points@{Injection points}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do699d50b816663a219dd395b1fd4c40ff_autotoc_md2105}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do699d50b816663a219dd395b1fd4c40ff_autotoc_md2105}%
+ URP contains multiple injection points that let you inject render passes into the frame rendering loop and execute them upon different events.
+
+Injection points give a custom render pass access to URP buffers. A render pass has read and write access to all buffers at each injection point.
+
+\doxylink{namespace_unity}{Unity} provides the following events in the rendering loop. You can use these events to inject your custom passes.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Injection point}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Injection point}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+Before\+Rendering   &Executes a {\ttfamily Scriptable\+Render\+Pass} instance before rendering any other passes in the pipeline for the current Camera. Camera matrices and stereo rendering are not setup at this point. You can use this injection point to draw to custom input textures used later in the pipeline, for example, LUT textures.    \\\cline{1-2}
+Before\+Rendering\+Shadows   &Executes a {\ttfamily Scriptable\+Render\+Pass} instance before rendering shadow maps ({\bfseries{Main\+Light\+Shadow}}, {\bfseries{Additional\+Lights\+Shadow}} passes).~\newline
+Camera matrices and stereo rendering are not set up at this point.    \\\cline{1-2}
+After\+Rendering\+Shadows   &Executes a {\ttfamily Scriptable\+Render\+Pass} instance after rendering shadow maps ({\bfseries{Main\+Light\+Shadow}}, {\bfseries{Additional\+Lights\+Shadow}} passes).~\newline
+Camera matrices and stereo rendering are not set up this point.    \\\cline{1-2}
+Before\+Rendering\+Pre\+Passes   &Executes a {\ttfamily Scriptable\+Render\+Pass} instance before rendering prepasses ({\bfseries{Depth\+Prepass}}, {\bfseries{Depth\+Normal\+Prepass}} passes).~\newline
+Camera matrices and stereo rendering are already set up at this point.    \\\cline{1-2}
+After\+Rendering\+Pre\+Passes   &Executes a {\ttfamily Scriptable\+Render\+Pass} instance after rendering prepasses ({\bfseries{Depth\+Prepass}}, {\bfseries{Depth\+Normal\+Prepass}} passes).~\newline
+Camera matrices and stereo rendering are set up at this point.    \\\cline{1-2}
+Before\+Rendering\+Gbuffer   &Executes a {\ttfamily Scriptable\+Render\+Pass} instance before rendering the {\bfseries{GBuffer}} pass.    \\\cline{1-2}
+After\+Rendering\+Gbuffer   &Executes a {\ttfamily Scriptable\+Render\+Pass} instance after rendering the {\bfseries{GBuffer}} pass.    \\\cline{1-2}
+Before\+Rendering\+Deferred\+Lights   &Executes a {\ttfamily Scriptable\+Render\+Pass} instance before rendering the {\bfseries{Deferred}} pass.    \\\cline{1-2}
+After\+Rendering\+Deferred\+Lights   &Executes a {\ttfamily Scriptable\+Render\+Pass} instance after rendering the {\bfseries{Deferred}} pass.    \\\cline{1-2}
+Before\+Rendering\+Opaques   &Executes a {\ttfamily Scriptable\+Render\+Pass} instance before rendering opaque objects ({\bfseries{Draw\+Opaque\+Objects}} pass).    \\\cline{1-2}
+After\+Rendering\+Opaques   &Executes a {\ttfamily Scriptable\+Render\+Pass} instance after rendering opaque objects ({\bfseries{Draw\+Opaque\+Objects}} pass).    \\\cline{1-2}
+Before\+Rendering\+Skybox   &Executes a {\ttfamily Scriptable\+Render\+Pass} instance before rendering the skybox ({\bfseries{Camera.\+Render\+Skybox}} pass).    \\\cline{1-2}
+After\+Rendering\+Skybox   &Executes a {\ttfamily Scriptable\+Render\+Pass} instance after rendering the skybox ({\bfseries{Camera.\+Render\+Skybox}} pass).    \\\cline{1-2}
+Before\+Rendering\+Transparents   &Executes a {\ttfamily Scriptable\+Render\+Pass} instance before rendering transparent objects ({\bfseries{Draw\+Transparent\+Objects}} pass).    \\\cline{1-2}
+After\+Rendering\+Transparents   &Executes a {\ttfamily Scriptable\+Render\+Pass} instance after rendering transparent objects ({\bfseries{Draw\+Transparent\+Objects}} pass).    \\\cline{1-2}
+Before\+Rendering\+Post\+Processing   &Executes a {\ttfamily Scriptable\+Render\+Pass} instance before rendering post-\/processing effects ({\bfseries{Render Post\+Processing Effects}} pass).    \\\cline{1-2}
+After\+Rendering\+Post\+Processing   &Executes a {\ttfamily Scriptable\+Render\+Pass} instance after rendering post-\/processing effects but before the final blit, post-\/processing anti-\/aliasing effects, and color grading.    \\\cline{1-2}
+After\+Rendering   &Executes {\ttfamily Scriptable\+Render\+Pass} instance after rendering all other passes.   \\\cline{1-2}
+\end{longtabu}
+
+
+The following diagram shows the passes and the flow of frame resources in a URP frame\+:
+
+ 

@@ -1,0 +1,52 @@
+\chapter{Channel Mixer Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_channel-_mixer-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_channel-_mixer-_node}\index{Channel Mixer Node@{Channel Mixer Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_channel-_mixer-_node_autotoc_md3019}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_channel-_mixer-_node_autotoc_md3019}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_channel-_mixer-_node_autotoc_md3020}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_channel-_mixer-_node_autotoc_md3020}
+Controls the amount each of the channels of input {\bfseries{In}} contribute to each of the channels of output {\bfseries{Out}}. The slider parameters on the node control the contribution of each of the input channels. The toggle button parameters control which of the output channels is currently being edited. Slider controls for editing the contribution of each input channnel range between -\/2 and 2.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_channel-_mixer-_node_autotoc_md3021}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_channel-_mixer-_node_autotoc_md3021}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+In   &Input   &Vector 3   &None   &Input value    \\\cline{1-5}
+Out   &Output   &Vector 3   &None   &Output value   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_channel-_mixer-_node_autotoc_md3022}{}\doxysection{\texorpdfstring{Controls}{Controls}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_channel-_mixer-_node_autotoc_md3022}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endhead
+&Toggle Button Array   &R, G, B   &Selects the output channel to edit.    \\\cline{1-4}
+R   &Slider   &&Controls contribution of input red channel to selected output channel.    \\\cline{1-4}
+G   &Slider   &&Controls contribution of input green channel to selected output channel.    \\\cline{1-4}
+B   &Slider   &&Controls contribution of input blue channel to selected output channel.   \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_channel-_mixer-_node_autotoc_md3023}{}\doxysection{\texorpdfstring{Shader Function}{Shader Function}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_channel-_mixer-_node_autotoc_md3023}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_channel-_mixer-_node_autotoc_md3024}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_channel-_mixer-_node_autotoc_md3024}
+The following example code represents one possible outcome of this node.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\_ChannelMixer\_Red\ =\ float3\ (OutRedInRed,\ OutRedInGreen,\ OutRedInBlue);}
+\DoxyCodeLine{\_ChannelMixer\_Green\ =\ float3\ (OutGreenInRed,\ OutGreenInGreen,\ OutGreenInBlue);}
+\DoxyCodeLine{\_ChannelMixer\_Blue\ =\ float3\ (OutBlueInRed,\ OutBlueInGreen,\ OutBlueInBlue);}
+\DoxyCodeLine{}
+\DoxyCodeLine{void\ Unity\_ChannelMixer\_float(float3\ In,\ float3\ \_ChannelMixer\_Red,\ float3\ \_ChannelMixer\_Green,\ float3\ \_ChannelMixer\_Blue,\ out\ float3\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ float3(dot(In,\ \_ChannelMixer\_Red),\ dot(In,\ \_ChannelMixer\_Green),\ dot(In,\ \_ChannelMixer\_Blue));}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

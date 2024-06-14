@@ -1,0 +1,158 @@
+\chapter{Workflow Overview -\/ Using an Actions Asset}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_workflow-_actions_asset}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_workflow-_actions_asset}\index{Workflow Overview -\/ Using an Actions Asset@{Workflow Overview -\/ Using an Actions Asset}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_workflow-_actions_asset_autotoc_md1605}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_workflow-_actions_asset_autotoc_md1605}%
+ 
+
+The Actions Asset provides a way to define, group, and manage sets of actions as data stored in an asset, instead of defining them directly in your code.
+
+Using an Actions Asset allows you to keep the data that defines your actions separate from the Game\+Objects which should respond to the actions. This provides a further level of abstraction and organization, compared with \href{Workflow-Embedded.html}{\texttt{ embedding action definitions directly in your code}}.
+
+The Actions Asset is useful because it means all your action definitions are stored as a single asset file, separate from your scripts and prefabs. This can make it simpler to manage conceptually, and can help in practical situations where different people in your team might work on different parts of the project at the same time.
+
+Action Assets also provide other benefits over embedded actions in scripts, such as the ability to group actions into \href{ActionAssets.html\#editing-action-maps}{\texttt{ Action Maps}} and \href{ActionAssets.html\#editing-control-schemes}{\texttt{ Control Schemes}}.
+
+\href{ActionAssets.html\#editing-action-maps}{\texttt{ Action Maps}} are a way to group related actions together, where each map relates to a different situation. For example, your game might involve driving vehicles and navigating on foot, and may have in-\/game menus. In this example, it would make sense to have three different action maps for each of these three situations, and your game code would switch between them as appropriate. The actions grouped into the "{}driving"{} action map might be called "{}steer"{}, "{}accelerate"{}, "{}brake"{}, "{}handbrake"{}, etc, whereas the actions grouped into the "{}on foot"{} action map might be "{}move"{}, "{}jump"{}, "{}crouch"{}, "{}use"{}, etc.
+
+The \href{ActionAssets.html\#editing-control-schemes}{\texttt{ Control Schemes}}, also defined in an Action Asset, allows you to specify which bindings belong to the control schemes you define. You might have one control scheme which is "{}\+Joypad"{}, and another control scheme which is "{}\+Keyboard and Mouse"{}. This allows you to determine which control scheme the user is currently using, so your game can respond to the user accordingly. This feature is often used to adapt the in-\/game UI to show the correct keys or buttons in on-\/screen prompts.
+
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_workflow-_actions_asset_autotoc_md1606}{}\doxysection{\texorpdfstring{Accessing your Actions Asset from code}{Accessing your Actions Asset from code}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_workflow-_actions_asset_autotoc_md1606}
+When you use an Actions Asset, there are two distinct ways to access it from your code. You can either\+:
+
+
+\begin{DoxyItemize}
+\item Use an {\bfseries{inspector reference}} to the Actions Asset, or
+\item Generate a {\bfseries{C\# class}} that wraps your Actions Asset.
+\end{DoxyItemize}
+
+Your choice affects how you access your actions from code. With an {\bfseries{inspector reference}} to your Actions Asset, you must read the actions by name using strings. If you use the {\bfseries{Generate C\# class}} feature, \doxylink{namespace_unity}{Unity} generates an accompanying class as a new \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}.cs\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} script asset, which acts as a wrapper for your actions. You can then create an instance of the generated wrapper class in your code and directly use its API members which are named after the names of the actions that you configured.
+
+Both workflow options are described below using the same example, so you can see the difference.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_workflow-_actions_asset_autotoc_md1607}{}\doxysubsection{\texorpdfstring{Referencing the Actions Asset in the inspector}{Referencing the Actions Asset in the inspector}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_workflow-_actions_asset_autotoc_md1607}
+To use your Actions Asset through an {\bfseries{inspector reference}}\+:
+
+
+\begin{DoxyEnumerate}
+\item Create a {\ttfamily public Input\+Actions\+Asset} field in your script.
+\item \href{https://docs.unity3d.com/Manual/EditingValueProperties.html\#ref-assign-dnd}{\texttt{ Assign the reference}} in the inspector.
+\item Access the Actions in your script by name, using strings.
+\end{DoxyEnumerate}
+
+This string-\/based access is demonstrated in the example below.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{using\ UnityEngine;}
+\DoxyCodeLine{using\ UnityEngine.InputSystem;}
+\DoxyCodeLine{}
+\DoxyCodeLine{public\ class\ ExampleScript\ :\ MonoBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ //\ assign\ the\ actions\ asset\ to\ this\ field\ in\ the\ inspector:}
+\DoxyCodeLine{\ \ \ \ public\ InputActionAsset\ actions;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //\ private\ field\ to\ store\ move\ action\ reference}
+\DoxyCodeLine{\ \ \ \ private\ InputAction\ moveAction;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ void\ Awake()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ find\ the\ "{}move"{}\ action,\ and\ keep\ the\ reference\ to\ it,\ for\ use\ in\ Update}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ moveAction\ =\ actions.FindActionMap("{}gameplay"{}).FindAction("{}move"{});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ for\ the\ "{}jump"{}\ action,\ we\ add\ a\ callback\ method\ for\ when\ it\ is\ performed}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ actions.FindActionMap("{}gameplay"{}).FindAction("{}jump"{}).performed\ +=\ OnJump;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ void\ Update()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ our\ update\ loop\ polls\ the\ "{}move"{}\ action\ value\ each\ frame}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Vector2\ moveVector\ =\ moveAction.ReadValue<Vector2>();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ private\ void\ OnJump(InputAction.CallbackContext\ context)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ this\ is\ the\ "{}jump"{}\ action\ callback\ method}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Debug.Log("{}Jump!"{});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ void\ OnEnable()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ actions.FindActionMap("{}gameplay"{}).Enable();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ void\ OnDisable()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ actions.FindActionMap("{}gameplay"{}).Disable();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Note\+:}} In the example above the reference to the "{}move"{} action is stored in a variable after it is found, to avoid accessing it by string every frame, which would be bad for performance.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_workflow-_actions_asset_autotoc_md1608}{}\doxysubsection{\texorpdfstring{Referencing the Actions Asset through a C\# wrapper}{Referencing the Actions Asset through a C\# wrapper}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_workflow-_actions_asset_autotoc_md1608}
+To use your Actions Asset through a {\bfseries{C\# wrapper}}\+:
+
+
+\begin{DoxyEnumerate}
+\item Select your Actions Asset in the project window
+\item In the Inspector, enable {\bfseries{Generate C\# Class}} and select {\bfseries{Apply}}. You should see a C\# asset with the same name as your Actions Asset in your project window.
+\item Create an instance of your Actions C\# class in your script.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Access the Actions in your script by using the API of your Actions C\# class.
+\end{DoxyEnumerate}
+
+For example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{using\ UnityEngine;}
+\DoxyCodeLine{using\ UnityEngine.InputSystem;}
+\DoxyCodeLine{}
+\DoxyCodeLine{public\ class\ DocsExampleActionsAssetCsWrapper\ :\ MonoBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ //\ this\ field\ will\ contain\ the\ actions\ wrapper\ instance}
+\DoxyCodeLine{\ \ \ \ ExampleActions\ actions;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ void\ Awake()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ instantiate\ the\ actions\ wrapper\ class}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ actions\ =\ new\ ExampleActions();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ for\ the\ "{}jump"{}\ action,\ we\ add\ a\ callback\ method\ for\ when\ it\ is\ performed}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ actions.gameplay.jump.performed\ +=\ OnJump;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ void\ Update()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ our\ update\ loop\ polls\ the\ "{}move"{}\ action\ value\ each\ frame}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Vector2\ moveVector\ =\ actions.gameplay.move.ReadValue<Vector2>();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ private\ void\ OnJump(InputAction.CallbackContext\ context)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ this\ is\ the\ "{}jump"{}\ action\ callback\ method}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Debug.Log("{}Jump!"{});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ void\ OnEnable()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ actions.gameplay.Enable();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ void\ OnDisable()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ actions.gameplay.Disable();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Whether you use the C\# wrapper option, or the inspector reference option, using an Action Asset like this gives you the ability to organize and edit your actions in the Actions Window. It is more flexible than using \href{Workflow-Embedded.html}{\texttt{ embedded actions}}, and \href{Workflow-Direct.html}{\texttt{ directly reading device states}}, and is generally a good solution for many projects. However, you can also add one more step of abstraction using the \href{Workflow-PlayerInput.html}{\texttt{ Player Input component}}, to set up calls to methods based on your Action definitions.
+
+\texorpdfstring{$>$}{>}\mbox{[}!\+Note\mbox{]} \texorpdfstring{$>$}{>}Because Action Assets can be used in these two different ways (by reference, or by C\# wrapper), the code samples used throughout this documentation also vary in which way they are written. Some code samples might use a reference and strings to identify actions, and others might use the C\# wrapper method.
+
+See also\+:
+
+
+\begin{DoxyItemize}
+\item \href{ActionAssets.html}{\texttt{ Using Action Assets}}
+\item \href{ActionAssets.html\#auto-generating-script-code-for-actions}{\texttt{ Generating a C\# Class that wraps your actions}} 
+\end{DoxyItemize}

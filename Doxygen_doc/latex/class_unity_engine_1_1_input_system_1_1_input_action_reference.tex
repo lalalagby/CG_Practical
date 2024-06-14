@@ -1,0 +1,181 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Input\+Action\+Reference Class Reference}
+\hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_reference}{}\label{class_unity_engine_1_1_input_system_1_1_input_action_reference}\index{UnityEngine.InputSystem.InputActionReference@{UnityEngine.InputSystem.InputActionReference}}
+
+
+References a specific \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action} in an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map} stored inside an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset}.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Input\+Action\+Reference\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_input_system_1_1_input_action_reference}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_reference_ad7aad3bda60961615730054cf21273c0}{Set}} (\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_reference_a957b31d4242ef29fe1cb7621dcf3cc40}{action}})
+\begin{DoxyCompactList}\small\item\em Initialize the reference to refer to the given action. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_reference_a7b1c607b5423ad20b14375d40117cf7c}{Set}} (\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_reference_adc67cce15686a1814fcd2e8dae0ae4c2}{asset}}, string map\+Name, string action\+Name)
+\begin{DoxyCompactList}\small\item\em Look up an action in the given asset and initialize the reference to point to it. \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_reference_aa0f3b003cba9ba21dd07cbce332c0ce3}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Return a string representation of the reference useful for debugging. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_reference_a00f802e0aa19ff6def79faf6be16e8cf}\label{class_unity_engine_1_1_input_system_1_1_input_action_reference_a00f802e0aa19ff6def79faf6be16e8cf} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} {\bfseries To\+Input\+Action} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static implicit \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_reference_ab5bb1eb28b51beb4c0d90bd378b6a8be}{operator Input\+Action}} (\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_reference}{Input\+Action\+Reference}} reference)
+\begin{DoxyCompactList}\small\item\em Convert an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_reference}{Input\+Action\+Reference} to the \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action} it points to. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_reference}{Input\+Action\+Reference}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_reference_a4eccd8d8a767080d60d40dac374258fc}{Create}} (\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_reference_a957b31d4242ef29fe1cb7621dcf3cc40}{action}})
+\begin{DoxyCompactList}\small\item\em Create a new \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_reference}{Input\+Action\+Reference} object that references the given action. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_reference_adc67cce15686a1814fcd2e8dae0ae4c2}{asset}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The asset that the referenced action is part of. Null if the reference is not initialized or if the asset has been deleted. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_reference_a957b31d4242ef29fe1cb7621dcf3cc40}{action}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The action that the reference resolves to. Null if the action cannot be found. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+References a specific \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action} in an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map} stored inside an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset}. 
+
+The difference to a plain reference directly to an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action} object is that an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_reference}{Input\+Action\+Reference} can be serialized without causing the referenced \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action} to be serialized as well. The reference will remain intact even if the action or the map that contains the action is renamed.
+
+References can be set up graphically in the editor by dropping individual actions from the project browser onto a reference field. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_property}{Input\+Action\+Property}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_reference_a4eccd8d8a767080d60d40dac374258fc}\index{UnityEngine.InputSystem.InputActionReference@{UnityEngine.InputSystem.InputActionReference}!Create@{Create}}
+\index{Create@{Create}!UnityEngine.InputSystem.InputActionReference@{UnityEngine.InputSystem.InputActionReference}}
+\doxysubsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_reference_a4eccd8d8a767080d60d40dac374258fc} 
+static \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_reference}{Input\+Action\+Reference}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Reference.\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}}}]{action}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Create a new \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_reference}{Input\+Action\+Reference} object that references the given action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & An input action. Must be contained in an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map} that is itself contained in an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset}. Can be {\ttfamily null} in which case the reference is reset to its default state which does not reference an action.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_reference}{Input\+Action\+Reference} referencing {\itshape action} .
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_reference_ab5bb1eb28b51beb4c0d90bd378b6a8be}\index{UnityEngine.InputSystem.InputActionReference@{UnityEngine.InputSystem.InputActionReference}!operator InputAction@{operator InputAction}}
+\index{operator InputAction@{operator InputAction}!UnityEngine.InputSystem.InputActionReference@{UnityEngine.InputSystem.InputActionReference}}
+\doxysubsubsection{\texorpdfstring{operator InputAction()}{operator InputAction()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_reference_ab5bb1eb28b51beb4c0d90bd378b6a8be} 
+static implicit Unity\+Engine.\+Input\+System.\+Input\+Action\+Reference.\+operator \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_reference}{Input\+Action\+Reference}}}]{reference}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Convert an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_reference}{Input\+Action\+Reference} to the \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action} it points to. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reference} & An \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_reference}{Input\+Action\+Reference} object. Can be null.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_reference_a957b31d4242ef29fe1cb7621dcf3cc40}{action} from {\itshape reference} . Can be null.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_reference_ad7aad3bda60961615730054cf21273c0}\index{UnityEngine.InputSystem.InputActionReference@{UnityEngine.InputSystem.InputActionReference}!Set@{Set}}
+\index{Set@{Set}!UnityEngine.InputSystem.InputActionReference@{UnityEngine.InputSystem.InputActionReference}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_reference_ad7aad3bda60961615730054cf21273c0} 
+void Unity\+Engine.\+Input\+System.\+Input\+Action\+Reference.\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}}}]{action}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialize the reference to refer to the given action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & An input action. Must be contained in an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map} that is itself contained in an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset}. Can be {\ttfamily null} in which case the reference is reset to its default state which does not reference an action.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & {\itshape action}  is not contained in an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map} that is itself contained in an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset}.\\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_reference_a7b1c607b5423ad20b14375d40117cf7c}\index{UnityEngine.InputSystem.InputActionReference@{UnityEngine.InputSystem.InputActionReference}!Set@{Set}}
+\index{Set@{Set}!UnityEngine.InputSystem.InputActionReference@{UnityEngine.InputSystem.InputActionReference}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_reference_a7b1c607b5423ad20b14375d40117cf7c} 
+void Unity\+Engine.\+Input\+System.\+Input\+Action\+Reference.\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset}}}]{asset}{, }\item[{string}]{map\+Name}{, }\item[{string}]{action\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Look up an action in the given asset and initialize the reference to point to it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em asset} & An .inputactions asset.\\
+\hline
+{\em map\+Name} & Name of the \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map} in {\itshape asset}  (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset_ac4ec8cdd2eb8b570b9d598967c942c6b}{Input\+Action\+Asset.\+action\+Maps}). Case-\/insensitive.\\
+\hline
+{\em action\+Name} & Name of the action in {\itshape map\+Name} . Case-\/insensitive.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & {\itshape asset}  is {\ttfamily null} -\/or-\/ {\itshape map\+Name}  is {\ttfamily null} or empty -\/or-\/ {\itshape action\+Name}  is {\ttfamily null} or empty.\\
+\hline
+{\em Argument\+Exception} & No action map called {\itshape map\+Name}  could be found in {\itshape asset}  -\/or-\/ no action called {\itshape action\+Name}  could be found in the action map called {\itshape map\+Name}  in {\itshape asset} .\\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_reference_aa0f3b003cba9ba21dd07cbce332c0ce3}\index{UnityEngine.InputSystem.InputActionReference@{UnityEngine.InputSystem.InputActionReference}!ToString@{ToString}}
+\index{ToString@{ToString}!UnityEngine.InputSystem.InputActionReference@{UnityEngine.InputSystem.InputActionReference}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_reference_aa0f3b003cba9ba21dd07cbce332c0ce3} 
+override string Unity\+Engine.\+Input\+System.\+Input\+Action\+Reference.\+To\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return a string representation of the reference useful for debugging. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the reference.
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_reference_a957b31d4242ef29fe1cb7621dcf3cc40}\index{UnityEngine.InputSystem.InputActionReference@{UnityEngine.InputSystem.InputActionReference}!action@{action}}
+\index{action@{action}!UnityEngine.InputSystem.InputActionReference@{UnityEngine.InputSystem.InputActionReference}}
+\doxysubsubsection{\texorpdfstring{action}{action}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_reference_a957b31d4242ef29fe1cb7621dcf3cc40} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Reference.\+action\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The action that the reference resolves to. Null if the action cannot be found. 
+
+The action that reference points to.
+
+Actions are resolved on demand based on their internally stored IDs. \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_reference_adc67cce15686a1814fcd2e8dae0ae4c2}\index{UnityEngine.InputSystem.InputActionReference@{UnityEngine.InputSystem.InputActionReference}!asset@{asset}}
+\index{asset@{asset}!UnityEngine.InputSystem.InputActionReference@{UnityEngine.InputSystem.InputActionReference}}
+\doxysubsubsection{\texorpdfstring{asset}{asset}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_reference_adc67cce15686a1814fcd2e8dae0ae4c2} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Reference.\+asset\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The asset that the referenced action is part of. Null if the reference is not initialized or if the asset has been deleted. 
+
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset} of the referenced action.
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Actions/Input\+Action\+Reference.\+cs\end{DoxyCompactItemize}

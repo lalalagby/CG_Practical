@@ -1,0 +1,49 @@
+\chapter{Blending between Virtual Cameras}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_blending}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_blending}\index{Blending between Virtual Cameras@{Blending between Virtual Cameras}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_blending_autotoc_md644}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_blending_autotoc_md644}%
+ Use blending properties to specify how the \doxylink{namespace_cinemachine}{Cinemachine} Brain component performs a blend between virtual cameras.
+
+A \doxylink{namespace_cinemachine}{Cinemachine} blend is not a fade, wipe, or dissolve. Rather, \doxylink{namespace_cinemachine}{Cinemachine} Brain performs a smooth animation of the position, rotation, and other settings of the \doxylink{namespace_unity}{Unity} camera from one Virtual Camera to the next.
+
+For blends between specific Virtual Cameras, use the {\bfseries{Custom Blends}} list in the \doxylink{namespace_cinemachine}{Cinemachine} Brain component. Use the {\bfseries{Default Blend}} property in \doxylink{namespace_cinemachine}{Cinemachine} Brain to specify blends between Virtual Cameras that do not have custom blends.
+
+
+
+The {\bfseries{From}} and {\bfseries{To}} settings are name-\/based, not references. This means that \doxylink{namespace_cinemachine}{Cinemachine} finds cameras by matching their names to the settings. They are not linked to specific Game\+Objects. The built-\/in dropdowns can be used to select a virtual camera from the current scene, or the name can be typed directly into the text boxes. If a name does not match any virtual camera in the current scene, the field will be highlighted in yellow.
+
+Use the reserved name \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+ANY CAMERA\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} to blend from or to any Virtual Camera.
+
+When \doxylink{namespace_cinemachine}{Cinemachine} begins a transition from one virtual camera to another, it will look in this asset for an entry that matches the upcoming transition, and apply that blend definition. ~\newline
+
+
+
+\begin{DoxyItemize}
+\item If none is found, then the Cinemachine\+Brain\textquotesingle{}s Default\+Blend setting will apply. ~\newline
+
+\item If multiple entries in the Custom Blends asset match the upcoming transition, \doxylink{namespace_cinemachine}{Cinemachine} will choose the one with the strongest specificity. For example, if blending from vcam1 to vcam2, and the custom blends asset contains an entry for {\itshape vcam1-\/to-\/\+Any\+Camera}, and another entry for {\itshape vcam1-\/to-\/vcam2}, then the {\itshape vcam1-\/to-\/vcam2} entry will apply.
+\item If multiple entries in the Custom Blends asset match the upcoming transition with equally-\/strong specificity, then the first one found will apply.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_blending_autotoc_md645}{}\doxysection{\texorpdfstring{Properties\+:}{Properties\+:}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_blending_autotoc_md645}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }}&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\multicolumn{2}{|l|}{\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }}&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-3}
+\endhead
+\multicolumn{2}{|l|}{{\bfseries{From}}   }&The name of the Virtual Camera to blend from. Use the name \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+ANY CAMERA\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} to blend from any Virtual Camera. This property is available only for custom blends.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{To}}   }&The name of the Virtual Camera to blend to. Use the name \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+ANY CAMERA\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} to blend to any Virtual Camera. This property is available only for custom blends.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Style Default Blend}}   }&Shape of the blend curve.    \\\cline{1-3}
+&{\itshape Cut}   &Zero-\/length blend.    \\\cline{1-3}
+&{\itshape Ease In Out}   &S-\/shaped curve, giving a gentle and smooth transition.    \\\cline{1-3}
+&{\itshape Ease In}   &Linear out of the outgoing Virtual Camera, and ease into the incoming Virtual Camera.    \\\cline{1-3}
+&{\itshape Ease Out}   &Ease out of the outgoing Virtual Camera, and blend linearly into the incoming Virtual Camera.    \\\cline{1-3}
+&{\itshape Hard In}   &Ease out of the outgoing Virtual Camera, and accelerate into the incoming Virtual Camera.    \\\cline{1-3}
+&{\itshape Hard Out}   &Accelerate out of the outgoing Virtual Camera, and ease into the incoming Virtual Camera.    \\\cline{1-3}
+&{\itshape Linear}   &Linear blend. mechanical-\/looking.    \\\cline{1-3}
+&{\itshape Custom}   &Custom blend curve. Allows you to draw a custom blend curve.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Time}}   }&Duration (in seconds) of the blend.   \\\cline{1-3}
+\end{longtabu}

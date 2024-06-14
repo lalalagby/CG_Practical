@@ -1,0 +1,69 @@
+\chapter{Getting started}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2getting-started}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2getting-started}\index{Getting started@{Getting started}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2getting-started_autotoc_md402}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2getting-started_autotoc_md402}%
+ \doxylink{namespace_burst}{Burst} is primarily designed to work with \doxylink{namespace_unity}{Unity}\textquotesingle{}s \href{https://docs.unity3d.com/Manual/JobSystem.html}{\texttt{ job system}}. To start using the \doxylink{namespace_burst}{Burst} compiler in your code, decorate a \href{https://docs.unity3d.com/ScriptReference/Unity.Jobs.IJob.html}{\texttt{ Job struct}} with the \href{xref:Unity.Burst.BurstCompileAttribute}{\texttt{ {\ttfamily \mbox{[}Burst\+Compile\mbox{]}}}} attribute. Add the {\ttfamily \mbox{[}Burst\+Compile\mbox{]}} attribute to the type and the static method you want \doxylink{namespace_burst}{Burst} to compile.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keyword}{using\ }Unity.Burst;}
+\DoxyCodeLine{\textcolor{keyword}{using\ }Unity.Collections;}
+\DoxyCodeLine{\textcolor{keyword}{using\ }Unity.Jobs;}
+\DoxyCodeLine{\textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyBurst2Behavior\ :\ MonoBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36aa6122a65eaa676f700ae68d393054a37}{Start}}()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ input\ =\ \textcolor{keyword}{new}\ NativeArray<float>(10,\ Allocator.Persistent);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ output\ =\ \textcolor{keyword}{new}\ NativeArray<float>(1,\ Allocator.Persistent);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ input.Length;\ i++)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ input[i]\ =\ 1.0f\ *\ i;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ job\ =\ \textcolor{keyword}{new}\ MyJob}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ Input\ =\ input,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ Output\ =\ output}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ job.Schedule().Complete();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Debug.Log(\textcolor{stringliteral}{"{}The\ result\ of\ the\ sum\ is:\ "{}}\ +\ output[0]);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ input.Dispose();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ output.Dispose();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Using\ BurstCompile\ to\ compile\ a\ Job\ with\ Burst}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ [BurstCompile]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{struct\ }MyJob\ :\ IJob}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ [\mbox{\hyperlink{namespace_unity_editor_1_1_timeline_af9aefa8b1ec710da91fbc7bdf0bcafbca131fb182a881796e7606ed6da27f1197}{ReadOnly}}]}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ NativeArray<float>\ Input;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ [WriteOnly]}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ NativeArray<float>\ Output;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Execute()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ result\ =\ 0.0f;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ Input.Length;\ i++)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result\ +=\ Input[i];}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ Output[0]\ =\ result;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2getting-started_autotoc_md403}{}\doxysection{\texorpdfstring{Limitations}{Limitations}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2getting-started_autotoc_md403}
+\doxylink{namespace_burst}{Burst} supports most C\# expressions and statements, with a few exceptions. For more information, see \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-language-support}{C\# language support}{0}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2getting-started_autotoc_md404}{}\doxysection{\texorpdfstring{Compilation}{Compilation}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2getting-started_autotoc_md404}
+\doxylink{namespace_burst}{Burst} compiles your code \href{https://en.wikipedia.org/wiki/Just-in-time_compilation}{\texttt{ just-\/in-\/time (JIT)}} while in Play mode in the Editor, and \href{https://en.wikipedia.org/wiki/Ahead-of-time_compilation}{\texttt{ ahead-\/of-\/time (AOT)}} when your application runs in a \doxylink{class_player}{Player}. For more information on compilation, see \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2compilation}{Burst compilation}{0}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2getting-started_autotoc_md405}{}\doxysection{\texorpdfstring{Command line options}{Command line options}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2getting-started_autotoc_md405}
+You can pass the following options to the \doxylink{namespace_unity}{Unity} Editor on the command line to control \doxylink{namespace_burst}{Burst}\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily -\/-\/burst-\/disable-\/compilation} disables \doxylink{namespace_burst}{Burst}.
+\item {\ttfamily -\/-\/burst-\/force-\/sync-\/compilation} force \doxylink{namespace_burst}{Burst} to compile synchronously. For more information, see \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2compilation}{Burst compilation}{0}. 
+\end{DoxyItemize}

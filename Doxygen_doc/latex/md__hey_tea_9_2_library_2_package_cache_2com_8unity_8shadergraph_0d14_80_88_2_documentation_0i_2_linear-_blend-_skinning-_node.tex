@@ -1,0 +1,23 @@
+\chapter{Linear Blend Skinning Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_linear-_blend-_skinning-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_linear-_blend-_skinning-_node}\index{Linear Blend Skinning Node@{Linear Blend Skinning Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_linear-_blend-_skinning-_node_autotoc_md3422}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_linear-_blend-_skinning-_node_autotoc_md3422}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_linear-_blend-_skinning-_node_autotoc_md3423}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_linear-_blend-_skinning-_node_autotoc_md3423}
+This node lets you apply Linear Blend Vertex Skinning, and only works with the \href{https://docs.unity3d.com/Packages/com.unity.rendering.hybrid@latest/}{\texttt{ DOTS Hybrid Renderer}}. You must provide skinned matrices in the {\ttfamily \+\_\+\+Skin\+Matrices} buffer. The node uses the {\ttfamily \+\_\+\+Skin\+Matrix\+Index} property to calculate where the matrices associated with the current mesh are located in the {\ttfamily \+\_\+\+Skin\+Matrices} buffer.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_linear-_blend-_skinning-_node_autotoc_md3424}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_linear-_blend-_skinning-_node_autotoc_md3424}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Stage   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Stage   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+Position   &Input   &Vector3   &Vertex   &Position of the vertex in object space.    \\\cline{1-5}
+Normal   &Input   &Vector3   &Vertex   &Normal of the vertex in object space.    \\\cline{1-5}
+Tangent   &Input   &Vector3   &Vertex   &Tangent of the vertex in object space.    \\\cline{1-5}
+Position   &Output   &Vector3   &Vertex   &Outputs the skinned vertex position.    \\\cline{1-5}
+Normal   &Output   &Vector3   &Vertex   &Outputs the skinned vertex normal.    \\\cline{1-5}
+Tangent   &Output   &Vector3   &Vertex   &Outputs the skinned vertex tangent.   \\\cline{1-5}
+\end{longtabu}

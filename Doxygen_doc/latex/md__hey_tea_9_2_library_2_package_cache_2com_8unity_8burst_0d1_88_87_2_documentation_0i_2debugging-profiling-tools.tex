@@ -1,0 +1,117 @@
+\chapter{Debugging and profiling tools}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools}\index{Debugging and profiling tools@{Debugging and profiling tools}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_autotoc_md384}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_autotoc_md384}%
+ The following sections describe how to debug and profile your Burst-\/compiled code in the Editor and in player builds.
+
+\texorpdfstring{$>$}{>}\mbox{[}!\+TIP\mbox{]} \texorpdfstring{$>$}{>}Before attempting to debug Burst-\/compiled code, enable script debugging for the Editor, or a player build by following the steps in \mbox{[}Debug C\# code in \doxylink{namespace_unity}{Unity}\mbox{]}(xref\+:Managed\+Code\+Debugging). Although you can theoretically debug Burst-\/compiled code even when the script compilation mode is set to Release, in practice it doesn\textquotesingle{}t work reliably. Breakpoints might be skipped, and variables might not appear in the Locals window, for example.
+
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_debugging-in-editor}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_debugging-in-editor}%
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_autotoc_md385}{}\doxysection{\texorpdfstring{Debugging Burst-\/compiled code in the Editor}{Debugging Burst-\/compiled code in the Editor}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_autotoc_md385}
+To debug Burst-\/compiled code in the Editor, you can either use a managed debugger, or a native debugger. This section explains both options.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_autotoc_md386}{}\doxysubsection{\texorpdfstring{Attach a managed debugger}{Attach a managed debugger}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_autotoc_md386}
+You can attach a managed debugger such as Visual Studio, Visual Studio for Mac, or \doxylink{namespace_jet_brains}{Jet\+Brains} \doxylink{namespace_rider}{Rider}. This is the same type of debugger you can use to debug regular managed C\# code in your \doxylink{namespace_unity}{Unity} project. The ways of attaching a debugger differ depending on the version of \doxylink{namespace_unity}{Unity} you\textquotesingle{}re using\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{\doxylink{namespace_unity}{Unity} 2022.\+2+}}\+: When you place a breakpoint inside Burst-\/compiled code, and you have a managed debugger attached, \doxylink{namespace_unity}{Unity} disables \doxylink{namespace_burst}{Burst} automatically for that code path. This allows you to use a managed debugger to debug the managed version of your code. When you remove all breakpoints from that code path, \doxylink{namespace_unity}{Unity} re-\/enables \doxylink{namespace_burst}{Burst} for that code path.
+\item {\bfseries{\doxylink{namespace_unity}{Unity} 2022.\+1 and older}}\+: Disable \doxylink{namespace_burst}{Burst}, either with the global option in the Editor \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2editor-burst-menu}{Burst menu}{0} ({\bfseries{Jobs}} \texorpdfstring{$>$}{>} {\bfseries{\doxylink{namespace_burst}{Burst}}} \texorpdfstring{$>$}{>} {\bfseries{Enable Compilation}}), or comment out the {\ttfamily \mbox{[}Burst\+Compile\mbox{]}} attribute from the specific entry-\/point that you want to debug.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_autotoc_md387}{}\doxysubsection{\texorpdfstring{Attach a native debugger}{Attach a native debugger}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_autotoc_md387}
+You can attach a native debugger such as Visual Studio or Xcode. Before doing so, you need to disable \doxylink{namespace_burst}{Burst} optimizations. You can do this in the following ways\+:
+
+
+\begin{DoxyItemize}
+\item Use the {\bfseries{Native Debug Mode Compilation}} setting in the Editor \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2editor-burst-menu}{Burst menu}{0} ({\bfseries{Jobs}} \texorpdfstring{$>$}{>} {\bfseries{\doxylink{namespace_burst}{Burst}}} \texorpdfstring{$>$}{>} {\bfseries{Native Debug Mode Compilation}}). {\bfseries{Important\+:}} This setting disables optimizations across all jobs, which impacts the performance of \doxylink{namespace_burst}{Burst} code. If you want to disable optimizations only for a specific job, use the other option in this list.
+\item Add the {\ttfamily Debug = true} flag to your job, which disables optimizations and enables debugging on that specific job\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#}}
+\DoxyCodeLine{\ \ \ [BurstCompile(Debug\ =\ \textcolor{keyword}{true})]}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{struct\ }MyJob\ :\ IJob}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{comment}{//\ ...}}
+\DoxyCodeLine{\ \ \ \}}
+
+\end{DoxyCode}
+
+
+\texorpdfstring{$>$}{>}\mbox{[}!\+TIP\mbox{]} \texorpdfstring{$>$}{>}\doxylink{class_player}{Player} builds pick up the {\ttfamily Debug} flag, so you can also use this to debug a player build.
+\end{DoxyItemize}
+
+To attach a native debugger to the \doxylink{namespace_unity}{Unity} Editor process, see the \doxylink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_native-debugging}{native debugging} section below.
+
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_debugging-in-player}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_debugging-in-player}%
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_autotoc_md388}{}\doxysection{\texorpdfstring{Debugging Burst-\/compiled code in a player build}{Debugging Burst-\/compiled code in a player build}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_autotoc_md388}
+Because of the way that \doxylink{namespace_unity}{Unity} builds the code for a player, you need to tell the debugging tool where to find the symbols. To do this, point the tool to the folder that contains the {\ttfamily lib\+\_\+burst\+\_\+generated} files, which is usually in the {\ttfamily Plugins} folder.
+
+To debug Burst-\/compiled code in a player build, you need to attach a native debugger (such as Visual Studio or Xcode) to the player process. Before doing so, you need to\+:
+
+
+\begin{DoxyItemize}
+\item Enable symbol generation. You can do this in either of two ways\+:
+\begin{DoxyItemize}
+\item Enable the {\bfseries{Development Build}} option before you build the player, or
+\item Enable the {\bfseries{Force Debug Information}} option in \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2building-aot-settings}{Burst AOT Player Settings}{0}
+\end{DoxyItemize}
+\item Disable \doxylink{namespace_burst}{Burst} optimizations. You can do this in either of two ways\+:
+\begin{DoxyItemize}
+\item Disable the {\bfseries{Enable Optimizations}} option in \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2building-aot-settings}{Burst AOT Player Settings}{0}. {\bfseries{Important\+:}} This setting disables optimizations across all jobs, which impacts the performance of \doxylink{namespace_burst}{Burst} code. If you want to disable optimizations only for a specific job, use the other option in this list.
+\item Add the {\ttfamily Debug = true} flag to your job, which disables optimizations and enables debugging on that specific job\+:
+
+{\ttfamily c\# \mbox{[}Burst\+Compile(Debug = true)\mbox{]} public struct My\+Job \+: IJob \{ // ... \} }
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+To attach a native debugger to the player process, see the \doxylink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_native-debugging}{native debugging} section below.
+
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_native-debugging}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_native-debugging}%
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_autotoc_md389}{}\doxysection{\texorpdfstring{Native debugging}{Native debugging}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_autotoc_md389}
+Follow the instructions above to setup native debugging correctly for the \doxylink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_debugging-in-editor}{Editor} or a \doxylink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_debugging-in-player}{player build}. Then, attach a native debugger such as Visual Studio or Xcode.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_autotoc_md390}{}\doxysubsection{\texorpdfstring{Native debugging limitations}{Native debugging limitations}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_autotoc_md390}
+
+\begin{DoxyItemize}
+\item Native debuggers can\textquotesingle{}t discover lambda captures on {\ttfamily Entity.\+For\+Each}, so you can\textquotesingle{}t inspect variables originating from these.
+\item Structs that use \href{https://docs.microsoft.com/en-us/dotnet/api/system.runtime.interopservices.layoutkind?view=net-6.0}{\texttt{ {\ttfamily \mbox{[}Struct\+Layout(Layout\+Kind=Explicit)\mbox{]}}}} and have overlapping fields are represented by a struct that hides one of the overlaps.
+\item Function parameters are read-\/only from a debugging point of view. \doxylink{namespace_burst}{Burst} records them to a stack argument during the prologue. Changing their value in the debugger might not have an affect.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_autotoc_md391}{}\doxysubsection{\texorpdfstring{Code-\/based breakpoints}{Code-\/based breakpoints}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_autotoc_md391}
+\doxylink{namespace_burst}{Burst} supports code-\/based breakpoints through the \href{https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.debugger.break?view=net-6.0}{\texttt{ {\ttfamily System.\+Diagnostics.\+Debugger.\+Break}}} method. This method generates a debug trap in your code. You must attach a debugger to your code so that it can intercept the break. Breakpoints trigger whether you\textquotesingle{}ve attached a debugger or not.
+
+\doxylink{namespace_burst}{Burst} adds information to track local variables, function parameters and breakpoints. If your debugger supports conditional breakpoints, use these over adding breakpoints in your code, because they only fire when you\textquotesingle{}ve attached a debugger.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_autotoc_md392}{}\doxysection{\texorpdfstring{Profiling Burst-\/compiled code}{Profiling Burst-\/compiled code}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_autotoc_md392}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_autotoc_md393}{}\doxysubsection{\texorpdfstring{Profiling using standalone profiling tools}{Profiling using standalone profiling tools}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_autotoc_md393}
+You can use profiling tools (such as Instruments or Superluminal) to profile Burst-\/compiled code in a player build. Because of the way that \doxylink{namespace_unity}{Unity} builds the code for a player, you need to tell the profiling tool where to find the symbols. To do this, point the tool to the folder that contains the {\ttfamily lib\+\_\+burst\+\_\+generated} files, which is usually in the {\ttfamily Plugins} folder.
+
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_profiler-markers}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_profiler-markers}%
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_autotoc_md394}{}\doxysubsection{\texorpdfstring{Unity Profiler markers}{Unity Profiler markers}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2debugging-profiling-tools_autotoc_md394}
+To improve the data you get from \doxylink{namespace_unity}{Unity} Profiler (either for Burst-\/compiled code running in the Editor or in an attached player), you can create \doxylink{namespace_unity}{Unity} Profiler markers from \doxylink{namespace_burst}{Burst} code by calling {\ttfamily new Profiler\+Marker("{}\+Marker\+Name"{})}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{[BurstCompile]}
+\DoxyCodeLine{\textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }ProfilerMarkerWrapper}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ readonly\ ProfilerMarker\ StaticMarker\ =\ \textcolor{keyword}{new}\ ProfilerMarker(\textcolor{stringliteral}{"{}TestStaticBurst"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ [BurstCompile(CompileSynchronously\ =\ \textcolor{keyword}{true})]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ CreateAndUseProfilerMarker(\textcolor{keywordtype}{int}\ start)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{using}\ (StaticMarker.Auto())}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ var\ p\ =\ \textcolor{keyword}{new}\ ProfilerMarker(\textcolor{stringliteral}{"{}TestBurst"{}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ p.Begin();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ var\ result\ =\ 0;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (var\ i\ =\ start;\ i\ <\ start\ +\ 100000;\ i++)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result\ +=\ i;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ p.End();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

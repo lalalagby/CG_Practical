@@ -1,0 +1,65 @@
+\chapter{Gradient Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_gradient-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_gradient-_node}\index{Gradient Node@{Gradient Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_gradient-_node_autotoc_md3290}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_gradient-_node_autotoc_md3290}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_gradient-_node_autotoc_md3291}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_gradient-_node_autotoc_md3291}
+Defines a constant {\bfseries{Gradient}} for use in Shader Graph, although internally to the shader this is defined as a {\bfseries{struct}}. To sample the {\bfseries{Gradient}} it should be used in conjunction with a \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_sample-_gradient-_node}{Sample Gradient Node}{0}. When using a separate {\bfseries{Gradient Node}}, you can sample a {\bfseries{Gradient}} multiple times with different Time parameters.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_gradient-_node_autotoc_md3292}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_gradient-_node_autotoc_md3292}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endhead
+Out   &Output   &Gradient   &Output value   \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_gradient-_node_autotoc_md3293}{}\doxysection{\texorpdfstring{Controls}{Controls}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_gradient-_node_autotoc_md3293}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endhead
+&Gradient Field   &&Defines the gradient.   \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_gradient-_node_autotoc_md3294}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_gradient-_node_autotoc_md3294}
+The following example code represents one possible outcome of this node.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Gradient\ Unity\_Gradient\_float()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Gradient\ g;}
+\DoxyCodeLine{\ \ \ \ g.type\ =\ 1;}
+\DoxyCodeLine{\ \ \ \ g.colorsLength\ =\ 4;}
+\DoxyCodeLine{\ \ \ \ g.alphasLength\ =\ 4;}
+\DoxyCodeLine{\ \ \ \ g.colors[0]\ =\ 0.1;}
+\DoxyCodeLine{\ \ \ \ g.colors[1]\ =\ 0.2;}
+\DoxyCodeLine{\ \ \ \ g.colors[2]\ =\ 0.3;}
+\DoxyCodeLine{\ \ \ \ g.colors[3]\ =\ 0.4;}
+\DoxyCodeLine{\ \ \ \ g.colors[4]\ =\ 0;}
+\DoxyCodeLine{\ \ \ \ g.colors[5]\ =\ 0;}
+\DoxyCodeLine{\ \ \ \ g.colors[6]\ =\ 0;}
+\DoxyCodeLine{\ \ \ \ g.colors[7]\ =\ 0;}
+\DoxyCodeLine{\ \ \ \ g.alphas[0]\ =\ 0.1;}
+\DoxyCodeLine{\ \ \ \ g.alphas[1]\ =\ 0.2;}
+\DoxyCodeLine{\ \ \ \ g.alphas[2]\ =\ 0.3;}
+\DoxyCodeLine{\ \ \ \ g.alphas[3]\ =\ 0.4;}
+\DoxyCodeLine{\ \ \ \ g.alphas[4]\ =\ 0;}
+\DoxyCodeLine{\ \ \ \ g.alphas[5]\ =\ 0;}
+\DoxyCodeLine{\ \ \ \ g.alphas[6]\ =\ 0;}
+\DoxyCodeLine{\ \ \ \ g.alphas[7]\ =\ 0;}
+\DoxyCodeLine{\ \ \ \ return\ g;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{Gradient\ \_Gradient\ =\ Unity\_Gradient\_float();}
+
+\end{DoxyCode}
+ 

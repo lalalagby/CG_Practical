@@ -1,0 +1,104 @@
+\doxysection{Unity.\+Visual\+Scripting.\+Serialized\+Property\+Provider\+Provider Class Reference}
+\hypertarget{class_unity_1_1_visual_scripting_1_1_serialized_property_provider_provider}{}\label{class_unity_1_1_visual_scripting_1_1_serialized_property_provider_provider}\index{Unity.VisualScripting.SerializedPropertyProviderProvider@{Unity.VisualScripting.SerializedPropertyProviderProvider}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Serialized\+Property\+Provider\+Provider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.577465cm]{class_unity_1_1_visual_scripting_1_1_serialized_property_provider_provider}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_serialized_property_provider_provider_a0697ec55e8498347070fbf8256198500}\label{class_unity_1_1_visual_scripting_1_1_serialized_property_provider_provider_a0697ec55e8498347070fbf8256198500} 
+override bool {\bfseries Is\+Valid} (Type decorated)
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_serialized_property_provider_provider_ac650d1f70bbf9ede3e8891f4034eff49}\label{class_unity_1_1_visual_scripting_1_1_serialized_property_provider_provider_ac650d1f70bbf9ede3e8891f4034eff49} 
+void {\bfseries Generate\+Provider\+Scripts} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider}{Unity.\+Visual\+Scripting.\+Single\+Decorator\+Provider$<$ Type, ISerialized\+Property\+Provider, Serialized\+Property\+Provider\+Attribute $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries Has\+Decorator} (Type decorated\+Type)
+\item 
+bool {\bfseries Try\+Get\+Decorator\+Type} (Type decorated\+Type, out Type decorator\+Type)
+\item 
+Type {\bfseries Get\+Decorator\+Type} (Type decorated\+Type)
+\item 
+bool {\bfseries Is\+Valid} (TDecorated decorated)
+\item 
+TDecorator {\bfseries Get\+Decorator} (TDecorated decorated)
+\item 
+T {\bfseries Get\+Decorator$<$ T $>$} (TDecorated decorated)
+\item 
+void {\bfseries Free} (TDecorator decorator)
+\item 
+void {\bfseries Free} (IEnumerable$<$ TDecorator $>$ decorators)
+\item 
+void {\bfseries Free\+Invalid} ()
+\item 
+void {\bfseries Free\+All} ()
+\item 
+void {\bfseries Renew$<$ TSpecific\+Decorator $>$} (ref TSpecific\+Decorator decorator, TDecorated decorated, Func$<$ TDecorated, TSpecific\+Decorator $>$ constructor=null)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_serialized_property_provider_provider_a0823b05869d9bad40ed1b96cc5c191e1}\label{class_unity_1_1_visual_scripting_1_1_serialized_property_provider_provider_a0823b05869d9bad40ed1b96cc5c191e1} 
+override \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_serialized_property_provider}{ISerialized\+Property\+Provider}} {\bfseries Create\+Decorator} (Type provider\+Type, Type type)
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_serialized_property_provider_provider_a5f7cbb8ba41edcb48d6e4c3e8d440071}\label{class_unity_1_1_visual_scripting_1_1_serialized_property_provider_provider_a5f7cbb8ba41edcb48d6e4c3e8d440071} 
+override Type {\bfseries Get\+Decorated\+Type} (Type decorated)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider}{Unity.\+Visual\+Scripting.\+Single\+Decorator\+Provider$<$ Type, ISerialized\+Property\+Provider, Serialized\+Property\+Provider\+Attribute $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual TDecorator {\bfseries Create\+Decorator} (Type decorator\+Type, TDecorated decorated)
+\item 
+virtual Type {\bfseries Get\+Decorated\+Type} (TDecorated decorated)
+\item 
+virtual Type {\bfseries Resolve\+Decorator\+Type} (Type decorated\+Type)
+\item 
+Type {\bfseries Resolve\+Decorator\+Type\+By\+Hierarchy} (Type decorated\+Type, bool inherit=true)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_serialized_property_provider_provider_a55dc6257eed061737a95f3603e205c98}\label{class_unity_1_1_visual_scripting_1_1_serialized_property_provider_provider_a55dc6257eed061737a95f3603e205c98} 
+override IEnumerable$<$ Type $>$ {\bfseries typeset}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_serialized_property_provider_provider_ad7d7b15a99fafe0970ee1c5d3f2073ca}\label{class_unity_1_1_visual_scripting_1_1_serialized_property_provider_provider_ad7d7b15a99fafe0970ee1c5d3f2073ca} 
+override bool {\bfseries cache}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_serialized_property_provider_provider_a37b3c4a02de540dee2ace6b5c253eb06}\label{class_unity_1_1_visual_scripting_1_1_serialized_property_provider_provider_a37b3c4a02de540dee2ace6b5c253eb06} 
+static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_serialized_property_provider_provider}{Serialized\+Property\+Provider\+Provider}} {\bfseries instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider}{Unity.\+Visual\+Scripting.\+Single\+Decorator\+Provider$<$ Type, ISerialized\+Property\+Provider, Serialized\+Property\+Provider\+Attribute $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual IEnumerable$<$ Type $>$ {\bfseries typeset}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries cache}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+virtual Time\+Span {\bfseries free\+Interval}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider}{Unity.\+Visual\+Scripting.\+Single\+Decorator\+Provider$<$ Type, ISerialized\+Property\+Provider, Serialized\+Property\+Provider\+Attribute $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+readonly object {\bfseries types\+Lock}
+\item 
+readonly object {\bfseries instances\+Lock}
+\item 
+readonly Dictionary$<$ Type, Type $>$ {\bfseries defined\+Decorator\+Types}
+\item 
+readonly Dictionary$<$ Type, Type $>$ {\bfseries resolved\+Decorator\+Types}
+\item 
+readonly Dictionary$<$ TDecorated, TDecorator $>$ {\bfseries decorators}
+\item 
+readonly Dictionary$<$ TDecorator, TDecorated $>$ {\bfseries decorateds}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+8.\+0/\+Editor/\+Visual\+Scripting.\+Core/\+Serialized\+Properties/Serialized\+Property\+Provider\+Provider.\+cs\end{DoxyCompactItemize}

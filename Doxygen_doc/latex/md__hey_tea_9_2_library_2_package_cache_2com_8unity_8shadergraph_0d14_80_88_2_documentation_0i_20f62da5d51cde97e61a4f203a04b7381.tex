@@ -1,0 +1,39 @@
+\chapter{Pack Water Vertex Data}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_20f62da5d51cde97e61a4f203a04b7381}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_20f62da5d51cde97e61a4f203a04b7381}\index{Pack Water Vertex Data@{Pack Water Vertex Data}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_20f62da5d51cde97e61a4f203a04b7381_autotoc_md3577}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_20f62da5d51cde97e61a4f203a04b7381_autotoc_md3577}%
+ This node packs multiple water properties into two UV properties for the vertex context.
+
+The High Definition Render Pipeline (HDRP) uses this node in the default water shader graph. Don\textquotesingle{}t modify the settings of this node. See the HDRP documentation for more information about \href{https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@14.0/manual/WaterSystem.html}{\texttt{ the Water System}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_20f62da5d51cde97e61a4f203a04b7381_autotoc_md3578}{}\doxysection{\texorpdfstring{Render pipeline compatibility}{Render pipeline compatibility}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_20f62da5d51cde97e61a4f203a04b7381_autotoc_md3578}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Node}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Universal Render Pipeline (URP)}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{High Definition Render Pipeline (HDRP)}}    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Node}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Universal Render Pipeline (URP)}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{High Definition Render Pipeline (HDRP)}}    }\\\cline{1-3}
+\endhead
+{\bfseries{Pack Water Vertex Data}}   &No   &Yes   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_20f62da5d51cde97e61a4f203a04b7381_autotoc_md3579}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_20f62da5d51cde97e61a4f203a04b7381_autotoc_md3579}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Direction}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Direction}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-4}
+\endhead
+{\bfseries{Position\+WS}}   &Input   &Vector3   &The position of the water surface vertex in world space.    \\\cline{1-4}
+{\bfseries{Displacement}}   &Input   &Vector3   &The vertical and horizontal displacement of the water.    \\\cline{1-4}
+{\bfseries{Low\+Frequency\+Height}}   &Input   &Float   &The vertical displacement of the water surface. This doesn\textquotesingle{}t include ripples.    \\\cline{1-4}
+{\bfseries{SSSMask}}   &Input   &Float   &Mask that defines where the water surface has subsurface scattering.    \\\cline{1-4}
+{\bfseries{Position\+OS}}   &Output   &Vector3   &The position of the water surface vertex in object space.    \\\cline{1-4}
+{\bfseries{Normal\+OS}}   &Output   &Vector3   &The water surface normal in object space.    \\\cline{1-4}
+{\bfseries{uv0}}   &Output   &Vector4   &The inputs packed into a UV coordinate set for the vertex context.    \\\cline{1-4}
+{\bfseries{uv1}}   &Output   &Vector4   &The inputs packed into a UV coordinate set for the vertex context.   \\\cline{1-4}
+\end{longtabu}

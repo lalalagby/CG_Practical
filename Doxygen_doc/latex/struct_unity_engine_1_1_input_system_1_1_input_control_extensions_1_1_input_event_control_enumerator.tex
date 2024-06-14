@@ -1,0 +1,86 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Input\+Control\+Extensions.\+Input\+Event\+Control\+Enumerator Struct Reference}
+\hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_extensions_1_1_input_event_control_enumerator}{}\label{struct_unity_engine_1_1_input_system_1_1_input_control_extensions_1_1_input_event_control_enumerator}\index{UnityEngine.InputSystem.InputControlExtensions.InputEventControlEnumerator@{UnityEngine.InputSystem.InputControlExtensions.InputEventControlEnumerator}}
+
+
+Iterates over the controls in a State\+Event or Delta\+State\+Event while optionally applying certain filtering criteria.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Input\+Control\+Extensions.\+Input\+Event\+Control\+Enumerator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_unity_engine_1_1_input_system_1_1_input_control_extensions_1_1_input_event_control_enumerator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_extensions_1_1_input_event_control_enumerator_aa11b2e0cc3a68ea15aae88591b497cad}\label{struct_unity_engine_1_1_input_system_1_1_input_control_extensions_1_1_input_event_control_enumerator_aa11b2e0cc3a68ea15aae88591b497cad} 
+bool {\bfseries Move\+Next} ()
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_extensions_1_1_input_event_control_enumerator_a41caff900e2b8a6dd230acf32d697ad7}\label{struct_unity_engine_1_1_input_system_1_1_input_control_extensions_1_1_input_event_control_enumerator_a41caff900e2b8a6dd230acf32d697ad7} 
+void {\bfseries Reset} ()
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_extensions_1_1_input_event_control_enumerator_a470da073161bf2e3a9969e21ee10a687}\label{struct_unity_engine_1_1_input_system_1_1_input_control_extensions_1_1_input_event_control_enumerator_a470da073161bf2e3a9969e21ee10a687} 
+void {\bfseries Dispose} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_extensions_1_1_input_event_control_enumerator_a83a276e19e45199057acabbb2eabaecb}\label{struct_unity_engine_1_1_input_system_1_1_input_control_extensions_1_1_input_event_control_enumerator_a83a276e19e45199057acabbb2eabaecb} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} {\bfseries Current}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_extensions_1_1_input_event_control_enumerator_ac7c6321e46658930db30938d7cb485b6}\label{struct_unity_engine_1_1_input_system_1_1_input_control_extensions_1_1_input_event_control_enumerator_ac7c6321e46658930db30938d7cb485b6} 
+object IEnumerator. {\bfseries Current}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Iterates over the controls in a State\+Event or Delta\+State\+Event while optionally applying certain filtering criteria. 
+
+One problem with state events (that is, State\+Event and Delta\+State\+Event) is that they contain raw blocks of memory which may contain state changes for arbitrary many controls on a device at the same time. Locating individual controls and determining which have changed state and how can thus be quite inefficient.
+
+This helper aims to provide an easy and efficient way to iterate over controls relevant to a given state event. Instead of iterating over the controls of a device looking for the ones relevant to a given event, enumeration is done the opposite by efficiently searching through the memory contained in an event and then mapping data found in the event back to controls on a given device.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Inefficient:}}
+\DoxyCodeLine{\textcolor{keywordflow}{foreach}\ (var\ control\ \textcolor{keywordflow}{in}\ device.allControls)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Skip\ control\ if\ it\ is\ noisy,\ synthetic,\ or\ not\ a\ leaf\ control.}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (control.synthetic\ ||\ control.noisy\ ||\ control.children.Count\ >\ 0)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Locate\ the\ control\ in\ the\ event.}}
+\DoxyCodeLine{\ \ \ \ var\ statePtr\ =\ eventPtr.GetStatePtrFromStateEvent(eventPtr);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (statePtr\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};\ \textcolor{comment}{//\ Control\ not\ included\ in\ event.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ See\ if\ the\ control\ is\ actuated\ beyond\ a\ minimum\ threshold.}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (control.EvaluateMagnitude(statePtr)\ <\ 0.001f)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}Found\ actuated\ control\ \{control\}"{}});}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Much\ more\ efficient:}}
+\DoxyCodeLine{\textcolor{keywordflow}{foreach}\ (var\ control\ \textcolor{keywordflow}{in}\ eventPtr.EnumerateControls(}
+\DoxyCodeLine{\ \ \ \ InputControlExtensions.Enumerate.IgnoreControlsInDefaultState,}
+\DoxyCodeLine{\ \ \ \ device:\ device,}
+\DoxyCodeLine{\ \ \ \ magnitudeThreshold:\ 0.001f))}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}Found\ actuated\ control\ \{control\}"{}});}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+Input\+Control\+Extensions.\+Enumerate\+Controls, Input\+Control\+Extensions.\+Enumerate\+Changed\+Controls
+
+
+\end{DoxySeeAlso}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Controls/Input\+Control\+Extensions.\+cs\end{DoxyCompactItemize}

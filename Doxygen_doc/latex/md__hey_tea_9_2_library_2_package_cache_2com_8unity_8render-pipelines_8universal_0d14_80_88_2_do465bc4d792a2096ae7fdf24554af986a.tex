@@ -1,0 +1,201 @@
+\chapter{Upgrading to URP 13 (Unity 2022.1)}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do465bc4d792a2096ae7fdf24554af986a}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do465bc4d792a2096ae7fdf24554af986a}\index{Upgrading to URP 13 (Unity 2022.1)@{Upgrading to URP 13 (Unity 2022.1)}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do465bc4d792a2096ae7fdf24554af986a_autotoc_md2568}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do465bc4d792a2096ae7fdf24554af986a_autotoc_md2568}%
+ This page describes how to upgrade from an older version of the Universal Render Pipeline (URP) to URP 13 (\doxylink{namespace_unity}{Unity} 2022.\+1).
+
+For information on converting assets made for a Built-\/in Render Pipeline project to assets compatible with URP, see the page \href{https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@14.0/manual/features/rp-converter.html}{\texttt{ Render Pipeline Converter}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do465bc4d792a2096ae7fdf24554af986a_autotoc_md2569}{}\doxysection{\texorpdfstring{Upgrading from URP 12 (Unity 2021.\+2)}{Upgrading from URP 12 (Unity 2021.\+2)}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do465bc4d792a2096ae7fdf24554af986a_autotoc_md2569}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do465bc4d792a2096ae7fdf24554af986a_autotoc_md2570}{}\doxysubsection{\texorpdfstring{Changes to Scriptable\+Renderer API behavior}{Changes to Scriptable\+Renderer API behavior}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do465bc4d792a2096ae7fdf24554af986a_autotoc_md2570}
+\doxylink{namespace_unity}{Unity} now issues an error when instances of {\ttfamily Scriptable\+Renderer\+Feature} attempt to access render targets before they are allocated by the {\ttfamily Scriptable\+Renderer} class.
+
+The {\ttfamily Scriptable\+Renderer\+Feature} class has a new virtual function {\ttfamily Setup\+Render\+Passes} which is called when render targets are allocated and ready to be used.
+
+If your code uses the {\ttfamily Scriptable\+Renderer.\+camera\+Color\+Target} or the {\ttfamily Scriptable\+Renderer.\+camera\+Depth\+Target} property inside of the {\ttfamily Add\+Render\+Passes} method override, you should move that implementation to the {\ttfamily Scriptable\+Renderer\+Feature.\+Setup\+Render\+Passes} method.
+
+The calls to the {\ttfamily Scriptable\+Renderer.\+Enqueue\+Pass} method should still happen in the {\ttfamily Add\+Render\+Passes} method.
+
+The following example shows how to change the code to use the new API.
+
+Code with the old API\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ AddRenderPasses(ScriptableRenderer\ renderer,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ref\ RenderingData\ renderingData)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ The\ target\ is\ used\ before\ allocation}}
+\DoxyCodeLine{\ \ \ \ m\_CustomPass.Setup(renderer.cameraColorTarget);}
+\DoxyCodeLine{\ \ \ \ \ \textcolor{comment}{//\ Letting\ the\ renderer\ know\ which\ passes\ are\ used\ before\ allocation}}
+\DoxyCodeLine{\ \ \ \ renderer.EnqueuePass(m\_ScriptablePass);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Code with the new API\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ AddRenderPasses(ScriptableRenderer\ renderer,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ref\ RenderingData\ renderingData)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Letting\ the\ renderer\ know\ which\ passes\ are\ used\ before\ allocation}}
+\DoxyCodeLine{\ \ \ \ renderer.EnqueuePass(m\_ScriptablePass);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ SetupRenderPasses(ScriptableRenderer\ renderer,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ in\ RenderingData\ renderingData)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ The\ target\ is\ used\ after\ allocation}}
+\DoxyCodeLine{\ \ \ \ m\_CustomPass.Setup(renderer.cameraColorTarget);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do465bc4d792a2096ae7fdf24554af986a_autotoc_md2571}{}\doxysubsection{\texorpdfstring{The Universal Renderer is now using the RTHandle system}{The Universal Renderer is now using the RTHandle system}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do465bc4d792a2096ae7fdf24554af986a_autotoc_md2571}
+The Universal Renderer is now using \href{https://docs.unity3d.com/Packages/com.unity.render-pipelines.core@14.0/manual/rthandle-system.html}{\texttt{ the RTHandle system}} for its internal targets and in its internal passes.
+
+All usages of the {\ttfamily Render\+Target\+Handle} struct are set as obsolete and the struct will be removed in the future.
+
+The public interfaces {\ttfamily Scriptable\+Renderer.\+camera\+Color\+Target} and {\ttfamily Scriptable\+Renderer.\+camera\+Depth\+Target} are marked as obsolete. Replace them with {\ttfamily Scriptable\+Renderer.\+camera\+Color\+Target\+Handle} and {\ttfamily Scriptable\+Renderer.\+camera\+Depth\+Target\+Handle} respectively.
+
+{\ttfamily RTHandle} targets do not use the {\ttfamily Command\+Buffer.\+Get\+Temporary\+RT} method and persist for more frames than the {\ttfamily Render\+Target\+Identifier} structs. You cannot allocate {\ttfamily RTHandle} targets with the properties {\ttfamily Graphics\+Format} and {\ttfamily Depth\+Buffer\+Bits} set to any value except for 0. The {\ttfamily camera\+Depth\+Target} properties must be separate from the {\ttfamily camera\+Color\+Target} properties.
+
+The following helper functions let you create and use temporary render target with the {\ttfamily RTHandle} system in a similar way as with the {\ttfamily Get\+Temporary\+RT} method previously\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Rendering\+Utils.\+Re\+Allocate\+If\+Needed}
+\item {\ttfamily Shadow\+Utils.\+Shadow\+RTRe\+Allocate\+If\+Needed}
+\end{DoxyItemize}
+
+If the render target does not change within the lifetime of the application, use the {\ttfamily RTHandles.\+Alloc} method to allocate an {\ttfamily RTHandle} target. This method is efficient since the code does not have to check if a render target should be allocated on each frame.
+
+If the render target is a full screen texture, which means that its resolution matches or is a fraction of the resolution of the screen, use a scaling factor such as {\ttfamily Vector2\+D.\+one} to support dynamic scaling.
+
+The following example shows how to change the code using the {\ttfamily Render\+Target\+Handle} API to use the new API.
+
+Code with the old API\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }CustomPass\ :\ ScriptableRenderPass}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ RenderTargetHandle\ m\_Handle;}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ With\ the\ old\ API,\ RenderTargetIdentifier\ might\ combine\ color\ and\ depth}}
+\DoxyCodeLine{\ \ \ \ RenderTargetIdentifier\ m\_Destination;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ CustomPass()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_Handle.Init(\textcolor{stringliteral}{"{}\_CustomPassHandle"{}});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnCameraSetup(CommandBuffer\ cmd,\ ref\ RenderingData\ renderingData)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ desc\ =\ renderingData.cameraData.cameraTargetDescriptor;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ cmd.GetTemporaryRT(m\_Handle.id,\ desc,\ FilterMode.Point);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnCameraCleanup(CommandBuffer\ cmd)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ cmd.ReleaseTemporaryRT(m\_Handle.id);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Setup(RenderTargetIdentifier\ destination)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_Destination\ =\ destination;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Execute(ScriptableRenderContext\ context,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ref\ RenderingData\ renderingData)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ CommandBuffer\ cmd\ =\ CommandBufferPool.Get();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ the\ same\ target\ for\ color\ and\ depth\ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ScriptableRenderer.SetRenderTarget(cmd,\ m\_Destination,\ m\_Destination,\ clearFlag,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ clearColor);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ context.ExecuteCommandBuffer(cmd);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ CommandBufferPool.Release(cmd);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Code with the new API\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }CustomPass\ :\ ScriptableRenderPass}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ RTHandle\ m\_Handle;}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Then\ using\ RTHandles,\ the\ color\ and\ the\ depth\ properties\ must\ be\ separate}}
+\DoxyCodeLine{\ \ \ \ RTHandle\ m\_DestinationColor;}
+\DoxyCodeLine{\ \ \ \ RTHandle\ m\_DestinationDepth;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ Dispose()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_Handle?.Release();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnCameraSetup(CommandBuffer\ cmd,\ ref\ RenderingData\ renderingData)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ desc\ =\ renderingData.cameraData.cameraTargetDescriptor;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Then\ using\ RTHandles,\ the\ color\ and\ the\ depth\ properties\ must\ be\ separate}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ desc.depthBufferBits\ =\ 0;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ RenderingUtils.ReAllocateIfNeeded(ref\ m\_Handle,\ desc,\ FilterMode.Point,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TextureWrapMode.Clamp,\ name:\ \textcolor{stringliteral}{"{}\_CustomPassHandle"{}});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnCameraCleanup(CommandBuffer\ cmd)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_DestinationColor\ =\ null;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_DestinationDepth\ =\ null;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Setup(RTHandle\ destinationColor,\ RTHandle\ destinationDepth)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_DestinationColor\ =\ destinationColor;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_DestinationDepth\ =\ destinationDepth;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Execute(ScriptableRenderContext\ context,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ref\ RenderingData\ renderingData)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ CommandBuffer\ cmd\ =\ CommandBufferPool.Get();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ CoreUtils.SetRenderTarget(cmd,\ m\_DestinationColor,\ m\_DestinationDepth,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ clearFlag,\ clearColor);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ context.ExecuteCommandBuffer(cmd);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ CommandBufferPool.Release(cmd);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do465bc4d792a2096ae7fdf24554af986a_autotoc_md2572}{}\doxysection{\texorpdfstring{Upgrading from URP 11.\+x.\+x}{Upgrading from URP 11.\+x.\+x}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do465bc4d792a2096ae7fdf24554af986a_autotoc_md2572}
+
+\begin{DoxyItemize}
+\item The Forward Renderer asset is renamed to the Universal Renderer asset. When you open an existing project in the \doxylink{namespace_unity}{Unity} Editor containing URP 12, \doxylink{namespace_unity}{Unity} updates the existing Forward Renderer assets to Universal Renderer assets.
+\item The Universal Renderer asset contains the property {\bfseries{Rendering Path}} that lets you select the Forward or the Deferred Rendering Path.
+\item The method {\ttfamily Clear\+Flag.\+Depth} does not implicitly clear the Stencil buffer anymore. Use the new method {\ttfamily Clear\+Flag.\+Stencil}.
+\item URP 12 and later implements the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do54fb4e3619bda36fb863b138677b0598}{Render Pipeline Converter}{0} feature. This feature replaces the asset upgrade functions that were previously available at {\bfseries{Edit \texorpdfstring{$>$}{>} Render Pipeline \texorpdfstring{$>$}{>} Universal Render Pipeline \texorpdfstring{$>$}{>} Upgrade...}}
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do465bc4d792a2096ae7fdf24554af986a_autotoc_md2573}{}\doxysection{\texorpdfstring{Upgrading from URP 10.\+0.\+x–10.2.\+x}{Upgrading from URP 10.\+0.\+x–10.2.\+x}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do465bc4d792a2096ae7fdf24554af986a_autotoc_md2573}
+
+\begin{DoxyEnumerate}
+\item The file names of the following Shader Graph shaders were renamed. The new file names do not have spaces\+:~\newline
+{\ttfamily Autodesk Interactive}~\newline
+{\ttfamily Autodesk Interactive Masked}~\newline
+{\ttfamily Autodesk Interactive Transparent}
+
+If your code uses the {\ttfamily Shader.\+Find()} method to search for the shaders, remove spaces from the shader names, for example, {\ttfamily Shader.\+Find("{}\+Autodesk\+Interactive)$<$/tt$>$.  @section autotoc\+\_\+md2574 Upgrading from URP 7.\+2.\+x and later releases  1. URP 12.\+x.\+x does not support the package Post-\/\+Processing Stack v2. If your Project uses the package Post-\/\+Processing Stack v2, migrate the effects that use that package first.  @subsection autotoc\+\_\+md2575 Depth\+Normals Pass  \+Starting from version 10.\+0.\+x, URP can generate a normal texture called $<$tt$>$\+\_\+\+Camera\+Normals\+Texture$<$/tt$>$. To render to this texture in your custom shader, add a Pass with the name $<$tt$>$\+Depth\+Normals$<$/tt$>$. For example, see the implementation in $<$tt$>$\+Lit.\+shader$<$/tt$>$.  @subsection autotoc\+\_\+md2576 Screen Space Ambient Occlusion (\+SSAO)  \+URP 10.\+0.\+x implements the Screen Space Ambient Occlusion (\+SSAO) effect.  \+If you intend to use the SSAO effect with your custom shaders, consider the following entities related to SSAO\+:  \texorpdfstring{$\ast$}{*} The $<$tt$>$\+\_\+\+SCREEN\+\_\+\+SPACE\+\_\+\+OCCLUSION$<$/tt$>$ keyword.  \texorpdfstring{$\ast$}{*} $<$tt$>$\+Input.\+hlsl$<$/tt$>$ contains the new declaration $<$tt$>$float2  normalized\+Screen\+Space\+UV$<$/tt$>$ in the $<$tt$>$\+Input\+Data$<$/tt$>$ struct.  \texorpdfstring{$\ast$}{*} $<$tt$>$\+Lighting.\+hlsl$<$/tt$>$ contains the $<$tt$>$\+Ambient\+Occlusion\+Factor$<$/tt$>$ struct with the variables for calculating indirect and direct occlusion\+:      @icode\{c\} ++     struct Ambient\+Occlusion\+Factor     \{         half indirect\+Ambient\+Occlusion;         half direct\+Ambient\+Occlusion;     \};     @endicode   \texorpdfstring{$\ast$}{*} $<$tt$>$\+Lighting.\+hlsl$<$/tt$>$ contains the following function for sampling the SSAO texture\+:      @icode\{c\} ++     half Sample\+Ambient\+Occlusion(float2 normalized\+Screen\+Space\+UV)     @endicode   \texorpdfstring{$\ast$}{*} $<$tt$>$\+Lighting.\+hlsl$<$/tt$>$ contains the following function\+:      @icode\{c\} ++     Ambient\+Occlusion\+Factor Get\+Screen\+Space\+Ambient\+Occlusion(float2     normalized\+Screen\+Space\+UV)     @endicode   \+To support SSAO in custom shader, add the $<$tt$>$\+Depth\+Normals$<$/tt$>$ Pass and the $<$tt$>$\+\_\+\+SCREEN\+\_\+\+SPACE\+\_\+\+OCCLUSION$<$/tt$>$ keyword the the shader. For example, see $<$tt$>$\+Lit.\+shader$<$/tt$>$.  \+If your custom shader implements custom lighting functions, use the function $<$tt$>$\+Get\+Screen\+Space\+Ambient\+Occlusion(float2 normalized\+Screen\+Space\+UV)$<$/tt$>$ to get the $<$tt$>$\+Ambient\+Occlusion\+Factor$<$/tt$>$ value for your lighting calculations.  @subsection autotoc\+\_\+md2577 Shadow Normal Bias  \+In 11.\+0.\+x the formula used to apply Shadow Normal Bias has been slightly fix in order to work better with punctual lights. \+As a result, to match exactly shadow outlines from earlier revisions, the parameter might to be adjusted in some scenes. Typically, using 1.\+4 instead of 1.\+0 for a Directional light is usually enough.  @subsection autotoc\+\_\+md2578 Intermediate Texture  \+In previous URP versions, URP performed the rendering via an intermediate Renderer if the Renderer had any active Renderer Features. On some platforms, this had significant performance implications. In this release, URP mitigates the issue in the following way\+: URP expects Renderer Features to declare their inputs using the $<$tt$>$\+Scriptable\+Render\+Pass.\+Configure\+Input$<$/tt$>$ method. The method provides the information that URP uses to determine automatically whether rendering via an intermediate texture is necessary.  \+For compatibility purpose, there is a new property $<$strong$>$\+Intermediate Texture$<$/strong$>$ in the Universal Renderer. If you select $<$strong$>$\+Always$<$/strong$>$ in the property, URP uses an intermediate texture. Selecting $<$strong$>$\+Auto$<$/strong$>$ enables the new behavior. Use the $<$strong$>$\+Always$<$/strong$>$ option only if a Renderer Feature does not declare its inputs using the $<$tt$>$\+Scriptable\+Render\+Pass.\+Configure\+Input$<$/tt$>$ method.  \+To ensure that existing projects work correctly, all existing Universal Renderer assets that were using any Renderer Features (excluding those included with URP) have the option $<$strong$>$\+Always$<$/strong$>$ selected in the $<$strong$>$\+Intermediate Texture$<$/strong$>$ property. Any newly created Universal Renderer assets have the option $<$strong$>$\+Auto$<$/strong$>$ selected.  @section autotoc\+\_\+md2579 Upgrading from URP 7.\+0.\+x-\/7.\+1.\+x  1. Upgrade to URP 7.\+2.\+0 first. Refer to @ref "{}/\+Users/cxy/\+Desktop/\+CG\+\_\+practical/\+CG\+\_\+\+Practical/\+Hey\+Tea!/\+Library/\+Package\+Cache/com.unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Documentation\texorpdfstring{$\sim$}{\string~}/upgrade-\/guide-\/7-\/2-\/0.md"{} "{}Upgrading to version 7.\+2.\+0 of the Universal Render Pipeline"{}.}
+\item {\ttfamily URP 8.\+x.\+x does not support the package Post-\/\+Processing Stack v2. If your Project uses the package Post-\/\+Processing Stack v2, migrate the effects that use that package first.}
+\end{DoxyEnumerate}
+
+{\ttfamily }\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do465bc4d792a2096ae7fdf24554af986a_autotoc_md2580}{}\doxysection{\texorpdfstring{{\ttfamily Upgrading from LWRP to 12.\+x.\+x}}{{\ttfamily Upgrading from LWRP to 12.\+x.\+x}}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do465bc4d792a2096ae7fdf24554af986a_autotoc_md2580}
+{\ttfamily }
+
+{\ttfamily 
+\begin{DoxyItemize}
+\item There is no direct upgrade path from LWRP to URP 12.\+x.\+x. Follow the steps to upgrade LWRP to URP 11.\+x.\+x first, and then upgrade from URP 11.\+x.\+x to URP 12.\+x.\+x. 
+\end{DoxyItemize}}

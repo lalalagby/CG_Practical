@@ -1,0 +1,192 @@
+\chapter{Input settings}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings}\index{Input settings@{Input settings}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings_autotoc_md1558}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings_autotoc_md1558}%
+
+\begin{DoxyItemize}
+\item Update Mode
+\item Background Behavior
+\item Filter Noise on .current
+\item Compensate orientation
+\item Default value properties
+\item Supported Devices
+\item Platform-\/specific Settings
+\item Play Mode Input Behavior
+\end{DoxyItemize}
+
+To configure the Input \doxylink{namespace_system}{System} individually for each project, go to {\bfseries{Edit \texorpdfstring{$>$}{>} Project Settings… \texorpdfstring{$>$}{>} Input \doxylink{namespace_system}{System} Package}} from \doxylink{namespace_unity}{Unity}\textquotesingle{}s main menu.
+
+
+
+The Input \doxylink{namespace_system}{System} stores input settings in Assets. If your Project doesn\textquotesingle{}t contain an input settings Asset, click {\bfseries{Create settings asset}} in the Settings window to create one. If your Project contains multiple settings Assets, use the gear menu in the top-\/right corner of the window to choose which one to use. You can also use this menu to create additional settings Assets.
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: \doxylink{namespace_unity}{Unity} saves changes to these settings when you save the Project.
+
+This page describes each input setting in detail.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings_autotoc_md1559}{}\doxysection{\texorpdfstring{Update Mode}{Update Mode}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings_autotoc_md1559}
+
+
+This is a fundamental setting that determines when the Input \doxylink{namespace_system}{System} processes input.
+
+The Input \doxylink{namespace_system}{System} processes input in one of three distinct ways\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+\href{../api/UnityEngine.InputSystem.InputSettings.UpdateMode.html}{\texttt{ {\ttfamily Process Events In Dynamic Update}}}   &The Input \doxylink{namespace_system}{System} processes events at irregular intervals determined by the current framerate.    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.InputSettings.UpdateMode.html}{\texttt{ {\ttfamily Process Events In Fixed Update}}}   &The Input \doxylink{namespace_system}{System} processes events at fixed-\/length intervals. This corresponds to how \href{https://docs.unity3d.com/ScriptReference/MonoBehaviour.FixedUpdate.html}{\texttt{ {\ttfamily Mono\+Behaviour.\+Fixed\+Update}}} operates. The length of each interval is determined by \href{https://docs.unity3d.com/ScriptReference/Time-fixedDeltaTime.html}{\texttt{ {\ttfamily Time.\+fixed\+Delta\+Time}}}.    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.InputSettings.UpdateMode.html}{\texttt{ {\ttfamily Process Events Manually}}}   &The Input \doxylink{namespace_system}{System} does not process events automatically. Instead, it processes them whenever you call \href{../api/UnityEngine.InputSystem.InputSystem.html\#UnityEngine_InputSystem_InputSystem_Update}{\texttt{ {\ttfamily Input\+System.\+Update()}}}.   \\\cline{1-2}
+\end{longtabu}
+
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: The system performs two additional types of updates in the form of \href{../api/UnityEngine.InputSystem.LowLevel.InputUpdateType.html}{\texttt{ {\ttfamily Input\+Update\+Type.\+Before\+Render}}} (late update for XR tracking Devices) and \href{../api/UnityEngine.InputSystem.LowLevel.InputUpdateType.html}{\texttt{ {\ttfamily Input\+Update\+Type.\+Editor}}} (for Editor\+Windows). Neither of these update types change how the application consumes input.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings_autotoc_md1560}{}\doxysection{\texorpdfstring{Background Behavior}{Background Behavior}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings_autotoc_md1560}
+
+
+Determines how \href{https://docs.unity3d.com/ScriptReference/Application-isFocused.html}{\texttt{ application focus}} is handled. That is, what happens when focus is lost or gained and how input behaves while the application is not in the foreground.
+
+This setting is only relevant when "{}\+Run In Background"{} is enabled in the \href{https://docs.unity3d.com/Manual/class-PlayerSettings.html}{\texttt{ Player Settings}} for the project. This setting is only supported on some platforms. On platforms such as Android and i\+OS, the game will not be run while the application is not in the foreground.
+
+Note that in the editor, "{}\+Run In Background"{} is considered to always be enabled as the player loop will be kept running regardless of whether a Game View is focused or not. Also, in development players on desktop platforms, the setting is force-\/enabled during the build process.
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: In the editor, {\ttfamily Background Behavior} is further influenced by \`{}\+Play Mode Input Behavior\`{}. See \href{Devices.md\#background-and-focus-change-behavior}{\texttt{ Background and Focus Change Behavior}} for a detailed breakdown. In particular, which devices are considered as \href{../api/UnityEngine.InputSystem.InputDevice.html\#UnityEngine_InputSystem_InputDevice_canRunInBackground}{\texttt{ {\ttfamily can\+Run\+In\+Background}}} partly depends on the \`{}\+Play Mode Input Behavior\`{} setting.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Setting   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Setting   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+\href{../api/UnityEngine.InputSystem.InputSettings.BackgroundBehavior.html\#UnityEngine_InputSystem_InputSettings_BackgroundBehavior_ResetAndDisableNonBackgroundDevices}{\texttt{ {\ttfamily Reset And Disable Non Background Devices}}}   &When focus is lost, perform a \href{../api/UnityEngine.InputSystem.InputSystem.html\#UnityEngine_InputSystem_InputSystem_ResetDevice_UnityEngine_InputSystem_InputDevice_System_Boolean_}{\texttt{ soft reset}} on all Devices that are not marked as \href{../api/UnityEngine.InputSystem.InputDevice.html\#UnityEngine_InputSystem_InputDevice_canRunInBackground}{\texttt{ {\ttfamily can\+Run\+In\+Background}}} and also subsequently \href{../api/UnityEngine.InputSystem.InputSystem.html\#UnityEngine_InputSystem_InputSystem_DisableDevice_UnityEngine_InputSystem_InputDevice_System_Boolean_}{\texttt{ disable}} them. Does not affect Devices marked as being able to run in the background.~\newline
+~\newline
+When focus is regained, \href{../api/UnityEngine.InputSystem.InputSystem.html\#UnityEngine_InputSystem_InputSystem_EnableDevice_UnityEngine_InputSystem_InputDevice_}{\texttt{ re-\/enable}} any Device that has been disabled and also issue a \href{../api/UnityEngine.InputSystem.InputSystem.html\#UnityEngine_InputSystem_InputSystem_TrySyncDevice_UnityEngine_InputSystem_InputDevice_}{\texttt{ sync request}} on these Devices in order to update their current state. If a Device is issued a sync request and does not respond to it, \href{Devices.md\#device-resets}{\texttt{ soft-\/reset}} the Device.~\newline
+~\newline
+This is the default setting.    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.InputSettings.BackgroundBehavior.html\#UnityEngine_InputSystem_InputSettings_BackgroundBehavior_ResetAndDisableAllDevices}{\texttt{ {\ttfamily Reset And Disable All Devices}}}   &When focus is lost, perform a \href{../api/UnityEngine.InputSystem.InputSystem.html\#UnityEngine_InputSystem_InputSystem_ResetDevice_UnityEngine_InputSystem_InputDevice_System_Boolean_}{\texttt{ soft reset}} on all Devices and also subsequently \href{../api/UnityEngine.InputSystem.InputSystem.html\#UnityEngine_InputSystem_InputSystem_DisableDevice_UnityEngine_InputSystem_InputDevice_System_Boolean_}{\texttt{ disable}} them.~\newline
+~\newline
+When focus is regained, \href{../api/UnityEngine.InputSystem.InputSystem.html\#UnityEngine_InputSystem_InputSystem_EnableDevice_UnityEngine_InputSystem_InputDevice_}{\texttt{ re-\/enable}} all Devices and also issue a \href{../api/UnityEngine.InputSystem.InputSystem.html\#UnityEngine_InputSystem_InputSystem_TrySyncDevice_UnityEngine_InputSystem_InputDevice_}{\texttt{ sync request}} on each Device in order to update it to its current state. If a device does not respond to the sync request, \href{Devices.md\#device-resets}{\texttt{ soft-\/reset}} it.    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.InputSettings.BackgroundBehavior.html\#UnityEngine_InputSystem_InputSettings_BackgroundBehavior_IgnoreFocus}{\texttt{ {\ttfamily Ignore Focus}}}   &Do nothing when focus is lost. When focus is regained, issue a \href{Devices.md\#device-syncs}{\texttt{ sync request}} on all Devices.   \\\cline{1-2}
+\end{longtabu}
+
+
+Focus behavior has implications for how \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions}{Actions}{0} behave on focus changes. When a Device is reset, Actions bound to Controls on the device will be cancelled. This ensures, for example, that a user-\/controlled character in your game doesn\textquotesingle{}t continue to move when focus is lost while the user is pressing one of the W, A, S or D keys. The cancellation happens in such a way that Actions are guaranteed to not trigger. That is, even if an Action is set to trigger on button release, it will not get triggered when a button is down and gets reset by a \href{Devices.md\#device-resets}{\texttt{ Device reset}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings_autotoc_md1561}{}\doxysection{\texorpdfstring{Filter Noise On Current}{Filter Noise On Current}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings_autotoc_md1561}
+This setting is disabled by default, and it\textquotesingle{}s only relevant for apps that use the {\ttfamily .current} properties (such as \href{../api/UnityEngine.InputSystem.Gamepad.html\#UnityEngine_InputSystem_Gamepad_current}{\texttt{ {\ttfamily Gamepad.\+current}}}) in the API. If your app doesn\textquotesingle{}t use these properties, leave this setting disabled. Otherwise, it adds needless overhead.
+
+Whenever there is input on a Device, the system make the respective Device {\ttfamily .current}. For example, if a \href{../api/UnityEngine.InputSystem.Gamepad.html}{\texttt{ {\ttfamily Gamepad}}} receives new input, \href{../api/UnityEngine.InputSystem.Gamepad.html\#UnityEngine_InputSystem_Gamepad_current}{\texttt{ {\ttfamily Gamepad.\+current}}} is assigned to that gamepad.
+
+Some Devices have noise in their input, and receive input even if nothing is interacting with them. For example, the PS4 Dual\+Shock controller generates a constant stream of input because of its built-\/in gyro. This means that if both an Xbox and a PS4 controller are connected, and the user is using the Xbox controller, the PS4 controller still pushes itself to the front continuously and makes itself current.
+
+To counteract this, enable noise filtering. When this setting is enabled and your application receives input, the system determines whether the input comes from a Device that has noisy Controls (\href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_noisy}{\texttt{ {\ttfamily Input\+Control.\+noisy}}}). If it does, the system also determines whether the given input contains any state changes on a Control that isn\textquotesingle{}t flagged as noisy. If so, that Device becomes current. Otherwise, your application still consumes the input, which is also visible on the Device, but the Device doesn\textquotesingle{}t become current.
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: The system doesn\textquotesingle{}t currently detect most forms of noise, but does detect those on gamepad sticks. This means that if the sticks wiggle a small amount but are still within deadzone limits, the Device still becomes current. This doesn\textquotesingle{}t require actuating the sticks themselves. On most gamepads, there\textquotesingle{}s a small tolerance within which the sticks move when the entire device moves.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings_autotoc_md1562}{}\doxysection{\texorpdfstring{Compensate Orientation}{Compensate Orientation}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings_autotoc_md1562}
+If this setting is enabled, rotation values reported by \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_sensors}{sensors}{0} are rotated around the Z axis as follows\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Screen orientation   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Effect on rotation values    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Screen orientation   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Effect on rotation values    }\\\cline{1-2}
+\endhead
+\href{https://docs.unity3d.com/ScriptReference/ScreenOrientation.html}{\texttt{ {\ttfamily Screen\+Orientation.\+Portrait}}}   &Values remain unchanged    \\\cline{1-2}
+\href{https://docs.unity3d.com/ScriptReference/ScreenOrientation.html}{\texttt{ {\ttfamily Screen\+Orientation.\+Portrait\+Upside\+Down}}}   &Values rotate by 180 degrees.    \\\cline{1-2}
+\href{https://docs.unity3d.com/ScriptReference/ScreenOrientation.html}{\texttt{ {\ttfamily Screen\+Orientation.\+Landscape\+Left}}}   &Values rotate by 90 degrees.    \\\cline{1-2}
+\href{https://docs.unity3d.com/ScriptReference/ScreenOrientation.html}{\texttt{ {\ttfamily Screen\+Orientation.\+Landscape\+Right}}}   &Values rotate by 270 degrees.   \\\cline{1-2}
+\end{longtabu}
+
+
+This setting affects the following sensors\+:
+\begin{DoxyItemize}
+\item \href{../api/UnityEngine.InputSystem.Gyroscope.html}{\texttt{ {\ttfamily Gyroscope}}}
+\item \href{../api/UnityEngine.InputSystem.GravitySensor.html}{\texttt{ {\ttfamily Gravity\+Sensor}}}
+\item \href{../api/UnityEngine.InputSystem.AttitudeSensor.html}{\texttt{ {\ttfamily Attitude\+Sensor}}}
+\item \href{../api/UnityEngine.InputSystem.Accelerometer.html}{\texttt{ {\ttfamily Accelerometer}}}
+\item \href{../api/UnityEngine.InputSystem.LinearAccelerationSensor.html}{\texttt{ {\ttfamily Linear\+Acceleration\+Sensor}}}
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings_autotoc_md1563}{}\doxysection{\texorpdfstring{Default value properties}{Default value properties}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings_autotoc_md1563}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+Default Deadzone Min   &The default minimum value for \href{Processors.md\#stick-deadzone}{\texttt{ Stick Deadzone}} or \href{Processors.md\#axis-deadzone}{\texttt{ Axis Deadzone}} processors when no {\ttfamily min} value is explicitly set on the processor.    \\\cline{1-2}
+Default Deadzone Max   &The default maximum value for \href{Processors.md\#stick-deadzone}{\texttt{ Stick Deadzone}} or \href{Processors.md\#axis-deadzone}{\texttt{ Axis Deadzone}} processors when no {\ttfamily max} value is explicitly set on the processor.    \\\cline{1-2}
+Default Button Press Point   &The default \href{../api/UnityEngine.InputSystem.Controls.ButtonControl.html\#UnityEngine_InputSystem_Controls_ButtonControl_pressPointOrDefault}{\texttt{ press point}} for \href{../api/UnityEngine.InputSystem.Controls.ButtonControl.html}{\texttt{ Button Controls}}, and for various \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_interactions}{Interactions}{0}. For button Controls which have analog physics inputs (such as triggers on a gamepad), this configures how far they need to be held down for the system to consider them pressed.    \\\cline{1-2}
+Default Tap Time   &Default duration for \href{Interactions.md\#tap}{\texttt{ Tap}} and \href{Interactions.md\#multitap}{\texttt{ Multi\+Tap}} Interactions. Also used by by touchscreen Devices to distinguish taps from to new touches.    \\\cline{1-2}
+Default Slow Tap Time   &Default duration for \href{Interactions.md\#tap}{\texttt{ Slow\+Tap}} Interactions.    \\\cline{1-2}
+Default Hold Time   &Default duration for \href{Interactions.md\#hold}{\texttt{ Hold}} Interactions.    \\\cline{1-2}
+Tap Radius   &Maximum distance between two finger taps on a touchscreen Device for the system to consider this a tap of the same touch (as opposed to a new touch).    \\\cline{1-2}
+Multi Tap Delay Time   &Default delay between taps for \href{Interactions.md\#multitap}{\texttt{ Multi\+Tap}} Interactions. Also used by touchscreen Devices to count multi-\/taps (See \href{../api/UnityEngine.InputSystem.Controls.TouchControl.html\#UnityEngine_InputSystem_Controls_TouchControl_tapCount}{\texttt{ {\ttfamily Touch\+Control.\+tap\+Count}}}).   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings_autotoc_md1564}{}\doxysection{\texorpdfstring{Supported Devices}{Supported Devices}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings_autotoc_md1564}
+
+
+A Project usually supports a known set of input methods. For example, a mobile app might support only touch, and a console application might support only gamepads. A cross-\/platform application might support gamepads, mouse, and keyboard, but might not require XR Device support.
+
+To narrow the options that the Editor UI presents to you, and to avoid creating input Devices and consuming input that your application won\textquotesingle{}t use, you can restrict the set of supported Devices on a per-\/project basis.
+
+If {\bfseries{Supported Devices}} is empty, no restrictions apply, which means that the Input \doxylink{namespace_system}{System} adds any Device that \doxylink{namespace_unity}{Unity} recognizes and processes input for it. However, if {\bfseries{Support Devices}} contains one or more entries, the Input \doxylink{namespace_system}{System} only adds Devices that are of one of the listed types.
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: When the {\bfseries{Support Devices}} list changes, the system removes or re-\/adds Devices as needed. The system always keeps information about what Devices are available for potential, which means that no Device is permanently lost as long as it stays connected.
+
+To add Devices to the list, click the Add (+) icon and choose a Device from the menu that appears.
+
+
+
+{\bfseries{Abstract Devices}} contains common Device abstractions such as "{}\+Keyboard"{} and "{}\+Mouse"{}. {\bfseries{Specific Devices}} contains specific hardware products.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings_autotoc_md1565}{}\doxysubsection{\texorpdfstring{Override in Editor}{Override in Editor}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings_autotoc_md1565}
+In the Editor, you might want to use input Devices that the application doesn\textquotesingle{}t support. For example, you might want to use a tablet in the Editor even if your application only supports gamepads.
+
+To force the Editor to add all locally available Devices, even if they\textquotesingle{}re not in the list of {\bfseries{Supported Devices}}, open the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_debugging}{Input Debugger}{0} (menu\+: {\bfseries{Window \texorpdfstring{$>$}{>} Analysis \texorpdfstring{$>$}{>} Input Debugger}}), and select {\bfseries{Options \texorpdfstring{$>$}{>} Add Devices Not Listed in \textquotesingle{}Supported Devices\textquotesingle{}}}.
+
+
+
+This setting is stored as a user setting (that is, other users who open the same Project can\textquotesingle{}t see the setting).\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings_autotoc_md1566}{}\doxysection{\texorpdfstring{Platform-\/specific settings}{Platform-\/specific settings}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings_autotoc_md1566}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings_autotoc_md1567}{}\doxysubsection{\texorpdfstring{i\+OS/tv\+OS}{i\+OS/tv\+OS}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings_autotoc_md1567}
+
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Motion Usage}}~\newline
+ Governs access to the \href{Sensors.md\#stepcounter}{\texttt{ pedometer}} on the device. If enabled, the {\bfseries{Description}} string supplied in the settings will be added to the application\textquotesingle{}s Info.\+plist
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings_autotoc_md1568}{}\doxysubsection{\texorpdfstring{Editor}{Editor}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings_autotoc_md1568}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings_autotoc_md1569}{}\doxysubsubsection{\texorpdfstring{Play Mode Input Behavior}{Play Mode Input Behavior}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_settings_autotoc_md1569}
+
+
+Determines how input is handled in the Editor when in play mode. Unlike in players, in the Editor \doxylink{namespace_unity}{Unity} (and thus its input backends) will keep running for as long as the Editor is active regardless of whether a Game View is focused or not. This setting determines how input should behave when focus is {\bfseries{not}} on any Game View -- and thus \href{https://docs.unity3d.com/ScriptReference/Application-isFocused.html}{\texttt{ {\ttfamily Application.\+is\+Focused}}} is false and the player considered to be running in the background.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Setting   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Setting   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+\href{../api/UnityEngine.InputSystem.InputSettings.EditorInputBehaviorInPlayMode.html\#UnityEngine_InputSystem_InputSettings_EditorInputBehaviorInPlayMode_PointersAndKeyboardsRespectGameViewFocus}{\texttt{ {\ttfamily Pointers And Keyboards Respect Game View Focus}}}   &Only \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_pointers}{Pointer}{0} and \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_keyboard}{Keyboard}{0} Devices require the Game View to be focused. Other Devices will route their input into the application regardless of Game View focus.~\newline
+~\newline
+This setting essentially routes any input into the game that is, by default, not used to operate the Editor UI. So, Devices such as \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_gamepad}{gamepads}{0} will go to the application at all times when in play mode whereas keyboard input, for example, will require explicitly giving focus to a Game View window.~\newline
+~\newline
+This setting is the default.    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.InputSettings.EditorInputBehaviorInPlayMode.html\#UnityEngine_InputSystem_InputSettings_EditorInputBehaviorInPlayMode_AllDevicesRespectGameViewFocus}{\texttt{ {\ttfamily All Devices Respect Game View Focus}}}   &Focus on a Game View is required for all Devices. When no Game View window is focused, all input goes to the editor and not to the application. This allows other Editor\+Windows to receive these inputs (from gamepads, for example).    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.InputSettings.EditorInputBehaviorInPlayMode.html\#UnityEngine_InputSystem_InputSettings_EditorInputBehaviorInPlayMode_AllDeviceInputAlwaysGoesToGameView}{\texttt{ {\ttfamily All Device Input Always Goes To Game View}}}   &All editor input is disabled and input is considered to be exclusive to Game Views. Also, \`{}\+Background Behavior\`{} is to be taken literally and executed like in players. Meaning, if in a certain situation, a Device is disabled in the player, it will get disabled in the editor as well.~\newline
+~\newline
+This setting most closely aligns player behavior with editor behavior. Be aware, however, that no Editor\+Windows will be able to see input from Devices (this does not effect IMGUI and UITK input in the Editor in general as they do not consume input from the Input \doxylink{namespace_system}{System}).   \\\cline{1-2}
+\end{longtabu}

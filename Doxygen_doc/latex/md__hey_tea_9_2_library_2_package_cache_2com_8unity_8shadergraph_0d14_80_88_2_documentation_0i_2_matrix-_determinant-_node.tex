@@ -1,0 +1,31 @@
+\chapter{Matrix Determinant}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_matrix-_determinant-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_matrix-_determinant-_node}\index{Matrix Determinant@{Matrix Determinant}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_matrix-_determinant-_node_autotoc_md3471}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_matrix-_determinant-_node_autotoc_md3471}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_matrix-_determinant-_node_autotoc_md3472}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_matrix-_determinant-_node_autotoc_md3472}
+Returns the determinant of the matrix defined by input {\bfseries{In}}. It can be viewed as the scaling factor of the transformation described by the matrix.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_matrix-_determinant-_node_autotoc_md3473}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_matrix-_determinant-_node_autotoc_md3473}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endhead
+In   &Input   &Dynamic Matrix   &Input value    \\\cline{1-4}
+Out   &Output   &Float   &Output value   \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_matrix-_determinant-_node_autotoc_md3474}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_matrix-_determinant-_node_autotoc_md3474}
+The following example code represents one possible outcome of this node.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_MatrixDeterminant\_float4x4(float4x4\ In,\ out\ float\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ determinant(In);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

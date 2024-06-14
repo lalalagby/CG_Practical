@@ -1,0 +1,78 @@
+\chapter{Log Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_log-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_log-_node}\index{Log Node@{Log Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_log-_node_autotoc_md3425}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_log-_node_autotoc_md3425}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_log-_node_autotoc_md3426}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_log-_node_autotoc_md3426}
+Returns the logarithm of input {\bfseries{In}}. {\bfseries{Log}} is the inverse operation to the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_exponential-_node}{Exponential Node}{0}.
+
+For example, the result of a base-\/2 {\bfseries{Exponential}} using an input value of 3 is 8.
+
+
+
+Therefore the result of a base-\/2 {\bfseries{Log}} using an input value of 8 is 3.
+
+The logarithmic base can be switched between base-\/e, base-\/2 and base-\/10 from the {\bfseries{Base}} dropdown on the node.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_log-_node_autotoc_md3427}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_log-_node_autotoc_md3427}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endhead
+In   &Input   &Dynamic Vector   &Input value    \\\cline{1-4}
+Out   &Output   &Dynamic Vector   &Output value   \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_log-_node_autotoc_md3428}{}\doxysection{\texorpdfstring{Controls}{Controls}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_log-_node_autotoc_md3428}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endhead
+Base   &Dropdown   &BaseE, Base2, Base10   &Selects the logarithmic base   \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_log-_node_autotoc_md3429}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_log-_node_autotoc_md3429}
+The following example code represents one possible outcome of this node per {\bfseries{Base}} mode.
+
+{\bfseries{Base E}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Log\_float4(float4\ In,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ log(In);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Base 2}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Log2\_float4(float4\ In,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ log2(In);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Base 10}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Log10\_float4(float4\ In,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ log10(In);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

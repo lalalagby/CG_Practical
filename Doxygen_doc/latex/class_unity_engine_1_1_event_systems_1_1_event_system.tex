@@ -1,0 +1,165 @@
+\doxysection{Unity\+Engine.\+Event\+Systems.\+Event\+System Class Reference}
+\hypertarget{class_unity_engine_1_1_event_systems_1_1_event_system}{}\label{class_unity_engine_1_1_event_systems_1_1_event_system}\index{UnityEngine.EventSystems.EventSystem@{UnityEngine.EventSystems.EventSystem}}
+
+
+Handles input, raycasting, and sending events.  
+
+
+Inheritance diagram for Unity\+Engine.\+Event\+Systems.\+Event\+System\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_engine_1_1_event_systems_1_1_event_system}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_event_systems_1_1_event_system_aa7b8a9853e44dce2a9b27296c09130c4}\label{class_unity_engine_1_1_event_systems_1_1_event_system_aa7b8a9853e44dce2a9b27296c09130c4} 
+void {\bfseries Update\+Modules} ()
+\begin{DoxyCompactList}\small\item\em Recalculate the internal list of Base\+Input\+Modules. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_event_system_ae267e9da97ccb0b25d3555ba208d40c3}{Set\+Selected\+Game\+Object}} (Game\+Object selected, \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_event_data}{Base\+Event\+Data}} pointer)
+\begin{DoxyCompactList}\small\item\em Set the object as selected. Will send an On\+Deselect the the old selected object and On\+Select to the new selected object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_event_system_a2f844dfd1281d3ba10bb7192686e2a8d}{Set\+Selected\+Game\+Object}} (Game\+Object selected)
+\begin{DoxyCompactList}\small\item\em Set the object as selected. Will send an On\+Deselect the the old selected object and On\+Select to the new selected object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_event_system_acbdd6c190c973c0a56e643a8ea7cee47}{Raycast\+All}} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data, List$<$ \mbox{\hyperlink{struct_unity_engine_1_1_event_systems_1_1_raycast_result}{Raycast\+Result}} $>$ raycast\+Results)
+\begin{DoxyCompactList}\small\item\em Raycast into the scene using all configured Base\+Raycasters. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_event_systems_1_1_event_system_aed561f51a08160acbc801776a09eaec5}\label{class_unity_engine_1_1_event_systems_1_1_event_system_aed561f51a08160acbc801776a09eaec5} 
+bool {\bfseries Is\+Pointer\+Over\+Game\+Object} ()
+\begin{DoxyCompactList}\small\item\em Is the pointer with the given ID over an \doxylink{class_unity_engine_1_1_event_systems_1_1_event_system}{Event\+System} object? \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool {\bfseries Is\+Active} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the Game\+Object and the Component are active. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a1b4d2b6956ce44150ae96433d1d15e8f}{Is\+Destroyed}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the native representation of the behaviour has been destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_event_systems_1_1_event_system_a300234dd4f385a79ee7dab492e7ce475}\label{class_unity_engine_1_1_event_systems_1_1_event_system_a300234dd4f385a79ee7dab492e7ce475} 
+static \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_event_system}{Event\+System}} {\bfseries current}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Return the current \doxylink{class_unity_engine_1_1_event_systems_1_1_event_system}{Event\+System}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_event_systems_1_1_event_system_ad835ccd4fd4e754c2b15860fd71a5872}\label{class_unity_engine_1_1_event_systems_1_1_event_system_ad835ccd4fd4e754c2b15860fd71a5872} 
+bool {\bfseries send\+Navigation\+Events}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Should the \doxylink{class_unity_engine_1_1_event_systems_1_1_event_system}{Event\+System} allow navigation events (move / submit / cancel). \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_event_systems_1_1_event_system_a1259534266193e7a76246ee35d6edb71}\label{class_unity_engine_1_1_event_systems_1_1_event_system_a1259534266193e7a76246ee35d6edb71} 
+int {\bfseries pixel\+Drag\+Threshold}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The soft area for dragging in pixels. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_event_systems_1_1_event_system_a713e46c86bc70e0373aabc09a5446dc4}\label{class_unity_engine_1_1_event_systems_1_1_event_system_a713e46c86bc70e0373aabc09a5446dc4} 
+Base\+Input\+Module {\bfseries current\+Input\+Module}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The currently active Event\+Systems.\+Base\+Input\+Module. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_event_systems_1_1_event_system_ad4374e06d604a45ffaa53155de1d3003}\label{class_unity_engine_1_1_event_systems_1_1_event_system_ad4374e06d604a45ffaa53155de1d3003} 
+Game\+Object {\bfseries first\+Selected\+Game\+Object}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Only one object can be selected at a time. Think\+: controller-\/selected button. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_event_systems_1_1_event_system_a4aa2eff43e34da63bc3939045c5b0fca}\label{class_unity_engine_1_1_event_systems_1_1_event_system_a4aa2eff43e34da63bc3939045c5b0fca} 
+Game\+Object {\bfseries current\+Selected\+Game\+Object}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Game\+Object currently considered active by the \doxylink{class_unity_engine_1_1_event_systems_1_1_event_system}{Event\+System}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_event_systems_1_1_event_system_aa2eebcf729898925eec44f84087115be}\label{class_unity_engine_1_1_event_systems_1_1_event_system_aa2eebcf729898925eec44f84087115be} 
+Game\+Object {\bfseries last\+Selected\+Game\+Object}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_event_system_ab03960709c5bffa51c8329634b3844fb}{is\+Focused}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Flag to say whether the \doxylink{class_unity_engine_1_1_event_systems_1_1_event_system}{Event\+System} thinks it should be paused or not based upon focused state. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_event_systems_1_1_event_system_a8e7abe9238622f0d59f27c3defba99ce}\label{class_unity_engine_1_1_event_systems_1_1_event_system_a8e7abe9238622f0d59f27c3defba99ce} 
+bool {\bfseries already\+Selecting}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if the \doxylink{class_unity_engine_1_1_event_systems_1_1_event_system}{Event\+System} is already in a Set\+Selected\+Game\+Object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Awake} ()
+\item 
+virtual void {\bfseries On\+Enable} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ad9097dfd9b409602fc182c1b790600ea}{Start}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ad7fc972dc923e760a4be478cf72de2f9}{On\+Disable}} ()
+\item 
+virtual void {\bfseries On\+Destroy} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_acfb0bcf126b8ea0953525ebb20a87985}{On\+Rect\+Transform\+Dimensions\+Change}} ()
+\begin{DoxyCompactList}\small\item\em This callback is called when the dimensions of an associated Rect\+Transform change. It is always called before Awake, On\+Enable, or Start. The call is also made to all child Rect\+Transforms, regardless of whether their dimensions change (which depends on how they are anchored). \end{DoxyCompactList}\item 
+virtual void {\bfseries On\+Before\+Transform\+Parent\+Changed} ()
+\item 
+virtual void {\bfseries On\+Transform\+Parent\+Changed} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a6ad4a13c8cc29c6620e56028e07d4c0e}{On\+Did\+Apply\+Animation\+Properties}} ()
+\item 
+virtual void {\bfseries On\+Canvas\+Group\+Changed} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a73f180fef8560a44a756525ecfe3092f}{On\+Canvas\+Hierarchy\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Called when the state of the parent Canvas is changed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles input, raycasting, and sending events. 
+
+The \doxylink{class_unity_engine_1_1_event_systems_1_1_event_system}{Event\+System} is responsible for processing and handling events in a \doxylink{namespace_unity}{Unity} scene. A scene should only contain one \doxylink{class_unity_engine_1_1_event_systems_1_1_event_system}{Event\+System}. The \doxylink{class_unity_engine_1_1_event_systems_1_1_event_system}{Event\+System} works in conjunction with a number of modules and mostly just holds state and delegates functionality to specific, overrideable components. When the \doxylink{class_unity_engine_1_1_event_systems_1_1_event_system}{Event\+System} is started it searches for any Base\+Input\+Modules attached to the same Game\+Object and adds them to an internal list. On update each attached module receives an Update\+Modules call, where the module can modify internal state. After each module has been Updated the active module has the Process call executed.\+This is where custom module processing can take place. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_event_systems_1_1_event_system_acbdd6c190c973c0a56e643a8ea7cee47}\index{UnityEngine.EventSystems.EventSystem@{UnityEngine.EventSystems.EventSystem}!RaycastAll@{RaycastAll}}
+\index{RaycastAll@{RaycastAll}!UnityEngine.EventSystems.EventSystem@{UnityEngine.EventSystems.EventSystem}}
+\doxysubsubsection{\texorpdfstring{RaycastAll()}{RaycastAll()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_event_systems_1_1_event_system_acbdd6c190c973c0a56e643a8ea7cee47} 
+void Unity\+Engine.\+Event\+Systems.\+Event\+System.\+Raycast\+All (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}}}]{event\+Data}{, }\item[{List$<$ \mbox{\hyperlink{struct_unity_engine_1_1_event_systems_1_1_raycast_result}{Raycast\+Result}} $>$}]{raycast\+Results}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Raycast into the scene using all configured Base\+Raycasters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Data} & Current pointer data.\\
+\hline
+{\em raycast\+Results} & List of \textquotesingle{}hits\textquotesingle{} to populate.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_event_systems_1_1_event_system_a2f844dfd1281d3ba10bb7192686e2a8d}\index{UnityEngine.EventSystems.EventSystem@{UnityEngine.EventSystems.EventSystem}!SetSelectedGameObject@{SetSelectedGameObject}}
+\index{SetSelectedGameObject@{SetSelectedGameObject}!UnityEngine.EventSystems.EventSystem@{UnityEngine.EventSystems.EventSystem}}
+\doxysubsubsection{\texorpdfstring{SetSelectedGameObject()}{SetSelectedGameObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_event_systems_1_1_event_system_a2f844dfd1281d3ba10bb7192686e2a8d} 
+void Unity\+Engine.\+Event\+Systems.\+Event\+System.\+Set\+Selected\+Game\+Object (\begin{DoxyParamCaption}\item[{Game\+Object}]{selected}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the object as selected. Will send an On\+Deselect the the old selected object and On\+Select to the new selected object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em selected} & Game\+Object to select.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_event_systems_1_1_event_system_ae267e9da97ccb0b25d3555ba208d40c3}\index{UnityEngine.EventSystems.EventSystem@{UnityEngine.EventSystems.EventSystem}!SetSelectedGameObject@{SetSelectedGameObject}}
+\index{SetSelectedGameObject@{SetSelectedGameObject}!UnityEngine.EventSystems.EventSystem@{UnityEngine.EventSystems.EventSystem}}
+\doxysubsubsection{\texorpdfstring{SetSelectedGameObject()}{SetSelectedGameObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_event_systems_1_1_event_system_ae267e9da97ccb0b25d3555ba208d40c3} 
+void Unity\+Engine.\+Event\+Systems.\+Event\+System.\+Set\+Selected\+Game\+Object (\begin{DoxyParamCaption}\item[{Game\+Object}]{selected}{, }\item[{\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_base_event_data}{Base\+Event\+Data}}}]{pointer}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the object as selected. Will send an On\+Deselect the the old selected object and On\+Select to the new selected object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em selected} & Game\+Object to select.\\
+\hline
+{\em pointer} & Associated Event\+Data.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_event_systems_1_1_event_system_ab03960709c5bffa51c8329634b3844fb}\index{UnityEngine.EventSystems.EventSystem@{UnityEngine.EventSystems.EventSystem}!isFocused@{isFocused}}
+\index{isFocused@{isFocused}!UnityEngine.EventSystems.EventSystem@{UnityEngine.EventSystems.EventSystem}}
+\doxysubsubsection{\texorpdfstring{isFocused}{isFocused}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_event_systems_1_1_event_system_ab03960709c5bffa51c8329634b3844fb} 
+bool Unity\+Engine.\+Event\+Systems.\+Event\+System.\+is\+Focused\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Flag to say whether the \doxylink{class_unity_engine_1_1_event_systems_1_1_event_system}{Event\+System} thinks it should be paused or not based upon focused state. 
+
+Used to determine inside the individual Input\+Modules if the module should be ticked while the application doesnt have focus. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+Event\+System/Event\+System.\+cs\end{DoxyCompactItemize}

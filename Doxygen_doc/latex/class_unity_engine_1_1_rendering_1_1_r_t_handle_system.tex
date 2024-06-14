@@ -1,0 +1,495 @@
+\doxysection{Unity\+Engine.\+Rendering.\+RTHandle\+System Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_system}{}\label{class_unity_engine_1_1_rendering_1_1_r_t_handle_system}\index{UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}}
+
+
+\doxylink{namespace_system}{System} managing a set of \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} textures.  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+RTHandle\+System\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_rendering_1_1_r_t_handle_system}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_aa334c98cc6cc1da77c4dc2e5aea5a6f0}\label{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_aa334c98cc6cc1da77c4dc2e5aea5a6f0} 
+{\bfseries RTHandle\+System} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle_system}{RTHandle\+System} constructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_a474b4c934f56f40bf9d7e0ec16652a47}\label{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_a474b4c934f56f40bf9d7e0ec16652a47} 
+void {\bfseries Dispose} ()
+\begin{DoxyCompactList}\small\item\em Disposable pattern implementation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_a8808889ab4d9ddd871300bf9afd7a778}{Initialize}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Initialize the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_abde23d4f99ef5470e9d3e0d4a996cef8}{Release}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} rth)
+\begin{DoxyCompactList}\small\item\em Release memory of a \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} from the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} \doxylink{namespace_system}{System}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_aa4b7a08ffbc74959e950e3fdf93ef9ea}{Reset\+Reference\+Size}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Reset the reference size of the system and reallocate all textures. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_aabd095c50d14264d3f02e900fe9f0705}{Set\+Reference\+Size}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Sets the reference rendering size for subsequent rendering for the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} \doxylink{namespace_system}{System}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_a6b9209db90d3912ebef8058d27d4e7f0}{Set\+Reference\+Size}} (int width, int height, bool reset)
+\begin{DoxyCompactList}\small\item\em Sets the reference rendering size for subsequent rendering for the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} \doxylink{namespace_system}{System}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_a4948bc73466cba375796f9ffc6a1ed6e}{Set\+Hardware\+Dynamic\+Resolution\+State}} (bool enable\+HWDynamic\+Res)
+\begin{DoxyCompactList}\small\item\em Enable or disable hardware dynamic resolution for the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} \doxylink{namespace_system}{System}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_ac117fc01d48cd5839a9c950372bc5cb5}{Get\+Max\+Width}} ()
+\begin{DoxyCompactList}\small\item\em Returns the maximum allocated width of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} \doxylink{namespace_system}{System}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_aa2bb84e9d9d08d5889499a8d7c1d20ec}{Get\+Max\+Height}} ()
+\begin{DoxyCompactList}\small\item\em Returns the maximum allocated height of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} \doxylink{namespace_system}{System}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_a693cb4cd6c9250a4fa38524fcbf3346f}{Alloc}} (int width, int height, int slices=1, \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a711f788583e4dd73903b42b11986f2c2}{Depth\+Bits}} depth\+Buffer\+Bits=\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a711f788583e4dd73903b42b11986f2c2a6adf97f83acf6453d4a6a4b1070f3754}{Depth\+Bits.\+None}}, Graphics\+Format color\+Format=Graphics\+Format.\+R8\+G8\+B8\+A8\+\_\+\+SRGB, Filter\+Mode filter\+Mode=Filter\+Mode.\+Point, Texture\+Wrap\+Mode wrap\+Mode=Texture\+Wrap\+Mode.\+Repeat, Texture\+Dimension dimension=Texture\+Dimension.\+Tex2D, bool enable\+Random\+Write=false, bool use\+Mip\+Map=false, bool auto\+Generate\+Mips=true, bool is\+Shadow\+Map=false, int aniso\+Level=1, float mip\+Map\+Bias=0f, \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_acdbc596fccabcca2bbc53a61613c1439}{MSAASamples}} msaa\+Samples=\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_acdbc596fccabcca2bbc53a61613c1439a6adf97f83acf6453d4a6a4b1070f3754}{MSAASamples.\+None}}, bool bind\+Texture\+MS=false, bool use\+Dynamic\+Scale=false, Render\+Texture\+Memoryless memoryless=Render\+Texture\+Memoryless.\+None, VRTexture\+Usage vr\+Usage=VRTexture\+Usage.\+None, string name="{}"{})
+\begin{DoxyCompactList}\small\item\em Allocate a new fixed sized \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_a77df479e86706e867552973c01de293c}{Alloc}} (int width, int height, Texture\+Wrap\+Mode wrap\+ModeU, Texture\+Wrap\+Mode wrap\+ModeV, Texture\+Wrap\+Mode wrap\+ModeW=Texture\+Wrap\+Mode.\+Repeat, int slices=1, \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a711f788583e4dd73903b42b11986f2c2}{Depth\+Bits}} depth\+Buffer\+Bits=\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a711f788583e4dd73903b42b11986f2c2a6adf97f83acf6453d4a6a4b1070f3754}{Depth\+Bits.\+None}}, Graphics\+Format color\+Format=Graphics\+Format.\+R8\+G8\+B8\+A8\+\_\+\+SRGB, Filter\+Mode filter\+Mode=Filter\+Mode.\+Point, Texture\+Dimension dimension=Texture\+Dimension.\+Tex2D, bool enable\+Random\+Write=false, bool use\+Mip\+Map=false, bool auto\+Generate\+Mips=true, bool is\+Shadow\+Map=false, int aniso\+Level=1, float mip\+Map\+Bias=0f, \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_acdbc596fccabcca2bbc53a61613c1439}{MSAASamples}} msaa\+Samples=\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_acdbc596fccabcca2bbc53a61613c1439a6adf97f83acf6453d4a6a4b1070f3754}{MSAASamples.\+None}}, bool bind\+Texture\+MS=false, bool use\+Dynamic\+Scale=false, Render\+Texture\+Memoryless memoryless=Render\+Texture\+Memoryless.\+None, VRTexture\+Usage vr\+Usage=VRTexture\+Usage.\+None, string name="{}"{})
+\begin{DoxyCompactList}\small\item\em Allocate a new fixed sized \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_a8c1e0ffb796edb50094ae7b28b22f0eb}{Alloc}} (Vector2 scale\+Factor, int slices=1, \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a711f788583e4dd73903b42b11986f2c2}{Depth\+Bits}} depth\+Buffer\+Bits=\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a711f788583e4dd73903b42b11986f2c2a6adf97f83acf6453d4a6a4b1070f3754}{Depth\+Bits.\+None}}, Graphics\+Format color\+Format=Graphics\+Format.\+R8\+G8\+B8\+A8\+\_\+\+SRGB, Filter\+Mode filter\+Mode=Filter\+Mode.\+Point, Texture\+Wrap\+Mode wrap\+Mode=Texture\+Wrap\+Mode.\+Repeat, Texture\+Dimension dimension=Texture\+Dimension.\+Tex2D, bool enable\+Random\+Write=false, bool use\+Mip\+Map=false, bool auto\+Generate\+Mips=true, bool is\+Shadow\+Map=false, int aniso\+Level=1, float mip\+Map\+Bias=0f, \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_acdbc596fccabcca2bbc53a61613c1439}{MSAASamples}} msaa\+Samples=\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_acdbc596fccabcca2bbc53a61613c1439a6adf97f83acf6453d4a6a4b1070f3754}{MSAASamples.\+None}}, bool bind\+Texture\+MS=false, bool use\+Dynamic\+Scale=false, Render\+Texture\+Memoryless memoryless=Render\+Texture\+Memoryless.\+None, VRTexture\+Usage vr\+Usage=VRTexture\+Usage.\+None, string name="{}"{})
+\begin{DoxyCompactList}\small\item\em Allocate a new automatically sized \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_af8c6db8819b73b474a0214ae464a6800}{Alloc}} (\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_aecf65e9ed6ca7558571c18e77bcf2129}{Scale\+Func}} scale\+Func, int slices=1, \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a711f788583e4dd73903b42b11986f2c2}{Depth\+Bits}} depth\+Buffer\+Bits=\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a711f788583e4dd73903b42b11986f2c2a6adf97f83acf6453d4a6a4b1070f3754}{Depth\+Bits.\+None}}, Graphics\+Format color\+Format=Graphics\+Format.\+R8\+G8\+B8\+A8\+\_\+\+SRGB, Filter\+Mode filter\+Mode=Filter\+Mode.\+Point, Texture\+Wrap\+Mode wrap\+Mode=Texture\+Wrap\+Mode.\+Repeat, Texture\+Dimension dimension=Texture\+Dimension.\+Tex2D, bool enable\+Random\+Write=false, bool use\+Mip\+Map=false, bool auto\+Generate\+Mips=true, bool is\+Shadow\+Map=false, int aniso\+Level=1, float mip\+Map\+Bias=0f, \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_acdbc596fccabcca2bbc53a61613c1439}{MSAASamples}} msaa\+Samples=\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_acdbc596fccabcca2bbc53a61613c1439a6adf97f83acf6453d4a6a4b1070f3754}{MSAASamples.\+None}}, bool bind\+Texture\+MS=false, bool use\+Dynamic\+Scale=false, Render\+Texture\+Memoryless memoryless=Render\+Texture\+Memoryless.\+None, VRTexture\+Usage vr\+Usage=VRTexture\+Usage.\+None, string name="{}"{})
+\begin{DoxyCompactList}\small\item\em Allocate a new automatically sized \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_a8a188403fec88860cb4eb5342786326e}{Alloc}} (Render\+Texture texture)
+\begin{DoxyCompactList}\small\item\em Allocate a \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} from a regular Render\+Texture. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_ae6a3176e5a9c6f14ecadeccc03ebdcea}{Alloc}} (Texture texture)
+\begin{DoxyCompactList}\small\item\em Allocate a \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} from a regular Texture. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_ac66705f3fb7962a058eb3011c42530b4}{Alloc}} (Render\+Target\+Identifier texture)
+\begin{DoxyCompactList}\small\item\em Allocate a \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} from a regular render target identifier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_aa615d2ff8e62725717704eeb9462c80e}{Alloc}} (Render\+Target\+Identifier texture, string name)
+\begin{DoxyCompactList}\small\item\em Allocate a \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} from a regular render target identifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_aacaf36576e5082877bf71601a77baa9f}\label{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_aacaf36576e5082877bf71601a77baa9f} 
+\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_r_t_handle_properties}{RTHandle\+Properties}} {\bfseries rt\+Handle\+Properties}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current properties of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} \doxylink{namespace_system}{System}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{namespace_system}{System} managing a set of \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} textures. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_a693cb4cd6c9250a4fa38524fcbf3346f}\index{UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}!Alloc@{Alloc}}
+\index{Alloc@{Alloc}!UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}}
+\doxysubsubsection{\texorpdfstring{Alloc()}{Alloc()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_a693cb4cd6c9250a4fa38524fcbf3346f} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} Unity\+Engine.\+Rendering.\+RTHandle\+System.\+Alloc (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{height}{, }\item[{int}]{slices}{ = {\ttfamily 1}, }\item[{\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a711f788583e4dd73903b42b11986f2c2}{Depth\+Bits}}}]{depth\+Buffer\+Bits}{ = {\ttfamily \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a711f788583e4dd73903b42b11986f2c2a6adf97f83acf6453d4a6a4b1070f3754}{Depth\+Bits\+::\+None}}}, }\item[{Graphics\+Format}]{color\+Format}{ = {\ttfamily GraphicsFormat\+:\+:R8G8B8A8\+\_\+SRGB}, }\item[{Filter\+Mode}]{filter\+Mode}{ = {\ttfamily FilterMode\+:\+:Point}, }\item[{Texture\+Wrap\+Mode}]{wrap\+Mode}{ = {\ttfamily TextureWrapMode\+:\+:Repeat}, }\item[{Texture\+Dimension}]{dimension}{ = {\ttfamily TextureDimension\+:\+:Tex2D}, }\item[{bool}]{enable\+Random\+Write}{ = {\ttfamily false}, }\item[{bool}]{use\+Mip\+Map}{ = {\ttfamily false}, }\item[{bool}]{auto\+Generate\+Mips}{ = {\ttfamily true}, }\item[{bool}]{is\+Shadow\+Map}{ = {\ttfamily false}, }\item[{int}]{aniso\+Level}{ = {\ttfamily 1}, }\item[{float}]{mip\+Map\+Bias}{ = {\ttfamily 0f}, }\item[{\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_acdbc596fccabcca2bbc53a61613c1439}{MSAASamples}}}]{msaa\+Samples}{ = {\ttfamily \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_acdbc596fccabcca2bbc53a61613c1439a6adf97f83acf6453d4a6a4b1070f3754}{MSAASamples\+::\+None}}}, }\item[{bool}]{bind\+Texture\+MS}{ = {\ttfamily false}, }\item[{bool}]{use\+Dynamic\+Scale}{ = {\ttfamily false}, }\item[{Render\+Texture\+Memoryless}]{memoryless}{ = {\ttfamily RenderTextureMemoryless\+:\+:None}, }\item[{VRTexture\+Usage}]{vr\+Usage}{ = {\ttfamily VRTextureUsage\+:\+:None}, }\item[{string}]{name}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Allocate a new fixed sized \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & With of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+{\em height} & Heigh of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+{\em slices} & Number of slices of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+{\em depth\+Buffer\+Bits} & Bit depths of a depth buffer.\\
+\hline
+{\em color\+Format} & Graphics\+Format of a color buffer.\\
+\hline
+{\em filter\+Mode} & Filtering mode of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+{\em wrap\+Mode} & Addressing mode of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+{\em dimension} & Texture dimension of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+{\em enable\+Random\+Write} & Set to true to enable UAV random read writes on the texture.\\
+\hline
+{\em use\+Mip\+Map} & Set to true if the texture should have mipmaps.\\
+\hline
+{\em auto\+Generate\+Mips} & Set to true to automatically generate mipmaps.\\
+\hline
+{\em is\+Shadow\+Map} & Set to true if the depth buffer should be used as a shadow map.\\
+\hline
+{\em aniso\+Level} & Anisotropic filtering level.\\
+\hline
+{\em mip\+Map\+Bias} & Bias applied to mipmaps during filtering.\\
+\hline
+{\em msaa\+Samples} & Number of MSAA samples for the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+{\em bind\+Texture\+MS} & Set to true if the texture needs to be bound as a multisampled texture in the shader.\\
+\hline
+{\em use\+Dynamic\+Scale} & Set to true to use hardware dynamic scaling.\\
+\hline
+{\em memoryless} & Use this property to set the render texture memoryless modes.\\
+\hline
+{\em vr\+Usage} & Special treatment of the VR eye texture used in stereoscopic rendering.\\
+\hline
+{\em name} & Name of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_a77df479e86706e867552973c01de293c}\index{UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}!Alloc@{Alloc}}
+\index{Alloc@{Alloc}!UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}}
+\doxysubsubsection{\texorpdfstring{Alloc()}{Alloc()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_a77df479e86706e867552973c01de293c} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} Unity\+Engine.\+Rendering.\+RTHandle\+System.\+Alloc (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{height}{, }\item[{Texture\+Wrap\+Mode}]{wrap\+ModeU}{, }\item[{Texture\+Wrap\+Mode}]{wrap\+ModeV}{, }\item[{Texture\+Wrap\+Mode}]{wrap\+ModeW}{ = {\ttfamily TextureWrapMode\+:\+:Repeat}, }\item[{int}]{slices}{ = {\ttfamily 1}, }\item[{\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a711f788583e4dd73903b42b11986f2c2}{Depth\+Bits}}}]{depth\+Buffer\+Bits}{ = {\ttfamily \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a711f788583e4dd73903b42b11986f2c2a6adf97f83acf6453d4a6a4b1070f3754}{Depth\+Bits\+::\+None}}}, }\item[{Graphics\+Format}]{color\+Format}{ = {\ttfamily GraphicsFormat\+:\+:R8G8B8A8\+\_\+SRGB}, }\item[{Filter\+Mode}]{filter\+Mode}{ = {\ttfamily FilterMode\+:\+:Point}, }\item[{Texture\+Dimension}]{dimension}{ = {\ttfamily TextureDimension\+:\+:Tex2D}, }\item[{bool}]{enable\+Random\+Write}{ = {\ttfamily false}, }\item[{bool}]{use\+Mip\+Map}{ = {\ttfamily false}, }\item[{bool}]{auto\+Generate\+Mips}{ = {\ttfamily true}, }\item[{bool}]{is\+Shadow\+Map}{ = {\ttfamily false}, }\item[{int}]{aniso\+Level}{ = {\ttfamily 1}, }\item[{float}]{mip\+Map\+Bias}{ = {\ttfamily 0f}, }\item[{\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_acdbc596fccabcca2bbc53a61613c1439}{MSAASamples}}}]{msaa\+Samples}{ = {\ttfamily \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_acdbc596fccabcca2bbc53a61613c1439a6adf97f83acf6453d4a6a4b1070f3754}{MSAASamples\+::\+None}}}, }\item[{bool}]{bind\+Texture\+MS}{ = {\ttfamily false}, }\item[{bool}]{use\+Dynamic\+Scale}{ = {\ttfamily false}, }\item[{Render\+Texture\+Memoryless}]{memoryless}{ = {\ttfamily RenderTextureMemoryless\+:\+:None}, }\item[{VRTexture\+Usage}]{vr\+Usage}{ = {\ttfamily VRTextureUsage\+:\+:None}, }\item[{string}]{name}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Allocate a new fixed sized \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & With of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+{\em height} & Heigh of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+{\em wrap\+ModeU} & U coordinate wrapping mode of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+{\em wrap\+ModeV} & V coordinate wrapping mode of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+{\em wrap\+ModeW} & W coordinate wrapping mode of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+{\em slices} & Number of slices of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+{\em depth\+Buffer\+Bits} & Bit depths of a depth buffer.\\
+\hline
+{\em color\+Format} & Graphics\+Format of a color buffer.\\
+\hline
+{\em filter\+Mode} & Filtering mode of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+{\em dimension} & Texture dimension of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+{\em enable\+Random\+Write} & Set to true to enable UAV random read writes on the texture.\\
+\hline
+{\em use\+Mip\+Map} & Set to true if the texture should have mipmaps.\\
+\hline
+{\em auto\+Generate\+Mips} & Set to true to automatically generate mipmaps.\\
+\hline
+{\em is\+Shadow\+Map} & Set to true if the depth buffer should be used as a shadow map.\\
+\hline
+{\em aniso\+Level} & Anisotropic filtering level.\\
+\hline
+{\em mip\+Map\+Bias} & Bias applied to mipmaps during filtering.\\
+\hline
+{\em msaa\+Samples} & Number of MSAA samples for the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+{\em bind\+Texture\+MS} & Set to true if the texture needs to be bound as a multisampled texture in the shader.\\
+\hline
+{\em use\+Dynamic\+Scale} & Set to true to use hardware dynamic scaling.\\
+\hline
+{\em memoryless} & Use this property to set the render texture memoryless modes.\\
+\hline
+{\em vr\+Usage} & Special treatment of the VR eye texture used in stereoscopic rendering.\\
+\hline
+{\em name} & Name of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_ac66705f3fb7962a058eb3011c42530b4}\index{UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}!Alloc@{Alloc}}
+\index{Alloc@{Alloc}!UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}}
+\doxysubsubsection{\texorpdfstring{Alloc()}{Alloc()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_ac66705f3fb7962a058eb3011c42530b4} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} Unity\+Engine.\+Rendering.\+RTHandle\+System.\+Alloc (\begin{DoxyParamCaption}\item[{Render\+Target\+Identifier}]{texture}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Allocate a \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} from a regular render target identifier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & Input render target identifier.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} referencing the input render target identifier.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_aa615d2ff8e62725717704eeb9462c80e}\index{UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}!Alloc@{Alloc}}
+\index{Alloc@{Alloc}!UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}}
+\doxysubsubsection{\texorpdfstring{Alloc()}{Alloc()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_aa615d2ff8e62725717704eeb9462c80e} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} Unity\+Engine.\+Rendering.\+RTHandle\+System.\+Alloc (\begin{DoxyParamCaption}\item[{Render\+Target\+Identifier}]{texture}{, }\item[{string}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Allocate a \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} from a regular render target identifier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & Input render target identifier.\\
+\hline
+{\em name} & Name of the texture.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} referencing the input render target identifier.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_a8a188403fec88860cb4eb5342786326e}\index{UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}!Alloc@{Alloc}}
+\index{Alloc@{Alloc}!UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}}
+\doxysubsubsection{\texorpdfstring{Alloc()}{Alloc()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_a8a188403fec88860cb4eb5342786326e} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} Unity\+Engine.\+Rendering.\+RTHandle\+System.\+Alloc (\begin{DoxyParamCaption}\item[{Render\+Texture}]{texture}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Allocate a \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} from a regular Render\+Texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & Input texture\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} referencing the input texture.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_af8c6db8819b73b474a0214ae464a6800}\index{UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}!Alloc@{Alloc}}
+\index{Alloc@{Alloc}!UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}}
+\doxysubsubsection{\texorpdfstring{Alloc()}{Alloc()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_af8c6db8819b73b474a0214ae464a6800} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} Unity\+Engine.\+Rendering.\+RTHandle\+System.\+Alloc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_aecf65e9ed6ca7558571c18e77bcf2129}{Scale\+Func}}}]{scale\+Func}{, }\item[{int}]{slices}{ = {\ttfamily 1}, }\item[{\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a711f788583e4dd73903b42b11986f2c2}{Depth\+Bits}}}]{depth\+Buffer\+Bits}{ = {\ttfamily \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a711f788583e4dd73903b42b11986f2c2a6adf97f83acf6453d4a6a4b1070f3754}{Depth\+Bits\+::\+None}}}, }\item[{Graphics\+Format}]{color\+Format}{ = {\ttfamily GraphicsFormat\+:\+:R8G8B8A8\+\_\+SRGB}, }\item[{Filter\+Mode}]{filter\+Mode}{ = {\ttfamily FilterMode\+:\+:Point}, }\item[{Texture\+Wrap\+Mode}]{wrap\+Mode}{ = {\ttfamily TextureWrapMode\+:\+:Repeat}, }\item[{Texture\+Dimension}]{dimension}{ = {\ttfamily TextureDimension\+:\+:Tex2D}, }\item[{bool}]{enable\+Random\+Write}{ = {\ttfamily false}, }\item[{bool}]{use\+Mip\+Map}{ = {\ttfamily false}, }\item[{bool}]{auto\+Generate\+Mips}{ = {\ttfamily true}, }\item[{bool}]{is\+Shadow\+Map}{ = {\ttfamily false}, }\item[{int}]{aniso\+Level}{ = {\ttfamily 1}, }\item[{float}]{mip\+Map\+Bias}{ = {\ttfamily 0f}, }\item[{\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_acdbc596fccabcca2bbc53a61613c1439}{MSAASamples}}}]{msaa\+Samples}{ = {\ttfamily \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_acdbc596fccabcca2bbc53a61613c1439a6adf97f83acf6453d4a6a4b1070f3754}{MSAASamples\+::\+None}}}, }\item[{bool}]{bind\+Texture\+MS}{ = {\ttfamily false}, }\item[{bool}]{use\+Dynamic\+Scale}{ = {\ttfamily false}, }\item[{Render\+Texture\+Memoryless}]{memoryless}{ = {\ttfamily RenderTextureMemoryless\+:\+:None}, }\item[{VRTexture\+Usage}]{vr\+Usage}{ = {\ttfamily VRTextureUsage\+:\+:None}, }\item[{string}]{name}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Allocate a new automatically sized \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scale\+Func} & Function used for the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} size computation.\\
+\hline
+{\em slices} & Number of slices of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+{\em depth\+Buffer\+Bits} & Bit depths of a depth buffer.\\
+\hline
+{\em color\+Format} & Graphics\+Format of a color buffer.\\
+\hline
+{\em filter\+Mode} & Filtering mode of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+{\em wrap\+Mode} & Addressing mode of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+{\em dimension} & Texture dimension of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+{\em enable\+Random\+Write} & Set to true to enable UAV random read writes on the texture.\\
+\hline
+{\em use\+Mip\+Map} & Set to true if the texture should have mipmaps.\\
+\hline
+{\em auto\+Generate\+Mips} & Set to true to automatically generate mipmaps.\\
+\hline
+{\em is\+Shadow\+Map} & Set to true if the depth buffer should be used as a shadow map.\\
+\hline
+{\em aniso\+Level} & Anisotropic filtering level.\\
+\hline
+{\em mip\+Map\+Bias} & Bias applied to mipmaps during filtering.\\
+\hline
+{\em msaa\+Samples} & Number of MSAA samples.\\
+\hline
+{\em bind\+Texture\+MS} & Set to true if the texture needs to be bound as a multisampled texture in the shader.\\
+\hline
+{\em use\+Dynamic\+Scale} & Set to true to use hardware dynamic scaling.\\
+\hline
+{\em memoryless} & Use this property to set the render texture memoryless modes.\\
+\hline
+{\em vr\+Usage} & Special treatment of the VR eye texture used in stereoscopic rendering.\\
+\hline
+{\em name} & Name of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_ae6a3176e5a9c6f14ecadeccc03ebdcea}\index{UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}!Alloc@{Alloc}}
+\index{Alloc@{Alloc}!UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}}
+\doxysubsubsection{\texorpdfstring{Alloc()}{Alloc()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_ae6a3176e5a9c6f14ecadeccc03ebdcea} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} Unity\+Engine.\+Rendering.\+RTHandle\+System.\+Alloc (\begin{DoxyParamCaption}\item[{Texture}]{texture}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Allocate a \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} from a regular Texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & Input texture\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} referencing the input texture.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_a8c1e0ffb796edb50094ae7b28b22f0eb}\index{UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}!Alloc@{Alloc}}
+\index{Alloc@{Alloc}!UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}}
+\doxysubsubsection{\texorpdfstring{Alloc()}{Alloc()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_a8c1e0ffb796edb50094ae7b28b22f0eb} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} Unity\+Engine.\+Rendering.\+RTHandle\+System.\+Alloc (\begin{DoxyParamCaption}\item[{Vector2}]{scale\+Factor}{, }\item[{int}]{slices}{ = {\ttfamily 1}, }\item[{\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a711f788583e4dd73903b42b11986f2c2}{Depth\+Bits}}}]{depth\+Buffer\+Bits}{ = {\ttfamily \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a711f788583e4dd73903b42b11986f2c2a6adf97f83acf6453d4a6a4b1070f3754}{Depth\+Bits\+::\+None}}}, }\item[{Graphics\+Format}]{color\+Format}{ = {\ttfamily GraphicsFormat\+:\+:R8G8B8A8\+\_\+SRGB}, }\item[{Filter\+Mode}]{filter\+Mode}{ = {\ttfamily FilterMode\+:\+:Point}, }\item[{Texture\+Wrap\+Mode}]{wrap\+Mode}{ = {\ttfamily TextureWrapMode\+:\+:Repeat}, }\item[{Texture\+Dimension}]{dimension}{ = {\ttfamily TextureDimension\+:\+:Tex2D}, }\item[{bool}]{enable\+Random\+Write}{ = {\ttfamily false}, }\item[{bool}]{use\+Mip\+Map}{ = {\ttfamily false}, }\item[{bool}]{auto\+Generate\+Mips}{ = {\ttfamily true}, }\item[{bool}]{is\+Shadow\+Map}{ = {\ttfamily false}, }\item[{int}]{aniso\+Level}{ = {\ttfamily 1}, }\item[{float}]{mip\+Map\+Bias}{ = {\ttfamily 0f}, }\item[{\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_acdbc596fccabcca2bbc53a61613c1439}{MSAASamples}}}]{msaa\+Samples}{ = {\ttfamily \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_acdbc596fccabcca2bbc53a61613c1439a6adf97f83acf6453d4a6a4b1070f3754}{MSAASamples\+::\+None}}}, }\item[{bool}]{bind\+Texture\+MS}{ = {\ttfamily false}, }\item[{bool}]{use\+Dynamic\+Scale}{ = {\ttfamily false}, }\item[{Render\+Texture\+Memoryless}]{memoryless}{ = {\ttfamily RenderTextureMemoryless\+:\+:None}, }\item[{VRTexture\+Usage}]{vr\+Usage}{ = {\ttfamily VRTextureUsage\+:\+:None}, }\item[{string}]{name}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Allocate a new automatically sized \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scale\+Factor} & Constant scale for the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} size computation.\\
+\hline
+{\em slices} & Number of slices of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+{\em depth\+Buffer\+Bits} & Bit depths of a depth buffer.\\
+\hline
+{\em color\+Format} & Graphics\+Format of a color buffer.\\
+\hline
+{\em filter\+Mode} & Filtering mode of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+{\em wrap\+Mode} & Addressing mode of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+{\em dimension} & Texture dimension of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+{\em enable\+Random\+Write} & Set to true to enable UAV random read writes on the texture.\\
+\hline
+{\em use\+Mip\+Map} & Set to true if the texture should have mipmaps.\\
+\hline
+{\em auto\+Generate\+Mips} & Set to true to automatically generate mipmaps.\\
+\hline
+{\em is\+Shadow\+Map} & Set to true if the depth buffer should be used as a shadow map.\\
+\hline
+{\em aniso\+Level} & Anisotropic filtering level.\\
+\hline
+{\em mip\+Map\+Bias} & Bias applied to mipmaps during filtering.\\
+\hline
+{\em msaa\+Samples} & Number of MSAA samples.\\
+\hline
+{\em bind\+Texture\+MS} & Set to true if the texture needs to be bound as a multisampled texture in the shader.\\
+\hline
+{\em use\+Dynamic\+Scale} & Set to true to use hardware dynamic scaling.\\
+\hline
+{\em memoryless} & Use this property to set the render texture memoryless modes.\\
+\hline
+{\em vr\+Usage} & Special treatment of the VR eye texture used in stereoscopic rendering.\\
+\hline
+{\em name} & Name of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_aa2bb84e9d9d08d5889499a8d7c1d20ec}\index{UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}!GetMaxHeight@{GetMaxHeight}}
+\index{GetMaxHeight@{GetMaxHeight}!UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}}
+\doxysubsubsection{\texorpdfstring{GetMaxHeight()}{GetMaxHeight()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_aa2bb84e9d9d08d5889499a8d7c1d20ec} 
+int Unity\+Engine.\+Rendering.\+RTHandle\+System.\+Get\+Max\+Height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the maximum allocated height of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} \doxylink{namespace_system}{System}. 
+
+\begin{DoxyReturn}{Returns}
+Maximum allocated height of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} \doxylink{namespace_system}{System}.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_ac117fc01d48cd5839a9c950372bc5cb5}\index{UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}!GetMaxWidth@{GetMaxWidth}}
+\index{GetMaxWidth@{GetMaxWidth}!UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}}
+\doxysubsubsection{\texorpdfstring{GetMaxWidth()}{GetMaxWidth()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_ac117fc01d48cd5839a9c950372bc5cb5} 
+int Unity\+Engine.\+Rendering.\+RTHandle\+System.\+Get\+Max\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the maximum allocated width of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} \doxylink{namespace_system}{System}. 
+
+\begin{DoxyReturn}{Returns}
+Maximum allocated width of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} \doxylink{namespace_system}{System}.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_a8808889ab4d9ddd871300bf9afd7a778}\index{UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_a8808889ab4d9ddd871300bf9afd7a778} 
+void Unity\+Engine.\+Rendering.\+RTHandle\+System.\+Initialize (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{height}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialize the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Initial reference rendering width.\\
+\hline
+{\em height} & Initial reference rendering height.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_abde23d4f99ef5470e9d3e0d4a996cef8}\index{UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}!Release@{Release}}
+\index{Release@{Release}!UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_abde23d4f99ef5470e9d3e0d4a996cef8} 
+void Unity\+Engine.\+Rendering.\+RTHandle\+System.\+Release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}}}]{rth}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Release memory of a \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} from the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} \doxylink{namespace_system}{System}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rth} & \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} that should be released.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_aa4b7a08ffbc74959e950e3fdf93ef9ea}\index{UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}!ResetReferenceSize@{ResetReferenceSize}}
+\index{ResetReferenceSize@{ResetReferenceSize}!UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}}
+\doxysubsubsection{\texorpdfstring{ResetReferenceSize()}{ResetReferenceSize()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_aa4b7a08ffbc74959e950e3fdf93ef9ea} 
+void Unity\+Engine.\+Rendering.\+RTHandle\+System.\+Reset\+Reference\+Size (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{height}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reset the reference size of the system and reallocate all textures. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & New width.\\
+\hline
+{\em height} & New height.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_a4948bc73466cba375796f9ffc6a1ed6e}\index{UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}!SetHardwareDynamicResolutionState@{SetHardwareDynamicResolutionState}}
+\index{SetHardwareDynamicResolutionState@{SetHardwareDynamicResolutionState}!UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}}
+\doxysubsubsection{\texorpdfstring{SetHardwareDynamicResolutionState()}{SetHardwareDynamicResolutionState()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_a4948bc73466cba375796f9ffc6a1ed6e} 
+void Unity\+Engine.\+Rendering.\+RTHandle\+System.\+Set\+Hardware\+Dynamic\+Resolution\+State (\begin{DoxyParamCaption}\item[{bool}]{enable\+HWDynamic\+Res}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enable or disable hardware dynamic resolution for the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} \doxylink{namespace_system}{System}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable\+HWDynamic\+Res} & State of hardware dynamic resolution.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_aabd095c50d14264d3f02e900fe9f0705}\index{UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}!SetReferenceSize@{SetReferenceSize}}
+\index{SetReferenceSize@{SetReferenceSize}!UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}}
+\doxysubsubsection{\texorpdfstring{SetReferenceSize()}{SetReferenceSize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_aabd095c50d14264d3f02e900fe9f0705} 
+void Unity\+Engine.\+Rendering.\+RTHandle\+System.\+Set\+Reference\+Size (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{height}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the reference rendering size for subsequent rendering for the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} \doxylink{namespace_system}{System}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Reference rendering width for subsequent rendering.\\
+\hline
+{\em height} & Reference rendering height for subsequent rendering.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_a6b9209db90d3912ebef8058d27d4e7f0}\index{UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}!SetReferenceSize@{SetReferenceSize}}
+\index{SetReferenceSize@{SetReferenceSize}!UnityEngine.Rendering.RTHandleSystem@{UnityEngine.Rendering.RTHandleSystem}}
+\doxysubsubsection{\texorpdfstring{SetReferenceSize()}{SetReferenceSize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_r_t_handle_system_a6b9209db90d3912ebef8058d27d4e7f0} 
+void Unity\+Engine.\+Rendering.\+RTHandle\+System.\+Set\+Reference\+Size (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{height}{, }\item[{bool}]{reset}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the reference rendering size for subsequent rendering for the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} \doxylink{namespace_system}{System}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Reference rendering width for subsequent rendering.\\
+\hline
+{\em height} & Reference rendering height for subsequent rendering.\\
+\hline
+{\em reset} & If set to true, the new width and height will override the old values even if they are not bigger.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Textures/RTHandle\+System.\+cs\end{DoxyCompactItemize}

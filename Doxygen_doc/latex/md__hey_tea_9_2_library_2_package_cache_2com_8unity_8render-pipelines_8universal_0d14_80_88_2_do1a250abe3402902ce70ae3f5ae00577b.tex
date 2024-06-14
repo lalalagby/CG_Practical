@@ -1,0 +1,23 @@
+\chapter{The Universal Additional Camera Data component}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do1a250abe3402902ce70ae3f5ae00577b}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do1a250abe3402902ce70ae3f5ae00577b}\index{The Universal Additional Camera Data component@{The Universal Additional Camera Data component}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do1a250abe3402902ce70ae3f5ae00577b_autotoc_md2521}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do1a250abe3402902ce70ae3f5ae00577b_autotoc_md2521}%
+ The Universal Additional Camera Data component is a component that the Universal Render Pipeline (URP) uses for internal data storage. The Universal Additional Camera Data component allows URP to extend and override the functionality and appearance of \doxylink{namespace_unity}{Unity}\textquotesingle{}s standard Camera component.
+
+In URP, a Game\+Object that has a Camera component must also have a Universal Additional Camera Data component. If your Project uses URP, \doxylink{namespace_unity}{Unity} automatically adds the Universal Additional Camera Data component when you create a Camera Game\+Object. You cannot remove the Universal Additional Camera Data component from a Camera Game\+Object.
+
+If you are not using scripts to control and customise URP, you do not need to do anything with the Universal Additiona Camera Data component.
+
+If you are using scripts to control and customise URP, you can access a Camera\textquotesingle{}s Universal Additional Camera Data component in a script like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ cameraData\ =\ camera.GetUniversalAdditionalCameraData();}
+
+\end{DoxyCode}
+
+
+For more information, see \href{xref:UnityEngine.Rendering.Universal.UniversalAdditionalCameraData}{\texttt{ the Universal\+Additional\+Camera\+Data API documentation}}.
+
+If you need to access the Universal Additional Camera Data component frequently in a script, you should cache the reference to it to avoid unnecessary CPU work.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do1a250abe3402902ce70ae3f5ae00577b_autotoc_md2522}{}\doxysection{\texorpdfstring{Preset}{Preset}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do1a250abe3402902ce70ae3f5ae00577b_autotoc_md2522}
+When using Preset of a Camera, only a subset of properties are supported. Unsupported properties are hidden. 

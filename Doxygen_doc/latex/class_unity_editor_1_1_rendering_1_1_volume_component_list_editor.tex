@@ -1,0 +1,104 @@
+\doxysection{Unity\+Editor.\+Rendering.\+Volume\+Component\+List\+Editor Class Reference}
+\hypertarget{class_unity_editor_1_1_rendering_1_1_volume_component_list_editor}{}\label{class_unity_editor_1_1_rendering_1_1_volume_component_list_editor}\index{UnityEditor.Rendering.VolumeComponentListEditor@{UnityEditor.Rendering.VolumeComponentListEditor}}
+
+
+\doxylink{namespace_unity}{Unity} uses this class to draw the user interface for all the settings contained in a Volume\+Profile in the Inspector.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_volume_component_list_editor_ad70ea972b516c10363cc079ccaa94e97}{Volume\+Component\+List\+Editor}} (Editor editor)
+\begin{DoxyCompactList}\small\item\em Creates a new instance of \doxylink{class_unity_editor_1_1_rendering_1_1_volume_component_list_editor}{Volume\+Component\+List\+Editor} to use in an existing editor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_volume_component_list_editor_abc1f29b50ca54a1b79f003d66be9c9cc}{Init}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_profile}{Volume\+Profile}} \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_volume_component_list_editor_ad84c3285416c4548e9adf5e181d25909}{asset}}, Serialized\+Object serialized\+Object)
+\begin{DoxyCompactList}\small\item\em Initializes the editor. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_volume_component_list_editor_a47b5f96d5782b4787eb251fcf0af829f}\label{class_unity_editor_1_1_rendering_1_1_volume_component_list_editor_a47b5f96d5782b4787eb251fcf0af829f} 
+void {\bfseries Clear} ()
+\begin{DoxyCompactList}\small\item\em Cleans up the editor and individual \doxylink{class_unity_editor_1_1_rendering_1_1_volume_component_editor}{Volume\+Component\+Editor} instances. You must call this when the parent editor is disabled or destroyed. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_volume_component_list_editor_a2a3986b71ae3222162fb1767d79ad3d7}\label{class_unity_editor_1_1_rendering_1_1_volume_component_list_editor_a2a3986b71ae3222162fb1767d79ad3d7} 
+void {\bfseries On\+GUI} ()
+\begin{DoxyCompactList}\small\item\em Draws the editor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_volume_component_list_editor_ad84c3285416c4548e9adf5e181d25909}\label{class_unity_editor_1_1_rendering_1_1_volume_component_list_editor_ad84c3285416c4548e9adf5e181d25909} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_profile}{Volume\+Profile}} {\bfseries asset}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A direct reference to the Volume\+Profile this editor displays. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{namespace_unity}{Unity} uses this class to draw the user interface for all the settings contained in a Volume\+Profile in the Inspector. 
+
+A minimal example of how to write a custom editor that displays the content of a profile in the inspector\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine_1_1_rendering}{UnityEngine.Rendering}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{[CustomEditor(typeof(\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_profile}{VolumeProfile}}))]}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }CustomVolumeProfileEditor\ :\ Editor}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ VolumeComponentListEditor\ m\_ComponentList;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ OnEnable()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_ComponentList\ =\ \textcolor{keyword}{new}\ VolumeComponentListEditor(\textcolor{keyword}{this});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_ComponentList.Init(target\ as\ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_profile}{VolumeProfile}},\ serializedObject);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ OnDisable()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_ComponentList\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ m\_ComponentList.Clear();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnInspectorGUI()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ serializedObject.Update();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_ComponentList.OnGUI();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ serializedObject.ApplyModifiedProperties();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_volume_component_list_editor_ad70ea972b516c10363cc079ccaa94e97}\index{UnityEditor.Rendering.VolumeComponentListEditor@{UnityEditor.Rendering.VolumeComponentListEditor}!VolumeComponentListEditor@{VolumeComponentListEditor}}
+\index{VolumeComponentListEditor@{VolumeComponentListEditor}!UnityEditor.Rendering.VolumeComponentListEditor@{UnityEditor.Rendering.VolumeComponentListEditor}}
+\doxysubsubsection{\texorpdfstring{VolumeComponentListEditor()}{VolumeComponentListEditor()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_volume_component_list_editor_ad70ea972b516c10363cc079ccaa94e97} 
+Unity\+Editor.\+Rendering.\+Volume\+Component\+List\+Editor.\+Volume\+Component\+List\+Editor (\begin{DoxyParamCaption}\item[{Editor}]{editor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new instance of \doxylink{class_unity_editor_1_1_rendering_1_1_volume_component_list_editor}{Volume\+Component\+List\+Editor} to use in an existing editor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em editor} & A reference to the parent editor instance\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_volume_component_list_editor_abc1f29b50ca54a1b79f003d66be9c9cc}\index{UnityEditor.Rendering.VolumeComponentListEditor@{UnityEditor.Rendering.VolumeComponentListEditor}!Init@{Init}}
+\index{Init@{Init}!UnityEditor.Rendering.VolumeComponentListEditor@{UnityEditor.Rendering.VolumeComponentListEditor}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_volume_component_list_editor_abc1f29b50ca54a1b79f003d66be9c9cc} 
+void Unity\+Editor.\+Rendering.\+Volume\+Component\+List\+Editor.\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_profile}{Volume\+Profile}}}]{asset}{, }\item[{Serialized\+Object}]{serialized\+Object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes the editor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em asset} & A direct reference to the profile Asset.\\
+\hline
+{\em serialized\+Object} & An instance of the Serialized\+Object provided by the parent editor.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Editor/\+Volume/Volume\+Component\+List\+Editor.\+cs\end{DoxyCompactItemize}

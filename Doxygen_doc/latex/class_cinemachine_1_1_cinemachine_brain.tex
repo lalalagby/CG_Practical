@@ -1,0 +1,326 @@
+\doxysection{Cinemachine.\+Cinemachine\+Brain Class Reference}
+\hypertarget{class_cinemachine_1_1_cinemachine_brain}{}\label{class_cinemachine_1_1_cinemachine_brain}\index{Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}}
+
+
+\doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain} is the link between the \doxylink{namespace_unity}{Unity} Camera and the \doxylink{namespace_cinemachine}{Cinemachine} Virtual Cameras in the scene. It monitors the priority stack to choose the current Virtual Camera, and blend with another if necessary. Finally and most importantly, it applies the Virtual Camera state to the attached \doxylink{namespace_unity}{Unity} Camera.  
+
+
+Inheritance diagram for Cinemachine.\+Cinemachine\+Brain\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cinemachine_1_1_cinemachine_brain}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_1_1_brain_event}{Brain\+Event}}
+\begin{DoxyCompactList}\small\item\em Event with a \doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain} parameter. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_1_1_vcam_activated_event}{Vcam\+Activated\+Event}}
+\begin{DoxyCompactList}\small\item\em Event that is fired when a virtual camera is activated. The parameters are (incoming\+\_\+vcam, outgoing\+\_\+vcam), in that order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_ab60f93047b98695f698bb5888c87c21e}{Update\+Method}} \{ \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_ab60f93047b98695f698bb5888c87c21ea9c1ca4069e206318b33ef896d3dd204e}{Fixed\+Update}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_ab60f93047b98695f698bb5888c87c21ea2609005edfde618c70f2140bb3e9b7c2}{Late\+Update}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_ab60f93047b98695f698bb5888c87c21eac98c17243e0acc4a32b53a16b93ab203}{Smart\+Update}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_ab60f93047b98695f698bb5888c87c21eac72d817f08bc2b7fb5ea5e7875385630}{Manual\+Update}}
+ \}
+\begin{DoxyCompactList}\small\item\em This enum defines the options available for the update method. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_a0f62f74646b05dc9afdf525f2fe6be47}{Brain\+Update\+Method}} \{ \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_a0f62f74646b05dc9afdf525f2fe6be47a9c1ca4069e206318b33ef896d3dd204e}{Fixed\+Update}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_a0f62f74646b05dc9afdf525f2fe6be47a2609005edfde618c70f2140bb3e9b7c2}{Late\+Update}}
+ \}
+\begin{DoxyCompactList}\small\item\em This enum defines the options available for the update method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_a76858a87d227cda4d7821f23e0a3cc60}\label{class_cinemachine_1_1_cinemachine_brain_a76858a87d227cda4d7821f23e0a3cc60} 
+void {\bfseries Manual\+Update} ()
+\begin{DoxyCompactList}\small\item\em Call this method explicitly from an external script to update the virtual cameras and position the main camera, if the Update\+Mode is set to Manual\+Update. For other update modes, this method is called automatically, and should not be called from elsewhere. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_adb7e05d9139afa9dd3af1de22a63f431}{Is\+Live\+In\+Blend}} (\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} vcam)
+\begin{DoxyCompactList}\small\item\em Checks if the vcam is live as part of an outgoing blend. ~\newline
+ Does not check whether the vcam is also the current active vcam. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_a2d9b5fa3070ab0688b94bbf44e322bb9}{Set\+Camera\+Override}} (int override\+Id, \mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} camA, \mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} camB, float weightB, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em This API is specifically for \doxylink{namespace_timeline}{Timeline}. Do not use it. Override the current camera and current blend. This setting will trump any in-\/game logic that sets virtual camera priorities and Enabled states. This is the main API for the timeline. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_a5b95a856548ac99d9882682ff32d57ee}{Release\+Camera\+Override}} (int override\+Id)
+\begin{DoxyCompactList}\small\item\em This API is specifically for \doxylink{namespace_timeline}{Timeline}. Do not use it. Release the resources used for a camera override client. See Set\+Camera\+Override. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_a8209fc13a3603c45e49a84bc07c8b2f1}{Compute\+Current\+Blend}} (ref \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_blend}{Cinemachine\+Blend}} output\+Blend, int num\+Top\+Layers\+To\+Exclude)
+\begin{DoxyCompactList}\small\item\em Used internally to compute the currrent blend, taking into account the in-\/game camera and all the active overrides. Caller may optionally exclude n topmost overrides. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_aabd7fbe61815947f3744565c14646ff5}{Is\+Live}} (\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} vcam, bool dominant\+Child\+Only=false)
+\begin{DoxyCompactList}\small\item\em True if the \doxylink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera} the current active camera, or part of a current blend, either directly or indirectly because its parents are live. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Color \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_a59f850e807cf183e1e3d66b55dc511a5}{Get\+Solo\+GUIColor}} ()
+\begin{DoxyCompactList}\small\item\em API for the \doxylink{namespace_unity}{Unity} \doxylink{namespace_cinemachine_1_1_editor}{Editor}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_ac258dc16be8ed83ee65338932d6df9cb}\label{class_cinemachine_1_1_cinemachine_brain_ac258dc16be8ed83ee65338932d6df9cb} 
+bool {\bfseries m\+\_\+\+Show\+Debug\+Text} = false
+\begin{DoxyCompactList}\small\item\em When enabled, the current camera and blend will be indicated in the game window, for debugging. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_ab3c7e6e2c90623b897ee6dd2c0e4e161}\label{class_cinemachine_1_1_cinemachine_brain_ab3c7e6e2c90623b897ee6dd2c0e4e161} 
+bool {\bfseries m\+\_\+\+Show\+Camera\+Frustum} = true
+\begin{DoxyCompactList}\small\item\em When enabled, shows the camera\textquotesingle{}s frustum in the scene view. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_a72552f0702dc87b23abc97ef22b08c56}\label{class_cinemachine_1_1_cinemachine_brain_a72552f0702dc87b23abc97ef22b08c56} 
+bool {\bfseries m\+\_\+\+Ignore\+Time\+Scale} = false
+\begin{DoxyCompactList}\small\item\em When enabled, the cameras will always respond in real-\/time to user input and damping, even if the game is running in slow motion. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_a01cf1e1fa34d6ed7dc813e56ed181fbb}\label{class_cinemachine_1_1_cinemachine_brain_a01cf1e1fa34d6ed7dc813e56ed181fbb} 
+Transform {\bfseries m\+\_\+\+World\+Up\+Override}
+\begin{DoxyCompactList}\small\item\em If set, this object\textquotesingle{}s Y axis will define the worldspace Up vector for all the virtual cameras. This is useful in top-\/down game environments. If not set, Up is worldspace Y. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_a928b039aba284e7698f6eccaefa69ad8}\label{class_cinemachine_1_1_cinemachine_brain_a928b039aba284e7698f6eccaefa69ad8} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_ab60f93047b98695f698bb5888c87c21e}{Update\+Method}} {\bfseries m\+\_\+\+Update\+Method} = \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_ab60f93047b98695f698bb5888c87c21eac98c17243e0acc4a32b53a16b93ab203}{Update\+Method.\+Smart\+Update}}
+\begin{DoxyCompactList}\small\item\em Depending on how the target objects are animated, adjust the update method to minimize the potential jitter. Use Fixed\+Update if all your targets are animated with for Rigid\+Body animation. Smart\+Update will choose the best method for each virtual camera, depending on how the target is animated. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_a0a05f168bbef23f3767af611145a7687}\label{class_cinemachine_1_1_cinemachine_brain_a0a05f168bbef23f3767af611145a7687} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_a0f62f74646b05dc9afdf525f2fe6be47}{Brain\+Update\+Method}} {\bfseries m\+\_\+\+Blend\+Update\+Method} = \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_a0f62f74646b05dc9afdf525f2fe6be47a2609005edfde618c70f2140bb3e9b7c2}{Brain\+Update\+Method.\+Late\+Update}}
+\begin{DoxyCompactList}\small\item\em The update time for the Brain, i.\+e. when the blends are evaluated and the brain\textquotesingle{}s transform is updated. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_a639284347ec97b20a388719a75b72516}\label{class_cinemachine_1_1_cinemachine_brain_a639284347ec97b20a388719a75b72516} 
+\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_blend_definition}{Cinemachine\+Blend\+Definition}} {\bfseries m\+\_\+\+Default\+Blend} = new \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_blend_definition}{Cinemachine\+Blend\+Definition}}(\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbcab5a2f8abee775e5f5f4c30e031739365}{Cinemachine\+Blend\+Definition.\+Style.\+Ease\+In\+Out}}, 2f)
+\begin{DoxyCompactList}\small\item\em The blend which is used if you don\textquotesingle{}t explicitly define a blend between two Virtual Cameras. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_a1f05203079a5f7f59199c4905b0a5f98}\label{class_cinemachine_1_1_cinemachine_brain_a1f05203079a5f7f59199c4905b0a5f98} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_blender_settings}{Cinemachine\+Blender\+Settings}} {\bfseries m\+\_\+\+Custom\+Blends} = null
+\begin{DoxyCompactList}\small\item\em This is the asset which contains custom settings for specific blends. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_ad83c8d1b67d3b8618c3200e755886636}\label{class_cinemachine_1_1_cinemachine_brain_ad83c8d1b67d3b8618c3200e755886636} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_1_1_brain_event}{Brain\+Event}} {\bfseries m\+\_\+\+Camera\+Cut\+Event} = new \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_1_1_brain_event}{Brain\+Event}}()
+\begin{DoxyCompactList}\small\item\em This event will fire whenever a virtual camera goes live and there is no blend. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_1_1_vcam_activated_event}{Vcam\+Activated\+Event}} \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_a3c462c6780d14145721d3114ddd0da9e}{m\+\_\+\+Camera\+Activated\+Event}} = new \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_1_1_vcam_activated_event}{Vcam\+Activated\+Event}}()
+\begin{DoxyCompactList}\small\item\em This event will fire whenever a virtual camera goes live. If a blend is involved, then the event will fire on the first frame of the blend. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_abec877430b34fdc903c6a8057ec76e02}\label{class_cinemachine_1_1_cinemachine_brain_abec877430b34fdc903c6a8057ec76e02} 
+Camera {\bfseries Output\+Camera}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{namespace_unity}{Unity} Camera that is attached to this Game\+Object. This is the camera that will be controlled by the brain. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_a256344bd9f3098ec95edb1ca2b7c4606}\label{class_cinemachine_1_1_cinemachine_brain_a256344bd9f3098ec95edb1ca2b7c4606} 
+Game\+Object {\bfseries Controlled\+Object}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain} controls this Game\+Object. Normally, this is the Game\+Object to which the \doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain} component is attached. However, it is possible to override this by setting this property to another Game\+Object. If a Camera component is attached to the Controlled Object, then that Camera component\textquotesingle{}s lens settings will also be driven by the \doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain}. If this property is set to null, then \doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain} is controlling the Game\+Object to which it is attached. The value of this property will always report as non-\/null. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_ab7596fbe511d791f623587f176387af8}\label{class_cinemachine_1_1_cinemachine_brain_ab7596fbe511d791f623587f176387af8} 
+static \mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} {\bfseries Solo\+Camera}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em API for the \doxylink{namespace_unity}{Unity} \doxylink{namespace_cinemachine_1_1_editor}{Editor}. Show this camera no matter what. This is static, and so affects all \doxylink{namespace_cinemachine}{Cinemachine} brains. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_a450ef635b6e5dba714833d8f77f5a4ac}{Default\+World\+Up}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the default world up for the virtual cameras. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_a991bd74279b96010e7de1a247454cf12}\label{class_cinemachine_1_1_cinemachine_brain_a991bd74279b96010e7de1a247454cf12} 
+\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} {\bfseries Active\+Virtual\+Camera}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the current active virtual camera. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_a883250175a20e00b3c6c1433e4332a10}\label{class_cinemachine_1_1_cinemachine_brain_a883250175a20e00b3c6c1433e4332a10} 
+bool {\bfseries Is\+Blending}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Is there a blend in progress? \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_af6f62dda5b8abf93e0600734826f7d16}\label{class_cinemachine_1_1_cinemachine_brain_af6f62dda5b8abf93e0600734826f7d16} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_blend}{Cinemachine\+Blend}} {\bfseries Active\+Blend}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the current blend in progress. Returns null if none. It is also possible to set the current blend, but this is not a recommended usage. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_ae06a80f2ed28e784ed06d4991e2c9556}\label{class_cinemachine_1_1_cinemachine_brain_ae06a80f2ed28e784ed06d4991e2c9556} 
+\mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} {\bfseries Current\+Camera\+State}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The current state applied to the unity camera (may be the result of a blend) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_cinemachine_1_1_i_camera_override_stack}{Cinemachine.\+ICamera\+Override\+Stack}}}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain} is the link between the \doxylink{namespace_unity}{Unity} Camera and the \doxylink{namespace_cinemachine}{Cinemachine} Virtual Cameras in the scene. It monitors the priority stack to choose the current Virtual Camera, and blend with another if necessary. Finally and most importantly, it applies the Virtual Camera state to the attached \doxylink{namespace_unity}{Unity} Camera. 
+
+The \doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain} is also the place where rules for blending between virtual cameras are defined. Camera blending is an interpolation over time of one virtual camera position and state to another. If you think of virtual cameras as cameramen, then blending is a little like one cameraman smoothly passing the camera to another cameraman. You can specify the time over which to blend, as well as the blend curve shape. Note that a camera cut is just a zero-\/time blend. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_a0f62f74646b05dc9afdf525f2fe6be47}\index{Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}!BrainUpdateMethod@{BrainUpdateMethod}}
+\index{BrainUpdateMethod@{BrainUpdateMethod}!Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}}
+\doxysubsubsection{\texorpdfstring{BrainUpdateMethod}{BrainUpdateMethod}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_brain_a0f62f74646b05dc9afdf525f2fe6be47} 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_a0f62f74646b05dc9afdf525f2fe6be47}{Cinemachine.\+Cinemachine\+Brain.\+Brain\+Update\+Method}}}
+
+
+
+This enum defines the options available for the update method. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FixedUpdate@{FixedUpdate}!Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}}\index{Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}!FixedUpdate@{FixedUpdate}}}\Hypertarget{class_cinemachine_1_1_cinemachine_brain_a0f62f74646b05dc9afdf525f2fe6be47a9c1ca4069e206318b33ef896d3dd204e}\label{class_cinemachine_1_1_cinemachine_brain_a0f62f74646b05dc9afdf525f2fe6be47} 
+Fixed\+Update&Camera is updated in sync with the Physics module, in Fixed\+Update. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LateUpdate@{LateUpdate}!Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}}\index{Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}!LateUpdate@{LateUpdate}}}\Hypertarget{class_cinemachine_1_1_cinemachine_brain_a0f62f74646b05dc9afdf525f2fe6be47a2609005edfde618c70f2140bb3e9b7c2}\label{class_cinemachine_1_1_cinemachine_brain_a0f62f74646b05dc9afdf525f2fe6be47} 
+Late\+Update&Camera is updated in Mono\+Behaviour Late\+Update (or when Manual\+Update is called). \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_ab60f93047b98695f698bb5888c87c21e}\index{Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}!UpdateMethod@{UpdateMethod}}
+\index{UpdateMethod@{UpdateMethod}!Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}}
+\doxysubsubsection{\texorpdfstring{UpdateMethod}{UpdateMethod}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_brain_ab60f93047b98695f698bb5888c87c21e} 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_ab60f93047b98695f698bb5888c87c21e}{Cinemachine.\+Cinemachine\+Brain.\+Update\+Method}}}
+
+
+
+This enum defines the options available for the update method. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FixedUpdate@{FixedUpdate}!Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}}\index{Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}!FixedUpdate@{FixedUpdate}}}\Hypertarget{class_cinemachine_1_1_cinemachine_brain_ab60f93047b98695f698bb5888c87c21ea9c1ca4069e206318b33ef896d3dd204e}\label{class_cinemachine_1_1_cinemachine_brain_ab60f93047b98695f698bb5888c87c21e} 
+Fixed\+Update&Virtual cameras are updated in sync with the Physics module, in Fixed\+Update. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LateUpdate@{LateUpdate}!Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}}\index{Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}!LateUpdate@{LateUpdate}}}\Hypertarget{class_cinemachine_1_1_cinemachine_brain_ab60f93047b98695f698bb5888c87c21ea2609005edfde618c70f2140bb3e9b7c2}\label{class_cinemachine_1_1_cinemachine_brain_ab60f93047b98695f698bb5888c87c21e} 
+Late\+Update&Virtual cameras are updated in Mono\+Behaviour Late\+Update. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SmartUpdate@{SmartUpdate}!Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}}\index{Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}!SmartUpdate@{SmartUpdate}}}\Hypertarget{class_cinemachine_1_1_cinemachine_brain_ab60f93047b98695f698bb5888c87c21eac98c17243e0acc4a32b53a16b93ab203}\label{class_cinemachine_1_1_cinemachine_brain_ab60f93047b98695f698bb5888c87c21e} 
+Smart\+Update&Virtual cameras are updated according to how the target is updated. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ManualUpdate@{ManualUpdate}!Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}}\index{Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}!ManualUpdate@{ManualUpdate}}}\Hypertarget{class_cinemachine_1_1_cinemachine_brain_ab60f93047b98695f698bb5888c87c21eac72d817f08bc2b7fb5ea5e7875385630}\label{class_cinemachine_1_1_cinemachine_brain_ab60f93047b98695f698bb5888c87c21e} 
+Manual\+Update&Virtual cameras are not automatically updated, client must explicitly call the \doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain}\textquotesingle{}s \doxylink{class_cinemachine_1_1_cinemachine_brain_a76858a87d227cda4d7821f23e0a3cc60}{Manual\+Update()} method. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_a8209fc13a3603c45e49a84bc07c8b2f1}\index{Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}!ComputeCurrentBlend@{ComputeCurrentBlend}}
+\index{ComputeCurrentBlend@{ComputeCurrentBlend}!Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}}
+\doxysubsubsection{\texorpdfstring{ComputeCurrentBlend()}{ComputeCurrentBlend()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_brain_a8209fc13a3603c45e49a84bc07c8b2f1} 
+void Cinemachine.\+Cinemachine\+Brain.\+Compute\+Current\+Blend (\begin{DoxyParamCaption}\item[{ref \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_blend}{Cinemachine\+Blend}}}]{output\+Blend}{, }\item[{int}]{num\+Top\+Layers\+To\+Exclude}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Used internally to compute the currrent blend, taking into account the in-\/game camera and all the active overrides. Caller may optionally exclude n topmost overrides. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output\+Blend} & Receives the nested blend\\
+\hline
+{\em num\+Top\+Layers\+To\+Exclude} & Optionaly exclude the last number of overrides from the blend\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_a59f850e807cf183e1e3d66b55dc511a5}\index{Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}!GetSoloGUIColor@{GetSoloGUIColor}}
+\index{GetSoloGUIColor@{GetSoloGUIColor}!Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}}
+\doxysubsubsection{\texorpdfstring{GetSoloGUIColor()}{GetSoloGUIColor()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_brain_a59f850e807cf183e1e3d66b55dc511a5} 
+static Color Cinemachine.\+Cinemachine\+Brain.\+Get\+Solo\+GUIColor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+API for the \doxylink{namespace_unity}{Unity} \doxylink{namespace_cinemachine_1_1_editor}{Editor}. 
+
+\begin{DoxyReturn}{Returns}
+Color used to indicate that a camera is in Solo mode.
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_aabd7fbe61815947f3744565c14646ff5}\index{Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}!IsLive@{IsLive}}
+\index{IsLive@{IsLive}!Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}}
+\doxysubsubsection{\texorpdfstring{IsLive()}{IsLive()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_brain_aabd7fbe61815947f3744565c14646ff5} 
+bool Cinemachine.\+Cinemachine\+Brain.\+Is\+Live (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}}}]{vcam}{, }\item[{bool}]{dominant\+Child\+Only}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+True if the \doxylink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera} the current active camera, or part of a current blend, either directly or indirectly because its parents are live. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vcam} & The camera to test whether it is live\\
+\hline
+{\em dominant\+Child\+Only} & If true, will only return true if this vcam is the dominat live child\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the camera is live (directly or indirectly) or part of a blend in progress.
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_adb7e05d9139afa9dd3af1de22a63f431}\index{Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}!IsLiveInBlend@{IsLiveInBlend}}
+\index{IsLiveInBlend@{IsLiveInBlend}!Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}}
+\doxysubsubsection{\texorpdfstring{IsLiveInBlend()}{IsLiveInBlend()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_brain_adb7e05d9139afa9dd3af1de22a63f431} 
+bool Cinemachine.\+Cinemachine\+Brain.\+Is\+Live\+In\+Blend (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}}}]{vcam}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the vcam is live as part of an outgoing blend. ~\newline
+ Does not check whether the vcam is also the current active vcam. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vcam} & The virtual camera to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the virtual camera is part of a live outgoing blend, false otherwise
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_a5b95a856548ac99d9882682ff32d57ee}\index{Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}!ReleaseCameraOverride@{ReleaseCameraOverride}}
+\index{ReleaseCameraOverride@{ReleaseCameraOverride}!Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}}
+\doxysubsubsection{\texorpdfstring{ReleaseCameraOverride()}{ReleaseCameraOverride()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_brain_a5b95a856548ac99d9882682ff32d57ee} 
+void Cinemachine.\+Cinemachine\+Brain.\+Release\+Camera\+Override (\begin{DoxyParamCaption}\item[{int}]{override\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This API is specifically for \doxylink{namespace_timeline}{Timeline}. Do not use it. Release the resources used for a camera override client. See Set\+Camera\+Override. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em override\+Id} & The ID to released. This is the value that was returned by Set\+Camera\+Override\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_cinemachine_1_1_i_camera_override_stack_a6585d4ab843cc407f87e8425afb1db92}{Cinemachine.\+ICamera\+Override\+Stack}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_a2d9b5fa3070ab0688b94bbf44e322bb9}\index{Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}!SetCameraOverride@{SetCameraOverride}}
+\index{SetCameraOverride@{SetCameraOverride}!Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}}
+\doxysubsubsection{\texorpdfstring{SetCameraOverride()}{SetCameraOverride()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_brain_a2d9b5fa3070ab0688b94bbf44e322bb9} 
+int Cinemachine.\+Cinemachine\+Brain.\+Set\+Camera\+Override (\begin{DoxyParamCaption}\item[{int}]{override\+Id}{, }\item[{\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}}}]{camA}{, }\item[{\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}}}]{camB}{, }\item[{float}]{weightB}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This API is specifically for \doxylink{namespace_timeline}{Timeline}. Do not use it. Override the current camera and current blend. This setting will trump any in-\/game logic that sets virtual camera priorities and Enabled states. This is the main API for the timeline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em override\+Id} & Id to represent a specific client. An internal stack is maintained, with the most recent non-\/empty override taking precenence. This id must be \texorpdfstring{$>$}{>} 0. If you pass -\/1, a new id will be created, and returned. Use that id for subsequent calls. Don\textquotesingle{}t forget to call Release\+Camera\+Override after all overriding is finished, to free the Overide\+Stack resources.\\
+\hline
+{\em camA} & The camera to set, corresponding to weight=0\\
+\hline
+{\em camB} & The camera to set, corresponding to weight=1\\
+\hline
+{\em weightB} & The blend weight. 0=camA, 1=camB\\
+\hline
+{\em delta\+Time} & override for delta\+Time. Should be Time.\+Fixed\+Delta for time-\/based calculations to be included, -\/1 otherwise\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The oiverride ID. Don\textquotesingle{}t forget to call Release\+Camera\+Override after all overriding is finished, to free the Overide\+Stack resources.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_cinemachine_1_1_i_camera_override_stack_a426a71fb92e355301b4268945a30a945}{Cinemachine.\+ICamera\+Override\+Stack}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_a3c462c6780d14145721d3114ddd0da9e}\index{Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}!m\_CameraActivatedEvent@{m\_CameraActivatedEvent}}
+\index{m\_CameraActivatedEvent@{m\_CameraActivatedEvent}!Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}}
+\doxysubsubsection{\texorpdfstring{m\_CameraActivatedEvent}{m\_CameraActivatedEvent}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_brain_a3c462c6780d14145721d3114ddd0da9e} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_1_1_vcam_activated_event}{Vcam\+Activated\+Event}} Cinemachine.\+Cinemachine\+Brain.\+m\+\_\+\+Camera\+Activated\+Event = new \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_1_1_vcam_activated_event}{Vcam\+Activated\+Event}}()}
+
+
+
+This event will fire whenever a virtual camera goes live. If a blend is involved, then the event will fire on the first frame of the blend. 
+
+The Parameters are (incoming\+\_\+vcam, outgoing\+\_\+vcam), in that order. 
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_brain_a450ef635b6e5dba714833d8f77f5a4ac}\index{Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}!DefaultWorldUp@{DefaultWorldUp}}
+\index{DefaultWorldUp@{DefaultWorldUp}!Cinemachine.CinemachineBrain@{Cinemachine.CinemachineBrain}}
+\doxysubsubsection{\texorpdfstring{DefaultWorldUp}{DefaultWorldUp}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_brain_a450ef635b6e5dba714833d8f77f5a4ac} 
+Vector3 Cinemachine.\+Cinemachine\+Brain.\+Default\+World\+Up\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Get the default world up for the virtual cameras. 
+
+
+
+Implements \mbox{\hyperlink{interface_cinemachine_1_1_i_camera_override_stack_a02027aee572ee1db5b7391cb0808ea96}{Cinemachine.\+ICamera\+Override\+Stack}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Behaviours/Cinemachine\+Brain.\+cs\end{DoxyCompactItemize}

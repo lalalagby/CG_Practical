@@ -1,0 +1,89 @@
+\chapter{Assume\+Range attribute}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2optimization-assumerange}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2optimization-assumerange}\index{AssumeRange attribute@{AssumeRange attribute}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2optimization-assumerange_autotoc_md417}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2optimization-assumerange_autotoc_md417}%
+ Use the \href{xref:Unity.Burst.CompilerServices.AssumeRangeAttribute}{\texttt{ {\ttfamily Assume\+Range}}} attribute to tell \doxylink{namespace_burst}{Burst} that a given scalar-\/integer lies within a certain constrained range. If \doxylink{namespace_burst}{Burst} has this information, it can improve the performance of your application. The following code is an example of this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{[\textcolor{keywordflow}{return}:AssumeRange(0u,\ 13u)]}
+\DoxyCodeLine{\textcolor{keyword}{static}\ uint\ WithConstrainedRange([AssumeRange(0,\ 26)]\ \textcolor{keywordtype}{int}\ x)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ (uint)x\ /\ 2u;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+This example tells \doxylink{namespace_burst}{Burst} the following\+:
+
+
+\begin{DoxyItemize}
+\item The variable {\ttfamily x} is in the closed-\/interval range {\ttfamily \mbox{[}0..26\mbox{]}}, or more plainly that {\ttfamily x \texorpdfstring{$>$}{>}= 0 \&\& x \texorpdfstring{$<$}{<}= 26}.
+\item The return value from {\ttfamily With\+Constrained\+Range} is in the closed-\/interval range {\ttfamily \mbox{[}0..13\mbox{]}}, or more plainly that {\ttfamily x \texorpdfstring{$>$}{>}= 0 \&\& x \texorpdfstring{$<$}{<}= 13}.
+\end{DoxyItemize}
+
+\doxylink{namespace_burst}{Burst} uses these assumptions to create better code generation. However, there are some restrictions\+:
+
+
+\begin{DoxyItemize}
+\item You can only place these on scalar-\/integer (signed or unsigned) types.
+\item The type of the range arguments must match the type being attributed.
+\end{DoxyItemize}
+
+\doxylink{namespace_burst}{Burst} has deductions for the {\ttfamily .Length} property of {\ttfamily Native\+Array} and {\ttfamily Native\+Slice} which indicates that these always return non-\/negative integers\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ IsLengthNegative(NativeArray<float>\ na)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Burst\ always\ replaces\ this\ with\ the\ constant\ false}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ na.Length\ <\ 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+For example, if you have a container like the following\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keyword}{struct\ }MyContainer}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ Length;}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Some\ other\ data...}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+The following example shows how to tell \doxylink{namespace_burst}{Burst} that {\ttfamily Length} is always a positive integer\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keyword}{struct\ }MyContainer}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \_length;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ [\textcolor{keywordflow}{return}:\ AssumeRange(0,\ \textcolor{keywordtype}{int}.MaxValue)]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ LengthGetter()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_length;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ Length}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ get\ =>\ LengthGetter();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ set\ =>\ \_length\ =\ value;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Some\ other\ data...}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

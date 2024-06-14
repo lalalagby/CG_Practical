@@ -1,0 +1,81 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Constant\+Buffer\+Singleton\texorpdfstring{$<$}{<} CBType \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_constant_buffer_singleton}{}\label{class_unity_engine_1_1_rendering_1_1_constant_buffer_singleton}\index{UnityEngine.Rendering.ConstantBufferSingleton$<$ CBType $>$@{UnityEngine.Rendering.ConstantBufferSingleton$<$ CBType $>$}}
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Constant\+Buffer\+Singleton\texorpdfstring{$<$}{<} CBType \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_engine_1_1_rendering_1_1_constant_buffer_singleton}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_constant_buffer_singleton_acc298b7e5e8d4b48818634f449974ae1}\label{class_unity_engine_1_1_rendering_1_1_constant_buffer_singleton_acc298b7e5e8d4b48818634f449974ae1} 
+override void {\bfseries Release} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer}{Unity\+Engine.\+Rendering.\+Constant\+Buffer$<$ CBType $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Constant\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em Constant Buffer constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer_ae861a7677a2108a471b5b57d6767138f}{Update\+Data}} (Command\+Buffer cmd, in CBType data)
+\begin{DoxyCompactList}\small\item\em Update the GPU data of the constant buffer via a command buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer_ad06f759e01ee8005a2956837a0dc440c}{Update\+Data}} (in CBType data)
+\begin{DoxyCompactList}\small\item\em Update the GPU data of the constant buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer_aa3f8e9c2a453578cf1537f96446442a6}{Set\+Global}} (Command\+Buffer cmd, int shader\+Id)
+\begin{DoxyCompactList}\small\item\em Bind the constant buffer globally via a command buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer_adfda46e0d0436fe283cac3d0e94e2e22}{Set\+Global}} (int shader\+Id)
+\begin{DoxyCompactList}\small\item\em Bind the constant buffer globally. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer_aad1904febc186491678e188c27ad779f}{Set}} (Command\+Buffer cmd, Compute\+Shader cs, int shader\+Id)
+\begin{DoxyCompactList}\small\item\em Bind the constant buffer to a compute shader via a command buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer_a1c4ae97b31641e913eb23018120c9558}{Set}} (Compute\+Shader cs, int shader\+Id)
+\begin{DoxyCompactList}\small\item\em Bind the constant buffer to a compute shader. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer_a2b585be2f26de5da8c011431d9f3e749}{Set}} (Material mat, int shader\+Id)
+\begin{DoxyCompactList}\small\item\em Bind the constant buffer to a material. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer_a2dafd20eee65cc8bbf2d91d351616313}{Push\+Global}} (Command\+Buffer cmd, in CBType data, int shader\+Id)
+\begin{DoxyCompactList}\small\item\em Update the GPU data of the constant buffer and bind it globally via a command buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer_a5ea279adbff5336dc71657a26a932c77}{Push\+Global}} (in CBType data, int shader\+Id)
+\begin{DoxyCompactList}\small\item\em Update the GPU data of the constant buffer and bind it globally. \end{DoxyCompactList}\item 
+override void {\bfseries Release} ()
+\begin{DoxyCompactList}\small\item\em Release the constant buffers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer_base}{Unity\+Engine.\+Rendering.\+Constant\+Buffer\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Release} ()
+\begin{DoxyCompactList}\small\item\em Release the constant buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer}{Unity\+Engine.\+Rendering.\+Constant\+Buffer$<$ CBType $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer_aba87f9b2e39a81b675564025bfaef9f6}{Push\+Global$<$ CBType $>$}} (Command\+Buffer cmd, in CBType data, int shader\+Id)
+\begin{DoxyCompactList}\small\item\em Update the GPU data of the constant buffer and bind it globally via a command buffer. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer_a79a1a4b98b7c093ae86bf41b5f6aa844}{Push\+Global$<$ CBType $>$}} (in CBType data, int shader\+Id)
+\begin{DoxyCompactList}\small\item\em Update the GPU data of the constant buffer and bind it globally. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer_ae71bc605f26392e727823ead27a12295}{Push$<$ CBType $>$}} (Command\+Buffer cmd, in CBType data, Compute\+Shader cs, int shader\+Id)
+\begin{DoxyCompactList}\small\item\em Update the GPU data of the constant buffer and bind it to a compute shader via a command buffer. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer_affa74621b88f017d347b3b343d854829}{Push$<$ CBType $>$}} (in CBType data, Compute\+Shader cs, int shader\+Id)
+\begin{DoxyCompactList}\small\item\em Update the GPU data of the constant buffer and bind it to a compute shader. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer_a9459832c3d56aa3b454cc611a346704d}{Push$<$ CBType $>$}} (Command\+Buffer cmd, in CBType data, Material mat, int shader\+Id)
+\begin{DoxyCompactList}\small\item\em Update the GPU data of the constant buffer and bind it to a material via a command buffer. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer_a1cd0fc7a5ba760d9144e8b51d69c29c7}{Push$<$ CBType $>$}} (in CBType data, Material mat, int shader\+Id)
+\begin{DoxyCompactList}\small\item\em Update the GPU data of the constant buffer and bind it to a material. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer_a5c0dd986bb4349652807c6ab8f5b10ab}{Update\+Data$<$ CBType $>$}} (Command\+Buffer cmd, in CBType data)
+\begin{DoxyCompactList}\small\item\em Update the GPU data of the constant buffer via a command buffer. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer_ac6bd8b9da81d0c11bc97e1f2c32a6fc4}{Update\+Data$<$ CBType $>$}} (in CBType data)
+\begin{DoxyCompactList}\small\item\em Update the GPU data of the constant buffer. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer_a1fb08cd991c005eb055164f266721e11}{Set\+Global$<$ CBType $>$}} (Command\+Buffer cmd, int shader\+Id)
+\begin{DoxyCompactList}\small\item\em Bind the constant buffer globally via a command buffer. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer_a9887c5ccaafc8caa7c9b819b55936e97}{Set\+Global$<$ CBType $>$}} (int shader\+Id)
+\begin{DoxyCompactList}\small\item\em Bind the constant buffer globally. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer_aa567f00f24d700e73ea61466d99db4e0}{Set$<$ CBType $>$}} (Command\+Buffer cmd, Compute\+Shader cs, int shader\+Id)
+\begin{DoxyCompactList}\small\item\em Bind the constant buffer to a compute shader via a command buffer. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer_a6fad0632602bfc33f54c16960fdccb8e}{Set$<$ CBType $>$}} (Compute\+Shader cs, int shader\+Id)
+\begin{DoxyCompactList}\small\item\em Bind the constant buffer to a compute shader. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_constant_buffer_a338548b2941612e78a86d8fdc72160d2}{Set$<$ CBType $>$}} (Material mat, int shader\+Id)
+\begin{DoxyCompactList}\small\item\em Bind the constant buffer to a material. \end{DoxyCompactList}\item 
+static void {\bfseries Release\+All} ()
+\begin{DoxyCompactList}\small\item\em Release all currently allocated singleton constant buffers. This needs to be called before shutting down the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Common/Constant\+Buffer.\+cs\end{DoxyCompactItemize}

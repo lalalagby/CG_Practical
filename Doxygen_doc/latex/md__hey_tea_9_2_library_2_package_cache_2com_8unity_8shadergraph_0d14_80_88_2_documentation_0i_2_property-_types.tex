@@ -1,0 +1,406 @@
+\chapter{Property Types}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types}\index{Property Types@{Property Types}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3646}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3646}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3647}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3647}
+{\bfseries{Property Types}} are the types of \href{https://docs.unity3d.com/Manual/SL-Properties.html}{\texttt{ Property}} than can be defined on the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard}{Blackboard}{0} for use in the {\bfseries{Graph}}. These \href{https://docs.unity3d.com/Manual/SL-Properties.html}{\texttt{ Properties}} are exposed to the \href{https://docs.unity3d.com/Manual/UsingTheInspector.html}{\texttt{ Inspector}} for \href{https://docs.unity3d.com/Manual/class-Material.html}{\texttt{ Materials}} that use the shader.
+
+Each property has an associated {\bfseries{Data Type}}. See \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_data-_types}{Data Types}{0} for more information.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3648}{}\doxysection{\texorpdfstring{Common Parameters}{Common Parameters}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3648}
+In addition to values specific to their \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_data-_types}{Data Types}{0}, most properties have the following common parameters.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+Display Name   &String   &The display name of the property    \\\cline{1-3}
+Exposed   &Boolean   &If true this property will be exposed on the material inspector    \\\cline{1-3}
+Reference Name   &String   &The internal name used for the property inside the shader    \\\cline{1-3}
+Override Property Declaration   &Boolean   &An advanced option to enable explicit control of the shader declaration for this property    \\\cline{1-3}
+Shader Declaration   &Enumeration   &Controls the shader declaration of this property   \\\cline{1-3}
+\end{longtabu}
+
+
+NOTE\+: If you overwrite the {\bfseries{Reference Name}} parameter be aware of the following conditions\+:
+\begin{DoxyItemize}
+\item If your {\bfseries{Reference Name}} does not begin with an underscore, one will be automatically appended.
+\item If your {\bfseries{Reference Name}} contains any characters which are unsupported in HLSL they will be removed.
+\item You can revert to the default {\bfseries{Reference Name}} by right clicking on it and selecting {\bfseries{Reset Reference}}.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3649}{}\doxysection{\texorpdfstring{Float}{Float}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3649}
+Defines a {\bfseries{Float}} value.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Modes    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Modes    }\\\cline{1-2}
+\endhead
+Float   &Default, Slider, Integer   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3650}{}\doxysubsubsection{\texorpdfstring{Default}{Default}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3650}
+Displays a scalar input field in the material inspector.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+Default   &Float   &The default value of the \href{https://docs.unity3d.com/Manual/SL-Properties.html}{\texttt{ Property}}.   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3651}{}\doxysubsubsection{\texorpdfstring{Slider}{Slider}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3651}
+Displays a slider field in the material inspector.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+Default   &Float   &The default value of the \href{https://docs.unity3d.com/Manual/SL-Properties.html}{\texttt{ Property}}.    \\\cline{1-3}
+Min   &Float   &The minimum value of the slider.    \\\cline{1-3}
+Max   &Float   &The maximum value of the slider.   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3652}{}\doxysubsubsection{\texorpdfstring{Integer}{Integer}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3652}
+Displays an integer input field in the material inspector.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+Default   &Integer   &The default value of the \href{https://docs.unity3d.com/Manual/SL-Properties.html}{\texttt{ Property}}.   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3653}{}\doxysection{\texorpdfstring{Vector 2}{Vector 2}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3653}
+Defines a {\bfseries{Vector 2}} value. Displays a {\bfseries{Vector 4}} input field in the material inspector, where the z and w components are not used.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Modes    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Modes    }\\\cline{1-2}
+\endhead
+Vector 2   &\\\cline{1-2}
+\end{longtabu}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+Default   &Vector 2   &The default value of the \href{https://docs.unity3d.com/Manual/SL-Properties.html}{\texttt{ Property}}.   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3654}{}\doxysection{\texorpdfstring{Vector 3}{Vector 3}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3654}
+Defines a {\bfseries{Vector 3}} value. Displays a {\bfseries{Vector 4}} input field in the material inspector, where the w component is not used.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Modes    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Modes    }\\\cline{1-2}
+\endhead
+Vector 3   &\\\cline{1-2}
+\end{longtabu}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+Default   &Vector 3   &The default value of the \href{https://docs.unity3d.com/Manual/SL-Properties.html}{\texttt{ Property}}.   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3655}{}\doxysection{\texorpdfstring{Vector 4}{Vector 4}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3655}
+Defines a {\bfseries{Vector 4}} value. Displays a {\bfseries{Vector 4}} input field in the material inspector.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Modes    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Modes    }\\\cline{1-2}
+\endhead
+Vector 4   &\\\cline{1-2}
+\end{longtabu}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+Default   &Vector 4   &The default value of the \href{https://docs.unity3d.com/Manual/SL-Properties.html}{\texttt{ Property}}.   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3656}{}\doxysection{\texorpdfstring{Color}{Color}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3656}
+Defines a {\bfseries{Color}} value. If the Property Inspector displays {\bfseries{Main Color}}, this is the \href{https://docs.unity3d.com/Manual/SL-Properties.html}{\texttt{ Main Color}} for the shader. To select or deselect this node as the {\bfseries{Main Color}}, right-\/click it in the graph or Blackboard and select {\bfseries{Set as Main Color}} or {\bfseries{Clear Main Color}}. Corresponds to the \href{https://docs.unity3d.com/Manual/SL-Properties.html}{\texttt{ {\ttfamily Main\+Color}}} Shader\+Lab Properties attribute.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Modes    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Modes    }\\\cline{1-2}
+\endhead
+Color   &Default, HDR   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3657}{}\doxysubsubsection{\texorpdfstring{Default}{Default}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3657}
+Displays an s\+RGB color field in the material inspector.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+Default   &Vector 4   &The default value of the \href{https://docs.unity3d.com/Manual/SL-Properties.html}{\texttt{ Property}}.   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3658}{}\doxysubsubsection{\texorpdfstring{HDR}{HDR}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3658}
+Displays an HDR color field in the material inspector.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+Default   &Vector 4   &The default value of the \href{https://docs.unity3d.com/Manual/SL-Properties.html}{\texttt{ Property}}.   \\\cline{1-3}
+\end{longtabu}
+
+
+NOTE\+: In versions prior to 10.\+0, Shader Graph didn\textquotesingle{}t correct HDR colors for the project colorspace. Version 10.\+0 corrected this behavior. HDR color properties that you created with older versions maintain the old behavior, but you can use the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_internal-_inspector}{Graph Inspector}{0} to upgrade them. To mimic the old behavior in a gamma space project, you can use the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_colorspace-_conversion-_node}{Colorspace Conversion Node}{0} to convert a new HDR {\bfseries{Color}} property from {\bfseries{RGB}} to {\bfseries{Linear}} space.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3659}{}\doxysection{\texorpdfstring{Texture 2D}{Texture 2D}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3659}
+Defines a \href{https://docs.unity3d.com/Manual/class-TextureImporter.html}{\texttt{ Texture 2D}} value. Displays an object field of type \href{https://docs.unity3d.com/Manual/class-TextureImporter.html}{\texttt{ Texture}} in the material inspector. If the Property Inspector displays {\bfseries{Main Texture}}, this is the {\ttfamily Main Texture} for the shader. To select or deselect this node as the {\ttfamily Main Texture}, right-\/click on it in the graph or Blackboard and select {\bfseries{Set as Main Texture}} or {\bfseries{Clear Main Texture}}. Corresponds to the \href{https://docs.unity3d.com/Manual/SL-Properties.html}{\texttt{ {\ttfamily Main\+Texture}}} Shader\+Lab Properties attribute.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Modes    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Modes    }\\\cline{1-2}
+\endhead
+Texture   &White, Black, Grey, Bump   \\\cline{1-2}
+\end{longtabu}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+Default   &Texture   &The default value of the \href{https://docs.unity3d.com/Manual/SL-Properties.html}{\texttt{ Property}}.    \\\cline{1-3}
+Use Tiling and Offset   &Boolean   &When set to false, activates the property \href{https://docs.unity3d.com/Manual/SL-Properties.html}{\texttt{ No\+Scale\+Offset}}, to enable manipulation of scale and offset separately from other texture properties. See \mbox{[}Split\+Texture\+Transform\+Node\mbox{]}(Split-\/\+Texture-\/\+Transform-\/\+Node).   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3660}{}\doxysection{\texorpdfstring{Texture 3D}{Texture 3D}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3660}
+Defines a \href{https://docs.unity3d.com/Manual/class-TextureImporter.html}{\texttt{ Texture 3D}} value. Displays an object field of type \href{https://docs.unity3d.com/Manual/class-TextureImporter.html}{\texttt{ Texture 3D}} in the material inspector.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Modes    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Modes    }\\\cline{1-2}
+\endhead
+Texture   &\\\cline{1-2}
+\end{longtabu}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+Default   &Texture   &The default value of the \href{https://docs.unity3d.com/Manual/SL-Properties.html}{\texttt{ Property}}.   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3661}{}\doxysection{\texorpdfstring{Texture 2D Array}{Texture 2D Array}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3661}
+Defines a \href{https://docs.unity3d.com/Manual/class-TextureImporter.html}{\texttt{ Texture 2D Array}} value. Displays an object field of type \href{https://docs.unity3d.com/Manual/class-TextureImporter.html}{\texttt{ Texture 2D Array}} in the material inspector.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Modes    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Modes    }\\\cline{1-2}
+\endhead
+Texture   &\\\cline{1-2}
+\end{longtabu}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+Default   &Texture   &The default value of the \href{https://docs.unity3d.com/Manual/SL-Properties.html}{\texttt{ Property}}.   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3662}{}\doxysection{\texorpdfstring{Cubemap}{Cubemap}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3662}
+Defines a \href{https://docs.unity3d.com/Manual/class-Cubemap.html}{\texttt{ Cubemap}} value. Displays an object field of type \href{https://docs.unity3d.com/Manual/class-TextureImporter.html}{\texttt{ Texture}} in the material inspector.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Modes    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Modes    }\\\cline{1-2}
+\endhead
+Cubemap   &\\\cline{1-2}
+\end{longtabu}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+Default   &Cubemap   &The default value of the \href{https://docs.unity3d.com/Manual/SL-Properties.html}{\texttt{ Property}}.   \\\cline{1-3}
+\end{longtabu}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_virtual-texture}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_virtual-texture}%
+  \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3663}{}\doxysection{\texorpdfstring{Virtual Texture}{Virtual Texture}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3663}
+Defines a \href{https://docs.unity3d.com/2020.1/Documentation/Manual/svt-use-in-shader-graph.html}{\texttt{ Texture Stack}}, which appears as object fields of type \href{https://docs.unity3d.com/Manual/class-TextureImporter.html}{\texttt{ Texture}} in the Material Inspector. The number of fields correspond to the number of layers in the property.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Modes    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Modes    }\\\cline{1-2}
+\endhead
+Virtual Texture   &\\\cline{1-2}
+\end{longtabu}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+Default   &Texture   &The default value of the \href{https://docs.unity3d.com/Manual/SL-Properties.html}{\texttt{ Property}}.   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3664}{}\doxysection{\texorpdfstring{Boolean}{Boolean}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types_autotoc_md3664}
+Defines a {\bfseries{Boolean}} value. Displays a {\bfseries{Toggle\+UI}} field in the material inspector. Note that internally to the shader this value is a {\bfseries{Float}}. The {\bfseries{Boolean}} type in Shader Graph is merely for usability.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Modes    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Data Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Modes    }\\\cline{1-2}
+\endhead
+Boolean   &\\\cline{1-2}
+\end{longtabu}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Field   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+Default   &Boolean   &The default value of the \href{https://docs.unity3d.com/Manual/SL-Properties.html}{\texttt{ Property}}.   \\\cline{1-3}
+\end{longtabu}

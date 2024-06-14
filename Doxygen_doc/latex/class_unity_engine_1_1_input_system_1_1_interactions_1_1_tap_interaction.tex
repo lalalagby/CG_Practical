@@ -1,0 +1,161 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Interactions.\+Tap\+Interaction Class Reference}
+\hypertarget{class_unity_engine_1_1_input_system_1_1_interactions_1_1_tap_interaction}{}\label{class_unity_engine_1_1_input_system_1_1_interactions_1_1_tap_interaction}\index{UnityEngine.InputSystem.Interactions.TapInteraction@{UnityEngine.InputSystem.Interactions.TapInteraction}}
+
+
+Performs the action if the control is pressed held for at least the set duration (which defaults to \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_aae374a18c8d36614e3263522b9c0bc80}{Input\+Settings.\+default\+Tap\+Time}) and then released.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Interactions.\+Tap\+Interaction\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_engine_1_1_input_system_1_1_interactions_1_1_tap_interaction}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_tap_interaction_a13c61cd7d2d0232487db03d203f68735}{Process}} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context}{Input\+Interaction\+Context}} context)
+\begin{DoxyCompactList}\small\item\em Perform processing of the interaction in response to input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_tap_interaction_ac5fe6c508f8ddc4570ae89f0fdd5e9af}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset state that the interaction may hold. This should put the interaction back in its original state equivalent to no input yet having been received. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_tap_interaction_a932c40ca0ef2551328a7a9cc9158a284}{duration}}
+\begin{DoxyCompactList}\small\item\em The time in seconds within which the control needs to be pressed and released to perform the interaction. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_tap_interaction_afcfc9d6cc069b19d7c5f69cea8970296}{press\+Point}}
+\begin{DoxyCompactList}\small\item\em The press point required to perform the interaction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Performs the action if the control is pressed held for at least the set duration (which defaults to \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_aae374a18c8d36614e3263522b9c0bc80}{Input\+Settings.\+default\+Tap\+Time}) and then released. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_interactions_1_1_tap_interaction_a13c61cd7d2d0232487db03d203f68735}\index{UnityEngine.InputSystem.Interactions.TapInteraction@{UnityEngine.InputSystem.Interactions.TapInteraction}!Process@{Process}}
+\index{Process@{Process}!UnityEngine.InputSystem.Interactions.TapInteraction@{UnityEngine.InputSystem.Interactions.TapInteraction}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_interactions_1_1_tap_interaction_a13c61cd7d2d0232487db03d203f68735} 
+void Unity\+Engine.\+Input\+System.\+Interactions.\+Tap\+Interaction.\+Process (\begin{DoxyParamCaption}\item[{ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context}{Input\+Interaction\+Context}}}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Perform processing of the interaction in response to input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & \\
+\hline
+\end{DoxyParams}
+
+
+This method is called whenever a control referenced in the binding that the interaction sits on changes value. The interaction is expected to process the value change and, if applicable, call \doxylink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_ac7e1fd7757b79512fbdd9e653e0f6863}{Input\+Interaction\+Context.\+Started} and/or its related methods to initiate a state change.
+
+Note that if "{}control disambiguation"{} (i.\+e. the process where if multiple controls are bound to the same action, the system decides which control gets to drive the action at any one point) is in effect -- i.\+e. when either \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}{Input\+Action\+Type.\+Button} or \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Input\+Action\+Type.\+Value} are used but not if \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94bae1ff6a7360e99cb46db6bb5d3ff8e2eb}{Input\+Action\+Type.\+Pass\+Through} is used -- inputs that the disambiguation chooses to ignore will cause this method to not be called.
+
+Note that this method is called on the interaction even when there are multiple interactions and the interaction is not the one currently in control of the action (because another interaction that comes before it in the list had already started the action). Each interaction will get processed independently and the action will decide when to use which interaction to drive the action as a whole.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Processing\ for\ an\ interaction\ that\ will\ perform\ the\ action\ only\ if\ a\ control}}
+\DoxyCodeLine{\textcolor{comment}{//\ is\ held\ at\ least\ at\ 3/4\ actuation\ for\ at\ least\ 1\ second.}}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_tap_interaction_a13c61cd7d2d0232487db03d203f68735}{Process}}(ref\ InputInteractionContext\ context)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ var\ control\ =\ context.control;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ See\ if\ we're\ currently\ tracking\ a\ control.}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (m\_Control\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ignore\ any\ input\ on\ a\ control\ we're\ not\ currently\ tracking.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_Control\ !=\ control)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ if\ the\ control\ is\ currently\ actuated\ past\ our\ 3/4\ threshold.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ isStillActuated\ =\ context.ControlIsActuated(0.75f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ See\ for\ how\ long\ the\ control\ has\ been\ held.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ actuationTime\ =\ context.time\ -\/\ context.startTime;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!isStillActuated)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Control\ is\ no\ longer\ actuated\ above\ 3/4\ threshold.\ If\ it\ was\ held}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ for\ at\ least\ a\ second,\ perform\ the\ action.\ Otherwise\ cancel\ it.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (actuationTime\ >=\ 1)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ context.Performed();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ context.Cancelled();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Control\ changed\ value\ somewhere\ above\ 3/4\ of\ its\ actuation.\ Doesn't}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ matter\ to\ us\ so\ no\ change.}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ We're\ not\ already\ tracking\ a\ control.\ See\ if\ the\ control\ that\ just\ triggered}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ is\ actuated\ at\ least\ 3/4th\ of\ its\ way.\ If\ so,\ start\ tracking\ it.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ isActuated\ =\ context.ControlIsActuated(0.75f);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isActuated)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ m\_Control\ =\ context.control;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ context.Started();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{InputControl\ m\_Control;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_tap_interaction_ac5fe6c508f8ddc4570ae89f0fdd5e9af}{Reset}}()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ m\_Control\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_interaction_a370c2206944d112654d3c03cbb684257}{Unity\+Engine.\+Input\+System.\+IInput\+Interaction$<$ TValue $>$}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_interactions_1_1_tap_interaction_ac5fe6c508f8ddc4570ae89f0fdd5e9af}\index{UnityEngine.InputSystem.Interactions.TapInteraction@{UnityEngine.InputSystem.Interactions.TapInteraction}!Reset@{Reset}}
+\index{Reset@{Reset}!UnityEngine.InputSystem.Interactions.TapInteraction@{UnityEngine.InputSystem.Interactions.TapInteraction}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_interactions_1_1_tap_interaction_ac5fe6c508f8ddc4570ae89f0fdd5e9af} 
+void Unity\+Engine.\+Input\+System.\+Interactions.\+Tap\+Interaction.\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reset state that the interaction may hold. This should put the interaction back in its original state equivalent to no input yet having been received. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_interaction_a2435cfb30dcccb946eea32a45211c541}{Unity\+Engine.\+Input\+System.\+IInput\+Interaction$<$ TValue $>$}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_interactions_1_1_tap_interaction_a932c40ca0ef2551328a7a9cc9158a284}\index{UnityEngine.InputSystem.Interactions.TapInteraction@{UnityEngine.InputSystem.Interactions.TapInteraction}!duration@{duration}}
+\index{duration@{duration}!UnityEngine.InputSystem.Interactions.TapInteraction@{UnityEngine.InputSystem.Interactions.TapInteraction}}
+\doxysubsubsection{\texorpdfstring{duration}{duration}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_interactions_1_1_tap_interaction_a932c40ca0ef2551328a7a9cc9158a284} 
+float Unity\+Engine.\+Input\+System.\+Interactions.\+Tap\+Interaction.\+duration}
+
+
+
+The time in seconds within which the control needs to be pressed and released to perform the interaction. 
+
+REVIEW\+: this should be called tap\+Time
+
+If this value is equal to or smaller than zero, the input system will use (\doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_aae374a18c8d36614e3263522b9c0bc80}{Input\+Settings.\+default\+Tap\+Time}) instead. \Hypertarget{class_unity_engine_1_1_input_system_1_1_interactions_1_1_tap_interaction_afcfc9d6cc069b19d7c5f69cea8970296}\index{UnityEngine.InputSystem.Interactions.TapInteraction@{UnityEngine.InputSystem.Interactions.TapInteraction}!pressPoint@{pressPoint}}
+\index{pressPoint@{pressPoint}!UnityEngine.InputSystem.Interactions.TapInteraction@{UnityEngine.InputSystem.Interactions.TapInteraction}}
+\doxysubsubsection{\texorpdfstring{pressPoint}{pressPoint}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_interactions_1_1_tap_interaction_afcfc9d6cc069b19d7c5f69cea8970296} 
+float Unity\+Engine.\+Input\+System.\+Interactions.\+Tap\+Interaction.\+press\+Point}
+
+
+
+The press point required to perform the interaction. 
+
+For analog controls (such as trigger axes on a gamepad), the control needs to be engaged by at least this value to perform the interaction. If this value is equal to or smaller than zero, the input system will use (\doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}{Input\+Settings.\+default\+Button\+Press\+Point}) instead. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Actions/\+Interactions/Tap\+Interaction.\+cs\end{DoxyCompactItemize}

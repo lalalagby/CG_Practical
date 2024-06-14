@@ -1,0 +1,294 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Universal.\+Internal.\+Depth\+Normal\+Only\+Pass Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass}{}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass}\index{UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass@{UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass}}
+
+
+Render all objects that have a \textquotesingle{}Depth\+Normals\textquotesingle{} and/or \textquotesingle{}Depth\+Normals\+Only\textquotesingle{} pass into the given depth and normal buffers.  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Universal.\+Internal.\+Depth\+Normal\+Only\+Pass\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass_a14a469a43a1ff6cb16c5ed3c3234baf8}{Depth\+Normal\+Only\+Pass}} (\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_abcf86de95108d2ec392bc873e92392d5}{Render\+Pass\+Event}} evt, Render\+Queue\+Range render\+Queue\+Range, Layer\+Mask layer\+Mask)
+\begin{DoxyCompactList}\small\item\em Creates a new {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass}{Depth\+Normal\+Only\+Pass}} instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass_ac9cebdce78304ce401b20fb71f3c7d25}{Setup}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} depth\+Handle, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} normal\+Handle)
+\begin{DoxyCompactList}\small\item\em Configures the pass. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass_a520f3b36cf66387bf6c1152acfa565d7}{Setup}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} depth\+Handle, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} normal\+Handle, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} decal\+Layer\+Handle)
+\begin{DoxyCompactList}\small\item\em Configures the pass. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass_aa9ef047526fff04991637e8f443e312b}{On\+Camera\+Setup}} (Command\+Buffer cmd, ref \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}} rendering\+Data)
+\begin{DoxyCompactList}\small\item\em This method is called by the renderer before rendering a camera Override this method if you need to to configure render targets and their clear state, and to create temporary render target textures. If a render pass doesn\textquotesingle{}t override this method, this render pass renders to the active Camera\textquotesingle{}s render target. You should never call Command\+Buffer.\+Set\+Render\+Target. Instead call {\ttfamily Configure\+Target} and {\ttfamily Configure\+Clear}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & Command\+Buffer to enqueue rendering commands. This will be executed by the pipeline.\\
+\hline
+{\em rendering\+Data} & Current rendering state information\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a381bea763f88fe4d86c16d458c4862a1}{Configure\+Target}, \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a8a605dae238c319b108e105b22e25880}{Configure\+Clear}
+
+
+\end{DoxySeeAlso}
+ \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass_aef191d74f110c512ed262e537169a64c}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass_aef191d74f110c512ed262e537169a64c} 
+override void {\bfseries Execute} (Scriptable\+Render\+Context context, ref \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}} rendering\+Data)
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass_afd6caa1c0dd6bcf1156571a6116c9401}{On\+Camera\+Cleanup}} (Command\+Buffer cmd)
+\begin{DoxyCompactList}\small\item\em Called upon finish rendering a camera. You can use this callback to release any resources created by this render pass that need to be cleanup once camera has finished rendering. This method be called for all cameras in a camera stack.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & Use this Command\+Buffer to cleanup any generated data\\
+\hline
+\end{DoxyParams}
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Render\+Pass}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_aab88970bd9d4a2adbc48cbb6f7cf85b2}{Frame\+Cleanup}} (Command\+Buffer cmd)
+\begin{DoxyCompactList}\small\item\em Cleanup any allocated resources that were created during the execution of this render pass. \end{DoxyCompactList}\item 
+{\bfseries Scriptable\+Render\+Pass} ()
+\begin{DoxyCompactList}\small\item\em Creates a new {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Scriptable\+Render\+Pass}"{}} instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a9a2183396424f8b0483553c10261a2ab}{Configure\+Input}} (\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a37daf716e998b874ec0272773287835b}{Scriptable\+Render\+Pass\+Input}} pass\+Input)
+\begin{DoxyCompactList}\small\item\em Configures Input Requirements for this render pass. This method should be called inside {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_af397bf0b2792eeef093cd483f8510e42}{Scriptable\+Renderer\+Feature.\+Add\+Render\+Passes}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a966f02b63970dd8c5decd317302545b5}{Configure\+Color\+Store\+Action}} (Render\+Buffer\+Store\+Action store\+Action, uint attachment\+Index=0)
+\begin{DoxyCompactList}\small\item\em Configures the Store Action for a color attachment of this render pass. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a855410e726e4d4d7b8dc4d666b686ea4}{Configure\+Color\+Store\+Actions}} (Render\+Buffer\+Store\+Action\mbox{[}$\,$\mbox{]} store\+Actions)
+\begin{DoxyCompactList}\small\item\em Configures the Store Actions for all the color attachments of this render pass. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_afaf36c3f9412b046cedb5ba802ae1979}{Configure\+Depth\+Store\+Action}} (Render\+Buffer\+Store\+Action store\+Action)
+\begin{DoxyCompactList}\small\item\em Configures the Store Action for the depth attachment of this render pass. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a111fa820e16da96e3e9fd6633f4a0769}{Reset\+Target}} ()
+\begin{DoxyCompactList}\small\item\em Resets render targets to default. This method effectively reset changes done by Configure\+Target. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a381bea763f88fe4d86c16d458c4862a1}{Configure\+Target}} (Render\+Target\+Identifier \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_ab2a4a351a3c6bc39e0aadfa81d23ec97}{color\+Attachment}}, Render\+Target\+Identifier \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a053570f65bb6ce344b64009f886e83e1}{depth\+Attachment}})
+\begin{DoxyCompactList}\small\item\em Configures render targets for this render pass. Call this instead of Command\+Buffer.\+Set\+Render\+Target. This method should be called inside Configure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a3981317782f53360b3a211ced630182b}{Configure\+Target}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_ab2a4a351a3c6bc39e0aadfa81d23ec97}{color\+Attachment}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a053570f65bb6ce344b64009f886e83e1}{depth\+Attachment}})
+\begin{DoxyCompactList}\small\item\em Configures render targets for this render pass. Call this instead of Command\+Buffer.\+Set\+Render\+Target. This method should be called inside Configure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a71d4712c3de1dba9aedb40fc0f65306a}{Configure\+Target}} (Render\+Target\+Identifier\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a98abe288755419009245830d4e79697c}{color\+Attachments}}, Render\+Target\+Identifier \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a053570f65bb6ce344b64009f886e83e1}{depth\+Attachment}})
+\begin{DoxyCompactList}\small\item\em Configures render targets for this render pass. Call this instead of Command\+Buffer.\+Set\+Render\+Target. This method should be called inside Configure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_aca8b48f4e28707d8169db38dea55e88d}{Configure\+Target}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a98abe288755419009245830d4e79697c}{color\+Attachments}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a053570f65bb6ce344b64009f886e83e1}{depth\+Attachment}})
+\begin{DoxyCompactList}\small\item\em Configures render targets for this render pass. Call this instead of Command\+Buffer.\+Set\+Render\+Target. This method should be called inside Configure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a9b3ccec83f56e9a80417aa255c55c0c8}{Configure\+Target}} (Render\+Target\+Identifier \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_ab2a4a351a3c6bc39e0aadfa81d23ec97}{color\+Attachment}})
+\begin{DoxyCompactList}\small\item\em Configures render targets for this render pass. Call this instead of Command\+Buffer.\+Set\+Render\+Target. This method should be called inside Configure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_ad4bd07a1d2b2c52aa547424a472e9771}{Configure\+Target}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_ab2a4a351a3c6bc39e0aadfa81d23ec97}{color\+Attachment}})
+\begin{DoxyCompactList}\small\item\em Configures render targets for this render pass. Call this instead of Command\+Buffer.\+Set\+Render\+Target. This method should be called inside Configure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a059eea49e0f076354ff9035a96f416e5}{Configure\+Target}} (Render\+Target\+Identifier\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a98abe288755419009245830d4e79697c}{color\+Attachments}})
+\begin{DoxyCompactList}\small\item\em Configures render targets for this render pass. Call this instead of Command\+Buffer.\+Set\+Render\+Target. This method should be called inside Configure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a6b934a7c59ce4a47476d29dee38d9f34}{Configure\+Target}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a98abe288755419009245830d4e79697c}{color\+Attachments}})
+\begin{DoxyCompactList}\small\item\em Configures render targets for this render pass. Call this instead of Command\+Buffer.\+Set\+Render\+Target. This method should be called inside Configure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a8a605dae238c319b108e105b22e25880}{Configure\+Clear}} (\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a1f4d1dce2a5a025519f66545ce6bb4f6}{Clear\+Flag}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a57267b9b83832147605b49d2597b937b}{clear\+Flag}}, \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a37daf716e998b874ec0272773287835bacb5feb1b7314637725a2e73bdc9f7295}{Color}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_ad912fd7505e68debfe5beec05059ef65}{clear\+Color}})
+\begin{DoxyCompactList}\small\item\em Configures clearing for the render targets for this render pass. Call this inside Configure. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a91bf660b15a96b5d9d33a93d7b03b1fb}{Configure}} (Command\+Buffer cmd, Render\+Texture\+Descriptor camera\+Texture\+Descriptor)
+\begin{DoxyCompactList}\small\item\em This method is called by the renderer before executing the render pass. Override this method if you need to to configure render targets and their clear state, and to create temporary render target textures. If a render pass doesn\textquotesingle{}t override this method, this render pass renders to the active Camera\textquotesingle{}s render target. You should never call Command\+Buffer.\+Set\+Render\+Target. Instead call {\ttfamily Configure\+Target} and {\ttfamily Configure\+Clear}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a47eddbd92532d5a8deb374607d01c8d2}{On\+Finish\+Camera\+Stack\+Rendering}} (Command\+Buffer cmd)
+\begin{DoxyCompactList}\small\item\em Called upon finish rendering a camera stack. You can use this callback to release any resources created by this render pass that need to be cleanup once all cameras in the stack have finished rendering. This method will be called once after rendering the last camera in the camera stack. Cameras that don\textquotesingle{}t have an explicit camera stack are also considered stacked rendering. In that case the Base camera is the first and last camera in the stack. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a45a0c97af2295308d3064382190e5bc9}{Execute}} (Scriptable\+Render\+Context context, ref \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}} rendering\+Data)
+\begin{DoxyCompactList}\small\item\em Execute the pass. This is where custom rendering occurs. Specific details are left to the implementation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_ad8c5240e0dc0abaafae5eaf1079ee22f}{Blit}} (Command\+Buffer cmd, Render\+Target\+Identifier source, Render\+Target\+Identifier destination, Material material=null, int pass\+Index=0)
+\begin{DoxyCompactList}\small\item\em Add a blit command to the context for execution. This changes the active render target in the \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Scriptable\+Renderer} to destination. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_aa3942669cde2b180f591dd5fb085987c}{Blit}} (Command\+Buffer cmd, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} source, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} destination, Material material=null, int pass\+Index=0)
+\begin{DoxyCompactList}\small\item\em Add a blit command to the context for execution. This changes the active render target in the \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Scriptable\+Renderer} to destination. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_affb6d110151737c13ef0d8d68f8b6908}{Blit}} (Command\+Buffer cmd, ref \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}} data, Material material, int pass\+Index=0)
+\begin{DoxyCompactList}\small\item\em Add a blit command to the context for execution. This applies the material to the color target. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a643e0772791e44a2803cf5b252c0465e}{Blit}} (Command\+Buffer cmd, ref \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}} data, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} source, Material material, int pass\+Index=0)
+\begin{DoxyCompactList}\small\item\em Add a blit command to the context for execution. This applies the material to the color target. \end{DoxyCompactList}\item 
+Drawing\+Settings \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_acaa623ec29c781d060ef85e38ec7cf37}{Create\+Drawing\+Settings}} (Shader\+Tag\+Id shader\+Tag\+Id, ref \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}} rendering\+Data, Sorting\+Criteria sorting\+Criteria)
+\begin{DoxyCompactList}\small\item\em Creates {\ttfamily Drawing\+Settings} based on current the rendering state. \end{DoxyCompactList}\item 
+Drawing\+Settings \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a8bc60f252a4bb66486c604268d4ecc34}{Create\+Drawing\+Settings}} (List$<$ Shader\+Tag\+Id $>$ shader\+Tag\+Id\+List, ref \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}} rendering\+Data, Sorting\+Criteria sorting\+Criteria)
+\begin{DoxyCompactList}\small\item\em Creates {\ttfamily Drawing\+Settings} based on current rendering state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Graphics\+Format \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass_acfd70e063f06dd0734a41b4a93d2507a}{Get\+Graphics\+Format}} ()
+\begin{DoxyCompactList}\small\item\em Finds the format to use for the normals texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Render\+Pass}}}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a7db6258f3ac6548a06d8f847ce0dd56e}{operator$<$}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Scriptable\+Render\+Pass}} lhs, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Scriptable\+Render\+Pass}} rhs)
+\begin{DoxyCompactList}\small\item\em Compares two instances of {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Scriptable\+Render\+Pass}} by their {\ttfamily Render\+Pass\+Event} and returns if {\itshape lhs}  is executed before {\itshape rhs} . \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_ac3e3ad1837f8c9ada5fcc8c621323076}{operator$>$}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Scriptable\+Render\+Pass}} lhs, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Scriptable\+Render\+Pass}} rhs)
+\begin{DoxyCompactList}\small\item\em Compares two instances of {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Scriptable\+Render\+Pass}} by their {\ttfamily Render\+Pass\+Event} and returns if {\itshape lhs}  is executed after {\itshape rhs} . \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Render\+Pass}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} {\bfseries k\+\_\+\+Camera\+Target} = RTHandles.\+Alloc(Builtin\+Render\+Texture\+Type.\+Camera\+Target)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} alias for Builtin\+Render\+Texture\+Type.\+Camera\+Target which is the backbuffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Render\+Pass}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_abcf86de95108d2ec392bc873e92392d5}{Render\+Pass\+Event}} {\bfseries render\+Pass\+Event}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The event when the render pass executes. \end{DoxyCompactList}\item 
+Render\+Target\+Identifier\mbox{[}$\,$\mbox{]} {\bfseries color\+Attachments}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The render target identifiers for color attachments. This is obsolete, use color\+Attachment\+Handles instead. \end{DoxyCompactList}\item 
+Render\+Target\+Identifier {\bfseries color\+Attachment}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The render target identifier for color attachment. This is obsolete, use color\+Attachment\+Handle instead. \end{DoxyCompactList}\item 
+Render\+Target\+Identifier {\bfseries depth\+Attachment}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The render target identifier for depth attachment. This is obsolete, use depth\+Attachment\+Handle instead. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}}\mbox{[}$\,$\mbox{]} {\bfseries color\+Attachment\+Handles}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List for the g-\/buffer attachment handles. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} {\bfseries color\+Attachment\+Handle}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The main color attachment handle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} {\bfseries depth\+Attachment\+Handle}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The depth attachment handle. \end{DoxyCompactList}\item 
+Render\+Buffer\+Store\+Action\mbox{[}$\,$\mbox{]} {\bfseries color\+Store\+Actions}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The store actions for Color. \end{DoxyCompactList}\item 
+Render\+Buffer\+Store\+Action {\bfseries depth\+Store\+Action}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The store actions for Depth. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a37daf716e998b874ec0272773287835b}{Scriptable\+Render\+Pass\+Input}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_adbb31d0e4d2695367cc8b9d4f3a8d6bd}{input}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The input requirements for the {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Scriptable\+Render\+Pass}}, which has been set using {\ttfamily Configure\+Input} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a1f4d1dce2a5a025519f66545ce6bb4f6}{Clear\+Flag}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a57267b9b83832147605b49d2597b937b}{clear\+Flag}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The flag to use when clearing. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a37daf716e998b874ec0272773287835bacb5feb1b7314637725a2e73bdc9f7295}{Color}} {\bfseries clear\+Color}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The color value to use when clearing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Render all objects that have a \textquotesingle{}Depth\+Normals\textquotesingle{} and/or \textquotesingle{}Depth\+Normals\+Only\textquotesingle{} pass into the given depth and normal buffers. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass_a14a469a43a1ff6cb16c5ed3c3234baf8}\index{UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass@{UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass}!DepthNormalOnlyPass@{DepthNormalOnlyPass}}
+\index{DepthNormalOnlyPass@{DepthNormalOnlyPass}!UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass@{UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass}}
+\doxysubsubsection{\texorpdfstring{DepthNormalOnlyPass()}{DepthNormalOnlyPass()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass_a14a469a43a1ff6cb16c5ed3c3234baf8} 
+Unity\+Engine.\+Rendering.\+Universal.\+Internal.\+Depth\+Normal\+Only\+Pass.\+Depth\+Normal\+Only\+Pass (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_abcf86de95108d2ec392bc873e92392d5}{Render\+Pass\+Event}}}]{evt}{, }\item[{Render\+Queue\+Range}]{render\+Queue\+Range}{, }\item[{Layer\+Mask}]{layer\+Mask}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass}{Depth\+Normal\+Only\+Pass}} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em evt} & The {\ttfamily Render\+Pass\+Event} to use.\\
+\hline
+{\em render\+Queue\+Range} & The {\ttfamily Render\+Queue\+Range} to use for creating filtering settings that control what objects get rendered.\\
+\hline
+{\em layer\+Mask} & The layer mask to use for creating filtering settings that control what objects get rendered.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespace_unity_engine_1_1_rendering_1_1_universal_abcf86de95108d2ec392bc873e92392d5}{Render\+Pass\+Event}, Render\+Queue\+Range, Layer\+Mask
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass_acfd70e063f06dd0734a41b4a93d2507a}\index{UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass@{UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass}!GetGraphicsFormat@{GetGraphicsFormat}}
+\index{GetGraphicsFormat@{GetGraphicsFormat}!UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass@{UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass}}
+\doxysubsubsection{\texorpdfstring{GetGraphicsFormat()}{GetGraphicsFormat()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass_acfd70e063f06dd0734a41b4a93d2507a} 
+static Graphics\+Format Unity\+Engine.\+Rendering.\+Universal.\+Internal.\+Depth\+Normal\+Only\+Pass.\+Get\+Graphics\+Format (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Finds the format to use for the normals texture. 
+
+\begin{DoxyReturn}{Returns}
+The Graphics\+Format to use with the Normals texture.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass_afd6caa1c0dd6bcf1156571a6116c9401}\index{UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass@{UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass}!OnCameraCleanup@{OnCameraCleanup}}
+\index{OnCameraCleanup@{OnCameraCleanup}!UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass@{UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass}}
+\doxysubsubsection{\texorpdfstring{OnCameraCleanup()}{OnCameraCleanup()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass_afd6caa1c0dd6bcf1156571a6116c9401} 
+override void Unity\+Engine.\+Rendering.\+Universal.\+Internal.\+Depth\+Normal\+Only\+Pass.\+On\+Camera\+Cleanup (\begin{DoxyParamCaption}\item[{Command\+Buffer}]{cmd}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called upon finish rendering a camera. You can use this callback to release any resources created by this render pass that need to be cleanup once camera has finished rendering. This method be called for all cameras in a camera stack.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & Use this Command\+Buffer to cleanup any generated data\\
+\hline
+\end{DoxyParams}
+ 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a0fc9c12a4f8b4849a0841558e53dd4eb}{Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Render\+Pass}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass_aa9ef047526fff04991637e8f443e312b}\index{UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass@{UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass}!OnCameraSetup@{OnCameraSetup}}
+\index{OnCameraSetup@{OnCameraSetup}!UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass@{UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass}}
+\doxysubsubsection{\texorpdfstring{OnCameraSetup()}{OnCameraSetup()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass_aa9ef047526fff04991637e8f443e312b} 
+override void Unity\+Engine.\+Rendering.\+Universal.\+Internal.\+Depth\+Normal\+Only\+Pass.\+On\+Camera\+Setup (\begin{DoxyParamCaption}\item[{Command\+Buffer}]{cmd}{, }\item[{ref \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}}}]{rendering\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+This method is called by the renderer before rendering a camera Override this method if you need to to configure render targets and their clear state, and to create temporary render target textures. If a render pass doesn\textquotesingle{}t override this method, this render pass renders to the active Camera\textquotesingle{}s render target. You should never call Command\+Buffer.\+Set\+Render\+Target. Instead call {\ttfamily Configure\+Target} and {\ttfamily Configure\+Clear}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & Command\+Buffer to enqueue rendering commands. This will be executed by the pipeline.\\
+\hline
+{\em rendering\+Data} & Current rendering state information\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a381bea763f88fe4d86c16d458c4862a1}{Configure\+Target}, \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a8a605dae238c319b108e105b22e25880}{Configure\+Clear}
+
+
+\end{DoxySeeAlso}
+ 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass_a17c655cb9e9f759752dc14724c726740}{Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Render\+Pass}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass_ac9cebdce78304ce401b20fb71f3c7d25}\index{UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass@{UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass}!Setup@{Setup}}
+\index{Setup@{Setup}!UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass@{UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass_ac9cebdce78304ce401b20fb71f3c7d25} 
+void Unity\+Engine.\+Rendering.\+Universal.\+Internal.\+Depth\+Normal\+Only\+Pass.\+Setup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}}}]{depth\+Handle}{, }\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}}}]{normal\+Handle}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Configures the pass. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em depth\+Handle} & The {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} used to render depth to.\\
+\hline
+{\em normal\+Handle} & The {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} used to render normals.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass_a520f3b36cf66387bf6c1152acfa565d7}\index{UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass@{UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass}!Setup@{Setup}}
+\index{Setup@{Setup}!UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass@{UnityEngine.Rendering.Universal.Internal.DepthNormalOnlyPass}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass_a520f3b36cf66387bf6c1152acfa565d7} 
+void Unity\+Engine.\+Rendering.\+Universal.\+Internal.\+Depth\+Normal\+Only\+Pass.\+Setup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}}}]{depth\+Handle}{, }\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}}}]{normal\+Handle}{, }\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}}}]{decal\+Layer\+Handle}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Configures the pass. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em depth\+Handle} & The {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} used to render depth to.\\
+\hline
+{\em normal\+Handle} & The {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} used to render normals.\\
+\hline
+{\em decal\+Layer\+Handle} & The {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} used to render decals.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}
+
+
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/\+Passes/Depth\+Normal\+Only\+Pass.\+cs\end{DoxyCompactItemize}

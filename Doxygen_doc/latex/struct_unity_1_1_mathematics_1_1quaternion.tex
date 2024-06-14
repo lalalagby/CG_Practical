@@ -1,0 +1,710 @@
+\doxysection{Unity.\+Mathematics.\+quaternion Struct Reference}
+\hypertarget{struct_unity_1_1_mathematics_1_1quaternion}{}\label{struct_unity_1_1_mathematics_1_1quaternion}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+
+
+A quaternion type for representing rotations.  
+
+
+Inheritance diagram for Unity.\+Mathematics.\+quaternion\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_unity_1_1_mathematics_1_1quaternion}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a37a68487c26523bc0723c8425c4be684}{quaternion}} (float x, float y, float z, float w)
+\begin{DoxyCompactList}\small\item\em Constructs a quaternion from four float values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a62d148bcec026a48274bf1eb46fe3bc7}{quaternion}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float4}{float4}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a36fe739545a79c559516359c9675707c}{value}})
+\begin{DoxyCompactList}\small\item\em Constructs a quaternion from \doxylink{struct_unity_1_1_mathematics_1_1float4}{float4} vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_ac82ba3c8bf7fba612a68f8332ca20825}{quaternion}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3x3}{float3x3}} m)
+\begin{DoxyCompactList}\small\item\em Constructs a unit quaternion from a \doxylink{struct_unity_1_1_mathematics_1_1float3x3}{float3x3} rotation matrix. The matrix must be orthonormal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_ae4a10194a1a3d2d9ad9d718c07d079c3}{quaternion}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float4x4}{float4x4}} m)
+\begin{DoxyCompactList}\small\item\em Constructs a unit quaternion from an orthonormal \doxylink{struct_unity_1_1_mathematics_1_1float4x4}{float4x4} matrix. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a8ccb79f3acb2242248b4673b25f4c03d}{Equals}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} x)
+\begin{DoxyCompactList}\small\item\em Returns true if the quaternion is equal to a given quaternion, false otherwise. \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a7f860de1a10b5dae4a4b3535be45541a}{Equals}} (object x)
+\begin{DoxyCompactList}\small\item\em Returns whether true if the quaternion is equal to a given quaternion, false otherwise. \end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a544a7384976f5068eb68bfde572b5854}{Get\+Hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Returns a hash code for the quaternion. \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a5be20b33e78d0888cc793aa27f20545f}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the quaternion. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_aa601c353c82d8dbfba69371139b31413}{To\+String}} (string format, IFormat\+Provider format\+Provider)
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the quaternion using a specified format and culture-\/specific format information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static implicit \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a639d87ee2f6a58c811ed53d217f4c981}{operator Quaternion}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} q)
+\begin{DoxyCompactList}\small\item\em Converts a quaternion to Quaternion. \end{DoxyCompactList}\item 
+static implicit \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_ad20ce568b2859c68dda7bee1ae498e22}{operator quaternion}} (Quaternion q)
+\begin{DoxyCompactList}\small\item\em Converts a Quaternion to quaternion. \end{DoxyCompactList}\item 
+static implicit \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a82d68d92d166fe0a5b277bdf8a5cef98}{operator quaternion}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float4}{float4}} v)
+\begin{DoxyCompactList}\small\item\em Implicitly converts a \doxylink{struct_unity_1_1_mathematics_1_1float4}{float4} vector to a quaternion. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a19b014f9720ebc371423fa476fbac677}{Axis\+Angle}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} axis, float angle)
+\begin{DoxyCompactList}\small\item\em Returns a quaternion representing a rotation around a unit axis by an angle in radians. The rotation direction is clockwise when looking along the rotation axis towards the origin. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_ab73da941533164276bd23d4083d1ab76}{Euler\+XYZ}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} xyz)
+\begin{DoxyCompactList}\small\item\em Returns a quaternion constructed by first performing a rotation around the x-\/axis, then the y-\/axis and finally the z-\/axis. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a7755978ebea44a73db7cf7588e7c9bde}{Euler\+XZY}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} xyz)
+\begin{DoxyCompactList}\small\item\em Returns a quaternion constructed by first performing a rotation around the x-\/axis, then the z-\/axis and finally the y-\/axis. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a9a2dab55476f1d00dc67469c9bdef921}{Euler\+YXZ}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} xyz)
+\begin{DoxyCompactList}\small\item\em Returns a quaternion constructed by first performing a rotation around the y-\/axis, then the x-\/axis and finally the z-\/axis. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a953d568b38473e1e140c8717e63a429a}{Euler\+YZX}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} xyz)
+\begin{DoxyCompactList}\small\item\em Returns a quaternion constructed by first performing a rotation around the y-\/axis, then the z-\/axis and finally the x-\/axis. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a777ab15cbfb5fac4b345893bfe350285}{Euler\+ZXY}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} xyz)
+\begin{DoxyCompactList}\small\item\em Returns a quaternion constructed by first performing a rotation around the z-\/axis, then the x-\/axis and finally the y-\/axis. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. This is the default order rotation order in \doxylink{namespace_unity}{Unity}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a84f134c034172fe6eae60f4837ba1376}{Euler\+ZYX}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} xyz)
+\begin{DoxyCompactList}\small\item\em Returns a quaternion constructed by first performing a rotation around the z-\/axis, then the y-\/axis and finally the x-\/axis. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a8e14e8646e179d1263dc702192c123f3}{Euler\+XYZ}} (float x, float y, float z)
+\begin{DoxyCompactList}\small\item\em Returns a quaternion constructed by first performing a rotation around the x-\/axis, then the y-\/axis and finally the z-\/axis. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_acdcca0cdcc75211d318518f50fcf920e}{Euler\+XZY}} (float x, float y, float z)
+\begin{DoxyCompactList}\small\item\em Returns a quaternion constructed by first performing a rotation around the x-\/axis, then the z-\/axis and finally the y-\/axis. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a5f16f0b9a8849b3fc6274b7be3ca1da8}{Euler\+YXZ}} (float x, float y, float z)
+\begin{DoxyCompactList}\small\item\em Returns a quaternion constructed by first performing a rotation around the y-\/axis, then the x-\/axis and finally the z-\/axis. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a47752893158b36353dcf74a8695be632}{Euler\+YZX}} (float x, float y, float z)
+\begin{DoxyCompactList}\small\item\em Returns a quaternion constructed by first performing a rotation around the y-\/axis, then the z-\/axis and finally the x-\/axis. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a3e76508b218e63c73a10502e72e997bc}{Euler\+ZXY}} (float x, float y, float z)
+\begin{DoxyCompactList}\small\item\em Returns a quaternion constructed by first performing a rotation around the z-\/axis, then the x-\/axis and finally the y-\/axis. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. This is the default order rotation order in \doxylink{namespace_unity}{Unity}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a091e847836d3e769099fb639a829a289}{Euler\+ZYX}} (float x, float y, float z)
+\begin{DoxyCompactList}\small\item\em Returns a quaternion constructed by first performing a rotation around the z-\/axis, then the y-\/axis and finally the x-\/axis. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a16bc41a22ad7b3919dbd7faa3d64954d}{Euler}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} xyz, Rotation\+Order order=Rotation\+Order.\+ZXY)
+\begin{DoxyCompactList}\small\item\em Returns a quaternion constructed by first performing 3 rotations around the principal axes in a given order. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. When the rotation order is known at compile time, it is recommended for performance reasons to use specific Euler rotation constructors such as Euler\+ZXY(...). \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_adfe6eec1e551bf94ad92fe7f4cd600b0}{Euler}} (float x, float y, float z, Rotation\+Order order=Rotation\+Order.\+Default)
+\begin{DoxyCompactList}\small\item\em Returns a quaternion constructed by first performing 3 rotations around the principal axes in a given order. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. When the rotation order is known at compile time, it is recommended for performance reasons to use specific Euler rotation constructors such as Euler\+ZXY(...). \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a6504757da007966ca797c421f21194db}{RotateX}} (float angle)
+\begin{DoxyCompactList}\small\item\em Returns a quaternion that rotates around the x-\/axis by a given number of radians. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a050b6c80ddcd1a081b9e84291e34b081}{RotateY}} (float angle)
+\begin{DoxyCompactList}\small\item\em Returns a quaternion that rotates around the y-\/axis by a given number of radians. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a4affde3192081a4cb720269fcbe7707e}{RotateZ}} (float angle)
+\begin{DoxyCompactList}\small\item\em Returns a quaternion that rotates around the z-\/axis by a given number of radians. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a2d27b347dd6671090955076065094300}{Look\+Rotation}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} forward, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} up)
+\begin{DoxyCompactList}\small\item\em Returns a quaternion view rotation given a unit length forward vector and a unit length up vector. The two input vectors are assumed to be unit length and not collinear. If these assumptions are not met use \doxylink{struct_unity_1_1_mathematics_1_1float3x3_a39848cf4fd4ccbfa3d319bbf3d0ac6db}{float3x3.\+Look\+Rotation\+Safe} instead. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion_a4d3cbe42b21f11b120b9d40231ca2f59}{Look\+Rotation\+Safe}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} forward, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} up)
+\begin{DoxyCompactList}\small\item\em Returns a quaternion view rotation given a forward vector and an up vector. The two input vectors are not assumed to be unit length. If the magnitude of either of the vectors is so extreme that the calculation cannot be carried out reliably or the vectors are collinear, the identity will be returned instead. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a36fe739545a79c559516359c9675707c}\label{struct_unity_1_1_mathematics_1_1quaternion_a36fe739545a79c559516359c9675707c} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float4}{float4}} {\bfseries value}
+\begin{DoxyCompactList}\small\item\em The quaternion component values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a0fc8250029218647487ddf2d4c3d411b}\label{struct_unity_1_1_mathematics_1_1quaternion_a0fc8250029218647487ddf2d4c3d411b} 
+static readonly \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} {\bfseries identity} = new \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}}(0.\+0f, 0.\+0f, 0.\+0f, 1.\+0f)
+\begin{DoxyCompactList}\small\item\em A quaternion representing the identity transform. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A quaternion type for representing rotations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a37a68487c26523bc0723c8425c4be684}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!quaternion@{quaternion}}
+\index{quaternion@{quaternion}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{quaternion()}{quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a37a68487c26523bc0723c8425c4be684} 
+Unity.\+Mathematics.\+quaternion.\+quaternion (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{float}]{y}{, }\item[{float}]{z}{, }\item[{float}]{w}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a quaternion from four float values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The quaternion x component.\\
+\hline
+{\em y} & The quaternion y component.\\
+\hline
+{\em z} & The quaternion z component.\\
+\hline
+{\em w} & The quaternion w component.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a62d148bcec026a48274bf1eb46fe3bc7}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!quaternion@{quaternion}}
+\index{quaternion@{quaternion}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{quaternion()}{quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a62d148bcec026a48274bf1eb46fe3bc7} 
+Unity.\+Mathematics.\+quaternion.\+quaternion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float4}{float4}}}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a quaternion from \doxylink{struct_unity_1_1_mathematics_1_1float4}{float4} vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The quaternion xyzw component values.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_ac82ba3c8bf7fba612a68f8332ca20825}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!quaternion@{quaternion}}
+\index{quaternion@{quaternion}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{quaternion()}{quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_ac82ba3c8bf7fba612a68f8332ca20825} 
+Unity.\+Mathematics.\+quaternion.\+quaternion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3x3}{float3x3}}}]{m}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a unit quaternion from a \doxylink{struct_unity_1_1_mathematics_1_1float3x3}{float3x3} rotation matrix. The matrix must be orthonormal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & The \doxylink{struct_unity_1_1_mathematics_1_1float3x3}{float3x3} orthonormal rotation matrix.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_ae4a10194a1a3d2d9ad9d718c07d079c3}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!quaternion@{quaternion}}
+\index{quaternion@{quaternion}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{quaternion()}{quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_ae4a10194a1a3d2d9ad9d718c07d079c3} 
+Unity.\+Mathematics.\+quaternion.\+quaternion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float4x4}{float4x4}}}]{m}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a unit quaternion from an orthonormal \doxylink{struct_unity_1_1_mathematics_1_1float4x4}{float4x4} matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & The \doxylink{struct_unity_1_1_mathematics_1_1float4x4}{float4x4} orthonormal rotation matrix.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a19b014f9720ebc371423fa476fbac677}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!AxisAngle@{AxisAngle}}
+\index{AxisAngle@{AxisAngle}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{AxisAngle()}{AxisAngle()}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a19b014f9720ebc371423fa476fbac677} 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} Unity.\+Mathematics.\+quaternion.\+Axis\+Angle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}}}]{axis}{, }\item[{float}]{angle}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns a quaternion representing a rotation around a unit axis by an angle in radians. The rotation direction is clockwise when looking along the rotation axis towards the origin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em axis} & The axis of rotation.\\
+\hline
+{\em angle} & The angle of rotation in radians.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion representing a rotation around an axis.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a7f860de1a10b5dae4a4b3535be45541a}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!Equals@{Equals}}
+\index{Equals@{Equals}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a7f860de1a10b5dae4a4b3535be45541a} 
+override bool Unity.\+Mathematics.\+quaternion.\+Equals (\begin{DoxyParamCaption}\item[{object}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether true if the quaternion is equal to a given quaternion, false otherwise. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The object to compare with.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the quaternion is equal to the input, false otherwise.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a8ccb79f3acb2242248b4673b25f4c03d}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!Equals@{Equals}}
+\index{Equals@{Equals}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a8ccb79f3acb2242248b4673b25f4c03d} 
+bool Unity.\+Mathematics.\+quaternion.\+Equals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}}}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true if the quaternion is equal to a given quaternion, false otherwise. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The quaternion to compare with.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the quaternion is equal to the input, false otherwise.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_adfe6eec1e551bf94ad92fe7f4cd600b0}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!Euler@{Euler}}
+\index{Euler@{Euler}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{Euler()}{Euler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_adfe6eec1e551bf94ad92fe7f4cd600b0} 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} Unity.\+Mathematics.\+quaternion.\+Euler (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{float}]{y}{, }\item[{float}]{z}{, }\item[{Rotation\+Order}]{order}{ = {\ttfamily RotationOrder\+:\+:Default}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns a quaternion constructed by first performing 3 rotations around the principal axes in a given order. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. When the rotation order is known at compile time, it is recommended for performance reasons to use specific Euler rotation constructors such as Euler\+ZXY(...). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The rotation angle around the x-\/axis in radians.\\
+\hline
+{\em y} & The rotation angle around the y-\/axis in radians.\\
+\hline
+{\em z} & The rotation angle around the z-\/axis in radians.\\
+\hline
+{\em order} & The order in which the rotations are applied.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion representing the Euler angle rotation in the specified order.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a16bc41a22ad7b3919dbd7faa3d64954d}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!Euler@{Euler}}
+\index{Euler@{Euler}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{Euler()}{Euler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a16bc41a22ad7b3919dbd7faa3d64954d} 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} Unity.\+Mathematics.\+quaternion.\+Euler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}}}]{xyz}{, }\item[{Rotation\+Order}]{order}{ = {\ttfamily RotationOrder\+:\+:ZXY}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns a quaternion constructed by first performing 3 rotations around the principal axes in a given order. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. When the rotation order is known at compile time, it is recommended for performance reasons to use specific Euler rotation constructors such as Euler\+ZXY(...). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xyz} & A \doxylink{struct_unity_1_1_mathematics_1_1float3}{float3} vector containing the rotation angles around the x-\/, y-\/ and z-\/axis measures in radians.\\
+\hline
+{\em order} & The order in which the rotations are applied.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion representing the Euler angle rotation in the specified order.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a8e14e8646e179d1263dc702192c123f3}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!EulerXYZ@{EulerXYZ}}
+\index{EulerXYZ@{EulerXYZ}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{EulerXYZ()}{EulerXYZ()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a8e14e8646e179d1263dc702192c123f3} 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} Unity.\+Mathematics.\+quaternion.\+Euler\+XYZ (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{float}]{y}{, }\item[{float}]{z}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns a quaternion constructed by first performing a rotation around the x-\/axis, then the y-\/axis and finally the z-\/axis. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The rotation angle around the x-\/axis in radians.\\
+\hline
+{\em y} & The rotation angle around the y-\/axis in radians.\\
+\hline
+{\em z} & The rotation angle around the z-\/axis in radians.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion representing the Euler angle rotation in x-\/y-\/z order.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_ab73da941533164276bd23d4083d1ab76}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!EulerXYZ@{EulerXYZ}}
+\index{EulerXYZ@{EulerXYZ}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{EulerXYZ()}{EulerXYZ()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_ab73da941533164276bd23d4083d1ab76} 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} Unity.\+Mathematics.\+quaternion.\+Euler\+XYZ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}}}]{xyz}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns a quaternion constructed by first performing a rotation around the x-\/axis, then the y-\/axis and finally the z-\/axis. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xyz} & A \doxylink{struct_unity_1_1_mathematics_1_1float3}{float3} vector containing the rotation angles around the x-\/, y-\/ and z-\/axis measures in radians.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion representing the Euler angle rotation in x-\/y-\/z order.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_acdcca0cdcc75211d318518f50fcf920e}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!EulerXZY@{EulerXZY}}
+\index{EulerXZY@{EulerXZY}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{EulerXZY()}{EulerXZY()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_acdcca0cdcc75211d318518f50fcf920e} 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} Unity.\+Mathematics.\+quaternion.\+Euler\+XZY (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{float}]{y}{, }\item[{float}]{z}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns a quaternion constructed by first performing a rotation around the x-\/axis, then the z-\/axis and finally the y-\/axis. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The rotation angle around the x-\/axis in radians.\\
+\hline
+{\em y} & The rotation angle around the y-\/axis in radians.\\
+\hline
+{\em z} & The rotation angle around the z-\/axis in radians.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion representing the Euler angle rotation in x-\/z-\/y order.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a7755978ebea44a73db7cf7588e7c9bde}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!EulerXZY@{EulerXZY}}
+\index{EulerXZY@{EulerXZY}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{EulerXZY()}{EulerXZY()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a7755978ebea44a73db7cf7588e7c9bde} 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} Unity.\+Mathematics.\+quaternion.\+Euler\+XZY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}}}]{xyz}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns a quaternion constructed by first performing a rotation around the x-\/axis, then the z-\/axis and finally the y-\/axis. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xyz} & A \doxylink{struct_unity_1_1_mathematics_1_1float3}{float3} vector containing the rotation angles around the x-\/, y-\/ and z-\/axis measures in radians.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion representing the Euler angle rotation in x-\/z-\/y order.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a5f16f0b9a8849b3fc6274b7be3ca1da8}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!EulerYXZ@{EulerYXZ}}
+\index{EulerYXZ@{EulerYXZ}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{EulerYXZ()}{EulerYXZ()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a5f16f0b9a8849b3fc6274b7be3ca1da8} 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} Unity.\+Mathematics.\+quaternion.\+Euler\+YXZ (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{float}]{y}{, }\item[{float}]{z}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns a quaternion constructed by first performing a rotation around the y-\/axis, then the x-\/axis and finally the z-\/axis. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The rotation angle around the x-\/axis in radians.\\
+\hline
+{\em y} & The rotation angle around the y-\/axis in radians.\\
+\hline
+{\em z} & The rotation angle around the z-\/axis in radians.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion representing the Euler angle rotation in y-\/x-\/z order.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a9a2dab55476f1d00dc67469c9bdef921}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!EulerYXZ@{EulerYXZ}}
+\index{EulerYXZ@{EulerYXZ}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{EulerYXZ()}{EulerYXZ()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a9a2dab55476f1d00dc67469c9bdef921} 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} Unity.\+Mathematics.\+quaternion.\+Euler\+YXZ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}}}]{xyz}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns a quaternion constructed by first performing a rotation around the y-\/axis, then the x-\/axis and finally the z-\/axis. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xyz} & A \doxylink{struct_unity_1_1_mathematics_1_1float3}{float3} vector containing the rotation angles around the x-\/, y-\/ and z-\/axis measures in radians.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion representing the Euler angle rotation in y-\/x-\/z order.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a47752893158b36353dcf74a8695be632}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!EulerYZX@{EulerYZX}}
+\index{EulerYZX@{EulerYZX}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{EulerYZX()}{EulerYZX()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a47752893158b36353dcf74a8695be632} 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} Unity.\+Mathematics.\+quaternion.\+Euler\+YZX (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{float}]{y}{, }\item[{float}]{z}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns a quaternion constructed by first performing a rotation around the y-\/axis, then the z-\/axis and finally the x-\/axis. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The rotation angle around the x-\/axis in radians.\\
+\hline
+{\em y} & The rotation angle around the y-\/axis in radians.\\
+\hline
+{\em z} & The rotation angle around the z-\/axis in radians.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion representing the Euler angle rotation in y-\/z-\/x order.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a953d568b38473e1e140c8717e63a429a}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!EulerYZX@{EulerYZX}}
+\index{EulerYZX@{EulerYZX}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{EulerYZX()}{EulerYZX()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a953d568b38473e1e140c8717e63a429a} 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} Unity.\+Mathematics.\+quaternion.\+Euler\+YZX (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}}}]{xyz}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns a quaternion constructed by first performing a rotation around the y-\/axis, then the z-\/axis and finally the x-\/axis. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xyz} & A \doxylink{struct_unity_1_1_mathematics_1_1float3}{float3} vector containing the rotation angles around the x-\/, y-\/ and z-\/axis measures in radians.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion representing the Euler angle rotation in y-\/z-\/x order.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a3e76508b218e63c73a10502e72e997bc}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!EulerZXY@{EulerZXY}}
+\index{EulerZXY@{EulerZXY}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{EulerZXY()}{EulerZXY()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a3e76508b218e63c73a10502e72e997bc} 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} Unity.\+Mathematics.\+quaternion.\+Euler\+ZXY (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{float}]{y}{, }\item[{float}]{z}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns a quaternion constructed by first performing a rotation around the z-\/axis, then the x-\/axis and finally the y-\/axis. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. This is the default order rotation order in \doxylink{namespace_unity}{Unity}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The rotation angle around the x-\/axis in radians.\\
+\hline
+{\em y} & The rotation angle around the y-\/axis in radians.\\
+\hline
+{\em z} & The rotation angle around the z-\/axis in radians.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion representing the Euler angle rotation in z-\/x-\/y order.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a777ab15cbfb5fac4b345893bfe350285}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!EulerZXY@{EulerZXY}}
+\index{EulerZXY@{EulerZXY}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{EulerZXY()}{EulerZXY()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a777ab15cbfb5fac4b345893bfe350285} 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} Unity.\+Mathematics.\+quaternion.\+Euler\+ZXY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}}}]{xyz}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns a quaternion constructed by first performing a rotation around the z-\/axis, then the x-\/axis and finally the y-\/axis. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. This is the default order rotation order in \doxylink{namespace_unity}{Unity}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xyz} & A \doxylink{struct_unity_1_1_mathematics_1_1float3}{float3} vector containing the rotation angles around the x-\/, y-\/ and z-\/axis measures in radians.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion representing the Euler angle rotation in z-\/x-\/y order.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a091e847836d3e769099fb639a829a289}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!EulerZYX@{EulerZYX}}
+\index{EulerZYX@{EulerZYX}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{EulerZYX()}{EulerZYX()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a091e847836d3e769099fb639a829a289} 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} Unity.\+Mathematics.\+quaternion.\+Euler\+ZYX (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{float}]{y}{, }\item[{float}]{z}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns a quaternion constructed by first performing a rotation around the z-\/axis, then the y-\/axis and finally the x-\/axis. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The rotation angle around the x-\/axis in radians.\\
+\hline
+{\em y} & The rotation angle around the y-\/axis in radians.\\
+\hline
+{\em z} & The rotation angle around the z-\/axis in radians.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion representing the Euler angle rotation in z-\/y-\/x order.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a84f134c034172fe6eae60f4837ba1376}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!EulerZYX@{EulerZYX}}
+\index{EulerZYX@{EulerZYX}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{EulerZYX()}{EulerZYX()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a84f134c034172fe6eae60f4837ba1376} 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} Unity.\+Mathematics.\+quaternion.\+Euler\+ZYX (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}}}]{xyz}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns a quaternion constructed by first performing a rotation around the z-\/axis, then the y-\/axis and finally the x-\/axis. All rotation angles are in radians and clockwise when looking along the rotation axis towards the origin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xyz} & A \doxylink{struct_unity_1_1_mathematics_1_1float3}{float3} vector containing the rotation angles around the x-\/, y-\/ and z-\/axis measures in radians.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion representing the Euler angle rotation in z-\/y-\/x order.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a544a7384976f5068eb68bfde572b5854}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!GetHashCode@{GetHashCode}}
+\index{GetHashCode@{GetHashCode}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{GetHashCode()}{GetHashCode()}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a544a7384976f5068eb68bfde572b5854} 
+override int Unity.\+Mathematics.\+quaternion.\+Get\+Hash\+Code (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a hash code for the quaternion. 
+
+\begin{DoxyReturn}{Returns}
+The hash code of the quaternion.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a2d27b347dd6671090955076065094300}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!LookRotation@{LookRotation}}
+\index{LookRotation@{LookRotation}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{LookRotation()}{LookRotation()}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a2d27b347dd6671090955076065094300} 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} Unity.\+Mathematics.\+quaternion.\+Look\+Rotation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}}}]{forward}{, }\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}}}]{up}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns a quaternion view rotation given a unit length forward vector and a unit length up vector. The two input vectors are assumed to be unit length and not collinear. If these assumptions are not met use \doxylink{struct_unity_1_1_mathematics_1_1float3x3_a39848cf4fd4ccbfa3d319bbf3d0ac6db}{float3x3.\+Look\+Rotation\+Safe} instead. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em forward} & The view forward direction.\\
+\hline
+{\em up} & The view up direction.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion view rotation.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a4d3cbe42b21f11b120b9d40231ca2f59}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!LookRotationSafe@{LookRotationSafe}}
+\index{LookRotationSafe@{LookRotationSafe}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{LookRotationSafe()}{LookRotationSafe()}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a4d3cbe42b21f11b120b9d40231ca2f59} 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} Unity.\+Mathematics.\+quaternion.\+Look\+Rotation\+Safe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}}}]{forward}{, }\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}}}]{up}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns a quaternion view rotation given a forward vector and an up vector. The two input vectors are not assumed to be unit length. If the magnitude of either of the vectors is so extreme that the calculation cannot be carried out reliably or the vectors are collinear, the identity will be returned instead. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em forward} & The view forward direction.\\
+\hline
+{\em up} & The view up direction.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion view rotation or the identity quaternion.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a639d87ee2f6a58c811ed53d217f4c981}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!operator Quaternion@{operator Quaternion}}
+\index{operator Quaternion@{operator Quaternion}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{operator Quaternion()}{operator Quaternion()}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a639d87ee2f6a58c811ed53d217f4c981} 
+static implicit Unity.\+Mathematics.\+quaternion.\+operator Quaternion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}}}]{q}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Converts a quaternion to Quaternion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & quaternion to convert.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The converted Quaternion.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a82d68d92d166fe0a5b277bdf8a5cef98}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!operator quaternion@{operator quaternion}}
+\index{operator quaternion@{operator quaternion}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{operator quaternion()}{operator quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a82d68d92d166fe0a5b277bdf8a5cef98} 
+static implicit Unity.\+Mathematics.\+quaternion.\+operator \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float4}{float4}}}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Implicitly converts a \doxylink{struct_unity_1_1_mathematics_1_1float4}{float4} vector to a quaternion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & The quaternion xyzw component values.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion constructed from a \doxylink{struct_unity_1_1_mathematics_1_1float4}{float4} vector.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_ad20ce568b2859c68dda7bee1ae498e22}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!operator quaternion@{operator quaternion}}
+\index{operator quaternion@{operator quaternion}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{operator quaternion()}{operator quaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_ad20ce568b2859c68dda7bee1ae498e22} 
+static implicit Unity.\+Mathematics.\+quaternion.\+operator \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} (\begin{DoxyParamCaption}\item[{Quaternion}]{q}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Converts a Quaternion to quaternion. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & Quaternion to convert.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The converted quaternion.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a6504757da007966ca797c421f21194db}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!RotateX@{RotateX}}
+\index{RotateX@{RotateX}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{RotateX()}{RotateX()}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a6504757da007966ca797c421f21194db} 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} Unity.\+Mathematics.\+quaternion.\+RotateX (\begin{DoxyParamCaption}\item[{float}]{angle}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns a quaternion that rotates around the x-\/axis by a given number of radians. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & The clockwise rotation angle when looking along the x-\/axis towards the origin in radians.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion representing a rotation around the x-\/axis.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a050b6c80ddcd1a081b9e84291e34b081}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!RotateY@{RotateY}}
+\index{RotateY@{RotateY}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{RotateY()}{RotateY()}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a050b6c80ddcd1a081b9e84291e34b081} 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} Unity.\+Mathematics.\+quaternion.\+RotateY (\begin{DoxyParamCaption}\item[{float}]{angle}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns a quaternion that rotates around the y-\/axis by a given number of radians. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & The clockwise rotation angle when looking along the y-\/axis towards the origin in radians.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion representing a rotation around the y-\/axis.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a4affde3192081a4cb720269fcbe7707e}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!RotateZ@{RotateZ}}
+\index{RotateZ@{RotateZ}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{RotateZ()}{RotateZ()}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a4affde3192081a4cb720269fcbe7707e} 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} Unity.\+Mathematics.\+quaternion.\+RotateZ (\begin{DoxyParamCaption}\item[{float}]{angle}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns a quaternion that rotates around the z-\/axis by a given number of radians. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & The clockwise rotation angle when looking along the z-\/axis towards the origin in radians.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The quaternion representing a rotation around the z-\/axis.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_a5be20b33e78d0888cc793aa27f20545f}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!ToString@{ToString}}
+\index{ToString@{ToString}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_a5be20b33e78d0888cc793aa27f20545f} 
+override string Unity.\+Mathematics.\+quaternion.\+To\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a string representation of the quaternion. 
+
+\begin{DoxyReturn}{Returns}
+The string representation of the quaternion.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1quaternion_aa601c353c82d8dbfba69371139b31413}\index{Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}!ToString@{ToString}}
+\index{ToString@{ToString}!Unity.Mathematics.quaternion@{Unity.Mathematics.quaternion}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1quaternion_aa601c353c82d8dbfba69371139b31413} 
+string Unity.\+Mathematics.\+quaternion.\+To\+String (\begin{DoxyParamCaption}\item[{string}]{format}{, }\item[{IFormat\+Provider}]{format\+Provider}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a string representation of the quaternion using a specified format and culture-\/specific format information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & The format string.\\
+\hline
+{\em format\+Provider} & The format provider to use during string formatting.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The formatted string representation of the quaternion.
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+mathematics@1.\+2.\+6/\+Unity.\+Mathematics/math\+\_\+unity\+\_\+conversion.\+cs\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+mathematics@1.\+2.\+6/\+Unity.\+Mathematics/quaternion.\+cs\end{DoxyCompactItemize}

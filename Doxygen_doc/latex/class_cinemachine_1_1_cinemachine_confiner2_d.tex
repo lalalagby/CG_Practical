@@ -1,0 +1,141 @@
+\doxysection{Cinemachine.\+Cinemachine\+Confiner2D Class Reference}
+\hypertarget{class_cinemachine_1_1_cinemachine_confiner2_d}{}\label{class_cinemachine_1_1_cinemachine_confiner2_d}\index{Cinemachine.CinemachineConfiner2D@{Cinemachine.CinemachineConfiner2D}}
+Inheritance diagram for Cinemachine.\+Cinemachine\+Confiner2D\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_cinemachine_1_1_cinemachine_confiner2_d}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_confiner2_d_a551790c1510de3f114b3396833bad2de}\label{class_cinemachine_1_1_cinemachine_confiner2_d_a551790c1510de3f114b3396833bad2de} 
+void {\bfseries Invalidate\+Cache} ()
+\begin{DoxyCompactList}\small\item\em Invalidates cache and consequently trigger a rebake at next iteration. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_confiner2_d_a07dbf61a34fa2a24e1bf01e69c293d48}{Validate\+Cache}} (float camera\+Aspect\+Ratio)
+\begin{DoxyCompactList}\small\item\em Validates cache. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension}{Cinemachine.\+Cinemachine\+Extension}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_ab1cc3fb8f3edbcb9eb6a4aa96f998170}{Pre\+Pipeline\+Mutate\+Camera\+State\+Callback}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} vcam, ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} cur\+State, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Override this to do such things as offset the Referece\+Look\+At. Base class implementation does nothing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_ac896b83e871cb82b7a9669d07ac23f0d}{Invoke\+Post\+Pipeline\+Stage\+Callback}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} vcam, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}} stage, ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} state, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Legacy support. This is only here to avoid changing the API to make \doxylink{class_cinemachine_1_1_cinemachine_extension_a29d31e35cf1e1fee15d923eed7eeda43}{Post\+Pipeline\+Stage\+Callback()} public. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_ae0ca22a4b7cc143ac024ce70b196ef36}{On\+Target\+Object\+Warped}} (Transform target, Vector3 position\+Delta)
+\begin{DoxyCompactList}\small\item\em This is called to notify the extension that a target got warped, so that the extension can update its internal state to make the camera also warp seamlessy. Base class implementation does nothing. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_abfa0892159a67a17019163eca0802d1f}{Force\+Camera\+Position}} (Vector3 pos, Quaternion rot)
+\begin{DoxyCompactList}\small\item\em Force the virtual camera to assume a given position and orientation. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a6ff5692b6c0348f319da017ee4573594}{On\+Transition\+From\+Camera}} (\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} from\+Cam, Vector3 world\+Up, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Notification that this virtual camera is going live. Base class implementation must be called by any overridden method. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a539ec5013baf5d36cfd2bc98ae7a3248}{Get\+Max\+Damp\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Report maximum damping time needed for this extension. Only used in editor for timeline scrubbing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_confiner2_d_a7d322dce819e866e2e9ec579dce4b73b}\label{class_cinemachine_1_1_cinemachine_confiner2_d_a7d322dce819e866e2e9ec579dce4b73b} 
+Collider2D {\bfseries m\+\_\+\+Bounding\+Shape2D}
+\begin{DoxyCompactList}\small\item\em The 2D shape within which the camera is to be contained. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_confiner2_d_a942a57988453ac77378ad6f457a4c972}\label{class_cinemachine_1_1_cinemachine_confiner2_d_a942a57988453ac77378ad6f457a4c972} 
+float {\bfseries m\+\_\+\+Damping}
+\begin{DoxyCompactList}\small\item\em Damping applied automatically around corners to avoid jumps. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_confiner2_d_ae0218e3bec270acbf6ccae20bd4ef0d2}\label{class_cinemachine_1_1_cinemachine_confiner2_d_ae0218e3bec270acbf6ccae20bd4ef0d2} 
+float {\bfseries m\+\_\+\+Max\+Window\+Size}
+\begin{DoxyCompactList}\small\item\em To optimize computation and memory costs, set this to the largest view size that the camera is expected to have. The confiner will not compute a polygon cache for frustum sizes larger than this. This refers to the size in world units of the frustum at the confiner plane (for orthographic cameras, this is just the orthographic size). If set to 0, then this parameter is ignored and a polygon cache will be calculated for all potential window sizes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_confiner2_d_a84b85d7ec33c07c9b123bce567b62931}{Post\+Pipeline\+Stage\+Callback}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} vcam, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}} stage, ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} state, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Callback to do the camera confining. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension}{Cinemachine.\+Cinemachine\+Extension}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Awake} ()
+\begin{DoxyCompactList}\small\item\em Connect to virtual camera pipeline. Override implementations must call this base implementation. \end{DoxyCompactList}\item 
+virtual void {\bfseries On\+Enable} ()
+\begin{DoxyCompactList}\small\item\em Does nothing. It\textquotesingle{}s here for the little checkbox in the inspector. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_adf1df72db4c68b49f91c2685470b80ef}{On\+Destroy}} ()
+\begin{DoxyCompactList}\small\item\em Disconnect from virtual camera pipeline. Override implementations must call this base implementation. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a65b00ddb064ec30c6e8a53082868befe}{Connect\+To\+Vcam}} (bool connect)
+\begin{DoxyCompactList}\small\item\em Connect to virtual camera. Implementation must be safe to be called redundantly. Override implementations must call this base implementation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a29d31e35cf1e1fee15d923eed7eeda43}{Post\+Pipeline\+Stage\+Callback}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} vcam, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}} stage, ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} state, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em This callback will be called after the virtual camera has implemented each stage in the pipeline. This method may modify the referenced state. If delta\+Time less than 0, reset all state info and perform no damping. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_abfd25e075e45a038b59e17ac7b55dc02}{Get\+Extra\+State$<$ T $>$}} (\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} vcam)
+\begin{DoxyCompactList}\small\item\em Because extensions can be placed on manager cams and will in that case be called for all the vcam children, vcam-\/specific state information should be stored here. Just define a class to hold your state info and use it exclusively when calling this. \end{DoxyCompactList}\item 
+List$<$ T $>$ \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a97f9c52f94e138ecefda901f891b0966}{Get\+All\+Extra\+States$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em Inefficient method to get all extra state info for all vcams. Intended for \doxylink{namespace_cinemachine_1_1_editor}{Editor} use only, not runtime! \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension}{Cinemachine.\+Cinemachine\+Extension}}}
+\begin{DoxyCompactItemize}
+\item 
+const float {\bfseries Epsilon} = Utility.\+Unity\+Vector\+Extensions.\+Epsilon
+\begin{DoxyCompactList}\small\item\em Useful constant for very small floats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension}{Cinemachine.\+Cinemachine\+Extension}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} {\bfseries Virtual\+Camera}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{class_cinemachine_1_1_cinemachine_virtual_camera}{Cinemachine\+Virtual\+Camera} to which this extension is attached. \end{DoxyCompactList}\item 
+virtual bool {\bfseries Requires\+User\+Input}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extensions that require user input should implement this and return true. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An add-\/on module for \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera that post-\/processes the final position of the virtual camera. It will confine the camera\textquotesingle{}s position such that the screen edges stay within a shape defined by a 2D polygon. This will work for orthographic or perspective cameras, provided that the camera\textquotesingle{}s forward vector remains parallel to the bounding shape\textquotesingle{}s normal, i.\+e. that the camera is looking straight at the polygon, and not obliquely at it. 
+
+When confining the camera, the camera\textquotesingle{}s view size at the polygon plane is considered, and also its aspect ratio. Based on this information and the input polygon, a second (smaller) polygon is computed to which the camera\textquotesingle{}s transform is constrained. Computation of this secondary polygon is nontrivial and expensive, so it should be done only when absolutely necessary. 
+
+The cached secondary polygon needs to be recomputed in the following circumstances\+: 
+\begin{DoxyItemize}
+\item when the input polygon\textquotesingle{}s points change 
+\item when the input polygon is non-\/uniformly scaled 
+\item when the input polygon is rotated 
+\end{DoxyItemize}For efficiency reasons, \doxylink{namespace_cinemachine}{Cinemachine} will not automatically regenerate the inner polygon in these cases, and it is the responsibility of the client to call the \doxylink{class_cinemachine_1_1_cinemachine_confiner2_d_a551790c1510de3f114b3396833bad2de}{Invalidate\+Cache()} method to trigger the recalculation. An inspector button is also provided for this purpose. 
+
+If the input polygon scales uniformly or translates, the cache remains valid. If the polygon rotates, then the cache degrades in quality (more or less depending on the aspect ratio -\/ it\textquotesingle{}s better if the ratio is close to 1\+:1) but can still be used. Regenerating it will eliminate the imperfections. 
+
+The cached secondary polygon is not a single polygon, but rather a family of polygons from which a member is chosen depending on the current size of the camera view. The number of polygons in this family will depend on the complexity of the input polygon, and the maximum expected camera view size. The Max\+Ortho\+Size property is provided to give a hint to the algorithm to stop generating polygons for camera view sizes larger than the one specified. This can represent a substantial cost saving when regenerating the cache, so it is a good idea to set it carefully. Leaving it at 0 will cause the maximum number of polygons to be generated. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_confiner2_d_a84b85d7ec33c07c9b123bce567b62931}\index{Cinemachine.CinemachineConfiner2D@{Cinemachine.CinemachineConfiner2D}!PostPipelineStageCallback@{PostPipelineStageCallback}}
+\index{PostPipelineStageCallback@{PostPipelineStageCallback}!Cinemachine.CinemachineConfiner2D@{Cinemachine.CinemachineConfiner2D}}
+\doxysubsubsection{\texorpdfstring{PostPipelineStageCallback()}{PostPipelineStageCallback()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_confiner2_d_a84b85d7ec33c07c9b123bce567b62931} 
+override void Cinemachine.\+Cinemachine\+Confiner2\+D.\+Post\+Pipeline\+Stage\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}}}]{vcam}{, }\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}}}]{stage}{, }\item[{ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}}}]{state}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Callback to do the camera confining. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vcam} & The virtual camera being processed\\
+\hline
+{\em stage} & The current pipeline stage\\
+\hline
+{\em state} & The current virtual camera state\\
+\hline
+{\em delta\+Time} & The current applicable delta\+Time\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cinemachine_1_1_cinemachine_confiner2_d_a07dbf61a34fa2a24e1bf01e69c293d48}\index{Cinemachine.CinemachineConfiner2D@{Cinemachine.CinemachineConfiner2D}!ValidateCache@{ValidateCache}}
+\index{ValidateCache@{ValidateCache}!Cinemachine.CinemachineConfiner2D@{Cinemachine.CinemachineConfiner2D}}
+\doxysubsubsection{\texorpdfstring{ValidateCache()}{ValidateCache()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_confiner2_d_a07dbf61a34fa2a24e1bf01e69c293d48} 
+bool Cinemachine.\+Cinemachine\+Confiner2\+D.\+Validate\+Cache (\begin{DoxyParamCaption}\item[{float}]{camera\+Aspect\+Ratio}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Validates cache. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+Aspect\+Ratio} & Aspect ratio of camera.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the cache could be validated. False, otherwise.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Behaviours/Cinemachine\+Confiner2\+D.\+cs\end{DoxyCompactItemize}

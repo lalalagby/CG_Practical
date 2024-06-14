@@ -1,0 +1,259 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Composites.\+Axis\+Composite Class Reference}
+\hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite}{}\label{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite}\index{UnityEngine.InputSystem.Composites.AxisComposite@{UnityEngine.InputSystem.Composites.AxisComposite}}
+
+
+A single axis value computed from one axis that pulls in the \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a46c9c4ee4d8ac87a156e551d222edbf2}{negative} direction (\doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a2765c0f4656dafa515fb6d9c24d6b067}{min\+Value}) and one axis that pulls in the \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_aab856239378e494f61ea6fe85a5974cc}{positive} direction (\doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ab0858ba01c486eada9784a2ff27d9cf5}{max\+Value}).  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Composites.\+Axis\+Composite\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ad00f29814bd35c27ef2bcf7e088eac78}{Which\+Side\+Wins}} \{ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ad00f29814bd35c27ef2bcf7e088eac78a72e608760a087621cc6f67517b2de8eb}{Neither}} = 0
+, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ad00f29814bd35c27ef2bcf7e088eac78a3289297424e01eda5b788c083bbf3147}{Positive}} = 1
+, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ad00f29814bd35c27ef2bcf7e088eac78affb9356ff2b7da85c75c92fa7ea03b8b}{Negative}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em What happens to the value of an \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite}{Axis\+Composite} if both \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_aab856239378e494f61ea6fe85a5974cc}{positive} and \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a46c9c4ee4d8ac87a156e551d222edbf2}{negative} are actuated at the same time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_aad6153fce46b3a87e8c9511805c8b671}\label{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_aad6153fce46b3a87e8c9511805c8b671} 
+override float {\bfseries Read\+Value} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context)
+\item 
+override float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a398d33e69c44ea183cb401d863a77df5}{Evaluate\+Magnitude}} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context)
+\begin{DoxyCompactList}\small\item\em Determine the current level of actuation of the composite.
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Callback context for the binding composite. Use this to access the values supplied by part bindings.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+This method by default returns -\/1, meaning that the composite does not support magnitudes. You can override the method to add support for magnitudes.
+
+See \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Input\+Control.\+Evaluate\+Magnitude()} for details of how magnitudes work.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite}{Unity\+Engine.\+Input\+System.\+Input\+Binding\+Composite$<$ float $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+unsafe void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a6618d178c73466acd78057ffef7a6cf8}{Read\+Value}} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context, void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size)
+\begin{DoxyCompactList}\small\item\em Read a value from the composite without having to know the value type (unlike \doxylink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a2c23901dcc819e76109feadf9171fad0}{Input\+Binding\+Composite$<$\+TValue$>$.\+Read\+Value(ref Input\+Binding\+Composite\+Context)} and without allocating GC heap memory (unlike \doxylink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a379755bf07c780ac75f8452456ec92d6}{Read\+Value\+As\+Object}). \end{DoxyCompactList}\item 
+TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a2c23901dcc819e76109feadf9171fad0}{Read\+Value}} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context)
+\begin{DoxyCompactList}\small\item\em Read a value for the composite given the supplied context. \end{DoxyCompactList}\item 
+override unsafe void {\bfseries Read\+Value} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context, void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size)
+\item 
+object \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a379755bf07c780ac75f8452456ec92d6}{Read\+Value\+As\+Object}} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context)
+\begin{DoxyCompactList}\small\item\em Read the value of the composite as a boxed object. This allows reading the value without having to know the value type and without having to deal with raw byte buffers. \end{DoxyCompactList}\item 
+override unsafe object {\bfseries Read\+Value\+As\+Object} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a46c9c4ee4d8ac87a156e551d222edbf2}{negative}} = 0
+\begin{DoxyCompactList}\small\item\em Binding for the axis input that controls the negative \mbox{[}\doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a2765c0f4656dafa515fb6d9c24d6b067}{min\+Value}..0\mbox{]} direction of the combined axis. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_aab856239378e494f61ea6fe85a5974cc}{positive}} = 0
+\begin{DoxyCompactList}\small\item\em Binding for the axis input that controls the positive \mbox{[}0..\doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ab0858ba01c486eada9784a2ff27d9cf5}{max\+Value}\mbox{]} direction of the combined axis. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a2765c0f4656dafa515fb6d9c24d6b067}{min\+Value}} = -\/1
+\begin{DoxyCompactList}\small\item\em The lower bound that the axis is limited to. -\/1 by default. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ab0858ba01c486eada9784a2ff27d9cf5}{max\+Value}} = 1
+\begin{DoxyCompactList}\small\item\em The upper bound that the axis is limited to. 1 by default. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a3674788391b30c5ccf1f1dbb94a3c608}\label{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a3674788391b30c5ccf1f1dbb94a3c608} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ad00f29814bd35c27ef2bcf7e088eac78}{Which\+Side\+Wins}} {\bfseries which\+Side\+Wins} = \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ad00f29814bd35c27ef2bcf7e088eac78a72e608760a087621cc6f67517b2de8eb}{Which\+Side\+Wins.\+Neither}}
+\begin{DoxyCompactList}\small\item\em If both the \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_aab856239378e494f61ea6fe85a5974cc}{positive} and \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a46c9c4ee4d8ac87a156e551d222edbf2}{negative} button are actuated, this determines which value is returned from the composite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a440bd70b70b41b28daaee1c0f8f282eb}\label{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a440bd70b70b41b28daaee1c0f8f282eb} 
+float {\bfseries mid\+Point}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The value that is returned if the composite is in a neutral position, that is, if neither \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_aab856239378e494f61ea6fe85a5974cc}{positive} nor \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a46c9c4ee4d8ac87a156e551d222edbf2}{negative} are actuated or if \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a3674788391b30c5ccf1f1dbb94a3c608}{which\+Side\+Wins} is set to \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ad00f29814bd35c27ef2bcf7e088eac78a72e608760a087621cc6f67517b2de8eb}{Which\+Side\+Wins.\+Neither} and both \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_aab856239378e494f61ea6fe85a5974cc}{positive} and \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a46c9c4ee4d8ac87a156e551d222edbf2}{negative} are actuated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite}{Unity\+Engine.\+Input\+System.\+Input\+Binding\+Composite$<$ float $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+Type \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a3b812de2f195f2ddd939a0056a6c1b28}{value\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The type of value returned by the composite. \end{DoxyCompactList}\item 
+override Type \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_ac097708dd5d15f524c344185817355ed}{value\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The type of value returned by the composite, i.\+e. {\ttfamily typeof(\+TValue)}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_ab6494b91f1cec7c426761191e9d09771}{value\+Size\+In\+Bytes}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Size of a value read by \doxylink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a6618d178c73466acd78057ffef7a6cf8}{Read\+Value}. \end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_afc790d6ffc72aeb4d7b7b67084d08371}{value\+Size\+In\+Bytes}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The size of values returned by the composite, i.\+e. {\ttfamily sizeof(\+TValue)}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite}{Unity\+Engine.\+Input\+System.\+Input\+Binding\+Composite$<$ float $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a31e178f5b15d877ea1870e068aed093f}{Get\+Expected\+Control\+Layout\+Name}} (string composite, string part)
+\begin{DoxyCompactList}\small\item\em Return the name of the control layout that is expected for the given part (e.\+g. "{}\+Up"{}) on the given composite (e.\+g. "{}\+Dpad"{}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite}{Unity\+Engine.\+Input\+System.\+Input\+Binding\+Composite$<$ float $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a55e91ef05e6821b154f4d89bcede5adf}{Finish\+Setup}} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context)
+\begin{DoxyCompactList}\small\item\em Called after binding resolution for an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map} is complete. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A single axis value computed from one axis that pulls in the \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a46c9c4ee4d8ac87a156e551d222edbf2}{negative} direction (\doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a2765c0f4656dafa515fb6d9c24d6b067}{min\+Value}) and one axis that pulls in the \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_aab856239378e494f61ea6fe85a5974cc}{positive} direction (\doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ab0858ba01c486eada9784a2ff27d9cf5}{max\+Value}). 
+
+The limits of the axis are determined by \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a2765c0f4656dafa515fb6d9c24d6b067}{min\+Value} and \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ab0858ba01c486eada9784a2ff27d9cf5}{max\+Value}. By default, they are set to {\ttfamily \mbox{[}-\/1..1\mbox{]}}. The values can be set as parameters.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ action\ =\ \textcolor{keyword}{new}\ InputAction();}
+\DoxyCodeLine{action.AddCompositeBinding(\textcolor{stringliteral}{"{}Axis(minValue=0,maxValue=2"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Negative"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/a"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Positive"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/d"{}});}
+
+\end{DoxyCode}
+ 
+
+If both axes are actuated at the same time, the behavior depends on \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a3674788391b30c5ccf1f1dbb94a3c608}{which\+Side\+Wins}. By default, neither side will win (\doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ad00f29814bd35c27ef2bcf7e088eac78a72e608760a087621cc6f67517b2de8eb}{Which\+Side\+Wins.\+Neither}) and the result will be 0 (or, more precisely, the midpoint between \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a2765c0f4656dafa515fb6d9c24d6b067}{min\+Value} and \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ab0858ba01c486eada9784a2ff27d9cf5}{max\+Value}). This can be customized to make the positive side win (\doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ad00f29814bd35c27ef2bcf7e088eac78a3289297424e01eda5b788c083bbf3147}{Which\+Side\+Wins.\+Positive}) or the negative one (\doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ad00f29814bd35c27ef2bcf7e088eac78affb9356ff2b7da85c75c92fa7ea03b8b}{Which\+Side\+Wins.\+Negative}).
+
+This is useful, for example, in a driving game where break should cancel out accelerate. By binding \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a46c9c4ee4d8ac87a156e551d222edbf2}{negative} to the break control(s) and \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_aab856239378e494f61ea6fe85a5974cc}{positive} to the acceleration control(s), and setting \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a3674788391b30c5ccf1f1dbb94a3c608}{which\+Side\+Wins} to \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ad00f29814bd35c27ef2bcf7e088eac78affb9356ff2b7da85c75c92fa7ea03b8b}{Which\+Side\+Wins.\+Negative}, if the break button is pressed, it will always cause the acceleration button to be ignored.
+
+The actual {\itshape absolute} values of \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a46c9c4ee4d8ac87a156e551d222edbf2}{negative} and \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_aab856239378e494f61ea6fe85a5974cc}{positive} are used to scale \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a2765c0f4656dafa515fb6d9c24d6b067}{min\+Value} and \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ab0858ba01c486eada9784a2ff27d9cf5}{max\+Value} respectively. So if, for example, \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_aab856239378e494f61ea6fe85a5974cc}{positive} is bound to \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a51aa5a7eb8d09580ad0287e1655dd1de}{Gamepad.\+right\+Trigger} and the trigger is at a value of 0.\+5, then the resulting value is {\ttfamily max\+Value \texorpdfstring{$\ast$}{*} 0.\+5} (the actual formula is {\ttfamily mid\+Point + (max\+Value -\/ mid\+Point) \texorpdfstring{$\ast$}{*} positive}). 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ad00f29814bd35c27ef2bcf7e088eac78}\index{UnityEngine.InputSystem.Composites.AxisComposite@{UnityEngine.InputSystem.Composites.AxisComposite}!WhichSideWins@{WhichSideWins}}
+\index{WhichSideWins@{WhichSideWins}!UnityEngine.InputSystem.Composites.AxisComposite@{UnityEngine.InputSystem.Composites.AxisComposite}}
+\doxysubsubsection{\texorpdfstring{WhichSideWins}{WhichSideWins}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ad00f29814bd35c27ef2bcf7e088eac78} 
+enum \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ad00f29814bd35c27ef2bcf7e088eac78}{Unity\+Engine.\+Input\+System.\+Composites.\+Axis\+Composite.\+Which\+Side\+Wins}}}
+
+
+
+What happens to the value of an \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite}{Axis\+Composite} if both \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_aab856239378e494f61ea6fe85a5974cc}{positive} and \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a46c9c4ee4d8ac87a156e551d222edbf2}{negative} are actuated at the same time. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Neither@{Neither}!UnityEngine.InputSystem.Composites.AxisComposite@{UnityEngine.InputSystem.Composites.AxisComposite}}\index{UnityEngine.InputSystem.Composites.AxisComposite@{UnityEngine.InputSystem.Composites.AxisComposite}!Neither@{Neither}}}\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ad00f29814bd35c27ef2bcf7e088eac78a72e608760a087621cc6f67517b2de8eb}\label{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ad00f29814bd35c27ef2bcf7e088eac78} 
+Neither&If both \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_aab856239378e494f61ea6fe85a5974cc}{positive} and \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a46c9c4ee4d8ac87a156e551d222edbf2}{negative} are actuated, the sides cancel each other out and the result is 0. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Positive@{Positive}!UnityEngine.InputSystem.Composites.AxisComposite@{UnityEngine.InputSystem.Composites.AxisComposite}}\index{UnityEngine.InputSystem.Composites.AxisComposite@{UnityEngine.InputSystem.Composites.AxisComposite}!Positive@{Positive}}}\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ad00f29814bd35c27ef2bcf7e088eac78a3289297424e01eda5b788c083bbf3147}\label{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ad00f29814bd35c27ef2bcf7e088eac78} 
+Positive&If both \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_aab856239378e494f61ea6fe85a5974cc}{positive} and \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a46c9c4ee4d8ac87a156e551d222edbf2}{negative} are actuated, the value of \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_aab856239378e494f61ea6fe85a5974cc}{positive} wins and \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a46c9c4ee4d8ac87a156e551d222edbf2}{negative} is ignored. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Negative@{Negative}!UnityEngine.InputSystem.Composites.AxisComposite@{UnityEngine.InputSystem.Composites.AxisComposite}}\index{UnityEngine.InputSystem.Composites.AxisComposite@{UnityEngine.InputSystem.Composites.AxisComposite}!Negative@{Negative}}}\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ad00f29814bd35c27ef2bcf7e088eac78affb9356ff2b7da85c75c92fa7ea03b8b}\label{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ad00f29814bd35c27ef2bcf7e088eac78} 
+Negative&If both \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_aab856239378e494f61ea6fe85a5974cc}{positive} and \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a46c9c4ee4d8ac87a156e551d222edbf2}{negative} are actuated, the value of \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a46c9c4ee4d8ac87a156e551d222edbf2}{negative} wins and \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_aab856239378e494f61ea6fe85a5974cc}{positive} is ignored. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a398d33e69c44ea183cb401d863a77df5}\index{UnityEngine.InputSystem.Composites.AxisComposite@{UnityEngine.InputSystem.Composites.AxisComposite}!EvaluateMagnitude@{EvaluateMagnitude}}
+\index{EvaluateMagnitude@{EvaluateMagnitude}!UnityEngine.InputSystem.Composites.AxisComposite@{UnityEngine.InputSystem.Composites.AxisComposite}}
+\doxysubsubsection{\texorpdfstring{EvaluateMagnitude()}{EvaluateMagnitude()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a398d33e69c44ea183cb401d863a77df5} 
+override float Unity\+Engine.\+Input\+System.\+Composites.\+Axis\+Composite.\+Evaluate\+Magnitude (\begin{DoxyParamCaption}\item[{ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}}}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Determine the current level of actuation of the composite.
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Callback context for the binding composite. Use this to access the values supplied by part bindings.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+This method by default returns -\/1, meaning that the composite does not support magnitudes. You can override the method to add support for magnitudes.
+
+See \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Input\+Control.\+Evaluate\+Magnitude()} for details of how magnitudes work.  
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a91ab7a703dfa5219da6d37b060b801f3}{Unity\+Engine.\+Input\+System.\+Input\+Binding\+Composite$<$ float $>$}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ab0858ba01c486eada9784a2ff27d9cf5}\index{UnityEngine.InputSystem.Composites.AxisComposite@{UnityEngine.InputSystem.Composites.AxisComposite}!maxValue@{maxValue}}
+\index{maxValue@{maxValue}!UnityEngine.InputSystem.Composites.AxisComposite@{UnityEngine.InputSystem.Composites.AxisComposite}}
+\doxysubsubsection{\texorpdfstring{maxValue}{maxValue}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ab0858ba01c486eada9784a2ff27d9cf5} 
+float Unity\+Engine.\+Input\+System.\+Composites.\+Axis\+Composite.\+max\+Value = 1}
+
+
+
+The upper bound that the axis is limited to. 1 by default. 
+
+This value corresponds to the full actuation of the control(s) bound to \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_aab856239378e494f61ea6fe85a5974cc}{positive}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ action\ =\ \textcolor{keyword}{new}\ InputAction();}
+\DoxyCodeLine{action.AddCompositeBinding(\textcolor{stringliteral}{"{}Axis(minValue=0,maxValue=2"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Negative"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/a"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Positive"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/d"{}});}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a2765c0f4656dafa515fb6d9c24d6b067}{min\+Value}, \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_aab856239378e494f61ea6fe85a5974cc}{positive}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a2765c0f4656dafa515fb6d9c24d6b067}\index{UnityEngine.InputSystem.Composites.AxisComposite@{UnityEngine.InputSystem.Composites.AxisComposite}!minValue@{minValue}}
+\index{minValue@{minValue}!UnityEngine.InputSystem.Composites.AxisComposite@{UnityEngine.InputSystem.Composites.AxisComposite}}
+\doxysubsubsection{\texorpdfstring{minValue}{minValue}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a2765c0f4656dafa515fb6d9c24d6b067} 
+float Unity\+Engine.\+Input\+System.\+Composites.\+Axis\+Composite.\+min\+Value = -\/1}
+
+
+
+The lower bound that the axis is limited to. -\/1 by default. 
+
+This value corresponds to the full actuation of the control(s) bound to \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a46c9c4ee4d8ac87a156e551d222edbf2}{negative}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ action\ =\ \textcolor{keyword}{new}\ InputAction();}
+\DoxyCodeLine{action.AddCompositeBinding(\textcolor{stringliteral}{"{}Axis(minValue=0,maxValue=2"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Negative"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/a"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Positive"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/d"{}});}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ab0858ba01c486eada9784a2ff27d9cf5}{max\+Value}, \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a46c9c4ee4d8ac87a156e551d222edbf2}{negative}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a46c9c4ee4d8ac87a156e551d222edbf2}\index{UnityEngine.InputSystem.Composites.AxisComposite@{UnityEngine.InputSystem.Composites.AxisComposite}!negative@{negative}}
+\index{negative@{negative}!UnityEngine.InputSystem.Composites.AxisComposite@{UnityEngine.InputSystem.Composites.AxisComposite}}
+\doxysubsubsection{\texorpdfstring{negative}{negative}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a46c9c4ee4d8ac87a156e551d222edbf2} 
+int Unity\+Engine.\+Input\+System.\+Composites.\+Axis\+Composite.\+negative = 0}
+
+
+
+Binding for the axis input that controls the negative \mbox{[}\doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_a2765c0f4656dafa515fb6d9c24d6b067}{min\+Value}..0\mbox{]} direction of the combined axis. 
+
+This property is automatically assigned by the input system. \Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_aab856239378e494f61ea6fe85a5974cc}\index{UnityEngine.InputSystem.Composites.AxisComposite@{UnityEngine.InputSystem.Composites.AxisComposite}!positive@{positive}}
+\index{positive@{positive}!UnityEngine.InputSystem.Composites.AxisComposite@{UnityEngine.InputSystem.Composites.AxisComposite}}
+\doxysubsubsection{\texorpdfstring{positive}{positive}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_aab856239378e494f61ea6fe85a5974cc} 
+int Unity\+Engine.\+Input\+System.\+Composites.\+Axis\+Composite.\+positive = 0}
+
+
+
+Binding for the axis input that controls the positive \mbox{[}0..\doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite_ab0858ba01c486eada9784a2ff27d9cf5}{max\+Value}\mbox{]} direction of the combined axis. 
+
+This property is automatically assigned by the input system. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Actions/\+Composites/Axis\+Composite.\+cs\end{DoxyCompactItemize}

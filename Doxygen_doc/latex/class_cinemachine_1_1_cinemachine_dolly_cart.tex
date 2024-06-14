@@ -1,0 +1,76 @@
+\doxysection{Cinemachine.\+Cinemachine\+Dolly\+Cart Class Reference}
+\hypertarget{class_cinemachine_1_1_cinemachine_dolly_cart}{}\label{class_cinemachine_1_1_cinemachine_dolly_cart}\index{Cinemachine.CinemachineDollyCart@{Cinemachine.CinemachineDollyCart}}
+
+
+This is a very simple behaviour that constrains its transform to a \doxylink{class_cinemachine_1_1_cinemachine_path}{Cinemachine\+Path}. ~\newline
+ It can be used to animate any objects along a path, or as a Follow target for \doxylink{namespace_cinemachine}{Cinemachine} Virtual Cameras.  
+
+
+Inheritance diagram for Cinemachine.\+Cinemachine\+Dolly\+Cart\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cinemachine_1_1_cinemachine_dolly_cart}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_dolly_cart_a9561fc5e244c9a0afaa93f010e7cdfbe}{Update\+Method}} \{ \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_dolly_cart_a9561fc5e244c9a0afaa93f010e7cdfbea06933067aafd48425d67bcb01bba5cb6}{Update}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_dolly_cart_a9561fc5e244c9a0afaa93f010e7cdfbea9c1ca4069e206318b33ef896d3dd204e}{Fixed\+Update}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_dolly_cart_a9561fc5e244c9a0afaa93f010e7cdfbea2609005edfde618c70f2140bb3e9b7c2}{Late\+Update}}
+ \}
+\begin{DoxyCompactList}\small\item\em This enum defines the options available for the update method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_dolly_cart_ab8bda274220d641ef95e224b014ea5f3}\label{class_cinemachine_1_1_cinemachine_dolly_cart_ab8bda274220d641ef95e224b014ea5f3} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base}{Cinemachine\+Path\+Base}} {\bfseries m\+\_\+\+Path}
+\begin{DoxyCompactList}\small\item\em The path to follow. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_dolly_cart_ac5540a656a19d2a549695fa6b52650ed}\label{class_cinemachine_1_1_cinemachine_dolly_cart_ac5540a656a19d2a549695fa6b52650ed} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_dolly_cart_a9561fc5e244c9a0afaa93f010e7cdfbe}{Update\+Method}} {\bfseries m\+\_\+\+Update\+Method} = \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_dolly_cart_a9561fc5e244c9a0afaa93f010e7cdfbea06933067aafd48425d67bcb01bba5cb6}{Update\+Method.\+Update}}
+\begin{DoxyCompactList}\small\item\em When to move the cart, if Velocity is non-\/zero. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_dolly_cart_aeb34bd9e644a6d3336c34db4d3701fe9}\label{class_cinemachine_1_1_cinemachine_dolly_cart_aeb34bd9e644a6d3336c34db4d3701fe9} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e}{Cinemachine\+Path\+Base.\+Position\+Units}} {\bfseries m\+\_\+\+Position\+Units} = \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69ea0aa6f4210bf373c95eda00232e93cd98}{Cinemachine\+Path\+Base.\+Position\+Units.\+Distance}}
+\begin{DoxyCompactList}\small\item\em How to interpret the Path Position. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_dolly_cart_ad31d9ee2c6fd81d75a9b8b5a37056b05}\label{class_cinemachine_1_1_cinemachine_dolly_cart_ad31d9ee2c6fd81d75a9b8b5a37056b05} 
+float {\bfseries m\+\_\+\+Speed}
+\begin{DoxyCompactList}\small\item\em Move the cart with this speed. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_dolly_cart_a12e4354d421debbf002df87d6fb2a403}\label{class_cinemachine_1_1_cinemachine_dolly_cart_a12e4354d421debbf002df87d6fb2a403} 
+float {\bfseries m\+\_\+\+Position}
+\begin{DoxyCompactList}\small\item\em The cart\textquotesingle{}s current position on the path, in distance units. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is a very simple behaviour that constrains its transform to a \doxylink{class_cinemachine_1_1_cinemachine_path}{Cinemachine\+Path}. ~\newline
+ It can be used to animate any objects along a path, or as a Follow target for \doxylink{namespace_cinemachine}{Cinemachine} Virtual Cameras. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_dolly_cart_a9561fc5e244c9a0afaa93f010e7cdfbe}\index{Cinemachine.CinemachineDollyCart@{Cinemachine.CinemachineDollyCart}!UpdateMethod@{UpdateMethod}}
+\index{UpdateMethod@{UpdateMethod}!Cinemachine.CinemachineDollyCart@{Cinemachine.CinemachineDollyCart}}
+\doxysubsubsection{\texorpdfstring{UpdateMethod}{UpdateMethod}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_dolly_cart_a9561fc5e244c9a0afaa93f010e7cdfbe} 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_dolly_cart_a9561fc5e244c9a0afaa93f010e7cdfbe}{Cinemachine.\+Cinemachine\+Dolly\+Cart.\+Update\+Method}}}
+
+
+
+This enum defines the options available for the update method. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Update@{Update}!Cinemachine.CinemachineDollyCart@{Cinemachine.CinemachineDollyCart}}\index{Cinemachine.CinemachineDollyCart@{Cinemachine.CinemachineDollyCart}!Update@{Update}}}\Hypertarget{class_cinemachine_1_1_cinemachine_dolly_cart_a9561fc5e244c9a0afaa93f010e7cdfbea06933067aafd48425d67bcb01bba5cb6}\label{class_cinemachine_1_1_cinemachine_dolly_cart_a9561fc5e244c9a0afaa93f010e7cdfbe} 
+Update&Updated in normal Mono\+Behaviour Update. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FixedUpdate@{FixedUpdate}!Cinemachine.CinemachineDollyCart@{Cinemachine.CinemachineDollyCart}}\index{Cinemachine.CinemachineDollyCart@{Cinemachine.CinemachineDollyCart}!FixedUpdate@{FixedUpdate}}}\Hypertarget{class_cinemachine_1_1_cinemachine_dolly_cart_a9561fc5e244c9a0afaa93f010e7cdfbea9c1ca4069e206318b33ef896d3dd204e}\label{class_cinemachine_1_1_cinemachine_dolly_cart_a9561fc5e244c9a0afaa93f010e7cdfbe} 
+Fixed\+Update&Updated in sync with the Physics module, in Fixed\+Update. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LateUpdate@{LateUpdate}!Cinemachine.CinemachineDollyCart@{Cinemachine.CinemachineDollyCart}}\index{Cinemachine.CinemachineDollyCart@{Cinemachine.CinemachineDollyCart}!LateUpdate@{LateUpdate}}}\Hypertarget{class_cinemachine_1_1_cinemachine_dolly_cart_a9561fc5e244c9a0afaa93f010e7cdfbea2609005edfde618c70f2140bb3e9b7c2}\label{class_cinemachine_1_1_cinemachine_dolly_cart_a9561fc5e244c9a0afaa93f010e7cdfbe} 
+Late\+Update&Updated in normal Mono\+Behaviour Late\+Update. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Behaviours/Cinemachine\+Dolly\+Cart.\+cs\end{DoxyCompactItemize}

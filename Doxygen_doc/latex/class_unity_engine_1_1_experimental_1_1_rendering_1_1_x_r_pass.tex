@@ -1,0 +1,281 @@
+\doxysection{Unity\+Engine.\+Experimental.\+Rendering.\+XRPass Class Reference}
+\hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass}{}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass}\index{UnityEngine.Experimental.Rendering.XRPass@{UnityEngine.Experimental.Rendering.XRPass}}
+
+
+\doxylink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass}{XRPass} holds the render target information and a list of XRView. XRView contains the parameters required to render (projection and view matrices, viewport, etc) When a pass has 2 views or more, single-\/pass will be active if the platform supports it. To avoid allocating every frame, XRView is a struct and \doxylink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass}{XRPass} is pooled.  
+
+
+
+
+Inherited by Unity\+Engine.\+Rendering.\+Universal.\+XRPass\+Universal.
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a1a2e1c927ca9d368d2d0422d18dd792b}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a1a2e1c927ca9d368d2d0422d18dd792b} 
+{\bfseries XRPass} ()
+\begin{DoxyCompactList}\small\item\em Parameterless constructor. Note\+: in order to avoid GC, the render pipeline should use XRPass.\+Create instead of this method. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_ae200a38dd009db39da6d0f262b7f5560}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_ae200a38dd009db39da6d0f262b7f5560} 
+virtual void {\bfseries Release} ()
+\begin{DoxyCompactList}\small\item\em Default release method. Can be overridden by render pipelines. \end{DoxyCompactList}\item 
+Matrix4x4 \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a7cd44575be9eb67f49194d6300cc2432}{Get\+Proj\+Matrix}} (int view\+Index=0)
+\begin{DoxyCompactList}\small\item\em Returns the projection matrix for a given view. \end{DoxyCompactList}\item 
+Matrix4x4 \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a3315a5fedf0ce8617036c0c0885a3e4e}{Get\+View\+Matrix}} (int view\+Index=0)
+\begin{DoxyCompactList}\small\item\em Returns the view matrix for a given view. \end{DoxyCompactList}\item 
+Rect \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a2fbeee4da42e3a8c083c4a32ce80a27d}{Get\+Viewport}} (int view\+Index=0)
+\begin{DoxyCompactList}\small\item\em Returns the viewport for a given view. \end{DoxyCompactList}\item 
+Mesh \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_ad4040b8cc1173985d647cacb33a16efe}{Get\+Occlusion\+Mesh}} (int view\+Index=0)
+\begin{DoxyCompactList}\small\item\em Returns the occlusion mesh for a given view. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_ac2d694c69ca3bb2956e381c30e3dc054}{Get\+Texture\+Array\+Slice}} (int view\+Index=0)
+\begin{DoxyCompactList}\small\item\em Returns the destination slice index (for texture array) for a given view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a6575055d92b1563edc44e46afcec70e9}{Start\+Single\+Pass}} (Command\+Buffer cmd)
+\begin{DoxyCompactList}\small\item\em Queue up render commands to enable single-\/pass techniques. Note\+: depending on the platform and settings, either single-\/pass instancing or the multiview extension will be used. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a028459cbfa06601bb8489a0c94552224}{Stop\+Single\+Pass}} (Command\+Buffer cmd)
+\begin{DoxyCompactList}\small\item\em Queue up render commands to disable single-\/pass techniques. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a6aaf91da451bd11811b141935567808f}{Render\+Occlusion\+Mesh}} (Command\+Buffer cmd)
+\begin{DoxyCompactList}\small\item\em Generate commands to render the occlusion mesh for this pass. In single-\/pass mode \+: the meshes for all views are combined into one mesh, where the corresponding view index is encoded into each vertex. The keyword "{}\+XR\+\_\+\+OCCLUSION\+\_\+\+MESH\+\_\+\+COMBINED"{} is also enabled when rendering the combined mesh. \end{DoxyCompactList}\item 
+Vector4 \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a210f9e7592350968e1c431b2e60ad84e}{Apply\+XRView\+Center\+Offset}} (Vector2 center)
+\begin{DoxyCompactList}\small\item\em Take a point that is center-\/relative (0.\+5, 0.\+5) and modify it to be placed relative to the view\textquotesingle{}s center instead, respecting the asymmetric FOV (if it is used) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_ac03ae357cab05309e6c31bece2372e4a}{Init\+Base}} (\mbox{\hyperlink{struct_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_create_info}{XRPass\+Create\+Info}} create\+Info)
+\begin{DoxyCompactList}\small\item\em Initialize the base class fields. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass}{XRPass}} \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a8b2370b3f6ab0a80176254d44a07bce2}{Create\+Default}} (\mbox{\hyperlink{struct_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_create_info}{XRPass\+Create\+Info}} create\+Info)
+\begin{DoxyCompactList}\small\item\em Default allocator method for \doxylink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass}{XRPass}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_aeb53b775a96c22a648f9bd9abe43f8aa}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_aeb53b775a96c22a648f9bd9abe43f8aa} 
+bool {\bfseries enabled}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if the pass contains at least one view. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_af267f58188b6f66f0b7956df89e2a240}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_af267f58188b6f66f0b7956df89e2a240} 
+bool {\bfseries supports\+Foveated\+Rendering}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if the pass can use foveated rendering commands. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_afe52e61b91fe647e8f38ea876c096aef}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_afe52e61b91fe647e8f38ea876c096aef} 
+bool {\bfseries copy\+Depth}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If true, the render pipeline is expected to output a valid depth buffer to the render\+Target. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a13fb32f36016f0dc1f16f28a9800d980}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a13fb32f36016f0dc1f16f28a9800d980} 
+int {\bfseries multipass\+Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Index of the pass inside the frame. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_afeb7d0380d23128463d8c5de12d159dd}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_afeb7d0380d23128463d8c5de12d159dd} 
+int {\bfseries culling\+Pass\+Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Index used for culling. It can be shared between multiple passes. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a8122c5b1fb0d41c7f4871a71b563052f}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a8122c5b1fb0d41c7f4871a71b563052f} 
+Render\+Target\+Identifier {\bfseries render\+Target}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Destination render target. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_ab3ba27f1d2781fbc2ebd026b78506c3c}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_ab3ba27f1d2781fbc2ebd026b78506c3c} 
+Render\+Texture\+Descriptor {\bfseries render\+Target\+Desc}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Destination render target descriptor. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a2e75f17ec1b45e50892fa239289c8f53}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a2e75f17ec1b45e50892fa239289c8f53} 
+Scriptable\+Culling\+Parameters {\bfseries culling\+Params}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Parameters used for culling. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a6f57f54e7517679288fd671ebb7774d7}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a6f57f54e7517679288fd671ebb7774d7} 
+int {\bfseries view\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the number of views inside this pass. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_aaec6bf7c7cb69080231c32fb6ea3d4fd}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_aaec6bf7c7cb69080231c32fb6ea3d4fd} 
+bool {\bfseries single\+Pass\+Enabled}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If true, the render pipeline is expected to use single-\/pass techniques to save CPU time. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a35a5771808b6083f4e059a193c298b21}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a35a5771808b6083f4e059a193c298b21} 
+Int\+Ptr {\bfseries foveated\+Rendering\+Info}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Native pointer from the XR plugin to be consumed by Configure\+Foveated\+Rendering. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a1aad2edfb57aa1d39c99e4e25d48e2da}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a1aad2edfb57aa1d39c99e4e25d48e2da} 
+bool {\bfseries has\+Valid\+Occlusion\+Mesh}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if the pass was setup with expected mesh and material. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass}{XRPass} holds the render target information and a list of XRView. XRView contains the parameters required to render (projection and view matrices, viewport, etc) When a pass has 2 views or more, single-\/pass will be active if the platform supports it. To avoid allocating every frame, XRView is a struct and \doxylink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass}{XRPass} is pooled. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a210f9e7592350968e1c431b2e60ad84e}\index{UnityEngine.Experimental.Rendering.XRPass@{UnityEngine.Experimental.Rendering.XRPass}!ApplyXRViewCenterOffset@{ApplyXRViewCenterOffset}}
+\index{ApplyXRViewCenterOffset@{ApplyXRViewCenterOffset}!UnityEngine.Experimental.Rendering.XRPass@{UnityEngine.Experimental.Rendering.XRPass}}
+\doxysubsubsection{\texorpdfstring{ApplyXRViewCenterOffset()}{ApplyXRViewCenterOffset()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a210f9e7592350968e1c431b2e60ad84e} 
+Vector4 Unity\+Engine.\+Experimental.\+Rendering.\+XRPass.\+Apply\+XRView\+Center\+Offset (\begin{DoxyParamCaption}\item[{Vector2}]{center}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Take a point that is center-\/relative (0.\+5, 0.\+5) and modify it to be placed relative to the view\textquotesingle{}s center instead, respecting the asymmetric FOV (if it is used) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em center} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a8b2370b3f6ab0a80176254d44a07bce2}\index{UnityEngine.Experimental.Rendering.XRPass@{UnityEngine.Experimental.Rendering.XRPass}!CreateDefault@{CreateDefault}}
+\index{CreateDefault@{CreateDefault}!UnityEngine.Experimental.Rendering.XRPass@{UnityEngine.Experimental.Rendering.XRPass}}
+\doxysubsubsection{\texorpdfstring{CreateDefault()}{CreateDefault()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a8b2370b3f6ab0a80176254d44a07bce2} 
+static \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass}{XRPass}} Unity\+Engine.\+Experimental.\+Rendering.\+XRPass.\+Create\+Default (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_create_info}{XRPass\+Create\+Info}}}]{create\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Default allocator method for \doxylink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass}{XRPass}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em create\+Info} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_ad4040b8cc1173985d647cacb33a16efe}\index{UnityEngine.Experimental.Rendering.XRPass@{UnityEngine.Experimental.Rendering.XRPass}!GetOcclusionMesh@{GetOcclusionMesh}}
+\index{GetOcclusionMesh@{GetOcclusionMesh}!UnityEngine.Experimental.Rendering.XRPass@{UnityEngine.Experimental.Rendering.XRPass}}
+\doxysubsubsection{\texorpdfstring{GetOcclusionMesh()}{GetOcclusionMesh()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_ad4040b8cc1173985d647cacb33a16efe} 
+Mesh Unity\+Engine.\+Experimental.\+Rendering.\+XRPass.\+Get\+Occlusion\+Mesh (\begin{DoxyParamCaption}\item[{int}]{view\+Index}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the occlusion mesh for a given view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em view\+Index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a7cd44575be9eb67f49194d6300cc2432}\index{UnityEngine.Experimental.Rendering.XRPass@{UnityEngine.Experimental.Rendering.XRPass}!GetProjMatrix@{GetProjMatrix}}
+\index{GetProjMatrix@{GetProjMatrix}!UnityEngine.Experimental.Rendering.XRPass@{UnityEngine.Experimental.Rendering.XRPass}}
+\doxysubsubsection{\texorpdfstring{GetProjMatrix()}{GetProjMatrix()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a7cd44575be9eb67f49194d6300cc2432} 
+Matrix4x4 Unity\+Engine.\+Experimental.\+Rendering.\+XRPass.\+Get\+Proj\+Matrix (\begin{DoxyParamCaption}\item[{int}]{view\+Index}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the projection matrix for a given view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em view\+Index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_ac2d694c69ca3bb2956e381c30e3dc054}\index{UnityEngine.Experimental.Rendering.XRPass@{UnityEngine.Experimental.Rendering.XRPass}!GetTextureArraySlice@{GetTextureArraySlice}}
+\index{GetTextureArraySlice@{GetTextureArraySlice}!UnityEngine.Experimental.Rendering.XRPass@{UnityEngine.Experimental.Rendering.XRPass}}
+\doxysubsubsection{\texorpdfstring{GetTextureArraySlice()}{GetTextureArraySlice()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_ac2d694c69ca3bb2956e381c30e3dc054} 
+int Unity\+Engine.\+Experimental.\+Rendering.\+XRPass.\+Get\+Texture\+Array\+Slice (\begin{DoxyParamCaption}\item[{int}]{view\+Index}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the destination slice index (for texture array) for a given view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em view\+Index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a3315a5fedf0ce8617036c0c0885a3e4e}\index{UnityEngine.Experimental.Rendering.XRPass@{UnityEngine.Experimental.Rendering.XRPass}!GetViewMatrix@{GetViewMatrix}}
+\index{GetViewMatrix@{GetViewMatrix}!UnityEngine.Experimental.Rendering.XRPass@{UnityEngine.Experimental.Rendering.XRPass}}
+\doxysubsubsection{\texorpdfstring{GetViewMatrix()}{GetViewMatrix()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a3315a5fedf0ce8617036c0c0885a3e4e} 
+Matrix4x4 Unity\+Engine.\+Experimental.\+Rendering.\+XRPass.\+Get\+View\+Matrix (\begin{DoxyParamCaption}\item[{int}]{view\+Index}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the view matrix for a given view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em view\+Index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a2fbeee4da42e3a8c083c4a32ce80a27d}\index{UnityEngine.Experimental.Rendering.XRPass@{UnityEngine.Experimental.Rendering.XRPass}!GetViewport@{GetViewport}}
+\index{GetViewport@{GetViewport}!UnityEngine.Experimental.Rendering.XRPass@{UnityEngine.Experimental.Rendering.XRPass}}
+\doxysubsubsection{\texorpdfstring{GetViewport()}{GetViewport()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a2fbeee4da42e3a8c083c4a32ce80a27d} 
+Rect Unity\+Engine.\+Experimental.\+Rendering.\+XRPass.\+Get\+Viewport (\begin{DoxyParamCaption}\item[{int}]{view\+Index}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the viewport for a given view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em view\+Index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_ac03ae357cab05309e6c31bece2372e4a}\index{UnityEngine.Experimental.Rendering.XRPass@{UnityEngine.Experimental.Rendering.XRPass}!InitBase@{InitBase}}
+\index{InitBase@{InitBase}!UnityEngine.Experimental.Rendering.XRPass@{UnityEngine.Experimental.Rendering.XRPass}}
+\doxysubsubsection{\texorpdfstring{InitBase()}{InitBase()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_ac03ae357cab05309e6c31bece2372e4a} 
+void Unity\+Engine.\+Experimental.\+Rendering.\+XRPass.\+Init\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_create_info}{XRPass\+Create\+Info}}}]{create\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialize the base class fields. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em create\+Info} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a6aaf91da451bd11811b141935567808f}\index{UnityEngine.Experimental.Rendering.XRPass@{UnityEngine.Experimental.Rendering.XRPass}!RenderOcclusionMesh@{RenderOcclusionMesh}}
+\index{RenderOcclusionMesh@{RenderOcclusionMesh}!UnityEngine.Experimental.Rendering.XRPass@{UnityEngine.Experimental.Rendering.XRPass}}
+\doxysubsubsection{\texorpdfstring{RenderOcclusionMesh()}{RenderOcclusionMesh()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a6aaf91da451bd11811b141935567808f} 
+void Unity\+Engine.\+Experimental.\+Rendering.\+XRPass.\+Render\+Occlusion\+Mesh (\begin{DoxyParamCaption}\item[{Command\+Buffer}]{cmd}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generate commands to render the occlusion mesh for this pass. In single-\/pass mode \+: the meshes for all views are combined into one mesh, where the corresponding view index is encoded into each vertex. The keyword "{}\+XR\+\_\+\+OCCLUSION\+\_\+\+MESH\+\_\+\+COMBINED"{} is also enabled when rendering the combined mesh. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a6575055d92b1563edc44e46afcec70e9}\index{UnityEngine.Experimental.Rendering.XRPass@{UnityEngine.Experimental.Rendering.XRPass}!StartSinglePass@{StartSinglePass}}
+\index{StartSinglePass@{StartSinglePass}!UnityEngine.Experimental.Rendering.XRPass@{UnityEngine.Experimental.Rendering.XRPass}}
+\doxysubsubsection{\texorpdfstring{StartSinglePass()}{StartSinglePass()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a6575055d92b1563edc44e46afcec70e9} 
+void Unity\+Engine.\+Experimental.\+Rendering.\+XRPass.\+Start\+Single\+Pass (\begin{DoxyParamCaption}\item[{Command\+Buffer}]{cmd}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Queue up render commands to enable single-\/pass techniques. Note\+: depending on the platform and settings, either single-\/pass instancing or the multiview extension will be used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a028459cbfa06601bb8489a0c94552224}\index{UnityEngine.Experimental.Rendering.XRPass@{UnityEngine.Experimental.Rendering.XRPass}!StopSinglePass@{StopSinglePass}}
+\index{StopSinglePass@{StopSinglePass}!UnityEngine.Experimental.Rendering.XRPass@{UnityEngine.Experimental.Rendering.XRPass}}
+\doxysubsubsection{\texorpdfstring{StopSinglePass()}{StopSinglePass()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass_a028459cbfa06601bb8489a0c94552224} 
+void Unity\+Engine.\+Experimental.\+Rendering.\+XRPass.\+Stop\+Single\+Pass (\begin{DoxyParamCaption}\item[{Command\+Buffer}]{cmd}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Queue up render commands to disable single-\/pass techniques. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+XR/XRPass.\+cs\end{DoxyCompactItemize}

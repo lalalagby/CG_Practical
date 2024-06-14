@@ -1,0 +1,29 @@
+\chapter{Shader Graph}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_r_e_a_d_m_e}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_r_e_a_d_m_e}\index{Shader Graph@{Shader Graph}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_r_e_a_d_m_e_autotoc_md4143}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_r_e_a_d_m_e_autotoc_md4143}%
+ 
+
+A Shader Graph enables you to build shaders visually. Instead of hand writing code you create and connect nodes in a graph network. The graph framework gives instant feedback on the changes, and it’s simple enough that new users can become involved in shader creation.
+
+Unless you intend to modify Shader Graph or want to try out the latest and unsupported features, \doxylink{namespace_unity}{Unity} recommends that you install Shader Graph through the \doxylink{namespace_unity}{Unity} Package Manager\+:
+
+
+\begin{DoxyEnumerate}
+\item Open a \doxylink{namespace_unity}{Unity} project.
+\item Open the {\bfseries{Package Manager}} window ({\bfseries{Window}} \texorpdfstring{$>$}{>} {\bfseries{Package Manager}}).
+\item In the {\bfseries{Package Manager}} window, in the {\bfseries{\doxylink{namespace_packages}{Packages}}} menu, select {\bfseries{\doxylink{namespace_unity}{Unity} Registry}}.
+\item Do one of the following, based on your project needs\+:
+\begin{DoxyItemize}
+\item To use Shader Graph and the \href{https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@latest}{\texttt{ Universal Render Pipeline (URP)}} in your project, select {\bfseries{Universal RP}}.
+\item To use Shader Graph and the \href{https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@latest}{\texttt{ High Definition Render Pipeline (HDRP)}}, select {\bfseries{High Definition RP}}.
+\item To use Shader Graph with \doxylink{namespace_unity}{Unity}\textquotesingle{}s \href{https://docs.unity3d.com/2020.3/Documentation/Manual/built-in-render-pipeline.html}{\texttt{ Built-\/\+In Render Pipeline}}, select {\bfseries{Shader Graph}}.
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+\doxylink{namespace_unity}{Unity} recommends using Shader Graph with URP or HDRP.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_r_e_a_d_m_e_autotoc_md4144}{}\doxysection{\texorpdfstring{Instructions}{Instructions}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_r_e_a_d_m_e_autotoc_md4144}
+If you want to try out the latest features, we recommend obtaining the most recent version of Shader Graph through the \href{https://github.com/Unity-Technologies/Graphics}{\texttt{ Unity Scriptable Render Pipeline (SRP) repository}}, which includes the Shader Graph project as a Git submodule. For more information on Git submodules, see \href{https://git-scm.com/book/en/v2/Git-Tools-Submodules}{\texttt{ Git\textquotesingle{}s documentation on Submodules}}.
+
+If you don\textquotesingle{}t install Shader Graph through the SRP repository, you don\textquotesingle{}t have any Master Node backends available and your shaders are invalid. Invalid shaders appear pink in the \doxylink{namespace_unity}{Unity} Editor. Installing through the repository also ensures you have a compatible set of render pipeline and Shader Graph versions.
+
+For more detailed instructions for installing from the repository, see the \href{https://github.com/Unity-Technologies/Graphics/blob/master/README.md}{\texttt{ SRP repository\textquotesingle{}s README}}. 

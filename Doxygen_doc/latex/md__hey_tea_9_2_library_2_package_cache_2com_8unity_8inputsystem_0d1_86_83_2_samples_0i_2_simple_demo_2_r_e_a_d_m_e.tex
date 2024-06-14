@@ -1,0 +1,199 @@
+\chapter{README}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_samples_0i_2_simple_demo_2_r_e_a_d_m_e}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_samples_0i_2_simple_demo_2_r_e_a_d_m_e}\index{README@{README}}
+This sample shows how to set up a simple character controller using the input system. As there is more than one way to do it, the sample illustrates several ways. Each demonstration is set up as a separate scene. The basic functionality in all the scenes is the same. You can move and look around and fire projectiles (colored cubes) into the scene. In some scenes, only gamepads are supported but the more involved demonstrations support several different inputs concurrently.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_samples_0i_2_simple_demo_2_r_e_a_d_m_e_autotoc_md1614}{}\doxysection{\texorpdfstring{Simple\+Demo\+\_\+\+Using\+State}{Simple\+Demo\+\_\+\+Using\+State}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_samples_0i_2_simple_demo_2_r_e_a_d_m_e_autotoc_md1614}
+\href{./SimpleController_UsingState.cs}{\texttt{ Source}}
+
+This starts off at the lowest level by demonstrating how to wire up input by polling input state directly in a {\ttfamily Mono\+Behaviour.\+Update} function. For simplicity\textquotesingle{}s sake it only deals with gamepads but the same mechanism works in equivalent ways for other types of input devices (e.\+g. using {\ttfamily Mouse.\+current} and {\ttfamily Keyboard.\+current}).
+
+The key APIs demonstrated here are {\ttfamily Gamepad.\+current} and {\ttfamily Input\+Control.\+Read\+Value}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_simple_controller___using_state}{SimpleController\_UsingState}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//...}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Update()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ gamepad\ =\ Gamepad.current;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (gamepad\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ move\ =\ Gamepad.leftStick.ReadValue();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//...}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_samples_0i_2_simple_demo_2_r_e_a_d_m_e_autotoc_md1615}{}\doxysection{\texorpdfstring{Simple\+Demo\+\_\+\+Using\+Actions}{Simple\+Demo\+\_\+\+Using\+Actions}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_samples_0i_2_simple_demo_2_r_e_a_d_m_e_autotoc_md1615}
+\href{./SimpleController_UsingActions.cs}{\texttt{ Source}}
+
+This moves one level higher and moves input over to "{}input actions"{}. These are input abstractions that allow you to bind to input sources indirectly.
+
+In this scene, the actions are embedded directly into the character controller component. This allows setting up the bindings for the actions directly in the inspector. To see the actions and their bindings, select the {\ttfamily \doxylink{class_player}{Player}} object in the hierarchy and look at the {\ttfamily \doxylink{class_simple_controller___using_actions}{Simple\+Controller\+\_\+\+Using\+Actions}} component in the inspector.
+
+The key APIs demonstrated here are {\ttfamily Input\+Action} and its {\ttfamily Enable}/{\ttfamily Disable} methods and its {\ttfamily Read\+Value} method.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_simple_controller___using_actions}{SimpleController\_UsingActions}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ InputAction\ moveAction;}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//...}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ OnEnable()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ moveAction.Enable();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//...}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ OnDisable()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ moveAction.Disable();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//...}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Update()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ move\ =\ moveAction.ReadValue<Vector2>();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//...}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+The sample also demonstrates how to use a {\ttfamily Tap} and a {\ttfamily Slow\+Tap} interaction on the fire action to implement a charged shooting mechanism. Note that in this case, we run the firing logic right from within the action using the action\textquotesingle{}s {\ttfamily started}, {\ttfamily performed}, and {\ttfamily canceled} callbacks.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{fireAction.performed\ +=}
+\DoxyCodeLine{\ \ \ \ ctx\ =>}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (ctx.interaction\ is\ SlowTapInteraction)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ StartCoroutine(BurstFire((\textcolor{keywordtype}{int})(ctx.duration\ *\ burstSpeed)));}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Fire();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ m\_Charging\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{fireAction.started\ +=}
+\DoxyCodeLine{\ \ \ \ ctx\ =>}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (ctx.interaction\ is\ SlowTapInteraction)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_Charging\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{fireAction.canceled\ +=}
+\DoxyCodeLine{\ \ \ \ ctx\ =>}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ m\_Charging\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_samples_0i_2_simple_demo_2_r_e_a_d_m_e_autotoc_md1616}{}\doxysection{\texorpdfstring{Simple\+Demo\+\_\+\+Using\+Action\+Asset}{Simple\+Demo\+\_\+\+Using\+Action\+Asset}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_samples_0i_2_simple_demo_2_r_e_a_d_m_e_autotoc_md1616}
+\href{./SimpleController_UsingActionAsset.cs}{\texttt{ Source}}
+
+As more and more actions are added, it can become quite tedious to manually set up and {\ttfamily Enable} and {\ttfamily Disable} all the actions. We could use an {\ttfamily Input\+Action\+Map} in the component like so
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }SimpleController\ :\ MonoBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ InputActionMap\ actions;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ OnEnable()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ actions.Enable();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ OnDisable()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ actions.Disable();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+but then we would have to look up all the actions manually in the action map. A simpler approach is to put all our actions in a separate asset and generate a C\# wrapper class that automatically performs the lookup for us.
+
+To create such an {\ttfamily .inputactions} asset, right-\/click in the Project Browser and click {\ttfamily Create \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} Input Actions}. To edit the actions, double-\/click the {\ttfamily .inputactions} asset and a separate window will come up. The asset we use in this example is \href{SimpleControls.inputactions}{\texttt{ Simple\+Controls.\+inputactions}}.
+
+When you select the asset, note that {\ttfamily Generate C\# Class} is ticked in the import settings. This triggers the generation of \href{SimpleControls.cs}{\texttt{ Simple\+Controls.\+cs}} based on the {\ttfamily .inputactions} file.
+
+Regarding the {\ttfamily \doxylink{class_simple_controller___using_action_asset}{Simple\+Controller\+\_\+\+Using\+Action\+Asset}} script, there are some notable differences.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_simple_controller___using_action_asset}{SimpleController\_UsingActionAsset}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ This\ replaces\ the\ InputAction\ instances\ we\ had\ before\ with}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ the\ generated\ C\#\ class.}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_simple_controls}{SimpleControls}}\ m\_Controls;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//...}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Awake()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ To\ use\ the\ controls,\ we\ need\ to\ instantiate\ them.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ This\ can\ be\ done\ arbitrary\ many\ times.\ E.g.\ there}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ can\ be\ multiple\ players\ each\ with\ its\ own\ SimpleControls}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ instance.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_Controls\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_simple_controls}{SimpleControls}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ generated\ C\#\ class\ exposes\ all\ the\ action\ map}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ and\ actions\ in\ the\ asset\ by\ name.\ Here,\ we\ reference}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ \`{}fire`\ action\ in\ the\ \`{}gameplay`\ action\ map,\ for}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ example.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_Controls.gameplay.fire.performed\ +=}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//...}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//...}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Update()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Same\ here,\ we\ can\ just\ look\ the\ actions\ up\ by\ name.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ look\ =\ m\_Controls.gameplay.look.ReadValue<Vector2>();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ move\ =\ m\_Controls.gameplay.move.ReadValue<Vector2>();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//...}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Just for kicks, this sample also adds keyboard and mouse control to the game.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_samples_0i_2_simple_demo_2_r_e_a_d_m_e_autotoc_md1617}{}\doxysection{\texorpdfstring{Simple\+Demo\+\_\+\+Using\+Player\+Input}{Simple\+Demo\+\_\+\+Using\+Player\+Input}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_samples_0i_2_simple_demo_2_r_e_a_d_m_e_autotoc_md1617}
+\href{./SimpleController_UsingPlayerInput.cs}{\texttt{ Source}}
+
+Finally, we reached the highest level of the input system. While scripting input like in the examples above can be quick and easy, it becomes hard to manage when there can be multiple devices and/or multiple players in the game. This is where {\ttfamily Player\+Input} comes in.
+
+{\ttfamily Player\+Input} automatically manages per-\/player device assignments and can also automatically handle control scheme switching in single player (e.\+g. when the player switches between a gamepad and mouse\&keyboard).
+
+In our case, we\textquotesingle{}re not getting too much out of it since we don\textquotesingle{}t have control schemes or multiple players but still, let\textquotesingle{}s have a look.
+
+The first thing you\textquotesingle{}ll probably notice is that now there are two script components on the {\ttfamily \doxylink{class_player}{Player}} object, one being the usual {\ttfamily Simple\+Controller} and the other being {\ttfamily Player\+Input}. The latter is what now refers to \href{SimpleControls.inputactions}{\texttt{ Simple\+Controls.\+inputactions}}. It also has {\ttfamily gameplay} set as the {\ttfamily Default Action Map} so that the gameplay actions will get enabled right away when {\ttfamily Player\+Input} itself is enabled.
+
+For getting callbacks, we have chosen {\ttfamily Invoke \doxylink{namespace_unity}{Unity} Events} as the {\ttfamily Behavior}. If you expand the {\ttfamily Events} foldout in the inspector, you can see that {\ttfamily On\+Fire}, {\ttfamily On\+Move}, and {\ttfamily On\+Look} are added to the respective events. Each callback method here looks like the {\ttfamily started}, {\ttfamily performed}, and {\ttfamily canceled} callbacks we\textquotesingle{}ve already seen on {\ttfamily fire\+Action} before.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_simple_controller___using_player_input}{SimpleController\_UsingPlayerInput}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{private}\ Vector2\ m\_Move;}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//...}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ OnMove(InputAction.CallbackContext\ context)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_Move\ =\ context.ReadValue<Vector2>();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//...}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

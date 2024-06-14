@@ -1,0 +1,44 @@
+\chapter{Requirements and setup}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_setup}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_setup}\index{Requirements and setup@{Requirements and setup}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_setup_autotoc_md2458}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_setup_autotoc_md2458}%
+ Install the following Editor and package versions to begin working with the {\bfseries{2D Renderer}}\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{\doxylink{namespace_unity}{Unity} 2021.\+2.\+0b1}} or later
+\item {\bfseries{Universal Render Pipeline}} version 10 or higher (available via the Package Manager)
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_setup_autotoc_md2459}{}\doxysection{\texorpdfstring{2D Renderer Setup}{2D Renderer Setup}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_setup_autotoc_md2459}
+
+\begin{DoxyEnumerate}
+\item Create a new Project using the \href{https://docs.unity3d.com/Manual/ProjectTemplates.html}{\texttt{ 2D template}}.
+\item Create a new {\bfseries{Pipeline Asset}} and {\bfseries{Renderer Asset}} by going to the {\bfseries{Assets}} menu and selecting {\bfseries{Create \texorpdfstring{$>$}{>} Rendering \texorpdfstring{$>$}{>} URP Asset (with 2D Renderer)}}.  ~\newline
+
+\item Enter the name for both the Pipeline and Renderer Assets. The name is automatically applied to both, wi th "{}\+\_\+\+Renderer"{} appended to the name of the Renderer Asset.  ~\newline
+
+\item The Renderer Asset is automatically assigned to the Pipeline Asset.  ~\newline
+
+\item To set the graphics quality settings, there are two options\+:
+
+{\bfseries{Option 1\+: For a single setting across all platforms}}
+\begin{DoxyEnumerate}
+\item Go to {\bfseries{Edit \texorpdfstring{$>$}{>} Project Settings}} and select the {\bfseries{\doxylink{namespace_graphics}{Graphics}}} category.  ~\newline
+
+\item Drag the {\bfseries{Pipeline Asset}} created earlier to the {\bfseries{Scriptable Render Pipeline Settings}} box, and adjust the quality settings. ~\newline
+
+\end{DoxyEnumerate}
+
+{\bfseries{Option 2\+: For settings per quality level}}
+\begin{DoxyEnumerate}
+\item Go to {\bfseries{Edit \texorpdfstring{$>$}{>} Project Settings}} and select the \href{https://docs.unity3d.com/Manual/class-QualitySettings.html}{\texttt{ Quality}} category.  ~\newline
+
+\item Select the quality levels to be included in your Project.
+\item Drag the {\bfseries{Pipeline Asset}} created earlier to the {\bfseries{Rendering}} box.  ~\newline
+
+\item Repeat steps 2-\/3 for each quality level and platform included in your Project.
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}
+
+The {\bfseries{2D Renderer}} is now set up for your Project.
+
+{\bfseries{Note\+:}} If you use the {\bfseries{2D Renderer}} in your Project, some of the options related to 3D rendering in the {\bfseries{Universal Render Pipeline Asset}} will not affect or impact on your final app or game. 

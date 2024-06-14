@@ -1,0 +1,39 @@
+\chapter{Rounded Rectangle Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_rounded-_rectangle-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_rounded-_rectangle-_node}\index{Rounded Rectangle Node@{Rounded Rectangle Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_rounded-_rectangle-_node_autotoc_md3735}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_rounded-_rectangle-_node_autotoc_md3735}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_rounded-_rectangle-_node_autotoc_md3736}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_rounded-_rectangle-_node_autotoc_md3736}
+Generates a rounded rectangle shape based on input {\bfseries{UV}} at the size specified by inputs {\bfseries{Width}} and {\bfseries{Height}}. The radius of each corner is defined by input {\bfseries{Radius}}. The generated shape can be offset or tiled by connecting a \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_tiling-_and-_offset-_node}{Tiling And Offset Node}{0}. Note that in order to preserve the ability to offset the shape within the UV space the shape will not automatically repeat if tiled. To achieve a repeating rounded rectangle effect first connect your input through a \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fraction-_node}{Fraction Node}{0}.
+
+NOTE\+: This \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node}{Node}{0} can only be used in the {\bfseries{Fragment}} \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_shader-_stage}{Shader Stage}{0}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_rounded-_rectangle-_node_autotoc_md3737}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_rounded-_rectangle-_node_autotoc_md3737}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+UV   &Input   &Vector 2   &UV   &Input UV value    \\\cline{1-5}
+Width   &Input   &Float   &None   &Rounded Rectangle width    \\\cline{1-5}
+Height   &Input   &Float   &None   &Rounded Rectangle height    \\\cline{1-5}
+Radius   &Input   &Float   &None   &Corner radius    \\\cline{1-5}
+Out   &Output   &Float   &None   &Output value   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_rounded-_rectangle-_node_autotoc_md3738}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_rounded-_rectangle-_node_autotoc_md3738}
+The following example code represents one possible outcome of this node.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_RoundedRectangle\_float(float2\ UV,\ float\ Width,\ float\ Height,\ float\ Radius,\ out\ float\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Radius\ =\ max(min(min(abs(Radius\ *\ 2),\ abs(Width)),\ abs(Height)),\ 1e-\/5);}
+\DoxyCodeLine{\ \ \ \ float2\ uv\ =\ abs(UV\ *\ 2\ -\/\ 1)\ -\/\ float2(Width,\ Height)\ +\ Radius;}
+\DoxyCodeLine{\ \ \ \ float\ d\ =\ length(max(0,\ uv))\ /\ Radius;}
+\DoxyCodeLine{\ \ \ \ Out\ =\ saturate((1\ -\/\ d)\ /\ fwidth(d));}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

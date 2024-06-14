@@ -1,0 +1,75 @@
+\doxysection{NSubstitute.\+Core.\+Dependency\+Injection.\+IConfigurable\+NSub\+Container Interface Reference}
+\hypertarget{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_configurable_n_sub_container}{}\label{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_configurable_n_sub_container}\index{NSubstitute.Core.DependencyInjection.IConfigurableNSubContainer@{NSubstitute.Core.DependencyInjection.IConfigurableNSubContainer}}
+Inheritance diagram for NSubstitute.\+Core.\+Dependency\+Injection.\+IConfigurable\+NSub\+Container\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_configurable_n_sub_container}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_configurable_n_sub_container}{IConfigurable\+NSub\+Container}} \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_configurable_n_sub_container_a69b474bdeb1f4bae8c275db66d8a9cb7}{Register$<$ TKey, TImpl $>$}} (\mbox{\hyperlink{namespace_n_substitute_1_1_core_1_1_dependency_injection_a3be4a98d6673cb5a24b30c50fa21a055}{NSub\+Lifetime}} lifetime)
+\item 
+\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_configurable_n_sub_container}{IConfigurable\+NSub\+Container}} \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_configurable_n_sub_container_a415a43e139c1c77d31259f33b2619981}{Register$<$ TKey $>$}} (Func$<$ \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_resolver}{INSub\+Resolver}}, TKey $>$ factory, \mbox{\hyperlink{namespace_n_substitute_1_1_core_1_1_dependency_injection_a3be4a98d6673cb5a24b30c50fa21a055}{NSub\+Lifetime}} lifetime)
+\item 
+\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_configurable_n_sub_container}{IConfigurable\+NSub\+Container}} \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_configurable_n_sub_container_a3dad514a674157a169550c68a9b11335}{Decorate$<$ TKey $>$}} (Func$<$ TKey, \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_resolver}{INSub\+Resolver}}, TKey $>$ factory)
+\begin{DoxyCompactList}\small\item\em Decorates the original implementation with a custom decorator. The factory method is provided with an original implementation instance. The lifetime of decorated implementation is used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_container}{NSubstitute.\+Core.\+Dependency\+Injection.\+INSub\+Container}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_configurable_n_sub_container}{IConfigurable\+NSub\+Container}} \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_container_ad766faa4574f370a168ddae70ce12c7e}{Customize}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new container based on the current one, which can be configured to override the existing registrations without affecting the existing container. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_resolver}{INSub\+Resolver}} \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_container_a45343652a1a1d7aa7ee8de6e9314a1d5}{Create\+Scope}} ()
+\begin{DoxyCompactList}\small\item\em Create an explicit scope, so all dependencies with the \doxylink{namespace_n_substitute_1_1_core_1_1_dependency_injection_a3be4a98d6673cb5a24b30c50fa21a055ac4bc876ff2fcfee9dfa2f970f5a18dd1}{NSub\+Lifetime.\+Per\+Scope} lifetime are preserved for multiple resolve requests. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_resolver}{NSubstitute.\+Core.\+Dependency\+Injection.\+INSub\+Resolver}}}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_resolver_a7048a9272711e8d617e387d82877abe7}{Resolve$<$ T $>$}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_configurable_n_sub_container_a3dad514a674157a169550c68a9b11335}\index{NSubstitute.Core.DependencyInjection.IConfigurableNSubContainer@{NSubstitute.Core.DependencyInjection.IConfigurableNSubContainer}!Decorate$<$ TKey $>$@{Decorate$<$ TKey $>$}}
+\index{Decorate$<$ TKey $>$@{Decorate$<$ TKey $>$}!NSubstitute.Core.DependencyInjection.IConfigurableNSubContainer@{NSubstitute.Core.DependencyInjection.IConfigurableNSubContainer}}
+\doxysubsubsection{\texorpdfstring{Decorate$<$ TKey $>$()}{Decorate< TKey >()}}
+{\footnotesize\ttfamily \label{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_configurable_n_sub_container_a3dad514a674157a169550c68a9b11335} 
+\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_configurable_n_sub_container}{IConfigurable\+NSub\+Container}} NSubstitute.\+Core.\+Dependency\+Injection.\+IConfigurable\+NSub\+Container.\+Decorate$<$ TKey $>$ (\begin{DoxyParamCaption}\item[{Func$<$ TKey, \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_resolver}{INSub\+Resolver}}, TKey $>$}]{factory}{}\end{DoxyParamCaption})}
+
+
+
+Decorates the original implementation with a custom decorator. The factory method is provided with an original implementation instance. The lifetime of decorated implementation is used. 
+
+
+
+Implemented in \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_dependency_injection_1_1_n_sub_container_a0e3fcb6efba4ecd701ff085dbb4c6d46}{NSubstitute.\+Core.\+Dependency\+Injection.\+NSub\+Container}}.
+
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TKey} : {\em notnull}]\end{description}
+\end{Desc}
+\Hypertarget{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_configurable_n_sub_container_a415a43e139c1c77d31259f33b2619981}\index{NSubstitute.Core.DependencyInjection.IConfigurableNSubContainer@{NSubstitute.Core.DependencyInjection.IConfigurableNSubContainer}!Register$<$ TKey $>$@{Register$<$ TKey $>$}}
+\index{Register$<$ TKey $>$@{Register$<$ TKey $>$}!NSubstitute.Core.DependencyInjection.IConfigurableNSubContainer@{NSubstitute.Core.DependencyInjection.IConfigurableNSubContainer}}
+\doxysubsubsection{\texorpdfstring{Register$<$ TKey $>$()}{Register< TKey >()}}
+{\footnotesize\ttfamily \label{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_configurable_n_sub_container_a415a43e139c1c77d31259f33b2619981} 
+\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_configurable_n_sub_container}{IConfigurable\+NSub\+Container}} NSubstitute.\+Core.\+Dependency\+Injection.\+IConfigurable\+NSub\+Container.\+Register$<$ TKey $>$ (\begin{DoxyParamCaption}\item[{Func$<$ \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_resolver}{INSub\+Resolver}}, TKey $>$}]{factory}{, }\item[{\mbox{\hyperlink{namespace_n_substitute_1_1_core_1_1_dependency_injection_a3be4a98d6673cb5a24b30c50fa21a055}{NSub\+Lifetime}}}]{lifetime}{}\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TKey} : {\em notnull}]\end{description}
+\end{Desc}
+\Hypertarget{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_configurable_n_sub_container_a69b474bdeb1f4bae8c275db66d8a9cb7}\index{NSubstitute.Core.DependencyInjection.IConfigurableNSubContainer@{NSubstitute.Core.DependencyInjection.IConfigurableNSubContainer}!Register$<$ TKey, TImpl $>$@{Register$<$ TKey, TImpl $>$}}
+\index{Register$<$ TKey, TImpl $>$@{Register$<$ TKey, TImpl $>$}!NSubstitute.Core.DependencyInjection.IConfigurableNSubContainer@{NSubstitute.Core.DependencyInjection.IConfigurableNSubContainer}}
+\doxysubsubsection{\texorpdfstring{Register$<$ TKey, TImpl $>$()}{Register< TKey, TImpl >()}}
+{\footnotesize\ttfamily \label{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_configurable_n_sub_container_a69b474bdeb1f4bae8c275db66d8a9cb7} 
+\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_configurable_n_sub_container}{IConfigurable\+NSub\+Container}} NSubstitute.\+Core.\+Dependency\+Injection.\+IConfigurable\+NSub\+Container.\+Register$<$ TKey, TImpl $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_n_substitute_1_1_core_1_1_dependency_injection_a3be4a98d6673cb5a24b30c50fa21a055}{NSub\+Lifetime}}}]{lifetime}{}\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TKey} : {\em notnull}]\item[{\em TImpl} : {\em TKey}]\end{description}
+\end{Desc}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/net.\+tnrd.\+nsubstitute@449712b25a/\+Runtime/\+Core/\+Dependency\+Injection/INSub\+Container.\+cs\end{DoxyCompactItemize}

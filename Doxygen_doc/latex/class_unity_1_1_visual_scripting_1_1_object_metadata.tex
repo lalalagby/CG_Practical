@@ -1,0 +1,307 @@
+\doxysection{Unity.\+Visual\+Scripting.\+Object\+Metadata Class Reference}
+\hypertarget{class_unity_1_1_visual_scripting_1_1_object_metadata}{}\label{class_unity_1_1_visual_scripting_1_1_object_metadata}\index{Unity.VisualScripting.ObjectMetadata@{Unity.VisualScripting.ObjectMetadata}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Object\+Metadata\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.333333cm]{class_unity_1_1_visual_scripting_1_1_object_metadata}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_object_metadata_aa22371f3633c5875bc0e7959c1fe4829}\label{class_unity_1_1_visual_scripting_1_1_object_metadata_aa22371f3633c5875bc0e7959c1fe4829} 
+{\bfseries Object\+Metadata} (object @object, Type defined\+Type, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} parent)
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_object_metadata_a23f8a1089a906b4e98da5bf4f01e506a}\label{class_unity_1_1_visual_scripting_1_1_object_metadata_a23f8a1089a906b4e98da5bf4f01e506a} 
+{\bfseries Object\+Metadata} (string name, object @object, Type defined\+Type, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} parent)
+\item 
+override Attribute\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_object_metadata_af3a11259cd6d86df494418a6400cdba3}{Get\+Custom\+Attributes}} (bool inherit=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Unity.\+Visual\+Scripting.\+Metadata}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Record\+Undo} ()
+\item 
+void {\bfseries Record\+Undo} (string name)
+\item 
+void {\bfseries Infer\+Owner\+From\+Parent} ()
+\item 
+void {\bfseries Unlink} ()
+\item 
+void {\bfseries Unlink\+Children} ()
+\item 
+void {\bfseries Ensure\+Linked} ()
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} {\bfseries Ancestor} (Func$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}}, bool $>$ predicate, bool include\+Self=false)
+\item 
+T \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_ad890d9af74a1c504383c9bfb26b681ca}{Ancestor$<$ T $>$}} (bool include\+Self=false)
+\item 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} $>$ {\bfseries Descendants} (Func$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}}, bool $>$ predicate)
+\item 
+IEnumerable$<$ T $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_ae79aa7b2703cf1491509b44431a4b9ee}{Descendants$<$ T $>$}} ()
+\item 
+override int {\bfseries Get\+Hash\+Code} ()
+\item 
+override bool {\bfseries Equals} (object obj)
+\item 
+override string {\bfseries To\+String} ()
+\item 
+void {\bfseries Revert\+To\+Prefab} ()
+\item 
+void {\bfseries Match\+With\+Prefab} ()
+\item 
+Attribute\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_a6e411a9b55e195b18084d219f79b09f2}{Get\+Custom\+Attributes}} (bool inherit=true)
+\item 
+bool {\bfseries Ancestor\+Has\+Attribute} (Type attribute\+Type, bool inherit=true)
+\item 
+Attribute {\bfseries Get\+Ancestor\+Attribute} (Type attribute\+Type, bool inherit=true)
+\item 
+IEnumerable$<$ Attribute $>$ {\bfseries Get\+Ancestor\+Attributes} (Type attribute\+Type, bool inherit)
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_ac31b3b0c15a2667e4589659b7f4e7450}{Ancestor\+Has\+Attribute$<$ TAttribute $>$}} (bool inherit=true)
+\item 
+TAttribute \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_a292a7a1c227781cd3a29e348dd480f46}{Get\+Ancestor\+Attribute$<$ TAttribute $>$}} (bool inherit=true)
+\item 
+IEnumerable$<$ TAttribute $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_a68d25f36521dc58504de0ef85fcee838}{Get\+Ancestor\+Attributes$<$ TAttribute $>$}} (bool inherit=true)
+\item 
+IEnumerator {\bfseries Get\+Enumerator} ()
+\item 
+bool {\bfseries Contains} (object value)
+\item 
+void {\bfseries Remove} (object value)
+\item 
+void {\bfseries Clear} ()
+\item 
+int {\bfseries Add} (object value)
+\item 
+void {\bfseries Insert} (int index, object value)
+\item 
+int {\bfseries Index\+Of} (object value)
+\item 
+void {\bfseries Remove\+At} (int index)
+\item 
+void {\bfseries Copy\+To} (Array array, int index)
+\item 
+void {\bfseries Move} (int source\+Index, int destination\+Index)
+\item 
+void {\bfseries Duplicate} (int index)
+\item 
+void {\bfseries Add} (object key, object value)
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} {\bfseries Key\+Metadata} (int index)
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} {\bfseries Value\+Metadata} (int index)
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_object_metadata}{Object\+Metadata}} {\bfseries Static\+Object} (object @object, Type defined\+Type)
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_object_metadata}{Object\+Metadata}} {\bfseries Static\+Object} (object @object)
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_object_metadata}{Object\+Metadata}} {\bfseries Object} (string name, object @object, Type defined\+Type)
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_object_metadata}{Object\+Metadata}} {\bfseries Object} (string name, object @object)
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_member_metadata}{Member\+Metadata}} {\bfseries Member} (string name, Binding\+Flags binding\+Flags=Member\+Metadata.\+Default\+Binding\+Flags)
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_index_metadata}{Index\+Metadata}} {\bfseries Index} (int index)
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_indexer_metadata}{Indexer\+Metadata}} {\bfseries Indexer} (object indexer)
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_cast_metadata}{Cast\+Metadata}} {\bfseries Cast} (Type type)
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_cast_metadata}{Cast\+Metadata}} {\bfseries Cast$<$ T $>$} ()
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dictionary_key_at_index_metadata}{Dictionary\+Key\+At\+Index\+Metadata}} {\bfseries Dictionary\+Key\+At} (int index)
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dictionary_value_at_index_metadata}{Dictionary\+Value\+At\+Index\+Metadata}} {\bfseries Dictionary\+Value\+At} (int index)
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_proxy_metadata}{Proxy\+Metadata}} {\bfseries Proxy} (object subpath, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} binding)
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_editor_pref_metadata}{Editor\+Pref\+Metadata}} {\bfseries Editor\+Pref} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration}{Plugin\+Configuration}} configuration, Member\+Info member)
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_project_setting_metadata}{Project\+Setting\+Metadata}} {\bfseries Project\+Setting} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration}{Plugin\+Configuration}} configuration, Member\+Info member)
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} {\bfseries Auto\+Dig} (string path)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_object_metadata_a7009c87c5622d8aff09c50fbce6d9549}{On\+Value\+Type\+Change}} (Type previous\+Type)
+\item 
+override string \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_object_metadata_a643cb343f6247284211a601c509d7534}{Subpath\+To\+String}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Unity.\+Visual\+Scripting.\+Metadata}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Metadata} (object subpath, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} parent)
+\item 
+virtual void {\bfseries On\+Value\+Change} (object previous\+Value)
+\item 
+virtual void {\bfseries On\+Parent\+Value\+Change} (object previous\+Value)
+\item 
+virtual void {\bfseries On\+Parent\+Value\+Type\+Change} (Type previous\+Type)
+\item 
+TMetadata \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_a81e53ced3d80fce72e2116c3616861ee}{Dig$<$ TSubpath, TMetadata $>$}} (TSubpath subpath, Func$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}}, TMetadata $>$ constructor, bool create\+In\+Prefab, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} prefab\+Instance=null)
+\item 
+IList {\bfseries Get\+Resizable\+List} ()
+\item 
+void {\bfseries Apply\+Resizable\+List} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_object_metadata_a8ecf7a5ff08838594285df1b04dfaaaa}\label{class_unity_1_1_visual_scripting_1_1_object_metadata_a8ecf7a5ff08838594285df1b04dfaaaa} 
+object {\bfseries object}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_object_metadata_a337d2c2c41c1e727fed0c12e8d9da61a}\label{class_unity_1_1_visual_scripting_1_1_object_metadata_a337d2c2c41c1e727fed0c12e8d9da61a} 
+string {\bfseries name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_object_metadata_a52a3484a461b34c20f251b9c8a0d0dbf}\label{class_unity_1_1_visual_scripting_1_1_object_metadata_a52a3484a461b34c20f251b9c8a0d0dbf} 
+override object {\bfseries raw\+Value}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Unity.\+Visual\+Scripting.\+Metadata}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool {\bfseries is\+Root}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+GUIContent {\bfseries label}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+virtual bool {\bfseries is\+Editable} = true\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool {\bfseries is\+Linked}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata_1_1_children}{Children}} {\bfseries children}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} {\bfseries parent}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+string {\bfseries path}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} {\bfseries root}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+object {\bfseries subpath}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Type {\bfseries defined\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+Func$<$ object $>$ {\bfseries instantiator}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool {\bfseries instantiate}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+object {\bfseries raw\+Value}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+object {\bfseries value}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Type {\bfseries nullable\+Value\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Type {\bfseries value\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} {\bfseries prefab\+Definition}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+bool {\bfseries is\+Prefab\+Instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries is\+Prefab\+Instance\+With\+Definition}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries is\+Prefab\+Instance\+Without\+Definition}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries is\+Prefab\+Root}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries is\+Prefab\+Diff}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries is\+Revertible\+To\+Prefab}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_member_metadata}{Member\+Metadata}} {\bfseries this\mbox{[}string name\mbox{]}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_index_metadata}{Index\+Metadata}} {\bfseries this\mbox{[}int index\mbox{]}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+int {\bfseries Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries Is\+Fixed\+Size}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries Is\+Read\+Only}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries Is\+Synchronized}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+object {\bfseries Sync\+Root}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries is\+Enumerable}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Type {\bfseries enumerable\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Type {\bfseries enumerable\+Element\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries is\+List}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Type {\bfseries list\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Type {\bfseries list\+Element\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries is\+Dictionary}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries is\+Ordered\+Dictionary}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Type {\bfseries dictionary\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Type {\bfseries dictionary\+Key\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Type {\bfseries dictionary\+Value\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+ICollection {\bfseries Keys}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+ICollection {\bfseries Values}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Unity.\+Visual\+Scripting.\+Metadata}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} {\bfseries Root} ()
+\item 
+static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} {\bfseries From\+Property} (Serialized\+Property property)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Unity.\+Visual\+Scripting.\+Metadata}}}
+\begin{DoxyCompactItemize}
+\item 
+Type {\bfseries \+\_\+defined\+Type}
+\end{DoxyCompactItemize}
+\doxysubsection*{Events inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Unity.\+Visual\+Scripting.\+Metadata}}}
+\begin{DoxyCompactItemize}
+\item 
+Action$<$ object $>$ {\bfseries value\+Changed}\hspace{0.3cm}{\ttfamily  \mbox{[}add, remove\mbox{]}}
+\item 
+Action$<$ Type $>$ {\bfseries value\+Type\+Changed}\hspace{0.3cm}{\ttfamily  \mbox{[}add, remove\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_object_metadata_af3a11259cd6d86df494418a6400cdba3}\index{Unity.VisualScripting.ObjectMetadata@{Unity.VisualScripting.ObjectMetadata}!GetCustomAttributes@{GetCustomAttributes}}
+\index{GetCustomAttributes@{GetCustomAttributes}!Unity.VisualScripting.ObjectMetadata@{Unity.VisualScripting.ObjectMetadata}}
+\doxysubsubsection{\texorpdfstring{GetCustomAttributes()}{GetCustomAttributes()}}
+{\footnotesize\ttfamily \label{class_unity_1_1_visual_scripting_1_1_object_metadata_af3a11259cd6d86df494418a6400cdba3} 
+override Attribute\mbox{[}$\,$\mbox{]} Unity.\+Visual\+Scripting.\+Object\+Metadata.\+Get\+Custom\+Attributes (\begin{DoxyParamCaption}\item[{bool}]{inherit}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_attribute_provider}{Unity.\+Visual\+Scripting.\+IAttribute\+Provider}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_object_metadata_a7009c87c5622d8aff09c50fbce6d9549}\index{Unity.VisualScripting.ObjectMetadata@{Unity.VisualScripting.ObjectMetadata}!OnValueTypeChange@{OnValueTypeChange}}
+\index{OnValueTypeChange@{OnValueTypeChange}!Unity.VisualScripting.ObjectMetadata@{Unity.VisualScripting.ObjectMetadata}}
+\doxysubsubsection{\texorpdfstring{OnValueTypeChange()}{OnValueTypeChange()}}
+{\footnotesize\ttfamily \label{class_unity_1_1_visual_scripting_1_1_object_metadata_a7009c87c5622d8aff09c50fbce6d9549} 
+override void Unity.\+Visual\+Scripting.\+Object\+Metadata.\+On\+Value\+Type\+Change (\begin{DoxyParamCaption}\item[{Type}]{previous\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Unity.\+Visual\+Scripting.\+Metadata}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_object_metadata_a643cb343f6247284211a601c509d7534}\index{Unity.VisualScripting.ObjectMetadata@{Unity.VisualScripting.ObjectMetadata}!SubpathToString@{SubpathToString}}
+\index{SubpathToString@{SubpathToString}!Unity.VisualScripting.ObjectMetadata@{Unity.VisualScripting.ObjectMetadata}}
+\doxysubsubsection{\texorpdfstring{SubpathToString()}{SubpathToString()}}
+{\footnotesize\ttfamily \label{class_unity_1_1_visual_scripting_1_1_object_metadata_a643cb343f6247284211a601c509d7534} 
+override string Unity.\+Visual\+Scripting.\+Object\+Metadata.\+Subpath\+To\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Unity.\+Visual\+Scripting.\+Metadata}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+8.\+0/\+Editor/\+Visual\+Scripting.\+Core/\+Meta/Object\+Metadata.\+cs\end{DoxyCompactItemize}

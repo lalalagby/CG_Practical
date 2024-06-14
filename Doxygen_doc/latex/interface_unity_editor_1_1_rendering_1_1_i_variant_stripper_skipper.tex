@@ -1,0 +1,56 @@
+\doxysection{Unity\+Editor.\+Rendering.\+IVariant\+Stripper\+Skipper\texorpdfstring{$<$}{<} TShader, TShader\+Variant \texorpdfstring{$>$}{>} Interface Template Reference}
+\hypertarget{interface_unity_editor_1_1_rendering_1_1_i_variant_stripper_skipper}{}\label{interface_unity_editor_1_1_rendering_1_1_i_variant_stripper_skipper}\index{UnityEditor.Rendering.IVariantStripperSkipper$<$ TShader, TShaderVariant $>$@{UnityEditor.Rendering.IVariantStripperSkipper$<$ TShader, TShaderVariant $>$}}
+
+
+Interface to allow an IVariant\+Stripper$<$\+TShader, TShader\+Variant$>$ to skip a shader variant for processing.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{interface_unity_editor_1_1_rendering_1_1_i_variant_stripper_skipper_a3bc04985eca3aca1956abd1f01cad1cd}{Skip\+Shader}} (\mbox{[}Disallow\+Null\mbox{]} TShader shader, \mbox{[}Disallow\+Null\mbox{]} TShader\+Variant shader\+Variant)
+\begin{DoxyCompactList}\small\item\em Returns if the TShader for the current TShader\+Variant is skipped for stripping. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface to allow an IVariant\+Stripper$<$\+TShader, TShader\+Variant$>$ to skip a shader variant for processing. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TShader} & The shader Shader or Compute\+Shader\\
+\hline
+{\em TShader\+Variant} & The type of variant for the given type of shader can either be Shader\+Snippet\+Data or string\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TShader} : {\em Unity\+Engine.\+Object}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_unity_editor_1_1_rendering_1_1_i_variant_stripper_skipper_a3bc04985eca3aca1956abd1f01cad1cd}\index{UnityEditor.Rendering.IVariantStripperSkipper$<$ TShader, TShaderVariant $>$@{UnityEditor.Rendering.IVariantStripperSkipper$<$ TShader, TShaderVariant $>$}!SkipShader@{SkipShader}}
+\index{SkipShader@{SkipShader}!UnityEditor.Rendering.IVariantStripperSkipper$<$ TShader, TShaderVariant $>$@{UnityEditor.Rendering.IVariantStripperSkipper$<$ TShader, TShaderVariant $>$}}
+\doxysubsubsection{\texorpdfstring{SkipShader()}{SkipShader()}}
+{\footnotesize\ttfamily \label{interface_unity_editor_1_1_rendering_1_1_i_variant_stripper_skipper_a3bc04985eca3aca1956abd1f01cad1cd} 
+bool \mbox{\hyperlink{interface_unity_editor_1_1_rendering_1_1_i_variant_stripper_skipper}{Unity\+Editor.\+Rendering.\+IVariant\+Stripper\+Skipper}}$<$ TShader, TShader\+Variant $>$.Skip\+Shader (\begin{DoxyParamCaption}\item[{\mbox{[}\+Disallow\+Null\mbox{]} TShader}]{shader}{, }\item[{\mbox{[}\+Disallow\+Null\mbox{]} TShader\+Variant}]{shader\+Variant}{}\end{DoxyParamCaption})}
+
+
+
+Returns if the TShader for the current TShader\+Variant is skipped for stripping. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shader} & The shader\\
+\hline
+{\em shader\+Variant} & The variant\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, if the shader can be skipped
+\end{DoxyReturn}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Editor/\+Shader\+Stripping/IVariant\+Stripper.\+cs\end{DoxyCompactItemize}

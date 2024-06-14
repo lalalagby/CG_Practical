@@ -1,0 +1,29 @@
+\chapter{Cinemachine Recomposer Extension}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_recomposer}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_recomposer}\index{Cinemachine Recomposer Extension@{Cinemachine Recomposer Extension}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_recomposer_autotoc_md713}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_recomposer_autotoc_md713}%
+ Use the \doxylink{namespace_cinemachine}{Cinemachine} Recomposer \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_414e015286be387e4fe85aa25dd01df7}{extension}{0} is an add-\/on module for \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera that adds a final tweak to the camera composition. It is intended for use in a \doxylink{namespace_timeline}{Timeline} context, where you want to hand-\/adjust the output of procedural or recorded camera aiming.
+
+All of these properties can be animated within the \doxylink{namespace_timeline}{Timeline}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_recomposer_autotoc_md714}{}\doxysection{\texorpdfstring{Properties\+:}{Properties\+:}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_recomposer_autotoc_md714}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Apply After}}   &The Volume Settings profile to activate when this Virtual Camera is live.    \\\cline{1-2}
+{\itshape Body}   &Camera has been positioned but not yet rotated    \\\cline{1-2}
+{\itshape Aim}   &Camera has been rotated and positioned, but no noise or collision resolution applied    \\\cline{1-2}
+{\itshape Noise}   &Camera has been positioned, rotated, and noise and other corrections applied    \\\cline{1-2}
+{\itshape Finalize}   &Default setting. Applied after all standard virtual camera processing has occurred    \\\cline{1-2}
+{\bfseries{Tilt}}   &Add a vertical rotation to the camera\textquotesingle{}s current rotation    \\\cline{1-2}
+{\bfseries{Pan}}   &Add a horizontal rotation to the camera\textquotesingle{}s current rotation    \\\cline{1-2}
+{\bfseries{Dutch}}   &Add a tilt (local Z rotation) to the current camera\textquotesingle{}s rotation    \\\cline{1-2}
+{\bfseries{Zoom Scale}}   &Scale the current zoom    \\\cline{1-2}
+{\bfseries{Follow Attachment}}   &When this is less than 1, damping on the Follow target is increased. When the value is zero, damping is infinite -\/ effectively "{}letting go"{} of the target    \\\cline{1-2}
+{\bfseries{Look At Attachment}}   &When this is less than 1, damping on the Look At target is increased. When the value is zero, damping is infinite -\/ effectively "{}letting go"{} of the target   \\\cline{1-2}
+\end{longtabu}

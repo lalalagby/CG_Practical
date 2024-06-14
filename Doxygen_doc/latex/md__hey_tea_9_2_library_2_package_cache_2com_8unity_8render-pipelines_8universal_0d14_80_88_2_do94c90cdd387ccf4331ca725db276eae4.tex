@@ -1,0 +1,131 @@
+\chapter{Example\+: How to create a custom rendering effect using the Render Objects Renderer Feature}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do94c90cdd387ccf4331ca725db276eae4}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do94c90cdd387ccf4331ca725db276eae4}\index{Example: How to create a custom rendering effect using the Render Objects Renderer Feature@{Example: How to create a custom rendering effect using the Render Objects Renderer Feature}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do94c90cdd387ccf4331ca725db276eae4_autotoc_md2405}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do94c90cdd387ccf4331ca725db276eae4_autotoc_md2405}%
+ URP draws objects in the {\bfseries{Draw\+Opaque\+Objects}} and {\bfseries{Draw\+Transparent\+Objects}} passes. You might need to draw objects at a different point in the frame rendering, or interpret and write rendering data (like depth and stencil) in alternate ways. The \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do1ed6d080483a8688083d1986785cc6ec}{Render Objects Renderer Feature}{0} lets you do such customizations by letting you draw objects on a certain layer, at a certain time, with specific overrides.
+
+The example on this page describes how to create a custom rendering effect with the Render Objects Renderer Feature.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do94c90cdd387ccf4331ca725db276eae4_autotoc_md2406}{}\doxysection{\texorpdfstring{Example overview}{Example overview}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do94c90cdd387ccf4331ca725db276eae4_autotoc_md2406}
+The example on this page demonstrates how to implement the following effect\+:
+
+
+\begin{DoxyItemize}
+\item There is a character in the Scene.
+
+
+\item When the character goes behind Game\+Objects, \doxylink{namespace_unity}{Unity} draws the character silhouette with a different Material.
+
+
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do94c90cdd387ccf4331ca725db276eae4_autotoc_md2407}{}\doxysection{\texorpdfstring{Prerequisites}{Prerequisites}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do94c90cdd387ccf4331ca725db276eae4_autotoc_md2407}
+This example requires the following\+:
+
+
+\begin{DoxyItemize}
+\item A \doxylink{namespace_unity}{Unity} project with the URP package installed.
+\item The {\bfseries{Scriptable Render Pipeline Settings}} property refers to a URP asset ({\bfseries{Project Settings}} \texorpdfstring{$>$}{>} {\bfseries{\doxylink{namespace_graphics}{Graphics}}} \texorpdfstring{$>$}{>} {\bfseries{Scriptable Render Pipeline Settings}}).
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do94c90cdd387ccf4331ca725db276eae4_autotoc_md2408}{}\doxysection{\texorpdfstring{Create example Scene and Game\+Objects\label{_example-objects}%
+}{Create example Scene and Game\+Objects\label{_example-objects}%
+}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do94c90cdd387ccf4331ca725db276eae4_autotoc_md2408}
+To follow the steps in this example, create a new Scene with the following Game\+Objects\+:
+
+
+\begin{DoxyEnumerate}
+\item Create a Cube. Set its {\bfseries{Scale}} values so that it looks like a wall.
+
+
+\item Create a Material and assign it the {\ttfamily Universal Render Pipeline/\+Lit} shader. Select the base color (for example, red). Call the Material {\ttfamily Character}.
+\item Create a basic character and assign it the Character Material. In this example, the character consists of three capsules\+: the big capsule in the center represents the body, and the two smaller capsules represent the hands.
+
+
+
+To make it easier to manipulate the character in the Scene, add the three Capsules as child Game\+Objects under the Character Game\+Object.
+
+
+\item Create a Material and assign it the {\ttfamily Universal Render Pipeline/\+Unlit} shader. Select the base color that you would like the character to have when it\textquotesingle{}s behind Game\+Objects (for example, blue). Call the Material {\ttfamily Character\+Behind\+Objects}.
+\end{DoxyEnumerate}
+
+Now you have the setup necessary to follow the steps in this example.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do94c90cdd387ccf4331ca725db276eae4_autotoc_md2409}{}\doxysection{\texorpdfstring{Example implementation}{Example implementation}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do94c90cdd387ccf4331ca725db276eae4_autotoc_md2409}
+This section assumes that you created a Scene as described in section Example Scene and Game\+Objects.
+
+The example implementation uses two Render Objects Renderer Features\+: one to draw parts of the character that are behind other Game\+Objects, and another one to draw the parts of the character that are in front of other Game\+Objects.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do94c90cdd387ccf4331ca725db276eae4_autotoc_md2410}{}\doxysubsection{\texorpdfstring{Create a Renderer Feature to draw the character behind Game\+Objects}{Create a Renderer Feature to draw the character behind Game\+Objects}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do94c90cdd387ccf4331ca725db276eae4_autotoc_md2410}
+Follow these steps to create a Renderer Feature to draw the character behind Game\+Objects.
+
+
+\begin{DoxyEnumerate}
+\item Select a URP Renderer.
+
+
+\item In the Inspector, click {\bfseries{Add Renderer Feature}} and select {\bfseries{Render Objects}}.
+
+
+
+Select the {\bfseries{Name}} field and enter the name of the new Renderer Feature, for example, {\bfseries{Draw\+Character\+Behind}}.
+\item This example uses Layers to filter the Game\+Objects to render. Create a new Layer and call it {\bfseries{Character}}.
+
+
+\item Select the {\bfseries{Character}} Game\+Object and assign it to the {\ttfamily Character} Layer. To do this, open the Layer drop down and select {\ttfamily Character}. 
+\item In the {\ttfamily Draw\+Character\+Behind} Renderer Feature, in {\bfseries{Filters}} \texorpdfstring{$>$}{>} {\bfseries{Layer Mask}}, select {\ttfamily Character}. With this setting, this Renderer Feature renders Game\+Objects only in the Layer {\ttfamily Character}.
+\item In {\bfseries{Overrides}} \texorpdfstring{$>$}{>} {\bfseries{Material}}, select the {\ttfamily Character\+Behind\+Objects} Material.
+
+The Renderer Feature overrides the Material of a Game\+Object with the selected Material.
+
+
+\item The intended behavior is that the Renderer Feature renders the character with the {\ttfamily Character\+Behind\+Objects} Material only when the character is behind other Game\+Objects.
+
+To achieve this, select the {\bfseries{Depth}} check box, and set the {\bfseries{Depth Test}} property to {\bfseries{Greater}}.
+
+
+\end{DoxyEnumerate}
+
+With these settings, \doxylink{namespace_unity}{Unity} renders the character with the {\ttfamily Character\+Behind\+Objects} Material only when the character is behind another Game\+Object. However, \doxylink{namespace_unity}{Unity} also renders parts of the character using the {\ttfamily Character\+Behind\+Objects} Material, because some parts of the character occlude the character itself.
+
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do94c90cdd387ccf4331ca725db276eae4_autotoc_md2411}{}\doxysubsection{\texorpdfstring{Create an extra Renderer Feature to avoid the self see-\/through effect}{Create an extra Renderer Feature to avoid the self see-\/through effect}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do94c90cdd387ccf4331ca725db276eae4_autotoc_md2411}
+The settings in the previous section result in the self see-\/through effect for the following reason\+:
+
+
+\begin{DoxyItemize}
+\item When performing the Opaque rendering pass of the URP Renderer, \doxylink{namespace_unity}{Unity} renders all Game\+Objects belonging to the character with the {\ttfamily Character} Material and writes depth values to the Depth buffer. This happens before \doxylink{namespace_unity}{Unity} starts executing the {\ttfamily Draw\+Character\+Behind} Renderer Feature, because, by default, new Render Objects Renderer Features have the value {\bfseries{After\+Rendering\+Opaques}} in the {\bfseries{Event}} property.
+
+The {\bfseries{Event}} property defines the injection point where \doxylink{namespace_unity}{Unity} injects Render Passes from the Render Objects Renderer Feature. The event when URP Renderer draws Game\+Objects in the {\bfseries{Opaque Layer Mask}} is the {\bfseries{Before\+Rendering\+Opaques}} event.
+\item When executing the {\ttfamily Draw\+Character\+Behind} Renderer Feature, \doxylink{namespace_unity}{Unity} performs the depth test using the condition specified in the {\bfseries{Depth Test}} property. In the following screenshot, a bigger capsule occludes part of the smaller capsule, and the depth test passes for that part of the smaller capsule. The Renderer Feature overrides the Material for that part.
+
+
+\end{DoxyItemize}
+
+The following steps describe how to avoid such behavior and ensure that \doxylink{namespace_unity}{Unity} draws all parts of the character with proper Materials.
+
+
+\begin{DoxyEnumerate}
+\item In the URP asset, in {\bfseries{Filtering}} \texorpdfstring{$>$}{>} {\bfseries{Opaque Layer Mask}}, clear the check mark next to the {\ttfamily Character} Layer.
+
+
+
+Now \doxylink{namespace_unity}{Unity} does not render the character unless it\textquotesingle{}s behind a Game\+Object.
+
+
+\item Add a new Render Objects Renderer Feature, and call it {\ttfamily Character}.
+\item In the {\ttfamily Character} Renderer Feature, in {\bfseries{Filters}} \texorpdfstring{$>$}{>} {\bfseries{Layer Mask}}, select the {\ttfamily Character} Layer.
+
+
+
+Now \doxylink{namespace_unity}{Unity} renders the character with the {\ttfamily Character} Material even when the character is behind Game\+Objects.
+
+This happens because the {\ttfamily Draw\+Character\+Behind} Renderer Feature writes values to the depth buffer. When \doxylink{namespace_unity}{Unity} executes the {\ttfamily Character} Renderer Feature, the pixels on the character appear to be in front of the pixels that \doxylink{namespace_unity}{Unity} has drawn previously, and \doxylink{namespace_unity}{Unity} draws on top of those pixels.
+\item In the {\ttfamily Draw\+Character\+Behind} Renderer Feature, In {\bfseries{Overrides}} \texorpdfstring{$>$}{>} {\bfseries{Depth}}, clear the {\bfseries{Write Depth}} check box. With this setting, the {\ttfamily Draw\+Character\+Behind} Renderer Feature does not make changes to the depth buffer and the {\ttfamily Character} Renderer Feature does not draw the character when it\textquotesingle{}s behind Game\+Objects.
+
+
+\end{DoxyEnumerate}
+
+The example is complete. When the character goes behind Game\+Objects, \doxylink{namespace_unity}{Unity} draws the character silhouette with the {\ttfamily Character\+Behind\+Objects} Material.
+
+
+
+With the extra {\ttfamily Character} Renderer Feature, \doxylink{namespace_unity}{Unity} renders Game\+Objects as follows\+:
+
+
+\begin{DoxyEnumerate}
+\item URP Renderer does not render the {\ttfamily Character} Game\+Object in the {\bfseries{Before\+Rendering\+Opaques}} event, because the {\ttfamily Character} Layer is excluded from the {\bfseries{Opaque Layer Mask}} list.
+\item The {\ttfamily Draw\+Character\+Behind} Renderer Feature draws parts of the character that are behind other Game\+Objects. This happens in the {\bfseries{After\+Rendering\+Opaques}} event.
+\item The {\ttfamily Character} Renderer Feature draws parts of the character that are in front of other Game\+Objects. This happens in the {\bfseries{After\+Rendering\+Opaques}} event, and after executing the {\ttfamily Draw\+Character\+Behind} Renderer Feature.
+\end{DoxyEnumerate}
+
+To see another use case of the Render Objects Renderer Feature, refer to the {\bfseries{Object Occlusion}} Scene in the \href{https://github.com/Unity-Technologies/UniversalRenderingExamples}{\texttt{ Universal Rendering Examples}} project. 

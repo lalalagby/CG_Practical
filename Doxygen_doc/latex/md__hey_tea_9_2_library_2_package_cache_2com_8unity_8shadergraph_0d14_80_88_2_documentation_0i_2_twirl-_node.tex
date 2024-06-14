@@ -1,0 +1,38 @@
+\chapter{Twirl Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_twirl-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_twirl-_node}\index{Twirl Node@{Twirl Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_twirl-_node_autotoc_md4073}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_twirl-_node_autotoc_md4073}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_twirl-_node_autotoc_md4074}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_twirl-_node_autotoc_md4074}
+Applies a twirl warping effect similar to a black hole to the value of input {\bfseries{UV}}. The center reference point of the warping effect is defined by input {\bfseries{Center}} and the overall strength of the effect is defined by the value of input {\bfseries{Strength}}. Input {\bfseries{Offset}} can be used to offset the individual channels of the result.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_twirl-_node_autotoc_md4075}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_twirl-_node_autotoc_md4075}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+UV   &Input   &Vector 2   &UV   &Input UV value    \\\cline{1-5}
+Center   &Input   &Vector 2   &None   &Center reference point    \\\cline{1-5}
+Strength   &Input   &Float   &None   &Strength of the effect    \\\cline{1-5}
+Offset   &Input   &Vector 2   &None   &Individual channel offsets    \\\cline{1-5}
+Out   &Output   &Vector 2   &None   &Output UV value   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_twirl-_node_autotoc_md4076}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_twirl-_node_autotoc_md4076}
+The following example code represents one possible outcome of this node.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Twirl\_float(float2\ UV,\ float2\ Center,\ float\ Strength,\ float2\ Offset,\ out\ float2\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ float2\ delta\ =\ UV\ -\/\ Center;}
+\DoxyCodeLine{\ \ \ \ float\ angle\ =\ Strength\ *\ length(delta);}
+\DoxyCodeLine{\ \ \ \ float\ x\ =\ cos(angle)\ *\ delta.x\ -\/\ sin(angle)\ *\ delta.y;}
+\DoxyCodeLine{\ \ \ \ float\ y\ =\ sin(angle)\ *\ delta.x\ +\ cos(angle)\ *\ delta.y;}
+\DoxyCodeLine{\ \ \ \ Out\ =\ float2(x\ +\ Center.x\ +\ Offset.x,\ y\ +\ Center.y\ +\ Offset.y);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

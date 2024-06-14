@@ -1,0 +1,339 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+XR.\+Tracked\+Pose\+Driver Class Reference}
+\hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver}{}\label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver}\index{UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}}
+
+
+The \doxylink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver}{Tracked\+Pose\+Driver} component applies the current pose value of a tracked device to the Transform of the Game\+Object. \doxylink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver}{Tracked\+Pose\+Driver} can track multiple types of devices including \doxylink{namespace_unity_engine_1_1_input_system_1_1_x_r}{XR} HMDs, controllers, and remotes.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+XR.\+Tracked\+Pose\+Driver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.911263cm]{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_aff39573b52d1e8165b8b81be6ffe91b1}{Tracking\+Type}} \{ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_aff39573b52d1e8165b8b81be6ffe91b1a412d37edc27a4f29fda86e186c5eaaeb}{Rotation\+And\+Position}}
+, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_aff39573b52d1e8165b8b81be6ffe91b1afecd5932e1442e451f16983aecba5180}{Rotation\+Only}}
+, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_aff39573b52d1e8165b8b81be6ffe91b1aae729b97e00ca6e39722e1ecb6247b75}{Position\+Only}}
+ \}
+\begin{DoxyCompactList}\small\item\em Options for which Transform properties to update. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_ad32b2ae3c134560ba38dcea1ba00d1ff}{Update\+Type}} \{ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_ad32b2ae3c134560ba38dcea1ba00d1ffa8f88e01cc47af447132d3452bb762301}{Update\+And\+Before\+Render}}
+, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_ad32b2ae3c134560ba38dcea1ba00d1ffa06933067aafd48425d67bcb01bba5cb6}{Update}}
+, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_ad32b2ae3c134560ba38dcea1ba00d1ffadc18627d8298782478d7588b8223702e}{Before\+Render}}
+ \}
+\begin{DoxyCompactList}\small\item\em Options for which phases of the player loop will update Transform properties. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a7705b3effea6d1fe09609555dedddeac}\label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a7705b3effea6d1fe09609555dedddeac} 
+void {\bfseries Reset} ()
+\begin{DoxyCompactList}\small\item\em This function is called when the user hits the Reset button in the Inspector\textquotesingle{}s context menu or when adding the component the first time. This function is only called in editor mode. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a6bb5607d13ef727d9d50022285655c3f}\label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a6bb5607d13ef727d9d50022285655c3f} 
+virtual void {\bfseries Awake} ()
+\begin{DoxyCompactList}\small\item\em This function is called when the script instance is being loaded. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a17956ee28844e9545864a94228b3e360}\label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a17956ee28844e9545864a94228b3e360} 
+void {\bfseries On\+Enable} ()
+\begin{DoxyCompactList}\small\item\em This function is called when the object becomes enabled and active. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a80da1f4f2354ca9c2d84ab5b619b1f2b}\label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a80da1f4f2354ca9c2d84ab5b619b1f2b} 
+void {\bfseries On\+Disable} ()
+\begin{DoxyCompactList}\small\item\em This function is called when the object becomes disabled or inactive. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_aedd720ac21ad845090bc9e3b6e4a953f}\label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_aedd720ac21ad845090bc9e3b6e4a953f} 
+virtual void {\bfseries On\+Destroy} ()
+\begin{DoxyCompactList}\small\item\em This function is called when the Mono\+Behaviour will be destroyed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a6d08f75fe456421bbce71f5f40d664e9}{Update\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em The callback method called after the Input \doxylink{namespace_system}{System} has completed an update and processed all pending events. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a1ef69e8fa44d23c5de17b9a5d486b949}\label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a1ef69e8fa44d23c5de17b9a5d486b949} 
+virtual void {\bfseries On\+Update} ()
+\begin{DoxyCompactList}\small\item\em This method is called after the Input \doxylink{namespace_system}{System} has completed an update and processed all pending events when the type of update is not Input\+Update\+Type.\+Before\+Render. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_aa8b540b614906b14e323f5b01e4be21d}\label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_aa8b540b614906b14e323f5b01e4be21d} 
+virtual void {\bfseries On\+Before\+Render} ()
+\begin{DoxyCompactList}\small\item\em This method is called after the Input \doxylink{namespace_system}{System} has completed an update and processed all pending events when the type of update is Input\+Update\+Type.\+Before\+Render. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a224ce1fe4364317ddac12c080a42aaa3}{Perform\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Updates Transform properties with the current input pose values that have been read, constrained by tracking type and tracking state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a5a876b0f518129d4f9bef89aa8c97ca9}{Set\+Local\+Transform}} (Vector3 new\+Position, Quaternion new\+Rotation)
+\begin{DoxyCompactList}\small\item\em Updates Transform properties, constrained by tracking type and tracking state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_aff39573b52d1e8165b8b81be6ffe91b1}{Tracking\+Type}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a75a2e5e801b3961f7ea4be2bc3faf150}{tracking\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The tracking type being used by the Tracked Pose Driver to control which Transform properties to update. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_ad32b2ae3c134560ba38dcea1ba00d1ff}{Update\+Type}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a73e7edf3c3b6d01fa57b06c63b68002c}{update\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The update type being used by the Tracked Pose Driver to control which phases of the player loop will update Transform properties. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_aa1788ea2c6387c51153cc588fc2cc5f2}{ignore\+Tracking\+State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ignore tracking state and always treat the input pose as valid when updating the Transform properties. The recommended value is {\ttfamily false} so the tracking state input is used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property}{Input\+Action\+Property}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a92fd01f0f82d15837f1aa9ba9c342f50}{position\+Input}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The input action to read the position value of a tracked device. Must support reading a value of type Vector3. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property}{Input\+Action\+Property}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a15db945bff5286b3c829df7b7afa1e68}{rotation\+Input}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The input action to read the rotation value of a tracked device. Must support reading a value of type Quaternion. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property}{Input\+Action\+Property}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_ad2eae009df48191c6efd13955748edfb}{tracking\+State\+Input}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The input action to read the tracking state value of a tracked device. Identifies if position and rotation have valid data. Must support reading a value of type int. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a25e053ed3cf02435f3e126c7e1d82d69}{position\+Action}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em (Deprecated) The action to read the position value of a tracked device. Must support reading a value of type Vector3. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a5df0da8bcda97f85bb6635f329e41908}{rotation\+Action}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em (Deprecated) The action to read the rotation value of a tracked device. Must support reading a value of type Quaternion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver}{Tracked\+Pose\+Driver} component applies the current pose value of a tracked device to the Transform of the Game\+Object. \doxylink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver}{Tracked\+Pose\+Driver} can track multiple types of devices including \doxylink{namespace_unity_engine_1_1_input_system_1_1_x_r}{XR} HMDs, controllers, and remotes. 
+
+For \doxylink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a92fd01f0f82d15837f1aa9ba9c342f50}{position\+Input} and \doxylink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a15db945bff5286b3c829df7b7afa1e68}{rotation\+Input}, if an action is directly defined in the \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_property}{Input\+Action\+Property}, as opposed to a reference to an action externally defined in an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset}, the action will automatically be enabled and disabled by this behavior during \doxylink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a17956ee28844e9545864a94228b3e360}{On\+Enable} and \doxylink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a80da1f4f2354ca9c2d84ab5b619b1f2b}{On\+Disable}. The enabled state for actions externally defined must be managed externally from this behavior. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_aff39573b52d1e8165b8b81be6ffe91b1}\index{UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}!TrackingType@{TrackingType}}
+\index{TrackingType@{TrackingType}!UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}}
+\doxysubsubsection{\texorpdfstring{TrackingType}{TrackingType}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_aff39573b52d1e8165b8b81be6ffe91b1} 
+enum \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_aff39573b52d1e8165b8b81be6ffe91b1}{Unity\+Engine.\+Input\+System.\+XR.\+Tracked\+Pose\+Driver.\+Tracking\+Type}}}
+
+
+
+Options for which Transform properties to update. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a75a2e5e801b3961f7ea4be2bc3faf150}{tracking\+Type}
+
+
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RotationAndPosition@{RotationAndPosition}!UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}}\index{UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}!RotationAndPosition@{RotationAndPosition}}}\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_aff39573b52d1e8165b8b81be6ffe91b1a412d37edc27a4f29fda86e186c5eaaeb}\label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_aff39573b52d1e8165b8b81be6ffe91b1} 
+Rotation\+And\+Position&Update both rotation and position. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RotationOnly@{RotationOnly}!UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}}\index{UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}!RotationOnly@{RotationOnly}}}\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_aff39573b52d1e8165b8b81be6ffe91b1afecd5932e1442e451f16983aecba5180}\label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_aff39573b52d1e8165b8b81be6ffe91b1} 
+Rotation\+Only&Update rotation only. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PositionOnly@{PositionOnly}!UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}}\index{UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}!PositionOnly@{PositionOnly}}}\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_aff39573b52d1e8165b8b81be6ffe91b1aae729b97e00ca6e39722e1ecb6247b75}\label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_aff39573b52d1e8165b8b81be6ffe91b1} 
+Position\+Only&Update position only. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_ad32b2ae3c134560ba38dcea1ba00d1ff}\index{UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}!UpdateType@{UpdateType}}
+\index{UpdateType@{UpdateType}!UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}}
+\doxysubsubsection{\texorpdfstring{UpdateType}{UpdateType}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_ad32b2ae3c134560ba38dcea1ba00d1ff} 
+enum \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_ad32b2ae3c134560ba38dcea1ba00d1ff}{Unity\+Engine.\+Input\+System.\+XR.\+Tracked\+Pose\+Driver.\+Update\+Type}}}
+
+
+
+Options for which phases of the player loop will update Transform properties. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a73e7edf3c3b6d01fa57b06c63b68002c}{update\+Type}, Input\+System.\+on\+After\+Update
+
+
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UpdateAndBeforeRender@{UpdateAndBeforeRender}!UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}}\index{UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}!UpdateAndBeforeRender@{UpdateAndBeforeRender}}}\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_ad32b2ae3c134560ba38dcea1ba00d1ffa8f88e01cc47af447132d3452bb762301}\label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_ad32b2ae3c134560ba38dcea1ba00d1ff} 
+Update\+And\+Before\+Render&Update after the Input \doxylink{namespace_system}{System} has completed an update and right before rendering. This is the recommended and default option to minimize lag for \doxylink{namespace_unity_engine_1_1_input_system_1_1_x_r}{XR} tracked devices. \begin{DoxySeeAlso}{See also}
+Input\+Update\+Type.\+Before\+Render
+
+
+\end{DoxySeeAlso}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Update@{Update}!UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}}\index{UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}!Update@{Update}}}\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_ad32b2ae3c134560ba38dcea1ba00d1ffa06933067aafd48425d67bcb01bba5cb6}\label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_ad32b2ae3c134560ba38dcea1ba00d1ff} 
+Update&Update after the Input \doxylink{namespace_system}{System} has completed an update except right before rendering. This may be dynamic update, fixed update, or a manual update depending on the Update Mode project setting for Input \doxylink{namespace_system}{System}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BeforeRender@{BeforeRender}!UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}}\index{UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}!BeforeRender@{BeforeRender}}}\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_ad32b2ae3c134560ba38dcea1ba00d1ffadc18627d8298782478d7588b8223702e}\label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_ad32b2ae3c134560ba38dcea1ba00d1ff} 
+Before\+Render&Update after the Input \doxylink{namespace_system}{System} has completed an update right before rendering. Note that this update mode may not trigger if there are no \doxylink{namespace_unity_engine_1_1_input_system_1_1_x_r}{XR} devices added which use before render timing. 
+
+\begin{DoxySeeAlso}{See also}
+Input\+Update\+Type.\+Before\+Render, \doxylink{class_unity_engine_1_1_input_system_1_1_input_device_a8582d897119e1524b4f695447afbc6c1}{Input\+Device.\+update\+Before\+Render}
+
+
+\end{DoxySeeAlso}
+\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a224ce1fe4364317ddac12c080a42aaa3}\index{UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}!PerformUpdate@{PerformUpdate}}
+\index{PerformUpdate@{PerformUpdate}!UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}}
+\doxysubsubsection{\texorpdfstring{PerformUpdate()}{PerformUpdate()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a224ce1fe4364317ddac12c080a42aaa3} 
+virtual void Unity\+Engine.\+Input\+System.\+XR.\+Tracked\+Pose\+Driver.\+Perform\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Updates Transform properties with the current input pose values that have been read, constrained by tracking type and tracking state. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a5a876b0f518129d4f9bef89aa8c97ca9}{Set\+Local\+Transform}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a5a876b0f518129d4f9bef89aa8c97ca9}\index{UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}!SetLocalTransform@{SetLocalTransform}}
+\index{SetLocalTransform@{SetLocalTransform}!UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}}
+\doxysubsubsection{\texorpdfstring{SetLocalTransform()}{SetLocalTransform()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a5a876b0f518129d4f9bef89aa8c97ca9} 
+virtual void Unity\+Engine.\+Input\+System.\+XR.\+Tracked\+Pose\+Driver.\+Set\+Local\+Transform (\begin{DoxyParamCaption}\item[{Vector3}]{new\+Position}{, }\item[{Quaternion}]{new\+Rotation}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Updates Transform properties, constrained by tracking type and tracking state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Position} & The new local position to possibly set.\\
+\hline
+{\em new\+Rotation} & The new local rotation to possibly set.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a6d08f75fe456421bbce71f5f40d664e9}\index{UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}!UpdateCallback@{UpdateCallback}}
+\index{UpdateCallback@{UpdateCallback}!UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}}
+\doxysubsubsection{\texorpdfstring{UpdateCallback()}{UpdateCallback()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a6d08f75fe456421bbce71f5f40d664e9} 
+void Unity\+Engine.\+Input\+System.\+XR.\+Tracked\+Pose\+Driver.\+Update\+Callback (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+The callback method called after the Input \doxylink{namespace_system}{System} has completed an update and processed all pending events. 
+
+\begin{DoxySeeAlso}{See also}
+Input\+System.\+on\+After\+Update
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_aa1788ea2c6387c51153cc588fc2cc5f2}\index{UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}!ignoreTrackingState@{ignoreTrackingState}}
+\index{ignoreTrackingState@{ignoreTrackingState}!UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}}
+\doxysubsubsection{\texorpdfstring{ignoreTrackingState}{ignoreTrackingState}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_aa1788ea2c6387c51153cc588fc2cc5f2} 
+bool Unity\+Engine.\+Input\+System.\+XR.\+Tracked\+Pose\+Driver.\+ignore\+Tracking\+State\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Ignore tracking state and always treat the input pose as valid when updating the Transform properties. The recommended value is {\ttfamily false} so the tracking state input is used. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_ad2eae009df48191c6efd13955748edfb}{tracking\+State\+Input}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a25e053ed3cf02435f3e126c7e1d82d69}\index{UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}!positionAction@{positionAction}}
+\index{positionAction@{positionAction}!UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}}
+\doxysubsubsection{\texorpdfstring{positionAction}{positionAction}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a25e053ed3cf02435f3e126c7e1d82d69} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} Unity\+Engine.\+Input\+System.\+XR.\+Tracked\+Pose\+Driver.\+position\+Action\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+(Deprecated) The action to read the position value of a tracked device. Must support reading a value of type Vector3. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a92fd01f0f82d15837f1aa9ba9c342f50}{position\+Input}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a92fd01f0f82d15837f1aa9ba9c342f50}\index{UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}!positionInput@{positionInput}}
+\index{positionInput@{positionInput}!UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}}
+\doxysubsubsection{\texorpdfstring{positionInput}{positionInput}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a92fd01f0f82d15837f1aa9ba9c342f50} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property}{Input\+Action\+Property}} Unity\+Engine.\+Input\+System.\+XR.\+Tracked\+Pose\+Driver.\+position\+Input\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The input action to read the position value of a tracked device. Must support reading a value of type Vector3. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a15db945bff5286b3c829df7b7afa1e68}{rotation\+Input}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a5df0da8bcda97f85bb6635f329e41908}\index{UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}!rotationAction@{rotationAction}}
+\index{rotationAction@{rotationAction}!UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}}
+\doxysubsubsection{\texorpdfstring{rotationAction}{rotationAction}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a5df0da8bcda97f85bb6635f329e41908} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} Unity\+Engine.\+Input\+System.\+XR.\+Tracked\+Pose\+Driver.\+rotation\+Action\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+(Deprecated) The action to read the rotation value of a tracked device. Must support reading a value of type Quaternion. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a15db945bff5286b3c829df7b7afa1e68}{rotation\+Input}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a15db945bff5286b3c829df7b7afa1e68}\index{UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}!rotationInput@{rotationInput}}
+\index{rotationInput@{rotationInput}!UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}}
+\doxysubsubsection{\texorpdfstring{rotationInput}{rotationInput}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a15db945bff5286b3c829df7b7afa1e68} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property}{Input\+Action\+Property}} Unity\+Engine.\+Input\+System.\+XR.\+Tracked\+Pose\+Driver.\+rotation\+Input\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The input action to read the rotation value of a tracked device. Must support reading a value of type Quaternion. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a92fd01f0f82d15837f1aa9ba9c342f50}{position\+Input}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_ad2eae009df48191c6efd13955748edfb}\index{UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}!trackingStateInput@{trackingStateInput}}
+\index{trackingStateInput@{trackingStateInput}!UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}}
+\doxysubsubsection{\texorpdfstring{trackingStateInput}{trackingStateInput}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_ad2eae009df48191c6efd13955748edfb} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property}{Input\+Action\+Property}} Unity\+Engine.\+Input\+System.\+XR.\+Tracked\+Pose\+Driver.\+tracking\+State\+Input\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The input action to read the tracking state value of a tracked device. Identifies if position and rotation have valid data. Must support reading a value of type int. 
+
+See \href{xref:UnityEngine.XR.InputTrackingState}{\texttt{ Input\+Tracking\+State}} enum for values the input action represents. 
+\begin{DoxyItemize}
+\item \href{xref:UnityEngine.XR.InputTrackingState.None}{\texttt{ Input\+Tracking\+State.\+None}} (0) to indicate neither position nor rotation is valid.  
+\item \href{xref:UnityEngine.XR.InputTrackingState.Position}{\texttt{ Input\+Tracking\+State.\+Position}} (1) to indicate position is valid.  
+\item \href{xref:UnityEngine.XR.InputTrackingState.Rotation}{\texttt{ Input\+Tracking\+State.\+Rotation}} (2) to indicate rotation is valid.  
+\item \href{xref:UnityEngine.XR.InputTrackingState.Position}{\texttt{ Input\+Tracking\+State.\+Position}} {\ttfamily \texorpdfstring{$\vert$}{|}} \href{xref:UnityEngine.XR.InputTrackingState.Rotation}{\texttt{ Input\+Tracking\+State.\+Rotation}} (3) to indicate position and rotation is valid.  
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_aa1788ea2c6387c51153cc588fc2cc5f2}{ignore\+Tracking\+State}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a75a2e5e801b3961f7ea4be2bc3faf150}\index{UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}!trackingType@{trackingType}}
+\index{trackingType@{trackingType}!UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}}
+\doxysubsubsection{\texorpdfstring{trackingType}{trackingType}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a75a2e5e801b3961f7ea4be2bc3faf150} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_aff39573b52d1e8165b8b81be6ffe91b1}{Tracking\+Type}} Unity\+Engine.\+Input\+System.\+XR.\+Tracked\+Pose\+Driver.\+tracking\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The tracking type being used by the Tracked Pose Driver to control which Transform properties to update. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_aff39573b52d1e8165b8b81be6ffe91b1}{Tracking\+Type}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a73e7edf3c3b6d01fa57b06c63b68002c}\index{UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}!updateType@{updateType}}
+\index{updateType@{updateType}!UnityEngine.InputSystem.XR.TrackedPoseDriver@{UnityEngine.InputSystem.XR.TrackedPoseDriver}}
+\doxysubsubsection{\texorpdfstring{updateType}{updateType}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_a73e7edf3c3b6d01fa57b06c63b68002c} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_ad32b2ae3c134560ba38dcea1ba00d1ff}{Update\+Type}} Unity\+Engine.\+Input\+System.\+XR.\+Tracked\+Pose\+Driver.\+update\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The update type being used by the Tracked Pose Driver to control which phases of the player loop will update Transform properties. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_x_r_1_1_tracked_pose_driver_ad32b2ae3c134560ba38dcea1ba00d1ff}{Update\+Type}
+
+
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Plugins/\+XR/Tracked\+Pose\+Driver.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,92 @@
+\doxysection{Cinemachine.\+Editor.\+Cinemachine\+Lens\+Presets Class Reference}
+\hypertarget{class_cinemachine_1_1_editor_1_1_cinemachine_lens_presets}{}\label{class_cinemachine_1_1_editor_1_1_cinemachine_lens_presets}\index{Cinemachine.Editor.CinemachineLensPresets@{Cinemachine.Editor.CinemachineLensPresets}}
+
+
+User-\/definable named presets for lenses. This is a Singleton asset, available in editor only.  
+
+
+Inheritance diagram for Cinemachine.\+Editor.\+Cinemachine\+Lens\+Presets\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cinemachine_1_1_editor_1_1_cinemachine_lens_presets}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_cinemachine_1_1_editor_1_1_cinemachine_lens_presets_1_1_physical_preset}{Physical\+Preset}}
+\begin{DoxyCompactList}\small\item\em Physical Lens \doxylink{struct_cinemachine_1_1_editor_1_1_cinemachine_lens_presets_1_1_preset}{Preset}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_cinemachine_1_1_editor_1_1_cinemachine_lens_presets_1_1_preset}{Preset}}
+\begin{DoxyCompactList}\small\item\em Lens \doxylink{struct_cinemachine_1_1_editor_1_1_cinemachine_lens_presets_1_1_preset}{Preset}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_cinemachine_lens_presets_af07bd1ea300d2ae54d1457a50ddfe8b5}{Get\+Matching\+Preset}} (float vertical\+FOV)
+\begin{DoxyCompactList}\small\item\em Get the index of the preset that matches the lens settings. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_cinemachine_lens_presets_ae6a043e61d5ad49a34e5f03eff6340eb}{Get\+Matching\+Physical\+Preset}} (float focal\+Length)
+\begin{DoxyCompactList}\small\item\em Get the index of the physical preset that matches the lens settings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_editor_1_1_cinemachine_lens_presets_a44ec12b20cfd88f7250fc26e0e449e4e}\label{class_cinemachine_1_1_editor_1_1_cinemachine_lens_presets_a44ec12b20cfd88f7250fc26e0e449e4e} 
+\mbox{\hyperlink{struct_cinemachine_1_1_editor_1_1_cinemachine_lens_presets_1_1_preset}{Preset}}\mbox{[}$\,$\mbox{]} {\bfseries m\+\_\+\+Presets} = new \mbox{\hyperlink{struct_cinemachine_1_1_editor_1_1_cinemachine_lens_presets_1_1_preset}{Preset}}\mbox{[}0\mbox{]}
+\begin{DoxyCompactList}\small\item\em The array containing \doxylink{struct_cinemachine_1_1_editor_1_1_cinemachine_lens_presets_1_1_preset}{Preset} definitions for nonphysical cameras. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_editor_1_1_cinemachine_lens_presets_a52ffd592320fdc57ccd58bc18529ecff}\label{class_cinemachine_1_1_editor_1_1_cinemachine_lens_presets_a52ffd592320fdc57ccd58bc18529ecff} 
+\mbox{\hyperlink{struct_cinemachine_1_1_editor_1_1_cinemachine_lens_presets_1_1_physical_preset}{Physical\+Preset}}\mbox{[}$\,$\mbox{]} {\bfseries m\+\_\+\+Physical\+Presets} = new \mbox{\hyperlink{struct_cinemachine_1_1_editor_1_1_cinemachine_lens_presets_1_1_physical_preset}{Physical\+Preset}}\mbox{[}0\mbox{]}
+\begin{DoxyCompactList}\small\item\em The array containing \doxylink{struct_cinemachine_1_1_editor_1_1_cinemachine_lens_presets_1_1_preset}{Preset} definitions, for physical cameras. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_editor_1_1_cinemachine_lens_presets_a66a28cc74ab1fda172192da7e936c028}\label{class_cinemachine_1_1_editor_1_1_cinemachine_lens_presets_a66a28cc74ab1fda172192da7e936c028} 
+static \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_cinemachine_lens_presets}{Cinemachine\+Lens\+Presets}} {\bfseries Instance\+If\+Exists}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the singleton instance of this object, or null if it doesn\textquotesingle{}t exist. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_editor_1_1_cinemachine_lens_presets_ac39e7c0454a4b830abc2dbc1af50c259}\label{class_cinemachine_1_1_editor_1_1_cinemachine_lens_presets_ac39e7c0454a4b830abc2dbc1af50c259} 
+static \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_cinemachine_lens_presets}{Cinemachine\+Lens\+Presets}} {\bfseries Instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the singleton instance of this object. Creates asset if nonexistant. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+User-\/definable named presets for lenses. This is a Singleton asset, available in editor only. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cinemachine_1_1_editor_1_1_cinemachine_lens_presets_ae6a043e61d5ad49a34e5f03eff6340eb}\index{Cinemachine.Editor.CinemachineLensPresets@{Cinemachine.Editor.CinemachineLensPresets}!GetMatchingPhysicalPreset@{GetMatchingPhysicalPreset}}
+\index{GetMatchingPhysicalPreset@{GetMatchingPhysicalPreset}!Cinemachine.Editor.CinemachineLensPresets@{Cinemachine.Editor.CinemachineLensPresets}}
+\doxysubsubsection{\texorpdfstring{GetMatchingPhysicalPreset()}{GetMatchingPhysicalPreset()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_editor_1_1_cinemachine_lens_presets_ae6a043e61d5ad49a34e5f03eff6340eb} 
+int Cinemachine.\+Editor.\+Cinemachine\+Lens\+Presets.\+Get\+Matching\+Physical\+Preset (\begin{DoxyParamCaption}\item[{float}]{focal\+Length}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the index of the physical preset that matches the lens settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em focal\+Length} & Focal length to match\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the preset index, or -\/1 if no matching preset
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_editor_1_1_cinemachine_lens_presets_af07bd1ea300d2ae54d1457a50ddfe8b5}\index{Cinemachine.Editor.CinemachineLensPresets@{Cinemachine.Editor.CinemachineLensPresets}!GetMatchingPreset@{GetMatchingPreset}}
+\index{GetMatchingPreset@{GetMatchingPreset}!Cinemachine.Editor.CinemachineLensPresets@{Cinemachine.Editor.CinemachineLensPresets}}
+\doxysubsubsection{\texorpdfstring{GetMatchingPreset()}{GetMatchingPreset()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_editor_1_1_cinemachine_lens_presets_af07bd1ea300d2ae54d1457a50ddfe8b5} 
+int Cinemachine.\+Editor.\+Cinemachine\+Lens\+Presets.\+Get\+Matching\+Preset (\begin{DoxyParamCaption}\item[{float}]{vertical\+FOV}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the index of the preset that matches the lens settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertical\+FOV} & Vertical field of view\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the preset index, or -\/1 if no matching preset
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Editor/\+Utility/Cinemachine\+Lens\+Presets.\+cs\end{DoxyCompactItemize}

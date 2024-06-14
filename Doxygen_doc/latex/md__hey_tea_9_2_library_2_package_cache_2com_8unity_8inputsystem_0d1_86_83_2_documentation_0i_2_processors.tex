@@ -1,0 +1,415 @@
+\chapter{Processors}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors}\index{Processors@{Processors}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1525}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1525}%
+ An Input Processor takes a value and returns a processed result for it. The received value and result value must be of the same type. For example, you can use a clamp Processor to clamp values from a control to a certain range.
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: To convert received input values into different types, see \href{ActionBindings.md\#composite-bindings}{\texttt{ composite Bindings}}.
+
+
+\begin{DoxyItemize}
+\item Using Processors
+\begin{DoxyItemize}
+\item Processors on Bindings
+\item Processors on Actions
+\item Processors on Controls
+\end{DoxyItemize}
+\item Predefined Processors
+\begin{DoxyItemize}
+\item Clamp
+\item Invert
+\item Invert Vector 2
+\item Invert Vector 3
+\item Normalize
+\item Normalize Vector 2
+\item Normalize Vector 3
+\item Scale
+\item Scale Vector 2
+\item Scale Vector 3
+\item Axis deadzone
+\item Stick deadzone
+\end{DoxyItemize}
+\item Writing custom Processors
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1526}{}\doxysection{\texorpdfstring{Using Processors}{Using Processors}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1526}
+You can install Processors on \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings}{bindings}{0}, \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions}{actions}{0} or on \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls}{controls}{0}.
+
+Each Processor is \href{../api/UnityEngine.InputSystem.InputSystem.html\#UnityEngine_InputSystem_InputSystem_RegisterProcessor__1_System_String_}{\texttt{ registered}} using a unique name. To replace an existing Processor, register your own Processor under an existing name.
+
+Processors can have parameters which can be booleans, integers, or floating-\/point numbers. When created in data such as \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings}{bindings}{0}, processors are described as strings that look like function calls\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ This\ references\ the\ processor\ registered\ as\ "{}scale"{}\ and\ sets\ its\ "{}factor"{}}}
+\DoxyCodeLine{\textcolor{comment}{//\ parameter\ (a\ floating-\/point\ value)\ to\ a\ value\ of\ 2.5.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}scale(factor=2.5)"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Multiple\ processors\ can\ be\ chained\ together.\ They\ are\ processed}}
+\DoxyCodeLine{\textcolor{comment}{//\ from\ left\ to\ right.}}
+\DoxyCodeLine{\textcolor{comment}{//}}
+\DoxyCodeLine{\textcolor{comment}{//\ Example:\ First\ invert\ the\ value,\ then\ normalize\ [0..10]\ values\ to\ [0..1].}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}invert,normalize(min=0,max=10)"{}}}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1527}{}\doxysubsection{\texorpdfstring{Processors on Bindings}{Processors on Bindings}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1527}
+When you create Bindings for your \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions}{actions}{0}, you can choose to add Processors to the Bindings. These process the values from the controls they bind to, before the system applies them to the Action value. For instance, you might want to invert the {\ttfamily Vector2} values from the controls along the Y axis before passing these values to the Action that drives the input logic for your application. To do this, you can add an Invert Vector2 Processor to your Binding.
+
+If you\textquotesingle{}re using \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_assets}{Input Action Assets}{0}, you can add any Processor to your Bindings in the Input Action editor. Select the Binding you want to add Processors to so that the right pane of the window displays the properties for that Binding. Select the Add (+) icon on the {\bfseries{Processors}} foldout to open a list of all available Processors that match your control type, then choose a Processor type to add a Processor instance of that type. The Processor now appears under the {\bfseries{Processors}} foldout. If the Processor has any parameters, you can edit them in the {\bfseries{Processors}} foldout.
+
+
+
+To remove a Processor, click the Remove (-\/) icon next to it. You can also use the up and down arrows to change the order of Processors. This affects the order in which the system processes values.
+
+If you create your Bindings in code, you can add Processors like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ action\ =\ \textcolor{keyword}{new}\ InputAction();}
+\DoxyCodeLine{action.AddBinding(\textcolor{stringliteral}{"{}<Gamepad>/leftStick"{}})}
+\DoxyCodeLine{\ \ \ \ .WithProcessor(\textcolor{stringliteral}{"{}invertVector2(invertX=false)"{}});}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1528}{}\doxysubsection{\texorpdfstring{Processors on Actions}{Processors on Actions}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1528}
+Processors on Actions work in the same way as Processors on Bindings, but they affect all controls bound to an Action, rather than just the controls from a specific Binding. If there are Processors on both the Binding and the Action, the system processes the ones from the Binding first.
+
+You can add and edit Processors on Actions in \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_assets}{Input Action Assets}{0} the same way as you would for Bindings\+: select an Action to edit, then add one or more Processors in the right window pane.
+
+If you create your Actions in code, you can add Processors like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ action\ =\ \textcolor{keyword}{new}\ InputAction(processors:\ \textcolor{stringliteral}{"{}invertVector2(invertX=false)"{}});}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1529}{}\doxysubsection{\texorpdfstring{Processors on Controls}{Processors on Controls}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1529}
+You can have any number of Processors directly on an \href{../api/UnityEngine.InputSystem.InputControl.html}{\texttt{ {\ttfamily Input\+Control}}}, which then process the values read from the Control. Whenever you call \href{../api/UnityEngine.InputSystem.InputControl-1.html\#UnityEngine_InputSystem_InputControl_1_ReadValue}{\texttt{ {\ttfamily Read\+Value}}} on a Control, all Processors on that Control process the value before it gets returned to you. You can use \href{../api/UnityEngine.InputSystem.InputControl-1.html\#UnityEngine_InputSystem_InputControl_1_ReadUnprocessedValue}{\texttt{ {\ttfamily Read\+Unprocessed\+Value}}} on a Control to bypass the Processors.
+
+The Input \doxylink{namespace_system}{System} adds Processors to a Control during device creation, if they\textquotesingle{}re specified in the Control\textquotesingle{}s \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_layouts}{layout}{0}. You can\textquotesingle{}t add Processors to existing Controls after they\textquotesingle{}ve been created, so you can only add Processors to Controls when you\textquotesingle{}re \href{Devices.md\#creating-custom-devices}{\texttt{ creating custom devices}}. The devices that the Input \doxylink{namespace_system}{System} supports out of the box already have some useful Processors added on their Controls. For instance, sticks on gamepads have a Stick Deadzone Processor.
+
+If you\textquotesingle{}re using a layout generated by the Input \doxylink{namespace_system}{System} from a \href{Devices.md\#step-1-the-state-struct}{\texttt{ state struct}} using \href{../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html}{\texttt{ {\ttfamily Input\+Control\+Attributes}}}, you can specify the Processors you want to use via the \href{../api/UnityEngine.InputSystem.Layouts.InputControlAttribute.html\#UnityEngine_InputSystem_Layouts_InputControlAttribute_processors}{\texttt{ {\ttfamily processors}}} property of the attribute, like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{struct\ }MyDeviceState\ :\ IInputStateTypeInfo}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ FourCC\ format\ =>\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ FourCC(\textcolor{charliteral}{'M'},\ \textcolor{charliteral}{'Y'},\ \textcolor{charliteral}{'D'},\ \textcolor{charliteral}{'V'});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Add\ an\ axis\ deadzone\ to\ the\ Control\ to\ ignore\ values}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ smaller\ then\ 0.2,\ as\ our\ Control\ does\ not\ have\ a\ stable}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ resting\ position.}}
+\DoxyCodeLine{\ \ \ \ [InputControl(layout\ =\ \textcolor{stringliteral}{"{}Axis"{}},\ processors\ =\ \textcolor{stringliteral}{"{}AxisDeadzone(min=0.2)"{}})]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{short}\ axis;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+If you \href{Layouts.md\#layout-from-json}{\texttt{ create a layout from JSON}}, you can specify Processors on your Controls like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}name"{}}\ :\ \textcolor{stringliteral}{"{}MyDevice"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}extend"{}}\ :\ \textcolor{stringliteral}{"{}Gamepad"{}},\ \textcolor{comment}{//\ Or\ some\ other\ thing}}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}controls"{}}\ :\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}name"{}}\ :\ \textcolor{stringliteral}{"{}axis"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}layout"{}}\ :\ \textcolor{stringliteral}{"{}Axis"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}offset"{}}\ :\ 4,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}format"{}}\ :\ \textcolor{stringliteral}{"{}FLT"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}processors"{}}\ :\ \textcolor{stringliteral}{"{}AxisDeadzone(min=0.2)"{}}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ ]}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1530}{}\doxysection{\texorpdfstring{Predefined Processors}{Predefined Processors}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1530}
+The Input \doxylink{namespace_system}{System} package comes with a set of useful Processors you can use.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1531}{}\doxysubsection{\texorpdfstring{Clamp}{Clamp}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1531}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Processors.ClampProcessor.html}{\texttt{ {\ttfamily Clamp}}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Processors.ClampProcessor.html}{\texttt{ {\ttfamily Clamp}}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Operand Type}}   &{\ttfamily float}    \\\cline{1-2}
+{\bfseries{Parameters}}   &{\ttfamily float min}~\newline
+{\ttfamily float max}   \\\cline{1-2}
+\end{longtabu}
+
+
+Clamps input values to the \mbox{[}{\ttfamily min}..{\ttfamily max}\mbox{]} range.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1532}{}\doxysubsection{\texorpdfstring{Invert}{Invert}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1532}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Processors.InvertProcessor.html}{\texttt{ {\ttfamily Invert}}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Processors.InvertProcessor.html}{\texttt{ {\ttfamily Invert}}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Operand Type}}   &{\ttfamily float}   \\\cline{1-2}
+\end{longtabu}
+
+
+Inverts the values from a Control (that is, multiplies the values by -\/1).\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1533}{}\doxysubsection{\texorpdfstring{Invert Vector 2}{Invert Vector 2}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1533}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Processors.InvertVector2Processor.html}{\texttt{ {\ttfamily Invert\+Vector2}}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Processors.InvertVector2Processor.html}{\texttt{ {\ttfamily Invert\+Vector2}}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Operand Type}}   &{\ttfamily Vector2}    \\\cline{1-2}
+{\bfseries{Parameters}}   &{\ttfamily bool invertX}~\newline
+{\ttfamily bool invertY}   \\\cline{1-2}
+\end{longtabu}
+
+
+Inverts the values from a Control (that is, multiplies the values by -\/1). Inverts the x axis of the vector if {\ttfamily invertX} is true, and the y axis if {\ttfamily invertY} is true.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1534}{}\doxysubsection{\texorpdfstring{Invert Vector 3}{Invert Vector 3}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1534}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Processors.InvertVector3Processor.html}{\texttt{ {\ttfamily Invert Vector 3}}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Processors.InvertVector3Processor.html}{\texttt{ {\ttfamily Invert Vector 3}}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Operand Type}}   &{\ttfamily Vector3}    \\\cline{1-2}
+{\bfseries{Parameters}}   &{\ttfamily bool invertX}~\newline
+{\ttfamily bool invertY}~\newline
+{\ttfamily bool invertZ}   \\\cline{1-2}
+\end{longtabu}
+
+
+Inverts the values from a Control (that is, multiplies the values by -\/1). Inverts the x axis of the vector if {\ttfamily invertX} is true, the y axis if {\ttfamily invertY} is true, and the z axis if {\ttfamily invertZ} is true.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1535}{}\doxysubsection{\texorpdfstring{Normalize}{Normalize}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1535}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Processors.NormalizeProcessor.html}{\texttt{ {\ttfamily Normalize}}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Processors.NormalizeProcessor.html}{\texttt{ {\ttfamily Normalize}}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Operand Type}}   &{\ttfamily float}    \\\cline{1-2}
+{\bfseries{Parameters}}   &{\ttfamily float min}~\newline
+{\ttfamily float max}~\newline
+{\ttfamily float zero}   \\\cline{1-2}
+\end{longtabu}
+
+
+Normalizes input values in the range \mbox{[}{\ttfamily min}..{\ttfamily max}\mbox{]} to unsigned normalized form \mbox{[}0..1\mbox{]} if {\ttfamily min} is \texorpdfstring{$>$}{>}= {\ttfamily zero}, and to signed normalized form \mbox{[}-\/1..1\mbox{]} if {\ttfamily min} \texorpdfstring{$<$}{<} {\ttfamily zero}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1536}{}\doxysubsection{\texorpdfstring{Normalize Vector 2}{Normalize Vector 2}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1536}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Processors.NormalizeVector2Processor.html}{\texttt{ {\ttfamily Normalize\+Vector2}}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Processors.NormalizeVector2Processor.html}{\texttt{ {\ttfamily Normalize\+Vector2}}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Operand Type}}   &{\ttfamily Vector2}   \\\cline{1-2}
+\end{longtabu}
+
+
+Normalizes input vectors to be of unit length (1). This is the same as calling {\ttfamily Vector2.\+normalized}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1537}{}\doxysubsection{\texorpdfstring{Normalize Vector 3}{Normalize Vector 3}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1537}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Processors.NormalizeVector3Processor.html}{\texttt{ {\ttfamily Normalize\+Vector3}}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Processors.NormalizeVector3Processor.html}{\texttt{ {\ttfamily Normalize\+Vector3}}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Operand Type}}   &{\ttfamily Vector3}   \\\cline{1-2}
+\end{longtabu}
+
+
+Normalizes input vectors to be of unit length (1). This is the same as calling {\ttfamily Vector3.\+normalized}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1538}{}\doxysubsection{\texorpdfstring{Scale}{Scale}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1538}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Processors.ScaleProcessor.html}{\texttt{ {\ttfamily Scale}}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Processors.ScaleProcessor.html}{\texttt{ {\ttfamily Scale}}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Operand Type}}   &{\ttfamily float}    \\\cline{1-2}
+{\bfseries{Parameters}}   &{\ttfamily float factor}   \\\cline{1-2}
+\end{longtabu}
+
+
+Multiplies all input values by {\ttfamily factor}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1539}{}\doxysubsection{\texorpdfstring{Scale Vector 2}{Scale Vector 2}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1539}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Processors.ScaleVector2Processor.html}{\texttt{ {\ttfamily Scale\+Vector2}}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Processors.ScaleVector2Processor.html}{\texttt{ {\ttfamily Scale\+Vector2}}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Operand Type}}   &{\ttfamily Vector2}    \\\cline{1-2}
+{\bfseries{Parameters}}   &{\ttfamily float x}~\newline
+{\ttfamily float y}   \\\cline{1-2}
+\end{longtabu}
+
+
+Multiplies all input values by {\ttfamily x} along the X axis and by {\ttfamily y} along the Y axis.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1540}{}\doxysubsection{\texorpdfstring{Scale Vector 3}{Scale Vector 3}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1540}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Processors.ScaleVector3Processor.html}{\texttt{ {\ttfamily Scale\+Vector3}}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Processors.ScaleVector3Processor.html}{\texttt{ {\ttfamily Scale\+Vector3}}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Operand Type}}   &{\ttfamily Vector3}    \\\cline{1-2}
+{\bfseries{Parameters}}   &{\ttfamily float x}~\newline
+{\ttfamily float y}~\newline
+{\ttfamily float x}   \\\cline{1-2}
+\end{longtabu}
+
+
+Multiplies all input values by {\ttfamily x} along the X axis, by {\ttfamily y} along the Y axis, and by {\ttfamily z} along the Z axis.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1541}{}\doxysubsection{\texorpdfstring{Axis deadzone}{Axis deadzone}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1541}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor.html}{\texttt{ {\ttfamily Axis\+Deadzone}}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor.html}{\texttt{ {\ttfamily Axis\+Deadzone}}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Operand Type}}   &{\ttfamily float}    \\\cline{1-2}
+{\bfseries{Parameters}}   &{\ttfamily float min}~\newline
+{\ttfamily float max}   \\\cline{1-2}
+\end{longtabu}
+
+
+An axis deadzone Processor scales the values of a Control so that any value with an absolute value smaller than {\ttfamily min} is 0, and any value with an absolute value larger than {\ttfamily max} is 1 or -\/1. Many Controls don\textquotesingle{}t have a precise resting point (that is, they don\textquotesingle{}t always report exactly 0 when the Control is in the center). Using the {\ttfamily min} value on a deadzone Processor avoids unintentional input from such Controls. Also, some Controls don\textquotesingle{}t consistently report their maximum values when moving the axis all the way. Using the {\ttfamily max} value on a deadzone Processor ensures that you always get the maximum value in such cases.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1542}{}\doxysubsection{\texorpdfstring{Stick deadzone}{Stick deadzone}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1542}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Processors.StickDeadzoneProcessor.html}{\texttt{ {\ttfamily Stick\+Deadzone}}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Processors.StickDeadzoneProcessor.html}{\texttt{ {\ttfamily Stick\+Deadzone}}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Operand Type}}   &{\ttfamily Vector2}    \\\cline{1-2}
+{\bfseries{Parameters}}   &{\ttfamily float min}~\newline
+{\ttfamily float max}   \\\cline{1-2}
+\end{longtabu}
+
+
+A stick deadzone Processor scales the values of a Vector2 Control, such as a stick, so that any input vector with a magnitude smaller than {\ttfamily min} results in (0,0), and any input vector with a magnitude greater than {\ttfamily max} is normalized to length 1. Many Controls don\textquotesingle{}t have a precise resting point (that is, they don\textquotesingle{}t always report exactly 0,0 when the Control is in the center). Using the {\ttfamily min} value on a deadzone Processor avoids unintentional input from such Controls. Also, some Controls don\textquotesingle{}t consistently report their maximum values when moving the axis all the way. Using the {\ttfamily max} value on a deadzone Processor ensures that you always get the maximum value in such cases.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1543}{}\doxysection{\texorpdfstring{Writing custom Processors}{Writing custom Processors}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors_autotoc_md1543}
+You can also write custom Processors to use in your Project. Custom Processors are available in the UI and code in the same way as the built-\/in Processors. Add a class derived from \href{../api/UnityEngine.InputSystem.InputProcessor-1.html}{\texttt{ {\ttfamily Input\+Processor\texorpdfstring{$<$}{<}TValue\texorpdfstring{$>$}{>}}}}, and implement the \href{../api/UnityEngine.InputSystem.InputProcessor-1.html\#UnityEngine_InputSystem_InputProcessor_1_Process__0_UnityEngine_InputSystem_InputControl_}{\texttt{ {\ttfamily Process}}} method\+:
+
+\texorpdfstring{$>$}{>}{\bfseries{IMPORTANT}}\+: Processors must be {\bfseries{stateless}}. This means you cannot store local state in a processor that will change depending on the input being processed. The reason for this is because processors are not part of the \href{./Controls.md\#control-state}{\texttt{ input state}} that the Input \doxylink{namespace_system}{System} keeps.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyValueShiftProcessor\ :\ InputProcessor<float>}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ [Tooltip(\textcolor{stringliteral}{"{}Number\ to\ add\ to\ incoming\ values."{}})]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ valueShift\ =\ 0;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{float}\ Process(\textcolor{keywordtype}{float}\ value,\ InputControl\ control)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value\ +\ valueShift;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Now, you need to tell the Input \doxylink{namespace_system}{System} about your Processor. Call \href{../api/UnityEngine.InputSystem.InputSystem.html\#UnityEngine_InputSystem_InputSystem_RegisterProcessor__1_System_String_}{\texttt{ {\ttfamily Input\+System.\+Register\+Processor}}} in your initialization code. You can do so locally within the Processor class like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{[InitializeOnLoad]}
+\DoxyCodeLine{\textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyValueShiftProcessor\ :\ InputProcessor<float>}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{static}\ MyValueShiftProcessor()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Initialize();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Initialize()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ InputSystem.RegisterProcessor<MyValueShiftProcessor>();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//...}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Your new Processor is now available in the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_assets}{Input Action Asset Editor window}{0}, and you can also add it in code like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ action\ =\ \textcolor{keyword}{new}\ InputAction(processors:\ \textcolor{stringliteral}{"{}myvalueshift(valueShift=2.3)"{}});}
+
+\end{DoxyCode}
+
+
+If you want to customize the UI for editing your Processor, create a custom \href{../api/UnityEngine.InputSystem.Editor.InputParameterEditor-1.html}{\texttt{ {\ttfamily Input\+Parameter\+Editor}}} class for it\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ No\ registration\ is\ necessary\ for\ an\ InputParameterEditor.}}
+\DoxyCodeLine{\textcolor{comment}{//\ The\ system\ will\ automatically\ find\ subclasses\ based\ on\ the}}
+\DoxyCodeLine{\textcolor{comment}{//\ <..>\ type\ parameter.}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyValueShiftProcessorEditor\ :\ InputParameterEditor<MyValueShiftProcessor>}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{private}\ GUIContent\ m\_SliderLabel\ =\ \textcolor{keyword}{new}\ GUIContent(\textcolor{stringliteral}{"{}Shift\ By"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnEnable()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Put\ initialization\ code\ here.\ Use\ 'target'\ to\ refer}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ to\ the\ instance\ of\ MyValueShiftProcessor\ that\ is\ being}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ edited.}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnGUI()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Define\ your\ custom\ UI\ here\ using\ EditorGUILayout.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ target.valueShift\ =\ EditorGUILayout.Slider(m\_SliderLabel,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ target.valueShift,\ 0,\ 10);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
+ 

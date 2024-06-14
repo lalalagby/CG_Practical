@@ -1,0 +1,72 @@
+\doxysection{NSubstitute.\+Core.\+Call\+Collection Class Reference}
+\hypertarget{class_n_substitute_1_1_core_1_1_call_collection}{}\label{class_n_substitute_1_1_core_1_1_call_collection}\index{NSubstitute.Core.CallCollection@{NSubstitute.Core.CallCollection}}
+Inheritance diagram for NSubstitute.\+Core.\+Call\+Collection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_n_substitute_1_1_core_1_1_call_collection}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+interface {\bfseries IReceived\+Call\+Entry}
+\begin{DoxyCompactList}\small\item\em Performance optimization. Allows to mark call as deleted without allocating extra wrapper. To play safely, we track ownership, so object can be re-\/used only once. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_call_collection_a54e1746dd57f7a65c88db02732b3c35d}{Add}} (\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call}{ICall}} call)
+\item 
+void \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_call_collection_aac2b989e24a2fbf293f322257f198bcb}{Delete}} (\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call}{ICall}} call)
+\item 
+IEnumerable$<$ \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call}{ICall}} $>$ \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_call_collection_adde97244744de671cb2d55ca55912a0f}{All\+Calls}} ()
+\item 
+void \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_call_collection_a544aaae63edacf59943c78983cfe1595}{Clear}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_n_substitute_1_1_core_1_1_call_collection_a54e1746dd57f7a65c88db02732b3c35d}\index{NSubstitute.Core.CallCollection@{NSubstitute.Core.CallCollection}!Add@{Add}}
+\index{Add@{Add}!NSubstitute.Core.CallCollection@{NSubstitute.Core.CallCollection}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_call_collection_a54e1746dd57f7a65c88db02732b3c35d} 
+void NSubstitute.\+Core.\+Call\+Collection.\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call}{ICall}}}]{call}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_collection}{NSubstitute.\+Core.\+ICall\+Collection}}.
+
+\Hypertarget{class_n_substitute_1_1_core_1_1_call_collection_adde97244744de671cb2d55ca55912a0f}\index{NSubstitute.Core.CallCollection@{NSubstitute.Core.CallCollection}!AllCalls@{AllCalls}}
+\index{AllCalls@{AllCalls}!NSubstitute.Core.CallCollection@{NSubstitute.Core.CallCollection}}
+\doxysubsubsection{\texorpdfstring{AllCalls()}{AllCalls()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_call_collection_adde97244744de671cb2d55ca55912a0f} 
+IEnumerable$<$ \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call}{ICall}} $>$ NSubstitute.\+Core.\+Call\+Collection.\+All\+Calls (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_collection}{NSubstitute.\+Core.\+ICall\+Collection}}.
+
+\Hypertarget{class_n_substitute_1_1_core_1_1_call_collection_a544aaae63edacf59943c78983cfe1595}\index{NSubstitute.Core.CallCollection@{NSubstitute.Core.CallCollection}!Clear@{Clear}}
+\index{Clear@{Clear}!NSubstitute.Core.CallCollection@{NSubstitute.Core.CallCollection}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_call_collection_a544aaae63edacf59943c78983cfe1595} 
+void NSubstitute.\+Core.\+Call\+Collection.\+Clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_collection}{NSubstitute.\+Core.\+ICall\+Collection}}.
+
+\Hypertarget{class_n_substitute_1_1_core_1_1_call_collection_aac2b989e24a2fbf293f322257f198bcb}\index{NSubstitute.Core.CallCollection@{NSubstitute.Core.CallCollection}!Delete@{Delete}}
+\index{Delete@{Delete}!NSubstitute.Core.CallCollection@{NSubstitute.Core.CallCollection}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_call_collection_aac2b989e24a2fbf293f322257f198bcb} 
+void NSubstitute.\+Core.\+Call\+Collection.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call}{ICall}}}]{call}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_collection}{NSubstitute.\+Core.\+ICall\+Collection}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/net.\+tnrd.\+nsubstitute@449712b25a/\+Runtime/\+Core/Call\+Collection.\+cs\end{DoxyCompactItemize}

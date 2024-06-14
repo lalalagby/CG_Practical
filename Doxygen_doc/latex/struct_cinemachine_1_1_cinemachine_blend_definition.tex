@@ -1,0 +1,133 @@
+\doxysection{Cinemachine.\+Cinemachine\+Blend\+Definition Struct Reference}
+\hypertarget{struct_cinemachine_1_1_cinemachine_blend_definition}{}\label{struct_cinemachine_1_1_cinemachine_blend_definition}\index{Cinemachine.CinemachineBlendDefinition@{Cinemachine.CinemachineBlendDefinition}}
+
+
+Definition of a Camera blend. This struct holds the information necessary to generate a suitable Animation\+Curve for a \doxylink{namespace_cinemachine}{Cinemachine} Blend.  
+
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbc}{Style}} \{ \newline
+\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbcaeb334dca00e390e0d3ebf52d205807d7}{Cut}}
+, \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbcab5a2f8abee775e5f5f4c30e031739365}{Ease\+In\+Out}}
+, \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbca477b68e0e4cd72802355d52831fee0ca}{Ease\+In}}
+, \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbca4d8256186c9d4f47eb7e7b7766812bd9}{Ease\+Out}}
+, \newline
+\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbcabdf4064a6e4b059511bf2b0fdcf4454b}{Hard\+In}}
+, \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbca5bd17ad279a5c94f5a0f6d96f3bd72e8}{Hard\+Out}}
+, \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbca32a843da6ea40ab3b17a3421ccdf671b}{Linear}}
+, \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbca90589c47f06eb971d548591f23c285af}{Custom}}
+ \}
+\begin{DoxyCompactList}\small\item\em Supported predefined shapes for the blend curve. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_blend_definition_ab0a269dae0c0f189e4ae42c664fb80c4}{Cinemachine\+Blend\+Definition}} (\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbc}{Style}} style, float time)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_blend_definition_a1497674192890802b200e87fac607339}\label{struct_cinemachine_1_1_cinemachine_blend_definition_a1497674192890802b200e87fac607339} 
+void {\bfseries Create\+Standard\+Curves} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_blend_definition_af631b1e57709bf7e18aab2b7a304b31e}\label{struct_cinemachine_1_1_cinemachine_blend_definition_af631b1e57709bf7e18aab2b7a304b31e} 
+\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbc}{Style}} {\bfseries m\+\_\+\+Style}
+\begin{DoxyCompactList}\small\item\em The shape of the blend curve. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_blend_definition_afbfd5fb4ed1eac92edf79fe3045eb492}\label{struct_cinemachine_1_1_cinemachine_blend_definition_afbfd5fb4ed1eac92edf79fe3045eb492} 
+float {\bfseries m\+\_\+\+Time}
+\begin{DoxyCompactList}\small\item\em The duration (in seconds) of the blend, if not a cut. ~\newline
+ If style is a cut, then this value is ignored. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_blend_definition_ab6de6f211fb3d7cbe964cbc40df68d07}\label{struct_cinemachine_1_1_cinemachine_blend_definition_ab6de6f211fb3d7cbe964cbc40df68d07} 
+Animation\+Curve {\bfseries m\+\_\+\+Custom\+Curve}
+\begin{DoxyCompactList}\small\item\em A user-\/defined Animation\+Curve, used only if style is Custom. Curve MUST be normalized, i.\+e. time range \mbox{[}0...1\mbox{]}, value range \mbox{[}0...1\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_blend_definition_a7b2a6f619c5f5fa333674e021d5f9def}\label{struct_cinemachine_1_1_cinemachine_blend_definition_a7b2a6f619c5f5fa333674e021d5f9def} 
+static Animation\+Curve\mbox{[}$\,$\mbox{]} {\bfseries s\+Standard\+Curves}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_blend_definition_af5b3a99d029d5f2b34f167f5cce07309}\label{struct_cinemachine_1_1_cinemachine_blend_definition_af5b3a99d029d5f2b34f167f5cce07309} 
+float {\bfseries Blend\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the duration of the blend, in seconds. Will return 0 if blend style is a cut. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_blend_definition_a585f1b83d58c49eee95f9440e1fe8884}\label{struct_cinemachine_1_1_cinemachine_blend_definition_a585f1b83d58c49eee95f9440e1fe8884} 
+Animation\+Curve {\bfseries Blend\+Curve}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A normalized Animation\+Curve specifying the interpolation curve for this camera blend. Y-\/axis values must be in range \mbox{[}0,1\mbox{]} (internally clamped within Blender) and time must be in range of \mbox{[}0, 1\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definition of a Camera blend. This struct holds the information necessary to generate a suitable Animation\+Curve for a \doxylink{namespace_cinemachine}{Cinemachine} Blend. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbc}\index{Cinemachine.CinemachineBlendDefinition@{Cinemachine.CinemachineBlendDefinition}!Style@{Style}}
+\index{Style@{Style}!Cinemachine.CinemachineBlendDefinition@{Cinemachine.CinemachineBlendDefinition}}
+\doxysubsubsection{\texorpdfstring{Style}{Style}}
+{\footnotesize\ttfamily \label{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbc} 
+enum \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbc}{Cinemachine.\+Cinemachine\+Blend\+Definition.\+Style}}}
+
+
+
+Supported predefined shapes for the blend curve. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Cut@{Cut}!Cinemachine.CinemachineBlendDefinition@{Cinemachine.CinemachineBlendDefinition}}\index{Cinemachine.CinemachineBlendDefinition@{Cinemachine.CinemachineBlendDefinition}!Cut@{Cut}}}\Hypertarget{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbcaeb334dca00e390e0d3ebf52d205807d7}\label{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbc} 
+Cut&Zero-\/length blend. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EaseInOut@{EaseInOut}!Cinemachine.CinemachineBlendDefinition@{Cinemachine.CinemachineBlendDefinition}}\index{Cinemachine.CinemachineBlendDefinition@{Cinemachine.CinemachineBlendDefinition}!EaseInOut@{EaseInOut}}}\Hypertarget{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbcab5a2f8abee775e5f5f4c30e031739365}\label{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbc} 
+Ease\+In\+Out&S-\/shaped curve, giving a gentle and smooth transition. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EaseIn@{EaseIn}!Cinemachine.CinemachineBlendDefinition@{Cinemachine.CinemachineBlendDefinition}}\index{Cinemachine.CinemachineBlendDefinition@{Cinemachine.CinemachineBlendDefinition}!EaseIn@{EaseIn}}}\Hypertarget{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbca477b68e0e4cd72802355d52831fee0ca}\label{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbc} 
+Ease\+In&Linear out of the outgoing shot, and easy into the incoming. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EaseOut@{EaseOut}!Cinemachine.CinemachineBlendDefinition@{Cinemachine.CinemachineBlendDefinition}}\index{Cinemachine.CinemachineBlendDefinition@{Cinemachine.CinemachineBlendDefinition}!EaseOut@{EaseOut}}}\Hypertarget{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbca4d8256186c9d4f47eb7e7b7766812bd9}\label{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbc} 
+Ease\+Out&Easy out of the outgoing shot, and linear into the incoming. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HardIn@{HardIn}!Cinemachine.CinemachineBlendDefinition@{Cinemachine.CinemachineBlendDefinition}}\index{Cinemachine.CinemachineBlendDefinition@{Cinemachine.CinemachineBlendDefinition}!HardIn@{HardIn}}}\Hypertarget{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbcabdf4064a6e4b059511bf2b0fdcf4454b}\label{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbc} 
+Hard\+In&Easy out of the outgoing, and hard into the incoming. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HardOut@{HardOut}!Cinemachine.CinemachineBlendDefinition@{Cinemachine.CinemachineBlendDefinition}}\index{Cinemachine.CinemachineBlendDefinition@{Cinemachine.CinemachineBlendDefinition}!HardOut@{HardOut}}}\Hypertarget{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbca5bd17ad279a5c94f5a0f6d96f3bd72e8}\label{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbc} 
+Hard\+Out&Hard out of the outgoing, and easy into the incoming. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Linear@{Linear}!Cinemachine.CinemachineBlendDefinition@{Cinemachine.CinemachineBlendDefinition}}\index{Cinemachine.CinemachineBlendDefinition@{Cinemachine.CinemachineBlendDefinition}!Linear@{Linear}}}\Hypertarget{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbca32a843da6ea40ab3b17a3421ccdf671b}\label{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbc} 
+Linear&Linear blend. Mechanical-\/looking. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Custom@{Custom}!Cinemachine.CinemachineBlendDefinition@{Cinemachine.CinemachineBlendDefinition}}\index{Cinemachine.CinemachineBlendDefinition@{Cinemachine.CinemachineBlendDefinition}!Custom@{Custom}}}\Hypertarget{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbca90589c47f06eb971d548591f23c285af}\label{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbc} 
+Custom&Custom blend curve. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_cinemachine_1_1_cinemachine_blend_definition_ab0a269dae0c0f189e4ae42c664fb80c4}\index{Cinemachine.CinemachineBlendDefinition@{Cinemachine.CinemachineBlendDefinition}!CinemachineBlendDefinition@{CinemachineBlendDefinition}}
+\index{CinemachineBlendDefinition@{CinemachineBlendDefinition}!Cinemachine.CinemachineBlendDefinition@{Cinemachine.CinemachineBlendDefinition}}
+\doxysubsubsection{\texorpdfstring{CinemachineBlendDefinition()}{CinemachineBlendDefinition()}}
+{\footnotesize\ttfamily \label{struct_cinemachine_1_1_cinemachine_blend_definition_ab0a269dae0c0f189e4ae42c664fb80c4} 
+Cinemachine.\+Cinemachine\+Blend\+Definition.\+Cinemachine\+Blend\+Definition (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_blend_definition_a3846d2996b61f3d97ef229ec888e5bbc}{Style}}}]{style}{, }\item[{float}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em style} & The shape of the blend curve.\\
+\hline
+{\em time} & The duration (in seconds) of the blend\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Core/Cinemachine\+Blend.\+cs\end{DoxyCompactItemize}

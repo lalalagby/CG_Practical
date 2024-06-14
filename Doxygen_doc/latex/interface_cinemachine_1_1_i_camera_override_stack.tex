@@ -1,0 +1,102 @@
+\doxysection{Cinemachine.\+ICamera\+Override\+Stack Interface Reference}
+\hypertarget{interface_cinemachine_1_1_i_camera_override_stack}{}\label{interface_cinemachine_1_1_i_camera_override_stack}\index{Cinemachine.ICameraOverrideStack@{Cinemachine.ICameraOverrideStack}}
+
+
+This interface is specifically for \doxylink{namespace_timeline}{Timeline}. Do not use it.  
+
+
+Inheritance diagram for Cinemachine.\+ICamera\+Override\+Stack\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_cinemachine_1_1_i_camera_override_stack}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{interface_cinemachine_1_1_i_camera_override_stack_a426a71fb92e355301b4268945a30a945}{Set\+Camera\+Override}} (int override\+Id, \mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} camA, \mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} camB, float weightB, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Override the current camera and current blend. This setting will trump any in-\/game logic that sets virtual camera priorities and Enabled states. This is the main API for the timeline. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_cinemachine_1_1_i_camera_override_stack_a6585d4ab843cc407f87e8425afb1db92}{Release\+Camera\+Override}} (int override\+Id)
+\begin{DoxyCompactList}\small\item\em See Set\+Camera\+Override. Call Release\+Camera\+Override after all overriding is finished, to free the Override\+Stack resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Vector3 \mbox{\hyperlink{interface_cinemachine_1_1_i_camera_override_stack_a02027aee572ee1db5b7391cb0808ea96}{Default\+World\+Up}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the current definition of Up. May be different from Vector3.\+up. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This interface is specifically for \doxylink{namespace_timeline}{Timeline}. Do not use it. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_cinemachine_1_1_i_camera_override_stack_a6585d4ab843cc407f87e8425afb1db92}\index{Cinemachine.ICameraOverrideStack@{Cinemachine.ICameraOverrideStack}!ReleaseCameraOverride@{ReleaseCameraOverride}}
+\index{ReleaseCameraOverride@{ReleaseCameraOverride}!Cinemachine.ICameraOverrideStack@{Cinemachine.ICameraOverrideStack}}
+\doxysubsubsection{\texorpdfstring{ReleaseCameraOverride()}{ReleaseCameraOverride()}}
+{\footnotesize\ttfamily \label{interface_cinemachine_1_1_i_camera_override_stack_a6585d4ab843cc407f87e8425afb1db92} 
+void Cinemachine.\+ICamera\+Override\+Stack.\+Release\+Camera\+Override (\begin{DoxyParamCaption}\item[{int}]{override\+Id}{}\end{DoxyParamCaption})}
+
+
+
+See Set\+Camera\+Override. Call Release\+Camera\+Override after all overriding is finished, to free the Override\+Stack resources. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em override\+Id} & The ID to released. This is the value that was returned by Set\+Camera\+Override\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_a5b95a856548ac99d9882682ff32d57ee}{Cinemachine.\+Cinemachine\+Brain}}.
+
+\Hypertarget{interface_cinemachine_1_1_i_camera_override_stack_a426a71fb92e355301b4268945a30a945}\index{Cinemachine.ICameraOverrideStack@{Cinemachine.ICameraOverrideStack}!SetCameraOverride@{SetCameraOverride}}
+\index{SetCameraOverride@{SetCameraOverride}!Cinemachine.ICameraOverrideStack@{Cinemachine.ICameraOverrideStack}}
+\doxysubsubsection{\texorpdfstring{SetCameraOverride()}{SetCameraOverride()}}
+{\footnotesize\ttfamily \label{interface_cinemachine_1_1_i_camera_override_stack_a426a71fb92e355301b4268945a30a945} 
+int Cinemachine.\+ICamera\+Override\+Stack.\+Set\+Camera\+Override (\begin{DoxyParamCaption}\item[{int}]{override\+Id}{, }\item[{\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}}}]{camA}{, }\item[{\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}}}]{camB}{, }\item[{float}]{weightB}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})}
+
+
+
+Override the current camera and current blend. This setting will trump any in-\/game logic that sets virtual camera priorities and Enabled states. This is the main API for the timeline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em override\+Id} & Id to represent a specific client. An internal stack is maintained, with the most recent non-\/empty override taking precenence. This id must be \texorpdfstring{$>$}{>} 0. If you pass -\/1, a new id will be created, and returned. Use that id for subsequent calls. Don\textquotesingle{}t forget to call Release\+Camera\+Override after all overriding is finished, to free the Overide\+Stack resources.\\
+\hline
+{\em camA} & The camera to set, corresponding to weight=0.\\
+\hline
+{\em camB} & The camera to set, corresponding to weight=1.\\
+\hline
+{\em weightB} & The blend weight. 0=camA, 1=camB.\\
+\hline
+{\em delta\+Time} & Override for delta\+Time. Should be Time.\+Fixed\+Delta for time-\/based calculations to be included, -\/1 otherwise.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The override ID. Don\textquotesingle{}t forget to call Release\+Camera\+Override after all overriding is finished, to free the Overide\+Stack resources.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_a2d9b5fa3070ab0688b94bbf44e322bb9}{Cinemachine.\+Cinemachine\+Brain}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{interface_cinemachine_1_1_i_camera_override_stack_a02027aee572ee1db5b7391cb0808ea96}\index{Cinemachine.ICameraOverrideStack@{Cinemachine.ICameraOverrideStack}!DefaultWorldUp@{DefaultWorldUp}}
+\index{DefaultWorldUp@{DefaultWorldUp}!Cinemachine.ICameraOverrideStack@{Cinemachine.ICameraOverrideStack}}
+\doxysubsubsection{\texorpdfstring{DefaultWorldUp}{DefaultWorldUp}}
+{\footnotesize\ttfamily \label{interface_cinemachine_1_1_i_camera_override_stack_a02027aee572ee1db5b7391cb0808ea96} 
+Vector3 Cinemachine.\+ICamera\+Override\+Stack.\+Default\+World\+Up\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Get the current definition of Up. May be different from Vector3.\+up. 
+
+
+
+Implemented in \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain_a450ef635b6e5dba714833d8f77f5a4ac}{Cinemachine.\+Cinemachine\+Brain}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Behaviours/Cinemachine\+Brain.\+cs\end{DoxyCompactItemize}

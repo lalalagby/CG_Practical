@@ -1,0 +1,251 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Input\+Action\+State.\+Trigger\+State Struct Reference}
+\hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state}{}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state}\index{UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}}
+
+
+Record of an input control change and its related data.  
+
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a1e41a36f95e1966b1deec82344c7b8b2}{Flags}} \{ \newline
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a1e41a36f95e1966b1deec82344c7b8b2a8c13c0e24edaa008df1440ebd8a7dd8d}{Have\+Magnitude}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0
+, \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a1e41a36f95e1966b1deec82344c7b8b2ae1ff6a7360e99cb46db6bb5d3ff8e2eb}{Pass\+Through}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 1
+, \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a1e41a36f95e1966b1deec82344c7b8b2ada982542fd42a448f9700e0b9d69fbe5}{May\+Need\+Conflict\+Resolution}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 2
+, \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a1e41a36f95e1966b1deec82344c7b8b2ad2b021e4125dca472440360749e3adb0}{Has\+Multiple\+Concurrent\+Actuations}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 3
+, \newline
+{\bfseries In\+Processing} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 4
+, \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a1e41a36f95e1966b1deec82344c7b8b2a87b7760f14fbff78d8819291f36ab9a0}{Button}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 5
+, {\bfseries Pressed} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 6
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_ad60c4d7afa647debe5ce15e9e2a9e4a0}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_ad60c4d7afa647debe5ce15e9e2a9e4a0} 
+const int {\bfseries k\+Max\+Num\+Maps} = byte.\+Max\+Value
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_af464cc37ac3f94ece96077d283e6c78d}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_af464cc37ac3f94ece96077d283e6c78d} 
+const int {\bfseries k\+Max\+Num\+Controls} = ushort.\+Max\+Value
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a90a6fca7054570af8e45d027e91bead8}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a90a6fca7054570af8e45d027e91bead8} 
+const int {\bfseries k\+Max\+Num\+Bindings} = ushort.\+Max\+Value
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a51497b0346ae5d4ff58bf3e5300bff18}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a51497b0346ae5d4ff58bf3e5300bff18} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182}{Input\+Action\+Phase}} {\bfseries phase}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Phase being triggered by the control value change. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_aa50e71c63e3b4d5c3cf8419e9bcf268f}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_aa50e71c63e3b4d5c3cf8419e9bcf268f} 
+bool {\bfseries is\+Disabled}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_ae10c8d576f833140441b8379482b3071}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_ae10c8d576f833140441b8379482b3071} 
+bool {\bfseries is\+Waiting}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a3c431043da5c47900cd1e1a954a0c741}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a3c431043da5c47900cd1e1a954a0c741} 
+bool {\bfseries is\+Started}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a856295439379a8e14a109f4096ca6c4e}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a856295439379a8e14a109f4096ca6c4e} 
+bool {\bfseries is\+Performed}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a7ca7cee11b443d308c6ed92de6775491}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a7ca7cee11b443d308c6ed92de6775491} 
+bool {\bfseries is\+Canceled}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_acd2c67cb40a12181904841ca6eb3c6fe}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_acd2c67cb40a12181904841ca6eb3c6fe} 
+double {\bfseries time}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The time the binding got triggered. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a6889e753209dbcbf791f448ea201edd5}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a6889e753209dbcbf791f448ea201edd5} 
+double {\bfseries start\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The time when the binding moved into \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Input\+Action\+Phase.\+Started}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a55a1055e7d45777fcc08833ab0f79311}{magnitude}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Amount of actuation on the control. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a66171f83eda0226326a9215d9aad83df}{have\+Magnitude}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a55a1055e7d45777fcc08833ab0f79311}{magnitude} has been set. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a8a147a360ba973063c1160f099b6c9c2}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a8a147a360ba973063c1160f099b6c9c2} 
+int {\bfseries map\+Index}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Index of the action map in maps that contains the binding that triggered. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a5858a01141ccb89fff56a3c5723b3bd4}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a5858a01141ccb89fff56a3c5723b3bd4} 
+int {\bfseries control\+Index}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Index of the control currently driving the action or k\+Invalid\+Index if none. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a1cd4361ee0d771b8a298f39c2ddd2b1c}{binding\+Index}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Index into binding\+States for the binding that triggered. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_ac07880b270e9b489ee6cd92de3c72b7e}{interaction\+Index}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Index into Input\+Action\+State.\+interaction\+States for the interaction that triggered. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_ad1d957ffe8c7588b0f02703e689a91d8}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_ad1d957ffe8c7588b0f02703e689a91d8} 
+uint {\bfseries last\+Performed\+In\+Update}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Update step count (Input\+Update.\+s\+\_\+\+Update\+Step\+Count) in which action triggered/performed last. Zero if the action did not trigger yet. Also reset to zero when the action is disabled. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a35a7db291300cecbe4c9638573a46c8b}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a35a7db291300cecbe4c9638573a46c8b} 
+uint {\bfseries last\+Canceled\+In\+Update}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_aab1024d40c1246b02cb402b3d67298e8}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_aab1024d40c1246b02cb402b3d67298e8} 
+uint {\bfseries pressed\+In\+Update}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_afa1f0309f93ba698cbd2908ecef29b53}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_afa1f0309f93ba698cbd2908ecef29b53} 
+uint {\bfseries released\+In\+Update}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_abb86b179f826c9023d5fb6c544fd98a8}{is\+Pass\+Through}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the action associated with the trigger state is marked as pass-\/through. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_abd32f65d5c6ecad732b49c8ebea57f1c}{is\+Button}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the action associated with the trigger state is a button-\/type action. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_aa01171fbe0a453046548801cdc56132a}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_aa01171fbe0a453046548801cdc56132a} 
+bool {\bfseries is\+Pressed}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_ad9932b3d33d6fdb4e035e1c40f8c9566}{may\+Need\+Conflict\+Resolution}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the action may potentially see multiple concurrent actuations from its bindings and wants them resolved automatically. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a93b07ac3c5dece1a36259d135688255b}{has\+Multiple\+Concurrent\+Actuations}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the action currently has several concurrent actuations from its bindings. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a23c4ec21468300c2e34706cd43cbcab6}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a23c4ec21468300c2e34706cd43cbcab6} 
+bool {\bfseries in\+Processing}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a23dceb818fed77b4f3631054af2877a2}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a23dceb818fed77b4f3631054af2877a2} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a1e41a36f95e1966b1deec82344c7b8b2}{Flags}} {\bfseries flags}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Record of an input control change and its related data. 
+
+This serves a dual purpose. One is, trigger states represent control actuations while we process them. The other is to represent the current actuation state of an action as a whole. The latter is stored in action\+States while the former is passed around as temporary instances on the stack. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a1e41a36f95e1966b1deec82344c7b8b2}\index{UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}!Flags@{Flags}}
+\index{Flags@{Flags}!UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}}
+\doxysubsubsection{\texorpdfstring{Flags}{Flags}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a1e41a36f95e1966b1deec82344c7b8b2} 
+enum \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a1e41a36f95e1966b1deec82344c7b8b2}{Unity\+Engine.\+Input\+System.\+Input\+Action\+State.\+Trigger\+State.\+Flags}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HaveMagnitude@{HaveMagnitude}!UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}}\index{UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}!HaveMagnitude@{HaveMagnitude}}}\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a1e41a36f95e1966b1deec82344c7b8b2a8c13c0e24edaa008df1440ebd8a7dd8d}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a1e41a36f95e1966b1deec82344c7b8b2} 
+Have\+Magnitude&Whether \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a55a1055e7d45777fcc08833ab0f79311}{magnitude} has been set. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PassThrough@{PassThrough}!UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}}\index{UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}!PassThrough@{PassThrough}}}\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a1e41a36f95e1966b1deec82344c7b8b2ae1ff6a7360e99cb46db6bb5d3ff8e2eb}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a1e41a36f95e1966b1deec82344c7b8b2} 
+Pass\+Through&Whether the action associated with the trigger state is marked as pass-\/through. \begin{DoxySeeAlso}{See also}
+\doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94bae1ff6a7360e99cb46db6bb5d3ff8e2eb}{Input\+Action\+Type.\+Pass\+Through}
+
+
+\end{DoxySeeAlso}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MayNeedConflictResolution@{MayNeedConflictResolution}!UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}}\index{UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}!MayNeedConflictResolution@{MayNeedConflictResolution}}}\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a1e41a36f95e1966b1deec82344c7b8b2ada982542fd42a448f9700e0b9d69fbe5}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a1e41a36f95e1966b1deec82344c7b8b2} 
+May\+Need\+Conflict\+Resolution&Whether the action has more than one control bound to it. An action may have arbitrary many bindings yet may still resolve only to a single control at runtime. In that case, this flag is NOT set. We only set it if binding resolution for an action indeed ended up with multiple controls able to trigger the same action. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HasMultipleConcurrentActuations@{HasMultipleConcurrentActuations}!UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}}\index{UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}!HasMultipleConcurrentActuations@{HasMultipleConcurrentActuations}}}\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a1e41a36f95e1966b1deec82344c7b8b2ad2b021e4125dca472440360749e3adb0}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a1e41a36f95e1966b1deec82344c7b8b2} 
+Has\+Multiple\+Concurrent\+Actuations&Whether there are currently multiple bound controls that are actuated. This is only used if \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_ad9932b3d33d6fdb4e035e1c40f8c9566}{Trigger\+State.\+may\+Need\+Conflict\+Resolution} is true. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Button@{Button}!UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}}\index{UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}!Button@{Button}}}\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a1e41a36f95e1966b1deec82344c7b8b2a87b7760f14fbff78d8819291f36ab9a0}\label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a1e41a36f95e1966b1deec82344c7b8b2} 
+Button&Whether the action associated with the trigger state is a button-\/type action. \begin{DoxySeeAlso}{See also}
+\doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}{Input\+Action\+Type.\+Button}
+
+
+\end{DoxySeeAlso}
+\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a1cd4361ee0d771b8a298f39c2ddd2b1c}\index{UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}!bindingIndex@{bindingIndex}}
+\index{bindingIndex@{bindingIndex}!UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}}
+\doxysubsubsection{\texorpdfstring{bindingIndex}{bindingIndex}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a1cd4361ee0d771b8a298f39c2ddd2b1c} 
+int Unity\+Engine.\+Input\+System.\+Input\+Action\+State.\+Trigger\+State.\+binding\+Index\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Index into binding\+States for the binding that triggered. 
+
+This corresponds 1\+:1 to an \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}. \Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a93b07ac3c5dece1a36259d135688255b}\index{UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}!hasMultipleConcurrentActuations@{hasMultipleConcurrentActuations}}
+\index{hasMultipleConcurrentActuations@{hasMultipleConcurrentActuations}!UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}}
+\doxysubsubsection{\texorpdfstring{hasMultipleConcurrentActuations}{hasMultipleConcurrentActuations}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a93b07ac3c5dece1a36259d135688255b} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Action\+State.\+Trigger\+State.\+has\+Multiple\+Concurrent\+Actuations\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether the action currently has several concurrent actuations from its bindings. 
+
+This is only used when automatic conflict resolution is enabled (\doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_ad9932b3d33d6fdb4e035e1c40f8c9566}{may\+Need\+Conflict\+Resolution}). \Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a66171f83eda0226326a9215d9aad83df}\index{UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}!haveMagnitude@{haveMagnitude}}
+\index{haveMagnitude@{haveMagnitude}!UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}}
+\doxysubsubsection{\texorpdfstring{haveMagnitude}{haveMagnitude}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a66171f83eda0226326a9215d9aad83df} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Action\+State.\+Trigger\+State.\+have\+Magnitude\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Whether \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a55a1055e7d45777fcc08833ab0f79311}{magnitude} has been set. 
+
+Magnitude computation is expensive so we only want to do it once. Also, we sometimes need to compare a current magnitude to a magnitude value from a previous frame and the magnitude of the control may have already changed. \Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_ac07880b270e9b489ee6cd92de3c72b7e}\index{UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}!interactionIndex@{interactionIndex}}
+\index{interactionIndex@{interactionIndex}!UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}}
+\doxysubsubsection{\texorpdfstring{interactionIndex}{interactionIndex}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_ac07880b270e9b489ee6cd92de3c72b7e} 
+int Unity\+Engine.\+Input\+System.\+Input\+Action\+State.\+Trigger\+State.\+interaction\+Index\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Index into Input\+Action\+State.\+interaction\+States for the interaction that triggered. 
+
+Is Input\+Action\+State.\+k\+Invalid\+Index if there is no interaction present on the binding. \Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_abd32f65d5c6ecad732b49c8ebea57f1c}\index{UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}!isButton@{isButton}}
+\index{isButton@{isButton}!UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}}
+\doxysubsubsection{\texorpdfstring{isButton}{isButton}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_abd32f65d5c6ecad732b49c8ebea57f1c} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Action\+State.\+Trigger\+State.\+is\+Button\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether the action associated with the trigger state is a button-\/type action. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}{Input\+Action\+Type.\+Button}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_abb86b179f826c9023d5fb6c544fd98a8}\index{UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}!isPassThrough@{isPassThrough}}
+\index{isPassThrough@{isPassThrough}!UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}}
+\doxysubsubsection{\texorpdfstring{isPassThrough}{isPassThrough}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_abb86b179f826c9023d5fb6c544fd98a8} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Action\+State.\+Trigger\+State.\+is\+Pass\+Through\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether the action associated with the trigger state is marked as pass-\/through. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94bae1ff6a7360e99cb46db6bb5d3ff8e2eb}{Input\+Action\+Type.\+Pass\+Through}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a55a1055e7d45777fcc08833ab0f79311}\index{UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}!magnitude@{magnitude}}
+\index{magnitude@{magnitude}!UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}}
+\doxysubsubsection{\texorpdfstring{magnitude}{magnitude}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a55a1055e7d45777fcc08833ab0f79311} 
+float Unity\+Engine.\+Input\+System.\+Input\+Action\+State.\+Trigger\+State.\+magnitude\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Amount of actuation on the control. 
+
+This is only valid if \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a66171f83eda0226326a9215d9aad83df}{have\+Magnitude} is true.
+
+Note that this may differ from the actuation stored for \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_a5858a01141ccb89fff56a3c5723b3bd4}{control\+Index} in \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_unmanaged_memory_ae0433625a11778c3b7028a1856a7eddf}{Unmanaged\+Memory.\+control\+Magnitudes} if the binding is a composite. \Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_ad9932b3d33d6fdb4e035e1c40f8c9566}\index{UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}!mayNeedConflictResolution@{mayNeedConflictResolution}}
+\index{mayNeedConflictResolution@{mayNeedConflictResolution}!UnityEngine.InputSystem.InputActionState.TriggerState@{UnityEngine.InputSystem.InputActionState.TriggerState}}
+\doxysubsubsection{\texorpdfstring{mayNeedConflictResolution}{mayNeedConflictResolution}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_ad9932b3d33d6fdb4e035e1c40f8c9566} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Action\+State.\+Trigger\+State.\+may\+Need\+Conflict\+Resolution\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether the action may potentially see multiple concurrent actuations from its bindings and wants them resolved automatically. 
+
+We use this to gate some of the more expensive checks that are pointless to perform if we don\textquotesingle{}t have to disambiguate input from concurrent sources.
+
+Always disabled if \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_state_1_1_trigger_state_abb86b179f826c9023d5fb6c544fd98a8}{is\+Pass\+Through} is true. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Actions/Input\+Action\+State.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,197 @@
+\doxysection{Unity\+Editor.\+Rendering.\+Fullscreen.\+Shader\+Graph.\+Fullscreen\+Shader\+GUI Class Reference}
+\hypertarget{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i}{}\label{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i}\index{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI@{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI}}
+
+
+The base class to implement the fullscreen Material GUI in a render pipeline.  
+
+
+Inheritance diagram for Unity\+Editor.\+Rendering.\+Fullscreen.\+Shader\+Graph.\+Fullscreen\+Shader\+GUI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_1_1_styles}{Styles}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a8bea4d8a7ac0506976c18d79fcf9b121}{On\+GUI}} (Material\+Editor material\+Editor, Material\+Property\mbox{[}$\,$\mbox{]} properties)
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity}{Unity} calls this function when it displays the GUI. To implement your custom GUI, override this function.. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_ad613c80389d9acb4555be8f521f12f29}{On\+Open\+GUI}} (Material material, Material\+Editor material\+Editor, Material\+Property\mbox{[}$\,$\mbox{]} properties)
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity}{Unity} calls this function when it displays the GUI. To implement your custom GUI, override this function.. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a5401ad7dd85201da48fdd6cf4728c879}{Assign\+New\+Shader\+To\+Material}} (Material material, Shader old\+Shader, Shader new\+Shader)
+\begin{DoxyCompactList}\small\item\em Assign a new Fullscreen\+Shader to the target material. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_ac1c18a3fb44f1d3c13a3139f8d795823}{Validate\+Material}} (Material material)
+\begin{DoxyCompactList}\small\item\em Ensures that the material is correctly setup. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a0d53c912b9dde6dc27cf69569eab59ce}{Setup\+Surface}} (Material material)
+\begin{DoxyCompactList}\small\item\em Setup the fullscreen shader keywords from the material properties. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a3b5a077ce3aac2d369670fe26e4e8e29}{Expandable}} \{ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a3b5a077ce3aac2d369670fe26e4e8e29add13ac7b96592d268255f25a08feb257}{Surface\+Options}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0
+, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a3b5a077ce3aac2d369670fe26e4e8e29a32b392a8c8596901c669243cc5bb8fa6}{Surface\+Inputs}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 1
+ \}
+\begin{DoxyCompactList}\small\item\em Enum used to store the expanded state of the drawer in the material GUI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a5cd155e4e6bfe68edb4553e1a2261024}{Draw\+Surface\+Options}} (Material material)
+\begin{DoxyCompactList}\small\item\em Draw the Surface Options section of the fullscreen shader GUI. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a93d6bc45081c65f36491bc6ae4cb5f5d}{Draw\+Surface\+Inputs}} (Material material)
+\begin{DoxyCompactList}\small\item\em Draw the Surface Inputs section of the fullscreen shader GUI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The base class to implement the fullscreen Material GUI in a render pipeline. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a3b5a077ce3aac2d369670fe26e4e8e29}\index{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI@{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI}!Expandable@{Expandable}}
+\index{Expandable@{Expandable}!UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI@{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI}}
+\doxysubsubsection{\texorpdfstring{Expandable}{Expandable}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a3b5a077ce3aac2d369670fe26e4e8e29} 
+enum \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a3b5a077ce3aac2d369670fe26e4e8e29}{Unity\+Editor.\+Rendering.\+Fullscreen.\+Shader\+Graph.\+Fullscreen\+Shader\+GUI.\+Expandable}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Enum used to store the expanded state of the drawer in the material GUI. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SurfaceOptions@{SurfaceOptions}!UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI@{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI}}\index{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI@{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI}!SurfaceOptions@{SurfaceOptions}}}\Hypertarget{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a3b5a077ce3aac2d369670fe26e4e8e29add13ac7b96592d268255f25a08feb257}\label{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a3b5a077ce3aac2d369670fe26e4e8e29} 
+Surface\+Options&Surface Option key for the Material\+Header\+Scope\+List.\+Register\+Header\+Scope call. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SurfaceInputs@{SurfaceInputs}!UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI@{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI}}\index{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI@{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI}!SurfaceInputs@{SurfaceInputs}}}\Hypertarget{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a3b5a077ce3aac2d369670fe26e4e8e29a32b392a8c8596901c669243cc5bb8fa6}\label{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a3b5a077ce3aac2d369670fe26e4e8e29} 
+Surface\+Inputs&Surface Inputs key for the Material\+Header\+Scope\+List.\+Register\+Header\+Scope call. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a5401ad7dd85201da48fdd6cf4728c879}\index{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI@{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI}!AssignNewShaderToMaterial@{AssignNewShaderToMaterial}}
+\index{AssignNewShaderToMaterial@{AssignNewShaderToMaterial}!UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI@{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI}}
+\doxysubsubsection{\texorpdfstring{AssignNewShaderToMaterial()}{AssignNewShaderToMaterial()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a5401ad7dd85201da48fdd6cf4728c879} 
+override void Unity\+Editor.\+Rendering.\+Fullscreen.\+Shader\+Graph.\+Fullscreen\+Shader\+GUI.\+Assign\+New\+Shader\+To\+Material (\begin{DoxyParamCaption}\item[{Material}]{material}{, }\item[{Shader}]{old\+Shader}{, }\item[{Shader}]{new\+Shader}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Assign a new Fullscreen\+Shader to the target material. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & A valid material using a \doxylink{namespace_unity_editor_1_1_rendering_1_1_fullscreen}{Fullscreen} Shader Graph.\\
+\hline
+{\em old\+Shader} & \\
+\hline
+{\em new\+Shader} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a93d6bc45081c65f36491bc6ae4cb5f5d}\index{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI@{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI}!DrawSurfaceInputs@{DrawSurfaceInputs}}
+\index{DrawSurfaceInputs@{DrawSurfaceInputs}!UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI@{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI}}
+\doxysubsubsection{\texorpdfstring{DrawSurfaceInputs()}{DrawSurfaceInputs()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a93d6bc45081c65f36491bc6ae4cb5f5d} 
+virtual void Unity\+Editor.\+Rendering.\+Fullscreen.\+Shader\+Graph.\+Fullscreen\+Shader\+GUI.\+Draw\+Surface\+Inputs (\begin{DoxyParamCaption}\item[{Material}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Draw the Surface Inputs section of the fullscreen shader GUI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & A valid material using a \doxylink{namespace_unity_editor_1_1_rendering_1_1_fullscreen}{Fullscreen} Shader Graph.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a5cd155e4e6bfe68edb4553e1a2261024}\index{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI@{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI}!DrawSurfaceOptions@{DrawSurfaceOptions}}
+\index{DrawSurfaceOptions@{DrawSurfaceOptions}!UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI@{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI}}
+\doxysubsubsection{\texorpdfstring{DrawSurfaceOptions()}{DrawSurfaceOptions()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a5cd155e4e6bfe68edb4553e1a2261024} 
+virtual void Unity\+Editor.\+Rendering.\+Fullscreen.\+Shader\+Graph.\+Fullscreen\+Shader\+GUI.\+Draw\+Surface\+Options (\begin{DoxyParamCaption}\item[{Material}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Draw the Surface Options section of the fullscreen shader GUI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & A valid material using a \doxylink{namespace_unity_editor_1_1_rendering_1_1_fullscreen}{Fullscreen} Shader Graph.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a8bea4d8a7ac0506976c18d79fcf9b121}\index{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI@{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI}!OnGUI@{OnGUI}}
+\index{OnGUI@{OnGUI}!UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI@{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI}}
+\doxysubsubsection{\texorpdfstring{OnGUI()}{OnGUI()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a8bea4d8a7ac0506976c18d79fcf9b121} 
+override void Unity\+Editor.\+Rendering.\+Fullscreen.\+Shader\+Graph.\+Fullscreen\+Shader\+GUI.\+On\+GUI (\begin{DoxyParamCaption}\item[{Material\+Editor}]{material\+Editor}{, }\item[{Material\+Property\mbox{[}$\,$\mbox{]}}]{properties}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{namespace_unity}{Unity} calls this function when it displays the GUI. To implement your custom GUI, override this function.. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material\+Editor} & Material editor instance.\\
+\hline
+{\em properties} & The list of properties in the inspected material(s).\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_ad613c80389d9acb4555be8f521f12f29}\index{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI@{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI}!OnOpenGUI@{OnOpenGUI}}
+\index{OnOpenGUI@{OnOpenGUI}!UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI@{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI}}
+\doxysubsubsection{\texorpdfstring{OnOpenGUI()}{OnOpenGUI()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_ad613c80389d9acb4555be8f521f12f29} 
+virtual void Unity\+Editor.\+Rendering.\+Fullscreen.\+Shader\+Graph.\+Fullscreen\+Shader\+GUI.\+On\+Open\+GUI (\begin{DoxyParamCaption}\item[{Material}]{material}{, }\item[{Material\+Editor}]{material\+Editor}{, }\item[{Material\+Property\mbox{[}$\,$\mbox{]}}]{properties}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxylink{namespace_unity}{Unity} calls this function when it displays the GUI. To implement your custom GUI, override this function.. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material\+Editor} & Material editor instance.\\
+\hline
+{\em properties} & The list of properties in the inspected material(s).\\
+\hline
+{\em material} & The target materials for this GUI.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a0d53c912b9dde6dc27cf69569eab59ce}\index{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI@{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI}!SetupSurface@{SetupSurface}}
+\index{SetupSurface@{SetupSurface}!UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI@{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI}}
+\doxysubsubsection{\texorpdfstring{SetupSurface()}{SetupSurface()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_a0d53c912b9dde6dc27cf69569eab59ce} 
+static void Unity\+Editor.\+Rendering.\+Fullscreen.\+Shader\+Graph.\+Fullscreen\+Shader\+GUI.\+Setup\+Surface (\begin{DoxyParamCaption}\item[{Material}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Setup the fullscreen shader keywords from the material properties. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & A valid material using a \doxylink{namespace_unity_editor_1_1_rendering_1_1_fullscreen}{Fullscreen} Shader Graph.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_ac1c18a3fb44f1d3c13a3139f8d795823}\index{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI@{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI}!ValidateMaterial@{ValidateMaterial}}
+\index{ValidateMaterial@{ValidateMaterial}!UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI@{UnityEditor.Rendering.Fullscreen.ShaderGraph.FullscreenShaderGUI}}
+\doxysubsubsection{\texorpdfstring{ValidateMaterial()}{ValidateMaterial()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_fullscreen_1_1_shader_graph_1_1_fullscreen_shader_g_u_i_ac1c18a3fb44f1d3c13a3139f8d795823} 
+override void Unity\+Editor.\+Rendering.\+Fullscreen.\+Shader\+Graph.\+Fullscreen\+Shader\+GUI.\+Validate\+Material (\begin{DoxyParamCaption}\item[{Material}]{material}{}\end{DoxyParamCaption})}
+
+
+
+Ensures that the material is correctly setup. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & A valid material using a \doxylink{namespace_unity_editor_1_1_rendering_1_1_fullscreen}{Fullscreen} Shader Graph.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+shadergraph@14.\+0.\+8/\+Editor/\+Generation/\+Targets/\+Fullscreen/Fullscreen\+Shader\+GUI.\+cs\end{DoxyCompactItemize}

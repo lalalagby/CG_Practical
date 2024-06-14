@@ -1,0 +1,71 @@
+\doxysection{Unity\+Engine.\+Experimental.\+Rendering.\+Universal.\+Render\+Objects Class Reference}
+\hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects}{}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects}\index{UnityEngine.Experimental.Rendering.Universal.RenderObjects@{UnityEngine.Experimental.Rendering.Universal.RenderObjects}}
+
+
+The class for the render objects renderer feature.  
+
+
+Inheritance diagram for Unity\+Engine.\+Experimental.\+Rendering.\+Universal.\+Render\+Objects\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.270270cm]{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_custom_camera_settings}{Custom\+Camera\+Settings}}
+\begin{DoxyCompactList}\small\item\em The settings for custom cameras values. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_filter_settings}{Filter\+Settings}}
+\begin{DoxyCompactList}\small\item\em The filter settings used. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings}{Render\+Objects\+Settings}}
+\begin{DoxyCompactList}\small\item\em Settings class used for the render objects renderer feature. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_a7b29eab59467384470f143b7f9cc67d9}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_a7b29eab59467384470f143b7f9cc67d9} 
+override void {\bfseries Create} ()
+\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_a23981a56e08e3da54592c74752ef8e93}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_a23981a56e08e3da54592c74752ef8e93} 
+override void {\bfseries Add\+Render\+Passes} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Scriptable\+Renderer}} renderer, ref \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}} rendering\+Data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature}{Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Renderer\+Feature}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Create} ()
+\begin{DoxyCompactList}\small\item\em Initializes this feature\textquotesingle{}s resources. This is called every time serialization happens. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_acdfd6aaa07f0bbd564d6d054597640fd}{On\+Camera\+Pre\+Cull}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Scriptable\+Renderer}} renderer, in \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_camera_data}{Camera\+Data}} camera\+Data)
+\begin{DoxyCompactList}\small\item\em Callback before cull happens in renderer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_af397bf0b2792eeef093cd483f8510e42}{Add\+Render\+Passes}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Scriptable\+Renderer}} renderer, ref \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}} rendering\+Data)
+\begin{DoxyCompactList}\small\item\em Injects one or multiple {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Scriptable\+Render\+Pass}} in the renderer. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_a100d4bf04924b49e6a14a533f0415add}{Setup\+Render\+Passes}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Scriptable\+Renderer}} renderer, in \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}} rendering\+Data)
+\begin{DoxyCompactList}\small\item\em Callback after render targets are initialized. This allows for accessing targets from renderer after they are created and ready. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_a1b9f657f59bc0ed8165d3e0fca5480e8}{Set\+Active}} (bool active)
+\begin{DoxyCompactList}\small\item\em Sets the state of Scriptable\+Render\+Feature (true\+: the feature is active, false\+: the feature is inactive). If the feature is active, it is added to the renderer it is attached to, otherwise the feature is skipped while rendering. \end{DoxyCompactList}\item 
+void {\bfseries Dispose} ()
+\begin{DoxyCompactList}\small\item\em Disposable pattern implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_aa7cb8f46894b508207bb59b0b246cc67}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_aa7cb8f46894b508207bb59b0b246cc67} 
+\mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings}{Render\+Objects\+Settings}} {\bfseries settings} = new \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings}{Render\+Objects\+Settings}}()
+\begin{DoxyCompactList}\small\item\em The settings used for the Render Objects renderer feature. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature}{Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Renderer\+Feature}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_a1117b623c2a8ba6a7c0020591b6d400f}{Dispose}} (bool disposing)
+\begin{DoxyCompactList}\small\item\em Called by \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_ad2cc174f3ae439cb9a2a1402bc2a6663}{Dispose()}. Override this function to clean up resources in your renderer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature}{Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Renderer\+Feature}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries is\+Active}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the state of the Scriptable\+Render\+Feature (true\+: the feature is active, false\+: the feature is inactive). Use the method Scriptable\+Render\+Feature.\+Set\+Active to change the value of this variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class for the render objects renderer feature. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/\+Renderer\+Features/Render\+Objects.\+cs\end{DoxyCompactItemize}

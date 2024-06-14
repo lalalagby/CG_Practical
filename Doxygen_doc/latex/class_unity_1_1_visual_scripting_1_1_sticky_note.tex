@@ -1,0 +1,109 @@
+\doxysection{Unity.\+Visual\+Scripting.\+Sticky\+Note Class Reference}
+\hypertarget{class_unity_1_1_visual_scripting_1_1_sticky_note}{}\label{class_unity_1_1_visual_scripting_1_1_sticky_note}\index{Unity.VisualScripting.StickyNote@{Unity.VisualScripting.StickyNote}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Sticky\+Note\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_1_1_visual_scripting_1_1_sticky_note}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_sticky_note_a55d7744256d16013f98cb0315d79d9cf}\label{class_unity_1_1_visual_scripting_1_1_sticky_note_a55d7744256d16013f98cb0315d79d9cf} 
+enum {\bfseries Color\+Enum} \{ \newline
+{\bfseries Classic}
+, {\bfseries Black}
+, {\bfseries Dark}
+, {\bfseries Orange}
+, \newline
+{\bfseries Green}
+, {\bfseries Blue}
+, {\bfseries Red}
+, {\bfseries Purple}
+, \newline
+{\bfseries Teal}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_sticky_note_a4e14d7c8e19787b5fd5bb4c666483254}\label{class_unity_1_1_visual_scripting_1_1_sticky_note_a4e14d7c8e19787b5fd5bb4c666483254} 
+static Color {\bfseries Get\+Sticky\+Color} (Color\+Enum enum\+Value)
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_sticky_note_ab2ca07a7c8e6b8d75cc79510f87d13a3}\label{class_unity_1_1_visual_scripting_1_1_sticky_note_ab2ca07a7c8e6b8d75cc79510f87d13a3} 
+static Color {\bfseries Get\+Font\+Color} (Color\+Enum enum\+Value)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_sticky_note_a2de2227200572d931dddc148a7dafc09}\label{class_unity_1_1_visual_scripting_1_1_sticky_note_a2de2227200572d931dddc148a7dafc09} 
+static readonly Color {\bfseries default\+Color} = new Color(.\+969f, .\+91f, .\+624f)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_sticky_note_ad1bb737035a8d6a891799add12e5196d}\label{class_unity_1_1_visual_scripting_1_1_sticky_note_ad1bb737035a8d6a891799add12e5196d} 
+Rect {\bfseries position}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_sticky_note_aa3be1f9ef1060edb4581ca54f03589a5}\label{class_unity_1_1_visual_scripting_1_1_sticky_note_aa3be1f9ef1060edb4581ca54f03589a5} 
+string {\bfseries title} = "{}Sticky Note"{}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_sticky_note_adb691295f608fb7908cd402cb71a903d}\label{class_unity_1_1_visual_scripting_1_1_sticky_note_adb691295f608fb7908cd402cb71a903d} 
+string {\bfseries body}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_sticky_note_a7a8d7ff6c7ed034eb13401abdf093d5b}\label{class_unity_1_1_visual_scripting_1_1_sticky_note_a7a8d7ff6c7ed034eb13401abdf093d5b} 
+Color\+Enum {\bfseries color\+Theme}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_element}{Unity.\+Visual\+Scripting.\+Graph\+Element$<$ IGraph $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+Guid {\bfseries guid}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+virtual int {\bfseries dependency\+Order}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+TGraph {\bfseries graph}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+virtual IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_serialization_dependency}{ISerialization\+Dependency}} $>$ {\bfseries deserialization\+Dependencies}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_element}{Unity.\+Visual\+Scripting.\+Graph\+Element$<$ IGraph $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Instantiate} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} instance)
+\item 
+virtual void {\bfseries Uninstantiate} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} instance)
+\item 
+virtual void {\bfseries Before\+Add} ()
+\item 
+virtual void {\bfseries After\+Add} ()
+\item 
+virtual void {\bfseries Before\+Remove} ()
+\item 
+virtual void {\bfseries After\+Remove} ()
+\item 
+virtual void {\bfseries Dispose} ()
+\item 
+virtual bool {\bfseries Handle\+Dependencies} ()
+\item 
+virtual IEnumerable$<$ object $>$ {\bfseries Get\+Aot\+Stubs} (Hash\+Set$<$ object $>$ visited)
+\item 
+virtual void {\bfseries Prewarm} ()
+\item 
+override string {\bfseries To\+String} ()
+\item 
+virtual \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_analytics_identifier}{Analytics\+Identifier}} {\bfseries Get\+Analytics\+Identifier} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_element}{Unity.\+Visual\+Scripting.\+Graph\+Element$<$ IGraph $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Instantiate\+Nest} ()
+\item 
+void {\bfseries Uninstantiate\+Nest} ()
+\item 
+void {\bfseries Copy\+From} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_element}{Graph\+Element}}$<$ TGraph $>$ source)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+8.\+0/\+Runtime/\+Visual\+Scripting.\+Core/\+Sticky\+Note/Sticky\+Note.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,83 @@
+\chapter{Render Type}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do281102a196ad8cdcf90806a18445bf3f}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do281102a196ad8cdcf90806a18445bf3f}\index{Render Type@{Render Type}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do281102a196ad8cdcf90806a18445bf3f_autotoc_md2085}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do281102a196ad8cdcf90806a18445bf3f_autotoc_md2085}%
+ There are two types of Camera in the Universal Render Pipeline (URP)\+:
+
+
+\begin{DoxyItemize}
+\item A Base Camera is a general purpose Camera that renders to a render target (a screen, or a \href{https://docs.unity3d.com/Manual/class-RenderTexture.html}{\texttt{ Render Texture}}).
+\item An \doxylink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do281102a196ad8cdcf90806a18445bf3f_overlay-camera}{Overlay Camera} renders on top of another Camera\textquotesingle{}s output. You can combine the output of a Base Camera with the output of one or more Overlay Cameras. This is called \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2camera-stacking}{Camera stacking}{0}.
+\end{DoxyItemize}
+
+Use a Camera’s {\bfseries{Render Type}} property to make it a Base Camera or an Overlay Camera.
+
+To change the type of a Camera in the \doxylink{namespace_unity}{Unity} Editor\+:
+
+
+\begin{DoxyEnumerate}
+\item Create or select a Camera in your Scene.
+\item In the Camera Inspector, use the {\bfseries{Render Type}} drop-\/down menu to select a different type of Camera. Select either\+:
+\begin{DoxyItemize}
+\item {\bfseries{Base}} to change the Camera to a Base Camera
+\item {\bfseries{Overlay}} to change the Camera to an Overlay Camera
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+
+
+You can change a Camera’s type in a script, by setting the {\ttfamily render\+Type} property of the Camera\textquotesingle{}s \href{xref:UnityEngine.Rendering.Universal.UniversalAdditionalCameraData}{\texttt{ Universal Additional Camera Data}} component, like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ cameraData\ =\ camera.GetUniversalAdditionalCameraData();}
+\DoxyCodeLine{cameraData.renderType\ =\ CameraRenderType.Base;}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do281102a196ad8cdcf90806a18445bf3f_autotoc_md2086}{}\doxysection{\texorpdfstring{\label{_base-camera}%
+Base Camera}{\label{_base-camera}%
+Base Camera}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do281102a196ad8cdcf90806a18445bf3f_autotoc_md2086}
+Base Camera is the default type of Camera in URP. A Base Camera is a general purpose Camera that renders to a given render target.
+
+To render anything in URP, you must have at least one Base Camera in your Scene. You can have multiple Base Cameras in a Scene. You can use a Base Camera on its own, or you can use it in a \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2camera-stacking}{Camera stack}{0}. For more information on working with multiple Cameras in URP, see \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dobd686be85ad15bc1573ea5fb6838b8d4}{Working with multiple cameras}{0}.
+
+When you have an active Base Camera in your Scene, this icon appears next to the Camera Gizmo in the Scene view\+:
+
+
+
+For information on the properties that \doxylink{namespace_unity}{Unity} exposes in the Inspector for a Base Camera, see the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9}{Camera component reference}{0}.
+
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do281102a196ad8cdcf90806a18445bf3f_overlay-camera}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do281102a196ad8cdcf90806a18445bf3f_overlay-camera}%
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do281102a196ad8cdcf90806a18445bf3f_autotoc_md2087}{}\doxysection{\texorpdfstring{Overlay Camera}{Overlay Camera}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do281102a196ad8cdcf90806a18445bf3f_autotoc_md2087}
+An Overlay Camera is a Camera that renders its view on top of another Camera\textquotesingle{}s output. You can use Overlay Cameras to create effects such as 3D objects in a 2D UI, or a cockpit in a vehicle.
+
+You must use Overlay Cameras in conjunction with one or more Base Cameras using the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2camera-stacking}{Camera Stacking}{0} system. You cannot use Overlay Cameras on their own. An Overlay Camera that is not part of a Camera Stack does not perform any steps of its render loop, and is known as an orphan Camera.
+
+{\bfseries{Important note\+:}} In this version of URP, Overlay Cameras and Camera Stacking are supported only when using the Universal Renderer.
+
+When you have an active Overlay Camera in your Scene, this icon appears next to the Camera Gizmo in the Scene view\+:
+
+
+
+The Base Camera in a Camera Stack determines most of the properties of the Camera Stack. Because you can only use Overlay Cameras in a Camera Stack, URP uses only the following properties of an Overlay Camera when rendering the Scene\+:
+
+
+\begin{DoxyItemize}
+\item Projection
+\item FOV Axis
+\item Field of View
+\item Physical Camera properties
+\item Clipping plans
+\item Renderer
+\item Clear Depth
+\item Render Shadows
+\item Culling Mask
+\item Occlusion Culling
+\end{DoxyItemize}
+
+\doxylink{namespace_unity}{Unity} hides all of the other unused properties in the Inspector. You can access unused properties using a script, but any changes you make to these unused properties will not affect the visual output of any Camera Stacks that use the Overlay Camera.
+
+You cannot apply post-\/processing to an individual Overlay Camera. You can apply post-\/processing to an individual Base Camera, or to a Camera Stack.
+
+For information on the properties that \doxylink{namespace_unity}{Unity} exposes in the Inspector of an Overlay Camera, see the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9}{Camera component reference}{0}. 

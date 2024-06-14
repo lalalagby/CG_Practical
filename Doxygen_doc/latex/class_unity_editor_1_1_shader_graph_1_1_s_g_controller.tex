@@ -1,0 +1,70 @@
+\doxysection{Unity\+Editor.\+Shader\+Graph.\+SGController\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_unity_editor_1_1_shader_graph_1_1_s_g_controller}{}\label{class_unity_editor_1_1_shader_graph_1_1_s_g_controller}\index{UnityEditor.ShaderGraph.SGController$<$ T $>$@{UnityEditor.ShaderGraph.SGController$<$ T $>$}}
+Inheritance diagram for Unity\+Editor.\+Shader\+Graph.\+SGController\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_shader_graph_1_1_s_g_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_afbb856f320fb6c4dd8e52480fd1f5f06}\label{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_afbb856f320fb6c4dd8e52480fd1f5f06} 
+virtual void {\bfseries On\+Disable} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_a05927424b82b2e781c01c9496233fc09}\label{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_a05927424b82b2e781c01c9496233fc09} 
+void {\bfseries Send\+Event} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_event}{SGController\+Event}} e)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_a9aa907cf175e833a7880427e3db3996d}\label{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_a9aa907cf175e833a7880427e3db3996d} 
+void {\bfseries Apply\+Changes} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_a7216085a4ea7eb9a1f45df1cc800323e}\label{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_a7216085a4ea7eb9a1f45df1cc800323e} 
+void {\bfseries Cleanup} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_ad62ffed6024149301bed80bcc6da2d4e}\label{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_ad62ffed6024149301bed80bcc6da2d4e} 
+bool {\bfseries m\+\_\+\+Disable\+Called} = false
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_a68649e96631d7eb8db5bc5c3b362fd20}\label{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_a68649e96631d7eb8db5bc5c3b362fd20} 
+void {\bfseries Notify\+Change} (\mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_i_graph_data_action}{IGraph\+Data\+Action}} change\+Action)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_a55fa1e309dcb7645fe34793e2da92847}\label{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_a55fa1e309dcb7645fe34793e2da92847} 
+{\bfseries SGController} (T model, Graph\+Data\+Store data\+Store)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_af8e2942684cf74b5f418fcef904b4aa1}\label{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_af8e2942684cf74b5f418fcef904b4aa1} 
+void {\bfseries Request\+Model\+Change} (\mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_i_graph_data_action}{IGraph\+Data\+Action}} change\+Action)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_aa4e57bce383da7525ad737af8c5cbbe8}\label{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_aa4e57bce383da7525ad737af8c5cbbe8} 
+void {\bfseries Model\+Changed} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_graph_data}{Graph\+Data}} graph\+Data, \mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_i_graph_data_action}{IGraph\+Data\+Action}} change\+Action)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_aff33da50574325a24fc2e2979b090875}\label{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_aff33da50574325a24fc2e2979b090875} 
+\mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_i_graph_data_action}{IGraph\+Data\+Action}} {\bfseries Dummy\+Change} = new \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_dummy_change_action}{Dummy\+Change\+Action}}()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_a3c8618f3cef213031e6579a54f77b83f}\label{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_a3c8618f3cef213031e6579a54f77b83f} 
+List$<$ \mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_drawing_1_1_i_s_g_controlled_element}{ISGControlled\+Element}} $>$ {\bfseries m\+\_\+\+Event\+Handlers} = new List$<$\mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_drawing_1_1_i_s_g_controlled_element}{ISGControlled\+Element}}$>$()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_ae3774a43d0d8c09691e3e090d112d9b8}\label{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_ae3774a43d0d8c09691e3e090d112d9b8} 
+virtual IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_s_g_controller}{SGController}} $>$ {\bfseries all\+Children}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_a26e5f0adc98f249ee12d6eb0362f24ef}\label{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_a26e5f0adc98f249ee12d6eb0362f24ef} 
+Graph\+Data\+Store {\bfseries Data\+Store}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_a1aff66ae983e495e2c8a26d4b1e694d5}\label{class_unity_editor_1_1_shader_graph_1_1_s_g_controller_a1aff66ae983e495e2c8a26d4b1e694d5} 
+T {\bfseries Model}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+shadergraph@14.\+0.\+8/\+Editor/\+Drawing/\+Controllers/SGController.\+cs\end{DoxyCompactItemize}

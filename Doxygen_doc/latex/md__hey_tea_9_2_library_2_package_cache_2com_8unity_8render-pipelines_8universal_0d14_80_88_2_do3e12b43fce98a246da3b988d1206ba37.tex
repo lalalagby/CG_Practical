@@ -1,0 +1,29 @@
+\chapter{Channel Mixer}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do3e12b43fce98a246da3b988d1206ba37}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do3e12b43fce98a246da3b988d1206ba37}\index{Channel Mixer@{Channel Mixer}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do3e12b43fce98a246da3b988d1206ba37_autotoc_md2277}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do3e12b43fce98a246da3b988d1206ba37_autotoc_md2277}%
+ The Channel Mixer effect modifies the influence of each input color channel on the overall mix of the output channel. For example, if you increase the influence of the green channel on the overall mix of the red channel, all areas of the final image that are green (including neutral/monochrome) tint to a more reddish hue.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do3e12b43fce98a246da3b988d1206ba37_autotoc_md2278}{}\doxysection{\texorpdfstring{Using Channel Mixer}{Using Channel Mixer}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do3e12b43fce98a246da3b988d1206ba37_autotoc_md2278}
+{\bfseries{Channel Mixer}} uses the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_volumes}{Volume}{0} framework, so to enable and modify {\bfseries{Channel Mixer}} properties, you must add a {\bfseries{Channel Mixer}} override to a \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_volumes}{Volume}{0} in your Scene. To add {\bfseries{Channel Mixer}} to a Volume\+:
+
+
+\begin{DoxyEnumerate}
+\item In the Scene or Hierarchy view, select a Game\+Object that contains a Volume component to view it in the Inspector.
+\item In the Inspector, navigate to {\bfseries{Add Override \texorpdfstring{$>$}{>} Post-\/processing}} and click on {\bfseries{Channel Mixer}}. URP now applies {\bfseries{Channel Mixer}} to any Camera this Volume affects.
+\end{DoxyEnumerate}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do3e12b43fce98a246da3b988d1206ba37_autotoc_md2279}{}\doxysection{\texorpdfstring{Properties}{Properties}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do3e12b43fce98a246da3b988d1206ba37_autotoc_md2279}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do3e12b43fce98a246da3b988d1206ba37_autotoc_md2280}{}\doxysubsection{\texorpdfstring{Output channels}{Output channels}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do3e12b43fce98a246da3b988d1206ba37_autotoc_md2280}
+Before you modify the influence of each input channel, you must select the output color channel to influence. To do this, click the button for the channel that you want to set the influence for.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Red}}   &Use the slider to set the influence of the red channel on the selected output channel.    \\\cline{1-2}
+{\bfseries{Green}}   &Use the slider to set the influence of the green channel on the selected output channel.    \\\cline{1-2}
+{\bfseries{Blue}}   &Use the slider to set the influence of the blue channel on the selected output channel.   \\\cline{1-2}
+\end{longtabu}

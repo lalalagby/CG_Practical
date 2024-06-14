@@ -1,0 +1,53 @@
+\doxysection{NSubstitute Namespace Reference}
+\hypertarget{namespace_n_substitute}{}\label{namespace_n_substitute}\index{NSubstitute@{NSubstitute}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Arg}
+\begin{DoxyCompactList}\small\item\em Argument matchers used for specifying calls to substitutes. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_n_substitute_1_1_callback}{Callback}}
+\begin{DoxyCompactList}\small\item\em Perform this chain of callbacks and/or always callback when called. \end{DoxyCompactList}\item 
+class {\bfseries Raise}
+\item 
+class \mbox{\hyperlink{class_n_substitute_1_1_received}{Received}}
+\item 
+class {\bfseries Substitute}
+\begin{DoxyCompactList}\small\item\em Create a substitute for one or more types. For example\+: {\ttfamily Substitute.\+For\texorpdfstring{$<$}{<}ISome\+Type\texorpdfstring{$>$}{>}()} \end{DoxyCompactList}\item 
+class {\bfseries Substitute\+Extensions}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_n_substitute_aa6bb0fd9a1053ee2be4b66596c296e4d}{Clear\+Options}} \{ \mbox{\hyperlink{namespace_n_substitute_aa6bb0fd9a1053ee2be4b66596c296e4dac503935b62b0b0870193c148f3eac31e}{Received\+Calls}} = 1
+, \mbox{\hyperlink{namespace_n_substitute_aa6bb0fd9a1053ee2be4b66596c296e4da19b194d7c64afcbdecedfffe91c39674}{Return\+Values}} = 2
+, \mbox{\hyperlink{namespace_n_substitute_aa6bb0fd9a1053ee2be4b66596c296e4da29e21b93b029c521bf821d43256fa7b4}{Call\+Actions}} = 4
+, \mbox{\hyperlink{namespace_n_substitute_aa6bb0fd9a1053ee2be4b66596c296e4dab1c94ca2fbc3e78fc30069c8d0f01680}{All}} = Received\+Calls \texorpdfstring{$\vert$}{|} Return\+Values \texorpdfstring{$\vert$}{|} Call\+Actions
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespace_n_substitute_aa6bb0fd9a1053ee2be4b66596c296e4d}\index{NSubstitute@{NSubstitute}!ClearOptions@{ClearOptions}}
+\index{ClearOptions@{ClearOptions}!NSubstitute@{NSubstitute}}
+\doxysubsubsection{\texorpdfstring{ClearOptions}{ClearOptions}}
+{\footnotesize\ttfamily \label{namespace_n_substitute_aa6bb0fd9a1053ee2be4b66596c296e4d} 
+enum \mbox{\hyperlink{namespace_n_substitute_aa6bb0fd9a1053ee2be4b66596c296e4d}{NSubstitute.\+Clear\+Options}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ReceivedCalls@{ReceivedCalls}!NSubstitute@{NSubstitute}}\index{NSubstitute@{NSubstitute}!ReceivedCalls@{ReceivedCalls}}}\Hypertarget{namespace_n_substitute_aa6bb0fd9a1053ee2be4b66596c296e4dac503935b62b0b0870193c148f3eac31e}\label{namespace_n_substitute_aa6bb0fd9a1053ee2be4b66596c296e4d} 
+Received\+Calls&Clear all the received calls. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ReturnValues@{ReturnValues}!NSubstitute@{NSubstitute}}\index{NSubstitute@{NSubstitute}!ReturnValues@{ReturnValues}}}\Hypertarget{namespace_n_substitute_aa6bb0fd9a1053ee2be4b66596c296e4da19b194d7c64afcbdecedfffe91c39674}\label{namespace_n_substitute_aa6bb0fd9a1053ee2be4b66596c296e4d} 
+Return\+Values&Clear all configured return results (including auto-\/substituted values). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CallActions@{CallActions}!NSubstitute@{NSubstitute}}\index{NSubstitute@{NSubstitute}!CallActions@{CallActions}}}\Hypertarget{namespace_n_substitute_aa6bb0fd9a1053ee2be4b66596c296e4da29e21b93b029c521bf821d43256fa7b4}\label{namespace_n_substitute_aa6bb0fd9a1053ee2be4b66596c296e4d} 
+Call\+Actions&Clear all call actions configured for this substitute (via When..Do, Arg.\+Invoke, and Arg.\+Do) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{All@{All}!NSubstitute@{NSubstitute}}\index{NSubstitute@{NSubstitute}!All@{All}}}\Hypertarget{namespace_n_substitute_aa6bb0fd9a1053ee2be4b66596c296e4dab1c94ca2fbc3e78fc30069c8d0f01680}\label{namespace_n_substitute_aa6bb0fd9a1053ee2be4b66596c296e4d} 
+All&Clears all received calls and configured return values and callbacks. \\
+\hline
+
+\end{DoxyEnumFields}

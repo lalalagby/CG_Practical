@@ -1,0 +1,147 @@
+\doxysection{Unity\+Editor.\+Timeline.\+Clip\+Parameters\+Curve\+Data\+Source Class Reference}
+\hypertarget{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source}{}\label{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source}\index{UnityEditor.Timeline.ClipParametersCurveDataSource@{UnityEditor.Timeline.ClipParametersCurveDataSource}}
+Inheritance diagram for Unity\+Editor.\+Timeline.\+Clip\+Parameters\+Curve\+Data\+Source\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_afd3013968d9e246863d9b5d1486cf1c8}\label{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_afd3013968d9e246863d9b5d1486cf1c8} 
+{\bfseries Clip\+Parameters\+Curve\+Data\+Source} (\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i}{Timeline\+Clip\+GUI}} clip\+GUI)
+\item 
+override UInt64 \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_aa45af0770bf053a9ce83424183b4e405}{Get\+Clip\+Version}} ()
+\begin{DoxyCompactList}\small\item\em The clip version is a value that will change when a curve gets updated. it\textquotesingle{}s used to detect when an animation clip has been changed externally. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_a083c8ec30b2a94f18a913453b575fc06}\label{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_a083c8ec30b2a94f18a913453b575fc06} 
+override Curve\+Change\+Type {\bfseries Update\+External\+Changes} (ref ulong curve\+Version)
+\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_af45914e25a79da862a8223fa04277067}{Remove\+Curves}} (IEnumerable$<$ Editor\+Curve\+Binding $>$ bindings)
+\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_a7d558a847cbc89592d36b17f8a067ebc}{Apply\+Curve\+Changes}} (IEnumerable$<$ Curve\+Wrapper $>$ updated\+Curves)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_curve_data_source}{Unity\+Editor.\+Timeline.\+Curve\+Data\+Source}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual Curve\+Change\+Type \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_curve_data_source_ae4eeda2d7277e1fb3c0bba8bf0340165}{Update\+External\+Changes}} (ref UInt64 curve\+Version)
+\begin{DoxyCompactList}\small\item\em Call this method to check if the underlying clip has changed. \end{DoxyCompactList}\item 
+virtual string {\bfseries Modify\+Property\+Display\+Name} (string path, string property\+Name)
+\item 
+Rect {\bfseries Get\+Background\+Rect} (\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}} state)
+\item 
+List$<$ Curve\+Wrapper $>$ {\bfseries Generate\+Wrappers} (IEnumerable$<$ Editor\+Curve\+Binding $>$ bindings)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_aef5db35aa872a9f1864e2cd2220098ac}{Configure\+Curve\+Wrapper}} (Curve\+Wrapper wrapper)
+\item 
+override int \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_a423373720e7c4586ea9db481871372c9}{Create\+Hash\+Code}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_curve_data_source}{Unity\+Editor.\+Timeline.\+Curve\+Data\+Source}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Curve\+Data\+Source} (\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i}{IRow\+GUI}} track\+GUI)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_a81617a277e3ee2507341dbebde99d1ca}\label{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_a81617a277e3ee2507341dbebde99d1ca} 
+override Animation\+Clip {\bfseries animation\+Clip}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_adffdf7ec72de94fdee07a19187de2df5}\label{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_adffdf7ec72de94fdee07a19187de2df5} 
+override float {\bfseries start}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_a6608627aede55179a9f075664d7febd9}\label{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_a6608627aede55179a9f075664d7febd9} 
+override float {\bfseries time\+Scale}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_ac9f3fad2f2cd159cc80faeded26e28b2}\label{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_ac9f3fad2f2cd159cc80faeded26e28b2} 
+override string {\bfseries grouping\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_curve_data_source}{Unity\+Editor.\+Timeline.\+Curve\+Data\+Source}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries id}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Animation\+Clip {\bfseries animation\+Clip}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+float {\bfseries start}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+float {\bfseries time\+Scale}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+string {\bfseries grouping\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_curve_data_source}{Unity\+Editor.\+Timeline.\+Curve\+Data\+Source}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_curve_data_source}{Curve\+Data\+Source}} {\bfseries Create} (\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i}{IRow\+GUI}} track\+GUI)
+\item 
+static \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_curve_data_source}{Curve\+Data\+Source}} {\bfseries Create} (\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i}{Timeline\+Clip\+GUI}} clip\+GUI)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_a7d558a847cbc89592d36b17f8a067ebc}\index{UnityEditor.Timeline.ClipParametersCurveDataSource@{UnityEditor.Timeline.ClipParametersCurveDataSource}!ApplyCurveChanges@{ApplyCurveChanges}}
+\index{ApplyCurveChanges@{ApplyCurveChanges}!UnityEditor.Timeline.ClipParametersCurveDataSource@{UnityEditor.Timeline.ClipParametersCurveDataSource}}
+\doxysubsubsection{\texorpdfstring{ApplyCurveChanges()}{ApplyCurveChanges()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_a7d558a847cbc89592d36b17f8a067ebc} 
+override void Unity\+Editor.\+Timeline.\+Clip\+Parameters\+Curve\+Data\+Source.\+Apply\+Curve\+Changes (\begin{DoxyParamCaption}\item[{IEnumerable$<$ Curve\+Wrapper $>$}]{updated\+Curves}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_curve_data_source}{Unity\+Editor.\+Timeline.\+Curve\+Data\+Source}}.
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_aef5db35aa872a9f1864e2cd2220098ac}\index{UnityEditor.Timeline.ClipParametersCurveDataSource@{UnityEditor.Timeline.ClipParametersCurveDataSource}!ConfigureCurveWrapper@{ConfigureCurveWrapper}}
+\index{ConfigureCurveWrapper@{ConfigureCurveWrapper}!UnityEditor.Timeline.ClipParametersCurveDataSource@{UnityEditor.Timeline.ClipParametersCurveDataSource}}
+\doxysubsubsection{\texorpdfstring{ConfigureCurveWrapper()}{ConfigureCurveWrapper()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_aef5db35aa872a9f1864e2cd2220098ac} 
+override void Unity\+Editor.\+Timeline.\+Clip\+Parameters\+Curve\+Data\+Source.\+Configure\+Curve\+Wrapper (\begin{DoxyParamCaption}\item[{Curve\+Wrapper}]{wrapper}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_curve_data_source}{Unity\+Editor.\+Timeline.\+Curve\+Data\+Source}}.
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_a423373720e7c4586ea9db481871372c9}\index{UnityEditor.Timeline.ClipParametersCurveDataSource@{UnityEditor.Timeline.ClipParametersCurveDataSource}!CreateHashCode@{CreateHashCode}}
+\index{CreateHashCode@{CreateHashCode}!UnityEditor.Timeline.ClipParametersCurveDataSource@{UnityEditor.Timeline.ClipParametersCurveDataSource}}
+\doxysubsubsection{\texorpdfstring{CreateHashCode()}{CreateHashCode()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_a423373720e7c4586ea9db481871372c9} 
+override int Unity\+Editor.\+Timeline.\+Clip\+Parameters\+Curve\+Data\+Source.\+Create\+Hash\+Code (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_curve_data_source}{Unity\+Editor.\+Timeline.\+Curve\+Data\+Source}}.
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_aa45af0770bf053a9ce83424183b4e405}\index{UnityEditor.Timeline.ClipParametersCurveDataSource@{UnityEditor.Timeline.ClipParametersCurveDataSource}!GetClipVersion@{GetClipVersion}}
+\index{GetClipVersion@{GetClipVersion}!UnityEditor.Timeline.ClipParametersCurveDataSource@{UnityEditor.Timeline.ClipParametersCurveDataSource}}
+\doxysubsubsection{\texorpdfstring{GetClipVersion()}{GetClipVersion()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_aa45af0770bf053a9ce83424183b4e405} 
+override UInt64 Unity\+Editor.\+Timeline.\+Clip\+Parameters\+Curve\+Data\+Source.\+Get\+Clip\+Version (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+The clip version is a value that will change when a curve gets updated. it\textquotesingle{}s used to detect when an animation clip has been changed externally. 
+
+\begin{DoxyReturn}{Returns}
+A versioning value indicating the state of the curve. If the curve is updated externally this value will change. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_curve_data_source_ad1a6bbc50f325c149ad3637eea2e093d}{Unity\+Editor.\+Timeline.\+Curve\+Data\+Source}}.
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_af45914e25a79da862a8223fa04277067}\index{UnityEditor.Timeline.ClipParametersCurveDataSource@{UnityEditor.Timeline.ClipParametersCurveDataSource}!RemoveCurves@{RemoveCurves}}
+\index{RemoveCurves@{RemoveCurves}!UnityEditor.Timeline.ClipParametersCurveDataSource@{UnityEditor.Timeline.ClipParametersCurveDataSource}}
+\doxysubsubsection{\texorpdfstring{RemoveCurves()}{RemoveCurves()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_timeline_1_1_clip_parameters_curve_data_source_af45914e25a79da862a8223fa04277067} 
+override void Unity\+Editor.\+Timeline.\+Clip\+Parameters\+Curve\+Data\+Source.\+Remove\+Curves (\begin{DoxyParamCaption}\item[{IEnumerable$<$ Editor\+Curve\+Binding $>$}]{bindings}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_curve_data_source}{Unity\+Editor.\+Timeline.\+Curve\+Data\+Source}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+7.\+5/\+Editor/\+Animation/Curve\+Data\+Source.\+cs\end{DoxyCompactItemize}

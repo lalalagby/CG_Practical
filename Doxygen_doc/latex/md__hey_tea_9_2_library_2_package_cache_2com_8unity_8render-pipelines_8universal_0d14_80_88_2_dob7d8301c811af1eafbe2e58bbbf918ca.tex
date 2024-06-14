@@ -1,0 +1,66 @@
+\chapter{Reflection probes}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dob7d8301c811af1eafbe2e58bbbf918ca}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dob7d8301c811af1eafbe2e58bbbf918ca}\index{Reflection probes@{Reflection probes}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dob7d8301c811af1eafbe2e58bbbf918ca_autotoc_md2201}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dob7d8301c811af1eafbe2e58bbbf918ca_autotoc_md2201}%
+ This page describes URP-\/specific behavior of reflection probes.
+
+For general information on reflection probes, see the page \href{https://docs.unity3d.com/Manual/ReflectionProbes.html}{\texttt{ Reflection Probes}}.
+
+For examples of how to use reflection probes, see the \href{../package-sample-urp-package-samples.md\#lighting}{\texttt{ Lighting samples in URP Package Samples}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dob7d8301c811af1eafbe2e58bbbf918ca_autotoc_md2202}{}\doxysection{\texorpdfstring{Configuring reflection probe settings}{Configuring reflection probe settings}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dob7d8301c811af1eafbe2e58bbbf918ca_autotoc_md2202}
+To configure settings related to reflection probes, in a URP Asset, select {\bfseries{Lighting}} \texorpdfstring{$>$}{>} {\bfseries{Reflection Probes}}.
+
+~\newline
+{\itshape Reflection probe settings.}
+
+The Reflection Probes section contains the following properties\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Probe Blending}}   &Select this property to enable reflection probe blending.    \\\cline{1-2}
+{\bfseries{Box Projection}}   &Select this property to enable reflection probe box projection.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dob7d8301c811af1eafbe2e58bbbf918ca_autotoc_md2203}{}\doxysection{\texorpdfstring{Reflection probe blending}{Reflection probe blending}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dob7d8301c811af1eafbe2e58bbbf918ca_autotoc_md2203}
+Reflection probe blending lets you avoid a situation where a reflection suddenly appears on an object when it enters the probe box volume. When reflection probe blending is enabled, \doxylink{namespace_unity}{Unity} gradually fades probe cubemaps in and out as the reflective object passes from one volume to the other.
+
+URP supports reflection probe blending in all Rendering Paths. \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dob7d8301c811af1eafbe2e58bbbf918ca_autotoc_md2204}{}\doxysubsection{\texorpdfstring{Reflection probe volume}{Reflection probe volume}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dob7d8301c811af1eafbe2e58bbbf918ca_autotoc_md2204}
+Each reflection probe has a box volume. A reflection probe only affects parts of a Game\+Object that are inside the box volume. When a pixel of an object is outside of any reflection probe volume, \doxylink{namespace_unity}{Unity} uses the skybox reflection.
+
+In URP, \doxylink{namespace_unity}{Unity} evaluates the contribution of each probe for each individual pixel, depending on the position of the pixel relative to the boundary of the probe volume. This behavior is different from the Built-\/in Render Pipeline, where \doxylink{namespace_unity}{Unity} evaluates the contribution of a probe for the whole object.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dob7d8301c811af1eafbe2e58bbbf918ca_autotoc_md2205}{}\doxysubsection{\texorpdfstring{Blend Distance}{Blend Distance}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dob7d8301c811af1eafbe2e58bbbf918ca_autotoc_md2205}
+Each reflection probe has the {\bfseries{Blend Distance}} property. This property is the distance from the face of a reflection box volume towards the center of the box volume.
+
+\doxylink{namespace_unity}{Unity} uses the Blend Distance property to determine the contribution of a reflection probe. When a pixel of an object is on the face of a reflection probe volume, that pixel gets 0\% of reflections from the probe. When a pixel is inside the reflection probe volume and its distance from each face exceeds the Blend Distance value, the pixel gets 100\% of reflections.
+
+If the Blend Distance value is more than half of the distance between faces of the reflection probe volume, the reflection probe cannot provide 100\% contribution to any pixel within the volume.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dob7d8301c811af1eafbe2e58bbbf918ca_autotoc_md2206}{}\doxysubsection{\texorpdfstring{Which probes affect a Game\+Object}{Which probes affect a Game\+Object}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dob7d8301c811af1eafbe2e58bbbf918ca_autotoc_md2206}
+When a Game\+Object is within multiple reflection probe volumes, maximum two of the probes can affect the Game\+Object. \doxylink{namespace_unity}{Unity} selects which probes affect the Game\+Object using the following criteria\+:
+
+
+\begin{DoxyItemize}
+\item The {\bfseries{Importance}} property of a reflection probe. \doxylink{namespace_unity}{Unity} selects two probes with higher Importance values and ignores the others.
+\item If the Importance values are the same, \doxylink{namespace_unity}{Unity} selects probes which have the smallest box volumes.
+\item If the Importance values and the box volumes are the same, \doxylink{namespace_unity}{Unity} determines which two reflection probe volumes contain larger surface areas of a Game\+Object, and picks the probes of those volumes.
+\end{DoxyItemize}
+
+When two reflection probes affect a Game\+Object, for each pixel, \doxylink{namespace_unity}{Unity} calculates the weight of each probe depending on the distance of this pixel from the faces of the probe box volumes and the values of the {\bfseries{Blend Distance}} properties. If the pixel is relatively close to faces of both box volumes and the sum of weights of both probes is less than 1, \doxylink{namespace_unity}{Unity} assigns the remaining weight to the skybox reflection.
+
+If the pixel is within both box volumes and farther than the Blend Distance values from faces of both volumes\+:
+
+
+\begin{DoxyItemize}
+\item If the {\bfseries{Importance}} properties of the reflection probes are the same, \doxylink{namespace_unity}{Unity} blends reflections from the probes with equal weights.
+\item If the {\bfseries{Importance}} property of one of the probes is higher, \doxylink{namespace_unity}{Unity} applies the reflections only from that probe.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dob7d8301c811af1eafbe2e58bbbf918ca_autotoc_md2207}{}\doxysection{\texorpdfstring{Box projection}{Box projection}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dob7d8301c811af1eafbe2e58bbbf918ca_autotoc_md2207}
+For the box projection to work\+:
+
+
+\begin{DoxyItemize}
+\item Select the {\bfseries{Box Projection}} check box on the URP asset.
+\item Select the {\bfseries{Box Projection}} property on the reflection probe. 
+\end{DoxyItemize}

@@ -1,0 +1,43 @@
+\chapter{Built In Blocks}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_built-_in-_blocks}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_built-_in-_blocks}\index{Built In Blocks@{Built In Blocks}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_built-_in-_blocks_autotoc_md2994}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_built-_in-_blocks_autotoc_md2994}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_built-_in-_blocks_autotoc_md2995}{}\doxysection{\texorpdfstring{Vertex Blocks}{Vertex Blocks}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_built-_in-_blocks_autotoc_md2995}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ }&\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ }&\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+   &Position   &Vector 3   &Object Space Position   &Defines the absolute object space vertex position per vertex.    \\\cline{1-5}
+   &Normal   &Vector 3   &Object Space Normal   &Defines the absolute object space vertex normal per vertex.    \\\cline{1-5}
+   &Tangent   &Vector 3   &Object Space Tangent   &Defines the absolute object space vertex tangent per vertex.    \\\cline{1-5}
+   &Color   &Vector 4   &Vertex Color   &Defines vertex color. Expected range 0 -\/ 1.   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_built-_in-_blocks_autotoc_md2996}{}\doxysection{\texorpdfstring{Fragment Blocks}{Fragment Blocks}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_built-_in-_blocks_autotoc_md2996}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ }&\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ }&\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+   &Base Color   &Vector 3   &None   &Defines material\textquotesingle{}s base color value. Expected range 0 -\/ 1.    \\\cline{1-5}
+   &Normal (Tangent Space)   &Vector 3   &Tangent Space Normal   &Defines material\textquotesingle{}s normal value in tangent space.    \\\cline{1-5}
+   &Normal (Object Space)   &Vector 3   &Object Space Normal   &Defines material\textquotesingle{}s normal value in object space.    \\\cline{1-5}
+   &Normal (World Space)   &Vector 3   &World Space Normal   &Defines material\textquotesingle{}s normal value in world space.    \\\cline{1-5}
+   &Emission   &Vector 3   &None   &Defines material\textquotesingle{}s emission color value. Expects positive values.    \\\cline{1-5}
+   &Metallic   &Float   &None   &Defines material\textquotesingle{}s metallic value, where 0 is non-\/metallic and 1 is metallic.    \\\cline{1-5}
+   &Specular   &Vector 3   &None   &Defines material\textquotesingle{}s specular color value. Expected range 0 -\/ 1.    \\\cline{1-5}
+   &Smoothness   &Float   &None   &Defines material\textquotesingle{}s smoothness value. Expected range 0 -\/ 1.    \\\cline{1-5}
+   &Ambient Occlusion   &Float   &None   &Defines material\textquotesingle{}s ambient occlusion value. Expected range 0 -\/ 1.    \\\cline{1-5}
+   &Alpha   &Float   &None   &Defines material\textquotesingle{}s alpha value. Used for transparency and/or alpha clip. Expected range 0 -\/ 1.    \\\cline{1-5}
+   &Alpha Clip Threshold   &Float   &None   &Fragments with an alpha below this value are discarded. Expected range 0 -\/ 1.   \\\cline{1-5}
+\end{longtabu}

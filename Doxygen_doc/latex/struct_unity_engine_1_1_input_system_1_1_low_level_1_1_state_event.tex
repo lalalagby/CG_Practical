@@ -1,0 +1,261 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Low\+Level.\+State\+Event Struct Reference}
+\hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event}{}\label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event}\index{UnityEngine.InputSystem.LowLevel.StateEvent@{UnityEngine.InputSystem.LowLevel.StateEvent}}
+
+
+A complete state snapshot for an entire input device.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Low\+Level.\+State\+Event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_a55757e182efc802e8a0871a70809b1d0}\label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_a55757e182efc802e8a0871a70809b1d0} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr}{Input\+Event\+Ptr}} {\bfseries To\+Event\+Ptr} ()
+\item 
+TState \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_a46ebfbd481b6c7a894843dd80276c772}{Get\+State$<$ TState $>$}} ()
+\begin{DoxyCompactList}\small\item\em Retrieve the state stored in the event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static TState \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_a008a470ef95fc13f946a83faf5eb7016}{Get\+State$<$ TState $>$}} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr}{Input\+Event\+Ptr}} ptr)
+\begin{DoxyCompactList}\small\item\em Retrieve the state stored in the event. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_afd0a96738a5ae5284f4eb5c0f97b291c}{Get\+Event\+Size\+With\+Payload$<$ TState $>$}} ()
+\item 
+static \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event}{State\+Event}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_a64884e59d37b5bb7dfaf9bf1a290b98e}{From}} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr}{Input\+Event\+Ptr}} ptr)
+\begin{DoxyCompactList}\small\item\em Return the given \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr}{Input\+Event\+Ptr} as a \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event}{State\+Event} pointer. \end{DoxyCompactList}\item 
+static Native\+Array$<$ byte $>$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_aedddbc8fa71e9d5414c357c84e5a00c3}{From}} (\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}} device, out \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr}{Input\+Event\+Ptr}} event\+Ptr, Allocator allocator=Allocator.\+Temp)
+\begin{DoxyCompactList}\small\item\em Read the current state of {\itshape device}  and create a state event from it. \end{DoxyCompactList}\item 
+static Native\+Array$<$ byte $>$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_ae3808f4dde60384196ddfe5c2f5fc3bd}{From\+Default\+State\+For}} (\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}} device, out \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr}{Input\+Event\+Ptr}} event\+Ptr, Allocator allocator=Allocator.\+Temp)
+\begin{DoxyCompactList}\small\item\em Create a state event for the given {\itshape device}  and copy the default state of the device into the event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_aaf1671d085e2341befa50ee32d1bbde8}\label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_aaf1671d085e2341befa50ee32d1bbde8} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event}{Input\+Event}} {\bfseries base\+Event}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_a41d7b4fe92367c99567e6dbae05fed20}\label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_a41d7b4fe92367c99567e6dbae05fed20} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_four_c_c}{Four\+CC}} {\bfseries state\+Format}
+\begin{DoxyCompactList}\small\item\em Type code for the state stored in the event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_a319c0dc87c0aee3e8ae3f55d057414d0}\label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_a319c0dc87c0aee3e8ae3f55d057414d0} 
+const int {\bfseries Type} = 0x53544154
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_adf9a47b996bf941f1c4876ae603849ce}\label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_adf9a47b996bf941f1c4876ae603849ce} 
+uint {\bfseries state\+Size\+In\+Bytes}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_a27d9cedada9ebddce56ba2abfc1d2440}\label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_a27d9cedada9ebddce56ba2abfc1d2440} 
+void \texorpdfstring{$\ast$}{*} {\bfseries state}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_four_c_c}{Four\+CC}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_aa169b9b76d61960425b265e15a5e43a4}{type\+Static}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_event_type_info}{Unity\+Engine.\+Input\+System.\+Low\+Level.\+IInput\+Event\+Type\+Info}}}
+
+
+\doxysubsection{Detailed Description}
+A complete state snapshot for an entire input device. 
+
+This is a variable-\/sized event. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_aedddbc8fa71e9d5414c357c84e5a00c3}\index{UnityEngine.InputSystem.LowLevel.StateEvent@{UnityEngine.InputSystem.LowLevel.StateEvent}!From@{From}}
+\index{From@{From}!UnityEngine.InputSystem.LowLevel.StateEvent@{UnityEngine.InputSystem.LowLevel.StateEvent}}
+\doxysubsubsection{\texorpdfstring{From()}{From()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_aedddbc8fa71e9d5414c357c84e5a00c3} 
+static Native\+Array$<$ byte $>$ Unity\+Engine.\+Input\+System.\+Low\+Level.\+State\+Event.\+From (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}}}]{device}{, }\item[{out \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr}{Input\+Event\+Ptr}}}]{event\+Ptr}{, }\item[{Allocator}]{allocator}{ = {\ttfamily Allocator\+:\+:Temp}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Read the current state of {\itshape device}  and create a state event from it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Device to grab the state from. Must be a device that has been added to the system.\\
+\hline
+{\em event\+Ptr} & Receives a pointer to the newly created state event.\\
+\hline
+{\em allocator} & Which native allocator to allocate memory for the event from. By default, the buffer is allocated as temporary memory (Allocator.\+Temp. Note that this means the buffer will not be valid past the current frame. Use Allocator.\+Persistent if the buffer for the state event is meant to persist for longer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Buffer of unmanaged memory allocated for the event.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & {\itshape device}  has not been added to the system.\\
+\hline
+{\em Argument\+Null\+Exception} & {\itshape device}  is {\ttfamily null}.\\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_a64884e59d37b5bb7dfaf9bf1a290b98e}\index{UnityEngine.InputSystem.LowLevel.StateEvent@{UnityEngine.InputSystem.LowLevel.StateEvent}!From@{From}}
+\index{From@{From}!UnityEngine.InputSystem.LowLevel.StateEvent@{UnityEngine.InputSystem.LowLevel.StateEvent}}
+\doxysubsubsection{\texorpdfstring{From()}{From()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_a64884e59d37b5bb7dfaf9bf1a290b98e} 
+static \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event}{State\+Event}} \texorpdfstring{$\ast$}{*} Unity\+Engine.\+Input\+System.\+Low\+Level.\+State\+Event.\+From (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr}{Input\+Event\+Ptr}}}]{ptr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return the given \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr}{Input\+Event\+Ptr} as a \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event}{State\+Event} pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & A pointer to an input event. The pointer is checked for {\ttfamily null} and for whether the type of event it refers to is indeed a \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event}{State\+Event}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_unity_engine_1_1_input_system_1_1_pointer}{Pointer} {\itshape ptr}  converted to a \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event}{State\+Event} pointer.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & {\itshape ptr}  is {\ttfamily default(\+Input\+Event\+Ptr)}.\\
+\hline
+{\em Invalid\+Cast\+Exception} & {\itshape ptr}  does not refer to a \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event}{State\+Event}.\\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_ae3808f4dde60384196ddfe5c2f5fc3bd}\index{UnityEngine.InputSystem.LowLevel.StateEvent@{UnityEngine.InputSystem.LowLevel.StateEvent}!FromDefaultStateFor@{FromDefaultStateFor}}
+\index{FromDefaultStateFor@{FromDefaultStateFor}!UnityEngine.InputSystem.LowLevel.StateEvent@{UnityEngine.InputSystem.LowLevel.StateEvent}}
+\doxysubsubsection{\texorpdfstring{FromDefaultStateFor()}{FromDefaultStateFor()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_ae3808f4dde60384196ddfe5c2f5fc3bd} 
+static Native\+Array$<$ byte $>$ Unity\+Engine.\+Input\+System.\+Low\+Level.\+State\+Event.\+From\+Default\+State\+For (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}}}]{device}{, }\item[{out \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr}{Input\+Event\+Ptr}}}]{event\+Ptr}{, }\item[{Allocator}]{allocator}{ = {\ttfamily Allocator\+:\+:Temp}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Create a state event for the given {\itshape device}  and copy the default state of the device into the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Device to create a state event for. Must be a device that has been added to the system.\\
+\hline
+{\em event\+Ptr} & Receives a pointer to the newly created state event.\\
+\hline
+{\em allocator} & Which native allocator to allocate memory for the event from. By default, the buffer is allocated as temporary memory (Allocator.\+Temp. Note that this means the buffer will not be valid past the current frame. Use Allocator.\+Persistent if the buffer for the state event is meant to persist for longer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Buffer of unmanaged memory allocated for the event.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & {\itshape device}  has not been added to the system.\\
+\hline
+{\em Argument\+Null\+Exception} & {\itshape device}  is {\ttfamily null}.\\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_afd0a96738a5ae5284f4eb5c0f97b291c}\index{UnityEngine.InputSystem.LowLevel.StateEvent@{UnityEngine.InputSystem.LowLevel.StateEvent}!GetEventSizeWithPayload$<$ TState $>$@{GetEventSizeWithPayload$<$ TState $>$}}
+\index{GetEventSizeWithPayload$<$ TState $>$@{GetEventSizeWithPayload$<$ TState $>$}!UnityEngine.InputSystem.LowLevel.StateEvent@{UnityEngine.InputSystem.LowLevel.StateEvent}}
+\doxysubsubsection{\texorpdfstring{GetEventSizeWithPayload$<$ TState $>$()}{GetEventSizeWithPayload< TState >()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_afd0a96738a5ae5284f4eb5c0f97b291c} 
+static int Unity\+Engine.\+Input\+System.\+Low\+Level.\+State\+Event.\+Get\+Event\+Size\+With\+Payload$<$ TState $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TState} : {\em struct}]\end{description}
+\end{Desc}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_a46ebfbd481b6c7a894843dd80276c772}\index{UnityEngine.InputSystem.LowLevel.StateEvent@{UnityEngine.InputSystem.LowLevel.StateEvent}!GetState$<$ TState $>$@{GetState$<$ TState $>$}}
+\index{GetState$<$ TState $>$@{GetState$<$ TState $>$}!UnityEngine.InputSystem.LowLevel.StateEvent@{UnityEngine.InputSystem.LowLevel.StateEvent}}
+\doxysubsubsection{\texorpdfstring{GetState$<$ TState $>$()}{GetState< TState >()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_a46ebfbd481b6c7a894843dd80276c772} 
+TState Unity\+Engine.\+Input\+System.\+Low\+Level.\+State\+Event.\+Get\+State$<$ TState $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the state stored in the event. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TState} & Type of state expected to be stored in the event. IInput\+State\+Type\+Info.\+format must match \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_a41d7b4fe92367c99567e6dbae05fed20}{state\+Format}.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+Copy of the state stored in the event.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_a41d7b4fe92367c99567e6dbae05fed20}{state\+Format} does not match IInput\+State\+Type\+Info.\+format of {\itshape TState} .\\
+\hline
+\end{DoxyExceptions}
+
+
+The event may contain less or more data than what is found in the struct. Only the data found in the event is copied. The remainder of the struct is left at default values. 
+
+\begin{DoxySeeAlso}{See also}
+Get\+State$<$\+T$>$(\+Input\+Event\+Ptr)
+
+
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TState} : {\em struct}]\item[{\em TState} : {\em IInput\+State\+Type\+Info}]\end{description}
+\end{Desc}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_a008a470ef95fc13f946a83faf5eb7016}\index{UnityEngine.InputSystem.LowLevel.StateEvent@{UnityEngine.InputSystem.LowLevel.StateEvent}!GetState$<$ TState $>$@{GetState$<$ TState $>$}}
+\index{GetState$<$ TState $>$@{GetState$<$ TState $>$}!UnityEngine.InputSystem.LowLevel.StateEvent@{UnityEngine.InputSystem.LowLevel.StateEvent}}
+\doxysubsubsection{\texorpdfstring{GetState$<$ TState $>$()}{GetState< TState >()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_a008a470ef95fc13f946a83faf5eb7016} 
+static TState Unity\+Engine.\+Input\+System.\+Low\+Level.\+State\+Event.\+Get\+State$<$ TState $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr}{Input\+Event\+Ptr}}}]{ptr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Retrieve the state stored in the event. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TState} & Type of state expected to be stored in the event. IInput\+State\+Type\+Info.\+format must match \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_a41d7b4fe92367c99567e6dbae05fed20}{state\+Format}.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & A pointer to an input event. The pointer is checked for {\ttfamily null} and for whether the type of event it refers to is indeed a \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event}{State\+Event}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Copy of the state stored in the event.
+\end{DoxyReturn}
+
+
+The event may contain less or more data than what is found in the struct. Only the data found in the event is copied. The remainder of the struct is left at default values. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_a41d7b4fe92367c99567e6dbae05fed20}{state\+Format} does not match IInput\+State\+Type\+Info.\+format of {\itshape TState} .\\
+\hline
+{\em Argument\+Null\+Exception} & {\itshape ptr}  is {\ttfamily default(\+Input\+Event\+Ptr)}.\\
+\hline
+{\em Invalid\+Cast\+Exception} & {\itshape ptr}  does not refer to a \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event}{State\+Event}.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+Get\+State$<$\+T$>$()
+
+
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TState} : {\em struct}]\item[{\em TState} : {\em IInput\+State\+Type\+Info}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_aa169b9b76d61960425b265e15a5e43a4}\index{UnityEngine.InputSystem.LowLevel.StateEvent@{UnityEngine.InputSystem.LowLevel.StateEvent}!typeStatic@{typeStatic}}
+\index{typeStatic@{typeStatic}!UnityEngine.InputSystem.LowLevel.StateEvent@{UnityEngine.InputSystem.LowLevel.StateEvent}}
+\doxysubsubsection{\texorpdfstring{typeStatic}{typeStatic}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event_aa169b9b76d61960425b265e15a5e43a4} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_four_c_c}{Four\+CC}} Unity\+Engine.\+Input\+System.\+Low\+Level.\+State\+Event.\+type\+Static\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_event_type_info}{Unity\+Engine.\+Input\+System.\+Low\+Level.\+IInput\+Event\+Type\+Info}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Events/State\+Event.\+cs\end{DoxyCompactItemize}

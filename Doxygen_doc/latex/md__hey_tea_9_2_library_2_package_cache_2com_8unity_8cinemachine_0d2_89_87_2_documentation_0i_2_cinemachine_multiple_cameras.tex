@@ -1,0 +1,15 @@
+\chapter{Multiple Unity cameras}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_multiple_cameras}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_multiple_cameras}\index{Multiple Unity cameras@{Multiple Unity cameras}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_multiple_cameras_autotoc_md705}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_multiple_cameras_autotoc_md705}%
+ Split-\/screen and picture-\/in-\/picture effects require the use of more than one \doxylink{namespace_unity}{Unity} camera. Each \doxylink{namespace_unity}{Unity} camera presents its own view on the player’s screen.
+
+To use a multi-\/camera split-\/screen for two players\+:
+
+
+\begin{DoxyEnumerate}
+\item For each player, \href{https://docs.unity3d.com/Manual/Layers.html}{\texttt{ create a layer}}. For example, for two players, create layers named P1 and P2.
+\item Add two \doxylink{namespace_unity}{Unity} cameras to your Scene, set up their viewports, and give each one its own \doxylink{namespace_cinemachine}{Cinemachine} Brain component.
+\item For each \doxylink{namespace_unity}{Unity} camera, set the {\bfseries{Culling Mask}} to the appropriate layer while excluding the other layer. For example, set the first \doxylink{namespace_unity}{Unity} camera to include layer P1 while excluding P2.
+\item Add 2 Virtual Cameras, one to follow each player to follow the players. Assign each Virtual Camera to a player layer. 
+\end{DoxyEnumerate}

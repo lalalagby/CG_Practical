@@ -1,0 +1,534 @@
+\doxysection{Cinemachine.\+Cinemachine\+Free\+Look Class Reference}
+\hypertarget{class_cinemachine_1_1_cinemachine_free_look}{}\label{class_cinemachine_1_1_cinemachine_free_look}\index{Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}}
+
+
+A \doxylink{namespace_cinemachine}{Cinemachine} Camera geared towards a 3rd person camera experience. The camera orbits around its subject with three separate camera rigs defining rings around the target. Each rig has its own radius, height offset, composer, and lens settings. Depending on the camera\textquotesingle{}s position along the spline connecting these three rigs, these settings are interpolated to give the final camera position and state.  
+
+
+Inheritance diagram for Cinemachine.\+Cinemachine\+Free\+Look\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.007169cm]{class_cinemachine_1_1_cinemachine_free_look}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_free_look_1_1_orbit}{Orbit}}
+\begin{DoxyCompactList}\small\item\em Defines the height and radius of the Rig orbit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera}{Cinemachine\+Virtual\+Camera}} \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_free_look_a7507ae670e1113fd48a104887f99114f}{Get\+Rig}} (int i)
+\begin{DoxyCompactList}\small\item\em Get a child rig. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_a62ab23ce6a4a6cba221b28fc2fb5f945}\label{class_cinemachine_1_1_cinemachine_free_look_a62ab23ce6a4a6cba221b28fc2fb5f945} 
+void {\bfseries Update\+Input\+Axis\+Provider} ()
+\begin{DoxyCompactList}\small\item\em API for the inspector. Internal use only. \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_free_look_a629728f3aa32ad64ddf689a577e097d9}{Is\+Live\+Child}} (\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} vcam, bool dominant\+Child\+Only=false)
+\begin{DoxyCompactList}\small\item\em Check whether the vcam a live child of this camera. Returns true if the child is currently contributing actively to the camera state. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_free_look_a8fa10280d7c22910e16bd3b60d1c4edc}{On\+Target\+Object\+Warped}} (Transform target, Vector3 position\+Delta)
+\begin{DoxyCompactList}\small\item\em This is called to notify the vcam that a target got warped, so that the vcam can update its internal state to make the camera also warp seamlessy. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_free_look_afb9646e6b5d4910c7c92315ad14e5684}{Force\+Camera\+Position}} (Vector3 pos, Quaternion rot)
+\begin{DoxyCompactList}\small\item\em Force the virtual camera to assume a given position and orientation. ~\newline
+ Procedural placement then takes over. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_free_look_acf07c0d509059d66e5d7e0c80446b372}{Internal\+Update\+Camera\+State}} (Vector3 world\+Up, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Internal use only. Called by \doxylink{class_cinemachine_1_1_cinemachine_core}{Cinemachine\+Core} at designated update time so the vcam can position itself and track its targets. All 3 child rigs are updated, and a blend calculated, depending on the value of the Y axis. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_free_look_aaeb8e8167a329ee38373c446f9b7f9fd}{On\+Transition\+From\+Camera}} (\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} from\+Cam, Vector3 world\+Up, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em If we are transitioning from another Free\+Look, grab the axis values from it. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_ab615768765c18974a2ff9e8d0d253942}\label{class_cinemachine_1_1_cinemachine_free_look_ab615768765c18974a2ff9e8d0d253942} 
+delegate \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera}{Cinemachine\+Virtual\+Camera}} {\bfseries Create\+Rig\+Delegate} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_free_look}{Cinemachine\+Free\+Look}} vcam, string name, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera}{Cinemachine\+Virtual\+Camera}} copy\+From)
+\begin{DoxyCompactList}\small\item\em Override component pipeline creation. This needs to be done by the editor to support Undo. The override must do exactly the same thing as the Create\+Pipeline method in this class. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_a9b52e5078e2865250c6a7afd6bb16398}\label{class_cinemachine_1_1_cinemachine_free_look_a9b52e5078e2865250c6a7afd6bb16398} 
+delegate void {\bfseries Destroy\+Rig\+Delegate} (Game\+Object rig)
+\begin{DoxyCompactList}\small\item\em Override component pipeline destruction. This needs to be done by the editor to support Undo. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_free_look_a77805e8d230c91f3500aa36f6c0ac5a2}{Get\+Local\+Position\+For\+Camera\+From\+Input}} (float t)
+\begin{DoxyCompactList}\small\item\em Returns the local position of the camera along the spline used to connect the three camera rigs. Does not take into account the current heading of the camera (or its target) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine.\+Cinemachine\+Virtual\+Camera\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_aa7f99ea7f588ab1c7921a5f6e042651d}{Get\+Max\+Damp\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Query components and extensions for the maximum damping time. Base class implementation queries extensions. Only used in editor for timeline scrubbing. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_aa6712337575ec1c1218eca3b09f63490}{Detached\+Follow\+Target\+Damp}} (float initial, float damp\+Time, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Get a damped version of a quantity. This is the portion of the quantity that will take effect over the given time. This method takes the target attachment into account. For general damping without consideration of target attachment, use Damper.\+Damp() \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a323db11e20b1f81d200f9ae44b9f220a}{Detached\+Follow\+Target\+Damp}} (Vector3 initial, Vector3 damp\+Time, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Get a damped version of a quantity. This is the portion of the quantity that will take effect over the given time. This method takes the target attachment into account. For general damping without consideration of target attachment, use Damper.\+Damp() \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a69305f364e451859caf48091a1e00445}{Detached\+Follow\+Target\+Damp}} (Vector3 initial, float damp\+Time, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Get a damped version of a quantity. This is the portion of the quantity that will take effect over the given time. This method takes the target attachment into account. For general damping without consideration of target attachment, use Damper.\+Damp() \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a3df58574c7542b6fe6ebf8221913eae2}{Detached\+Look\+At\+Target\+Damp}} (float initial, float damp\+Time, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Get a damped version of a quantity. This is the portion of the quantity that will take effect over the given time. This method takes the target attachment into account. For general damping without consideration of target attachment, use Damper.\+Damp() \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a66552d91451441efca67a4a0d809b0ba}{Detached\+Look\+At\+Target\+Damp}} (Vector3 initial, Vector3 damp\+Time, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Get a damped version of a quantity. This is the portion of the quantity that will take effect over the given time. This method takes the target attachment into account. For general damping without consideration of target attachment, use Damper.\+Damp() \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a9a4a94342c3536ae4ce5d30c24393627}{Detached\+Look\+At\+Target\+Damp}} (Vector3 initial, float damp\+Time, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Get a damped version of a quantity. This is the portion of the quantity that will take effect over the given time. This method takes the target attachment into account. For general damping without consideration of target attachment, use Damper.\+Damp() \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a76df97d07a6185605637fd0a4fc1e6ac}{Add\+Extension}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension}{Cinemachine\+Extension}} extension)
+\begin{DoxyCompactList}\small\item\em A delegate to hook into the state calculation pipeline. This will be called after each pipeline stage, to allow others to hook into the pipeline. See \doxylink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_afe79ab1f67cec2af4fff126ed81daf9c}{Remove\+Extension}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension}{Cinemachine\+Extension}} extension)
+\begin{DoxyCompactList}\small\item\em Remove a Pipeline stage hook callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_adece195fada4503b7babd7bd119963b8}{Update\+Camera\+State}} (Vector3 world\+Up, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Update the camera\textquotesingle{}s state. The implementation must guarantee against multiple calls per frame, and should use Cinemachine\+Core.\+Update\+Virtual\+Camera(\+ICinemachine\+Camera, Vector3, float), which has protection against multiple calls per frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a6c2e28646732c9eba46e4bdd6127d8ed}{Internal\+Update\+Camera\+State}} (Vector3 world\+Up, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Internal use only. Do not call this method. Called by \doxylink{class_cinemachine_1_1_cinemachine_core}{Cinemachine\+Core} at designated update time so the vcam can position itself and track its targets. Do not call this method. Let the framework do it at the appropriate time. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_cinemachine_1_1_axis_state_1_1_i_input_axis_provider}{Axis\+State.\+IInput\+Axis\+Provider}} \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a9867f67b59271a965b405fe1a15b6b7b}{Get\+Input\+Axis\+Provider}} ()
+\begin{DoxyCompactList}\small\item\em Locate the first component that implements \doxylink{interface_cinemachine_1_1_axis_state_1_1_i_input_axis_provider}{Axis\+State.\+IInput\+Axis\+Provider}. \end{DoxyCompactList}\item 
+Transform \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a55acb1a6f9f4cc5f94a74870fd09b4b0}{Resolve\+Look\+At}} (Transform local\+Look\+At)
+\begin{DoxyCompactList}\small\item\em Returns this vcam\textquotesingle{}s Look\+At target, or if that is null, will retrun the parent vcam\textquotesingle{}s Look\+At target. \end{DoxyCompactList}\item 
+Transform \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a98451163198354c096679bc376cfa872}{Resolve\+Follow}} (Transform local\+Follow)
+\begin{DoxyCompactList}\small\item\em Returns this vcam\textquotesingle{}s Follow target, or if that is null, will retrun the parent vcam\textquotesingle{}s Follow target. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_afb80bb58758eb73019c725a570293d96}{Move\+To\+Top\+Of\+Priority\+Subqueue}} ()
+\begin{DoxyCompactList}\small\item\em When multiple virtual cameras have the highest priority, there is sometimes the need to push one to the top, making it the current Live camera if it shares the highest priority in the queue with its peers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_a1ca3939e783cfc8733cfe5a75e59fd4a}\label{class_cinemachine_1_1_cinemachine_free_look_a1ca3939e783cfc8733cfe5a75e59fd4a} 
+Transform {\bfseries m\+\_\+\+Look\+At} = null
+\begin{DoxyCompactList}\small\item\em Object for the camera children to look at (the aim target) \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_af2670b288d368b6b4b160aa5bb555e39}\label{class_cinemachine_1_1_cinemachine_free_look_af2670b288d368b6b4b160aa5bb555e39} 
+Transform {\bfseries m\+\_\+\+Follow} = null
+\begin{DoxyCompactList}\small\item\em Object for the camera children wants to move with (the body target) \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_a12d6790d2b9f97d32f8f7487cca1486a}\label{class_cinemachine_1_1_cinemachine_free_look_a12d6790d2b9f97d32f8f7487cca1486a} 
+bool {\bfseries m\+\_\+\+Common\+Lens} = true
+\begin{DoxyCompactList}\small\item\em If enabled, this lens setting will apply to all three child rigs, otherwise the child rig lens settings will be used. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_af9e7587d670fb68fd31f6f3d597c38f2}\label{class_cinemachine_1_1_cinemachine_free_look_af9e7587d670fb68fd31f6f3d597c38f2} 
+\mbox{\hyperlink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings}} {\bfseries m\+\_\+\+Lens} = \mbox{\hyperlink{struct_cinemachine_1_1_lens_settings_ae6e8e916469b4cfb653a64476a516e79}{Lens\+Settings.\+Default}}
+\begin{DoxyCompactList}\small\item\em Specifies the lens properties of this Virtual Camera. This generally mirrors the \doxylink{namespace_unity}{Unity} Camera\textquotesingle{}s lens settings, and will be used to drive the \doxylink{namespace_unity}{Unity} camera when the vcam is active. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_a6d4ba00e221fa3ba9fe42c21c2ba34c2}\label{class_cinemachine_1_1_cinemachine_free_look_a6d4ba00e221fa3ba9fe42c21c2ba34c2} 
+\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_virtual_camera_base_1_1_transition_params}{Transition\+Params}} {\bfseries m\+\_\+\+Transitions}
+\begin{DoxyCompactList}\small\item\em Collection of parameters that influence how this virtual camera transitions from other virtual cameras. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_ab293b1b50e2ff7c08b24fc7d2e39cd9b}\label{class_cinemachine_1_1_cinemachine_free_look_ab293b1b50e2ff7c08b24fc7d2e39cd9b} 
+\mbox{\hyperlink{struct_cinemachine_1_1_axis_state}{Axis\+State}} {\bfseries m\+\_\+\+YAxis} = new \mbox{\hyperlink{struct_cinemachine_1_1_axis_state}{Axis\+State}}(0, 1, false, true, 2f, 0.\+2f, 0.\+1f, "{}Mouse Y"{}, false)
+\begin{DoxyCompactList}\small\item\em The Vertical axis. Value is 0..1. Chooses how to blend the child rigs. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_a199c35ff469648cbe88249747d6292df}\label{class_cinemachine_1_1_cinemachine_free_look_a199c35ff469648cbe88249747d6292df} 
+\mbox{\hyperlink{struct_cinemachine_1_1_axis_state_1_1_recentering}{Axis\+State.\+Recentering}} {\bfseries m\+\_\+\+YAxis\+Recentering} = new \mbox{\hyperlink{struct_cinemachine_1_1_axis_state_1_1_recentering}{Axis\+State.\+Recentering}}(false, 1, 2)
+\begin{DoxyCompactList}\small\item\em Controls how automatic recentering of the Y axis is accomplished. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_a45a16ce6788c12236039db5f6273fab4}\label{class_cinemachine_1_1_cinemachine_free_look_a45a16ce6788c12236039db5f6273fab4} 
+\mbox{\hyperlink{struct_cinemachine_1_1_axis_state}{Axis\+State}} {\bfseries m\+\_\+\+XAxis} = new \mbox{\hyperlink{struct_cinemachine_1_1_axis_state}{Axis\+State}}(-\/180, 180, true, false, 300f, 0.\+1f, 0.\+1f, "{}Mouse X"{}, true)
+\begin{DoxyCompactList}\small\item\em The Horizontal axis. Value is -\/180...180. This is passed on to the rigs\textquotesingle{} Orbital\+Transposer component. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_orbital_transposer_1_1_heading}{Cinemachine\+Orbital\+Transposer.\+Heading}} \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_free_look_aad897d65ce4edd65b2e950b72de46a14}{m\+\_\+\+Heading}}
+\begin{DoxyCompactList}\small\item\em The definition of Forward. Camera will follow behind. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_a6c05d7c5567cefaf858f7defe050f7d1}\label{class_cinemachine_1_1_cinemachine_free_look_a6c05d7c5567cefaf858f7defe050f7d1} 
+\mbox{\hyperlink{struct_cinemachine_1_1_axis_state_1_1_recentering}{Axis\+State.\+Recentering}} {\bfseries m\+\_\+\+Recenter\+To\+Target\+Heading} = new \mbox{\hyperlink{struct_cinemachine_1_1_axis_state_1_1_recentering}{Axis\+State.\+Recentering}}(false, 1, 2)
+\begin{DoxyCompactList}\small\item\em Controls how automatic recentering of the X axis is accomplished. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_a4e6d73e23341c8a7e84ee2158557717c}\label{class_cinemachine_1_1_cinemachine_free_look_a4e6d73e23341c8a7e84ee2158557717c} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_ac2ed72c89186c06f0d7972e3ad65ab0b}{Cinemachine\+Orbital\+Transposer.\+Binding\+Mode}} {\bfseries m\+\_\+\+Binding\+Mode} = \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_ac2ed72c89186c06f0d7972e3ad65ab0baf9d58f0af525093acc8783eca8cd2330}{Cinemachine\+Orbital\+Transposer.\+Binding\+Mode.\+Simple\+Follow\+With\+World\+Up}}
+\begin{DoxyCompactList}\small\item\em The coordinate space to use when interpreting the offset from the target. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_ad555c95b7364057c27cd221e697aa15e}\label{class_cinemachine_1_1_cinemachine_free_look_ad555c95b7364057c27cd221e697aa15e} 
+float {\bfseries m\+\_\+\+Spline\+Curvature} = 0.\+2f
+\item 
+\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_free_look_1_1_orbit}{Orbit}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_free_look_aebabb22f823c49bb8f670d759113c640}{m\+\_\+\+Orbits}}
+\begin{DoxyCompactList}\small\item\em The radius and height of the three orbiting rigs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine.\+Cinemachine\+Virtual\+Camera\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+string\mbox{[}$\,$\mbox{]} {\bfseries m\+\_\+\+Excluded\+Properties\+In\+Inspector} = new string\mbox{[}$\,$\mbox{]} \{ "{}m\+\_\+\+Script"{} \}
+\begin{DoxyCompactList}\small\item\em Inspector control -\/ Use for hiding sections of the Inspector UI. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}}\mbox{[}$\,$\mbox{]} {\bfseries m\+\_\+\+Lock\+Stage\+In\+Inspector}
+\begin{DoxyCompactList}\small\item\em Inspector control -\/ Use for enabling sections of the Inspector UI. \end{DoxyCompactList}\item 
+int {\bfseries m\+\_\+\+Priority} = 10
+\begin{DoxyCompactList}\small\item\em The priority will determine which camera becomes active based on the state of other cameras and this camera. Higher numbers have greater priority. \end{DoxyCompactList}\item 
+float {\bfseries Follow\+Target\+Attachment}
+\begin{DoxyCompactList}\small\item\em This must be set every frame at the start of the pipeline to relax the virtual camera\textquotesingle{}s attachment to the target. Range is 0...1. ~\newline
+ 1 is full attachment, and is the normal state. 0 is no attachment, and virtual camera will behave as if no Follow targets are set. \end{DoxyCompactList}\item 
+float {\bfseries Look\+At\+Target\+Attachment}
+\begin{DoxyCompactList}\small\item\em This must be set every frame at the start of the pipeline to relax the virtual camera\textquotesingle{}s attachment to the target. Range is 0...1. ~\newline
+ 1 is full attachment, and is the normal state. 0 is no attachment, and virtual camera will behave as if no Look\+At targets are set. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a85aaec3f3ba0ae4dc95d16b6873e73c3}{Standby\+Update\+Mode}} {\bfseries m\+\_\+\+Standby\+Update} = \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a85aaec3f3ba0ae4dc95d16b6873e73c3a91a63281bd2e647fe3b92d1d22cd3380}{Standby\+Update\+Mode.\+Round\+Robin}}
+\begin{DoxyCompactList}\small\item\em When the virtual camera is not live, this is how often the virtual camera will be updated. Set this to tune for performance. Most of the time Never is fine, unless the virtual camera is doing shot evaluation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_a7e7cc62e664238c229bd8d39e2898b0c}\label{class_cinemachine_1_1_cinemachine_free_look_a7e7cc62e664238c229bd8d39e2898b0c} 
+static \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_free_look_ab615768765c18974a2ff9e8d0d253942}{Create\+Rig\+Delegate}} {\bfseries Create\+Rig\+Override}
+\begin{DoxyCompactList}\small\item\em Override component pipeline creation. This needs to be done by the editor to support Undo. The override must do exactly the same thing as the Create\+Pipeline method in this class. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_a34a2af505136a7c80b2391bd71fe1a44}\label{class_cinemachine_1_1_cinemachine_free_look_a34a2af505136a7c80b2391bd71fe1a44} 
+static \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_free_look_a9b52e5078e2865250c6a7afd6bb16398}{Destroy\+Rig\+Delegate}} {\bfseries Destroy\+Rig\+Override}
+\begin{DoxyCompactList}\small\item\em Override component pipeline destruction. This needs to be done by the editor to support Undo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_free_look_a49f144b1f10c4bc5980733f81d1fafd1}{On\+Validate}} ()
+\begin{DoxyCompactList}\small\item\em Enforce bounds for fields, when changed in inspector. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_free_look_ad2fa267e12bfee994a43437e02579258}{On\+Enable}} ()
+\begin{DoxyCompactList}\small\item\em Updates the child rig cache. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_free_look_a39fc433a527c6976379e71cb061be8de}{On\+Destroy}} ()
+\begin{DoxyCompactList}\small\item\em Makes sure that the child rigs get destroyed in an undo-\/firndly manner. Invalidates the rig cache. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine.\+Cinemachine\+Virtual\+Camera\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_aaf3057698ca1ad1acdf2cef83d5e2bd4}{Invoke\+Post\+Pipeline\+Stage\+Callback}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} vcam, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}} stage, ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} new\+State, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Invokes the Post\+Pipeline\+Stage\+Delegate for this camera, and up the hierarchy for all parent cameras (if any). Implementaion must be sure to call this after each pipeline stage, to allow other services to hook into the pipeline. See \doxylink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a86b7ed25271bb609bcc2fe749d7441a9}{Invoke\+Pre\+Pipeline\+Mutate\+Camera\+State\+Callback}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} vcam, ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} new\+State, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Invokes the Pre\+Pipeline\+Mutate\+Camera\+State\+Callback for this camera, and up the hierarchy for all parent cameras (if any). Implementaion must be sure to call this after each pipeline stage, to allow other services to hook into the pipeline. See \doxylink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a38dd885bf0aa81a1a617ff2c7deebdef}{Invoke\+On\+Transition\+In\+Extensions}} (\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} from\+Cam, Vector3 world\+Up, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Invokes the On\+Transition\+From\+Camera for all extensions on this camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_abbeb4468a063f19186ea9d88ad4d7fd1}{Apply\+Position\+Blend\+Method}} (ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} state, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a19491da07e5ffb0e0583a65daa65fb97}{Blend\+Hint}} hint)
+\begin{DoxyCompactList}\small\item\em Applies a position blend hint to a camera state. \end{DoxyCompactList}\item 
+virtual void {\bfseries On\+Transform\+Parent\+Changed} ()
+\begin{DoxyCompactList}\small\item\em Base class implementation makes sure the priority queue remains up-\/to-\/date. \end{DoxyCompactList}\item 
+virtual void {\bfseries Start} ()
+\begin{DoxyCompactList}\small\item\em Derived classes should call base class implementation. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_afef80ee384758bdec6782b5be123599a}{On\+Disable}} ()
+\begin{DoxyCompactList}\small\item\em Base class implementation makes sure the priority queue remains up-\/to-\/date. \end{DoxyCompactList}\item 
+virtual void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em Base class implementation makes sure the priority queue remains up-\/to-\/date. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_blend}{Cinemachine\+Blend}} \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_ab544bc08067adb52371203afa0d534d8}{Create\+Blend}} (\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} camA, \mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} camB, \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_blend_definition}{Cinemachine\+Blend\+Definition}} blend\+Def, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_blend}{Cinemachine\+Blend}} active\+Blend)
+\begin{DoxyCompactList}\small\item\em Create a blend between 2 virtual cameras, taking into account any existing active blend, with special case handling if the new blend is effectively an undo of the current blend. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_af39a79c6966c4cdfc90f6792474d1d49}{Pull\+State\+From\+Virtual\+Camera}} (Vector3 world\+Up, ref \mbox{\hyperlink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings}} lens)
+\begin{DoxyCompactList}\small\item\em Create a camera state based on the current transform of this vcam. \end{DoxyCompactList}\item 
+void {\bfseries Update\+Target\+Cache} ()
+\begin{DoxyCompactList}\small\item\em Call this from \doxylink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a6c2e28646732c9eba46e4bdd6127d8ed}{Internal\+Update\+Camera\+State()} to check for changed targets and update the target cache. This is needed for tracking when a target object changes. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a9bf99c2a7e395e8bbbd6f646a2fc7719}{Legacy\+Upgrade}} (int streamed\+Version)
+\begin{DoxyCompactList}\small\item\em Override this to handle any upgrades necessitated by a streaming version change. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_ab1e7b99094c46ccef36465a5fd6a66cc}\label{class_cinemachine_1_1_cinemachine_free_look_ab1e7b99094c46ccef36465a5fd6a66cc} 
+static string\mbox{[}$\,$\mbox{]} {\bfseries Rig\+Names}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Names of the 3 child rigs. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_a50a49b73fc8cb1c93c82fd0ea74866c4}\label{class_cinemachine_1_1_cinemachine_free_look_a50a49b73fc8cb1c93c82fd0ea74866c4} 
+override bool {\bfseries Previous\+State\+Is\+Valid}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Set this to force the next update to ignore delta\+Time and reset itself. \end{DoxyCompactList}\item 
+override \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_free_look_a4f529dc8e8e8bc760c5190fc20053a1b}{State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The cacmera state, which will be a blend of the child rig states. \end{DoxyCompactList}\item 
+override Transform \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_free_look_a40819548cc410f9b070d525ab526c7d3}{Look\+At}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the current Look\+At target. Returns parent\textquotesingle{}s Look\+At if parent is non-\/null and no specific Look\+At defined for this camera. \end{DoxyCompactList}\item 
+override Transform \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_free_look_a6417c6fd1e8115cd64ca75eaf6d40589}{Follow}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the current Follow target. Returns parent\textquotesingle{}s Follow if parent is non-\/null and no specific Follow defined for this camera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine.\+Cinemachine\+Virtual\+Camera\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries Validating\+Stream\+Version}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Version that was last streamed, for upgrading legacy. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a877f15bf4c3889c334b4193f64b2868a}{Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the name of the Virtual Camera. Base implementation returns the owner Game\+Object\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual string \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_aaa0d4ce99c28b9cc2a10986bf984359b}{Description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a brief debug description of this virtual camera, for use when displayiong debug info. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a4c7257636ef17c9d51df4886a8d8d213}{Priority}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the Priority of the virtual camera. This determines its placement in the \doxylink{class_cinemachine_1_1_cinemachine_core}{Cinemachine\+Core}\textquotesingle{}s queue of eligible shots. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_accc33806013c67733e770b7d9c6318f3}{Virtual\+Camera\+Game\+Object}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Game\+Object owner of the Virtual Camera behaviour. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_ae0a1e2397abe1f2fe22ccb1e82661cf0}{Is\+Valid}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns false if the object has been deleted. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_afe5a25f827831b189c06e046785fa405}{State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The \doxylink{struct_cinemachine_1_1_camera_state}{Camera\+State} object holds all of the information necessary to position the \doxylink{namespace_unity}{Unity} camera. It is the output of this class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a6a0f741140a573a8f29861d7e418efbf}{Parent\+Camera}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Support for meta-\/virtual-\/cameras. This is the situation where a virtual camera is in fact the public face of a private army of virtual cameras, which it manages on its own. This method gets the Virtual\+Camera owner, if any. Private armies are implemented as Transform children of the parent vcam. \end{DoxyCompactList}\item 
+Transform \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_aa0805e614f7437353bb2bfc0a81a5517}{Look\+At}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the Look\+At target for the Aim component in the \doxylink{namespace_cinemachine}{Cinemachine} pipeline. \end{DoxyCompactList}\item 
+Transform \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a271d16b8e24903b022e27fc0a3280abc}{Follow}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the Follow target for the Body component in the \doxylink{namespace_cinemachine}{Cinemachine} pipeline. \end{DoxyCompactList}\item 
+virtual bool {\bfseries Previous\+State\+Is\+Valid}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Set this to force the next update to ignore state from the previous frame. ~\newline
+ This is useful, for example, if you want to cancel damping or other time-\/based processing. \end{DoxyCompactList}\item 
+bool {\bfseries Follow\+Target\+Changed}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This property is true if the Follow target was changed this frame. \end{DoxyCompactList}\item 
+bool {\bfseries Look\+At\+Target\+Changed}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This property is true if the Look\+Attarget was changed this frame. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}} {\bfseries Abstract\+Follow\+Target\+Group}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get Follow target as \doxylink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}, or null if target is not a \doxylink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} {\bfseries Follow\+Target\+As\+Vcam}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get Follow target as \doxylink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}, or null if target is not a \doxylink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}} {\bfseries Abstract\+Look\+At\+Target\+Group}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get Look\+At target as \doxylink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}, or null if target is not a \doxylink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} {\bfseries Look\+At\+Target\+As\+Vcam}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get Look\+At target as \doxylink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}, or null if target is not a \doxylink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{Cinemachine.\+ICinemachine\+Camera}}}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine.\+Cinemachine\+Virtual\+Camera\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a85aaec3f3ba0ae4dc95d16b6873e73c3}{Standby\+Update\+Mode}} \{ \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a85aaec3f3ba0ae4dc95d16b6873e73c3a6e7b34fa59e1bd229b207892956dc41c}{Never}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a85aaec3f3ba0ae4dc95d16b6873e73c3a68eec46437c384d8dad18d5464ebc35c}{Always}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a85aaec3f3ba0ae4dc95d16b6873e73c3a91a63281bd2e647fe3b92d1d22cd3380}{Round\+Robin}}
+ \}
+\begin{DoxyCompactList}\small\item\em How often to update a virtual camera when it is in Standby mode. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a19491da07e5ffb0e0583a65daa65fb97}{Blend\+Hint}} \{ \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a19491da07e5ffb0e0583a65daa65fb97a6adf97f83acf6453d4a6a4b1070f3754}{None}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a19491da07e5ffb0e0583a65daa65fb97a8cf3273a7eaefab56caac14e9144e77a}{Spherical\+Position}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a19491da07e5ffb0e0583a65daa65fb97a0cd006fa8eb642715a01d97971fd7a4e}{Cylindrical\+Position}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a19491da07e5ffb0e0583a65daa65fb97a9cefdfa837e07f08f072e57844e38201}{Screen\+Space\+Aim\+When\+Targets\+Differ}}
+ \}
+\begin{DoxyCompactList}\small\item\em Hint for blending to and from this virtual camera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A \doxylink{namespace_cinemachine}{Cinemachine} Camera geared towards a 3rd person camera experience. The camera orbits around its subject with three separate camera rigs defining rings around the target. Each rig has its own radius, height offset, composer, and lens settings. Depending on the camera\textquotesingle{}s position along the spline connecting these three rigs, these settings are interpolated to give the final camera position and state. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_afb9646e6b5d4910c7c92315ad14e5684}\index{Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}!ForceCameraPosition@{ForceCameraPosition}}
+\index{ForceCameraPosition@{ForceCameraPosition}!Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}}
+\doxysubsubsection{\texorpdfstring{ForceCameraPosition()}{ForceCameraPosition()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_free_look_afb9646e6b5d4910c7c92315ad14e5684} 
+override void Cinemachine.\+Cinemachine\+Free\+Look.\+Force\+Camera\+Position (\begin{DoxyParamCaption}\item[{Vector3}]{pos}{, }\item[{Quaternion}]{rot}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Force the virtual camera to assume a given position and orientation. ~\newline
+ Procedural placement then takes over. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Worldspace pposition to take\\
+\hline
+{\em rot} & Worldspace orientation to take\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_ab7e2e6202b651827d4d605bca1dab316}{Cinemachine.\+Cinemachine\+Virtual\+Camera\+Base}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_a77805e8d230c91f3500aa36f6c0ac5a2}\index{Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}!GetLocalPositionForCameraFromInput@{GetLocalPositionForCameraFromInput}}
+\index{GetLocalPositionForCameraFromInput@{GetLocalPositionForCameraFromInput}!Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}}
+\doxysubsubsection{\texorpdfstring{GetLocalPositionForCameraFromInput()}{GetLocalPositionForCameraFromInput()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_free_look_a77805e8d230c91f3500aa36f6c0ac5a2} 
+Vector3 Cinemachine.\+Cinemachine\+Free\+Look.\+Get\+Local\+Position\+For\+Camera\+From\+Input (\begin{DoxyParamCaption}\item[{float}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the local position of the camera along the spline used to connect the three camera rigs. Does not take into account the current heading of the camera (or its target) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & The t-\/value for the camera on its spline. Internally clamped to the value \mbox{[}0,1\mbox{]}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The local offset (back + up) of the camera WRT its target based on the supplied t-\/value
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_a7507ae670e1113fd48a104887f99114f}\index{Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}!GetRig@{GetRig}}
+\index{GetRig@{GetRig}!Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}}
+\doxysubsubsection{\texorpdfstring{GetRig()}{GetRig()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_free_look_a7507ae670e1113fd48a104887f99114f} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera}{Cinemachine\+Virtual\+Camera}} Cinemachine.\+Cinemachine\+Free\+Look.\+Get\+Rig (\begin{DoxyParamCaption}\item[{int}]{i}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a child rig. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Rig index. Can be 0, 1, or 2\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The rig, or null if index is bad.
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_acf07c0d509059d66e5d7e0c80446b372}\index{Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}!InternalUpdateCameraState@{InternalUpdateCameraState}}
+\index{InternalUpdateCameraState@{InternalUpdateCameraState}!Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}}
+\doxysubsubsection{\texorpdfstring{InternalUpdateCameraState()}{InternalUpdateCameraState()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_free_look_acf07c0d509059d66e5d7e0c80446b372} 
+override void Cinemachine.\+Cinemachine\+Free\+Look.\+Internal\+Update\+Camera\+State (\begin{DoxyParamCaption}\item[{Vector3}]{world\+Up}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Internal use only. Called by \doxylink{class_cinemachine_1_1_cinemachine_core}{Cinemachine\+Core} at designated update time so the vcam can position itself and track its targets. All 3 child rigs are updated, and a blend calculated, depending on the value of the Y axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world\+Up} & Default world Up, set by the \doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain}\\
+\hline
+{\em delta\+Time} & Delta time for time-\/based effects (ignore if less than 0)\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera_ae56cc4643d70213874ada5f1d47d1754}{Cinemachine.\+ICinemachine\+Camera}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_a629728f3aa32ad64ddf689a577e097d9}\index{Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}!IsLiveChild@{IsLiveChild}}
+\index{IsLiveChild@{IsLiveChild}!Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}}
+\doxysubsubsection{\texorpdfstring{IsLiveChild()}{IsLiveChild()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_free_look_a629728f3aa32ad64ddf689a577e097d9} 
+override bool Cinemachine.\+Cinemachine\+Free\+Look.\+Is\+Live\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}}}]{vcam}{, }\item[{bool}]{dominant\+Child\+Only}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Check whether the vcam a live child of this camera. Returns true if the child is currently contributing actively to the camera state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vcam} & The Virtual Camera to check\\
+\hline
+{\em dominant\+Child\+Only} & If truw, will only return true if this vcam is the dominat live child\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the vcam is currently actively influencing the state of this vcam
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a73957bfb38463f7cd4122afe9d8c7e7f}{Cinemachine.\+Cinemachine\+Virtual\+Camera\+Base}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_a39fc433a527c6976379e71cb061be8de}\index{Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_free_look_a39fc433a527c6976379e71cb061be8de} 
+override void Cinemachine.\+Cinemachine\+Free\+Look.\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Makes sure that the child rigs get destroyed in an undo-\/firndly manner. Invalidates the rig cache. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a698ff0209ad4ec10261602bffd8539b7}{Cinemachine.\+Cinemachine\+Virtual\+Camera\+Base}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_ad2fa267e12bfee994a43437e02579258}\index{Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_free_look_ad2fa267e12bfee994a43437e02579258} 
+override void Cinemachine.\+Cinemachine\+Free\+Look.\+On\+Enable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Updates the child rig cache. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a8665b9dd6d4581b2b8fb69ef87e375fc}{Cinemachine.\+Cinemachine\+Virtual\+Camera\+Base}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_a8fa10280d7c22910e16bd3b60d1c4edc}\index{Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}!OnTargetObjectWarped@{OnTargetObjectWarped}}
+\index{OnTargetObjectWarped@{OnTargetObjectWarped}!Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}}
+\doxysubsubsection{\texorpdfstring{OnTargetObjectWarped()}{OnTargetObjectWarped()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_free_look_a8fa10280d7c22910e16bd3b60d1c4edc} 
+override void Cinemachine.\+Cinemachine\+Free\+Look.\+On\+Target\+Object\+Warped (\begin{DoxyParamCaption}\item[{Transform}]{target}{, }\item[{Vector3}]{position\+Delta}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+This is called to notify the vcam that a target got warped, so that the vcam can update its internal state to make the camera also warp seamlessy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The object that was warped\\
+\hline
+{\em position\+Delta} & The amount the target\textquotesingle{}s position changed\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_af4890d5675c88a6226cfca538a3e1043}{Cinemachine.\+Cinemachine\+Virtual\+Camera\+Base}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_aaeb8e8167a329ee38373c446f9b7f9fd}\index{Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}!OnTransitionFromCamera@{OnTransitionFromCamera}}
+\index{OnTransitionFromCamera@{OnTransitionFromCamera}!Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}}
+\doxysubsubsection{\texorpdfstring{OnTransitionFromCamera()}{OnTransitionFromCamera()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_free_look_aaeb8e8167a329ee38373c446f9b7f9fd} 
+override void Cinemachine.\+Cinemachine\+Free\+Look.\+On\+Transition\+From\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}}}]{from\+Cam}{, }\item[{Vector3}]{world\+Up}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+If we are transitioning from another Free\+Look, grab the axis values from it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from\+Cam} & The camera being deactivated. May be null.\\
+\hline
+{\em world\+Up} & Default world Up, set by the \doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain}\\
+\hline
+{\em delta\+Time} & Delta time for time-\/based effects (ignore if less than or equal to 0)\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_a6b03c491ae86e8d85da20ecd70f10bdb}{Cinemachine.\+Cinemachine\+Virtual\+Camera\+Base}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_a49f144b1f10c4bc5980733f81d1fafd1}\index{Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}!OnValidate@{OnValidate}}
+\index{OnValidate@{OnValidate}!Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}}
+\doxysubsubsection{\texorpdfstring{OnValidate()}{OnValidate()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_free_look_a49f144b1f10c4bc5980733f81d1fafd1} 
+override void Cinemachine.\+Cinemachine\+Free\+Look.\+On\+Validate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Enforce bounds for fields, when changed in inspector. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base_af4902cf204dfd09a3b7cbe1dc958e1e5}{Cinemachine.\+Cinemachine\+Virtual\+Camera\+Base}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_aad897d65ce4edd65b2e950b72de46a14}\index{Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}!m\_Heading@{m\_Heading}}
+\index{m\_Heading@{m\_Heading}!Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}}
+\doxysubsubsection{\texorpdfstring{m\_Heading}{m\_Heading}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_free_look_aad897d65ce4edd65b2e950b72de46a14} 
+\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_orbital_transposer_1_1_heading}{Cinemachine\+Orbital\+Transposer.\+Heading}} Cinemachine.\+Cinemachine\+Free\+Look.\+m\+\_\+\+Heading}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \textcolor{keyword}{new}\ CinemachineOrbitalTransposer.Heading(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CinemachineOrbitalTransposer.Heading.HeadingDefinition.TargetForward,\ 4,\ 0)}
+
+\end{DoxyCode}
+
+
+The definition of Forward. Camera will follow behind. 
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_aebabb22f823c49bb8f670d759113c640}\index{Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}!m\_Orbits@{m\_Orbits}}
+\index{m\_Orbits@{m\_Orbits}!Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}}
+\doxysubsubsection{\texorpdfstring{m\_Orbits}{m\_Orbits}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_free_look_aebabb22f823c49bb8f670d759113c640} 
+\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_free_look_1_1_orbit}{Orbit}} \mbox{[}$\,$\mbox{]} Cinemachine.\+Cinemachine\+Free\+Look.\+m\+\_\+\+Orbits}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \textcolor{keyword}{new}\ Orbit[3]}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Orbit(4.5f,\ 1.75f),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Orbit(2.5f,\ 3f),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Orbit(0.4f,\ 1.3f)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The radius and height of the three orbiting rigs. 
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_a6417c6fd1e8115cd64ca75eaf6d40589}\index{Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}!Follow@{Follow}}
+\index{Follow@{Follow}!Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}}
+\doxysubsubsection{\texorpdfstring{Follow}{Follow}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_free_look_a6417c6fd1e8115cd64ca75eaf6d40589} 
+override Transform Cinemachine.\+Cinemachine\+Free\+Look.\+Follow\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Get the current Follow target. Returns parent\textquotesingle{}s Follow if parent is non-\/null and no specific Follow defined for this camera. 
+
+
+
+Implements \mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera_a8b9a060498ce9725b4779f54636e131e}{Cinemachine.\+ICinemachine\+Camera}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_a40819548cc410f9b070d525ab526c7d3}\index{Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}!LookAt@{LookAt}}
+\index{LookAt@{LookAt}!Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}}
+\doxysubsubsection{\texorpdfstring{LookAt}{LookAt}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_free_look_a40819548cc410f9b070d525ab526c7d3} 
+override Transform Cinemachine.\+Cinemachine\+Free\+Look.\+Look\+At\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Get the current Look\+At target. Returns parent\textquotesingle{}s Look\+At if parent is non-\/null and no specific Look\+At defined for this camera. 
+
+
+
+Implements \mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera_a88b371dabbf13e8b798f346149fe9ab0}{Cinemachine.\+ICinemachine\+Camera}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_free_look_a4f529dc8e8e8bc760c5190fc20053a1b}\index{Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}!State@{State}}
+\index{State@{State}!Cinemachine.CinemachineFreeLook@{Cinemachine.CinemachineFreeLook}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_free_look_a4f529dc8e8e8bc760c5190fc20053a1b} 
+override \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} Cinemachine.\+Cinemachine\+Free\+Look.\+State\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The cacmera state, which will be a blend of the child rig states. 
+
+
+
+Implements \mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera_aea19576aa434e7c115d551d5c624945d}{Cinemachine.\+ICinemachine\+Camera}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Behaviours/Cinemachine\+Free\+Look.\+cs\end{DoxyCompactItemize}

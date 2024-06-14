@@ -1,0 +1,517 @@
+\chapter{Actions}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions}\index{Actions@{Actions}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1266}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1266}%
+
+\begin{DoxyItemize}
+\item Actions
+\begin{DoxyItemize}
+\item Overview
+\item Creating Actions
+\begin{DoxyItemize}
+\item Creating Actions using the Action editor
+\item Creating Actions by embedding them in Mono\+Behaviours
+\item Loading Actions from JSON
+\item Creating Actions in code
+\begin{DoxyItemize}
+\item Default Actions
+\end{DoxyItemize}
+\end{DoxyItemize}
+\item Using Actions
+\begin{DoxyItemize}
+\item Responding to Actions
+\begin{DoxyItemize}
+\item Action callbacks
+\begin{DoxyItemize}
+\item \`{}\+Input\+Action\+Map.action\+Triggered\`{} callback
+\item \`{}\+Input\+System.on\+Action\+Change\`{} callback
+\end{DoxyItemize}
+\item Polling Actions
+\item \`{}\+Input\+Action\+Trace\`{}
+\end{DoxyItemize}
+\item Action types
+\begin{DoxyItemize}
+\item Value
+\item Button
+\item Pass-\/\+Through
+\end{DoxyItemize}
+\item Debugging Actions
+\item Using Actions with multiple players
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Related pages\+:
+
+
+\begin{DoxyItemize}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_assets}{Assets}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings}{Bindings}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_interactions}{Interactions}{0}
+\end{DoxyItemize}
+
+{\bfseries{Actions}} allow you to separate the logical meaning of an input (the things your user can do in your game or app, such as move, jump, crouch) and the device-\/specific controls (for example, pressing a button or moving a gamepad stick).
+
+Without Actions, the meaning of your input and the device controls end up hard-\/coded together in your scripts, which although quick to implement, is not very flexible and therefore not always desirable. For example, here the move\+Vector variable is hard-\/coded to read values from the right stick of a gamepad\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ without\ Actions,\ you\ end\ up\ hard-\/coding\ device\ controls}}
+\DoxyCodeLine{\textcolor{comment}{//\ like\ this:\ (not\ always\ desirable)}}
+\DoxyCodeLine{moveVector\ =\ gamepad.rightStick.ReadValue<Vector2>();}
+
+\end{DoxyCode}
+
+
+When you use Actions, you do not need to refer to specific devices or their controls in your code. Instead the Action\textquotesingle{}s binding defines which controls on which device is used to perform the action, and your code becomes simpler. In this example, {\ttfamily move\+Action} would contain a reference to an Action, defined either in code, or in an Action Asset\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ using\ Actions\ removes\ the\ need\ to\ refer\ directly\ to\ device\ controls}}
+\DoxyCodeLine{moveAmount\ =\ moveAction.ReadValue<Vector2>();}
+
+\end{DoxyCode}
+
+
+You can then use the visual editor (either in the inspector, or in the Actions Asset editor) to establish the mapping between the Action and one or more device controls. For example in this screenshot, the "{}move"{} action is bound to the left gamepad stick, and the keyboard\textquotesingle{}s arrow keys.
+
+
+
+This also makes it easier to let players \href{ActionBindings.md\#interactive-rebinding}{\texttt{ customize bindings at runtime}}.
+
+\texorpdfstring{$>$}{>}!\+Note \texorpdfstring{$>$}{>}\texorpdfstring{$\ast$}{*} Actions are a game-\/time only feature. You can\textquotesingle{}t use them in {\ttfamily Editor\+Window} code. \texorpdfstring{$>$}{>}\texorpdfstring{$\ast$}{*} For an overview of the terms and terminology used on this page, see \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_concepts}{Concepts}{0}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1267}{}\doxysection{\texorpdfstring{Overview}{Overview}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1267}
+There are three key classes for Actions in the API\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Class   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Class   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\ttfamily Input\+Action\+Asset}   &An Asset that contains one or more Action Maps and, optionally, a sequence of Control Schemes. For more information on how to create, edit, and work with these Assets, see \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_assets}{Action Assets}{0}.    \\\cline{1-2}
+{\ttfamily Input\+Action\+Map}   &A named collection of Actions.    \\\cline{1-2}
+{\ttfamily Input\+Action}   &A named Action that triggers callbacks in response to input.   \\\cline{1-2}
+\end{longtabu}
+
+
+Actions use {\ttfamily Input\+Binding} to refer to the inputs they collect. For more information about Bindings and how to use them, see \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings}{Action Bindings}{0}.
+
+Each Action has a name (\href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_name}{\texttt{ {\ttfamily Input\+Action.\+name}}}), which must be unique within the Action Map that the Action belongs to, if any (see \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_actionMap}{\texttt{ {\ttfamily Input\+Action.\+action\+Map}}}). Each Action also has a unique ID (\href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_id}{\texttt{ {\ttfamily Input\+Action.\+id}}}), which you can use to reference the Action. The ID remains the same even if you rename the Action.
+
+Each Action Map has a name (\href{../api/UnityEngine.InputSystem.InputActionMap.html\#UnityEngine_InputSystem_InputActionMap_name}{\texttt{ {\ttfamily Input\+Action\+Map.\+name}}}), which must be unique within the Action Asset that the Action Map belongs to, if any (see \href{../api/UnityEngine.InputSystem.InputActionMap.html\#UnityEngine_InputSystem_InputActionMap_asset}{\texttt{ {\ttfamily Input\+Action\+Map.\+asset}}}). Each Action Map also has a unique ID (\href{../api/UnityEngine.InputSystem.InputActionMap.html\#UnityEngine_InputSystem_InputActionMap_id}{\texttt{ {\ttfamily Input\+Action\+Map.\+id}}}), which you can use to reference the Action Map. The ID remains the same even if you rename the Action Map.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1268}{}\doxysection{\texorpdfstring{Creating Actions}{Creating Actions}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1268}
+You can create Actions in any of the following ways\+:
+
+
+\begin{DoxyItemize}
+\item Use the dedicated editor for \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_assets}{Input Action Assets}{0}.
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_workflow-_embedded}{Embed them}{0} in Mono\+Behaviour components, then set up bindings in the Inspector.
+\item Manually load them from JSON.
+\item Create them entirely in code, including setting up the bindings.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1269}{}\doxysubsection{\texorpdfstring{Creating Actions using the Action editor}{Creating Actions using the Action editor}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1269}
+For information on how to create and edit Input Action Assets in the dedicated editor, see \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_assets}{Action Assets}{0}. This is the recommended workflow if you want to organise all your input actions and bindings together into a single Asset, which is often the case for many types of game or app.
+
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1270}{}\doxysubsection{\texorpdfstring{Creating Actions by embedding them in Mono\+Behaviours}{Creating Actions by embedding them in Mono\+Behaviours}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1270}
+As an alternative to using an Action Asset, You can embed individual \href{../api/UnityEngine.InputSystem.InputAction.html}{\texttt{ Input Action}} and \href{../api/UnityEngine.InputSystem.InputActionMap.html}{\texttt{ Input Action Maps}} as fields directly inside {\ttfamily Mono\+Behaviour} components, like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{\textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine_1_1_input_system}{UnityEngine.InputSystem}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ExampleScript\ :\ MonoBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{InputAction}}\ move;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{InputAction}}\ jump;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+The result is similar to using an Action Asset, except the Actions are defined in the Game\+Object\textquotesingle{}s properties and saved as Scene or Prefab data, instead of in a dedicated Asset.
+
+When you embed actions in a Mono\+Behaviour and assign that Mono\+Behaviour to a Game\+Object, the Game\+Object\textquotesingle{}s Inspector window displays an interface similar to the Actions Asset window, which allows you to set up the bindings for those actions. For example\+:
+
+
+
+The visual editors work similarly to the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_assets}{Action Asset editor}{0}.
+
+
+\begin{DoxyItemize}
+\item To add or remove Actions or Bindings, click the Add (+) or Remove (-\/) icon in the header.
+\item To edit Bindings, double-\/click them.~\newline
+ 
+\item To edit Actions, double-\/click them in an Action Map, or click the gear icon on individual Action properties.~\newline
+ 
+\item You can also right-\/click entries to bring up a context menu, and you can drag them. Hold the Alt key and drag an entry to duplicate it.
+\end{DoxyItemize}
+
+You must manually enable and disable Actions and Action Maps that are embedded in Mono\+Behaviour components.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyBehavior\ :\ MonoBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ ...}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ Awake()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ fireAction.performed\ +=\ OnFire;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ lookAction.performed\ +=\ OnLook;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ gameplayActions[\textcolor{stringliteral}{"{}fire"{}}].performed\ +=\ OnFire;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ OnEnable()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ fireAction.Enable();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ lookAction.Enable();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ gameplayActions.Enable();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ OnDisable()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ fireAction.Disable();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ lookAction.Disable();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ gameplayActions.Disable();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1271}{}\doxysubsection{\texorpdfstring{Loading Actions from JSON}{Loading Actions from JSON}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1271}
+You can load Actions as JSON in the form of a set of Action Maps or as a full \href{../api/UnityEngine.InputSystem.InputActionAsset.html}{\texttt{ {\ttfamily Input\+Action\+Asset}}}. This also works at runtime in the \doxylink{class_player}{Player}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Load\ a\ set\ of\ action\ maps\ from\ JSON.}}
+\DoxyCodeLine{var\ maps\ =\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_map}{InputActionMap}}.\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_map_a7a724c1e16864a4f675fcf89732fcd6c}{FromJson}}(json);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Load\ an\ entire\ InputActionAsset\ from\ JSON.}}
+\DoxyCodeLine{var\ asset\ =\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{InputActionAsset}}.\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_asset_a85dffa2d7f4e53a8a2b15e1ac53d4411}{FromJson}}(json);}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1272}{}\doxysubsection{\texorpdfstring{Creating Actions in code}{Creating Actions in code}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1272}
+You can manually create and configure Actions entirely in code, including assigning the bindings. This also works at runtime in the \doxylink{class_player}{Player}. For example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ free-\/standing\ Actions.}}
+\DoxyCodeLine{var\ lookAction\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{InputAction}}(\textcolor{stringliteral}{"{}look"{}},\ binding:\ \textcolor{stringliteral}{"{}<Gamepad>/leftStick"{}});}
+\DoxyCodeLine{var\ moveAction\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{InputAction}}(\textcolor{stringliteral}{"{}move"{}},\ binding:\ \textcolor{stringliteral}{"{}<Gamepad>/rightStick"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{lookAction.AddBinding(\textcolor{stringliteral}{"{}<Mouse>/delta"{}});}
+\DoxyCodeLine{moveAction.AddCompositeBinding(\textcolor{stringliteral}{"{}Dpad"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Up"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/w"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Down"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/s"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Left"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/a"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Right"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/d"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ an\ Action\ Map\ with\ Actions.}}
+\DoxyCodeLine{var\ map\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_map}{InputActionMap}}(\textcolor{stringliteral}{"{}Gameplay"{}});}
+\DoxyCodeLine{var\ lookAction\ =\ map.AddAction(\textcolor{stringliteral}{"{}look"{}});}
+\DoxyCodeLine{lookAction.AddBinding(\textcolor{stringliteral}{"{}<Gamepad>/leftStick"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ an\ Action\ Asset.}}
+\DoxyCodeLine{var\ asset\ =\ ScriptableObject.CreateInstance<\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{InputActionAsset}}>();}
+\DoxyCodeLine{var\ gameplayMap\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_map}{InputActionMap}}(\textcolor{stringliteral}{"{}gameplay"{}});}
+\DoxyCodeLine{asset.AddActionMap(gameplayMap);}
+\DoxyCodeLine{var\ lookAction\ =\ gameplayMap.AddAction(\textcolor{stringliteral}{"{}look"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftStick"{}});}
+
+\end{DoxyCode}
+
+
+Any action that you create in this way during Play mode do not persist in the Input Action Asset after you exit Play mode. This means you can test your application in a realistic manner in the Editor without having to worry about inadvertently modifying the asset.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1273}{}\doxysubsubsection{\texorpdfstring{Default Actions}{Default Actions}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1273}
+An \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_assets}{asset}{0} called {\ttfamily Default\+Input\+Actions.\+inputactions} containing a default setup of Actions comes with the Input \doxylink{namespace_system}{System} Package. You can reference this asset directly in your projects like any other \doxylink{namespace_unity}{Unity} asset. However, the asset is also available in code form through the \href{../api/UnityEngine.InputSystem.DefaultInputActions.html}{\texttt{ {\ttfamily Default\+Input\+Actions}}} class.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36aa6122a65eaa676f700ae68d393054a37}{Start}}()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Create\ an\ instance\ of\ the\ default\ actions.}}
+\DoxyCodeLine{\ \ \ \ var\ actions\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_default_input_actions}{DefaultInputActions}}();}
+\DoxyCodeLine{\ \ \ \ actions.Player.Look.performed\ +=\ OnLook;}
+\DoxyCodeLine{\ \ \ \ actions.Player.Move.performed\ +=\ OnMove;}
+\DoxyCodeLine{\ \ \ \ actions.Enable();}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1274}{}\doxysection{\texorpdfstring{Using Actions}{Using Actions}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1274}
+For an Action to do something, you must first enable it. You can do this either by individually enabling Actions, or by enabling them in bulk through Action Maps. The second method is more efficient in all scenarios.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Enable\ a\ single\ action.}}
+\DoxyCodeLine{lookAction.Enable();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Enable\ an\ en\ entire\ action\ map.}}
+\DoxyCodeLine{gameplayActions.Enable();}
+
+\end{DoxyCode}
+
+
+When you enable an Action, the Input \doxylink{namespace_system}{System} resolves its bindings, unless it has done so already, or if the set of devices that the Action can use has not changed. For more details about this process, see the documentation on \href{ActionBindings.md\#binding-resolution}{\texttt{ binding resolution}}.
+
+You can\textquotesingle{}t change certain aspects of the configuration, such Action Bindings, while an Action is enabled. To stop Actions or Action Maps from responding to input, call \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_Disable}{\texttt{ {\ttfamily Disable}}}.
+
+While enabled, an Action actively monitors the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls}{Control(s)}{0} it\textquotesingle{}s bound to. If a bound Control changes state, the Action processes the change. If the Control\textquotesingle{}s change represents an \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_interactions}{Interaction}{0} change, the Action creates a response. All of this happens during the Input \doxylink{namespace_system}{System} update logic. Depending on the \href{Settings.md\#update-mode}{\texttt{ update mode}} selected in the input settings, this happens once every frame, once every fixed update, or manually if updates are set to manual.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1275}{}\doxysubsection{\texorpdfstring{Responding to Actions}{Responding to Actions}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1275}
+An Action doesn\textquotesingle{}t represent an actual response to input by itself. Instead, an Action informs your code that a certain type of input has occurred. Your code then responds to this information.
+
+There are several ways to do this\+:
+
+
+\begin{DoxyEnumerate}
+\item Each Action has a \`{}started\`{}, \`{}performed\`{}, and \`{}canceled\`{} callback.
+\item Each Action Map has an \`{}action\+Triggered\`{} callback.
+\item The Input \doxylink{namespace_system}{System} has a global \`{}\+Input\+System.on\+Action\+Change\`{} callback.
+\item You can poll the current state of an Action whenever you need it.
+\item \`{}\+Input\+Action\+Trace\`{} can record changes happening on Actions.
+\end{DoxyEnumerate}
+
+There are also two higher-\/level, more streamlined ways of picking up input from Actions\+: use \href{PlayerInput.md\#notification-behaviors}{\texttt{ {\ttfamily Player\+Input}}}, or \href{ActionAssets.md\#auto-generating-script-code-for-actions}{\texttt{ generate script code}} that wraps around the Input Actions.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1276}{}\doxysubsubsection{\texorpdfstring{Action callbacks}{Action callbacks}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1276}
+Every Action has a set of distinct phases it can go through in response to receiving input.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Phase   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Phase   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\ttfamily Disabled}   &The Action is disabled and can\textquotesingle{}t receive input.    \\\cline{1-2}
+{\ttfamily Waiting}   &The Action is enabled and is actively waiting for input.    \\\cline{1-2}
+{\ttfamily Started}   &The Input \doxylink{namespace_system}{System} has received input that started an Interaction with the Action.    \\\cline{1-2}
+{\ttfamily Performed}   &An Interaction with the Action has been completed.    \\\cline{1-2}
+{\ttfamily Canceled}   &An Interaction with the Action has been canceled.   \\\cline{1-2}
+\end{longtabu}
+
+
+You can read the current phase of an action using \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_phase}{\texttt{ {\ttfamily Input\+Action.\+phase}}}.
+
+The {\ttfamily Started}, {\ttfamily Performed}, and {\ttfamily Canceled} phases each have a callback associated with them\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ action\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{InputAction}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{action.started\ +=\ ctx\ =>\ \textcolor{comment}{/*\ Action\ was\ started\ */};}
+\DoxyCodeLine{action.performed\ +=\ ctx\ =>\ \textcolor{comment}{/*\ Action\ was\ performed\ */};}
+\DoxyCodeLine{action.canceled\ +=\ ctx\ =>\ \textcolor{comment}{/*\ Action\ was\ canceled\ */};}
+
+\end{DoxyCode}
+
+
+Each callback receives an \href{../api/UnityEngine.InputSystem.InputAction.CallbackContext.html}{\texttt{ {\ttfamily Input\+Action.\+Callback\+Context}}} structure, which holds context information that you can use to query the current state of the Action and to read out values from Controls that triggered the Action (\href{../api/UnityEngine.InputSystem.InputAction.CallbackContext.html\#UnityEngine_InputSystem_InputAction_CallbackContext_ReadValue__1}{\texttt{ {\ttfamily Input\+Action.\+Callback\+Context.\+Read\+Value}}}).
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: The contents of the structure are only valid for the duration of the callback. In particular, it isn\textquotesingle{}t safe to store the received context and later access its properties from outside the callback.
+
+When and how the callbacks are triggered depends on the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_interactions}{Interactions}{0} present on the respective Bindings. If the Bindings have no Interactions that apply to them, the \href{Interactions.md\#default-interaction}{\texttt{ default Interaction}} applies.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1277}{}\doxysubsubsubsection{\texorpdfstring{{\ttfamily Input\+Action\+Map.\+action\+Triggered} callback}{{\ttfamily Input\+Action\+Map.\+action\+Triggered} callback}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1277}
+Instead of listening to individual actions, you can listen on an entire Action Map for state changes on any of the Actions in the Action Map.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ actionMap\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_map}{InputActionMap}}();}
+\DoxyCodeLine{actionMap.AddAction(\textcolor{stringliteral}{"{}action1"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/buttonSouth"{}});}
+\DoxyCodeLine{actionMap.AddAction(\textcolor{stringliteral}{"{}action2"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/buttonNorth"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{actionMap.actionTriggered\ +=}
+\DoxyCodeLine{\ \ \ \ context\ =>\ \{\ ...\ \};}
+
+\end{DoxyCode}
+
+
+The argument received is the same {\ttfamily Input\+Action.\+Callback\+Context} structure that you receive through the \`{}started\`{}, \`{}performed\`{}, and \`{}canceled\`{} callbacks.
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: The Input \doxylink{namespace_system}{System} calls {\ttfamily Input\+Action\+Map.\+action\+Triggered} for all three of the individual callbacks on Actions. That is, you get {\ttfamily started}, {\ttfamily performed}, and {\ttfamily canceled} all on a single callback.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1278}{}\doxysubsubsubsection{\texorpdfstring{{\ttfamily Input\+System.\+on\+Action\+Change} callback}{{\ttfamily Input\+System.\+on\+Action\+Change} callback}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1278}
+Similar to {\ttfamily Input\+System.\+on\+Device\+Change}, your app can listen for any action-\/related change globally.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{InputSystem.onActionChange\ +=}
+\DoxyCodeLine{\ \ \ \ (obj,\ change)\ =>}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ obj\ can\ be\ either\ an\ InputAction\ or\ an\ InputActionMap}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ depending\ on\ the\ specific\ change.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (change)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7}{InputActionChange}}.ActionStarted:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7}{InputActionChange}}.ActionPerformed:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7}{InputActionChange}}.ActionCanceled:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}\{((InputAction)obj).name\}\ \{change\}"{}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1279}{}\doxysubsubsection{\texorpdfstring{Polling Actions}{Polling Actions}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1279}
+Instead of using callbacks, it might be simpler sometimes to poll the value of an Action where you need it in your code.
+
+You can poll the current value of an Action using \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_ReadValue__1}{\texttt{ {\ttfamily Input\+Action.\+Read\+Value\texorpdfstring{$<$}{<}\texorpdfstring{$>$}{>}()}}}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{InputAction}}\ moveAction;}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ moveSpeed\ =\ 10.0f;}
+\DoxyCodeLine{\textcolor{keyword}{public}\ Vector2\ position;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36aa6122a65eaa676f700ae68d393054a37}{Start}}()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ moveAction.\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_abc6ff7728cbf947406b3c426cf82437f}{Enable}}();}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ Update()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ var\ moveDirection\ =\ moveAction.ReadValue<Vector2>();}
+\DoxyCodeLine{\ \ \ \ position\ +=\ moveDirection\ *\ moveSpeed\ *\ Time.deltaTime;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Note that the value type has to correspond to the value type of the control that the value is being read from.
+
+To determine whether an action was performed in the current frame, you can use \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_WasPerformedThisFrame}{\texttt{ {\ttfamily Input\+Action.\+Was\+Performed\+This\+Frame()}}}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{private}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{InputAction}}\ action;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36aa6122a65eaa676f700ae68d393054a37}{Start}}()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Set\ up\ an\ action\ that\ triggers\ when\ the\ A\ button\ is}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ held\ for\ 1\ second.}}
+\DoxyCodeLine{\ \ \ \ action\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{InputAction}}(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ type:\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94b}{InputActionType}}.\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}{Button}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ binding:\ \textcolor{stringliteral}{"{}<Gamepad>/buttonSouth"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ interactions:\ \textcolor{stringliteral}{"{}hold(duration=1)"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ action.\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_abc6ff7728cbf947406b3c426cf82437f}{Enable}}();}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ Update()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (action.\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a1968a212ee4e88950b4f1f15043a9d42}{WasPerformedThisFrame}}())}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Debug.Log(\textcolor{stringliteral}{"{}A\ button\ on\ gamepad\ was\ held\ for\ one\ second"{}});}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Finally, there are three methods you can use to poll for button presses and releases\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Method   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Method   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+\href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_IsPressed}{\texttt{ {\ttfamily Input\+Action.\+Is\+Pressed()}}}   &True if the level of \href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_EvaluateMagnitude}{\texttt{ actuation}} on the action has crossed the \href{../api/UnityEngine.InputSystem.InputSettings.html\#UnityEngine_InputSystem_InputSettings_defaultButtonPressPoint}{\texttt{ press point}} and did not yet fall to or below the \href{../api/UnityEngine.InputSystem.InputSettings.html\#UnityEngine_InputSystem_InputSettings_buttonReleaseThreshold}{\texttt{ release threshold}}.    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_WasPressedThisFrame}{\texttt{ {\ttfamily Input\+Action.\+Was\+Pressed\+This\+Frame()}}}   &True if the level of \href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_EvaluateMagnitude}{\texttt{ actuation}} on the action has, at any point during the current frame, reached or gone above the \href{../api/UnityEngine.InputSystem.InputSettings.html\#UnityEngine_InputSystem_InputSettings_defaultButtonPressPoint}{\texttt{ press point}}.    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_WasReleasedThisFrame}{\texttt{ {\ttfamily Input\+Action.\+Was\+Released\+This\+Frame()}}}   &True if the level of \href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_EvaluateMagnitude}{\texttt{ actuation}} on the action has, at any point during the current frame, gone from being at or above the \href{../api/UnityEngine.InputSystem.InputSettings.html\#UnityEngine_InputSystem_InputSettings_defaultButtonPressPoint}{\texttt{ press point}} to at or below the \href{../api/UnityEngine.InputSystem.InputSettings.html\#UnityEngine_InputSystem_InputSettings_buttonReleaseThreshold}{\texttt{ release threshold}}.   \\\cline{1-2}
+\end{longtabu}
+
+
+Example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input}{PlayerInput}}\ playerInput;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Update()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ IsPressed}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (playerInput.\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_ace52ec4d5b8b26e2b18ede34280f6b85}{actions}}[\textcolor{stringliteral}{"{}up"{}}].IsPressed())}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ transform.Translate(0,\ 10\ *\ Time.deltaTime,\ 0);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ WasPressedThisFrame}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (playerInput.\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_ace52ec4d5b8b26e2b18ede34280f6b85}{actions}}[\textcolor{stringliteral}{"{}teleport"{}}].WasPressedThisFrame())}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Teleport();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ WasReleasedThisFrame}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (playerInput.\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_ace52ec4d5b8b26e2b18ede34280f6b85}{actions}}[\textcolor{stringliteral}{"{}submit"{}}].WasReleasedThisFrame())}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ConfirmSelection();}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1280}{}\doxysubsubsection{\texorpdfstring{{\ttfamily Input\+Action\+Trace}}{{\ttfamily Input\+Action\+Trace}}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1280}
+You can trace Actions to generate a log of all activity that happened on a particular set of Actions. To do so, use \href{../api/UnityEngine.InputSystem.Utilities.InputActionTrace.html}{\texttt{ {\ttfamily Input\+Action\+Trace}}}. This behaves in a similar way to \href{../api/UnityEngine.InputSystem.LowLevel.InputEventTrace.html}{\texttt{ {\ttfamily Input\+Event\+Trace}}} for events.
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: {\ttfamily Input\+Action\+Trace} allocates unmanaged memory and needs to be disposed of so that it doesn\textquotesingle{}t create memory leaks.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ trace\ =\ \textcolor{keyword}{new}\ InputActionTrace();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Subscribe\ trace\ to\ single\ Action.}}
+\DoxyCodeLine{\textcolor{comment}{//\ (Use\ UnsubscribeFrom\ to\ unsubscribe)}}
+\DoxyCodeLine{trace.SubscribeTo(myAction);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Subscribe\ trace\ to\ entire\ Action\ Map.}}
+\DoxyCodeLine{\textcolor{comment}{//\ (Use\ UnsubscribeFrom\ to\ unsubscribe)}}
+\DoxyCodeLine{trace.SubscribeTo(myActionMap);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Subscribe\ trace\ to\ all\ Actions\ in\ the\ system.}}
+\DoxyCodeLine{trace.SubscribeToAll();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Record\ a\ single\ triggering\ of\ an\ Action.}}
+\DoxyCodeLine{myAction.performed\ +=}
+\DoxyCodeLine{\ \ \ \ ctx\ =>}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ctx.ReadValue<\textcolor{keywordtype}{float}>()\ >\ 0.5f)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ trace.RecordAction(ctx);}
+\DoxyCodeLine{\ \ \ \ \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Output\ trace\ to\ console.}}
+\DoxyCodeLine{Debug.Log(\textcolor{keywordtype}{string}.Join(\textcolor{stringliteral}{"{},\(\backslash\)n"{}},\ trace));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Walk\ through\ all\ recorded\ Actions\ and\ then\ clear\ trace.}}
+\DoxyCodeLine{\textcolor{keywordflow}{foreach}\ (var\ record\ \textcolor{keywordflow}{in}\ trace)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}\{record.action\}\ was\ \{record.phase\}\ by\ control\ \{record.control\}"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ To\ read\ out\ the\ value,\ you\ either\ have\ to\ know\ the\ value\ type\ or\ read\ the}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ value\ out\ as\ a\ generic\ byte\ buffer.\ Here,\ we\ assume\ that\ the\ value\ type\ is}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ float.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ Debug.Log(\textcolor{stringliteral}{"{}Value:\ "{}}\ +\ record.ReadValue<\textcolor{keywordtype}{float}>());}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ If\ it's\ okay\ to\ accept\ a\ GC\ hit,\ you\ can\ also\ read\ out\ values\ as\ objects.}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ In\ this\ case,\ you\ don't\ have\ to\ know\ the\ value\ type.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ Debug.Log(\textcolor{stringliteral}{"{}Value:\ "{}}\ +\ record.ReadValueAsObject());}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{trace.Clear();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Unsubscribe\ trace\ from\ everything.}}
+\DoxyCodeLine{trace.UnsubscribeFromAll();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Release\ memory\ held\ by\ trace.}}
+\DoxyCodeLine{trace.Dispose();}
+
+\end{DoxyCode}
+
+
+Once recorded, a trace can be safely read from multiple threads as long as it is not concurrently being written to and as long as the Action setup (that is, the configuration data accessed by the trace) is not concurrently being changed on the main thread.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1281}{}\doxysubsection{\texorpdfstring{Action types}{Action types}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1281}
+Each Action can be one of three different \href{../api/UnityEngine.InputSystem.InputActionType.html}{\texttt{ Action types}}. You can select the Action type in the Input Action editor window, or by specifying the {\ttfamily type} parameter when calling the \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction__ctor_System_String_UnityEngine_InputSystem_InputActionType_System_String_System_String_System_String_System_String_}{\texttt{ {\ttfamily Input\+Action()}}} constructor. The Action type influences how the Input \doxylink{namespace_system}{System} processes state changes for the Action. The default Action type is {\ttfamily Value}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1282}{}\doxysubsubsection{\texorpdfstring{Value}{Value}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1282}
+This is the default Action type. Use this for any inputs which should track continuous changes to the state of a Control.
+
+\href{../api/UnityEngine.InputSystem.InputActionType.html\#UnityEngine_InputSystem_InputActionType_Value}{\texttt{ {\ttfamily Value}}} type actions continuously monitor all the Controls which are bound to the Action, and then choose the one which is the most actuated to be the Control driving the Action, and report the values from that Control in callbacks, triggered whenever the value changes. If a different bound Control actuated more, then that Control becomes the Control driving the Action, and the Action starts reporting values from that Control. This process is called \href{ActionBindings.md\#conflicting-inputs}{\texttt{ conflict resolution}}. This is useful if you want to allow different Controls to control an Action in the game, but only take input from one Control at the same time.
+
+When the Action initially enables, it performs an \href{ActionBindings.md\#initial-state-check}{\texttt{ initial state check}} of all bound Controls. If any of them is actuated, the Action then triggers a callback with the current value.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1283}{}\doxysubsubsection{\texorpdfstring{Button}{Button}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1283}
+This is very similar to \href{../api/UnityEngine.InputSystem.InputActionType.html\#UnityEngine_InputSystem_InputActionType_Value}{\texttt{ {\ttfamily Value}}}, but \href{../api/UnityEngine.InputSystem.InputActionType.html\#UnityEngine_InputSystem_InputActionType_Button}{\texttt{ {\ttfamily Button}}} type Actions can only be bound to \href{../api/UnityEngine.InputSystem.Controls.ButtonControl.html}{\texttt{ {\ttfamily Button\+Control}}} Controls, and don\textquotesingle{}t perform an initial state check like \href{../api/UnityEngine.InputSystem.InputActionType.html\#UnityEngine_InputSystem_InputActionType_Value}{\texttt{ {\ttfamily Value}}} Actions do (see the Value section above). Use this for inputs that trigger an Action once every time they are pressed. The initial state check is usually not useful in such cases, because it can trigger actions if the button is still held down from a previous press when the Action was enabled.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1284}{}\doxysubsubsection{\texorpdfstring{Pass-\/\+Through}{Pass-\/\+Through}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1284}
+\href{../api/UnityEngine.InputSystem.InputActionType.html\#UnityEngine_InputSystem_InputActionType_PassThrough}{\texttt{ {\ttfamily Pass-\/\+Through}}} Actions bypass the \href{ActionBindings.md\#conflicting-inputs}{\texttt{ conflict resolution}} process described above for {\ttfamily Value} Actions and don\textquotesingle{}t use the concept of a specific Control driving the Action. Instead, any change to any bound Control triggers a callback with that Control\textquotesingle{}s value. This is useful if you want to process all input from a set of Controls.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1285}{}\doxysubsection{\texorpdfstring{Debugging Actions}{Debugging Actions}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1285}
+To see currently enabled Actions and their bound Controls, use the \href{Debugging.md\#debugging-actions}{\texttt{ Input Debugger}}.
+
+You can also use the \href{Debugging.md\#inputactionvisualizer}{\texttt{ {\ttfamily Input\+Action\+Visualizer}}} component from the Visualizers sample to get an on-\/screen visualization of an Action\textquotesingle{}s value and Interaction state in real-\/time.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1286}{}\doxysubsection{\texorpdfstring{Using Actions with multiple players}{Using Actions with multiple players}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions_autotoc_md1286}
+You can use the same Action definitions for multiple local players (for example, in a local co-\/op game). For more information, see documentation on the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input_manager}{Player Input Manager}{0} component. 

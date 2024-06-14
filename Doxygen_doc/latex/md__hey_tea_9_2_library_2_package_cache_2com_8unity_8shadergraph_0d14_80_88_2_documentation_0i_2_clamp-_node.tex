@@ -1,0 +1,33 @@
+\chapter{Clamp Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_clamp-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_clamp-_node}\index{Clamp Node@{Clamp Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_clamp-_node_autotoc_md3033}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_clamp-_node_autotoc_md3033}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_clamp-_node_autotoc_md3034}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_clamp-_node_autotoc_md3034}
+Returns the input {\bfseries{In}} clamped between the minimum and maximum values defined by inputs {\bfseries{Min}} and {\bfseries{Max}} respectively.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_clamp-_node_autotoc_md3035}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_clamp-_node_autotoc_md3035}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endhead
+In   &Input   &Dynamic Vector   &Unclamped input value    \\\cline{1-4}
+Min   &Input   &Dynamic Vector   &Minimum value    \\\cline{1-4}
+Max   &Input   &Dynamic Vector   &Maximum value    \\\cline{1-4}
+Out   &Output   &Dynamic Vector   &Clamped output value   \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_clamp-_node_autotoc_md3036}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_clamp-_node_autotoc_md3036}
+The following example code represents one possible outcome of this node.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Clamp\_float4(float4\ In,\ float4\ Min,\ float4\ Max,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ clamp(In,\ Min,\ Max);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

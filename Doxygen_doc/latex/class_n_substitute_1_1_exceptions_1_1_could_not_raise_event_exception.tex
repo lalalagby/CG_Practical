@@ -1,0 +1,53 @@
+\doxysection{NSubstitute.\+Exceptions.\+Could\+Not\+Raise\+Event\+Exception Class Reference}
+\hypertarget{class_n_substitute_1_1_exceptions_1_1_could_not_raise_event_exception}{}\label{class_n_substitute_1_1_exceptions_1_1_could_not_raise_event_exception}\index{NSubstitute.Exceptions.CouldNotRaiseEventException@{NSubstitute.Exceptions.CouldNotRaiseEventException}}
+Inheritance diagram for NSubstitute.\+Exceptions.\+Could\+Not\+Raise\+Event\+Exception\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_n_substitute_1_1_exceptions_1_1_could_not_raise_event_exception}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const string \mbox{\hyperlink{class_n_substitute_1_1_exceptions_1_1_could_not_raise_event_exception_a154d76ea89fac54ac1c865c1293ece12}{What\+Probably\+Went\+Wrong}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_n_substitute_1_1_exceptions_1_1_substitute_exception}{NSubstitute.\+Exceptions.\+Substitute\+Exception}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Substitute\+Exception} (string message)
+\item 
+{\bfseries Substitute\+Exception} (string message, Exception? inner\+Exception)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_n_substitute_1_1_exceptions_1_1_could_not_raise_event_exception_a154d76ea89fac54ac1c865c1293ece12}\index{NSubstitute.Exceptions.CouldNotRaiseEventException@{NSubstitute.Exceptions.CouldNotRaiseEventException}!WhatProbablyWentWrong@{WhatProbablyWentWrong}}
+\index{WhatProbablyWentWrong@{WhatProbablyWentWrong}!NSubstitute.Exceptions.CouldNotRaiseEventException@{NSubstitute.Exceptions.CouldNotRaiseEventException}}
+\doxysubsubsection{\texorpdfstring{WhatProbablyWentWrong}{WhatProbablyWentWrong}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_exceptions_1_1_could_not_raise_event_exception_a154d76ea89fac54ac1c865c1293ece12} 
+const string NSubstitute.\+Exceptions.\+Could\+Not\+Raise\+Event\+Exception.\+What\+Probably\+Went\+Wrong\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Make\ sure\ you\ are\ using\ Raise.Event()\ as\ part\ of\ an\ event\ subscription\ on\ a\ substitute.\(\backslash\)n"{}}\ +}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}For\ example:\(\backslash\)n"{}}\ +}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\(\backslash\)tmySub.Clicked\ +=\ Raise.Event();\(\backslash\)n"{}}\ +}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ +}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}If\ you\ substituted\ for\ a\ class\ rather\ than\ an\ interface,\ check\ that\ the\ event\ on\ your\ substitute\ is\ virtual/abstract.\(\backslash\)n"{}}\ +}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Events\ on\ classes\ cannot\ be\ raised\ if\ they\ are\ not\ declared\ virtual\ or\ abstract.\(\backslash\)n"{}}\ +}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ +}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Note\ that\ the\ source\ of\ the\ problem\ may\ be\ prior\ to\ where\ this\ exception\ was\ thrown\ (possibly\ in\ a\ previous\ test!).\(\backslash\)n"{}}\ +}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}For\ example:\(\backslash\)n"{}}\ +}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\(\backslash\)tvar\ notASub\ =\ new\ Button();\(\backslash\)n"{}}\ +}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\(\backslash\)tnotASub.Clicked\ +=\ Raise.Event();\ //\ <-\/-\/\ Problem\ here.\ This\ is\ not\ a\ substitute.\(\backslash\)n"{}}\ +}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\(\backslash\)tvar\ sub\ =\ Substitute.For<IController>();\(\backslash\)n"{}}\ +}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\(\backslash\)tsub.Load();\ //\ <-\/-\/\ Exception\ thrown\ here.\ NSubstitute\ thinks\ the\ earlier\ Raise.Event()\ was\ meant\ for\ this\ call."{}}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/net.\+tnrd.\+nsubstitute@449712b25a/\+Runtime/\+Exceptions/Could\+Not\+Raise\+Event\+Exception.\+cs\end{DoxyCompactItemize}

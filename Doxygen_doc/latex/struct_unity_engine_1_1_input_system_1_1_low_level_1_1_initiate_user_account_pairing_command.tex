@@ -1,0 +1,88 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Low\+Level.\+Initiate\+User\+Account\+Pairing\+Command Struct Reference}
+\hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command}{}\label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command}\index{UnityEngine.InputSystem.LowLevel.InitiateUserAccountPairingCommand@{UnityEngine.InputSystem.LowLevel.InitiateUserAccountPairingCommand}}
+
+
+Device command to instruct the underlying platform to pair a user account to the targeted device.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Low\+Level.\+Initiate\+User\+Account\+Pairing\+Command\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command_ad4cadc5001abaa305a98b5fa8b94a237}{Result}} \{ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command_ad4cadc5001abaa305a98b5fa8b94a237a6fa01a2ea3a83993c57d2c6fded93403}{Successfully\+Initiated}} = 1
+, \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command_ad4cadc5001abaa305a98b5fa8b94a237aea2365d5b0c753bc537595829464e4f4}{Error\+Not\+Supported}} = (int)Input\+Device\+Command.\+Generic\+Failure
+, \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command_ad4cadc5001abaa305a98b5fa8b94a237aea3f992cb17f46ebb3a79310462a59d3}{Error\+Already\+In\+Progress}} = -\/2
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command_aa8b74ccccfabb9b5da6653707d7f1f2a}\label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command_aa8b74ccccfabb9b5da6653707d7f1f2a} 
+static \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command}{Initiate\+User\+Account\+Pairing\+Command}} {\bfseries Create} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command_a423d960511f65d3236df3b0744cff7ef}\label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command_a423d960511f65d3236df3b0744cff7ef} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_device_command}{Input\+Device\+Command}} {\bfseries base\+Command}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command_a6d8051657e5ec4056a216fd3dba5505e}\label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command_a6d8051657e5ec4056a216fd3dba5505e} 
+static \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_four_c_c}{Four\+CC}} {\bfseries Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_four_c_c}{Four\+CC}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command_a422a0b9017f332b5d1be42f3388e5863}{type\+Static}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_device_command_info}{Unity\+Engine.\+Input\+System.\+Low\+Level.\+IInput\+Device\+Command\+Info}}}
+
+
+\doxysubsection{Detailed Description}
+Device command to instruct the underlying platform to pair a user account to the targeted device. 
+
+If successful, the platform should then send an \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_device_configuration_event}{Device\+Configuration\+Event} to signal that the device configuration has been changed. In response, a Query\+User\+Id\+Command may be sent to fetch the paired user ID from the device. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command_ad4cadc5001abaa305a98b5fa8b94a237}\index{UnityEngine.InputSystem.LowLevel.InitiateUserAccountPairingCommand@{UnityEngine.InputSystem.LowLevel.InitiateUserAccountPairingCommand}!Result@{Result}}
+\index{Result@{Result}!UnityEngine.InputSystem.LowLevel.InitiateUserAccountPairingCommand@{UnityEngine.InputSystem.LowLevel.InitiateUserAccountPairingCommand}}
+\doxysubsubsection{\texorpdfstring{Result}{Result}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command_ad4cadc5001abaa305a98b5fa8b94a237} 
+enum \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command_ad4cadc5001abaa305a98b5fa8b94a237}{Unity\+Engine.\+Input\+System.\+Low\+Level.\+Initiate\+User\+Account\+Pairing\+Command.\+Result}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SuccessfullyInitiated@{SuccessfullyInitiated}!UnityEngine.InputSystem.LowLevel.InitiateUserAccountPairingCommand@{UnityEngine.InputSystem.LowLevel.InitiateUserAccountPairingCommand}}\index{UnityEngine.InputSystem.LowLevel.InitiateUserAccountPairingCommand@{UnityEngine.InputSystem.LowLevel.InitiateUserAccountPairingCommand}!SuccessfullyInitiated@{SuccessfullyInitiated}}}\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command_ad4cadc5001abaa305a98b5fa8b94a237a6fa01a2ea3a83993c57d2c6fded93403}\label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command_ad4cadc5001abaa305a98b5fa8b94a237} 
+Successfully\+Initiated&User pairing \doxylink{namespace_unity_engine_1_1_u_i}{UI} has been successfully opened. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorNotSupported@{ErrorNotSupported}!UnityEngine.InputSystem.LowLevel.InitiateUserAccountPairingCommand@{UnityEngine.InputSystem.LowLevel.InitiateUserAccountPairingCommand}}\index{UnityEngine.InputSystem.LowLevel.InitiateUserAccountPairingCommand@{UnityEngine.InputSystem.LowLevel.InitiateUserAccountPairingCommand}!ErrorNotSupported@{ErrorNotSupported}}}\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command_ad4cadc5001abaa305a98b5fa8b94a237aea2365d5b0c753bc537595829464e4f4}\label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command_ad4cadc5001abaa305a98b5fa8b94a237} 
+Error\+Not\+Supported&\doxylink{namespace_system}{System} does not support application-\/invoked user pairing. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorAlreadyInProgress@{ErrorAlreadyInProgress}!UnityEngine.InputSystem.LowLevel.InitiateUserAccountPairingCommand@{UnityEngine.InputSystem.LowLevel.InitiateUserAccountPairingCommand}}\index{UnityEngine.InputSystem.LowLevel.InitiateUserAccountPairingCommand@{UnityEngine.InputSystem.LowLevel.InitiateUserAccountPairingCommand}!ErrorAlreadyInProgress@{ErrorAlreadyInProgress}}}\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command_ad4cadc5001abaa305a98b5fa8b94a237aea3f992cb17f46ebb3a79310462a59d3}\label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command_ad4cadc5001abaa305a98b5fa8b94a237} 
+Error\+Already\+In\+Progress&There already is a pairing operation in progress and the system does not support pairing multiple devices at the same time. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command_a422a0b9017f332b5d1be42f3388e5863}\index{UnityEngine.InputSystem.LowLevel.InitiateUserAccountPairingCommand@{UnityEngine.InputSystem.LowLevel.InitiateUserAccountPairingCommand}!typeStatic@{typeStatic}}
+\index{typeStatic@{typeStatic}!UnityEngine.InputSystem.LowLevel.InitiateUserAccountPairingCommand@{UnityEngine.InputSystem.LowLevel.InitiateUserAccountPairingCommand}}
+\doxysubsubsection{\texorpdfstring{typeStatic}{typeStatic}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command_a422a0b9017f332b5d1be42f3388e5863} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_four_c_c}{Four\+CC}} Unity\+Engine.\+Input\+System.\+Low\+Level.\+Initiate\+User\+Account\+Pairing\+Command.\+type\+Static\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_device_command_info}{Unity\+Engine.\+Input\+System.\+Low\+Level.\+IInput\+Device\+Command\+Info}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Devices/\+Commands/Initiate\+User\+Account\+Pairing\+Command.\+cs\end{DoxyCompactItemize}

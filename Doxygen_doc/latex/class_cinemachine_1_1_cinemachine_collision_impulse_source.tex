@@ -1,0 +1,69 @@
+\doxysection{Cinemachine.\+Cinemachine\+Collision\+Impulse\+Source Class Reference}
+\hypertarget{class_cinemachine_1_1_cinemachine_collision_impulse_source}{}\label{class_cinemachine_1_1_cinemachine_collision_impulse_source}\index{Cinemachine.CinemachineCollisionImpulseSource@{Cinemachine.CinemachineCollisionImpulseSource}}
+
+
+Generate an Impulse Event this object\textquotesingle{}s Collider collides with something or its trigger zone is entered.  
+
+
+Inheritance diagram for Cinemachine.\+Cinemachine\+Collision\+Impulse\+Source\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_cinemachine_1_1_cinemachine_collision_impulse_source}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_collision_impulse_source_a0b22616a7828a23e1f02adbc20eb1eec}\label{class_cinemachine_1_1_cinemachine_collision_impulse_source_a0b22616a7828a23e1f02adbc20eb1eec} 
+Layer\+Mask {\bfseries m\+\_\+\+Layer\+Mask} = 1
+\begin{DoxyCompactList}\small\item\em Only collisions with objects on these layers will generate Impulse events. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_collision_impulse_source_a84d5dac1121be8ea596f37b488e6136a}\label{class_cinemachine_1_1_cinemachine_collision_impulse_source_a84d5dac1121be8ea596f37b488e6136a} 
+string {\bfseries m\+\_\+\+Ignore\+Tag} = string.\+Empty
+\begin{DoxyCompactList}\small\item\em No Impulse evemts will be generated for collisions with objects having these tags. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_collision_impulse_source_a877e8bd52362e7975d3f1aa2587d340f}\label{class_cinemachine_1_1_cinemachine_collision_impulse_source_a877e8bd52362e7975d3f1aa2587d340f} 
+bool {\bfseries m\+\_\+\+Use\+Impact\+Direction} = false
+\begin{DoxyCompactList}\small\item\em If checked, signal direction will be affected by the direction of impact. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_collision_impulse_source_ab6467735ade97b5606071d5f7dcd42f4}\label{class_cinemachine_1_1_cinemachine_collision_impulse_source_ab6467735ade97b5606071d5f7dcd42f4} 
+bool {\bfseries m\+\_\+\+Scale\+Impact\+With\+Mass} = false
+\begin{DoxyCompactList}\small\item\em If checked, signal amplitude will be multiplied by the mass of the impacting object. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_collision_impulse_source_a764a19a091dda6df444e3fbe156015cd}\label{class_cinemachine_1_1_cinemachine_collision_impulse_source_a764a19a091dda6df444e3fbe156015cd} 
+bool {\bfseries m\+\_\+\+Scale\+Impact\+With\+Speed} = false
+\begin{DoxyCompactList}\small\item\em If checked, signal amplitude will be multiplied by the speed of the impacting object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_impulse_source}{Cinemachine.\+Cinemachine\+Impulse\+Source}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_impulse_definition}{Cinemachine\+Impulse\+Definition}} {\bfseries m\+\_\+\+Impulse\+Definition} = new \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_impulse_definition}{Cinemachine\+Impulse\+Definition}}()
+\begin{DoxyCompactList}\small\item\em This defines the complete impulse signal that will be broadcast. \end{DoxyCompactList}\item 
+Vector3 {\bfseries m\+\_\+\+Default\+Velocity} = Vector3.\+down
+\begin{DoxyCompactList}\small\item\em The default direction and force of the Impulse Signal in the absense of any specified overrides. Overrides can be specified by calling the appropriate Generate\+Impulse method in the API. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_impulse_source}{Cinemachine.\+Cinemachine\+Impulse\+Source}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_impulse_source_a4bc442add06ec0b917a151f6ffb4bb50}{Generate\+Impulse\+At\+Position\+With\+Velocity}} (Vector3 position, Vector3 velocity)
+\begin{DoxyCompactList}\small\item\em Broadcast the Impulse Signal onto the appropriate channels, using a custom position and impact velocity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_impulse_source_aadfe519a17db3bb20962aea56d0de0f6}{Generate\+Impulse\+With\+Velocity}} (Vector3 velocity)
+\begin{DoxyCompactList}\small\item\em Broadcast the Impulse Signal onto the appropriate channels, using a custom impact velocity, and this transfom\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_impulse_source_a3041ad08b59efc726907f9ac836ab99d}{Generate\+Impulse\+With\+Force}} (float force)
+\begin{DoxyCompactList}\small\item\em Broadcast the Impulse Signal onto the appropriate channels, using a custom impact force, with the standard direction, and this transfom\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void {\bfseries Generate\+Impulse} ()
+\begin{DoxyCompactList}\small\item\em Broadcast the Impulse Signal onto the appropriate channels, with default velocity = (0, -\/1, 0), and a default position which is this transform\textquotesingle{}s location. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_impulse_source_ac8151abdf7432d87aa7e8ec955d1d01f}{Generate\+Impulse\+At}} (Vector3 position, Vector3 velocity)
+\begin{DoxyCompactList}\small\item\em Legacy API\+: Please use \doxylink{class_cinemachine_1_1_cinemachine_impulse_source_a4bc442add06ec0b917a151f6ffb4bb50}{Generate\+Impulse\+At\+Position\+With\+Velocity()} instead. ~\newline
+ Broadcast the Impulse Signal onto the appropriate channels, using a custom position and impact velocity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_impulse_source_a1d98de481d57bf4e0a95e98385dbfa7a}{Generate\+Impulse}} (Vector3 velocity)
+\begin{DoxyCompactList}\small\item\em Legacy API\+: Please use \doxylink{class_cinemachine_1_1_cinemachine_impulse_source_aadfe519a17db3bb20962aea56d0de0f6}{Generate\+Impulse\+With\+Velocity()} instead. ~\newline
+ Broadcast the Impulse Signal onto the appropriate channels, using a custom impact velocity, and this transfom\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_impulse_source_aba67423dd115461f8351ebd9578ba464}{Generate\+Impulse}} (float force)
+\begin{DoxyCompactList}\small\item\em Legacy API\+: Please use \doxylink{class_cinemachine_1_1_cinemachine_impulse_source_a3041ad08b59efc726907f9ac836ab99d}{Generate\+Impulse\+With\+Force()} instead. ~\newline
+ Broadcast the Impulse Signal onto the appropriate channels, using a custom impact force, with the standard direction, and this transfom\textquotesingle{}s position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generate an Impulse Event this object\textquotesingle{}s Collider collides with something or its trigger zone is entered. 
+
+This component should be attached to a Game\+Object with a Collider or a Collider2D. Objects colliding with this (or entering its trigger zone if it\textquotesingle{}s a trigger) will be filtered according to the layer and tag settings defined here, and if they pass the filter, they will cause an impulse event to be generated. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Impulse/Cinemachine\+Collision\+Impulse\+Source.\+cs\end{DoxyCompactItemize}

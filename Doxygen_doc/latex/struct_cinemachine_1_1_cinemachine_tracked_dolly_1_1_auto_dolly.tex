@@ -1,0 +1,59 @@
+\doxysection{Cinemachine.\+Cinemachine\+Tracked\+Dolly.\+Auto\+Dolly Struct Reference}
+\hypertarget{struct_cinemachine_1_1_cinemachine_tracked_dolly_1_1_auto_dolly}{}\label{struct_cinemachine_1_1_cinemachine_tracked_dolly_1_1_auto_dolly}\index{Cinemachine.CinemachineTrackedDolly.AutoDolly@{Cinemachine.CinemachineTrackedDolly.AutoDolly}}
+
+
+Controls how automatic dollying occurs.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_tracked_dolly_1_1_auto_dolly_a0e6c8e42a9c24b8779024fb013450551}{Auto\+Dolly}} (bool enabled, float position\+Offset, int search\+Radius, int steps\+Per\+Segment)
+\begin{DoxyCompactList}\small\item\em Constructor with specific field values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_tracked_dolly_1_1_auto_dolly_aecac58fcd096eef58b4cdbb5a520474f}\label{struct_cinemachine_1_1_cinemachine_tracked_dolly_1_1_auto_dolly_aecac58fcd096eef58b4cdbb5a520474f} 
+bool {\bfseries m\+\_\+\+Enabled}
+\begin{DoxyCompactList}\small\item\em If checked, will enable automatic dolly, which chooses a path position that is as close as possible to the Follow target. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_tracked_dolly_1_1_auto_dolly_a147cf38b7b3290907d620f0dda775a56}\label{struct_cinemachine_1_1_cinemachine_tracked_dolly_1_1_auto_dolly_a147cf38b7b3290907d620f0dda775a56} 
+float {\bfseries m\+\_\+\+Position\+Offset}
+\begin{DoxyCompactList}\small\item\em Offset, in current position units, from the closest point on the path to the follow target. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_tracked_dolly_1_1_auto_dolly_a0696049a111fe9915ca5bdad6998cf14}\label{struct_cinemachine_1_1_cinemachine_tracked_dolly_1_1_auto_dolly_a0696049a111fe9915ca5bdad6998cf14} 
+int {\bfseries m\+\_\+\+Search\+Radius}
+\begin{DoxyCompactList}\small\item\em Search up to this many waypoints on either side of the current position. Use 0 for Entire path. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_tracked_dolly_1_1_auto_dolly_a2f1132f4c95534aa3fd822b22f694068}\label{struct_cinemachine_1_1_cinemachine_tracked_dolly_1_1_auto_dolly_a2f1132f4c95534aa3fd822b22f694068} 
+int {\bfseries m\+\_\+\+Search\+Resolution}
+\begin{DoxyCompactList}\small\item\em We search between waypoints by dividing the segment into this many straight pieces. The higher the number, the more accurate the result, but performance is proportionally slower for higher numbers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controls how automatic dollying occurs. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_cinemachine_1_1_cinemachine_tracked_dolly_1_1_auto_dolly_a0e6c8e42a9c24b8779024fb013450551}\index{Cinemachine.CinemachineTrackedDolly.AutoDolly@{Cinemachine.CinemachineTrackedDolly.AutoDolly}!AutoDolly@{AutoDolly}}
+\index{AutoDolly@{AutoDolly}!Cinemachine.CinemachineTrackedDolly.AutoDolly@{Cinemachine.CinemachineTrackedDolly.AutoDolly}}
+\doxysubsubsection{\texorpdfstring{AutoDolly()}{AutoDolly()}}
+{\footnotesize\ttfamily \label{struct_cinemachine_1_1_cinemachine_tracked_dolly_1_1_auto_dolly_a0e6c8e42a9c24b8779024fb013450551} 
+Cinemachine.\+Cinemachine\+Tracked\+Dolly.\+Auto\+Dolly.\+Auto\+Dolly (\begin{DoxyParamCaption}\item[{bool}]{enabled}{, }\item[{float}]{position\+Offset}{, }\item[{int}]{search\+Radius}{, }\item[{int}]{steps\+Per\+Segment}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor with specific field values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & Whether to enable automatic dolly\\
+\hline
+{\em position\+Offset} & Offset, in current position units, from the closest point on the path to the follow target\\
+\hline
+{\em search\+Radius} & Search up to this many waypoints on either side of the current position\\
+\hline
+{\em steps\+Per\+Segment} & We search between waypoints by dividing the segment into this many straight pieces\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Components/Cinemachine\+Tracked\+Dolly.\+cs\end{DoxyCompactItemize}

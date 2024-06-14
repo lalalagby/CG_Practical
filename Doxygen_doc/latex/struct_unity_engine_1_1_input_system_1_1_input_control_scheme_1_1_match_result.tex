@@ -1,0 +1,154 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Input\+Control\+Scheme.\+Match\+Result Struct Reference}
+\hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result}{}\label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result}\index{UnityEngine.InputSystem.InputControlScheme.MatchResult@{UnityEngine.InputSystem.InputControlScheme.MatchResult}}
+
+
+The result of matching a list of \doxylink{class_unity_engine_1_1_input_system_1_1_input_device}{devices} against a list of \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_device_requirement}{requirements} in an \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme}.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Input\+Control\+Scheme.\+Match\+Result\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.609195cm]{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_1_1_match}{Match}}
+\begin{DoxyCompactList}\small\item\em A single matched \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_device_requirement}{Device\+Requirement}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerator$<$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_1_1_match}{Match}} $>$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_abaee73762926e0d6ceb3a208496a8511}{Get\+Enumerator}} ()
+\begin{DoxyCompactList}\small\item\em Enumerate the match for each individual \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_device_requirement}{Device\+Requirement} in the control scheme. \end{DoxyCompactList}\item 
+IEnumerator IEnumerable. \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_a2bfae6a785489494904024036ef07c76}{Get\+Enumerator}} ()
+\begin{DoxyCompactList}\small\item\em Enumerate the match for each individual \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_device_requirement}{Device\+Requirement} in the control scheme. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_a58e23c496a90b424ac9cbf2f6d13fc98}\label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_a58e23c496a90b424ac9cbf2f6d13fc98} 
+void {\bfseries Dispose} ()
+\begin{DoxyCompactList}\small\item\em Discard the list of devices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_aecad52d31c74d019afccf8136a61dfdd}{score}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Overall, relative measure for how well the control scheme matches. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_aad767c41d0350dc0297124bcf1dfd2ef}{is\+Successful\+Match}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the device requirements got successfully matched. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_a7824e6f6162d4acb17926b6d6d37f143}{has\+Missing\+Required\+Devices}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether there are missing required devices. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_a7ceceec5444de82c18df94dbb1523888}{has\+Missing\+Optional\+Devices}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether there are missing optional devices. This does not prevent a successful match. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_a93d06d077f1db06d92ed330d80830313}\label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_a93d06d077f1db06d92ed330d80830313} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list}{Input\+Control\+List}}$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}} $>$ {\bfseries devices}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The devices that got picked from the available devices. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_a88e4500f3c9f07d131985e60473617b8}\label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_a88e4500f3c9f07d131985e60473617b8} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_1_1_match}{Match}} {\bfseries this\mbox{[}int index\mbox{]}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The result of matching a list of \doxylink{class_unity_engine_1_1_input_system_1_1_input_device}{devices} against a list of \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_device_requirement}{requirements} in an \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme}. 
+
+This struct uses Input\+Control\+List$<$\+TControl$>$ which allocates unmanaged memory and thus must be disposed in order to not leak unmanaged heap memory. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_ac5c98ed3b50fb8be0fb2d8007225a9a7}{Input\+Control\+Scheme.\+Pick\+Devices\+From$<$\+TDevices$>$}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_abaee73762926e0d6ceb3a208496a8511}\index{UnityEngine.InputSystem.InputControlScheme.MatchResult@{UnityEngine.InputSystem.InputControlScheme.MatchResult}!GetEnumerator@{GetEnumerator}}
+\index{GetEnumerator@{GetEnumerator}!UnityEngine.InputSystem.InputControlScheme.MatchResult@{UnityEngine.InputSystem.InputControlScheme.MatchResult}}
+\doxysubsubsection{\texorpdfstring{GetEnumerator()}{GetEnumerator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_abaee73762926e0d6ceb3a208496a8511} 
+IEnumerator$<$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_1_1_match}{Match}} $>$ Unity\+Engine.\+Input\+System.\+Input\+Control\+Scheme.\+Match\+Result.\+Get\+Enumerator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enumerate the match for each individual \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_device_requirement}{Device\+Requirement} in the control scheme. 
+
+\begin{DoxyReturn}{Returns}
+An enumerate going over each individual match.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_a2bfae6a785489494904024036ef07c76}\index{UnityEngine.InputSystem.InputControlScheme.MatchResult@{UnityEngine.InputSystem.InputControlScheme.MatchResult}!GetEnumerator@{GetEnumerator}}
+\index{GetEnumerator@{GetEnumerator}!UnityEngine.InputSystem.InputControlScheme.MatchResult@{UnityEngine.InputSystem.InputControlScheme.MatchResult}}
+\doxysubsubsection{\texorpdfstring{GetEnumerator()}{GetEnumerator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_a2bfae6a785489494904024036ef07c76} 
+IEnumerator IEnumerable. Unity\+Engine.\+Input\+System.\+Input\+Control\+Scheme.\+Match\+Result.\+Get\+Enumerator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enumerate the match for each individual \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_device_requirement}{Device\+Requirement} in the control scheme. 
+
+\begin{DoxyReturn}{Returns}
+An enumerate going over each individual match.
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_a7ceceec5444de82c18df94dbb1523888}\index{UnityEngine.InputSystem.InputControlScheme.MatchResult@{UnityEngine.InputSystem.InputControlScheme.MatchResult}!hasMissingOptionalDevices@{hasMissingOptionalDevices}}
+\index{hasMissingOptionalDevices@{hasMissingOptionalDevices}!UnityEngine.InputSystem.InputControlScheme.MatchResult@{UnityEngine.InputSystem.InputControlScheme.MatchResult}}
+\doxysubsubsection{\texorpdfstring{hasMissingOptionalDevices}{hasMissingOptionalDevices}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_a7ceceec5444de82c18df94dbb1523888} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Control\+Scheme.\+Match\+Result.\+has\+Missing\+Optional\+Devices\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Whether there are missing optional devices. This does not prevent a successful match. 
+
+True if there are missing optional devices.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_device_requirement_a2b1ca7b1009e8f63b7ac2191075e815b}{Device\+Requirement.\+is\+Optional}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_a7824e6f6162d4acb17926b6d6d37f143}\index{UnityEngine.InputSystem.InputControlScheme.MatchResult@{UnityEngine.InputSystem.InputControlScheme.MatchResult}!hasMissingRequiredDevices@{hasMissingRequiredDevices}}
+\index{hasMissingRequiredDevices@{hasMissingRequiredDevices}!UnityEngine.InputSystem.InputControlScheme.MatchResult@{UnityEngine.InputSystem.InputControlScheme.MatchResult}}
+\doxysubsubsection{\texorpdfstring{hasMissingRequiredDevices}{hasMissingRequiredDevices}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_a7824e6f6162d4acb17926b6d6d37f143} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Control\+Scheme.\+Match\+Result.\+has\+Missing\+Required\+Devices\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Whether there are missing required devices. 
+
+True if there are missing, non-\/optional devices.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_device_requirement_a2b1ca7b1009e8f63b7ac2191075e815b}{Device\+Requirement.\+is\+Optional}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_aad767c41d0350dc0297124bcf1dfd2ef}\index{UnityEngine.InputSystem.InputControlScheme.MatchResult@{UnityEngine.InputSystem.InputControlScheme.MatchResult}!isSuccessfulMatch@{isSuccessfulMatch}}
+\index{isSuccessfulMatch@{isSuccessfulMatch}!UnityEngine.InputSystem.InputControlScheme.MatchResult@{UnityEngine.InputSystem.InputControlScheme.MatchResult}}
+\doxysubsubsection{\texorpdfstring{isSuccessfulMatch}{isSuccessfulMatch}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_aad767c41d0350dc0297124bcf1dfd2ef} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Control\+Scheme.\+Match\+Result.\+is\+Successful\+Match\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Whether the device requirements got successfully matched. 
+
+True if the scheme\textquotesingle{}s device requirements were satisfied.\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_aecad52d31c74d019afccf8136a61dfdd}\index{UnityEngine.InputSystem.InputControlScheme.MatchResult@{UnityEngine.InputSystem.InputControlScheme.MatchResult}!score@{score}}
+\index{score@{score}!UnityEngine.InputSystem.InputControlScheme.MatchResult@{UnityEngine.InputSystem.InputControlScheme.MatchResult}}
+\doxysubsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_aecad52d31c74d019afccf8136a61dfdd} 
+float Unity\+Engine.\+Input\+System.\+Input\+Control\+Scheme.\+Match\+Result.\+score\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Overall, relative measure for how well the control scheme matches. 
+
+Scoring value for the control scheme match.
+
+Two control schemes may, for example, both support gamepads but one may be tailored to a specific gamepad whereas the other one is a generic gamepad control scheme. To differentiate the two, we need to know not only that a control schemes but how well it matches relative to other schemes. This is what the score value is used for.
+
+Scores are computed primarily based on layouts referenced from device requirements. To start with, each matching device requirement (whether optional or mandatory) will add 1 to the score. This the base score of a match. Then, for each requirement a delta is computed from the device layout referenced by the requirement to the device layout used by the matching control. For example, if the requirement is {\ttfamily "{}<\+Gamepad>$<$/c$>$ and the matching control uses the $<$see cref="{}Dual\+Shock.\+Dual\+Shock4\+Gamepad\+HID"{}/$>$ layout, the delta is 2 as the latter layout is derived from $<$see cref="{}\doxylink{class_unity_engine_1_1_input_system_1_1_gamepad}{Gamepad}"{}/$>$ via the intermediate $<$see cref="{}\doxylink{class_unity_engine_1_1_input_system_1_1_dual_shock_1_1_dual_shock_gamepad}{Dual\+Shock.\+Dual\+Shock\+Gamepad}"{}/$>$ layout, i.\+e. two steps in the inheritance hierarchy. The $<$em$>$inverse$<$/em$>$ of the delta plus one, i.\+e. $<$c$>$1/(delta+1)$<$/c$>$ is then added to the score. This means that an exact match will add an additional 1 to the score and less exact matches will add progressively smaller values to the score (proportional to the distance of the actual layout to the one used in the requirement).  \+What this leads to is that, for example, a control scheme with a $<$c$>$"{}\texorpdfstring{$<$}{<}\doxylink{class_unity_engine_1_1_input_system_1_1_gamepad}{Gamepad}\texorpdfstring{$>$}{>}"{}$<$/c$>$ requirement will match a $<$see cref="{}Dual\+Shock.\+Dual\+Shock4\+Gamepad\+HID"{}/$>$ with a $<$em$>$lower$<$/em$>$ score than a control scheme with a $<$c$>$"{}\texorpdfstring{$<$}{<}Dual\+Shock\+Gamepad\texorpdfstring{$>$}{>}"{}$<$/c$>$ requirement as the $<$see cref="{}\doxylink{class_unity_engine_1_1_input_system_1_1_gamepad}{Gamepad}"{}/$>$ layout is further removed (i.\+e. smaller inverse delta) from $<$see cref="{}Dual\+Shock.\+Dual\+Shock4\+Gamepad\+HID"{}/$>$ than $<$see cref="{}\doxylink{class_unity_engine_1_1_input_system_1_1_dual_shock_1_1_dual_shock_gamepad}{Dual\+Shock.\+Dual\+Shock\+Gamepad}"{}/\texorpdfstring{$>$}{>}. }
+
+{\ttfamily  }
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Actions/Input\+Control\+Scheme.\+cs\end{DoxyCompactItemize}

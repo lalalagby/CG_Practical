@@ -1,0 +1,284 @@
+\doxysection{Pot\+Object Class Reference}
+\hypertarget{class_pot_object}{}\label{class_pot_object}\index{PotObject@{PotObject}}
+
+
+Adding uncooked ingredients to the Pot.  
+
+
+Inheritance diagram for Pot\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_pot_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_pot_object_a90726fb164e59867a633f05ab90175b4}{Try\+Add\+Ingredient}} (\mbox{\hyperlink{class_hey_tea_object_s_o}{Hey\+Tea\+Object\+SO}} hey\+Tea\+Object\+SO, \mbox{\hyperlink{interface_i_kichenware_obejct_a352bf30a9c1fdfb7f027cf6b23e9ebdf}{Milk\+Tea\+Material\+Type}} milk\+Tea\+Material\+Type)
+\begin{DoxyCompactList}\small\item\em Try to add \doxylink{class_hey_tea_object}{Hey\+Tea\+Object} to the Pot. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pot_object_a84251e9ad722cf285c24d6a96e6416b1}{Check\+Total\+Inpot\+Num}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the total number of ingredients in the Pot. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pot_object_ab8c18c251ecfcfde5f37d5ee35a93953}{Can\+Cook}} ()
+\begin{DoxyCompactList}\small\item\em Check if the Pot can start cooking. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_hey_tea_object}{Hey\+Tea\+Object}} \mbox{\hyperlink{class_pot_object_adb7ad6f35e0996e8bec0a1a9c04c57da}{Spawn\+Hey\+Tea\+Obejct}} (\mbox{\hyperlink{class_hey_tea_object_s_o}{Hey\+Tea\+Object\+SO}} hey\+Tea\+Object\+SO, \mbox{\hyperlink{interface_i_kichenware_obejct_a352bf30a9c1fdfb7f027cf6b23e9ebdf}{Milk\+Tea\+Material\+Type}} milk\+Tea\+Material\+Type)
+\begin{DoxyCompactList}\small\item\em Spawns a \doxylink{class_hey_tea_object}{Hey\+Tea\+Object} based on the provided \doxylink{class_hey_tea_object_s_o}{Hey\+Tea\+Object\+SO} and Milk\+Tea\+Material\+Type. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pot_object_a2c3516a3d94f51cb806b96e86694d53b}{Get\+Output\+Hey\+Tea\+Obejct}} (out \mbox{\hyperlink{class_hey_tea_object_s_o}{Hey\+Tea\+Object\+SO}} hey\+Tea\+Object\+SO)
+\begin{DoxyCompactList}\small\item\em Retrieves a \doxylink{class_hey_tea_object_s_o}{Hey\+Tea\+Object\+SO} from the Pot. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pot_object_a650de76f5feeaf671509b59febaad149}{Add\+Current\+Cooking\+Progress}} (float time)
+\begin{DoxyCompactList}\small\item\em Adds cooking progress time to the Pot. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pot_object_a02063ee4c0de03f82c62cf05776765b1}{Get\+Cooking\+Progress\+Percentage}} ()
+\begin{DoxyCompactList}\small\item\em Gets the cooking progress as a percentage. \end{DoxyCompactList}\item 
+new void \mbox{\hyperlink{class_pot_object_a69643d6ce629f6774a97dc0f5f1de791}{Destroy\+Self}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the Pot and all its contents. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pot_object_a1c3b06f0ecd3bb0087e9e5e1c85313f2}{Destroy\+Child}} (\mbox{\hyperlink{class_hey_tea_object_s_o}{Hey\+Tea\+Object\+SO}} hey\+Tea\+Object\+SO)
+\begin{DoxyCompactList}\small\item\em Destroys a specific child \doxylink{class_hey_tea_object}{Hey\+Tea\+Object} in the Pot. \end{DoxyCompactList}\item 
+\Hypertarget{class_pot_object_a17be4543a2185da58f3faa29b319edac}\label{class_pot_object_a17be4543a2185da58f3faa29b319edac} 
+List$<$ \mbox{\hyperlink{struct_i_kichenware_obejct_1_1_milk_tea_material_quota}{Milk\+Tea\+Material\+Quota}} $>$ {\bfseries Get\+Milk\+Tea\+Material\+Quota} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_hey_tea_object}{Hey\+Tea\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Set\+Hey\+Tea\+Object\+SO} (\mbox{\hyperlink{class_hey_tea_object_s_o}{Hey\+Tea\+Object\+SO}} hey\+Tea\+Object\+SO)
+\item 
+\mbox{\hyperlink{class_hey_tea_object_s_o}{Hey\+Tea\+Object\+SO}} {\bfseries Get\+Hey\+Tea\+Object\+SO} ()
+\item 
+void {\bfseries Set\+Hey\+Tea\+Object\+Parents} (\mbox{\hyperlink{interface_i_hey_tea_object_parents}{IHey\+Tea\+Object\+Parents}} hey\+Tea\+Object\+Parent)
+\item 
+\mbox{\hyperlink{interface_i_hey_tea_object_parents}{IHey\+Tea\+Object\+Parents}} {\bfseries Get\+Hey\+Tea\+Object\+Parents} ()
+\item 
+void {\bfseries Destroy\+Self} ()
+\item 
+bool {\bfseries Try\+Get\+Kichenware} (out \mbox{\hyperlink{interface_i_kichenware_obejct}{IKichenware\+Obejct}} kichenware\+Obejct)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_i_kichenware_obejct}{IKichenware\+Obejct}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries Interact\+With\+Other\+Kichenware} (\mbox{\hyperlink{interface_i_kichenware_obejct}{IKichenware\+Obejct}} kichenware\+Obejct)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{interface_i_kichenware_obejct}{IKichenware\+Obejct}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{interface_i_kichenware_obejct_a352bf30a9c1fdfb7f027cf6b23e9ebdf}\label{interface_i_kichenware_obejct_a352bf30a9c1fdfb7f027cf6b23e9ebdf} 
+enum \mbox{\hyperlink{interface_i_kichenware_obejct_a352bf30a9c1fdfb7f027cf6b23e9ebdf}{Milk\+Tea\+Material\+Type}} \{ \newline
+{\bfseries none}
+, {\bfseries tea\+Base}
+, {\bfseries basic\+Add}
+, {\bfseries fruit}
+, \newline
+{\bfseries ingredients}
+, {\bfseries un\+Treat}
+ \}
+\begin{DoxyCompactList}\small\item\em tea\+Base\+: tea or milk\+Tea fruit\+: fruit add,at most 2 basic\+Add\+: sugar and ice ingredients \+: red bean and pearl \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_hey_tea_object}{Hey\+Tea\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_hey_tea_object}{Hey\+Tea\+Object}} {\bfseries Spawn\+Hey\+Tea\+Obejct} (\mbox{\hyperlink{class_hey_tea_object_s_o}{Hey\+Tea\+Object\+SO}} hey\+Tea\+Object\+SO, \mbox{\hyperlink{interface_i_hey_tea_object_parents}{IHey\+Tea\+Object\+Parents}} hey\+Tea\+Object\+Parents)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Adding uncooked ingredients to the Pot. 
+
+\begin{DoxyAuthor}{Author}
+Yong Wu, Bingyu Guo
+\end{DoxyAuthor}
+
+
+\begin{DoxyNote}{Note}
+milk\+Tea\+Material\+Type contains six types\+: tea\+Base, basic\+Add, ingredients, fruit, none, un treat. \doxylink{class_hey_tea_object}{Hey\+Tea\+Object} includes the objects contained in tea\+Base, basic\+Add, ingredients, fruit, none, un treat.
+\begin{DoxyItemize}
+\item tea\+Base\+: tea, milk, milktea
+\item basic\+Add\+: sugar, ice
+\item ingredients\+: red bean cooked, pearl cooked
+\item fruit\+: orange slice, grape slice, strawberry slice
+\item none\+: pot, cup
+\item un treat\+: bagged pearl, bagged red bean, bagged sugar, grape, orange, strawberry 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_pot_object_a650de76f5feeaf671509b59febaad149}\index{PotObject@{PotObject}!AddCurrentCookingProgress@{AddCurrentCookingProgress}}
+\index{AddCurrentCookingProgress@{AddCurrentCookingProgress}!PotObject@{PotObject}}
+\doxysubsubsection{\texorpdfstring{AddCurrentCookingProgress()}{AddCurrentCookingProgress()}}
+{\footnotesize\ttfamily \label{class_pot_object_a650de76f5feeaf671509b59febaad149} 
+bool Pot\+Object.\+Add\+Current\+Cooking\+Progress (\begin{DoxyParamCaption}\item[{float}]{time}{}\end{DoxyParamCaption})}
+
+
+
+Adds cooking progress time to the Pot. 
+
+This function increments the current cooking progress time by the specified amount. If the cooking process is finished, it clears the Pot and respawns the output \doxylink{class_hey_tea_object}{Hey\+Tea\+Object}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & The amount of time to add to the current cooking progress.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return {\bfseries{true}} if the cooking progress is successfully added and processed, {\bfseries{false}} otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_pot_object_ab8c18c251ecfcfde5f37d5ee35a93953}\index{PotObject@{PotObject}!CanCook@{CanCook}}
+\index{CanCook@{CanCook}!PotObject@{PotObject}}
+\doxysubsubsection{\texorpdfstring{CanCook()}{CanCook()}}
+{\footnotesize\ttfamily \label{class_pot_object_ab8c18c251ecfcfde5f37d5ee35a93953} 
+bool Pot\+Object.\+Can\+Cook (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Check if the Pot can start cooking. 
+
+This function checks if there are any untreated ingredients in the Pot. If there are untreated ingredients, the Pot can start cooking.
+
+\begin{DoxyReturn}{Returns}
+return {\bfseries{true}} if the Pot can start cooking, {\bfseries{false}} otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_pot_object_a84251e9ad722cf285c24d6a96e6416b1}\index{PotObject@{PotObject}!CheckTotalInpotNum@{CheckTotalInpotNum}}
+\index{CheckTotalInpotNum@{CheckTotalInpotNum}!PotObject@{PotObject}}
+\doxysubsubsection{\texorpdfstring{CheckTotalInpotNum()}{CheckTotalInpotNum()}}
+{\footnotesize\ttfamily \label{class_pot_object_a84251e9ad722cf285c24d6a96e6416b1} 
+int Pot\+Object.\+Check\+Total\+Inpot\+Num (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the total number of ingredients in the Pot. 
+
+This function iterates through all the milk tea material quotas and sums up the number of ingredients currently present.
+
+\begin{DoxyReturn}{Returns}
+The total number of ingredients in the Pot. 
+\end{DoxyReturn}
+\Hypertarget{class_pot_object_a1c3b06f0ecd3bb0087e9e5e1c85313f2}\index{PotObject@{PotObject}!DestroyChild@{DestroyChild}}
+\index{DestroyChild@{DestroyChild}!PotObject@{PotObject}}
+\doxysubsubsection{\texorpdfstring{DestroyChild()}{DestroyChild()}}
+{\footnotesize\ttfamily \label{class_pot_object_a1c3b06f0ecd3bb0087e9e5e1c85313f2} 
+void Pot\+Object.\+Destroy\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_hey_tea_object_s_o}{Hey\+Tea\+Object\+SO}}}]{hey\+Tea\+Object\+SO}{}\end{DoxyParamCaption})}
+
+
+
+Destroys a specific child \doxylink{class_hey_tea_object}{Hey\+Tea\+Object} in the Pot. 
+
+This function finds and destroys the \doxylink{class_hey_tea_object}{Hey\+Tea\+Object} corresponding to the given \doxylink{class_hey_tea_object_s_o}{Hey\+Tea\+Object\+SO}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hey\+Tea\+Object\+SO} & The scriptable object representing the \doxylink{class_hey_tea_object}{Hey\+Tea\+Object} to be destroyed. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_i_kichenware_obejct}{IKichenware\+Obejct}}.
+
+\Hypertarget{class_pot_object_a69643d6ce629f6774a97dc0f5f1de791}\index{PotObject@{PotObject}!DestroySelf@{DestroySelf}}
+\index{DestroySelf@{DestroySelf}!PotObject@{PotObject}}
+\doxysubsubsection{\texorpdfstring{DestroySelf()}{DestroySelf()}}
+{\footnotesize\ttfamily \label{class_pot_object_a69643d6ce629f6774a97dc0f5f1de791} 
+new void Pot\+Object.\+Destroy\+Self (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destroys the Pot and all its contents. 
+
+This function iterates through all the milk tea material quotas and destroys all Hey\+Tea\+Objects in each quota. \Hypertarget{class_pot_object_a02063ee4c0de03f82c62cf05776765b1}\index{PotObject@{PotObject}!GetCookingProgressPercentage@{GetCookingProgressPercentage}}
+\index{GetCookingProgressPercentage@{GetCookingProgressPercentage}!PotObject@{PotObject}}
+\doxysubsubsection{\texorpdfstring{GetCookingProgressPercentage()}{GetCookingProgressPercentage()}}
+{\footnotesize\ttfamily \label{class_pot_object_a02063ee4c0de03f82c62cf05776765b1} 
+float Pot\+Object.\+Get\+Cooking\+Progress\+Percentage (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the cooking progress as a percentage. 
+
+This function calculates the current cooking progress as a percentage of the total cooking time.
+
+\begin{DoxyReturn}{Returns}
+The cooking progress percentage. 
+\end{DoxyReturn}
+\Hypertarget{class_pot_object_a2c3516a3d94f51cb806b96e86694d53b}\index{PotObject@{PotObject}!GetOutputHeyTeaObejct@{GetOutputHeyTeaObejct}}
+\index{GetOutputHeyTeaObejct@{GetOutputHeyTeaObejct}!PotObject@{PotObject}}
+\doxysubsubsection{\texorpdfstring{GetOutputHeyTeaObejct()}{GetOutputHeyTeaObejct()}}
+{\footnotesize\ttfamily \label{class_pot_object_a2c3516a3d94f51cb806b96e86694d53b} 
+bool Pot\+Object.\+Get\+Output\+Hey\+Tea\+Obejct (\begin{DoxyParamCaption}\item[{out \mbox{\hyperlink{class_hey_tea_object_s_o}{Hey\+Tea\+Object\+SO}}}]{hey\+Tea\+Object\+SO}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves a \doxylink{class_hey_tea_object_s_o}{Hey\+Tea\+Object\+SO} from the Pot. 
+
+This function iterates through all the milk tea material quotas and retrieves the first \doxylink{class_hey_tea_object_s_o}{Hey\+Tea\+Object\+SO} that has a non-\/zero current number.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hey\+Tea\+Object\+SO} & The output parameter that will hold the retrieved \doxylink{class_hey_tea_object_s_o}{Hey\+Tea\+Object\+SO}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return {\bfseries{true}} if a \doxylink{class_hey_tea_object_s_o}{Hey\+Tea\+Object\+SO} is found, {\bfseries{false}} otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_i_kichenware_obejct}{IKichenware\+Obejct}}.
+
+\Hypertarget{class_pot_object_adb7ad6f35e0996e8bec0a1a9c04c57da}\index{PotObject@{PotObject}!SpawnHeyTeaObejct@{SpawnHeyTeaObejct}}
+\index{SpawnHeyTeaObejct@{SpawnHeyTeaObejct}!PotObject@{PotObject}}
+\doxysubsubsection{\texorpdfstring{SpawnHeyTeaObejct()}{SpawnHeyTeaObejct()}}
+{\footnotesize\ttfamily \label{class_pot_object_adb7ad6f35e0996e8bec0a1a9c04c57da} 
+\mbox{\hyperlink{class_hey_tea_object}{Hey\+Tea\+Object}} Pot\+Object.\+Spawn\+Hey\+Tea\+Obejct (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_hey_tea_object_s_o}{Hey\+Tea\+Object\+SO}}}]{hey\+Tea\+Object\+SO}{, }\item[{\mbox{\hyperlink{interface_i_kichenware_obejct_a352bf30a9c1fdfb7f027cf6b23e9ebdf}{Milk\+Tea\+Material\+Type}}}]{milk\+Tea\+Material\+Type}{}\end{DoxyParamCaption})}
+
+
+
+Spawns a \doxylink{class_hey_tea_object}{Hey\+Tea\+Object} based on the provided \doxylink{class_hey_tea_object_s_o}{Hey\+Tea\+Object\+SO} and Milk\+Tea\+Material\+Type. 
+
+This function instantiates a \doxylink{class_hey_tea_object}{Hey\+Tea\+Object} using the prefab from the \doxylink{class_hey_tea_object_s_o}{Hey\+Tea\+Object\+SO}, and sets its parent based on the milk tea material type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hey\+Tea\+Object\+SO} & The scriptable object representing the \doxylink{class_hey_tea_object}{Hey\+Tea\+Object} to be spawned. \\
+\hline
+{\em milk\+Tea\+Material\+Type} & The type of milk tea material.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The spawned {\bfseries{hey\+Tea\+Object}}, or {\bfseries{null}} if spawning failed. 
+\end{DoxyReturn}
+\Hypertarget{class_pot_object_a90726fb164e59867a633f05ab90175b4}\index{PotObject@{PotObject}!TryAddIngredient@{TryAddIngredient}}
+\index{TryAddIngredient@{TryAddIngredient}!PotObject@{PotObject}}
+\doxysubsubsection{\texorpdfstring{TryAddIngredient()}{TryAddIngredient()}}
+{\footnotesize\ttfamily \label{class_pot_object_a90726fb164e59867a633f05ab90175b4} 
+bool Pot\+Object.\+Try\+Add\+Ingredient (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_hey_tea_object_s_o}{Hey\+Tea\+Object\+SO}}}]{hey\+Tea\+Object\+SO}{, }\item[{\mbox{\hyperlink{interface_i_kichenware_obejct_a352bf30a9c1fdfb7f027cf6b23e9ebdf}{Milk\+Tea\+Material\+Type}}}]{milk\+Tea\+Material\+Type}{}\end{DoxyParamCaption})}
+
+
+
+Try to add \doxylink{class_hey_tea_object}{Hey\+Tea\+Object} to the Pot. 
+
+This method checks if the ingredient can be added to the Pot based on the current number of ingredients, the type of the ingredient, and if a recipe exists for the given ingredient.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hey\+Tea\+Object\+SO} & The scriptable object representing the ingredient to be added. \\
+\hline
+{\em milk\+Tea\+Material\+Type} & The Type of this \doxylink{class_hey_tea_object}{Hey\+Tea\+Object}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns {\bfseries{true}} if the ingredient is successfully added; otherwise, returns {\bfseries{false}}.
+\end{DoxyReturn}
+The function performs the following steps\+:
+\begin{DoxyItemize}
+\item Checks if the total number of ingredients in the Pot has reached the maximum allowed ({\ttfamily total\+Inpot\+Num}).
+\item Iterates through the list of milk tea material quotas to find a matching material type.
+\item Validates if a recipe exists for the given ingredient.
+\item Attempts to instantiate an intermediate state object for the ingredient.
+\item Adds the instantiated object to the appropriate quota.
+\item Resets the layers of all transform objects in {\ttfamily hey\+Tea\+Object\+Transform\+List}.
+\item Logs the success or failure of the operation.
+\item Resets the current progress time to 0 on successful addition. 
+\end{DoxyItemize}
+
+Implements \mbox{\hyperlink{interface_i_kichenware_obejct}{IKichenware\+Obejct}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/Pot\+Object.\+cs\end{DoxyCompactItemize}

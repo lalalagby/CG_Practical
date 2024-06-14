@@ -1,0 +1,34 @@
+\chapter{Evaluate Tip Thickness}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_25719fc0e21845f02be23d332df417950}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_25719fc0e21845f02be23d332df417950}\index{Evaluate Tip Thickness@{Evaluate Tip Thickness}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_25719fc0e21845f02be23d332df417950_autotoc_md3212}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_25719fc0e21845f02be23d332df417950_autotoc_md3212}%
+ This node calculates the thickness of the water at the tips of waves.
+
+The High Definition Render Pipeline (HDRP) uses this node in the default water shader graph. See the HDRP documentation for more information about \href{https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@14.0/manual/WaterSystem.html}{\texttt{ the Water System}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_25719fc0e21845f02be23d332df417950_autotoc_md3213}{}\doxysection{\texorpdfstring{Render pipeline compatibility}{Render pipeline compatibility}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_25719fc0e21845f02be23d332df417950_autotoc_md3213}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Node}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Universal Render Pipeline (URP)}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{High Definition Render Pipeline (HDRP)}}    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Node}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Universal Render Pipeline (URP)}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{High Definition Render Pipeline (HDRP)}}    }\\\cline{1-3}
+\endhead
+{\bfseries{Evaluate Tip Thickness}}   &No   &Yes   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_25719fc0e21845f02be23d332df417950_autotoc_md3214}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_25719fc0e21845f02be23d332df417950_autotoc_md3214}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Direction}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Direction}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-4}
+\endhead
+{\bfseries{Low\+Frequency\+Normal}}   &Input   &Vector3   &The low frequency normal of the water surface in world space. This is the normal of the water surface without high frequency details such as ripples.    \\\cline{1-4}
+{\bfseries{Low\+Frequency\+Height}}   &Input   &Float   &The vertical displacement of the water surface. This doesn\textquotesingle{}t include ripples.    \\\cline{1-4}
+{\bfseries{Tip\+Thickness}}   &Output   &Float   &The thickness of the water in a wave tip.   \\\cline{1-4}
+\end{longtabu}

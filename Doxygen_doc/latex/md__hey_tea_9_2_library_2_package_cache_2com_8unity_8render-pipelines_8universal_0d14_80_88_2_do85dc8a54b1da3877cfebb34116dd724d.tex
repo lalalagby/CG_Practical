@@ -1,0 +1,41 @@
+\chapter{HDR emulation scale}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do85dc8a54b1da3877cfebb34116dd724d}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do85dc8a54b1da3877cfebb34116dd724d}\index{HDR emulation scale@{HDR emulation scale}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do85dc8a54b1da3877cfebb34116dd724d_autotoc_md2161}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do85dc8a54b1da3877cfebb34116dd724d_autotoc_md2161}%
+ All Lights in the 2D lighting system support HDR. While a typical RGBA32 color channel has the range of zero to one, a HDR channel can go beyond one.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{    }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{     }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{    }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{     }\\\cline{1-2}
+\endhead
+Light RGB(1,1,1)   &HDR Light RGB(1,1,1) + Light RGB(2,2,2)   \\\cline{1-2}
+\end{longtabu}
+
+
+However, not all platforms natively support HDR textures. HDR Emulation Scale allows those platforms to use HDR lighting by compressing the number of expressible colors in exchange for extra intensity range. Scale describes this extra intensity range. Increasing this value too high may cause undesirable banding to occur.
+
+Light Intensity scale examples\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{    }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{     }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{    }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{     }\\\cline{1-2}
+\endhead
+HDR Reference   &Light Intensity Scale 1 (No HDR)    \\\cline{1-2}
+   &    \\\cline{1-2}
+Light Intensity Scale 4   &Light Intensity Scale 12   \\\cline{1-2}
+\end{longtabu}
+
+
+ \+When choosing a value for HDR Emulation Scale, the developer should choose the combined maximum brightness for the lights in the scene as the value. 

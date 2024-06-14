@@ -1,0 +1,24 @@
+\chapter{Instance ID Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_instance-_i_d-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_instance-_i_d-_node}\index{Instance ID Node@{Instance ID Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_instance-_i_d-_node_autotoc_md3359}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_instance-_i_d-_node_autotoc_md3359}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_instance-_i_d-_node_autotoc_md3360}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_instance-_i_d-_node_autotoc_md3360}
+When \doxylink{namespace_unity}{Unity} renders with GPU instancing, it assigns an {\bfseries{Instance ID}} to each geometry.
+
+Use this node to capture {\bfseries{Instance ID}} values in \href{https://docs.unity3d.com/ScriptReference/Graphics.DrawMeshInstanced.html}{\texttt{ {\ttfamily Graphics.\+Draw\+Mesh\+Instanced}}} API calls.
+
+When \doxylink{namespace_unity}{Unity} does not render with GPU instancing, this ID is 0.
+
+When \doxylink{namespace_unity}{Unity} uses dynamic instancing, instance IDs might not be consistent across multiple frames.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_instance-_i_d-_node_autotoc_md3361}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_instance-_i_d-_node_autotoc_md3361}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+Out   &Output   &Float   &None   &{\bfseries{Instance ID}} for mesh of a given instanced draw call.   \\\cline{1-5}
+\end{longtabu}

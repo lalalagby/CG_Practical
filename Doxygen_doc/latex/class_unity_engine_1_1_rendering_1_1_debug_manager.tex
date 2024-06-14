@@ -1,0 +1,328 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Debug\+Manager Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager}{}\label{class_unity_engine_1_1_rendering_1_1_debug_manager}\index{UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}}
+
+
+Manager class for the Debug Window.  
+
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_manager_a37a515918e348f45fea34f7e05494803}{UIMode}} \+: int \{ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_manager_a37a515918e348f45fea34f7e05494803a2e034a6131ff17207c8e6857b2c0c76a}{Editor\+Mode}}
+, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_manager_a37a515918e348f45fea34f7e05494803a3067c2ffc889a950a847f5fbd41dea5b}{Runtime\+Mode}}
+ \}
+\begin{DoxyCompactList}\small\item\em The modes of the \doxylink{namespace_unity_engine_1_1_rendering_1_1_u_i}{UI} of the \doxylink{namespace_unity_engine_1_1_rendering}{Rendering} Debugger. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_ad0981e101b8d3a8ff0f8fb0e52c6f37b}\label{class_unity_engine_1_1_rendering_1_1_debug_manager_ad0981e101b8d3a8ff0f8fb0e52c6f37b} 
+void {\bfseries Refresh\+Editor} ()
+\begin{DoxyCompactList}\small\item\em Refresh the debug window. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_a2f404c995ed72e68882f5bfb03fb5dd9}\label{class_unity_engine_1_1_rendering_1_1_debug_manager_a2f404c995ed72e68882f5bfb03fb5dd9} 
+void {\bfseries Reset} ()
+\begin{DoxyCompactList}\small\item\em Reset the debug window. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_a990fcd22f38cc2ebbf87be94047ab891}\label{class_unity_engine_1_1_rendering_1_1_debug_manager_a990fcd22f38cc2ebbf87be94047ab891} 
+void {\bfseries Re\+Draw\+On\+Screen\+Debug} ()
+\begin{DoxyCompactList}\small\item\em Request the runtime debug \doxylink{namespace_unity_engine_1_1_rendering_1_1_u_i}{UI} be redrawn on the next update. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_manager_a35ffeb122f35d315f21688731e8af65a}{Register\+Data}} (\mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_debug_data}{IDebug\+Data}} data)
+\begin{DoxyCompactList}\small\item\em Register debug data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_manager_a236edc96172b3edb781d4397d6bca5a1}{Unregister\+Data}} (\mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_debug_data}{IDebug\+Data}} data)
+\begin{DoxyCompactList}\small\item\em Register debug data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_manager_ab65bc45a56ee3f3c43fc710a07442535}{Get\+State}} ()
+\begin{DoxyCompactList}\small\item\em Get hashcode state of the Debug Window. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_manager_a713142d8b441784e7fe293c1d441ea58}{Panel\+Index}} (\mbox{[}Disallow\+Null\mbox{]} string display\+Name)
+\begin{DoxyCompactList}\small\item\em Returns the panel index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_manager_add55fefbd59b09bee00c2f30108457eb}{Request\+Editor\+Window\+Panel\+Index}} (int index)
+\begin{DoxyCompactList}\small\item\em Request Debug\+Window to open the specified panel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_panel}{Debug\+UI.\+Panel}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_manager_a51f2f41fcf35725dab43c1ba170402b2}{Get\+Panel}} (string display\+Name, bool create\+If\+Null=false, int group\+Index=0, bool override\+If\+Exist=false)
+\begin{DoxyCompactList}\small\item\em Returns a debug panel. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_manager_a5cab57281b70bbabf6e1625766e9d540}{Find\+Panel\+Index}} (string display\+Name)
+\begin{DoxyCompactList}\small\item\em Find the index of the panel from it\textquotesingle{}s display name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_manager_ac85e658716b8452d9eeea8f96b622b93}{Remove\+Panel}} (string display\+Name)
+\begin{DoxyCompactList}\small\item\em Remove a debug panel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_manager_af554c4d53c984c6dccc4eb740a2d087d}{Remove\+Panel}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_panel}{Debug\+UI.\+Panel}} panel)
+\begin{DoxyCompactList}\small\item\em Remove a debug panel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Debug\+UI.\+Widget}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_manager_a1a962045efb6720494702546814ee0bf}{Get\+Items}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_a53965df570fd5fa92e5ac8820bd20063}{Debug\+UI.\+Flags}} flags)
+\begin{DoxyCompactList}\small\item\em Gets an Debug\+UI.\+Widget\mbox{[}$\,$\mbox{]} matching the given \doxylink{class_unity_engine_1_1_rendering_1_1_debug_u_i_a53965df570fd5fa92e5ac8820bd20063}{Debug\+UI.\+Flags} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Debug\+UI.\+Widget}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_manager_ac12d833d0e7b8c539af4d62d63d04df8}{Get\+Item}} (string query\+Path)
+\begin{DoxyCompactList}\small\item\em Get a Debug Item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_manager_a3eca66e4020d3696aac6feb21bf32028}{Toggle\+Editor\+UI}} (bool open)
+\begin{DoxyCompactList}\small\item\em Toggle the debug window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_a6e46fcd15224342ab61ef0a7cc8fd575}\label{class_unity_engine_1_1_rendering_1_1_debug_manager_a6e46fcd15224342ab61ef0a7cc8fd575} 
+bool {\bfseries refresh\+Editor\+Requested}
+\begin{DoxyCompactList}\small\item\em Force an editor request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_a63cfac3ca0867991b0e6e62c9f12ce80}\label{class_unity_engine_1_1_rendering_1_1_debug_manager_a63cfac3ca0867991b0e6e62c9f12ce80} 
+static \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_manager}{Debug\+Manager}} {\bfseries instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Global instance of the \doxylink{class_unity_engine_1_1_rendering_1_1_debug_manager}{Debug\+Manager}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_ab6fd7b20078925e11ef01592def16400}\label{class_unity_engine_1_1_rendering_1_1_debug_manager_ab6fd7b20078925e11ef01592def16400} 
+Read\+Only\+Collection$<$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_panel}{Debug\+UI.\+Panel}} $>$ {\bfseries panels}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of currently registered debug panels. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_af3bd5fac5d4095df3bb6827c9f827844}\label{class_unity_engine_1_1_rendering_1_1_debug_manager_af3bd5fac5d4095df3bb6827c9f827844} 
+bool {\bfseries is\+Any\+Debug\+UIActive}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Is any debug window or \doxylink{namespace_unity_engine_1_1_rendering_1_1_u_i}{UI} currently active. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_ad1b97e81bcb09bf91f9bf53a59130cb5}\label{class_unity_engine_1_1_rendering_1_1_debug_manager_ad1b97e81bcb09bf91f9bf53a59130cb5} 
+bool {\bfseries display\+Editor\+UI}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Is the debug editor window open. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_a2f3de3aee5fee9ec7ce3eaa56427272c}\label{class_unity_engine_1_1_rendering_1_1_debug_manager_a2f3de3aee5fee9ec7ce3eaa56427272c} 
+bool {\bfseries enable\+Runtime\+UI}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Controls whether runtime \doxylink{namespace_unity_engine_1_1_rendering_1_1_u_i}{UI} can be enabled. When this is set to false, there will be no overhead from debug Game\+Objects or runtime initialization. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_ab7156857262de88f5e72d5384681034c}\label{class_unity_engine_1_1_rendering_1_1_debug_manager_ab7156857262de88f5e72d5384681034c} 
+bool {\bfseries display\+Runtime\+UI}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Displays the runtime version of the debug window. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_a716f60c6011d7d68a512daf00c4d3d78}\label{class_unity_engine_1_1_rendering_1_1_debug_manager_a716f60c6011d7d68a512daf00c4d3d78} 
+bool {\bfseries display\+Persistent\+Runtime\+UI}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Displays the persistent runtime debug window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_abd0f99289193b95c5dfe353cceada819}\label{class_unity_engine_1_1_rendering_1_1_debug_manager_abd0f99289193b95c5dfe353cceada819} 
+Action$<$ bool $>$ {\bfseries on\+Display\+Runtime\+UIChanged} = delegate \{ \}
+\begin{DoxyCompactList}\small\item\em Callback called when the runtime \doxylink{namespace_unity_engine_1_1_rendering_1_1_u_i}{UI} changed. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_a6e10efc812d5788df12489d18919ce11}\label{class_unity_engine_1_1_rendering_1_1_debug_manager_a6e10efc812d5788df12489d18919ce11} 
+Action {\bfseries on\+Set\+Dirty} = delegate \{ \}
+\begin{DoxyCompactList}\small\item\em Callback called when the debug window is dirty. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_a526b377524b15454dfef90f6c572bb1f}\label{class_unity_engine_1_1_rendering_1_1_debug_manager_a526b377524b15454dfef90f6c572bb1f} 
+static Action$<$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_manager_a37a515918e348f45fea34f7e05494803}{UIMode}}, bool $>$ {\bfseries window\+State\+Changed}
+\begin{DoxyCompactList}\small\item\em Event that is raised when a window state is changed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manager class for the Debug Window. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_a37a515918e348f45fea34f7e05494803}\index{UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}!UIMode@{UIMode}}
+\index{UIMode@{UIMode}!UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}}
+\doxysubsubsection{\texorpdfstring{UIMode}{UIMode}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_manager_a37a515918e348f45fea34f7e05494803} 
+enum \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_manager_a37a515918e348f45fea34f7e05494803}{Unity\+Engine.\+Rendering.\+Debug\+Manager.\+UIMode}} \+: int}
+
+
+
+The modes of the \doxylink{namespace_unity_engine_1_1_rendering_1_1_u_i}{UI} of the \doxylink{namespace_unity_engine_1_1_rendering}{Rendering} Debugger. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EditorMode@{EditorMode}!UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}}\index{UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}!EditorMode@{EditorMode}}}\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_a37a515918e348f45fea34f7e05494803a2e034a6131ff17207c8e6857b2c0c76a}\label{class_unity_engine_1_1_rendering_1_1_debug_manager_a37a515918e348f45fea34f7e05494803} 
+Editor\+Mode&Editor Window. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RuntimeMode@{RuntimeMode}!UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}}\index{UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}!RuntimeMode@{RuntimeMode}}}\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_a37a515918e348f45fea34f7e05494803a3067c2ffc889a950a847f5fbd41dea5b}\label{class_unity_engine_1_1_rendering_1_1_debug_manager_a37a515918e348f45fea34f7e05494803} 
+Runtime\+Mode&In Game view. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_a5cab57281b70bbabf6e1625766e9d540}\index{UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}!FindPanelIndex@{FindPanelIndex}}
+\index{FindPanelIndex@{FindPanelIndex}!UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}}
+\doxysubsubsection{\texorpdfstring{FindPanelIndex()}{FindPanelIndex()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_manager_a5cab57281b70bbabf6e1625766e9d540} 
+int Unity\+Engine.\+Rendering.\+Debug\+Manager.\+Find\+Panel\+Index (\begin{DoxyParamCaption}\item[{string}]{display\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Find the index of the panel from it\textquotesingle{}s display name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Name} & The display name of the panel to find.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the panel in the list. -\/1 if not found.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_ac12d833d0e7b8c539af4d62d63d04df8}\index{UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}!GetItem@{GetItem}}
+\index{GetItem@{GetItem}!UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}}
+\doxysubsubsection{\texorpdfstring{GetItem()}{GetItem()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_manager_ac12d833d0e7b8c539af4d62d63d04df8} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Debug\+UI.\+Widget}} Unity\+Engine.\+Rendering.\+Debug\+Manager.\+Get\+Item (\begin{DoxyParamCaption}\item[{string}]{query\+Path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a Debug Item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query\+Path} & Path of the debug item.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the requested debug item.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_a1a962045efb6720494702546814ee0bf}\index{UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}!GetItems@{GetItems}}
+\index{GetItems@{GetItems}!UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}}
+\doxysubsubsection{\texorpdfstring{GetItems()}{GetItems()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_manager_a1a962045efb6720494702546814ee0bf} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Debug\+UI.\+Widget}}\mbox{[}$\,$\mbox{]} Unity\+Engine.\+Rendering.\+Debug\+Manager.\+Get\+Items (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_a53965df570fd5fa92e5ac8820bd20063}{Debug\+UI.\+Flags}}}]{flags}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets an Debug\+UI.\+Widget\mbox{[}$\,$\mbox{]} matching the given \doxylink{class_unity_engine_1_1_rendering_1_1_debug_u_i_a53965df570fd5fa92e5ac8820bd20063}{Debug\+UI.\+Flags} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flags} & The flags of the widget\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the requested debug item.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_a51f2f41fcf35725dab43c1ba170402b2}\index{UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}!GetPanel@{GetPanel}}
+\index{GetPanel@{GetPanel}!UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}}
+\doxysubsubsection{\texorpdfstring{GetPanel()}{GetPanel()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_manager_a51f2f41fcf35725dab43c1ba170402b2} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_panel}{Debug\+UI.\+Panel}} Unity\+Engine.\+Rendering.\+Debug\+Manager.\+Get\+Panel (\begin{DoxyParamCaption}\item[{string}]{display\+Name}{, }\item[{bool}]{create\+If\+Null}{ = {\ttfamily false}, }\item[{int}]{group\+Index}{ = {\ttfamily 0}, }\item[{bool}]{override\+If\+Exist}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a debug panel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Name} & Name of the debug panel.\\
+\hline
+{\em create\+If\+Null} & Create the panel if it does not exists.\\
+\hline
+{\em group\+Index} & Group index.\\
+\hline
+{\em override\+If\+Exist} & Replace an existing panel.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_ab65bc45a56ee3f3c43fc710a07442535}\index{UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}!GetState@{GetState}}
+\index{GetState@{GetState}!UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}}
+\doxysubsubsection{\texorpdfstring{GetState()}{GetState()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_manager_ab65bc45a56ee3f3c43fc710a07442535} 
+int Unity\+Engine.\+Rendering.\+Debug\+Manager.\+Get\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get hashcode state of the Debug Window. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_a713142d8b441784e7fe293c1d441ea58}\index{UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}!PanelIndex@{PanelIndex}}
+\index{PanelIndex@{PanelIndex}!UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}}
+\doxysubsubsection{\texorpdfstring{PanelIndex()}{PanelIndex()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_manager_a713142d8b441784e7fe293c1d441ea58} 
+int Unity\+Engine.\+Rendering.\+Debug\+Manager.\+Panel\+Index (\begin{DoxyParamCaption}\item[{\mbox{[}\+Disallow\+Null\mbox{]} string}]{display\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the panel index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Name} & The displayname for the panel\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index for the panel or -\/1 if not found.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_a35ffeb122f35d315f21688731e8af65a}\index{UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}!RegisterData@{RegisterData}}
+\index{RegisterData@{RegisterData}!UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}}
+\doxysubsubsection{\texorpdfstring{RegisterData()}{RegisterData()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_manager_a35ffeb122f35d315f21688731e8af65a} 
+void Unity\+Engine.\+Rendering.\+Debug\+Manager.\+Register\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_debug_data}{IDebug\+Data}}}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Register debug data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data to be registered.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_af554c4d53c984c6dccc4eb740a2d087d}\index{UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}!RemovePanel@{RemovePanel}}
+\index{RemovePanel@{RemovePanel}!UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}}
+\doxysubsubsection{\texorpdfstring{RemovePanel()}{RemovePanel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_manager_af554c4d53c984c6dccc4eb740a2d087d} 
+void Unity\+Engine.\+Rendering.\+Debug\+Manager.\+Remove\+Panel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_panel}{Debug\+UI.\+Panel}}}]{panel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove a debug panel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em panel} & Reference to the debug panel to remove.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_ac85e658716b8452d9eeea8f96b622b93}\index{UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}!RemovePanel@{RemovePanel}}
+\index{RemovePanel@{RemovePanel}!UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}}
+\doxysubsubsection{\texorpdfstring{RemovePanel()}{RemovePanel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_manager_ac85e658716b8452d9eeea8f96b622b93} 
+void Unity\+Engine.\+Rendering.\+Debug\+Manager.\+Remove\+Panel (\begin{DoxyParamCaption}\item[{string}]{display\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove a debug panel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Name} & Name of the debug panel to remove.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_add55fefbd59b09bee00c2f30108457eb}\index{UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}!RequestEditorWindowPanelIndex@{RequestEditorWindowPanelIndex}}
+\index{RequestEditorWindowPanelIndex@{RequestEditorWindowPanelIndex}!UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}}
+\doxysubsubsection{\texorpdfstring{RequestEditorWindowPanelIndex()}{RequestEditorWindowPanelIndex()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_manager_add55fefbd59b09bee00c2f30108457eb} 
+void Unity\+Engine.\+Rendering.\+Debug\+Manager.\+Request\+Editor\+Window\+Panel\+Index (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Request Debug\+Window to open the specified panel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the debug window panel to activate.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_a3eca66e4020d3696aac6feb21bf32028}\index{UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}!ToggleEditorUI@{ToggleEditorUI}}
+\index{ToggleEditorUI@{ToggleEditorUI}!UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}}
+\doxysubsubsection{\texorpdfstring{ToggleEditorUI()}{ToggleEditorUI()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_manager_a3eca66e4020d3696aac6feb21bf32028} 
+void Unity\+Engine.\+Rendering.\+Debug\+Manager.\+Toggle\+Editor\+UI (\begin{DoxyParamCaption}\item[{bool}]{open}{}\end{DoxyParamCaption})}
+
+
+
+Toggle the debug window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em open} & State of the debug window.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_manager_a236edc96172b3edb781d4397d6bca5a1}\index{UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}!UnregisterData@{UnregisterData}}
+\index{UnregisterData@{UnregisterData}!UnityEngine.Rendering.DebugManager@{UnityEngine.Rendering.DebugManager}}
+\doxysubsubsection{\texorpdfstring{UnregisterData()}{UnregisterData()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_manager_a236edc96172b3edb781d4397d6bca5a1} 
+void Unity\+Engine.\+Rendering.\+Debug\+Manager.\+Unregister\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_debug_data}{IDebug\+Data}}}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Register debug data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data to be registered.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Debugging/Debug\+Manager.\+Actions.\+cs\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Debugging/Debug\+Manager.\+cs\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Debugging/Debug\+Manager.\+UIState.\+cs\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/Deprecated.\+cs\end{DoxyCompactItemize}

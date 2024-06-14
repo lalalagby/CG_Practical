@@ -1,0 +1,216 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Universal.\+Debug\+Display\+Settings\+Rendering Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering}{}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering}\index{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering@{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering}}
+
+
+Rendering-\/related \doxylink{namespace_unity_engine_1_1_rendering}{Rendering} Debugger settings.  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Universal.\+Debug\+Display\+Settings\+Rendering\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Settings\+Panel}
+\item 
+class {\bfseries Widget\+Factory}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ac9451a7dae30269ffbf202d387f66126}{Taa\+Debug\+Mode}} \{ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ac9451a7dae30269ffbf202d387f66126a6adf97f83acf6453d4a6a4b1070f3754}{None}} = 0
+, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ac9451a7dae30269ffbf202d387f66126a44cd9e37b7a8271a91db4389bdfb24cb}{Show\+Raw\+Frame}}
+, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ac9451a7dae30269ffbf202d387f66126ab16e6450c935aea625bed0c14eecc412}{Show\+Raw\+Frame\+No\+Jitter}}
+, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ac9451a7dae30269ffbf202d387f66126a41946374c3065a35de3594dfb68c27ff}{Show\+Clamped\+History}}
+ \}
+\begin{DoxyCompactList}\small\item\em Current Temporal Anti-\/aliasing debug mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_aaaab3435a61eef27ed6b90431008dad7}{Try\+Get\+Screen\+Clear\+Color}} (ref \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a37daf716e998b874ec0272773287835bacb5feb1b7314637725a2e73bdc9f7295}{Color}} color)
+\begin{DoxyCompactList}\small\item\em Attempts to get the color used to clear the screen for this debug setting.
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & A reference to the screen clear color to use.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+"{}true"{} if we updated the color, "{}false"{} if we didn\textquotesingle{}t change anything.
+\end{DoxyReturn}
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_a7b08c9737b6e11d2745b15a26f0f3cbc}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_a7b08c9737b6e11d2745b15a26f0f3cbc} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a39173ad496fc40854bca23cd2a4a9ac6}{Debug\+Wireframe\+Mode}} {\bfseries wireframe\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current debug wireframe mode. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_a58251aa9ddea48b7c11784dcacb14bb6}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_a58251aa9ddea48b7c11784dcacb14bb6} 
+bool {\bfseries overdraw}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether debug overdraw mode is active. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ae6689a6452c865df4bbd8ed913b01dc6}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ae6689a6452c865df4bbd8ed913b01dc6} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_acec46ddbc90bceb12814e32945da28b5}{Debug\+Overdraw\+Mode}} {\bfseries overdraw\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Which overdraw debug mode is active. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_a4448f5a2f56658a1360dd91d666bf6d6}{max\+Overdraw\+Count}} = 10\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Maximum overdraw count for a single pixel. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_a932eb2c3ae5fa291f652229b39afc6b6}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_a932eb2c3ae5fa291f652229b39afc6b6} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_ade274f30a047498b7a97add0924f2d11}{Debug\+Full\+Screen\+Mode}} {\bfseries full\+Screen\+Debug\+Mode} = \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_ade274f30a047498b7a97add0924f2d11a6adf97f83acf6453d4a6a4b1070f3754}{Debug\+Full\+Screen\+Mode.\+None}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current debug fullscreen overlay mode. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_a74236de55aaf6017180de0c7ddbf745e}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_a74236de55aaf6017180de0c7ddbf745e} 
+int {\bfseries full\+Screen\+Debug\+Mode\+Output\+Size\+Screen\+Percent} = 50\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Size of the debug fullscreen overlay, as percentage of the screen size. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_a9d0f3c6b2dbcf771a9913c641480b6a7}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_a9d0f3c6b2dbcf771a9913c641480b6a7} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_af78b2e64b19e1d41e2d48893386030a7}{Debug\+Post\+Processing\+Mode}} {\bfseries post\+Processing\+Debug\+Mode} = \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_af78b2e64b19e1d41e2d48893386030a7a06b9281e396db002010bde1de57262eb}{Debug\+Post\+Processing\+Mode.\+Auto}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current debug post processing mode. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_a91726c19a5c95ea268ed19541b69ac2a}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_a91726c19a5c95ea268ed19541b69ac2a} 
+bool {\bfseries enable\+Msaa} = true\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether MSAA is enabled. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_abd6b662ee4512fcf1a4aabd2ae0133d9}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_abd6b662ee4512fcf1a4aabd2ae0133d9} 
+bool {\bfseries enable\+HDR} = true\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether HDR is enabled. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ae01da84baeca2695316957122e9a875e}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ae01da84baeca2695316957122e9a875e} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ac9451a7dae30269ffbf202d387f66126}{Taa\+Debug\+Mode}} {\bfseries taa\+Debug\+Mode} = \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ac9451a7dae30269ffbf202d387f66126a6adf97f83acf6453d4a6a4b1070f3754}{Taa\+Debug\+Mode.\+None}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current TAA debug mode. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_a1225fd623b18e4e388cc6f39f996a3c7}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_a1225fd623b18e4e388cc6f39f996a3c7} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_abd5286272cc05be9cbdef81f30896399}{Debug\+Validation\+Mode}} {\bfseries validation\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current debug pixel validation mode. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_a1431211b339bd5ded4a168d309ac8558}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_a1431211b339bd5ded4a168d309ac8558} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a14bf4179b49837cc6ced1b89a8f220e0}{Pixel\+Validation\+Channels}} {\bfseries validation\+Channels} = \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a14bf4179b49837cc6ced1b89a8f220e0a889574aebacda6bfd3e534e2b49b8028}{Pixel\+Validation\+Channels.\+RGB}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current validation channels for \doxylink{namespace_unity_engine_1_1_rendering_1_1_universal_abd5286272cc05be9cbdef81f30896399a1b42f9767248c281b892295bbabc6fbf}{Debug\+Validation\+Mode.\+Highlight\+Outside\+Of\+Range}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_aa0e8ebb509e4be3388805261c2cbf7cb}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_aa0e8ebb509e4be3388805261c2cbf7cb} 
+float {\bfseries validation\+Range\+Min} = 0.\+0f\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current minimum threshold value for pixel validation. Any values below this value will be considered invalid and will appear red on screen. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_a8f64384a8ea815b23383dc7324060625}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_a8f64384a8ea815b23383dc7324060625} 
+float {\bfseries validation\+Range\+Max} = 1.\+0f\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current maximum threshold value for pixel validation. Any values above this value will be considered invalid and will appear blue on screen. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ad0255205564e4c47e8343267c60cdc12}{Are\+Any\+Settings\+Active}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Checks whether ANY of the debug settings are currently active. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ad01a36951f5eaf202fd36720979ce986}{Is\+Post\+Processing\+Allowed}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Checks whether the current state of these settings allows post-\/processing. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_a6ca8d18e0ff9bc54a386c899add71d27}{Is\+Lighting\+Active}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Checks whether lighting is active for these settings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_debug_display_settings_query}{Unity\+Engine.\+Rendering.\+IDebug\+Display\+Settings\+Query}}}
+
+
+\doxysubsection{Detailed Description}
+Rendering-\/related \doxylink{namespace_unity_engine_1_1_rendering}{Rendering} Debugger settings. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ac9451a7dae30269ffbf202d387f66126}\index{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering@{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering}!TaaDebugMode@{TaaDebugMode}}
+\index{TaaDebugMode@{TaaDebugMode}!UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering@{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering}}
+\doxysubsubsection{\texorpdfstring{TaaDebugMode}{TaaDebugMode}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ac9451a7dae30269ffbf202d387f66126} 
+enum \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ac9451a7dae30269ffbf202d387f66126}{Unity\+Engine.\+Rendering.\+Universal.\+Debug\+Display\+Settings\+Rendering.\+Taa\+Debug\+Mode}}}
+
+
+
+Current Temporal Anti-\/aliasing debug mode. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering@{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering}}\index{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering@{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering}!None@{None}}}\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ac9451a7dae30269ffbf202d387f66126a6adf97f83acf6453d4a6a4b1070f3754}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ac9451a7dae30269ffbf202d387f66126} 
+None&The default non-\/debug TAA rendering. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ShowRawFrame@{ShowRawFrame}!UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering@{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering}}\index{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering@{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering}!ShowRawFrame@{ShowRawFrame}}}\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ac9451a7dae30269ffbf202d387f66126a44cd9e37b7a8271a91db4389bdfb24cb}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ac9451a7dae30269ffbf202d387f66126} 
+Show\+Raw\+Frame&Output the jittered raw frame render. TAA current frame influence 100\%. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ShowRawFrameNoJitter@{ShowRawFrameNoJitter}!UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering@{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering}}\index{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering@{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering}!ShowRawFrameNoJitter@{ShowRawFrameNoJitter}}}\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ac9451a7dae30269ffbf202d387f66126ab16e6450c935aea625bed0c14eecc412}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ac9451a7dae30269ffbf202d387f66126} 
+Show\+Raw\+Frame\+No\+Jitter&Output the raw frame render, but with jitter disabled. TAA current frame influence 100\%. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ShowClampedHistory@{ShowClampedHistory}!UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering@{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering}}\index{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering@{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering}!ShowClampedHistory@{ShowClampedHistory}}}\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ac9451a7dae30269ffbf202d387f66126a41946374c3065a35de3594dfb68c27ff}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ac9451a7dae30269ffbf202d387f66126} 
+Show\+Clamped\+History&Output the clamped (rectified), reprojected TAA history. Current frame influence 0\%. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_aaaab3435a61eef27ed6b90431008dad7}\index{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering@{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering}!TryGetScreenClearColor@{TryGetScreenClearColor}}
+\index{TryGetScreenClearColor@{TryGetScreenClearColor}!UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering@{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering}}
+\doxysubsubsection{\texorpdfstring{TryGetScreenClearColor()}{TryGetScreenClearColor()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_aaaab3435a61eef27ed6b90431008dad7} 
+bool Unity\+Engine.\+Rendering.\+Universal.\+Debug\+Display\+Settings\+Rendering.\+Try\+Get\+Screen\+Clear\+Color (\begin{DoxyParamCaption}\item[{ref \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a37daf716e998b874ec0272773287835bacb5feb1b7314637725a2e73bdc9f7295}{Color}}}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Attempts to get the color used to clear the screen for this debug setting.
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & A reference to the screen clear color to use.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+"{}true"{} if we updated the color, "{}false"{} if we didn\textquotesingle{}t change anything.
+\end{DoxyReturn}
+ 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_debug_display_settings_query_afb419e441526d086f1cceecfbcb9abd3}{Unity\+Engine.\+Rendering.\+IDebug\+Display\+Settings\+Query}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ad0255205564e4c47e8343267c60cdc12}\index{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering@{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering}!AreAnySettingsActive@{AreAnySettingsActive}}
+\index{AreAnySettingsActive@{AreAnySettingsActive}!UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering@{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering}}
+\doxysubsubsection{\texorpdfstring{AreAnySettingsActive}{AreAnySettingsActive}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ad0255205564e4c47e8343267c60cdc12} 
+bool Unity\+Engine.\+Rendering.\+Universal.\+Debug\+Display\+Settings\+Rendering.\+Are\+Any\+Settings\+Active\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Checks whether ANY of the debug settings are currently active. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_debug_display_settings_query_aad82f380eda630595e1ed7371ee777fe}{Unity\+Engine.\+Rendering.\+IDebug\+Display\+Settings\+Query}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_a6ca8d18e0ff9bc54a386c899add71d27}\index{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering@{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering}!IsLightingActive@{IsLightingActive}}
+\index{IsLightingActive@{IsLightingActive}!UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering@{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering}}
+\doxysubsubsection{\texorpdfstring{IsLightingActive}{IsLightingActive}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_a6ca8d18e0ff9bc54a386c899add71d27} 
+bool Unity\+Engine.\+Rendering.\+Universal.\+Debug\+Display\+Settings\+Rendering.\+Is\+Lighting\+Active\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Checks whether lighting is active for these settings. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_debug_display_settings_query_a81de6a2c0d525916fa9036ea1b1d699d}{Unity\+Engine.\+Rendering.\+IDebug\+Display\+Settings\+Query}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ad01a36951f5eaf202fd36720979ce986}\index{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering@{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering}!IsPostProcessingAllowed@{IsPostProcessingAllowed}}
+\index{IsPostProcessingAllowed@{IsPostProcessingAllowed}!UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering@{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering}}
+\doxysubsubsection{\texorpdfstring{IsPostProcessingAllowed}{IsPostProcessingAllowed}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ad01a36951f5eaf202fd36720979ce986} 
+bool Unity\+Engine.\+Rendering.\+Universal.\+Debug\+Display\+Settings\+Rendering.\+Is\+Post\+Processing\+Allowed\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Checks whether the current state of these settings allows post-\/processing. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_debug_display_settings_query_abc5aafedd1e1ec6af4d377cdcd418be6}{Unity\+Engine.\+Rendering.\+IDebug\+Display\+Settings\+Query}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_a4448f5a2f56658a1360dd91d666bf6d6}\index{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering@{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering}!maxOverdrawCount@{maxOverdrawCount}}
+\index{maxOverdrawCount@{maxOverdrawCount}!UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering@{UnityEngine.Rendering.Universal.DebugDisplaySettingsRendering}}
+\doxysubsubsection{\texorpdfstring{maxOverdrawCount}{maxOverdrawCount}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_a4448f5a2f56658a1360dd91d666bf6d6} 
+int Unity\+Engine.\+Rendering.\+Universal.\+Debug\+Display\+Settings\+Rendering.\+max\+Overdraw\+Count = 10\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Maximum overdraw count for a single pixel. 
+
+This is used to setup the feedback range in when \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_debug_display_settings_rendering_ae6689a6452c865df4bbd8ed913b01dc6}{overdraw\+Mode} is active. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/\+Debug/Debug\+Display\+Settings\+Rendering.\+cs\end{DoxyCompactItemize}

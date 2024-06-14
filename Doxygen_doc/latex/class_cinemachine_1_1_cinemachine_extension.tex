@@ -1,0 +1,297 @@
+\doxysection{Cinemachine.\+Cinemachine\+Extension Class Reference}
+\hypertarget{class_cinemachine_1_1_cinemachine_extension}{}\label{class_cinemachine_1_1_cinemachine_extension}\index{Cinemachine.CinemachineExtension@{Cinemachine.CinemachineExtension}}
+
+
+Base class for a \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera extension module. Hooks into the \doxylink{namespace_cinemachine}{Cinemachine} Pipeline. Use this to add extra processing to the vcam, modifying its generated state.  
+
+
+Inheritance diagram for Cinemachine.\+Cinemachine\+Extension\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=10.858726cm]{class_cinemachine_1_1_cinemachine_extension}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_ab1cc3fb8f3edbcb9eb6a4aa96f998170}{Pre\+Pipeline\+Mutate\+Camera\+State\+Callback}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} vcam, ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} cur\+State, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Override this to do such things as offset the Referece\+Look\+At. Base class implementation does nothing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_ac896b83e871cb82b7a9669d07ac23f0d}{Invoke\+Post\+Pipeline\+Stage\+Callback}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} vcam, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}} stage, ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} state, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Legacy support. This is only here to avoid changing the API to make \doxylink{class_cinemachine_1_1_cinemachine_extension_a29d31e35cf1e1fee15d923eed7eeda43}{Post\+Pipeline\+Stage\+Callback()} public. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_ae0ca22a4b7cc143ac024ce70b196ef36}{On\+Target\+Object\+Warped}} (Transform target, Vector3 position\+Delta)
+\begin{DoxyCompactList}\small\item\em This is called to notify the extension that a target got warped, so that the extension can update its internal state to make the camera also warp seamlessy. Base class implementation does nothing. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_abfa0892159a67a17019163eca0802d1f}{Force\+Camera\+Position}} (Vector3 pos, Quaternion rot)
+\begin{DoxyCompactList}\small\item\em Force the virtual camera to assume a given position and orientation. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a6ff5692b6c0348f319da017ee4573594}{On\+Transition\+From\+Camera}} (\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} from\+Cam, Vector3 world\+Up, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Notification that this virtual camera is going live. Base class implementation must be called by any overridden method. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a539ec5013baf5d36cfd2bc98ae7a3248}{Get\+Max\+Damp\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Report maximum damping time needed for this extension. Only used in editor for timeline scrubbing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_extension_a6baac99917da49475093b3f26c453bb0}\label{class_cinemachine_1_1_cinemachine_extension_a6baac99917da49475093b3f26c453bb0} 
+virtual void {\bfseries Awake} ()
+\begin{DoxyCompactList}\small\item\em Connect to virtual camera pipeline. Override implementations must call this base implementation. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_extension_a401dda38983492e0a910d1a8651bb00a}\label{class_cinemachine_1_1_cinemachine_extension_a401dda38983492e0a910d1a8651bb00a} 
+virtual void {\bfseries On\+Enable} ()
+\begin{DoxyCompactList}\small\item\em Does nothing. It\textquotesingle{}s here for the little checkbox in the inspector. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_adf1df72db4c68b49f91c2685470b80ef}{On\+Destroy}} ()
+\begin{DoxyCompactList}\small\item\em Disconnect from virtual camera pipeline. Override implementations must call this base implementation. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a65b00ddb064ec30c6e8a53082868befe}{Connect\+To\+Vcam}} (bool connect)
+\begin{DoxyCompactList}\small\item\em Connect to virtual camera. Implementation must be safe to be called redundantly. Override implementations must call this base implementation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a29d31e35cf1e1fee15d923eed7eeda43}{Post\+Pipeline\+Stage\+Callback}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} vcam, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}} stage, ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} state, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em This callback will be called after the virtual camera has implemented each stage in the pipeline. This method may modify the referenced state. If delta\+Time less than 0, reset all state info and perform no damping. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_abfd25e075e45a038b59e17ac7b55dc02}{Get\+Extra\+State$<$ T $>$}} (\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} vcam)
+\begin{DoxyCompactList}\small\item\em Because extensions can be placed on manager cams and will in that case be called for all the vcam children, vcam-\/specific state information should be stored here. Just define a class to hold your state info and use it exclusively when calling this. \end{DoxyCompactList}\item 
+List$<$ T $>$ \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a97f9c52f94e138ecefda901f891b0966}{Get\+All\+Extra\+States$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em Inefficient method to get all extra state info for all vcams. Intended for \doxylink{namespace_cinemachine_1_1_editor}{Editor} use only, not runtime! \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_extension_aa0b467eb6f3362ec44107ee8972a23c2}\label{class_cinemachine_1_1_cinemachine_extension_aa0b467eb6f3362ec44107ee8972a23c2} 
+const float {\bfseries Epsilon} = Utility.\+Unity\+Vector\+Extensions.\+Epsilon
+\begin{DoxyCompactList}\small\item\em Useful constant for very small floats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_extension_a60701cdc32472ae8a9f544340e986abb}\label{class_cinemachine_1_1_cinemachine_extension_a60701cdc32472ae8a9f544340e986abb} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} {\bfseries Virtual\+Camera}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{class_cinemachine_1_1_cinemachine_virtual_camera}{Cinemachine\+Virtual\+Camera} to which this extension is attached. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_extension_a8bbc2489b26aed2bcbbdf7ff56d5b465}\label{class_cinemachine_1_1_cinemachine_extension_a8bbc2489b26aed2bcbbdf7ff56d5b465} 
+virtual bool {\bfseries Requires\+User\+Input}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extensions that require user input should implement this and return true. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for a \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera extension module. Hooks into the \doxylink{namespace_cinemachine}{Cinemachine} Pipeline. Use this to add extra processing to the vcam, modifying its generated state. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_extension_a65b00ddb064ec30c6e8a53082868befe}\index{Cinemachine.CinemachineExtension@{Cinemachine.CinemachineExtension}!ConnectToVcam@{ConnectToVcam}}
+\index{ConnectToVcam@{ConnectToVcam}!Cinemachine.CinemachineExtension@{Cinemachine.CinemachineExtension}}
+\doxysubsubsection{\texorpdfstring{ConnectToVcam()}{ConnectToVcam()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_extension_a65b00ddb064ec30c6e8a53082868befe} 
+virtual void Cinemachine.\+Cinemachine\+Extension.\+Connect\+To\+Vcam (\begin{DoxyParamCaption}\item[{bool}]{connect}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Connect to virtual camera. Implementation must be safe to be called redundantly. Override implementations must call this base implementation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connect} & True if connecting, false if disconnecting\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_confiner_a827cf64b40400f0f925e09630f1f3d2d}{Cinemachine.\+Cinemachine\+Confiner}}, and \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_storyboard_a76c7aee6737702111df9bbb8118fed16}{Cinemachine.\+Cinemachine\+Storyboard}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_extension_abfa0892159a67a17019163eca0802d1f}\index{Cinemachine.CinemachineExtension@{Cinemachine.CinemachineExtension}!ForceCameraPosition@{ForceCameraPosition}}
+\index{ForceCameraPosition@{ForceCameraPosition}!Cinemachine.CinemachineExtension@{Cinemachine.CinemachineExtension}}
+\doxysubsubsection{\texorpdfstring{ForceCameraPosition()}{ForceCameraPosition()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_extension_abfa0892159a67a17019163eca0802d1f} 
+virtual void Cinemachine.\+Cinemachine\+Extension.\+Force\+Camera\+Position (\begin{DoxyParamCaption}\item[{Vector3}]{pos}{, }\item[{Quaternion}]{rot}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Force the virtual camera to assume a given position and orientation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Worldspace pposition to take\\
+\hline
+{\em rot} & Worldspace orientation to take\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cinemachine_1_1_cinemachine_extension_a97f9c52f94e138ecefda901f891b0966}\index{Cinemachine.CinemachineExtension@{Cinemachine.CinemachineExtension}!GetAllExtraStates$<$ T $>$@{GetAllExtraStates$<$ T $>$}}
+\index{GetAllExtraStates$<$ T $>$@{GetAllExtraStates$<$ T $>$}!Cinemachine.CinemachineExtension@{Cinemachine.CinemachineExtension}}
+\doxysubsubsection{\texorpdfstring{GetAllExtraStates$<$ T $>$()}{GetAllExtraStates< T >()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_extension_a97f9c52f94e138ecefda901f891b0966} 
+List$<$ T $>$ Cinemachine.\+Cinemachine\+Extension.\+Get\+All\+Extra\+States$<$ T $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Inefficient method to get all extra state info for all vcams. Intended for \doxylink{namespace_cinemachine_1_1_editor}{Editor} use only, not runtime! 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The extra state type\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+A dynamically-\/allocated list with all the extra states
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em class}]\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\Hypertarget{class_cinemachine_1_1_cinemachine_extension_abfd25e075e45a038b59e17ac7b55dc02}\index{Cinemachine.CinemachineExtension@{Cinemachine.CinemachineExtension}!GetExtraState$<$ T $>$@{GetExtraState$<$ T $>$}}
+\index{GetExtraState$<$ T $>$@{GetExtraState$<$ T $>$}!Cinemachine.CinemachineExtension@{Cinemachine.CinemachineExtension}}
+\doxysubsubsection{\texorpdfstring{GetExtraState$<$ T $>$()}{GetExtraState< T >()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_extension_abfd25e075e45a038b59e17ac7b55dc02} 
+T Cinemachine.\+Cinemachine\+Extension.\+Get\+Extra\+State$<$ T $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}}}]{vcam}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Because extensions can be placed on manager cams and will in that case be called for all the vcam children, vcam-\/specific state information should be stored here. Just define a class to hold your state info and use it exclusively when calling this. 
+
+/// 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the extra state class\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em vcam} & The virtual camera being processed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The extra state, cast as type T
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em class}]\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\Hypertarget{class_cinemachine_1_1_cinemachine_extension_a539ec5013baf5d36cfd2bc98ae7a3248}\index{Cinemachine.CinemachineExtension@{Cinemachine.CinemachineExtension}!GetMaxDampTime@{GetMaxDampTime}}
+\index{GetMaxDampTime@{GetMaxDampTime}!Cinemachine.CinemachineExtension@{Cinemachine.CinemachineExtension}}
+\doxysubsubsection{\texorpdfstring{GetMaxDampTime()}{GetMaxDampTime()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_extension_a539ec5013baf5d36cfd2bc98ae7a3248} 
+virtual float Cinemachine.\+Cinemachine\+Extension.\+Get\+Max\+Damp\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Report maximum damping time needed for this extension. Only used in editor for timeline scrubbing. 
+
+\begin{DoxyReturn}{Returns}
+Highest damping setting in this extension
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_collider_a175f32681fb1653a93fc16fff6702f3b}{Cinemachine.\+Cinemachine\+Collider}}, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_confiner_aeccf0ee2b005df3337319338fd43b755}{Cinemachine.\+Cinemachine\+Confiner}}, and \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_follow_zoom_a928da947f8c33e092afc9e728d0d7daa}{Cinemachine.\+Cinemachine\+Follow\+Zoom}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_extension_ac896b83e871cb82b7a9669d07ac23f0d}\index{Cinemachine.CinemachineExtension@{Cinemachine.CinemachineExtension}!InvokePostPipelineStageCallback@{InvokePostPipelineStageCallback}}
+\index{InvokePostPipelineStageCallback@{InvokePostPipelineStageCallback}!Cinemachine.CinemachineExtension@{Cinemachine.CinemachineExtension}}
+\doxysubsubsection{\texorpdfstring{InvokePostPipelineStageCallback()}{InvokePostPipelineStageCallback()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_extension_ac896b83e871cb82b7a9669d07ac23f0d} 
+void Cinemachine.\+Cinemachine\+Extension.\+Invoke\+Post\+Pipeline\+Stage\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}}}]{vcam}{, }\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}}}]{stage}{, }\item[{ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}}}]{state}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Legacy support. This is only here to avoid changing the API to make \doxylink{class_cinemachine_1_1_cinemachine_extension_a29d31e35cf1e1fee15d923eed7eeda43}{Post\+Pipeline\+Stage\+Callback()} public. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vcam} & The virtual camera being processed\\
+\hline
+{\em stage} & The current pipeline stage\\
+\hline
+{\em state} & The current virtual camera state\\
+\hline
+{\em delta\+Time} & The current applicable delta\+Time\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cinemachine_1_1_cinemachine_extension_adf1df72db4c68b49f91c2685470b80ef}\index{Cinemachine.CinemachineExtension@{Cinemachine.CinemachineExtension}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!Cinemachine.CinemachineExtension@{Cinemachine.CinemachineExtension}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_extension_adf1df72db4c68b49f91c2685470b80ef} 
+virtual void Cinemachine.\+Cinemachine\+Extension.\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Disconnect from virtual camera pipeline. Override implementations must call this base implementation. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_collider_a20834c8d962e19cab8338e1ed85d4f1a}{Cinemachine.\+Cinemachine\+Collider}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_extension_ae0ca22a4b7cc143ac024ce70b196ef36}\index{Cinemachine.CinemachineExtension@{Cinemachine.CinemachineExtension}!OnTargetObjectWarped@{OnTargetObjectWarped}}
+\index{OnTargetObjectWarped@{OnTargetObjectWarped}!Cinemachine.CinemachineExtension@{Cinemachine.CinemachineExtension}}
+\doxysubsubsection{\texorpdfstring{OnTargetObjectWarped()}{OnTargetObjectWarped()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_extension_ae0ca22a4b7cc143ac024ce70b196ef36} 
+virtual void Cinemachine.\+Cinemachine\+Extension.\+On\+Target\+Object\+Warped (\begin{DoxyParamCaption}\item[{Transform}]{target}{, }\item[{Vector3}]{position\+Delta}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+This is called to notify the extension that a target got warped, so that the extension can update its internal state to make the camera also warp seamlessy. Base class implementation does nothing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The object that was warped\\
+\hline
+{\em position\+Delta} & The amount the target\textquotesingle{}s position changed\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cinemachine_1_1_cinemachine_extension_a6ff5692b6c0348f319da017ee4573594}\index{Cinemachine.CinemachineExtension@{Cinemachine.CinemachineExtension}!OnTransitionFromCamera@{OnTransitionFromCamera}}
+\index{OnTransitionFromCamera@{OnTransitionFromCamera}!Cinemachine.CinemachineExtension@{Cinemachine.CinemachineExtension}}
+\doxysubsubsection{\texorpdfstring{OnTransitionFromCamera()}{OnTransitionFromCamera()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_extension_a6ff5692b6c0348f319da017ee4573594} 
+virtual bool Cinemachine.\+Cinemachine\+Extension.\+On\+Transition\+From\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}}}]{from\+Cam}{, }\item[{Vector3}]{world\+Up}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Notification that this virtual camera is going live. Base class implementation must be called by any overridden method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from\+Cam} & The camera being deactivated. May be null.\\
+\hline
+{\em world\+Up} & Default world Up, set by the \doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain}\\
+\hline
+{\em delta\+Time} & Delta time for time-\/based effects (ignore if less than or equal to 0)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True to request a vcam update of internal state
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_cinemachine_1_1_cinemachine3rd_person_aim_a90ab1a9e9d9e79c9204ebb96e12ffbfb}{Cinemachine.\+Cinemachine3rd\+Person\+Aim}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_extension_a29d31e35cf1e1fee15d923eed7eeda43}\index{Cinemachine.CinemachineExtension@{Cinemachine.CinemachineExtension}!PostPipelineStageCallback@{PostPipelineStageCallback}}
+\index{PostPipelineStageCallback@{PostPipelineStageCallback}!Cinemachine.CinemachineExtension@{Cinemachine.CinemachineExtension}}
+\doxysubsubsection{\texorpdfstring{PostPipelineStageCallback()}{PostPipelineStageCallback()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_extension_a29d31e35cf1e1fee15d923eed7eeda43} 
+void Cinemachine.\+Cinemachine\+Extension.\+Post\+Pipeline\+Stage\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}}}]{vcam}{, }\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}}}]{stage}{, }\item[{ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}}}]{state}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}
+
+
+
+This callback will be called after the virtual camera has implemented each stage in the pipeline. This method may modify the referenced state. If delta\+Time less than 0, reset all state info and perform no damping. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vcam} & The virtual camera being processed\\
+\hline
+{\em stage} & The current pipeline stage\\
+\hline
+{\em state} & The current virtual camera state\\
+\hline
+{\em delta\+Time} & The current applicable delta\+Time\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cinemachine_1_1_cinemachine_extension_ab1cc3fb8f3edbcb9eb6a4aa96f998170}\index{Cinemachine.CinemachineExtension@{Cinemachine.CinemachineExtension}!PrePipelineMutateCameraStateCallback@{PrePipelineMutateCameraStateCallback}}
+\index{PrePipelineMutateCameraStateCallback@{PrePipelineMutateCameraStateCallback}!Cinemachine.CinemachineExtension@{Cinemachine.CinemachineExtension}}
+\doxysubsubsection{\texorpdfstring{PrePipelineMutateCameraStateCallback()}{PrePipelineMutateCameraStateCallback()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_extension_ab1cc3fb8f3edbcb9eb6a4aa96f998170} 
+virtual void Cinemachine.\+Cinemachine\+Extension.\+Pre\+Pipeline\+Mutate\+Camera\+State\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}}}]{vcam}{, }\item[{ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}}}]{cur\+State}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Override this to do such things as offset the Referece\+Look\+At. Base class implementation does nothing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vcam} & The virtual camera being processed\\
+\hline
+{\em cur\+State} & Input state that must be mutated\\
+\hline
+{\em delta\+Time} & The current applicable delta\+Time\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_cinemachine_recomposer_ac318113108ee06c894a0fdd6ea888e5e}{Cinemachine\+Recomposer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Core/Cinemachine\+Extension.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,54 @@
+\chapter{Scene Color Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_color-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_color-_node}\index{Scene Color Node@{Scene Color Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_color-_node_autotoc_md3809}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_color-_node_autotoc_md3809}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_color-_node_autotoc_md3810}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_color-_node_autotoc_md3810}
+Provides access to the current {\bfseries{Camera}}\textquotesingle{}s color buffer using input {\bfseries{UV}}, which is expected to be normalized screen coordinates.
+
+The behavior of the Scene Color node isn\textquotesingle{}t defined globally. The executed HLSL code for the Scene Color node is defined per {\bfseries{Render Pipeline}}, and different {\bfseries{Render Pipelines}} can produce different results. Custom {\bfseries{Render Pipelines}} that wish to support the Scene Color node need to explicitly define the behavior for it. If the behavior is undefined, the Scene Color node returns 0 (black).
+
+In the {\bfseries{Universal Render Pipeline}} the Scene Color node returns the value of the {\bfseries{Camera Opaque Texture}}. Refer to the {\bfseries{Universal Render Pipeline}} for more documentation on this feature. The contents of this texture are only available for {\bfseries{Transparent}} objects. Set the {\bfseries{Surface Type}} dropdown on the {\bfseries{Material Options}} panel of the Master Node to {\bfseries{Transparent}} to receive the correct values from this node.
+
+\texorpdfstring{$>$}{>}\mbox{[}!\+NOTE\mbox{]} \texorpdfstring{$>$}{>}You can only use the Scene Color node in the {\bfseries{Fragment}} \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_shader-_stage}{Shader Stage}{0}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_color-_node_autotoc_md3811}{}\doxysubsubsection{\texorpdfstring{Supported Unity render pipelines}{Supported Unity render pipelines}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_color-_node_autotoc_md3811}
+The following table indicates which render pipelines support the Scene Color node. When used with unsupported render pipelines, the Scene Color node returns 0 (black).
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pipeline   }&\cellcolor{\tableheadbgcolor}\textbf{ Supported    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Pipeline   }&\cellcolor{\tableheadbgcolor}\textbf{ Supported    }\\\cline{1-2}
+\endhead
+Built-\/in Render Pipeline   &No    \\\cline{1-2}
+Universal Render Pipeline   &Yes    \\\cline{1-2}
+High Definition Render Pipeline   &Yes   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_color-_node_autotoc_md3812}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_color-_node_autotoc_md3812}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+UV   &Input   &Vector 4   &Screen Position   &Normalized screen coordinates    \\\cline{1-5}
+Out   &Output   &Vector 3   &None   &Output value   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_color-_node_autotoc_md3813}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_color-_node_autotoc_md3813}
+The following example code represents one possible outcome of this node.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_SceneColor\_float(float4\ UV,\ out\ float3\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ SHADERGRAPH\_SAMPLE\_SCENE\_COLOR(UV);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

@@ -1,0 +1,269 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Composites.\+Vector2\+Composite Class Reference}
+\hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite}{}\label{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite}\index{UnityEngine.InputSystem.Composites.Vector2Composite@{UnityEngine.InputSystem.Composites.Vector2Composite}}
+
+
+A 2D planar motion vector computed from an up+down button pair and a left+right button pair.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Composites.\+Vector2\+Composite\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_aae3ea1593cde66d128765c85d6a1c9dd}{Mode}} \{ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_aae3ea1593cde66d128765c85d6a1c9dda3d953aa7cfa5ffe0fde34551d918c76c}{Analog}} = 2
+, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_aae3ea1593cde66d128765c85d6a1c9dda56882c0995e52fa61c7d8959bfdc3b50}{Digital\+Normalized}} = 0
+, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_aae3ea1593cde66d128765c85d6a1c9dda0bb8309239953b782fec18706fe60b4a}{Digital}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Determines how a {\ttfamily Vector2} is synthesized from part controls. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_a0ffc749e9ffd1b04481fbeaa9139d4f9}\label{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_a0ffc749e9ffd1b04481fbeaa9139d4f9} 
+override Vector2 {\bfseries Read\+Value} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context)
+\item 
+override float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_af71f39ed8ad6a79c0a4626b5666fc690}{Evaluate\+Magnitude}} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context)
+\begin{DoxyCompactList}\small\item\em Determine the current level of actuation of the composite.
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Callback context for the binding composite. Use this to access the values supplied by part bindings.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+This method by default returns -\/1, meaning that the composite does not support magnitudes. You can override the method to add support for magnitudes.
+
+See \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Input\+Control.\+Evaluate\+Magnitude()} for details of how magnitudes work.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite}{Unity\+Engine.\+Input\+System.\+Input\+Binding\+Composite$<$ Vector2 $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+unsafe void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a6618d178c73466acd78057ffef7a6cf8}{Read\+Value}} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context, void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size)
+\begin{DoxyCompactList}\small\item\em Read a value from the composite without having to know the value type (unlike \doxylink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a2c23901dcc819e76109feadf9171fad0}{Input\+Binding\+Composite$<$\+TValue$>$.\+Read\+Value(ref Input\+Binding\+Composite\+Context)} and without allocating GC heap memory (unlike \doxylink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a379755bf07c780ac75f8452456ec92d6}{Read\+Value\+As\+Object}). \end{DoxyCompactList}\item 
+TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a2c23901dcc819e76109feadf9171fad0}{Read\+Value}} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context)
+\begin{DoxyCompactList}\small\item\em Read a value for the composite given the supplied context. \end{DoxyCompactList}\item 
+override unsafe void {\bfseries Read\+Value} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context, void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size)
+\item 
+object \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a379755bf07c780ac75f8452456ec92d6}{Read\+Value\+As\+Object}} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context)
+\begin{DoxyCompactList}\small\item\em Read the value of the composite as a boxed object. This allows reading the value without having to know the value type and without having to deal with raw byte buffers. \end{DoxyCompactList}\item 
+override unsafe object {\bfseries Read\+Value\+As\+Object} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_a9b9e4d02dce6e3cbb3bd5cc71d0324a2}{up}} = 0
+\begin{DoxyCompactList}\small\item\em Binding for the button that represents the up (that is, {\ttfamily (0,1)}) direction of the vector. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_ab5a39e31cbf6fe7d759fa2b0726558b9}{down}} = 0
+\begin{DoxyCompactList}\small\item\em Binding for the button represents the down (that is, {\ttfamily (0,-\/1)}) direction of the vector. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_af00c252b1502e8f36c356687a9d2d18a}{left}} = 0
+\begin{DoxyCompactList}\small\item\em Binding for the button represents the left (that is, {\ttfamily (-\/1,0)}) direction of the vector. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_a93e8faefbe3c5abbd6f4b3de67da9bcd}{right}} = 0
+\begin{DoxyCompactList}\small\item\em Binding for the button that represents the right (that is, {\ttfamily (1,0)}) direction of the vector. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_aff53ea81b0a391ec1d4df2013d51fd0d}\label{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_aff53ea81b0a391ec1d4df2013d51fd0d} 
+bool {\bfseries normalize} = true
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_aae3ea1593cde66d128765c85d6a1c9dd}{Mode}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_a0f1cf5d34efe319affccb88a969028f7}{mode}}
+\begin{DoxyCompactList}\small\item\em How to synthesize a {\ttfamily Vector2} from the values read from \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_a9b9e4d02dce6e3cbb3bd5cc71d0324a2}{up}, \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_ab5a39e31cbf6fe7d759fa2b0726558b9}{down}, \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_af00c252b1502e8f36c356687a9d2d18a}{left}, and \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_a93e8faefbe3c5abbd6f4b3de67da9bcd}{right}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite}{Unity\+Engine.\+Input\+System.\+Input\+Binding\+Composite$<$ Vector2 $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a31e178f5b15d877ea1870e068aed093f}{Get\+Expected\+Control\+Layout\+Name}} (string composite, string part)
+\begin{DoxyCompactList}\small\item\em Return the name of the control layout that is expected for the given part (e.\+g. "{}\+Up"{}) on the given composite (e.\+g. "{}\+Dpad"{}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite}{Unity\+Engine.\+Input\+System.\+Input\+Binding\+Composite$<$ Vector2 $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a55e91ef05e6821b154f4d89bcede5adf}{Finish\+Setup}} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context)
+\begin{DoxyCompactList}\small\item\em Called after binding resolution for an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map} is complete. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite}{Unity\+Engine.\+Input\+System.\+Input\+Binding\+Composite$<$ Vector2 $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+Type \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a3b812de2f195f2ddd939a0056a6c1b28}{value\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The type of value returned by the composite. \end{DoxyCompactList}\item 
+override Type \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_ac097708dd5d15f524c344185817355ed}{value\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The type of value returned by the composite, i.\+e. {\ttfamily typeof(\+TValue)}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_ab6494b91f1cec7c426761191e9d09771}{value\+Size\+In\+Bytes}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Size of a value read by \doxylink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a6618d178c73466acd78057ffef7a6cf8}{Read\+Value}. \end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_afc790d6ffc72aeb4d7b7b67084d08371}{value\+Size\+In\+Bytes}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The size of values returned by the composite, i.\+e. {\ttfamily sizeof(\+TValue)}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A 2D planar motion vector computed from an up+down button pair and a left+right button pair. 
+
+This composite allows to grab arbitrary buttons from a device and arrange them in a D-\/\+Pad like configuration. Based on button presses, the composite will return a normalized direction vector (normalization can be turned off via \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_a0f1cf5d34efe319affccb88a969028f7}{mode}).
+
+Opposing motions cancel each other out. This means that if, for example, both the left and right horizontal button are pressed, the resulting horizontal movement value will be zero.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Set\ up\ WASD\ style\ keyboard\ controls.}}
+\DoxyCodeLine{action.AddCompositeBinding(\textcolor{stringliteral}{"{}2DVector"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Up"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/w"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Left"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/a"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Down"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/s"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Right"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/d"{}});}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector3_composite}{Vector3\+Composite}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_aae3ea1593cde66d128765c85d6a1c9dd}\index{UnityEngine.InputSystem.Composites.Vector2Composite@{UnityEngine.InputSystem.Composites.Vector2Composite}!Mode@{Mode}}
+\index{Mode@{Mode}!UnityEngine.InputSystem.Composites.Vector2Composite@{UnityEngine.InputSystem.Composites.Vector2Composite}}
+\doxysubsubsection{\texorpdfstring{Mode}{Mode}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_aae3ea1593cde66d128765c85d6a1c9dd} 
+enum \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_aae3ea1593cde66d128765c85d6a1c9dd}{Unity\+Engine.\+Input\+System.\+Composites.\+Vector2\+Composite.\+Mode}}}
+
+
+
+Determines how a {\ttfamily Vector2} is synthesized from part controls. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Analog@{Analog}!UnityEngine.InputSystem.Composites.Vector2Composite@{UnityEngine.InputSystem.Composites.Vector2Composite}}\index{UnityEngine.InputSystem.Composites.Vector2Composite@{UnityEngine.InputSystem.Composites.Vector2Composite}!Analog@{Analog}}}\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_aae3ea1593cde66d128765c85d6a1c9dda3d953aa7cfa5ffe0fde34551d918c76c}\label{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_aae3ea1593cde66d128765c85d6a1c9dd} 
+Analog&Part controls are treated as analog meaning that the floating-\/point values read from controls will come through as is (minus the fact that the down and left direction values are negated). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DigitalNormalized@{DigitalNormalized}!UnityEngine.InputSystem.Composites.Vector2Composite@{UnityEngine.InputSystem.Composites.Vector2Composite}}\index{UnityEngine.InputSystem.Composites.Vector2Composite@{UnityEngine.InputSystem.Composites.Vector2Composite}!DigitalNormalized@{DigitalNormalized}}}\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_aae3ea1593cde66d128765c85d6a1c9dda56882c0995e52fa61c7d8959bfdc3b50}\label{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_aae3ea1593cde66d128765c85d6a1c9dd} 
+Digital\+Normalized&Part controls are treated as buttons (on/off) and the resulting vector is normalized. This means that if, for example, both left and up are pressed, instead of returning a vector (-\/1,1), a vector of roughly (-\/0.\+7,0.\+7) (that is, corresponding to {\ttfamily new Vector2(-\/1,1).normalized}) is returned instead. The resulting 2D area is diamond-\/shaped. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Digital@{Digital}!UnityEngine.InputSystem.Composites.Vector2Composite@{UnityEngine.InputSystem.Composites.Vector2Composite}}\index{UnityEngine.InputSystem.Composites.Vector2Composite@{UnityEngine.InputSystem.Composites.Vector2Composite}!Digital@{Digital}}}\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_aae3ea1593cde66d128765c85d6a1c9dda0bb8309239953b782fec18706fe60b4a}\label{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_aae3ea1593cde66d128765c85d6a1c9dd} 
+Digital&Part controls are treated as buttons (on/off) and the resulting vector is not normalized. This means that if, for example, both left and up are pressed, the resulting vector is (-\/1,1) and has a length greater than 1. The resulting 2D area is box-\/shaped. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_af71f39ed8ad6a79c0a4626b5666fc690}\index{UnityEngine.InputSystem.Composites.Vector2Composite@{UnityEngine.InputSystem.Composites.Vector2Composite}!EvaluateMagnitude@{EvaluateMagnitude}}
+\index{EvaluateMagnitude@{EvaluateMagnitude}!UnityEngine.InputSystem.Composites.Vector2Composite@{UnityEngine.InputSystem.Composites.Vector2Composite}}
+\doxysubsubsection{\texorpdfstring{EvaluateMagnitude()}{EvaluateMagnitude()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_af71f39ed8ad6a79c0a4626b5666fc690} 
+override float Unity\+Engine.\+Input\+System.\+Composites.\+Vector2\+Composite.\+Evaluate\+Magnitude (\begin{DoxyParamCaption}\item[{ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}}}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Determine the current level of actuation of the composite.
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Callback context for the binding composite. Use this to access the values supplied by part bindings.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+This method by default returns -\/1, meaning that the composite does not support magnitudes. You can override the method to add support for magnitudes.
+
+See \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Input\+Control.\+Evaluate\+Magnitude()} for details of how magnitudes work.  
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a91ab7a703dfa5219da6d37b060b801f3}{Unity\+Engine.\+Input\+System.\+Input\+Binding\+Composite$<$ Vector2 $>$}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_ab5a39e31cbf6fe7d759fa2b0726558b9}\index{UnityEngine.InputSystem.Composites.Vector2Composite@{UnityEngine.InputSystem.Composites.Vector2Composite}!down@{down}}
+\index{down@{down}!UnityEngine.InputSystem.Composites.Vector2Composite@{UnityEngine.InputSystem.Composites.Vector2Composite}}
+\doxysubsubsection{\texorpdfstring{down}{down}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_ab5a39e31cbf6fe7d759fa2b0726558b9} 
+int Unity\+Engine.\+Input\+System.\+Composites.\+Vector2\+Composite.\+down = 0}
+
+
+
+Binding for the button represents the down (that is, {\ttfamily (0,-\/1)}) direction of the vector. 
+
+This property is automatically assigned by the input system. \Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_af00c252b1502e8f36c356687a9d2d18a}\index{UnityEngine.InputSystem.Composites.Vector2Composite@{UnityEngine.InputSystem.Composites.Vector2Composite}!left@{left}}
+\index{left@{left}!UnityEngine.InputSystem.Composites.Vector2Composite@{UnityEngine.InputSystem.Composites.Vector2Composite}}
+\doxysubsubsection{\texorpdfstring{left}{left}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_af00c252b1502e8f36c356687a9d2d18a} 
+int Unity\+Engine.\+Input\+System.\+Composites.\+Vector2\+Composite.\+left = 0}
+
+
+
+Binding for the button represents the left (that is, {\ttfamily (-\/1,0)}) direction of the vector. 
+
+This property is automatically assigned by the input system. \Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_a0f1cf5d34efe319affccb88a969028f7}\index{UnityEngine.InputSystem.Composites.Vector2Composite@{UnityEngine.InputSystem.Composites.Vector2Composite}!mode@{mode}}
+\index{mode@{mode}!UnityEngine.InputSystem.Composites.Vector2Composite@{UnityEngine.InputSystem.Composites.Vector2Composite}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_a0f1cf5d34efe319affccb88a969028f7} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_aae3ea1593cde66d128765c85d6a1c9dd}{Mode}} Unity\+Engine.\+Input\+System.\+Composites.\+Vector2\+Composite.\+mode}
+
+
+
+How to synthesize a {\ttfamily Vector2} from the values read from \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_a9b9e4d02dce6e3cbb3bd5cc71d0324a2}{up}, \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_ab5a39e31cbf6fe7d759fa2b0726558b9}{down}, \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_af00c252b1502e8f36c356687a9d2d18a}{left}, and \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_a93e8faefbe3c5abbd6f4b3de67da9bcd}{right}. 
+
+Determines how X and Y of the resulting {\ttfamily Vector2} are formed from input values.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ action\ =\ \textcolor{keyword}{new}\ InputAction();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ DigitalNormalized\ composite\ (the\ default).\ Turns\ gamepad\ left\ stick\ into}}
+\DoxyCodeLine{\textcolor{comment}{//\ control\ equivalent\ to\ the\ D-\/Pad.}}
+\DoxyCodeLine{action.AddCompositeBinding(\textcolor{stringliteral}{"{}2DVector(mode=0)"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}up"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftStick/up"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}down"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftStick/down"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}left"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftStick/left"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}right"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftStick/right"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Digital\ composite.\ Turns\ gamepad\ left\ stick\ into\ control\ equivalent}}
+\DoxyCodeLine{\textcolor{comment}{//\ to\ the\ D-\/Pad\ except\ that\ diagonals\ will\ not\ be\ normalized.}}
+\DoxyCodeLine{action.AddCompositeBinding(\textcolor{stringliteral}{"{}2DVector(mode=1)"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}up"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftStick/up"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}down"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftStick/down"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}left"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftStick/left"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}right"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftStick/right"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Analog\ composite.\ In\ this\ case\ results\ in\ setup\ that\ behaves\ exactly}}
+\DoxyCodeLine{\textcolor{comment}{//\ the\ same\ as\ leftStick\ already\ does.\ But\ you\ could\ use\ it,\ for\ example,}}
+\DoxyCodeLine{\textcolor{comment}{//\ to\ swap\ directions\ by\ binding\ "{}up"{}\ to\ leftStick/down\ and\ "{}down"{}\ to}}
+\DoxyCodeLine{\textcolor{comment}{//\ leftStick/up.}}
+\DoxyCodeLine{action.AddCompositeBinding(\textcolor{stringliteral}{"{}2DVector(mode=2)"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}up"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftStick/up"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}down"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftStick/down"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}left"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftStick/left"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}right"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftStick/right"{}});}
+
+\end{DoxyCode}
+ \Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_a93e8faefbe3c5abbd6f4b3de67da9bcd}\index{UnityEngine.InputSystem.Composites.Vector2Composite@{UnityEngine.InputSystem.Composites.Vector2Composite}!right@{right}}
+\index{right@{right}!UnityEngine.InputSystem.Composites.Vector2Composite@{UnityEngine.InputSystem.Composites.Vector2Composite}}
+\doxysubsubsection{\texorpdfstring{right}{right}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_a93e8faefbe3c5abbd6f4b3de67da9bcd} 
+int Unity\+Engine.\+Input\+System.\+Composites.\+Vector2\+Composite.\+right = 0}
+
+
+
+Binding for the button that represents the right (that is, {\ttfamily (1,0)}) direction of the vector. 
+
+This property is automatically assigned by the input system. \Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_a9b9e4d02dce6e3cbb3bd5cc71d0324a2}\index{UnityEngine.InputSystem.Composites.Vector2Composite@{UnityEngine.InputSystem.Composites.Vector2Composite}!up@{up}}
+\index{up@{up}!UnityEngine.InputSystem.Composites.Vector2Composite@{UnityEngine.InputSystem.Composites.Vector2Composite}}
+\doxysubsubsection{\texorpdfstring{up}{up}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite_a9b9e4d02dce6e3cbb3bd5cc71d0324a2} 
+int Unity\+Engine.\+Input\+System.\+Composites.\+Vector2\+Composite.\+up = 0}
+
+
+
+Binding for the button that represents the up (that is, {\ttfamily (0,1)}) direction of the vector. 
+
+This property is automatically assigned by the input system. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Actions/\+Composites/Vector2\+Composite.\+cs\end{DoxyCompactItemize}

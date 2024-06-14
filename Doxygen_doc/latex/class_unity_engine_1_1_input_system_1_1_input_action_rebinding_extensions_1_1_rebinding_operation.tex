@@ -1,0 +1,1079 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation Class Reference}
+\hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{}\label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+
+
+An ongoing rebinding operation.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_af36e12c31fb4e0ab42e424ee38bd8757}{With\+Action}} (\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_aac3d5ed7e12992893ce4049845ff1669}{action}})
+\begin{DoxyCompactList}\small\item\em Perform rebinding on the bindings of the given action. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a924e47ffb172f72ea6a9fcedef54da31}{With\+Matching\+Events\+Being\+Suppressed}} (bool value=true)
+\begin{DoxyCompactList}\small\item\em Prevent all input events that have input matching the rebind operation\textquotesingle{}s configuration from reaching its targeted \doxylink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}s and thus taking effect. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ad26673a826d3971f991b4995d3ad24ee}{With\+Canceling\+Through}} (string binding)
+\begin{DoxyCompactList}\small\item\em Set the control path that is matched against actuated controls. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a7619adaf9ee73afafc940ac59a10a3d8}\label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a7619adaf9ee73afafc940ac59a10a3d8} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} {\bfseries With\+Canceling\+Through} (\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a7aac4f45a6227a41a76d8e636e8803fb}\label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a7aac4f45a6227a41a76d8e636e8803fb} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} {\bfseries With\+Expected\+Control\+Type} (string layout\+Name)
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ad29fc92266e4667f8504f4245c518400}\label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ad29fc92266e4667f8504f4245c518400} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} {\bfseries With\+Expected\+Control\+Type} (Type type)
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a445e12f2a243e9f96ef5e8a70a5ad08f}{With\+Expected\+Control\+Type$<$ TControl $>$}} ()
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a93fe5f40066959a766f8054af6fdd783}{With\+Target\+Binding}} (int binding\+Index)
+\begin{DoxyCompactList}\small\item\em Rebinding a specific \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding} on an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action} as identified by the given index into \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a44fdaf3ff9ffc22609a9df942372d9bb}{Input\+Action.\+bindings}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_aa199a8a30d911b7e50ec7ffecb879512}{With\+Binding\+Mask}} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}}? \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_aef685d847787e77b2684482e0ef2b39d}{binding\+Mask}})
+\begin{DoxyCompactList}\small\item\em Apply the rebinding to all \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a44fdaf3ff9ffc22609a9df942372d9bb}{Input\+Action.\+bindings} of the action given by \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_af36e12c31fb4e0ab42e424ee38bd8757}{With\+Action} which are match the given binding mask (see \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_aa69fd73f446257c84723c95ad8fbcbe8}{Input\+Binding.\+Matches}). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a6a54ffe78c61809916b553ffaa0776b5}{With\+Binding\+Group}} (string group)
+\begin{DoxyCompactList}\small\item\em Apply the rebinding to all \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a44fdaf3ff9ffc22609a9df942372d9bb}{Input\+Action.\+bindings} of the action given by \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_af36e12c31fb4e0ab42e424ee38bd8757}{With\+Action} which are associated with the given binding group (see \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89}{Input\+Binding.\+groups}). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a6a81536d41b4fac656728860cd969d71}{Without\+Generalizing\+Path\+Of\+Selected\+Control}} ()
+\begin{DoxyCompactList}\small\item\em Disable the default behavior of automatically generalizing the path of a selected control. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a0d7a92a0cfe052fa1f87a4441bc1f591}{With\+Rebind\+Adding\+New\+Binding}} (string group=null)
+\begin{DoxyCompactList}\small\item\em Instead of applying the generated path as an \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a7e7675a5787c212984494451948f2a20}{Input\+Binding.\+override\+Path}, create a new binding on the given action (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_af36e12c31fb4e0ab42e424ee38bd8757}{With\+Action}). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a83105c9f736b85d8522b56fe54603008}{With\+Magnitude\+Having\+To\+Be\+Greater\+Than}} (float magnitude)
+\begin{DoxyCompactList}\small\item\em Require actuation of controls to exceed a certain level. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ac61314609d776f04893092f8128db9b1}{Without\+Ignoring\+Noisy\+Controls}} ()
+\begin{DoxyCompactList}\small\item\em Do not ignore input from noisy controls. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a383bdd439f3a7b9dd8e5f81b975d667b}{With\+Controls\+Having\+To\+Match\+Path}} (string path)
+\begin{DoxyCompactList}\small\item\em Restrict candidate controls using a control path (see Input\+Control\+Path). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a56b3317d02527929691e944ab2ea8a66}{With\+Controls\+Excluding}} (string path)
+\begin{DoxyCompactList}\small\item\em Prevent specific controls from being considered as candidate controls. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a5b2ee575bee1b681cec6e998e788e5a9}{With\+Timeout}} (float time\+In\+Seconds)
+\begin{DoxyCompactList}\small\item\em If no match materializes with {\itshape time\+In\+Seconds} , cancel the rebind automatically. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a54b679a7660adb84bb518d6a0e03cd3f}{On\+Complete}} (Action$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} $>$ callback)
+\begin{DoxyCompactList}\small\item\em Delegate to invoke when the rebind completes successfully. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_af7fb52b5e43a10b7d2498d59ffa264c8}{On\+Cancel}} (Action$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} $>$ callback)
+\begin{DoxyCompactList}\small\item\em Delegate to invoke when the rebind is cancelled instead of completing. This happens when either an input is received from a control explicitly set up to trigger cancellation (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ad26673a826d3971f991b4995d3ad24ee}{With\+Canceling\+Through(string)} and With\+Canceling\+Through(\+Input\+Control)) or when \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ac329750c9b5b07e239f0a492d50fe68d}{Cancel} is called explicitly. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ae19211248f344b6e54c8f5457e064072}{On\+Potential\+Match}} (Action$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} $>$ callback)
+\begin{DoxyCompactList}\small\item\em Delegate to invoke when the rebind has found one or more controls that it considers potential matches. This allows modifying priority of matches or adding or removing matches altogether. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a6fb68963e336e34dc2987511d51fa8d0}{On\+Generate\+Path}} (Func$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}, string $>$ callback)
+\begin{DoxyCompactList}\small\item\em Set function to call when generating the final binding path (see \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{Input\+Binding.\+path}) for a control that has been selected. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a8dd415d494caeb548b1f349e273e4043}{On\+Compute\+Score}} (Func$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}, \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr}{Input\+Event\+Ptr}}, float $>$ callback)
+\begin{DoxyCompactList}\small\item\em Delegate to invoke for compute the matching score for a candidate control. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a8070deb2010ceb9e70dc66a4ac850518}{On\+Apply\+Binding}} (Action$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}}, string $>$ callback)
+\begin{DoxyCompactList}\small\item\em Apply a generated binding \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{Input\+Binding.\+path} as the final step to complete a rebind. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a51a7c6d4c45d7763cba6e01f542c6a57}{On\+Match\+Wait\+For\+Another}} (float seconds)
+\begin{DoxyCompactList}\small\item\em If a successful match has been found, wait for the given time for a better match to appear before committing to the match. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_afd67d636edeba0c634e32ce14a0e988f}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Start the rebinding. This should be invoked after the rebind operation has been fully configured. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ac329750c9b5b07e239f0a492d50fe68d}{Cancel}} ()
+\begin{DoxyCompactList}\small\item\em Cancel an ongoing rebind. This will invoke the callback supplied by \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_af7fb52b5e43a10b7d2498d59ffa264c8}{On\+Cancel} (if any). \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a2128f16c03658be62f4a07a4e496fcae}\label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a2128f16c03658be62f4a07a4e496fcae} 
+void {\bfseries Complete} ()
+\begin{DoxyCompactList}\small\item\em Manually complete the rebinding operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a18b5f1e07e26071ef56e8e31b31ae967}{Add\+Candidate}} (\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control, float score, float magnitude=-\/1)
+\begin{DoxyCompactList}\small\item\em Add a candidate to \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56}{candidates}. This will also add values to \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_adc12efbc01eb3464663ac6f565273ff4}{scores} and \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a2b918701f93b0f8837311d0db79ce570}{magnitudes}. If the control has already been added, it\textquotesingle{}s values are simply updated based on the given arguments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a7cfde767ee7331751b1afcfde36021a5}{Remove\+Candidate}} (\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\begin{DoxyCompactList}\small\item\em Remove a control from the list of \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56}{candidates}. This also removes its entries from \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_adc12efbc01eb3464663ac6f565273ff4}{scores} and \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a2b918701f93b0f8837311d0db79ce570}{magnitudes}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ac6759c1113d130ce730333f7c640a0bd}\label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ac6759c1113d130ce730333f7c640a0bd} 
+void {\bfseries Dispose} ()
+\begin{DoxyCompactList}\small\item\em Release all memory held by the option, especially unmanaged memory which will not otherwise be freed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a815eab2ace93dcf6bc406eb4b03a446e}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset the configuration on the rebind. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ac653f5a3ce110222ab8886aded44d698}\label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ac653f5a3ce110222ab8886aded44d698} 
+const float {\bfseries k\+Default\+Magnitude\+Threshold} = 0.\+2f
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_aac3d5ed7e12992893ce4049845ff1669}{action}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The action that rebinding is being performed on. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}}? \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_aef685d847787e77b2684482e0ef2b39d}{binding\+Mask}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Optional mask to determine which bindings to apply overrides to. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list}{Input\+Control\+List}}$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56}{candidates}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity_engine_1_1_input_system_1_1_controls}{Controls} that had input and were deemed potential matches to rebind to. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ float $>$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_adc12efbc01eb3464663ac6f565273ff4}{scores}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The matching score for each control in \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56}{candidates}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ float $>$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a2b918701f93b0f8837311d0db79ce570}{magnitudes}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The matching control actuation level (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Input\+Control.\+Evaluate\+Magnitude()} for each control in \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56}{candidates}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a748439a3cc9433178bcf279710a21e65}{selected\+Control}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The control currently deemed the best candidate. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ab2ca3c47cc57e26b78923be25671d59b}{started}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the rebind is currently in progress. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_add020d5b66f285206b78e13e2ced163d}{completed}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the rebind has been completed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a847fec9e43c023015ebe3fcb57e4e22b}{canceled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the rebind has been cancelled. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a510d7ad72001f410780af6bfe77b4875}\label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a510d7ad72001f410780af6bfe77b4875} 
+double {\bfseries start\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_aafcdc6128b3a3046f7c2af86f3ada1b6}\label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_aafcdc6128b3a3046f7c2af86f3ada1b6} 
+float {\bfseries timeout}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a591c0b6e012dc4fe7ff8c6e540822c69}{expected\+Control\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Name of the control layout that the rebind is looking for. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An ongoing rebinding operation. 
+
+An example for how to use this class comes with the Input \doxylink{namespace_system}{System} package in the form of the "{}\+Rebinding UI"{} sample that can be installed from the Package Manager \doxylink{namespace_unity_engine_1_1_u_i}{UI} in the \doxylink{namespace_unity}{Unity} editor. The sample comes with a reusable {\ttfamily Rebind\+Action\+UI} component that also has a dedicated custom inspector. 
+
+The most convenient way to use this class is by using Input\+Action\+Rebinding\+Extensions.\+Perform\+Interactive\+Rebinding. This method sets up many default behaviors based on the information found in the given action.
+
+Note that instances of this class {\itshape must} be disposed of to not leak memory on the unmanaged heap.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ A\ MonoBehaviour\ that\ can\ be\ hooked\ up\ to\ a\ UI.Button\ control.}}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }RebindButton\ :\ MonoBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ InputActionReference\ m\_Action;\ \textcolor{comment}{//\ Reference\ to\ an\ action\ to\ rebind.}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ m\_BindingIndex;\ \textcolor{comment}{//\ Index\ into\ m\_Action.bindings\ for\ binding\ to\ rebind.}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ Text\ m\_DisplayText;\ \textcolor{comment}{//\ Text\ in\ UI\ that\ receives\ the\ binding\ display\ string.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ OnEnable()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ UpdateDisplayText();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ OnDisable()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_Rebind?.Dispose();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ OnClick()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ rebind\ =\ m\_Action.PerformInteractiveRebinding()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ .WithTargetBinding(m\_BindingIndex)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ .OnComplete(\_\ =>\ UpdateDisplayText())}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ .Start();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ UpdateDisplayText()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_DisplayText.text\ =\ m\_Action.GetBindingDisplayString(m\_BindingIndex);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ RebindingOperation\ m\_Rebind;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{rebind.Start();}
+
+\end{DoxyCode}
+ 
+
+The goal of a rebind is always to generate a control path (see Input\+Control\+Path) usable with a binding. By default, the generated path will be installed in \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a7e7675a5787c212984494451948f2a20}{Input\+Binding.\+override\+Path}. This is non-\/destructive as the original path is left intact in the form of \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{Input\+Binding.\+path}.
+
+This class acts as both a configuration interface for rebinds as well as a controller while the rebind is ongoing. An instance can be reused arbitrary many times. Doing so can avoid allocating additional GC memory (the class internally retains state that it can reuse for multiple rebinds).
+
+Note, however, that during rebinding it can be necessary to look at the Input\+Control\+Layout information registered in the system which means that layouts may have to be loaded. These will be cached for as long as the rebind operation is not disposed of.
+
+To reset the configuration of a rebind operation without releasing its memory, call \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a815eab2ace93dcf6bc406eb4b03a446e}{Reset}. Note that changing configuration while a rebind is in progress in not allowed and will throw Invalid\+Operation\+Exception.
+
+Note that it is also possible to use this class for selecting controls interactively without also having an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action} or even associated \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}s. To set this up, configure the rebind accordingly with the respective methods (such as With\+Expected\+Control\+Type$<$\+Type$>$) and use \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a8070deb2010ceb9e70dc66a4ac850518}{On\+Apply\+Binding} to intercept the binding override process and instead use custom logic to do something with the resulting path (or to even just use the control list found in \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56}{candidates}). 
+
+\begin{DoxySeeAlso}{See also}
+Input\+Action\+Rebinding\+Extensions.\+Perform\+Interactive\+Rebinding
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a18b5f1e07e26071ef56e8e31b31ae967}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!AddCandidate@{AddCandidate}}
+\index{AddCandidate@{AddCandidate}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{AddCandidate()}{AddCandidate()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a18b5f1e07e26071ef56e8e31b31ae967} 
+void Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+Add\+Candidate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}}]{control}{, }\item[{float}]{score}{, }\item[{float}]{magnitude}{ = {\ttfamily -\/1}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a candidate to \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56}{candidates}. This will also add values to \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_adc12efbc01eb3464663ac6f565273ff4}{scores} and \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a2b918701f93b0f8837311d0db79ce570}{magnitudes}. If the control has already been added, it\textquotesingle{}s values are simply updated based on the given arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em control} & A control that is meant to be considered as a candidate for the rebind.\\
+\hline
+{\em score} & The score to associate with the control (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_adc12efbc01eb3464663ac6f565273ff4}{scores}). By default, the control with the highest score will be picked by the rebind.\\
+\hline
+{\em magnitude} & Actuation level of the control to enter into \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a2b918701f93b0f8837311d0db79ce570}{magnitudes}.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & {\itshape control}  is {\ttfamily null}.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a7cfde767ee7331751b1afcfde36021a5}{Remove\+Candidate}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ac329750c9b5b07e239f0a492d50fe68d}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!Cancel@{Cancel}}
+\index{Cancel@{Cancel}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{Cancel()}{Cancel()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ac329750c9b5b07e239f0a492d50fe68d} 
+void Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+Cancel (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Cancel an ongoing rebind. This will invoke the callback supplied by \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_af7fb52b5e43a10b7d2498d59ffa264c8}{On\+Cancel} (if any). 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_afd67d636edeba0c634e32ce14a0e988f}{Start}
+
+
+\end{DoxySeeAlso}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ab2ca3c47cc57e26b78923be25671d59b}{started} \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a8070deb2010ceb9e70dc66a4ac850518}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!OnApplyBinding@{OnApplyBinding}}
+\index{OnApplyBinding@{OnApplyBinding}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{OnApplyBinding()}{OnApplyBinding()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a8070deb2010ceb9e70dc66a4ac850518} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+On\+Apply\+Binding (\begin{DoxyParamCaption}\item[{Action$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}}, string $>$}]{callback}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Apply a generated binding \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{Input\+Binding.\+path} as the final step to complete a rebind. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & Delegate to invoke in order to the apply the generated binding path.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The same \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation} instance.
+\end{DoxyReturn}
+
+
+Once a binding path has been generated (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a6fb68963e336e34dc2987511d51fa8d0}{On\+Generate\+Path}) from a candidate control, the last step is to apply the path. The default logic will take the supplied action (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_af36e12c31fb4e0ab42e424ee38bd8757}{With\+Action}) and apply the path as an \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a7e7675a5787c212984494451948f2a20}{Input\+Binding.\+override\+Path} on all bindings that have been selected for rebinding with \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a93fe5f40066959a766f8054af6fdd783}{With\+Target\+Binding}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_aa199a8a30d911b7e50ec7ffecb879512}{With\+Binding\+Mask}, or \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a6a54ffe78c61809916b553ffaa0776b5}{With\+Binding\+Group}.
+
+To customize this process, you can supply a custom delegate via this method. If you do so, the default logic is bypassed and the step left entirely to the delegate. This also makes it possible to use rebind operations without even having an action or even \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}s. \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_af7fb52b5e43a10b7d2498d59ffa264c8}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!OnCancel@{OnCancel}}
+\index{OnCancel@{OnCancel}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{OnCancel()}{OnCancel()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_af7fb52b5e43a10b7d2498d59ffa264c8} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+On\+Cancel (\begin{DoxyParamCaption}\item[{Action$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} $>$}]{callback}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Delegate to invoke when the rebind is cancelled instead of completing. This happens when either an input is received from a control explicitly set up to trigger cancellation (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ad26673a826d3971f991b4995d3ad24ee}{With\+Canceling\+Through(string)} and With\+Canceling\+Through(\+Input\+Control)) or when \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ac329750c9b5b07e239f0a492d50fe68d}{Cancel} is called explicitly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & Delegate to invoke when the rebind is cancelled.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ad26673a826d3971f991b4995d3ad24ee}{With\+Canceling\+Through(string)}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ac329750c9b5b07e239f0a492d50fe68d}{Cancel}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a847fec9e43c023015ebe3fcb57e4e22b}{canceled}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a54b679a7660adb84bb518d6a0e03cd3f}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!OnComplete@{OnComplete}}
+\index{OnComplete@{OnComplete}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{OnComplete()}{OnComplete()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a54b679a7660adb84bb518d6a0e03cd3f} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+On\+Complete (\begin{DoxyParamCaption}\item[{Action$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} $>$}]{callback}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Delegate to invoke when the rebind completes successfully. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & A delegate to invoke when the rebind is \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_add020d5b66f285206b78e13e2ced163d}{completed}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The same \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation} instance.
+\end{DoxyReturn}
+
+
+Note that by the time this is invoked, the rebind has been fully applied, that is \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a8070deb2010ceb9e70dc66a4ac850518}{On\+Apply\+Binding} has been executed. \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a8dd415d494caeb548b1f349e273e4043}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!OnComputeScore@{OnComputeScore}}
+\index{OnComputeScore@{OnComputeScore}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{OnComputeScore()}{OnComputeScore()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a8dd415d494caeb548b1f349e273e4043} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+On\+Compute\+Score (\begin{DoxyParamCaption}\item[{Func$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}, \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr}{Input\+Event\+Ptr}}, float $>$}]{callback}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Delegate to invoke for compute the matching score for a candidate control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & A delegate that computes matching scores.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The same \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation} instance.
+\end{DoxyReturn}
+
+
+By default, the actuation level of a control is used as its matching score. For a \doxylink{class_unity_engine_1_1_input_system_1_1_controls_1_1_stick_control}{Controls.\+Stick\+Control}, for example, the vector magnitude of the control will be its score. So, a stick that is actuated just a little will have a lower score than a stick that is actuated to maximum extent in one direction.
+
+The control with the highest score will be the one appearing at index 0 in \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56}{candidates} and thus will be the control picked by the rebind as the top candidate.
+
+By installing a custom delegate, it is possible to customize the scoring and apply custom logic to boost or lower scores of controls.
+
+The first argument to the delegate is the control that is being added to \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56}{candidates} and the second argument is a pointer to the input event that contains an input on the control. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_adc12efbc01eb3464663ac6f565273ff4}{scores}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56}{candidates}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a6fb68963e336e34dc2987511d51fa8d0}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!OnGeneratePath@{OnGeneratePath}}
+\index{OnGeneratePath@{OnGeneratePath}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{OnGeneratePath()}{OnGeneratePath()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a6fb68963e336e34dc2987511d51fa8d0} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+On\+Generate\+Path (\begin{DoxyParamCaption}\item[{Func$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}, string $>$}]{callback}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set function to call when generating the final binding path (see \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{Input\+Binding.\+path}) for a control that has been selected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & Delegate to call for when to generate a binding path.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The same \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation} instance.
+\end{DoxyReturn}
+
+
+A rebind will by default create a path that it deems most useful for the purpose of rebinding. However, this logic may be undesirable for your use case. By supplying a custom callback you can bypass this logic and thus replace it.
+
+When a matching control is singled out, the default logic will look for the device that introduces the given control. For example, if the A button is pressed on an Xbox gamepad, the resulting path will be {\ttfamily "{}<\+Gamepad>/button\+South"{}} as it is the \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad}{Gamepad} device that introduces the south face button on gamepads. Thus, the binding will work with any other gamepad, not just the Xbox controller.
+
+If the delegate returns a null or empty string, the default logic will be re-\/engaged. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{Input\+Binding.\+path}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a6a81536d41b4fac656728860cd969d71}{Without\+Generalizing\+Path\+Of\+Selected\+Control}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a51a7c6d4c45d7763cba6e01f542c6a57}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!OnMatchWaitForAnother@{OnMatchWaitForAnother}}
+\index{OnMatchWaitForAnother@{OnMatchWaitForAnother}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{OnMatchWaitForAnother()}{OnMatchWaitForAnother()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a51a7c6d4c45d7763cba6e01f542c6a57} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+On\+Match\+Wait\+For\+Another (\begin{DoxyParamCaption}\item[{float}]{seconds}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+If a successful match has been found, wait for the given time for a better match to appear before committing to the match. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seconds} & Time in seconds to wait until committing to a match.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The same \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation} instance.
+\end{DoxyReturn}
+
+
+While this adds a certain amount of lag to the operation, the lag is not really perceptible if the timeout is kept short.
+
+What this helps with is controls such as sticks where, when moved out of the deadzone, the initial direction that the user presses may not be the one actually intended. For example, the user may be pressing slightly more in the X direction before finally very clearly going more strongly in the Y direction. If the rebind does not wait for a bit but instead takes the first actuation as is, the rebind may appear overly brittle.
+
+An alternative to timeouts is to set higher magnitude thresholds with \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a83105c9f736b85d8522b56fe54603008}{With\+Magnitude\+Having\+To\+Be\+Greater\+Than}. The default threshold is 0.\+2f. By setting it to 0.\+6f or even higher, timeouts may be unnecessary. \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ae19211248f344b6e54c8f5457e064072}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!OnPotentialMatch@{OnPotentialMatch}}
+\index{OnPotentialMatch@{OnPotentialMatch}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{OnPotentialMatch()}{OnPotentialMatch()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ae19211248f344b6e54c8f5457e064072} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+On\+Potential\+Match (\begin{DoxyParamCaption}\item[{Action$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} $>$}]{callback}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Delegate to invoke when the rebind has found one or more controls that it considers potential matches. This allows modifying priority of matches or adding or removing matches altogether. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & Callback to invoke when one or more suitable controls have been found.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The same \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation} instance.
+\end{DoxyReturn}
+
+
+The matches will be contained in \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56}{candidates}. In the callback, you can, for example, alter the contents of the list in order to customize the selection process. You can remove candidates with \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a18b5f1e07e26071ef56e8e31b31ae967}{Add\+Candidate} and/or remove candidates with \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a7cfde767ee7331751b1afcfde36021a5}{Remove\+Candidate}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56}{candidates}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a7cfde767ee7331751b1afcfde36021a5}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!RemoveCandidate@{RemoveCandidate}}
+\index{RemoveCandidate@{RemoveCandidate}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{RemoveCandidate()}{RemoveCandidate()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a7cfde767ee7331751b1afcfde36021a5} 
+void Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+Remove\+Candidate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}}]{control}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove a control from the list of \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56}{candidates}. This also removes its entries from \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_adc12efbc01eb3464663ac6f565273ff4}{scores} and \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a2b918701f93b0f8837311d0db79ce570}{magnitudes}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em control} & Control to remove from \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56}{candidates}.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & {\itshape control}  is {\ttfamily null}.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a18b5f1e07e26071ef56e8e31b31ae967}{Add\+Candidate}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a815eab2ace93dcf6bc406eb4b03a446e}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!Reset@{Reset}}
+\index{Reset@{Reset}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a815eab2ace93dcf6bc406eb4b03a446e} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reset the configuration on the rebind. 
+
+\begin{DoxyReturn}{Returns}
+The same \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation} instance.
+\end{DoxyReturn}
+
+
+Call this method to reset the effects of calling methods such as \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_af36e12c31fb4e0ab42e424ee38bd8757}{With\+Action}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a6a54ffe78c61809916b553ffaa0776b5}{With\+Binding\+Group}, etc. but retain other data that the rebind operation may have allocated already. If you are reusing the same {\ttfamily \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} multiple times, a good strategy is to reset and reconfigure the operation before starting it again. \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_afd67d636edeba0c634e32ce14a0e988f}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!Start@{Start}}
+\index{Start@{Start}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_afd67d636edeba0c634e32ce14a0e988f} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Start the rebinding. This should be invoked after the rebind operation has been fully configured. 
+
+\begin{DoxyReturn}{Returns}
+The same \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation} instance.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & The rebind has been configure incorrectly. For example, no action has been given but no \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a8070deb2010ceb9e70dc66a4ac850518}{On\+Apply\+Binding} callback has been installed either.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ac329750c9b5b07e239f0a492d50fe68d}{Cancel}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ac6759c1113d130ce730333f7c640a0bd}{Dispose}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_af36e12c31fb4e0ab42e424ee38bd8757}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!WithAction@{WithAction}}
+\index{WithAction@{WithAction}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{WithAction()}{WithAction()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_af36e12c31fb4e0ab42e424ee38bd8757} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+With\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}}}]{action}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Perform rebinding on the bindings of the given action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & Action to perform rebinding on.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The same \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation} instance.
+\end{DoxyReturn}
+
+
+Note that by default, a rebind does not have a binding mask or any other setting that constrains which binding the rebind is applied to. This means that if the action has multiple bindings, all of them will have overrides applied to them.
+
+To target specific bindings, either set a binding index with \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a93fe5f40066959a766f8054af6fdd783}{With\+Target\+Binding}, or set a binding mask with \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_aa199a8a30d911b7e50ec7ffecb879512}{With\+Binding\+Mask} or \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a6a54ffe78c61809916b553ffaa0776b5}{With\+Binding\+Group}.
+
+If the action has an associated \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_ab0330ac2a9ede3454cb0c092ac0a7bcb}{Input\+Action.\+expected\+Control\+Type} set, it will automatically be passed to With\+Expected\+Control\+Type(string). 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & {\itshape action}  is {\ttfamily null}.\\
+\hline
+{\em Invalid\+Operation\+Exception} & {\itshape action}  is currently enabled.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+Perform\+Interactive\+Rebinding
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a6a54ffe78c61809916b553ffaa0776b5}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!WithBindingGroup@{WithBindingGroup}}
+\index{WithBindingGroup@{WithBindingGroup}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{WithBindingGroup()}{WithBindingGroup()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a6a54ffe78c61809916b553ffaa0776b5} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+With\+Binding\+Group (\begin{DoxyParamCaption}\item[{string}]{group}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Apply the rebinding to all \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a44fdaf3ff9ffc22609a9df942372d9bb}{Input\+Action.\+bindings} of the action given by \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_af36e12c31fb4e0ab42e424ee38bd8757}{With\+Action} which are associated with the given binding group (see \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89}{Input\+Binding.\+groups}). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em group} & A binding group. See \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89}{Input\+Binding.\+groups}. A binding matches if any of its group associates matches.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The same \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation} instance.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_aa199a8a30d911b7e50ec7ffecb879512}{With\+Binding\+Mask}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a93fe5f40066959a766f8054af6fdd783}{With\+Target\+Binding}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_aa199a8a30d911b7e50ec7ffecb879512}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!WithBindingMask@{WithBindingMask}}
+\index{WithBindingMask@{WithBindingMask}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{WithBindingMask()}{WithBindingMask()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_aa199a8a30d911b7e50ec7ffecb879512} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+With\+Binding\+Mask (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}}?}]{binding\+Mask}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Apply the rebinding to all \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a44fdaf3ff9ffc22609a9df942372d9bb}{Input\+Action.\+bindings} of the action given by \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_af36e12c31fb4e0ab42e424ee38bd8757}{With\+Action} which are match the given binding mask (see \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_aa69fd73f446257c84723c95ad8fbcbe8}{Input\+Binding.\+Matches}). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em binding\+Mask} & A binding mask. See \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_aa69fd73f446257c84723c95ad8fbcbe8}{Input\+Binding.\+Matches}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The same \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation} instance.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a6a54ffe78c61809916b553ffaa0776b5}{With\+Binding\+Group}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a93fe5f40066959a766f8054af6fdd783}{With\+Target\+Binding}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ad26673a826d3971f991b4995d3ad24ee}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!WithCancelingThrough@{WithCancelingThrough}}
+\index{WithCancelingThrough@{WithCancelingThrough}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{WithCancelingThrough()}{WithCancelingThrough()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ad26673a826d3971f991b4995d3ad24ee} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+With\+Canceling\+Through (\begin{DoxyParamCaption}\item[{string}]{binding}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the control path that is matched against actuated controls. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em binding} & A control path (see Input\+Control\+Path) such as {\ttfamily "{}<\+Keyboard>/escape"{}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The same \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation} instance.
+\end{DoxyReturn}
+
+
+Note that every rebind operation has only one such path. Calling this method repeatedly will overwrite the path set from prior calls.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ rebind\ =\ \textcolor{keyword}{new}\ RebindingOperation();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Cancel\ from\ keyboard\ escape\ key.}}
+\DoxyCodeLine{rebind}
+\DoxyCodeLine{\ \ \ \ .WithCancelingThrough(\textcolor{stringliteral}{"{}<Keyboard>/escape"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Cancel\ from\ any\ control\ with\ "{}Cancel"{}\ usage.}}
+\DoxyCodeLine{\textcolor{comment}{//\ NOTE:\ This\ can\ be\ dangerous.\ The\ control\ that\ the\ wants\ to\ bind\ to\ may\ have\ the\ "{}Cancel"{}}}
+\DoxyCodeLine{\textcolor{comment}{//\ \ \ \ \ \ \ usage\ assigned\ to\ it,\ thus\ making\ it\ impossible\ for\ the\ user\ to\ bind\ to\ the\ control.}}
+\DoxyCodeLine{rebind}
+\DoxyCodeLine{\ \ \ \ .WithCancelingThrough(\textcolor{stringliteral}{"{}*\&zwj;/\{Cancel\}"{}});}
+
+\end{DoxyCode}
+ \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a56b3317d02527929691e944ab2ea8a66}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!WithControlsExcluding@{WithControlsExcluding}}
+\index{WithControlsExcluding@{WithControlsExcluding}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{WithControlsExcluding()}{WithControlsExcluding()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a56b3317d02527929691e944ab2ea8a66} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+With\+Controls\+Excluding (\begin{DoxyParamCaption}\item[{string}]{path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prevent specific controls from being considered as candidate controls. 
+
+REVIEW\+: This API has been confusing for users who usually will do something like With\+Controls\+Excluding("{}\+Mouse"{}); find a more intuitive way to do this
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & A control path. See Input\+Control\+Path.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The same \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation} instance.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & {\itshape path}  is {\ttfamily null} or empty.\\
+\hline
+\end{DoxyExceptions}
+
+
+Some controls can be undesirable to include in the candidate selection process even though they constitute valid, non-\/noise user input. For example, in a desktop application, the mouse will usually be used to navigate the \doxylink{namespace_unity_engine_1_1_u_i}{UI} including a rebinding \doxylink{namespace_unity_engine_1_1_u_i}{UI} that makes use of \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}. It can thus be advisable to exclude specific pointer controls like so\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{rebind}
+\DoxyCodeLine{\ \ \ \ .WithControlsExcluding(\textcolor{stringliteral}{"{}<Pointer>/position"{}})\ \textcolor{comment}{//\ Don't\ bind\ to\ mouse\ position}}
+\DoxyCodeLine{\ \ \ \ .WithControlsExcluding(\textcolor{stringliteral}{"{}<Pointer>/delta"{}})\ \textcolor{comment}{//\ Don't\ bind\ to\ mouse\ movement\ deltas}}
+\DoxyCodeLine{\ \ \ \ .WithControlsExcluding(\textcolor{stringliteral}{"{}<Pointer>/\{PrimaryAction\}"{}})\ \textcolor{comment}{//\ don't\ bind\ to\ controls\ such\ as\ leftButton\ and\ taps.}}
+
+\end{DoxyCode}
+ 
+
+This method can be called repeatedly to add multiple exclusions. To reset the list, call \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a815eab2ace93dcf6bc406eb4b03a446e}{Reset}. 
+
+\begin{DoxySeeAlso}{See also}
+Input\+Control\+Path.\+Matches
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a383bdd439f3a7b9dd8e5f81b975d667b}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!WithControlsHavingToMatchPath@{WithControlsHavingToMatchPath}}
+\index{WithControlsHavingToMatchPath@{WithControlsHavingToMatchPath}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{WithControlsHavingToMatchPath()}{WithControlsHavingToMatchPath()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a383bdd439f3a7b9dd8e5f81b975d667b} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+With\+Controls\+Having\+To\+Match\+Path (\begin{DoxyParamCaption}\item[{string}]{path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Restrict candidate controls using a control path (see Input\+Control\+Path). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & A control path. See Input\+Control\+Path.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The same \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation} instance.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & {\itshape path}  is {\ttfamily null} or empty.\\
+\hline
+\end{DoxyExceptions}
+
+
+This method is most useful to, for example, restrict controls to specific types of devices. If, say, you want to let the player only bind to gamepads, you can do so using
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{rebind.WithControlsHavingToMatchPath(\textcolor{stringliteral}{"{}<Gamepad>"{}});}
+
+\end{DoxyCode}
+ 
+
+This method can be called repeatedly to add multiple paths. The effect is that candidates are accepted if {\itshape any} of the given paths matches. To reset the list, call \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a815eab2ace93dcf6bc406eb4b03a446e}{Reset}. 
+
+\begin{DoxySeeAlso}{See also}
+Input\+Control\+Path.\+Matches
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a445e12f2a243e9f96ef5e8a70a5ad08f}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!WithExpectedControlType$<$ TControl $>$@{WithExpectedControlType$<$ TControl $>$}}
+\index{WithExpectedControlType$<$ TControl $>$@{WithExpectedControlType$<$ TControl $>$}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{WithExpectedControlType$<$ TControl $>$()}{WithExpectedControlType< TControl >()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a445e12f2a243e9f96ef5e8a70a5ad08f} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+With\+Expected\+Control\+Type$<$ TControl $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TControl} : {\em Input\+Control}]\end{description}
+\end{Desc}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a83105c9f736b85d8522b56fe54603008}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!WithMagnitudeHavingToBeGreaterThan@{WithMagnitudeHavingToBeGreaterThan}}
+\index{WithMagnitudeHavingToBeGreaterThan@{WithMagnitudeHavingToBeGreaterThan}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{WithMagnitudeHavingToBeGreaterThan()}{WithMagnitudeHavingToBeGreaterThan()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a83105c9f736b85d8522b56fe54603008} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+With\+Magnitude\+Having\+To\+Be\+Greater\+Than (\begin{DoxyParamCaption}\item[{float}]{magnitude}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Require actuation of controls to exceed a certain level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em magnitude} & Minimum magnitude threshold that has to be reached on a control for it to be considered a candidate. See \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Input\+Control.\+Evaluate\+Magnitude()} for details about magnitude evaluations.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The same \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation} instance.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & {\itshape magnitude}  is negative.\\
+\hline
+\end{DoxyExceptions}
+
+
+Rebind operations use a default threshold of 0.\+2. This means that the actuation level of any control as returned by \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Input\+Control.\+Evaluate\+Magnitude()} must be equal or greater than 0.\+2 for it to be considered a potential candidate. This helps filter out controls that are actuated incidentally as part of actuating other controls.
+
+For example, if the player wants to bind an action to the X axis of the gamepad\textquotesingle{}s right stick, the player will almost unavoidably also actuate the Y axis to a certain degree. However, if actuation of the Y axis stays under 2.\+0, it will automatically get filtered out.
+
+Note that the magnitude threshold is not the only mechanism that helps trying to find the most actuated control. In fact, all controls will eventually be sorted by magnitude of actuation so even if both X and Y of a stick make it into the candidate list, if X is actuated more strongly than Y, it will be favored.
+
+Note that you can also use this method to {\itshape lower} the default threshold of 0.\+2 in case you want more controls to make it through the matching process. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a2b918701f93b0f8837311d0db79ce570}{magnitudes}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Input\+Control.\+Evaluate\+Magnitude()}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a924e47ffb172f72ea6a9fcedef54da31}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!WithMatchingEventsBeingSuppressed@{WithMatchingEventsBeingSuppressed}}
+\index{WithMatchingEventsBeingSuppressed@{WithMatchingEventsBeingSuppressed}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{WithMatchingEventsBeingSuppressed()}{WithMatchingEventsBeingSuppressed()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a924e47ffb172f72ea6a9fcedef54da31} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+With\+Matching\+Events\+Being\+Suppressed (\begin{DoxyParamCaption}\item[{bool}]{value}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prevent all input events that have input matching the rebind operation\textquotesingle{}s configuration from reaching its targeted \doxylink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}s and thus taking effect. 
+
+\begin{DoxyReturn}{Returns}
+The same \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation} instance.
+\end{DoxyReturn}
+
+
+While rebinding interactively, it is usually for the most part undesirable for input to actually have an effect. For example, when rebind gamepad input, pressing the "{}\+A"{} button should not lead to a "{}submit"{} action in the \doxylink{namespace_unity_engine_1_1_u_i}{UI}. For this reason, a rebind can be configured to automatically swallow any input event except the ones having input on controls matching \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a56b3317d02527929691e944ab2ea8a66}{With\+Controls\+Excluding}.
+
+Not at all input necessarily should be suppressed. For example, it can be desirable to have \doxylink{namespace_unity_engine_1_1_u_i}{UI} that allows the user to cancel an ongoing rebind by clicking with the mouse. This means that mouse position and click input should come through. For this reason, input from controls matching \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a56b3317d02527929691e944ab2ea8a66}{With\+Controls\+Excluding} is still let through. \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a6a81536d41b4fac656728860cd969d71}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!WithoutGeneralizingPathOfSelectedControl@{WithoutGeneralizingPathOfSelectedControl}}
+\index{WithoutGeneralizingPathOfSelectedControl@{WithoutGeneralizingPathOfSelectedControl}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{WithoutGeneralizingPathOfSelectedControl()}{WithoutGeneralizingPathOfSelectedControl()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a6a81536d41b4fac656728860cd969d71} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+Without\+Generalizing\+Path\+Of\+Selected\+Control (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Disable the default behavior of automatically generalizing the path of a selected control. 
+
+\begin{DoxyReturn}{Returns}
+The same \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation} instance.
+\end{DoxyReturn}
+
+
+At runtime, every \doxylink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control} has a unique path in the system (\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a60d8e17e65b94f2cf7a0ce7f10af0075}{Input\+Control.\+path}). However, when performing rebinds, we are not generally interested in the specific runtime path of the control -- which may depend on the number and types of devices present. In fact, most of the time we are not even interested in what particular brand of device the user is rebinding to but rather want to just bind based on the device\textquotesingle{}s broad category.
+
+For example, if the user has a \doxylink{namespace_unity_engine_1_1_input_system_1_1_dual_shock}{Dual\+Shock} controller and performs an interactive rebind, we usually do not want to generate override paths that reflects that the input specifically came from a \doxylink{namespace_unity_engine_1_1_input_system_1_1_dual_shock}{Dual\+Shock} controller. Rather, we\textquotesingle{}re usually interested in the fact that it came from a gamepad. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a7e7675a5787c212984494451948f2a20}{Input\+Binding.\+override\+Path}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a6fb68963e336e34dc2987511d51fa8d0}{On\+Generate\+Path}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ac61314609d776f04893092f8128db9b1}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!WithoutIgnoringNoisyControls@{WithoutIgnoringNoisyControls}}
+\index{WithoutIgnoringNoisyControls@{WithoutIgnoringNoisyControls}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{WithoutIgnoringNoisyControls()}{WithoutIgnoringNoisyControls()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ac61314609d776f04893092f8128db9b1} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+Without\+Ignoring\+Noisy\+Controls (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Do not ignore input from noisy controls. 
+
+\begin{DoxyReturn}{Returns}
+The same \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation} instance.
+\end{DoxyReturn}
+
+
+By default, noisy controls are ignored for rebinds. This means that, for example, a gyro inside a gamepad will not be considered as a potential candidate control as it is hard to tell valid user interaction on the control apart from random jittering that occurs on noisy controls.
+
+By calling this method, this behavior can be disabled. This is usually only useful when implementing custom candidate selection through \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ae19211248f344b6e54c8f5457e064072}{On\+Potential\+Match}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_afa5a8531d7c9a030e8e484560a59fe6f}{Input\+Control.\+noisy}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a0d7a92a0cfe052fa1f87a4441bc1f591}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!WithRebindAddingNewBinding@{WithRebindAddingNewBinding}}
+\index{WithRebindAddingNewBinding@{WithRebindAddingNewBinding}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{WithRebindAddingNewBinding()}{WithRebindAddingNewBinding()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a0d7a92a0cfe052fa1f87a4441bc1f591} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+With\+Rebind\+Adding\+New\+Binding (\begin{DoxyParamCaption}\item[{string}]{group}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Instead of applying the generated path as an \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a7e7675a5787c212984494451948f2a20}{Input\+Binding.\+override\+Path}, create a new binding on the given action (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_af36e12c31fb4e0ab42e424ee38bd8757}{With\+Action}). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em group} & Binding group (see \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89}{Input\+Binding.\+groups}) to apply to the new binding. This determines, for example, which control scheme (if any) the binding is associated with.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a8070deb2010ceb9e70dc66a4ac850518}{On\+Apply\+Binding}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a93fe5f40066959a766f8054af6fdd783}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!WithTargetBinding@{WithTargetBinding}}
+\index{WithTargetBinding@{WithTargetBinding}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{WithTargetBinding()}{WithTargetBinding()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a93fe5f40066959a766f8054af6fdd783} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+With\+Target\+Binding (\begin{DoxyParamCaption}\item[{int}]{binding\+Index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rebinding a specific \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding} on an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action} as identified by the given index into \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a44fdaf3ff9ffc22609a9df942372d9bb}{Input\+Action.\+bindings}. 
+
+TODO\+: allow targeting bindings by name (i.\+e. be able to say With\+Target\+Binding("{}\+Left"{}))
+
+
+\begin{DoxyParams}{Parameters}
+{\em binding\+Index} & Index into \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a44fdaf3ff9ffc22609a9df942372d9bb}{Input\+Action.\+bindings} of the action supplied by \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_af36e12c31fb4e0ab42e424ee38bd8757}{With\+Action}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The same \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation} instance.
+\end{DoxyReturn}
+
+
+Note that if the given binding is a part binding of a composite (see \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a9ee5ad4271b040400541e1fb6f94bcbe}{Input\+Binding.\+is\+Part\+Of\+Composite}), then the expected control type (see With\+Expected\+Control\+Type(string)) is implicitly changed to match the type of control expected by the given part. If, for example, the composite the part belongs to is a \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite}{Composites.\+Vector2\+Composite}, then the expected control type is implicitly changed to \doxylink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Controls.\+Button\+Control}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ an\ action\ with\ a\ WASD\ setup.}}
+\DoxyCodeLine{var\ moveAction\ =\ \textcolor{keyword}{new}\ InputAction(\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a591c0b6e012dc4fe7ff8c6e540822c69}{expectedControlType}}:\ \textcolor{stringliteral}{"{}Vector2"{}});}
+\DoxyCodeLine{moveAction.AddCompositeBinding(\textcolor{stringliteral}{"{}2DVector"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Up"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/w"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Down"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/s"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Left"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/a"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Right"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/d"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Start\ a\ rebind\ of\ the\ "{}Up"{}\ binding.}}
+\DoxyCodeLine{moveAction.PerformInteractiveRebinding()}
+\DoxyCodeLine{\ \ \ \ .WithTargetBinding(1)}
+\DoxyCodeLine{\ \ \ \ .Start();}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Out\+Of\+Range\+Exception} & {\itshape binding\+Index}  is negative.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_af36e12c31fb4e0ab42e424ee38bd8757}{With\+Action}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a44fdaf3ff9ffc22609a9df942372d9bb}{Input\+Action.\+bindings}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_aa199a8a30d911b7e50ec7ffecb879512}{With\+Binding\+Mask}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a6a54ffe78c61809916b553ffaa0776b5}{With\+Binding\+Group}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a5b2ee575bee1b681cec6e998e788e5a9}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!WithTimeout@{WithTimeout}}
+\index{WithTimeout@{WithTimeout}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{WithTimeout()}{WithTimeout()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a5b2ee575bee1b681cec6e998e788e5a9} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+With\+Timeout (\begin{DoxyParamCaption}\item[{float}]{time\+In\+Seconds}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+If no match materializes with {\itshape time\+In\+Seconds} , cancel the rebind automatically. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+In\+Seconds} & Time in seconds to wait for a successful rebind. Disabled if timeout is less than or equal to 0.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The same \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Rebinding\+Operation} instance.
+\end{DoxyReturn}
+
+
+Limiting rebinds by time can be useful in situations where a rebind may potentially put the user in a situation where there is no other way to escape the rebind. For example, if \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a924e47ffb172f72ea6a9fcedef54da31}{With\+Matching\+Events\+Being\+Suppressed} is engaged, input may be consumed by the rebind and thus not reach the \doxylink{namespace_unity_engine_1_1_u_i}{UI} if \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a56b3317d02527929691e944ab2ea8a66}{With\+Controls\+Excluding} has not also been configured accordingly.
+
+By default, no timeout is set. 
+
+\begin{DoxySeeAlso}{See also}
+timeout
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_aac3d5ed7e12992893ce4049845ff1669}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!action@{action}}
+\index{action@{action}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{action}{action}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_aac3d5ed7e12992893ce4049845ff1669} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+action\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The action that rebinding is being performed on. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_af36e12c31fb4e0ab42e424ee38bd8757}{With\+Action}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_aef685d847787e77b2684482e0ef2b39d}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!bindingMask@{bindingMask}}
+\index{bindingMask@{bindingMask}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{bindingMask}{bindingMask}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_aef685d847787e77b2684482e0ef2b39d} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}}? Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+binding\+Mask\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Optional mask to determine which bindings to apply overrides to. 
+
+If this is not null, all bindings that match this mask will have overrides applied to them. \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a847fec9e43c023015ebe3fcb57e4e22b}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!canceled@{canceled}}
+\index{canceled@{canceled}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{canceled}{canceled}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a847fec9e43c023015ebe3fcb57e4e22b} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+canceled\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Whether the rebind has been cancelled. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_af7fb52b5e43a10b7d2498d59ffa264c8}{On\+Cancel}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!candidates@{candidates}}
+\index{candidates@{candidates}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{candidates}{candidates}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list}{Input\+Control\+List}}$<$\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}$>$ Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+candidates\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+\doxylink{namespace_unity_engine_1_1_input_system_1_1_controls}{Controls} that had input and were deemed potential matches to rebind to. 
+
+however, exposing through an interface will lead to boxing...
+
+\doxylink{namespace_unity_engine_1_1_input_system_1_1_controls}{Controls} in the list should be ordered by priority with the first element in the list being considered the best match. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a18b5f1e07e26071ef56e8e31b31ae967}{Add\+Candidate}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a7cfde767ee7331751b1afcfde36021a5}{Remove\+Candidate}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_adc12efbc01eb3464663ac6f565273ff4}{scores}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a2b918701f93b0f8837311d0db79ce570}{magnitudes}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_add020d5b66f285206b78e13e2ced163d}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!completed@{completed}}
+\index{completed@{completed}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{completed}{completed}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_add020d5b66f285206b78e13e2ced163d} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+completed\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Whether the rebind has been completed. 
+
+True if the rebind has been completed.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a54b679a7660adb84bb518d6a0e03cd3f}{On\+Complete(\+Action$<$\+Rebinding\+Operation$>$)}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a54b679a7660adb84bb518d6a0e03cd3f}{On\+Complete}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a591c0b6e012dc4fe7ff8c6e540822c69}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!expectedControlType@{expectedControlType}}
+\index{expectedControlType@{expectedControlType}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{expectedControlType}{expectedControlType}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a591c0b6e012dc4fe7ff8c6e540822c69} 
+string Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+expected\+Control\+Type\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Name of the control layout that the rebind is looking for. 
+
+This is optional but in general, rebinds will be more successful when the operation knows what kind of input it is looking for.
+
+If an action is supplied with \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_af36e12c31fb4e0ab42e424ee38bd8757}{With\+Action} (automatically done by Input\+Action\+Rebinding\+Extensions.\+Perform\+Interactive\+Rebinding), the expected control type is automatically set to \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_ab0330ac2a9ede3454cb0c092ac0a7bcb}{Input\+Action.\+expected\+Control\+Type} or, if that is not set, to {\ttfamily "{}\+Button"{}} in case the action has type \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}{Input\+Action\+Type.\+Button}.
+
+If a binding is supplied with \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a93fe5f40066959a766f8054af6fdd783}{With\+Target\+Binding} and the binding is a part binding (see \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a9ee5ad4271b040400541e1fb6f94bcbe}{Input\+Binding.\+is\+Part\+Of\+Composite}), the expected control type is automatically set to that expected by the respective part of the composite.
+
+If this is set, any input on controls that are not of the expected type is ignored. If this is not set, any control that matches all of the other criteria is considered for rebinding. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a8d349861ff83c7a74573bea9a2cf2886}{Input\+Control.\+layout}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_ab0330ac2a9ede3454cb0c092ac0a7bcb}{Input\+Action.\+expected\+Control\+Type}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a2b918701f93b0f8837311d0db79ce570}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!magnitudes@{magnitudes}}
+\index{magnitudes@{magnitudes}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{magnitudes}{magnitudes}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a2b918701f93b0f8837311d0db79ce570} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$float$>$ Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+magnitudes\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The matching control actuation level (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Input\+Control.\+Evaluate\+Magnitude()} for each control in \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56}{candidates}. 
+
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Input\+Control.\+Evaluate\+Magnitude()} result for each \doxylink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control} in \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56}{candidates}.
+
+This array mirrors \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56}{candidates}, i.\+e. each entry corresponds to the entry in \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56}{candidates} at the same index. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Input\+Control.\+Evaluate\+Magnitude()}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56}{candidates}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_adc12efbc01eb3464663ac6f565273ff4}{scores}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_adc12efbc01eb3464663ac6f565273ff4}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!scores@{scores}}
+\index{scores@{scores}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{scores}{scores}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_adc12efbc01eb3464663ac6f565273ff4} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$float$>$ Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+scores\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The matching score for each control in \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56}{candidates}. 
+
+A relative floating-\/point score for each control in \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56}{candidates}.
+
+Candidates are ranked and sorted by their score. By default, a score is computed for each candidate control automatically. However, this can be overridden using \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a8dd415d494caeb548b1f349e273e4043}{On\+Compute\+Score}.
+
+Default scores are directly based on magnitudes (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Input\+Control.\+Evaluate\+Magnitude()}). The greater the magnitude of actuation, the greater the score associated with the control. This means, for example, that if both X and Y are actuated on a gamepad stick, the axis with the greater amount of actuation will get scored higher and thus be more likely to get picked.
+
+In addition, 1 is added to each default score if the respective control is non-\/synthetic (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a11348388ab9565068c0f1294de909b90}{Input\+Control.\+synthetic}). This will give controls that correspond to actual controls present on the device precedence over those added internally. For example, if both are actuated, the synthetic \doxylink{class_unity_engine_1_1_input_system_1_1_controls_1_1_stick_control_a8eead7497ff7ca10a99ae1f843d907d8}{Controls.\+Stick\+Control.\+up} button on stick controls will be ranked lower than the \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a55b57fe1d0a61c4fe2e671284ec2ab3b}{Gamepad.\+button\+South} which is an actual button on the device. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a8dd415d494caeb548b1f349e273e4043}{On\+Compute\+Score}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56}{candidates}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a2b918701f93b0f8837311d0db79ce570}{magnitudes}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a748439a3cc9433178bcf279710a21e65}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!selectedControl@{selectedControl}}
+\index{selectedControl@{selectedControl}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{selectedControl}{selectedControl}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a748439a3cc9433178bcf279710a21e65} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+selected\+Control\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The control currently deemed the best candidate. 
+
+Primary candidate control at this point.
+
+If there are no candidates yet, this returns {\ttfamily null}. If there are candidates, it returns the first element of \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a70e1ec477fdb61e394e350def82c8c56}{candidates} which is always the control with the highest matching score. \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ab2ca3c47cc57e26b78923be25671d59b}\index{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}!started@{started}}
+\index{started@{started}!UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation@{UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation}}
+\doxysubsubsection{\texorpdfstring{started}{started}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_ab2ca3c47cc57e26b78923be25671d59b} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation.\+started\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Whether the rebind is currently in progress. 
+
+Whether rebind is in progress.
+
+This is true after calling \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_afd67d636edeba0c634e32ce14a0e988f}{Start} and set to false when \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a54b679a7660adb84bb518d6a0e03cd3f}{On\+Complete} or \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_af7fb52b5e43a10b7d2498d59ffa264c8}{On\+Cancel} is called. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_afd67d636edeba0c634e32ce14a0e988f}{Start}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_add020d5b66f285206b78e13e2ced163d}{completed}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation_a847fec9e43c023015ebe3fcb57e4e22b}{canceled}
+
+
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Actions/Input\+Action\+Rebinding\+Extensions.\+cs\end{DoxyCompactItemize}

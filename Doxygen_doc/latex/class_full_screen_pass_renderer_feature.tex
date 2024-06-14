@@ -1,0 +1,137 @@
+\doxysection{Full\+Screen\+Pass\+Renderer\+Feature Class Reference}
+\hypertarget{class_full_screen_pass_renderer_feature}{}\label{class_full_screen_pass_renderer_feature}\index{FullScreenPassRendererFeature@{FullScreenPassRendererFeature}}
+
+
+Full\+Screen\+Pass is a renderer feature used to change screen appearance such as post processing effect. This implementation lets it\textquotesingle{}s user create an effect with minimal code involvement.  
+
+
+Inheritance diagram for Full\+Screen\+Pass\+Renderer\+Feature\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.307692cm]{class_full_screen_pass_renderer_feature}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_full_screen_pass_renderer_feature_aa8cfaabaa5a4a6e6421436079392e58a}{Injection\+Point}} \{ \mbox{\hyperlink{class_full_screen_pass_renderer_feature_aa8cfaabaa5a4a6e6421436079392e58aa515cd80b00981ed86c56c392adf7c259}{Before\+Rendering\+Transparents}} = Render\+Pass\+Event.\+Before\+Rendering\+Transparents
+, \mbox{\hyperlink{class_full_screen_pass_renderer_feature_aa8cfaabaa5a4a6e6421436079392e58aa33bf5402b0f7e115589e21d4d9dbe79a}{Before\+Rendering\+Post\+Processing}} = Render\+Pass\+Event.\+Before\+Rendering\+Post\+Processing
+, \mbox{\hyperlink{class_full_screen_pass_renderer_feature_aa8cfaabaa5a4a6e6421436079392e58aa89d5c176b5fde53d4f7a21c2a725d93d}{After\+Rendering\+Post\+Processing}} = Render\+Pass\+Event.\+After\+Rendering\+Post\+Processing
+ \}
+\begin{DoxyCompactList}\small\item\em An injection point for the full screen pass. This is similar to Render\+Pass\+Event enum but limits to only supported events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_full_screen_pass_renderer_feature_a1ae739cc0763da57c537556dbdf0ce46}\label{class_full_screen_pass_renderer_feature_a1ae739cc0763da57c537556dbdf0ce46} 
+override void {\bfseries Create} ()
+\item 
+\Hypertarget{class_full_screen_pass_renderer_feature_a0f013d20d28a859e310bd99a9d951494}\label{class_full_screen_pass_renderer_feature_a0f013d20d28a859e310bd99a9d951494} 
+override void {\bfseries Add\+Render\+Passes} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Scriptable\+Renderer}} renderer, ref \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}} rendering\+Data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature}{Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Renderer\+Feature}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Create} ()
+\begin{DoxyCompactList}\small\item\em Initializes this feature\textquotesingle{}s resources. This is called every time serialization happens. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_acdfd6aaa07f0bbd564d6d054597640fd}{On\+Camera\+Pre\+Cull}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Scriptable\+Renderer}} renderer, in \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_camera_data}{Camera\+Data}} camera\+Data)
+\begin{DoxyCompactList}\small\item\em Callback before cull happens in renderer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_af397bf0b2792eeef093cd483f8510e42}{Add\+Render\+Passes}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Scriptable\+Renderer}} renderer, ref \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}} rendering\+Data)
+\begin{DoxyCompactList}\small\item\em Injects one or multiple {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Scriptable\+Render\+Pass}} in the renderer. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_a100d4bf04924b49e6a14a533f0415add}{Setup\+Render\+Passes}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Scriptable\+Renderer}} renderer, in \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}} rendering\+Data)
+\begin{DoxyCompactList}\small\item\em Callback after render targets are initialized. This allows for accessing targets from renderer after they are created and ready. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_a1b9f657f59bc0ed8165d3e0fca5480e8}{Set\+Active}} (bool active)
+\begin{DoxyCompactList}\small\item\em Sets the state of Scriptable\+Render\+Feature (true\+: the feature is active, false\+: the feature is inactive). If the feature is active, it is added to the renderer it is attached to, otherwise the feature is skipped while rendering. \end{DoxyCompactList}\item 
+void {\bfseries Dispose} ()
+\begin{DoxyCompactList}\small\item\em Disposable pattern implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_full_screen_pass_renderer_feature_aa1cbb2f0b991c6d7fe04c29d517004f4}\label{class_full_screen_pass_renderer_feature_aa1cbb2f0b991c6d7fe04c29d517004f4} 
+Material {\bfseries pass\+Material}
+\begin{DoxyCompactList}\small\item\em Material the Renderer Feature uses to render the effect. \end{DoxyCompactList}\item 
+\Hypertarget{class_full_screen_pass_renderer_feature_adea8c4d431d4547cb4d567763e5e9f92}\label{class_full_screen_pass_renderer_feature_adea8c4d431d4547cb4d567763e5e9f92} 
+\mbox{\hyperlink{class_full_screen_pass_renderer_feature_aa8cfaabaa5a4a6e6421436079392e58a}{Injection\+Point}} {\bfseries injection\+Point} = \mbox{\hyperlink{class_full_screen_pass_renderer_feature_aa8cfaabaa5a4a6e6421436079392e58aa89d5c176b5fde53d4f7a21c2a725d93d}{Injection\+Point.\+After\+Rendering\+Post\+Processing}}
+\begin{DoxyCompactList}\small\item\em Selection for when the effect is rendered. \end{DoxyCompactList}\item 
+\Hypertarget{class_full_screen_pass_renderer_feature_a2c771a4c0f8dfe29772fe57331bcd338}\label{class_full_screen_pass_renderer_feature_a2c771a4c0f8dfe29772fe57331bcd338} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a37daf716e998b874ec0272773287835b}{Scriptable\+Render\+Pass\+Input}} {\bfseries requirements} = Scriptable\+Render\+Pass\+Input.\+Color
+\begin{DoxyCompactList}\small\item\em One or more requirements for pass. Based on chosen flags certain passes will be added to the pipeline. \end{DoxyCompactList}\item 
+\Hypertarget{class_full_screen_pass_renderer_feature_a2c327d75a58d41a084e842ca24ee9ae4}\label{class_full_screen_pass_renderer_feature_a2c327d75a58d41a084e842ca24ee9ae4} 
+int {\bfseries pass\+Index} = 0
+\begin{DoxyCompactList}\small\item\em An index that tells renderer feature which pass to use if pass\+Material contains more than one. Default is 0. We draw custom pass index entry with the custom dropdown inside \doxylink{class_full_screen_pass_renderer_feature_editor}{Full\+Screen\+Pass\+Renderer\+Feature\+Editor} that sets this value. Setting it directly will be overridden by the editor class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_full_screen_pass_renderer_feature_a4285a50ccd52b81e6bb6053b60b41e2d}{Dispose}} (bool disposing)
+\begin{DoxyCompactList}\small\item\em Called by \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_ad2cc174f3ae439cb9a2a1402bc2a6663}{Dispose()}. Override this function to clean up resources in your renderer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em disposing} & \\
+\hline
+\end{DoxyParams}
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature}{Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Renderer\+Feature}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries is\+Active}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the state of the Scriptable\+Render\+Feature (true\+: the feature is active, false\+: the feature is inactive). Use the method Scriptable\+Render\+Feature.\+Set\+Active to change the value of this variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Full\+Screen\+Pass is a renderer feature used to change screen appearance such as post processing effect. This implementation lets it\textquotesingle{}s user create an effect with minimal code involvement. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_full_screen_pass_renderer_feature_aa8cfaabaa5a4a6e6421436079392e58a}\index{FullScreenPassRendererFeature@{FullScreenPassRendererFeature}!InjectionPoint@{InjectionPoint}}
+\index{InjectionPoint@{InjectionPoint}!FullScreenPassRendererFeature@{FullScreenPassRendererFeature}}
+\doxysubsubsection{\texorpdfstring{InjectionPoint}{InjectionPoint}}
+{\footnotesize\ttfamily \label{class_full_screen_pass_renderer_feature_aa8cfaabaa5a4a6e6421436079392e58a} 
+enum \mbox{\hyperlink{class_full_screen_pass_renderer_feature_aa8cfaabaa5a4a6e6421436079392e58a}{Full\+Screen\+Pass\+Renderer\+Feature.\+Injection\+Point}}}
+
+
+
+An injection point for the full screen pass. This is similar to Render\+Pass\+Event enum but limits to only supported events. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BeforeRenderingTransparents@{BeforeRenderingTransparents}!FullScreenPassRendererFeature@{FullScreenPassRendererFeature}}\index{FullScreenPassRendererFeature@{FullScreenPassRendererFeature}!BeforeRenderingTransparents@{BeforeRenderingTransparents}}}\Hypertarget{class_full_screen_pass_renderer_feature_aa8cfaabaa5a4a6e6421436079392e58aa515cd80b00981ed86c56c392adf7c259}\label{class_full_screen_pass_renderer_feature_aa8cfaabaa5a4a6e6421436079392e58a} 
+Before\+Rendering\+Transparents&Inject a full screen pass before transparents are rendered. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BeforeRenderingPostProcessing@{BeforeRenderingPostProcessing}!FullScreenPassRendererFeature@{FullScreenPassRendererFeature}}\index{FullScreenPassRendererFeature@{FullScreenPassRendererFeature}!BeforeRenderingPostProcessing@{BeforeRenderingPostProcessing}}}\Hypertarget{class_full_screen_pass_renderer_feature_aa8cfaabaa5a4a6e6421436079392e58aa33bf5402b0f7e115589e21d4d9dbe79a}\label{class_full_screen_pass_renderer_feature_aa8cfaabaa5a4a6e6421436079392e58a} 
+Before\+Rendering\+Post\+Processing&Inject a full screen pass before post processing is rendered. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AfterRenderingPostProcessing@{AfterRenderingPostProcessing}!FullScreenPassRendererFeature@{FullScreenPassRendererFeature}}\index{FullScreenPassRendererFeature@{FullScreenPassRendererFeature}!AfterRenderingPostProcessing@{AfterRenderingPostProcessing}}}\Hypertarget{class_full_screen_pass_renderer_feature_aa8cfaabaa5a4a6e6421436079392e58aa89d5c176b5fde53d4f7a21c2a725d93d}\label{class_full_screen_pass_renderer_feature_aa8cfaabaa5a4a6e6421436079392e58a} 
+After\+Rendering\+Post\+Processing&Inject a full screen pass after post processing is rendered. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_full_screen_pass_renderer_feature_a4285a50ccd52b81e6bb6053b60b41e2d}\index{FullScreenPassRendererFeature@{FullScreenPassRendererFeature}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!FullScreenPassRendererFeature@{FullScreenPassRendererFeature}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{class_full_screen_pass_renderer_feature_a4285a50ccd52b81e6bb6053b60b41e2d} 
+override void Full\+Screen\+Pass\+Renderer\+Feature.\+Dispose (\begin{DoxyParamCaption}\item[{bool}]{disposing}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called by \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_ad2cc174f3ae439cb9a2a1402bc2a6663}{Dispose()}. Override this function to clean up resources in your renderer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em disposing} & \\
+\hline
+\end{DoxyParams}
+ 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_a1117b623c2a8ba6a7c0020591b6d400f}{Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Renderer\+Feature}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/\+Renderer\+Features/Full\+Screen\+Pass\+Renderer\+Feature.\+cs\end{DoxyCompactItemize}

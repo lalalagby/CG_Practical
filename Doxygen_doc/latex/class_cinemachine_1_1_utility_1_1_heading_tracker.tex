@@ -1,0 +1,82 @@
+\doxysection{Cinemachine.\+Utility.\+Heading\+Tracker Class Reference}
+\hypertarget{class_cinemachine_1_1_utility_1_1_heading_tracker}{}\label{class_cinemachine_1_1_utility_1_1_heading_tracker}\index{Cinemachine.Utility.HeadingTracker@{Cinemachine.Utility.HeadingTracker}}
+
+
+Tracks an object\textquotesingle{}s velocity with a filter to determine a reasonably steady direction for the object\textquotesingle{}s current trajectory.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cinemachine_1_1_utility_1_1_heading_tracker_a3e6d6c56f585a85b90ed5d604cf58402}{Heading\+Tracker}} (int filter\+Size)
+\begin{DoxyCompactList}\small\item\em Construct a heading tracker with a given filter size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_utility_1_1_heading_tracker_a5e700e410aa6e7610c2809a66f654902}{Add}} (Vector3 velocity)
+\begin{DoxyCompactList}\small\item\em Add a new velocity frame. This should be called once per frame, unless the velocity is zero. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_utility_1_1_heading_tracker_adc1fab091ef7dd77f4d4fa37c879c0e0}\label{class_cinemachine_1_1_utility_1_1_heading_tracker_adc1fab091ef7dd77f4d4fa37c879c0e0} 
+void {\bfseries Decay\+History} ()
+\begin{DoxyCompactList}\small\item\em Decay the history. This should be called every frame. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_cinemachine_1_1_utility_1_1_heading_tracker_a29eaa4a9499187431c489ce66f215abd}{Get\+Reliable\+Heading}} ()
+\begin{DoxyCompactList}\small\item\em Get the filtered heading. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_utility_1_1_heading_tracker_a027410ed53540861790dd59de94a72b7}\label{class_cinemachine_1_1_utility_1_1_heading_tracker_a027410ed53540861790dd59de94a72b7} 
+int {\bfseries Filter\+Size}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the current filter size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Tracks an object\textquotesingle{}s velocity with a filter to determine a reasonably steady direction for the object\textquotesingle{}s current trajectory. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_cinemachine_1_1_utility_1_1_heading_tracker_a3e6d6c56f585a85b90ed5d604cf58402}\index{Cinemachine.Utility.HeadingTracker@{Cinemachine.Utility.HeadingTracker}!HeadingTracker@{HeadingTracker}}
+\index{HeadingTracker@{HeadingTracker}!Cinemachine.Utility.HeadingTracker@{Cinemachine.Utility.HeadingTracker}}
+\doxysubsubsection{\texorpdfstring{HeadingTracker()}{HeadingTracker()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_utility_1_1_heading_tracker_a3e6d6c56f585a85b90ed5d604cf58402} 
+Cinemachine.\+Utility.\+Heading\+Tracker.\+Heading\+Tracker (\begin{DoxyParamCaption}\item[{int}]{filter\+Size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a heading tracker with a given filter size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter\+Size} & The size of the filter. The larger the filter, the more constanct (and laggy) is the heading. 30 is pretty big.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cinemachine_1_1_utility_1_1_heading_tracker_a5e700e410aa6e7610c2809a66f654902}\index{Cinemachine.Utility.HeadingTracker@{Cinemachine.Utility.HeadingTracker}!Add@{Add}}
+\index{Add@{Add}!Cinemachine.Utility.HeadingTracker@{Cinemachine.Utility.HeadingTracker}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_utility_1_1_heading_tracker_a5e700e410aa6e7610c2809a66f654902} 
+void Cinemachine.\+Utility.\+Heading\+Tracker.\+Add (\begin{DoxyParamCaption}\item[{Vector3}]{velocity}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a new velocity frame. This should be called once per frame, unless the velocity is zero. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em velocity} & The object\textquotesingle{}s velocity this frame\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cinemachine_1_1_utility_1_1_heading_tracker_a29eaa4a9499187431c489ce66f215abd}\index{Cinemachine.Utility.HeadingTracker@{Cinemachine.Utility.HeadingTracker}!GetReliableHeading@{GetReliableHeading}}
+\index{GetReliableHeading@{GetReliableHeading}!Cinemachine.Utility.HeadingTracker@{Cinemachine.Utility.HeadingTracker}}
+\doxysubsubsection{\texorpdfstring{GetReliableHeading()}{GetReliableHeading()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_utility_1_1_heading_tracker_a29eaa4a9499187431c489ce66f215abd} 
+Vector3 Cinemachine.\+Utility.\+Heading\+Tracker.\+Get\+Reliable\+Heading (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the filtered heading. 
+
+\begin{DoxyReturn}{Returns}
+The filtered direction of motion
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Core/Predictor.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,207 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Universal.\+Render\+Target\+Handle Struct Reference}
+\hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle}{}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle}\index{UnityEngine.Rendering.Universal.RenderTargetHandle@{UnityEngine.Rendering.Universal.RenderTargetHandle}}
+
+
+Class for render target handles in URP. Deprecated in favor of \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a1e487737d8e322ecebf642a2dd3cf298}{Render\+Target\+Handle}} (Render\+Target\+Identifier render\+Target\+Identifier)
+\begin{DoxyCompactList}\small\item\em Constructor for a render target handle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a244ec974c87a2f4749a517eda49909b0}{Render\+Target\+Handle}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} rt\+Handle)
+\begin{DoxyCompactList}\small\item\em Constructor for a render target handle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a34de85e297884ef58648a83263937d1b}{Init}} (string shader\+Property)
+\begin{DoxyCompactList}\small\item\em Initializes the ID for the handle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_afffaa8b2150bfe7136b51ea997409464}{Init}} (Render\+Target\+Identifier render\+Target\+Identifier)
+\begin{DoxyCompactList}\small\item\em Initializes the render target ID for the handle. \end{DoxyCompactList}\item 
+Render\+Target\+Identifier \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_afe1d6cc016af0c49e8fecd9115a54faa}{Identifier}} ()
+\begin{DoxyCompactList}\small\item\em The render target ID for this render target handle. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a998bb289b06a9255b91468de6bd972d0}{Has\+Internal\+Render\+Target\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Does this handle have internal render target ID? \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a2b06b9e9dde70fa6688a081e0a613468}{Equals}} (\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle}{Render\+Target\+Handle}} other)
+\begin{DoxyCompactList}\small\item\em Equality check with another render target handle. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_abb609e794c50f085ced83f5cd7b64375}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_abb609e794c50f085ced83f5cd7b64375} 
+override bool {\bfseries Equals} (object obj)
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a9271735929ad1c5b143bd8bc4f35166f}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a9271735929ad1c5b143bd8bc4f35166f} 
+override int {\bfseries Get\+Hash\+Code} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a325a250336ab100d8e3446364953f7d9}{operator==}} (\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle}{Render\+Target\+Handle}} c1, \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle}{Render\+Target\+Handle}} c2)
+\begin{DoxyCompactList}\small\item\em Equality check between two render target handles. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a60b4d2cc5a63c8beae28165c4426031d}{operator!=}} (\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle}{Render\+Target\+Handle}} c1, \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle}{Render\+Target\+Handle}} c2)
+\begin{DoxyCompactList}\small\item\em Equality check between two render target handles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a57e818f95fa671a43074f4f5554e8ef0}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a57e818f95fa671a43074f4f5554e8ef0} 
+static readonly \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle}{Render\+Target\+Handle}} {\bfseries Camera\+Target} = new \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle}{Render\+Target\+Handle}} \{ \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a7d748f2ccd58063155e2b2f555035a38}{id}} = -\/1 \}
+\begin{DoxyCompactList}\small\item\em The render target handle for the Camera target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a7d748f2ccd58063155e2b2f555035a38}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a7d748f2ccd58063155e2b2f555035a38} 
+int {\bfseries id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The ID of the handle for the handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for render target handles in URP. Deprecated in favor of \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a1e487737d8e322ecebf642a2dd3cf298}\index{UnityEngine.Rendering.Universal.RenderTargetHandle@{UnityEngine.Rendering.Universal.RenderTargetHandle}!RenderTargetHandle@{RenderTargetHandle}}
+\index{RenderTargetHandle@{RenderTargetHandle}!UnityEngine.Rendering.Universal.RenderTargetHandle@{UnityEngine.Rendering.Universal.RenderTargetHandle}}
+\doxysubsubsection{\texorpdfstring{RenderTargetHandle()}{RenderTargetHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a1e487737d8e322ecebf642a2dd3cf298} 
+Unity\+Engine.\+Rendering.\+Universal.\+Render\+Target\+Handle.\+Render\+Target\+Handle (\begin{DoxyParamCaption}\item[{Render\+Target\+Identifier}]{render\+Target\+Identifier}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for a render target handle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em render\+Target\+Identifier} & The render target ID for the new handle.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a244ec974c87a2f4749a517eda49909b0}\index{UnityEngine.Rendering.Universal.RenderTargetHandle@{UnityEngine.Rendering.Universal.RenderTargetHandle}!RenderTargetHandle@{RenderTargetHandle}}
+\index{RenderTargetHandle@{RenderTargetHandle}!UnityEngine.Rendering.Universal.RenderTargetHandle@{UnityEngine.Rendering.Universal.RenderTargetHandle}}
+\doxysubsubsection{\texorpdfstring{RenderTargetHandle()}{RenderTargetHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a244ec974c87a2f4749a517eda49909b0} 
+Unity\+Engine.\+Rendering.\+Universal.\+Render\+Target\+Handle.\+Render\+Target\+Handle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}}}]{rt\+Handle}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for a render target handle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rt\+Handle} & The rt handle for the new handle.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a2b06b9e9dde70fa6688a081e0a613468}\index{UnityEngine.Rendering.Universal.RenderTargetHandle@{UnityEngine.Rendering.Universal.RenderTargetHandle}!Equals@{Equals}}
+\index{Equals@{Equals}!UnityEngine.Rendering.Universal.RenderTargetHandle@{UnityEngine.Rendering.Universal.RenderTargetHandle}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a2b06b9e9dde70fa6688a081e0a613468} 
+bool Unity\+Engine.\+Rendering.\+Universal.\+Render\+Target\+Handle.\+Equals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle}{Render\+Target\+Handle}}}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Equality check with another render target handle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Other render target handle to compare with.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the handles have the same ID, otherwise false.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a998bb289b06a9255b91468de6bd972d0}\index{UnityEngine.Rendering.Universal.RenderTargetHandle@{UnityEngine.Rendering.Universal.RenderTargetHandle}!HasInternalRenderTargetId@{HasInternalRenderTargetId}}
+\index{HasInternalRenderTargetId@{HasInternalRenderTargetId}!UnityEngine.Rendering.Universal.RenderTargetHandle@{UnityEngine.Rendering.Universal.RenderTargetHandle}}
+\doxysubsubsection{\texorpdfstring{HasInternalRenderTargetId()}{HasInternalRenderTargetId()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a998bb289b06a9255b91468de6bd972d0} 
+bool Unity\+Engine.\+Rendering.\+Universal.\+Render\+Target\+Handle.\+Has\+Internal\+Render\+Target\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Does this handle have internal render target ID? 
+
+\begin{DoxyReturn}{Returns}
+True if it has internal render target ID.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_afe1d6cc016af0c49e8fecd9115a54faa}\index{UnityEngine.Rendering.Universal.RenderTargetHandle@{UnityEngine.Rendering.Universal.RenderTargetHandle}!Identifier@{Identifier}}
+\index{Identifier@{Identifier}!UnityEngine.Rendering.Universal.RenderTargetHandle@{UnityEngine.Rendering.Universal.RenderTargetHandle}}
+\doxysubsubsection{\texorpdfstring{Identifier()}{Identifier()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_afe1d6cc016af0c49e8fecd9115a54faa} 
+Render\+Target\+Identifier Unity\+Engine.\+Rendering.\+Universal.\+Render\+Target\+Handle.\+Identifier (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The render target ID for this render target handle. 
+
+\begin{DoxyReturn}{Returns}
+The render target ID for this render target handle.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_afffaa8b2150bfe7136b51ea997409464}\index{UnityEngine.Rendering.Universal.RenderTargetHandle@{UnityEngine.Rendering.Universal.RenderTargetHandle}!Init@{Init}}
+\index{Init@{Init}!UnityEngine.Rendering.Universal.RenderTargetHandle@{UnityEngine.Rendering.Universal.RenderTargetHandle}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_afffaa8b2150bfe7136b51ea997409464} 
+void Unity\+Engine.\+Rendering.\+Universal.\+Render\+Target\+Handle.\+Init (\begin{DoxyParamCaption}\item[{Render\+Target\+Identifier}]{render\+Target\+Identifier}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes the render target ID for the handle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em render\+Target\+Identifier} & The render target ID to initialize with.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a34de85e297884ef58648a83263937d1b}\index{UnityEngine.Rendering.Universal.RenderTargetHandle@{UnityEngine.Rendering.Universal.RenderTargetHandle}!Init@{Init}}
+\index{Init@{Init}!UnityEngine.Rendering.Universal.RenderTargetHandle@{UnityEngine.Rendering.Universal.RenderTargetHandle}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a34de85e297884ef58648a83263937d1b} 
+void Unity\+Engine.\+Rendering.\+Universal.\+Render\+Target\+Handle.\+Init (\begin{DoxyParamCaption}\item[{string}]{shader\+Property}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes the ID for the handle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shader\+Property} & The shader property to initialize with.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a60b4d2cc5a63c8beae28165c4426031d}\index{UnityEngine.Rendering.Universal.RenderTargetHandle@{UnityEngine.Rendering.Universal.RenderTargetHandle}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!UnityEngine.Rendering.Universal.RenderTargetHandle@{UnityEngine.Rendering.Universal.RenderTargetHandle}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a60b4d2cc5a63c8beae28165c4426031d} 
+static bool Unity\+Engine.\+Rendering.\+Universal.\+Render\+Target\+Handle.\+operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle}{Render\+Target\+Handle}}}]{c1}{, }\item[{\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle}{Render\+Target\+Handle}}}]{c2}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Equality check between two render target handles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c1} & First handle for the check.\\
+\hline
+{\em c2} & Second handle for the check.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the handles do not have the same ID, otherwise false.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a325a250336ab100d8e3446364953f7d9}\index{UnityEngine.Rendering.Universal.RenderTargetHandle@{UnityEngine.Rendering.Universal.RenderTargetHandle}!operator==@{operator==}}
+\index{operator==@{operator==}!UnityEngine.Rendering.Universal.RenderTargetHandle@{UnityEngine.Rendering.Universal.RenderTargetHandle}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle_a325a250336ab100d8e3446364953f7d9} 
+static bool Unity\+Engine.\+Rendering.\+Universal.\+Render\+Target\+Handle.\+operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle}{Render\+Target\+Handle}}}]{c1}{, }\item[{\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_render_target_handle}{Render\+Target\+Handle}}}]{c2}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Equality check between two render target handles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c1} & First handle for the check.\\
+\hline
+{\em c2} & Second handle for the check.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the handles have the same ID, otherwise false.
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/Render\+Target\+Handle.\+cs\end{DoxyCompactItemize}

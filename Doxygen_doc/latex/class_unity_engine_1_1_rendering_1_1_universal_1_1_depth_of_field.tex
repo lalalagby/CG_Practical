@@ -1,0 +1,150 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Universal.\+Depth\+Of\+Field Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field}{}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field}\index{UnityEngine.Rendering.Universal.DepthOfField@{UnityEngine.Rendering.Universal.DepthOfField}}
+
+
+A volume component that holds settings for the Depth Of Field effect.  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Universal.\+Depth\+Of\+Field\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.427746cm]{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_a764d8a04e840ec731df13e992251ce8e}{Is\+Active}} ()
+\begin{DoxyCompactList}\small\item\em Tells if the post process needs to be rendered or not.
+
+\begin{DoxyReturn}{Returns}
+True if the component is active, otherwise false.
+\end{DoxyReturn}
+ \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_adcca8b5f731f2ebf4f1cfc84917fdefb}{Is\+Tile\+Compatible}} ()
+\begin{DoxyCompactList}\small\item\em Tells if the post process can run the effect on-\/tile or if it needs a full pass.
+
+\begin{DoxyReturn}{Returns}
+True if it can run on-\/tile, otherwise false.
+\end{DoxyReturn}
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Unity\+Engine.\+Rendering.\+Volume\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_a9d4f76f7cb2a843be7e947ee7cd9fd86}{Override}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component}} state, float interp\+Factor)
+\begin{DoxyCompactList}\small\item\em Interpolates a \doxylink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component} with this component by an interpolation factor and puts the result back into the given \doxylink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_a28e604e4bea241b469d10eaf0d7aca05}{Set\+All\+Overrides\+To}} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets the state of all the overrides on this component to a given value. \end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_ae2bbeaecf77f5806e9a2b6407037356c}{Get\+Hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em A custom hashing function that \doxylink{namespace_unity}{Unity} uses to compare the state of parameters. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_a54586fce4a8f74cea39827af82cd873c}{Any\+Properties\+Is\+Overridden}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if any of the volume properites has been overridden. \end{DoxyCompactList}\item 
+void {\bfseries Release} ()
+\begin{DoxyCompactList}\small\item\em Releases all the allocated resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_aa95731938de5663858e2e6bc4387b3fb}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_aa95731938de5663858e2e6bc4387b3fb} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_mode_parameter}{Depth\+Of\+Field\+Mode\+Parameter}} {\bfseries mode} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_mode_parameter}{Depth\+Of\+Field\+Mode\+Parameter}}(\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a6bf1b8776de7deb85f93cc7fc27bf5d8ad15305d7a4e34e02489c74a5ef542f36}{Depth\+Of\+Field\+Mode.\+Off}})
+\begin{DoxyCompactList}\small\item\em Use this to select Focusing modes for the depth of field effect. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_ab1d17764f54f8e548710dd2d353f29f7}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_ab1d17764f54f8e548710dd2d353f29f7} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_min_float_parameter}{Min\+Float\+Parameter}} {\bfseries gaussian\+Start} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_min_float_parameter}{Min\+Float\+Parameter}}(10f, 0f)
+\begin{DoxyCompactList}\small\item\em The distance at which the blurring will start. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_a0f2033168849cc1094a9294be6ede282}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_a0f2033168849cc1094a9294be6ede282} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_min_float_parameter}{Min\+Float\+Parameter}} {\bfseries gaussian\+End} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_min_float_parameter}{Min\+Float\+Parameter}}(30f, 0f)
+\begin{DoxyCompactList}\small\item\em The distance at which the blurring will reach its maximum radius. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_a7d842d78d3d79daaf441557ee781ab58}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_a7d842d78d3d79daaf441557ee781ab58} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}} {\bfseries gaussian\+Max\+Radius} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}}(1f, 0.\+5f, 1.\+5f)
+\begin{DoxyCompactList}\small\item\em The maximum radius of the gaussian blur. Values above 1 may show under-\/sampling artifacts. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_adb8b1b89fb67f98c1e73874c6a38cce9}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_adb8b1b89fb67f98c1e73874c6a38cce9} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_bool_parameter}{Bool\+Parameter}} {\bfseries high\+Quality\+Sampling} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_bool_parameter}{Bool\+Parameter}}(false)
+\begin{DoxyCompactList}\small\item\em Use higher quality sampling to reduce flickering and improve the overall blur smoothness. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_af2988ea3f57a2c708c38ff795d185d5a}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_af2988ea3f57a2c708c38ff795d185d5a} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_min_float_parameter}{Min\+Float\+Parameter}} {\bfseries focus\+Distance} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_min_float_parameter}{Min\+Float\+Parameter}}(10f, 0.\+1f)
+\begin{DoxyCompactList}\small\item\em The distance to the point of focus. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_a3906fba88416bcef77a63f1cc896ab46}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_a3906fba88416bcef77a63f1cc896ab46} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}} {\bfseries aperture} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}}(5.\+6f, 1f, 32f)
+\begin{DoxyCompactList}\small\item\em The ratio of aperture (known as f-\/stop or f-\/number). The smaller the value is, the shallower the depth of field is. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_a1c5abac1095b7c35331382718139bb67}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_a1c5abac1095b7c35331382718139bb67} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}} {\bfseries focal\+Length} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}}(50f, 1f, 300f)
+\begin{DoxyCompactList}\small\item\em The distance between the lens and the film. The larger the value is, the shallower the depth of field is. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_a93819ef247f6a86027c24903892b0213}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_a93819ef247f6a86027c24903892b0213} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_int_parameter}{Clamped\+Int\+Parameter}} {\bfseries blade\+Count} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_int_parameter}{Clamped\+Int\+Parameter}}(5, 3, 9)
+\begin{DoxyCompactList}\small\item\em The number of aperture blades. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_abbbdaad9c748a3cd431ce1028f0b3c19}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_abbbdaad9c748a3cd431ce1028f0b3c19} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}} {\bfseries blade\+Curvature} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}}(1f, 0f, 1f)
+\begin{DoxyCompactList}\small\item\em The curvature of aperture blades. The smaller the value is, the more visible aperture blades are. A value of 1 will make the bokeh perfectly circular. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_ad01074e2bd36094a9475810a65db9d84}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_ad01074e2bd36094a9475810a65db9d84} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}} {\bfseries blade\+Rotation} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}}(0f, -\/180f, 180f)
+\begin{DoxyCompactList}\small\item\em The rotation of aperture blades in degrees. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Unity\+Engine.\+Rendering.\+Volume\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries active} = true
+\begin{DoxyCompactList}\small\item\em The active state of the set of parameters defined in this class. You can use this to quickly turn on or off all the overrides at once. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Unity\+Engine.\+Rendering.\+Volume\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_ab69d6656bb7f4922fb99724f562e6215}{On\+Enable}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity}{Unity} calls this method when it loads the class. \end{DoxyCompactList}\item 
+virtual void {\bfseries On\+Disable} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity}{Unity} calls this method when the object goes out of scope. \end{DoxyCompactList}\item 
+virtual void {\bfseries On\+Destroy} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity}{Unity} calls this method before the object is destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Unity\+Engine.\+Rendering.\+Volume\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries display\+Name} = "{}"{}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The name displayed in the component header. If you do not set a name, \doxylink{namespace_unity}{Unity} generates one from the class name automatically. \end{DoxyCompactList}\item 
+Read\+Only\+Collection$<$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}} $>$ {\bfseries parameters}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A read-\/only collection of all the \doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}s defined in this class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A volume component that holds settings for the Depth Of Field effect. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_a764d8a04e840ec731df13e992251ce8e}\index{UnityEngine.Rendering.Universal.DepthOfField@{UnityEngine.Rendering.Universal.DepthOfField}!IsActive@{IsActive}}
+\index{IsActive@{IsActive}!UnityEngine.Rendering.Universal.DepthOfField@{UnityEngine.Rendering.Universal.DepthOfField}}
+\doxysubsubsection{\texorpdfstring{IsActive()}{IsActive()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_a764d8a04e840ec731df13e992251ce8e} 
+bool Unity\+Engine.\+Rendering.\+Universal.\+Depth\+Of\+Field.\+Is\+Active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tells if the post process needs to be rendered or not.
+
+\begin{DoxyReturn}{Returns}
+True if the component is active, otherwise false.
+\end{DoxyReturn}
+ 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_universal_1_1_i_post_process_component_a8723bf5375b789d8c1c43ad9a6fd2acf}{Unity\+Engine.\+Rendering.\+Universal.\+IPost\+Process\+Component}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_adcca8b5f731f2ebf4f1cfc84917fdefb}\index{UnityEngine.Rendering.Universal.DepthOfField@{UnityEngine.Rendering.Universal.DepthOfField}!IsTileCompatible@{IsTileCompatible}}
+\index{IsTileCompatible@{IsTileCompatible}!UnityEngine.Rendering.Universal.DepthOfField@{UnityEngine.Rendering.Universal.DepthOfField}}
+\doxysubsubsection{\texorpdfstring{IsTileCompatible()}{IsTileCompatible()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_adcca8b5f731f2ebf4f1cfc84917fdefb} 
+bool Unity\+Engine.\+Rendering.\+Universal.\+Depth\+Of\+Field.\+Is\+Tile\+Compatible (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Tells if the post process can run the effect on-\/tile or if it needs a full pass.
+
+\begin{DoxyReturn}{Returns}
+True if it can run on-\/tile, otherwise false.
+\end{DoxyReturn}
+ 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_universal_1_1_i_post_process_component_a60383c6e1861a6ae97c3df772b711dbb}{Unity\+Engine.\+Rendering.\+Universal.\+IPost\+Process\+Component}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/\+Overrides/Depth\+Of\+Field.\+cs\end{DoxyCompactItemize}

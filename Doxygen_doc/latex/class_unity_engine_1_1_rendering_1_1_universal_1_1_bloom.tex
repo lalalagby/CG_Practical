@@ -1,0 +1,151 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Universal.\+Bloom Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom}{}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom}\index{UnityEngine.Rendering.Universal.Bloom@{UnityEngine.Rendering.Universal.Bloom}}
+
+
+A volume component that holds settings for the \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom}{Bloom} effect.  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Universal.\+Bloom\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.213873cm]{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_a9119d96317fe1fff38b9543610ba15d9}{Is\+Active}} ()
+\begin{DoxyCompactList}\small\item\em Tells if the post process needs to be rendered or not.
+
+\begin{DoxyReturn}{Returns}
+True if the component is active, otherwise false.
+\end{DoxyReturn}
+ \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_a4c0c149c2b5b4da168f9b083ea31785b}{Is\+Tile\+Compatible}} ()
+\begin{DoxyCompactList}\small\item\em Tells if the post process can run the effect on-\/tile or if it needs a full pass.
+
+\begin{DoxyReturn}{Returns}
+True if it can run on-\/tile, otherwise false.
+\end{DoxyReturn}
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Unity\+Engine.\+Rendering.\+Volume\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_a9d4f76f7cb2a843be7e947ee7cd9fd86}{Override}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component}} state, float interp\+Factor)
+\begin{DoxyCompactList}\small\item\em Interpolates a \doxylink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component} with this component by an interpolation factor and puts the result back into the given \doxylink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_a28e604e4bea241b469d10eaf0d7aca05}{Set\+All\+Overrides\+To}} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets the state of all the overrides on this component to a given value. \end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_ae2bbeaecf77f5806e9a2b6407037356c}{Get\+Hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em A custom hashing function that \doxylink{namespace_unity}{Unity} uses to compare the state of parameters. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_a54586fce4a8f74cea39827af82cd873c}{Any\+Properties\+Is\+Overridden}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if any of the volume properites has been overridden. \end{DoxyCompactList}\item 
+void {\bfseries Release} ()
+\begin{DoxyCompactList}\small\item\em Releases all the allocated resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_ae208ce9c3d2ffbd2f462a3b572ae9920}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_ae208ce9c3d2ffbd2f462a3b572ae9920} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_int_parameter}{Clamped\+Int\+Parameter}} {\bfseries skip\+Iterations} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_int_parameter}{Clamped\+Int\+Parameter}}(1, 0, 16)
+\begin{DoxyCompactList}\small\item\em The number of final iterations to skip in the effect processing sequence. This is obsolete, please use max\+Iterations instead. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_a6de27aeade529bbdcf6d28b857048c8e}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_a6de27aeade529bbdcf6d28b857048c8e} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_min_float_parameter}{Min\+Float\+Parameter}} {\bfseries threshold} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_min_float_parameter}{Min\+Float\+Parameter}}(0.\+9f, 0f)
+\begin{DoxyCompactList}\small\item\em Set the level of brightness to filter out pixels under this level. This value is expressed in gamma-\/space. A value above 0 will disregard energy conservation rules. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_a6bbbddec524a2d9e986e8cb79ebd1e9b}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_a6bbbddec524a2d9e986e8cb79ebd1e9b} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_min_float_parameter}{Min\+Float\+Parameter}} {\bfseries intensity} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_min_float_parameter}{Min\+Float\+Parameter}}(0f, 0f)
+\begin{DoxyCompactList}\small\item\em Controls the strength of the bloom filter. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_a435191a37ecf3f3d63c598c6cf5f6358}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_a435191a37ecf3f3d63c598c6cf5f6358} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}} {\bfseries scatter} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}}(0.\+7f, 0f, 1f)
+\begin{DoxyCompactList}\small\item\em Controls the extent of the veiling effect. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_aa984250b6df5e1115b14bf89f8a8f293}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_aa984250b6df5e1115b14bf89f8a8f293} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_min_float_parameter}{Min\+Float\+Parameter}} {\bfseries clamp} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_min_float_parameter}{Min\+Float\+Parameter}}(65472f, 0f)
+\begin{DoxyCompactList}\small\item\em Set the maximum intensity that \doxylink{namespace_unity}{Unity} uses to calculate \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom}{Bloom}. If pixels in your Scene are more intense than this, URP renders them at their current intensity, but uses this intensity value for the purposes of \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom}{Bloom} calculations. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_aba742a41043a141281c5577159215794}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_aba742a41043a141281c5577159215794} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_color_parameter}{Color\+Parameter}} {\bfseries tint} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_color_parameter}{Color\+Parameter}}(Color.\+white, false, false, true)
+\begin{DoxyCompactList}\small\item\em Specifies the tint of the bloom filter. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_a14603a0fcd5fa62d6087c79e90037aad}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_a14603a0fcd5fa62d6087c79e90037aad} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_bool_parameter}{Bool\+Parameter}} {\bfseries high\+Quality\+Filtering} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_bool_parameter}{Bool\+Parameter}}(false)
+\begin{DoxyCompactList}\small\item\em Controls whether to use bicubic sampling instead of bilinear sampling for the upsampling passes. This is slightly more expensive but helps getting smoother visuals. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_a0f6b955bb1c1385b4f6b9e79d7be0ae9}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_a0f6b955bb1c1385b4f6b9e79d7be0ae9} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_downscale_parameter}{Downscale\+Parameter}} {\bfseries downscale} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_downscale_parameter}{Downscale\+Parameter}}(\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_ac81da07bb24d3f52ee700349d898e8abac48615a1bc4197056d522af276aa5a85}{Bloom\+Downscale\+Mode.\+Half}})
+\begin{DoxyCompactList}\small\item\em Controls the starting resolution that this effect begins processing. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_aadaaebe0dd143de007debada3e6196e4}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_aadaaebe0dd143de007debada3e6196e4} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_int_parameter}{Clamped\+Int\+Parameter}} {\bfseries max\+Iterations} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_int_parameter}{Clamped\+Int\+Parameter}}(6, 2, 8)
+\begin{DoxyCompactList}\small\item\em Controls the maximum number of iterations in the effect processing sequence. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_af0448337c7f2bcaa7dff6b2d0564df08}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_af0448337c7f2bcaa7dff6b2d0564df08} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_texture_parameter}{Texture\+Parameter}} {\bfseries dirt\+Texture} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_texture_parameter}{Texture\+Parameter}}(null)
+\begin{DoxyCompactList}\small\item\em Specifies a Texture to add smudges or dust to the bloom effect. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_a6c6c315f921b8ed8594815c38d2fc1f9}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_a6c6c315f921b8ed8594815c38d2fc1f9} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_min_float_parameter}{Min\+Float\+Parameter}} {\bfseries dirt\+Intensity} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_min_float_parameter}{Min\+Float\+Parameter}}(0f, 0f)
+\begin{DoxyCompactList}\small\item\em Controls the strength of the lens dirt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Unity\+Engine.\+Rendering.\+Volume\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries active} = true
+\begin{DoxyCompactList}\small\item\em The active state of the set of parameters defined in this class. You can use this to quickly turn on or off all the overrides at once. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Unity\+Engine.\+Rendering.\+Volume\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_ab69d6656bb7f4922fb99724f562e6215}{On\+Enable}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity}{Unity} calls this method when it loads the class. \end{DoxyCompactList}\item 
+virtual void {\bfseries On\+Disable} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity}{Unity} calls this method when the object goes out of scope. \end{DoxyCompactList}\item 
+virtual void {\bfseries On\+Destroy} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity}{Unity} calls this method before the object is destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Unity\+Engine.\+Rendering.\+Volume\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries display\+Name} = "{}"{}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The name displayed in the component header. If you do not set a name, \doxylink{namespace_unity}{Unity} generates one from the class name automatically. \end{DoxyCompactList}\item 
+Read\+Only\+Collection$<$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}} $>$ {\bfseries parameters}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A read-\/only collection of all the \doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}s defined in this class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A volume component that holds settings for the \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom}{Bloom} effect. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_a9119d96317fe1fff38b9543610ba15d9}\index{UnityEngine.Rendering.Universal.Bloom@{UnityEngine.Rendering.Universal.Bloom}!IsActive@{IsActive}}
+\index{IsActive@{IsActive}!UnityEngine.Rendering.Universal.Bloom@{UnityEngine.Rendering.Universal.Bloom}}
+\doxysubsubsection{\texorpdfstring{IsActive()}{IsActive()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_a9119d96317fe1fff38b9543610ba15d9} 
+bool Unity\+Engine.\+Rendering.\+Universal.\+Bloom.\+Is\+Active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Tells if the post process needs to be rendered or not.
+
+\begin{DoxyReturn}{Returns}
+True if the component is active, otherwise false.
+\end{DoxyReturn}
+ 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_universal_1_1_i_post_process_component_a8723bf5375b789d8c1c43ad9a6fd2acf}{Unity\+Engine.\+Rendering.\+Universal.\+IPost\+Process\+Component}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_a4c0c149c2b5b4da168f9b083ea31785b}\index{UnityEngine.Rendering.Universal.Bloom@{UnityEngine.Rendering.Universal.Bloom}!IsTileCompatible@{IsTileCompatible}}
+\index{IsTileCompatible@{IsTileCompatible}!UnityEngine.Rendering.Universal.Bloom@{UnityEngine.Rendering.Universal.Bloom}}
+\doxysubsubsection{\texorpdfstring{IsTileCompatible()}{IsTileCompatible()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_a4c0c149c2b5b4da168f9b083ea31785b} 
+bool Unity\+Engine.\+Rendering.\+Universal.\+Bloom.\+Is\+Tile\+Compatible (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Tells if the post process can run the effect on-\/tile or if it needs a full pass.
+
+\begin{DoxyReturn}{Returns}
+True if it can run on-\/tile, otherwise false.
+\end{DoxyReturn}
+ 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_universal_1_1_i_post_process_component_a60383c6e1861a6ae97c3df772b711dbb}{Unity\+Engine.\+Rendering.\+Universal.\+IPost\+Process\+Component}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/Deprecated.\+cs\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/\+Overrides/Bloom.\+cs\end{DoxyCompactItemize}

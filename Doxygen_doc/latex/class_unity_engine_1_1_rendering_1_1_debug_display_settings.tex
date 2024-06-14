@@ -1,0 +1,199 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Debug\+Display\+Settings\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_debug_display_settings}{}\label{class_unity_engine_1_1_rendering_1_1_debug_display_settings}\index{UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$@{UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$}}
+
+
+Templated class for \doxylink{interface_unity_engine_1_1_rendering_1_1_i_debug_display_settings}{IDebug\+Display\+Settings}  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Debug\+Display\+Settings\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_engine_1_1_rendering_1_1_debug_display_settings}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a2168e80d955d50db816a4aebfbe01062}{For\+Each}} (Action$<$ \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_debug_display_settings_data}{IDebug\+Display\+Settings\+Data}} $>$ on\+Execute)
+\begin{DoxyCompactList}\small\item\em Executes an action for each element. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a85f7b8bae18426d3b0df83197f1b3205}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset the stored debug settings. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a077453293d7ec793922d36f1f58eb632}{Try\+Get\+Screen\+Clear\+Color}} (ref \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a1f4d1dce2a5a025519f66545ce6bb4f6acb5feb1b7314637725a2e73bdc9f7295}{Color}} color)
+\begin{DoxyCompactList}\small\item\em Attempts to get the color that should be used to clear the screen according to current debug settings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+TData \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a5bdc87e2db8886fef6348e3a3f98c3a8}{Add$<$ TData $>$}} (TData new\+Data)
+\begin{DoxyCompactList}\small\item\em Adds a new TData to this settings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a9d668b368ccb59aff9b97a7e0f79ab7d}\label{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a9d668b368ccb59aff9b97a7e0f79ab7d} 
+readonly Hash\+Set$<$ \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_debug_display_settings_data}{IDebug\+Display\+Settings\+Data}} $>$ {\bfseries m\+\_\+\+Settings} = new Hash\+Set$<$\mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_debug_display_settings_data}{IDebug\+Display\+Settings\+Data}}$>$()
+\begin{DoxyCompactList}\small\item\em The set of \doxylink{interface_unity_engine_1_1_rendering_1_1_i_debug_display_settings_data}{IDebug\+Display\+Settings\+Data} containing the settings for this debug display. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a5e40cbe9c33a2074da09221205aa1b34}\label{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a5e40cbe9c33a2074da09221205aa1b34} 
+static T {\bfseries Instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The singleton instance that contains the current settings of \doxylink{namespace_unity_engine_1_1_rendering}{Rendering} Debugger. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a565236e7ef986d066e50fc3089bb12c5}{Are\+Any\+Settings\+Active}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if any of the debug settings are currently active. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a45db921cd200bb1509683c317c692a5c}{Is\+Post\+Processing\+Allowed}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Checks whether the current state of these settings allows post-\/processing. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a3fea89eff9ed16b2f54f850d306358df}{Is\+Lighting\+Active}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if lighting is active for current state of debug settings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_debug_display_settings_query}{Unity\+Engine.\+Rendering.\+IDebug\+Display\+Settings\+Query}}}
+
+
+\doxysubsection{Detailed Description}
+Templated class for \doxylink{interface_unity_engine_1_1_rendering_1_1_i_debug_display_settings}{IDebug\+Display\+Settings} 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_debug_display_settings}{IDebug\+Display\+Settings}}}]\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a5bdc87e2db8886fef6348e3a3f98c3a8}\index{UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$@{UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$}!Add$<$ TData $>$@{Add$<$ TData $>$}}
+\index{Add$<$ TData $>$@{Add$<$ TData $>$}!UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$@{UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add$<$ TData $>$()}{Add< TData >()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a5bdc87e2db8886fef6348e3a3f98c3a8} 
+TData \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_display_settings}{Unity\+Engine.\+Rendering.\+Debug\+Display\+Settings}}$<$ T $>$.Add$<$ TData $>$ (\begin{DoxyParamCaption}\item[{TData}]{new\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Adds a new TData to this settings. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TData} & The type of TData to be added\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Data} & The TData to be added\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The type of TData that has been added
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TData} : {\em IDebug\+Display\+Settings\+Data}]\end{description}
+\end{Desc}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a2168e80d955d50db816a4aebfbe01062}\index{UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$@{UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$}!ForEach@{ForEach}}
+\index{ForEach@{ForEach}!UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$@{UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ForEach()}{ForEach()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a2168e80d955d50db816a4aebfbe01062} 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_display_settings}{Unity\+Engine.\+Rendering.\+Debug\+Display\+Settings}}$<$ T $>$.For\+Each (\begin{DoxyParamCaption}\item[{Action$<$ \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_debug_display_settings_data}{IDebug\+Display\+Settings\+Data}} $>$}]{on\+Execute}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Executes an action for each element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em on\+Execute} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_debug_display_settings_aab8a2f5b04bc09ea9f851a6c8daa6fb0}{Unity\+Engine.\+Rendering.\+IDebug\+Display\+Settings}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a85f7b8bae18426d3b0df83197f1b3205}\index{UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$@{UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$}!Reset@{Reset}}
+\index{Reset@{Reset}!UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$@{UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a85f7b8bae18426d3b0df83197f1b3205} 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_display_settings}{Unity\+Engine.\+Rendering.\+Debug\+Display\+Settings}}$<$ T $>$.Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reset the stored debug settings. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_debug_display_settings_a87a2a3c8c8991965ef365120b3771d2c}{Unity\+Engine.\+Rendering.\+IDebug\+Display\+Settings}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_tests_1_1_rendering_debugger_tests_1_1_test_debug_display_settings_a19ffa151c17574399be4af0ab0f359aa}{Unity\+Editor.\+Rendering.\+Tests.\+Rendering\+Debugger\+Tests.\+Test\+Debug\+Display\+Settings}}, and \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_debug_display_settings_a35d705982d738715b95aae6a3579c60a}{Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Debug\+Display\+Settings}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a077453293d7ec793922d36f1f58eb632}\index{UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$@{UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$}!TryGetScreenClearColor@{TryGetScreenClearColor}}
+\index{TryGetScreenClearColor@{TryGetScreenClearColor}!UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$@{UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{TryGetScreenClearColor()}{TryGetScreenClearColor()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a077453293d7ec793922d36f1f58eb632} 
+virtual bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_display_settings}{Unity\+Engine.\+Rendering.\+Debug\+Display\+Settings}}$<$ T $>$.Try\+Get\+Screen\+Clear\+Color (\begin{DoxyParamCaption}\item[{ref \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a1f4d1dce2a5a025519f66545ce6bb4f6acb5feb1b7314637725a2e73bdc9f7295}{Color}}}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Attempts to get the color that should be used to clear the screen according to current debug settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & A reference to the screen clear color to use.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the color reference was updated, and false otherwise.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_debug_display_settings_query_afb419e441526d086f1cceecfbcb9abd3}{Unity\+Engine.\+Rendering.\+IDebug\+Display\+Settings\+Query}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a565236e7ef986d066e50fc3089bb12c5}\index{UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$@{UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$}!AreAnySettingsActive@{AreAnySettingsActive}}
+\index{AreAnySettingsActive@{AreAnySettingsActive}!UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$@{UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AreAnySettingsActive}{AreAnySettingsActive}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a565236e7ef986d066e50fc3089bb12c5} 
+virtual bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_display_settings}{Unity\+Engine.\+Rendering.\+Debug\+Display\+Settings}}$<$ T $>$.Are\+Any\+Settings\+Active\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns true if any of the debug settings are currently active. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_debug_display_settings_query_aad82f380eda630595e1ed7371ee777fe}{Unity\+Engine.\+Rendering.\+IDebug\+Display\+Settings\+Query}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a3fea89eff9ed16b2f54f850d306358df}\index{UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$@{UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$}!IsLightingActive@{IsLightingActive}}
+\index{IsLightingActive@{IsLightingActive}!UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$@{UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IsLightingActive}{IsLightingActive}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a3fea89eff9ed16b2f54f850d306358df} 
+virtual bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_display_settings}{Unity\+Engine.\+Rendering.\+Debug\+Display\+Settings}}$<$ T $>$.Is\+Lighting\+Active\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns true if lighting is active for current state of debug settings. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_debug_display_settings_query_a81de6a2c0d525916fa9036ea1b1d699d}{Unity\+Engine.\+Rendering.\+IDebug\+Display\+Settings\+Query}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a45db921cd200bb1509683c317c692a5c}\index{UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$@{UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$}!IsPostProcessingAllowed@{IsPostProcessingAllowed}}
+\index{IsPostProcessingAllowed@{IsPostProcessingAllowed}!UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$@{UnityEngine.Rendering.DebugDisplaySettings$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IsPostProcessingAllowed}{IsPostProcessingAllowed}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_display_settings_a45db921cd200bb1509683c317c692a5c} 
+virtual bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_display_settings}{Unity\+Engine.\+Rendering.\+Debug\+Display\+Settings}}$<$ T $>$.Is\+Post\+Processing\+Allowed\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Checks whether the current state of these settings allows post-\/processing. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_debug_display_settings_query_abc5aafedd1e1ec6af4d377cdcd418be6}{Unity\+Engine.\+Rendering.\+IDebug\+Display\+Settings\+Query}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Debugging/Debug\+Display\+Settings.\+cs\end{DoxyCompactItemize}

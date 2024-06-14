@@ -1,0 +1,129 @@
+\doxysection{NSubstitute.\+Core.\+Call\+Router Class Reference}
+\hypertarget{class_n_substitute_1_1_core_1_1_call_router}{}\label{class_n_substitute_1_1_core_1_1_call_router}\index{NSubstitute.Core.CallRouter@{NSubstitute.Core.CallRouter}}
+Inheritance diagram for NSubstitute.\+Core.\+Call\+Router\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_n_substitute_1_1_core_1_1_call_router}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_n_substitute_1_1_core_1_1_call_router_ac3f142317347948a2166740135a90fd3}\label{class_n_substitute_1_1_core_1_1_call_router_ac3f142317347948a2166740135a90fd3} 
+{\bfseries Call\+Router} (\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_substitute_state}{ISubstitute\+State}} substitute\+State, \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_thread_local_context}{IThread\+Local\+Context}} thread\+Context, \mbox{\hyperlink{interface_n_substitute_1_1_routing_1_1_i_route_factory}{IRoute\+Factory}} route\+Factory, bool can\+Configure\+Base\+Calls)
+\item 
+void \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_call_router_a949ae144f0ec490b520744ae25335f23}{Clear}} (\mbox{\hyperlink{namespace_n_substitute_aa6bb0fd9a1053ee2be4b66596c296e4d}{Clear\+Options}} options)
+\item 
+IEnumerable$<$ \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call}{ICall}} $>$ \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_call_router_a9b6910c67c2d0546a4d5d8a6550172ac}{Received\+Calls}} ()
+\item 
+void \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_call_router_a5cc4950c43aa4ef50058c2eaf11bbf56}{Set\+Route}} (Func$<$ \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_substitute_state}{ISubstitute\+State}}, \mbox{\hyperlink{interface_n_substitute_1_1_routing_1_1_i_route}{IRoute}} $>$ get\+Route)
+\item 
+object? \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_call_router_a81db5bee09dd8474b250809938147c87}{Route}} (\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call}{ICall}} call)
+\item 
+\mbox{\hyperlink{class_n_substitute_1_1_core_1_1_configured_call}{Configured\+Call}} \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_call_router_a3664c0f49356d064090456e505e1576b}{Last\+Call\+Should\+Return}} (\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_return}{IReturn}} return\+Value, \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_match_args}{Match\+Args}} match\+Args, \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_pending_specification_info}{Pending\+Specification\+Info}} pending\+Spec\+Info)
+\item 
+void \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_call_router_aabd81666e3fbbb8452e6d4699ba18f1b}{Set\+Return\+For\+Type}} (Type type, \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_return}{IReturn}} return\+Value)
+\item 
+void \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_call_router_a8b4c00aa626a848da051460f7e754bf2}{Register\+Custom\+Call\+Handler\+Factory}} (\mbox{\hyperlink{namespace_n_substitute_1_1_core_a9dbcacc890ecbaa5326a95627e79b91a}{Call\+Handler\+Factory}} factory)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_call_router_a6d1e370807c9a05655d98727dcbbe293}{Call\+Base\+By\+Default}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies whether base method should be called by default. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_router}{NSubstitute.\+Core.\+ICall\+Router}}}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_n_substitute_1_1_core_1_1_call_router_a949ae144f0ec490b520744ae25335f23}\index{NSubstitute.Core.CallRouter@{NSubstitute.Core.CallRouter}!Clear@{Clear}}
+\index{Clear@{Clear}!NSubstitute.Core.CallRouter@{NSubstitute.Core.CallRouter}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_call_router_a949ae144f0ec490b520744ae25335f23} 
+void NSubstitute.\+Core.\+Call\+Router.\+Clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_n_substitute_aa6bb0fd9a1053ee2be4b66596c296e4d}{Clear\+Options}}}]{options}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_router}{NSubstitute.\+Core.\+ICall\+Router}}.
+
+\Hypertarget{class_n_substitute_1_1_core_1_1_call_router_a3664c0f49356d064090456e505e1576b}\index{NSubstitute.Core.CallRouter@{NSubstitute.Core.CallRouter}!LastCallShouldReturn@{LastCallShouldReturn}}
+\index{LastCallShouldReturn@{LastCallShouldReturn}!NSubstitute.Core.CallRouter@{NSubstitute.Core.CallRouter}}
+\doxysubsubsection{\texorpdfstring{LastCallShouldReturn()}{LastCallShouldReturn()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_call_router_a3664c0f49356d064090456e505e1576b} 
+\mbox{\hyperlink{class_n_substitute_1_1_core_1_1_configured_call}{Configured\+Call}} NSubstitute.\+Core.\+Call\+Router.\+Last\+Call\+Should\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_return}{IReturn}}}]{return\+Value}{, }\item[{\mbox{\hyperlink{class_n_substitute_1_1_core_1_1_match_args}{Match\+Args}}}]{match\+Args}{, }\item[{\mbox{\hyperlink{class_n_substitute_1_1_core_1_1_pending_specification_info}{Pending\+Specification\+Info}}}]{pending\+Spec\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_router}{NSubstitute.\+Core.\+ICall\+Router}}.
+
+\Hypertarget{class_n_substitute_1_1_core_1_1_call_router_a9b6910c67c2d0546a4d5d8a6550172ac}\index{NSubstitute.Core.CallRouter@{NSubstitute.Core.CallRouter}!ReceivedCalls@{ReceivedCalls}}
+\index{ReceivedCalls@{ReceivedCalls}!NSubstitute.Core.CallRouter@{NSubstitute.Core.CallRouter}}
+\doxysubsubsection{\texorpdfstring{ReceivedCalls()}{ReceivedCalls()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_call_router_a9b6910c67c2d0546a4d5d8a6550172ac} 
+IEnumerable$<$ \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call}{ICall}} $>$ NSubstitute.\+Core.\+Call\+Router.\+Received\+Calls (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_router}{NSubstitute.\+Core.\+ICall\+Router}}.
+
+\Hypertarget{class_n_substitute_1_1_core_1_1_call_router_a8b4c00aa626a848da051460f7e754bf2}\index{NSubstitute.Core.CallRouter@{NSubstitute.Core.CallRouter}!RegisterCustomCallHandlerFactory@{RegisterCustomCallHandlerFactory}}
+\index{RegisterCustomCallHandlerFactory@{RegisterCustomCallHandlerFactory}!NSubstitute.Core.CallRouter@{NSubstitute.Core.CallRouter}}
+\doxysubsubsection{\texorpdfstring{RegisterCustomCallHandlerFactory()}{RegisterCustomCallHandlerFactory()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_call_router_a8b4c00aa626a848da051460f7e754bf2} 
+void NSubstitute.\+Core.\+Call\+Router.\+Register\+Custom\+Call\+Handler\+Factory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_n_substitute_1_1_core_a9dbcacc890ecbaa5326a95627e79b91a}{Call\+Handler\+Factory}}}]{factory}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_router}{NSubstitute.\+Core.\+ICall\+Router}}.
+
+\Hypertarget{class_n_substitute_1_1_core_1_1_call_router_a81db5bee09dd8474b250809938147c87}\index{NSubstitute.Core.CallRouter@{NSubstitute.Core.CallRouter}!Route@{Route}}
+\index{Route@{Route}!NSubstitute.Core.CallRouter@{NSubstitute.Core.CallRouter}}
+\doxysubsubsection{\texorpdfstring{Route()}{Route()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_call_router_a81db5bee09dd8474b250809938147c87} 
+object? NSubstitute.\+Core.\+Call\+Router.\+Route (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call}{ICall}}}]{call}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_router}{NSubstitute.\+Core.\+ICall\+Router}}.
+
+\Hypertarget{class_n_substitute_1_1_core_1_1_call_router_aabd81666e3fbbb8452e6d4699ba18f1b}\index{NSubstitute.Core.CallRouter@{NSubstitute.Core.CallRouter}!SetReturnForType@{SetReturnForType}}
+\index{SetReturnForType@{SetReturnForType}!NSubstitute.Core.CallRouter@{NSubstitute.Core.CallRouter}}
+\doxysubsubsection{\texorpdfstring{SetReturnForType()}{SetReturnForType()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_call_router_aabd81666e3fbbb8452e6d4699ba18f1b} 
+void NSubstitute.\+Core.\+Call\+Router.\+Set\+Return\+For\+Type (\begin{DoxyParamCaption}\item[{Type}]{type}{, }\item[{\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_return}{IReturn}}}]{return\+Value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_router}{NSubstitute.\+Core.\+ICall\+Router}}.
+
+\Hypertarget{class_n_substitute_1_1_core_1_1_call_router_a5cc4950c43aa4ef50058c2eaf11bbf56}\index{NSubstitute.Core.CallRouter@{NSubstitute.Core.CallRouter}!SetRoute@{SetRoute}}
+\index{SetRoute@{SetRoute}!NSubstitute.Core.CallRouter@{NSubstitute.Core.CallRouter}}
+\doxysubsubsection{\texorpdfstring{SetRoute()}{SetRoute()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_call_router_a5cc4950c43aa4ef50058c2eaf11bbf56} 
+void NSubstitute.\+Core.\+Call\+Router.\+Set\+Route (\begin{DoxyParamCaption}\item[{Func$<$ \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_substitute_state}{ISubstitute\+State}}, \mbox{\hyperlink{interface_n_substitute_1_1_routing_1_1_i_route}{IRoute}} $>$}]{get\+Route}{}\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_router}{NSubstitute.\+Core.\+ICall\+Router}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_n_substitute_1_1_core_1_1_call_router_a6d1e370807c9a05655d98727dcbbe293}\index{NSubstitute.Core.CallRouter@{NSubstitute.Core.CallRouter}!CallBaseByDefault@{CallBaseByDefault}}
+\index{CallBaseByDefault@{CallBaseByDefault}!NSubstitute.Core.CallRouter@{NSubstitute.Core.CallRouter}}
+\doxysubsubsection{\texorpdfstring{CallBaseByDefault}{CallBaseByDefault}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_call_router_a6d1e370807c9a05655d98727dcbbe293} 
+bool NSubstitute.\+Core.\+Call\+Router.\+Call\+Base\+By\+Default\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies whether base method should be called by default. 
+
+This configuration is considered only when base method exists (e.\+g. you created a substitute for the Abstract\+Type with method implementation). 
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_router_aab9f8ed34f0841e13fd75db1a4bf62fc}{NSubstitute.\+Core.\+ICall\+Router}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/net.\+tnrd.\+nsubstitute@449712b25a/\+Runtime/\+Core/Call\+Router.\+cs\end{DoxyCompactItemize}

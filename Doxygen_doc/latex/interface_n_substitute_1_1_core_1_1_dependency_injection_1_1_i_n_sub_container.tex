@@ -1,0 +1,56 @@
+\doxysection{NSubstitute.\+Core.\+Dependency\+Injection.\+INSub\+Container Interface Reference}
+\hypertarget{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_container}{}\label{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_container}\index{NSubstitute.Core.DependencyInjection.INSubContainer@{NSubstitute.Core.DependencyInjection.INSubContainer}}
+Inheritance diagram for NSubstitute.\+Core.\+Dependency\+Injection.\+INSub\+Container\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_container}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_configurable_n_sub_container}{IConfigurable\+NSub\+Container}} \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_container_ad766faa4574f370a168ddae70ce12c7e}{Customize}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new container based on the current one, which can be configured to override the existing registrations without affecting the existing container. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_resolver}{INSub\+Resolver}} \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_container_a45343652a1a1d7aa7ee8de6e9314a1d5}{Create\+Scope}} ()
+\begin{DoxyCompactList}\small\item\em Create an explicit scope, so all dependencies with the \doxylink{namespace_n_substitute_1_1_core_1_1_dependency_injection_a3be4a98d6673cb5a24b30c50fa21a055ac4bc876ff2fcfee9dfa2f970f5a18dd1}{NSub\+Lifetime.\+Per\+Scope} lifetime are preserved for multiple resolve requests. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_resolver}{NSubstitute.\+Core.\+Dependency\+Injection.\+INSub\+Resolver}}}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_resolver_a7048a9272711e8d617e387d82877abe7}{Resolve$<$ T $>$}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_container_a45343652a1a1d7aa7ee8de6e9314a1d5}\index{NSubstitute.Core.DependencyInjection.INSubContainer@{NSubstitute.Core.DependencyInjection.INSubContainer}!CreateScope@{CreateScope}}
+\index{CreateScope@{CreateScope}!NSubstitute.Core.DependencyInjection.INSubContainer@{NSubstitute.Core.DependencyInjection.INSubContainer}}
+\doxysubsubsection{\texorpdfstring{CreateScope()}{CreateScope()}}
+{\footnotesize\ttfamily \label{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_container_a45343652a1a1d7aa7ee8de6e9314a1d5} 
+\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_resolver}{INSub\+Resolver}} NSubstitute.\+Core.\+Dependency\+Injection.\+INSub\+Container.\+Create\+Scope (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Create an explicit scope, so all dependencies with the \doxylink{namespace_n_substitute_1_1_core_1_1_dependency_injection_a3be4a98d6673cb5a24b30c50fa21a055ac4bc876ff2fcfee9dfa2f970f5a18dd1}{NSub\+Lifetime.\+Per\+Scope} lifetime are preserved for multiple resolve requests. 
+
+
+
+Implemented in \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_dependency_injection_1_1_n_sub_container_ab8c82c5b328d87b6d9da31ac8b68fc5f}{NSubstitute.\+Core.\+Dependency\+Injection.\+NSub\+Container}}.
+
+\Hypertarget{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_container_ad766faa4574f370a168ddae70ce12c7e}\index{NSubstitute.Core.DependencyInjection.INSubContainer@{NSubstitute.Core.DependencyInjection.INSubContainer}!Customize@{Customize}}
+\index{Customize@{Customize}!NSubstitute.Core.DependencyInjection.INSubContainer@{NSubstitute.Core.DependencyInjection.INSubContainer}}
+\doxysubsubsection{\texorpdfstring{Customize()}{Customize()}}
+{\footnotesize\ttfamily \label{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_container_ad766faa4574f370a168ddae70ce12c7e} 
+\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_configurable_n_sub_container}{IConfigurable\+NSub\+Container}} NSubstitute.\+Core.\+Dependency\+Injection.\+INSub\+Container.\+Customize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new container based on the current one, which can be configured to override the existing registrations without affecting the existing container. 
+
+
+
+Implemented in \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_dependency_injection_1_1_n_sub_container_a7d5de8677df37c4f63e692e31a9f9a07}{NSubstitute.\+Core.\+Dependency\+Injection.\+NSub\+Container}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/net.\+tnrd.\+nsubstitute@449712b25a/\+Runtime/\+Core/\+Dependency\+Injection/INSub\+Container.\+cs\end{DoxyCompactItemize}

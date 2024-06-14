@@ -1,0 +1,157 @@
+\doxysection{Unity\+Editor.\+U2\+D.\+Sprites.\+Sprite\+Editor\+Module\+Base Class Reference}
+\hypertarget{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base}{}\label{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base}\index{UnityEditor.U2D.Sprites.SpriteEditorModuleBase@{UnityEditor.U2D.Sprites.SpriteEditorModuleBase}}
+
+
+Base class the Sprite Editor Window custom module inherits from.  
+
+
+
+
+Inherited by Unity\+Editor.\+U2\+D.\+Sprites.\+Sprite\+Frame\+Module\+Base, Unity\+Editor.\+U2\+D.\+Sprites.\+Sprite\+Frame\+Module\+Base, Unity\+Editor.\+U2\+D.\+Sprites.\+Sprite\+Outline\+Module, and Unity\+Editor.\+\_\+2\+D.\+Sprite.\+Editor.\+Sprite\+Secondary\+Textures\+Module.
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_a0e397e8522d8906b4cc5cadd88361a02}{Can\+Be\+Activated}} ()
+\begin{DoxyCompactList}\small\item\em Indicates if the module can be activated with the current \doxylink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor}{ISprite\+Editor} state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_a2ae6ee31871b02c7627c246e93f0ed2e}{Do\+Main\+GUI}} ()
+\begin{DoxyCompactList}\small\item\em Implement this to draw on the Sprite Editor Window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_a9b15d39eb4926b87fe7ff9bac1e30276}{Do\+Toolbar\+GUI}} (Rect draw\+Area)
+\begin{DoxyCompactList}\small\item\em Implement this to create a custom toolbar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_a5118b028ad73215e9370788d0b5e8410}{On\+Module\+Activate}} ()
+\begin{DoxyCompactList}\small\item\em This is called when the user activates the module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_ace8534dec8965e4b2ed478a8d5f27a97}{On\+Module\+Deactivate}} ()
+\begin{DoxyCompactList}\small\item\em This is called when user switches to another module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_ab34fdf711fee8f47dc0ac980f73b4b81}{Do\+Post\+GUI}} ()
+\begin{DoxyCompactList}\small\item\em Implement this to draw widgets in Sprite Editor Window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_ab0d70cde82ae4e04e14d753ed5130ded}{Apply\+Revert}} (bool apply)
+\begin{DoxyCompactList}\small\item\em This is called when user clicks on the Apply or Revert button in Sprite Editor Window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor}{ISprite\+Editor}} \mbox{\hyperlink{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_a7f0c2d4a1be8ce6dad0224fc9fe3a599}{sprite\+Editor}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The \doxylink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor}{ISprite\+Editor} instance that instantiated the module. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_aeadfd44a4a9b74a40cac01fea83a2bad}{module\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The module name to display in Sprite Editor Window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class the Sprite Editor Window custom module inherits from. 
+
+Sprite Editor Window functionality can be extended by providing custom module. By inheriting from \doxylink{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base}{Sprite\+Editor\+Module\+Base}, user will be able to activate the module\textquotesingle{}s functionality from Sprite Editor Window. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_ab0d70cde82ae4e04e14d753ed5130ded}\index{UnityEditor.U2D.Sprites.SpriteEditorModuleBase@{UnityEditor.U2D.Sprites.SpriteEditorModuleBase}!ApplyRevert@{ApplyRevert}}
+\index{ApplyRevert@{ApplyRevert}!UnityEditor.U2D.Sprites.SpriteEditorModuleBase@{UnityEditor.U2D.Sprites.SpriteEditorModuleBase}}
+\doxysubsubsection{\texorpdfstring{ApplyRevert()}{ApplyRevert()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_ab0d70cde82ae4e04e14d753ed5130ded} 
+bool Unity\+Editor.\+U2\+D.\+Sprites.\+Sprite\+Editor\+Module\+Base.\+Apply\+Revert (\begin{DoxyParamCaption}\item[{bool}]{apply}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+This is called when user clicks on the Apply or Revert button in Sprite Editor Window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em apply} & True when user wants to apply the data, false when user wants to revert.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return true to trigger a reimport.
+\end{DoxyReturn}
+\Hypertarget{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_a0e397e8522d8906b4cc5cadd88361a02}\index{UnityEditor.U2D.Sprites.SpriteEditorModuleBase@{UnityEditor.U2D.Sprites.SpriteEditorModuleBase}!CanBeActivated@{CanBeActivated}}
+\index{CanBeActivated@{CanBeActivated}!UnityEditor.U2D.Sprites.SpriteEditorModuleBase@{UnityEditor.U2D.Sprites.SpriteEditorModuleBase}}
+\doxysubsubsection{\texorpdfstring{CanBeActivated()}{CanBeActivated()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_a0e397e8522d8906b4cc5cadd88361a02} 
+bool Unity\+Editor.\+U2\+D.\+Sprites.\+Sprite\+Editor\+Module\+Base.\+Can\+Be\+Activated (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Indicates if the module can be activated with the current \doxylink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor}{ISprite\+Editor} state. 
+
+\begin{DoxyReturn}{Returns}
+Return true if the module can be activated.
+\end{DoxyReturn}
+\Hypertarget{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_a2ae6ee31871b02c7627c246e93f0ed2e}\index{UnityEditor.U2D.Sprites.SpriteEditorModuleBase@{UnityEditor.U2D.Sprites.SpriteEditorModuleBase}!DoMainGUI@{DoMainGUI}}
+\index{DoMainGUI@{DoMainGUI}!UnityEditor.U2D.Sprites.SpriteEditorModuleBase@{UnityEditor.U2D.Sprites.SpriteEditorModuleBase}}
+\doxysubsubsection{\texorpdfstring{DoMainGUI()}{DoMainGUI()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_a2ae6ee31871b02c7627c246e93f0ed2e} 
+void Unity\+Editor.\+U2\+D.\+Sprites.\+Sprite\+Editor\+Module\+Base.\+Do\+Main\+GUI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Implement this to draw on the Sprite Editor Window. 
+
+Called after Sprite Editor Window draws texture preview of the Asset.\+Use this to draw gizmos for Sprite data.\Hypertarget{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_ab34fdf711fee8f47dc0ac980f73b4b81}\index{UnityEditor.U2D.Sprites.SpriteEditorModuleBase@{UnityEditor.U2D.Sprites.SpriteEditorModuleBase}!DoPostGUI@{DoPostGUI}}
+\index{DoPostGUI@{DoPostGUI}!UnityEditor.U2D.Sprites.SpriteEditorModuleBase@{UnityEditor.U2D.Sprites.SpriteEditorModuleBase}}
+\doxysubsubsection{\texorpdfstring{DoPostGUI()}{DoPostGUI()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_ab34fdf711fee8f47dc0ac980f73b4b81} 
+void Unity\+Editor.\+U2\+D.\+Sprites.\+Sprite\+Editor\+Module\+Base.\+Do\+Post\+GUI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Implement this to draw widgets in Sprite Editor Window. 
+
+This method is called last to allow drawing of widgets.\Hypertarget{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_a9b15d39eb4926b87fe7ff9bac1e30276}\index{UnityEditor.U2D.Sprites.SpriteEditorModuleBase@{UnityEditor.U2D.Sprites.SpriteEditorModuleBase}!DoToolbarGUI@{DoToolbarGUI}}
+\index{DoToolbarGUI@{DoToolbarGUI}!UnityEditor.U2D.Sprites.SpriteEditorModuleBase@{UnityEditor.U2D.Sprites.SpriteEditorModuleBase}}
+\doxysubsubsection{\texorpdfstring{DoToolbarGUI()}{DoToolbarGUI()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_a9b15d39eb4926b87fe7ff9bac1e30276} 
+void Unity\+Editor.\+U2\+D.\+Sprites.\+Sprite\+Editor\+Module\+Base.\+Do\+Toolbar\+GUI (\begin{DoxyParamCaption}\item[{Rect}]{draw\+Area}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Implement this to create a custom toolbar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em draw\+Area} & Area for drawing tool bar.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_a5118b028ad73215e9370788d0b5e8410}\index{UnityEditor.U2D.Sprites.SpriteEditorModuleBase@{UnityEditor.U2D.Sprites.SpriteEditorModuleBase}!OnModuleActivate@{OnModuleActivate}}
+\index{OnModuleActivate@{OnModuleActivate}!UnityEditor.U2D.Sprites.SpriteEditorModuleBase@{UnityEditor.U2D.Sprites.SpriteEditorModuleBase}}
+\doxysubsubsection{\texorpdfstring{OnModuleActivate()}{OnModuleActivate()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_a5118b028ad73215e9370788d0b5e8410} 
+void Unity\+Editor.\+U2\+D.\+Sprites.\+Sprite\+Editor\+Module\+Base.\+On\+Module\+Activate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+This is called when the user activates the module. 
+
+When user switches to the module via Sprite Editor Window, this method will be called for the module to setup.\Hypertarget{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_ace8534dec8965e4b2ed478a8d5f27a97}\index{UnityEditor.U2D.Sprites.SpriteEditorModuleBase@{UnityEditor.U2D.Sprites.SpriteEditorModuleBase}!OnModuleDeactivate@{OnModuleDeactivate}}
+\index{OnModuleDeactivate@{OnModuleDeactivate}!UnityEditor.U2D.Sprites.SpriteEditorModuleBase@{UnityEditor.U2D.Sprites.SpriteEditorModuleBase}}
+\doxysubsubsection{\texorpdfstring{OnModuleDeactivate()}{OnModuleDeactivate()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_ace8534dec8965e4b2ed478a8d5f27a97} 
+void Unity\+Editor.\+U2\+D.\+Sprites.\+Sprite\+Editor\+Module\+Base.\+On\+Module\+Deactivate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+This is called when user switches to another module. 
+
+When user switches to the another module in Sprite Editor Window, this method will be called for the module to clean up.
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_aeadfd44a4a9b74a40cac01fea83a2bad}\index{UnityEditor.U2D.Sprites.SpriteEditorModuleBase@{UnityEditor.U2D.Sprites.SpriteEditorModuleBase}!moduleName@{moduleName}}
+\index{moduleName@{moduleName}!UnityEditor.U2D.Sprites.SpriteEditorModuleBase@{UnityEditor.U2D.Sprites.SpriteEditorModuleBase}}
+\doxysubsubsection{\texorpdfstring{moduleName}{moduleName}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_aeadfd44a4a9b74a40cac01fea83a2bad} 
+string Unity\+Editor.\+U2\+D.\+Sprites.\+Sprite\+Editor\+Module\+Base.\+module\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [abstract]}}
+
+
+
+The module name to display in Sprite Editor Window. 
+
+String to represent the name of the module\Hypertarget{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_a7f0c2d4a1be8ce6dad0224fc9fe3a599}\index{UnityEditor.U2D.Sprites.SpriteEditorModuleBase@{UnityEditor.U2D.Sprites.SpriteEditorModuleBase}!spriteEditor@{spriteEditor}}
+\index{spriteEditor@{spriteEditor}!UnityEditor.U2D.Sprites.SpriteEditorModuleBase@{UnityEditor.U2D.Sprites.SpriteEditorModuleBase}}
+\doxysubsubsection{\texorpdfstring{spriteEditor}{spriteEditor}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base_a7f0c2d4a1be8ce6dad0224fc9fe3a599} 
+\mbox{\hyperlink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor}{ISprite\+Editor}} Unity\+Editor.\+U2\+D.\+Sprites.\+Sprite\+Editor\+Module\+Base.\+sprite\+Editor\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The \doxylink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor}{ISprite\+Editor} instance that instantiated the module. 
+
+An instance of \doxylink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor}{ISprite\+Editor}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+2d.\+sprite@1.\+0.\+0/\+Editor/\+Sprite\+Editor\+Module/ISprite\+Editor\+Module.\+cs\end{DoxyCompactItemize}

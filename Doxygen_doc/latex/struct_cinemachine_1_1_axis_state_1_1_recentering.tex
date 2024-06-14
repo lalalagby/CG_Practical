@@ -1,0 +1,119 @@
+\doxysection{Cinemachine.\+Axis\+State.\+Recentering Struct Reference}
+\hypertarget{struct_cinemachine_1_1_axis_state_1_1_recentering}{}\label{struct_cinemachine_1_1_axis_state_1_1_recentering}\index{Cinemachine.AxisState.Recentering@{Cinemachine.AxisState.Recentering}}
+
+
+Helper for automatic axis recentering.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_cinemachine_1_1_axis_state_1_1_recentering_aa59329ad49bd4900c28ffe0431176919}{Recentering}} (bool enabled, float wait\+Time, float recentering\+Time)
+\begin{DoxyCompactList}\small\item\em Constructor with specific field values. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_axis_state_1_1_recentering_a0418d8763f63f469ed0f89aca7479824}\label{struct_cinemachine_1_1_axis_state_1_1_recentering_a0418d8763f63f469ed0f89aca7479824} 
+void {\bfseries Validate} ()
+\begin{DoxyCompactList}\small\item\em Call this from On\+Validate() \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_cinemachine_1_1_axis_state_1_1_recentering_a245af8a6750512da0010c5ce7942f870}{Copy\+State\+From}} (ref \mbox{\hyperlink{struct_cinemachine_1_1_axis_state_1_1_recentering}{Recentering}} other)
+\begin{DoxyCompactList}\small\item\em Copy \doxylink{struct_cinemachine_1_1_axis_state_1_1_recentering}{Recentering} state from another \doxylink{struct_cinemachine_1_1_axis_state_1_1_recentering}{Recentering} component. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_axis_state_1_1_recentering_a589abd54d27e068f75841472606cce31}\label{struct_cinemachine_1_1_axis_state_1_1_recentering_a589abd54d27e068f75841472606cce31} 
+void {\bfseries Cancel\+Recentering} ()
+\begin{DoxyCompactList}\small\item\em Cancel any recenetering in progress. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_axis_state_1_1_recentering_a05f04f54b29a4b44443b945a82307294}\label{struct_cinemachine_1_1_axis_state_1_1_recentering_a05f04f54b29a4b44443b945a82307294} 
+void {\bfseries Recenter\+Now} ()
+\begin{DoxyCompactList}\small\item\em Skip the wait time and start recentering now (only if enabled). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_cinemachine_1_1_axis_state_1_1_recentering_a391fd4b3da64cd214f29ed8989b1f7ac}{Do\+Recentering}} (ref \mbox{\hyperlink{struct_cinemachine_1_1_axis_state}{Axis\+State}} axis, float delta\+Time, float recenter\+Target)
+\begin{DoxyCompactList}\small\item\em Bring the axis back to the centered state (only if enabled). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_cinemachine_1_1_axis_state_1_1_recentering_a8d4fe17268a46cf9926c624b6063bc26}\label{struct_cinemachine_1_1_axis_state_1_1_recentering_a8d4fe17268a46cf9926c624b6063bc26} 
+bool {\bfseries m\+\_\+enabled}
+\begin{DoxyCompactList}\small\item\em If checked, will enable automatic recentering of the axis. If FALSE, recenting is disabled. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_axis_state_1_1_recentering_aaa50126e50c91ad040621b2cf8581d52}\label{struct_cinemachine_1_1_axis_state_1_1_recentering_aaa50126e50c91ad040621b2cf8581d52} 
+float {\bfseries m\+\_\+\+Wait\+Time}
+\begin{DoxyCompactList}\small\item\em If no input has been detected, the camera will wait this long in seconds before moving its heading to the default heading. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_axis_state_1_1_recentering_a2ec97846eecf846ab6c5f277817b706b}\label{struct_cinemachine_1_1_axis_state_1_1_recentering_a2ec97846eecf846ab6c5f277817b706b} 
+float {\bfseries m\+\_\+\+Recentering\+Time}
+\begin{DoxyCompactList}\small\item\em How long it takes to reach destination once recentering has started. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_axis_state_1_1_recentering_ac6bb8e342a0a032eabe4ca5e275f3bb8}\label{struct_cinemachine_1_1_axis_state_1_1_recentering_ac6bb8e342a0a032eabe4ca5e275f3bb8} 
+float {\bfseries m\+\_\+\+Last\+Update\+Time}
+\item 
+\Hypertarget{struct_cinemachine_1_1_axis_state_1_1_recentering_aec75a6d647ed055e80e133370257228a}\label{struct_cinemachine_1_1_axis_state_1_1_recentering_aec75a6d647ed055e80e133370257228a} 
+float {\bfseries m\+Last\+Axis\+Input\+Time}
+\item 
+\Hypertarget{struct_cinemachine_1_1_axis_state_1_1_recentering_ab20ebb08a9589cea1b52ea9e462cf05f}\label{struct_cinemachine_1_1_axis_state_1_1_recentering_ab20ebb08a9589cea1b52ea9e462cf05f} 
+float {\bfseries m\+Recentering\+Velocity}
+\item 
+\Hypertarget{struct_cinemachine_1_1_axis_state_1_1_recentering_a193b12ab3ecf80ecf81efbd4f84969d3}\label{struct_cinemachine_1_1_axis_state_1_1_recentering_a193b12ab3ecf80ecf81efbd4f84969d3} 
+int {\bfseries m\+\_\+\+Legacy\+Heading\+Definition}
+\item 
+\Hypertarget{struct_cinemachine_1_1_axis_state_1_1_recentering_ac8a7b65d3f843d8f1f9a01948c70031f}\label{struct_cinemachine_1_1_axis_state_1_1_recentering_ac8a7b65d3f843d8f1f9a01948c70031f} 
+int {\bfseries m\+\_\+\+Legacy\+Velocity\+Filter\+Strength}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helper for automatic axis recentering. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_cinemachine_1_1_axis_state_1_1_recentering_aa59329ad49bd4900c28ffe0431176919}\index{Cinemachine.AxisState.Recentering@{Cinemachine.AxisState.Recentering}!Recentering@{Recentering}}
+\index{Recentering@{Recentering}!Cinemachine.AxisState.Recentering@{Cinemachine.AxisState.Recentering}}
+\doxysubsubsection{\texorpdfstring{Recentering()}{Recentering()}}
+{\footnotesize\ttfamily \label{struct_cinemachine_1_1_axis_state_1_1_recentering_aa59329ad49bd4900c28ffe0431176919} 
+Cinemachine.\+Axis\+State.\+Recentering.\+Recentering (\begin{DoxyParamCaption}\item[{bool}]{enabled}{, }\item[{float}]{wait\+Time}{, }\item[{float}]{recentering\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor with specific field values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & \\
+\hline
+{\em wait\+Time} & \\
+\hline
+{\em recentering\+Time} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_cinemachine_1_1_axis_state_1_1_recentering_a245af8a6750512da0010c5ce7942f870}\index{Cinemachine.AxisState.Recentering@{Cinemachine.AxisState.Recentering}!CopyStateFrom@{CopyStateFrom}}
+\index{CopyStateFrom@{CopyStateFrom}!Cinemachine.AxisState.Recentering@{Cinemachine.AxisState.Recentering}}
+\doxysubsubsection{\texorpdfstring{CopyStateFrom()}{CopyStateFrom()}}
+{\footnotesize\ttfamily \label{struct_cinemachine_1_1_axis_state_1_1_recentering_a245af8a6750512da0010c5ce7942f870} 
+void Cinemachine.\+Axis\+State.\+Recentering.\+Copy\+State\+From (\begin{DoxyParamCaption}\item[{ref \mbox{\hyperlink{struct_cinemachine_1_1_axis_state_1_1_recentering}{Recentering}}}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy \doxylink{struct_cinemachine_1_1_axis_state_1_1_recentering}{Recentering} state from another \doxylink{struct_cinemachine_1_1_axis_state_1_1_recentering}{Recentering} component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_cinemachine_1_1_axis_state_1_1_recentering_a391fd4b3da64cd214f29ed8989b1f7ac}\index{Cinemachine.AxisState.Recentering@{Cinemachine.AxisState.Recentering}!DoRecentering@{DoRecentering}}
+\index{DoRecentering@{DoRecentering}!Cinemachine.AxisState.Recentering@{Cinemachine.AxisState.Recentering}}
+\doxysubsubsection{\texorpdfstring{DoRecentering()}{DoRecentering()}}
+{\footnotesize\ttfamily \label{struct_cinemachine_1_1_axis_state_1_1_recentering_a391fd4b3da64cd214f29ed8989b1f7ac} 
+void Cinemachine.\+Axis\+State.\+Recentering.\+Do\+Recentering (\begin{DoxyParamCaption}\item[{ref \mbox{\hyperlink{struct_cinemachine_1_1_axis_state}{Axis\+State}}}]{axis}{, }\item[{float}]{delta\+Time}{, }\item[{float}]{recenter\+Target}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Bring the axis back to the centered state (only if enabled). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em axis} & The axis to recenter\\
+\hline
+{\em delta\+Time} & Current effective delta\+Time\\
+\hline
+{\em recenter\+Target} & The value that is considered to be centered\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Core/Axis\+State.\+cs\end{DoxyCompactItemize}

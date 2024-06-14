@@ -1,0 +1,41 @@
+\chapter{Aliasing and the job system}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2aliasing-job-system}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2aliasing-job-system}\index{Aliasing and the job system@{Aliasing and the job system}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2aliasing-job-system_autotoc_md276}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2aliasing-job-system_autotoc_md276}%
+ \doxylink{namespace_unity}{Unity}\textquotesingle{}s job system infrastructure has some limitations on what can alias within a job struct\+:
+
+
+\begin{DoxyItemize}
+\item Structs attributed with \href{https://docs.unity3d.com/ScriptReference/Unity.Collections.LowLevel.Unsafe.NativeContainerAttribute.html}{\texttt{ {\ttfamily \mbox{[}Native\+Container\mbox{]}}}} (for example, \href{https://docs.unity3d.com/ScriptReference/Unity.Collections.NativeArray_1.html}{\texttt{ {\ttfamily Native\+Array}}} and \href{https://docs.unity3d.com/ScriptReference/Unity.Collections.NativeSlice_1.html}{\texttt{ {\ttfamily Native\+Slice}}}) that are members of a job struct don\textquotesingle{}t alias.
+\item Job struct members with the \href{https://docs.unity3d.com/ScriptReference/Unity.Collections.LowLevel.Unsafe.NativeDisableContainerSafetyRestrictionAttribute.html}{\texttt{ {\ttfamily \mbox{[}Native\+Disable\+Container\+Safety\+Restriction\mbox{]}}}} attribute can alias with other members. This is because this attribute explicitly opts in to this kind of aliasing.
+\item Pointers to structs attributed with {\ttfamily \mbox{[}Native\+Container\mbox{]}} can\textquotesingle{}t appear in other structs attributed with {\ttfamily \mbox{[}Native\+Container\mbox{]}}. For example, you can\textquotesingle{}t have a {\ttfamily Native\+Array\texorpdfstring{$<$}{<}Native\+Slice\texorpdfstring{$<$}{<}T\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>}}.
+\end{DoxyItemize}
+
+The following example job shows how these limitations work in practice\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{[BurstCompile]}
+\DoxyCodeLine{\textcolor{keyword}{private}\ \textcolor{keyword}{struct\ }MyJob\ :\ IJob}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ NativeArray<float>\ a;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ NativeArray<float>\ b;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ NativeSlice<int>\ c;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ [NativeDisableContainerSafetyRestriction]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ NativeArray<byte>\ d;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Execute()\ \{\ ...\ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item {\ttfamily a}, {\ttfamily b}, and {\ttfamily c} don\textquotesingle{}t alias with each other.
+\item {\ttfamily d} can alias with {\ttfamily a}, {\ttfamily b}, or {\ttfamily c}.
+\end{DoxyItemize}
+
+\texorpdfstring{$>$}{>}\mbox{[}!\+TIP\mbox{]} \texorpdfstring{$>$}{>}If you\textquotesingle{}re used to working with C/\+C++\textquotesingle{}s \href{https://en.wikipedia.org/wiki/Alias_analysis\#Type-based_alias_analysis}{\texttt{ Type Based Alias Analysis (TBAA)}}, then you might assume that because {\ttfamily d} has a different type from {\ttfamily a}, {\ttfamily b}, or {\ttfamily c}, it shouldn\textquotesingle{}t alias. However, in C\#, pointers don\textquotesingle{}t have any assumptions that pointing to a different type results in no aliasing. This is why {\ttfamily d} is assumed to alias with {\ttfamily a}, {\ttfamily b}, or {\ttfamily c}. 

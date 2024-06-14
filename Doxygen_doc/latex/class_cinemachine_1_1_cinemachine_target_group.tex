@@ -1,0 +1,333 @@
+\doxysection{Cinemachine.\+Cinemachine\+Target\+Group Class Reference}
+\hypertarget{class_cinemachine_1_1_cinemachine_target_group}{}\label{class_cinemachine_1_1_cinemachine_target_group}\index{Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}}
+
+
+Defines a group of target objects, each with a radius and a weight. The weight is used when calculating the average position of the target group. Higher-\/weighted members of the group will count more. The bounding box is calculated by taking the member positions, weight, and radii into account.  
+
+
+Inheritance diagram for Cinemachine.\+Cinemachine\+Target\+Group\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cinemachine_1_1_cinemachine_target_group}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_target_group_1_1_target}{Target}}
+\begin{DoxyCompactList}\small\item\em Holds the information that represents a member of the group. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_a277b521d2e07620d18a96d202b864a12}{Position\+Mode}} \{ \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_a277b521d2e07620d18a96d202b864a12aca48026b623e048e47a488389294c2e6}{Group\+Center}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_a277b521d2e07620d18a96d202b864a12a47a3766598369b5e6e680535d63c3495}{Group\+Average}}
+ \}
+\begin{DoxyCompactList}\small\item\em How the group\textquotesingle{}s position is calculated. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_a267b6c9b8a14ab9258401a289840b8cd}{Rotation\+Mode}} \{ \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_a267b6c9b8a14ab9258401a289840b8cdae1ba155a9f2e8c3be94020eef32a0301}{Manual}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_a267b6c9b8a14ab9258401a289840b8cda47a3766598369b5e6e680535d63c3495}{Group\+Average}}
+ \}
+\begin{DoxyCompactList}\small\item\em How the group\textquotesingle{}s orientation is calculated. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_ad000948705e605f262aa37dcca91f57e}{Update\+Method}} \{ \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_ad000948705e605f262aa37dcca91f57ea06933067aafd48425d67bcb01bba5cb6}{Update}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_ad000948705e605f262aa37dcca91f57ea9c1ca4069e206318b33ef896d3dd204e}{Fixed\+Update}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_ad000948705e605f262aa37dcca91f57ea2609005edfde618c70f2140bb3e9b7c2}{Late\+Update}}
+ \}
+\begin{DoxyCompactList}\small\item\em This enum defines the options available for the update method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_a52f3d3a52818ff6da849579f893bcb5e}{Add\+Member}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_a2fc4dee3c24a0b1fb9369da145e387cc}{Transform}} t, float weight, float radius)
+\begin{DoxyCompactList}\small\item\em Add a member to the group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_aaea525816121def8454b18ae2778ba5c}{Remove\+Member}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_a2fc4dee3c24a0b1fb9369da145e387cc}{Transform}} t)
+\begin{DoxyCompactList}\small\item\em Remove a member from the group. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_ac4e4eb14fb5432417cc0c30c11ac784d}{Find\+Member}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_a2fc4dee3c24a0b1fb9369da145e387cc}{Transform}} t)
+\begin{DoxyCompactList}\small\item\em Locate a member\textquotesingle{}s index in the group. \end{DoxyCompactList}\item 
+Bounding\+Sphere \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_a5cdbdde76b01b1abdfd3ebeaf71ed799}{Get\+Weighted\+Bounds\+For\+Member}} (int index)
+\begin{DoxyCompactList}\small\item\em Get the bounding sphere of a group memebr, with the weight taken into account. As the member\textquotesingle{}s weight goes to 0, the position lerps to the group average position. Note that this result is only valid after Do\+Update has been called. If members are added or removed after that call or change their weights or active state, this will not necessarily return correct information before the next update. \end{DoxyCompactList}\item 
+Bounds \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_a70a58a2d85bb821a589676ec263763ce}{Get\+View\+Space\+Bounding\+Box}} (Matrix4x4 observer)
+\begin{DoxyCompactList}\small\item\em The axis-\/aligned bounding box of the group, in a specific reference frame. Note that this result is only valid after Do\+Update has been called. If members are added or removed after that call or change their weights or active state, this will not necessarily return correct information before the next update. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_add58bad02c70a73f8d41128f8f5c1423}\label{class_cinemachine_1_1_cinemachine_target_group_add58bad02c70a73f8d41128f8f5c1423} 
+void {\bfseries Do\+Update} ()
+\begin{DoxyCompactList}\small\item\em Update the group\textquotesingle{}s transform right now, depending on the transforms of the members. Normally this is called automatically by Update() or Late\+Update(). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_acd76424cde896cf48bd2dbb9e87f5a11}{Get\+View\+Space\+Angular\+Bounds}} (Matrix4x4 observer, out Vector2 min\+Angles, out Vector2 max\+Angles, out Vector2 z\+Range)
+\begin{DoxyCompactList}\small\item\em Get the local-\/space angular bounds of the group, from a specific point of view. Also returns the z depth range of the members. Note that this result is only valid after Do\+Update has been called. If members are added or removed after that call or change their weights or active state, this will not necessarily return correct information before the next update. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_a83ba1dcd11d87d4577ed983b80078046}\label{class_cinemachine_1_1_cinemachine_target_group_a83ba1dcd11d87d4577ed983b80078046} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_a277b521d2e07620d18a96d202b864a12}{Position\+Mode}} {\bfseries m\+\_\+\+Position\+Mode} = \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_a277b521d2e07620d18a96d202b864a12aca48026b623e048e47a488389294c2e6}{Position\+Mode.\+Group\+Center}}
+\begin{DoxyCompactList}\small\item\em How the group\textquotesingle{}s position is calculated. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_a320ae162e42c6c57d179b2124c762ece}\label{class_cinemachine_1_1_cinemachine_target_group_a320ae162e42c6c57d179b2124c762ece} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_a267b6c9b8a14ab9258401a289840b8cd}{Rotation\+Mode}} {\bfseries m\+\_\+\+Rotation\+Mode} = \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_a267b6c9b8a14ab9258401a289840b8cdae1ba155a9f2e8c3be94020eef32a0301}{Rotation\+Mode.\+Manual}}
+\begin{DoxyCompactList}\small\item\em How the group\textquotesingle{}s orientation is calculated. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_a64598a0a94737cb90ac996cea0a6b98d}\label{class_cinemachine_1_1_cinemachine_target_group_a64598a0a94737cb90ac996cea0a6b98d} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_ad000948705e605f262aa37dcca91f57e}{Update\+Method}} {\bfseries m\+\_\+\+Update\+Method} = \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_ad000948705e605f262aa37dcca91f57ea2609005edfde618c70f2140bb3e9b7c2}{Update\+Method.\+Late\+Update}}
+\begin{DoxyCompactList}\small\item\em When to update the group\textquotesingle{}s transform based on the position of the group members. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_aa5303676c944f25410660ed9337e3aa1}\label{class_cinemachine_1_1_cinemachine_target_group_aa5303676c944f25410660ed9337e3aa1} 
+\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_target_group_1_1_target}{Target}}\mbox{[}$\,$\mbox{]} {\bfseries m\+\_\+\+Targets} = Array.\+Empty$<$\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_target_group_1_1_target}{Target}}$>$()
+\begin{DoxyCompactList}\small\item\em The target objects, together with their weights and radii, that will contribute to the group\textquotesingle{}s average position, orientation, and size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Transform \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_a2fc4dee3c24a0b1fb9369da145e387cc}{Transform}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the Mono\+Behaviour\textquotesingle{}s Transform. \end{DoxyCompactList}\item 
+Bounds \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_a8acd92e88ea33fe48e93ca82d60c18a2}{Bounding\+Box}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The axis-\/aligned bounding box of the group, computed using the targets positions and radii. \end{DoxyCompactList}\item 
+Bounding\+Sphere \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_af3d0f81b965f4428862608637147b896}{Sphere}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The bounding sphere of the group, computed using the targets positions and radii. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_ab63bde6e0b3c5c82ab26d4a5c70bf0e0}{Is\+Empty}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Return true if there are no members with weight \texorpdfstring{$>$}{>} 0. This returns the cached member state and is only valid after a call to \doxylink{class_cinemachine_1_1_cinemachine_target_group_add58bad02c70a73f8d41128f8f5c1423}{Do\+Update()}. If members are added or removed after that call, this will not necessarily return correct information before the next update. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_target_group}{Cinemachine.\+ICinemachine\+Target\+Group}}}
+
+
+\doxysubsection{Detailed Description}
+Defines a group of target objects, each with a radius and a weight. The weight is used when calculating the average position of the target group. Higher-\/weighted members of the group will count more. The bounding box is calculated by taking the member positions, weight, and radii into account. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_a277b521d2e07620d18a96d202b864a12}\index{Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}!PositionMode@{PositionMode}}
+\index{PositionMode@{PositionMode}!Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}}
+\doxysubsubsection{\texorpdfstring{PositionMode}{PositionMode}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_target_group_a277b521d2e07620d18a96d202b864a12} 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_a277b521d2e07620d18a96d202b864a12}{Cinemachine.\+Cinemachine\+Target\+Group.\+Position\+Mode}}}
+
+
+
+How the group\textquotesingle{}s position is calculated. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GroupCenter@{GroupCenter}!Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}}\index{Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}!GroupCenter@{GroupCenter}}}\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_a277b521d2e07620d18a96d202b864a12aca48026b623e048e47a488389294c2e6}\label{class_cinemachine_1_1_cinemachine_target_group_a277b521d2e07620d18a96d202b864a12} 
+Group\+Center&summary\texorpdfstring{$>$}{>}Group position will be the center of the group\textquotesingle{}s axis-\/aligned bounding box \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GroupAverage@{GroupAverage}!Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}}\index{Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}!GroupAverage@{GroupAverage}}}\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_a277b521d2e07620d18a96d202b864a12a47a3766598369b5e6e680535d63c3495}\label{class_cinemachine_1_1_cinemachine_target_group_a277b521d2e07620d18a96d202b864a12} 
+Group\+Average&Group position will be the weighted average of the positions of the members. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_a267b6c9b8a14ab9258401a289840b8cd}\index{Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}!RotationMode@{RotationMode}}
+\index{RotationMode@{RotationMode}!Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}}
+\doxysubsubsection{\texorpdfstring{RotationMode}{RotationMode}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_target_group_a267b6c9b8a14ab9258401a289840b8cd} 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_a267b6c9b8a14ab9258401a289840b8cd}{Cinemachine.\+Cinemachine\+Target\+Group.\+Rotation\+Mode}}}
+
+
+
+How the group\textquotesingle{}s orientation is calculated. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Manual@{Manual}!Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}}\index{Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}!Manual@{Manual}}}\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_a267b6c9b8a14ab9258401a289840b8cdae1ba155a9f2e8c3be94020eef32a0301}\label{class_cinemachine_1_1_cinemachine_target_group_a267b6c9b8a14ab9258401a289840b8cd} 
+Manual&Manually set in the group\textquotesingle{}s transform. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GroupAverage@{GroupAverage}!Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}}\index{Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}!GroupAverage@{GroupAverage}}}\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_a267b6c9b8a14ab9258401a289840b8cda47a3766598369b5e6e680535d63c3495}\label{class_cinemachine_1_1_cinemachine_target_group_a267b6c9b8a14ab9258401a289840b8cd} 
+Group\+Average&Weighted average of the orientation of its members. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_ad000948705e605f262aa37dcca91f57e}\index{Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}!UpdateMethod@{UpdateMethod}}
+\index{UpdateMethod@{UpdateMethod}!Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}}
+\doxysubsubsection{\texorpdfstring{UpdateMethod}{UpdateMethod}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_target_group_ad000948705e605f262aa37dcca91f57e} 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_ad000948705e605f262aa37dcca91f57e}{Cinemachine.\+Cinemachine\+Target\+Group.\+Update\+Method}}}
+
+
+
+This enum defines the options available for the update method. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Update@{Update}!Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}}\index{Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}!Update@{Update}}}\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_ad000948705e605f262aa37dcca91f57ea06933067aafd48425d67bcb01bba5cb6}\label{class_cinemachine_1_1_cinemachine_target_group_ad000948705e605f262aa37dcca91f57e} 
+Update&Updated in normal Mono\+Behaviour Update. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FixedUpdate@{FixedUpdate}!Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}}\index{Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}!FixedUpdate@{FixedUpdate}}}\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_ad000948705e605f262aa37dcca91f57ea9c1ca4069e206318b33ef896d3dd204e}\label{class_cinemachine_1_1_cinemachine_target_group_ad000948705e605f262aa37dcca91f57e} 
+Fixed\+Update&Updated in sync with the Physics module, in Fixed\+Update. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LateUpdate@{LateUpdate}!Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}}\index{Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}!LateUpdate@{LateUpdate}}}\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_ad000948705e605f262aa37dcca91f57ea2609005edfde618c70f2140bb3e9b7c2}\label{class_cinemachine_1_1_cinemachine_target_group_ad000948705e605f262aa37dcca91f57e} 
+Late\+Update&Updated in Mono\+Behaviour Late\+Update. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_a52f3d3a52818ff6da849579f893bcb5e}\index{Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}!AddMember@{AddMember}}
+\index{AddMember@{AddMember}!Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}}
+\doxysubsubsection{\texorpdfstring{AddMember()}{AddMember()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_target_group_a52f3d3a52818ff6da849579f893bcb5e} 
+void Cinemachine.\+Cinemachine\+Target\+Group.\+Add\+Member (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_a2fc4dee3c24a0b1fb9369da145e387cc}{Transform}}}]{t}{, }\item[{float}]{weight}{, }\item[{float}]{radius}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a member to the group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & The member to add\\
+\hline
+{\em weight} & The new member\textquotesingle{}s weight\\
+\hline
+{\em radius} & The new member\textquotesingle{}s radius\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_ac4e4eb14fb5432417cc0c30c11ac784d}\index{Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}!FindMember@{FindMember}}
+\index{FindMember@{FindMember}!Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}}
+\doxysubsubsection{\texorpdfstring{FindMember()}{FindMember()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_target_group_ac4e4eb14fb5432417cc0c30c11ac784d} 
+int Cinemachine.\+Cinemachine\+Target\+Group.\+Find\+Member (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_a2fc4dee3c24a0b1fb9369da145e387cc}{Transform}}}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Locate a member\textquotesingle{}s index in the group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & The member to find\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Member index, or -\/1 if not a member
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_acd76424cde896cf48bd2dbb9e87f5a11}\index{Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}!GetViewSpaceAngularBounds@{GetViewSpaceAngularBounds}}
+\index{GetViewSpaceAngularBounds@{GetViewSpaceAngularBounds}!Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}}
+\doxysubsubsection{\texorpdfstring{GetViewSpaceAngularBounds()}{GetViewSpaceAngularBounds()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_target_group_acd76424cde896cf48bd2dbb9e87f5a11} 
+void Cinemachine.\+Cinemachine\+Target\+Group.\+Get\+View\+Space\+Angular\+Bounds (\begin{DoxyParamCaption}\item[{Matrix4x4}]{observer}{, }\item[{out Vector2}]{min\+Angles}{, }\item[{out Vector2}]{max\+Angles}{, }\item[{out Vector2}]{z\+Range}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the local-\/space angular bounds of the group, from a specific point of view. Also returns the z depth range of the members. Note that this result is only valid after Do\+Update has been called. If members are added or removed after that call or change their weights or active state, this will not necessarily return correct information before the next update. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & Point of view from which to calculate, and in whose space the return values are\\
+\hline
+{\em min\+Angles} & The lower bound of the screen angles of the members (degrees)\\
+\hline
+{\em max\+Angles} & The upper bound of the screen angles of the members (degrees)\\
+\hline
+{\em z\+Range} & The min and max depth values of the members, relative to the observer\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_target_group_a8e59ac95ae6cd12a864ca9cd36581c13}{Cinemachine.\+ICinemachine\+Target\+Group}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_a70a58a2d85bb821a589676ec263763ce}\index{Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}!GetViewSpaceBoundingBox@{GetViewSpaceBoundingBox}}
+\index{GetViewSpaceBoundingBox@{GetViewSpaceBoundingBox}!Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}}
+\doxysubsubsection{\texorpdfstring{GetViewSpaceBoundingBox()}{GetViewSpaceBoundingBox()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_target_group_a70a58a2d85bb821a589676ec263763ce} 
+Bounds Cinemachine.\+Cinemachine\+Target\+Group.\+Get\+View\+Space\+Bounding\+Box (\begin{DoxyParamCaption}\item[{Matrix4x4}]{observer}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The axis-\/aligned bounding box of the group, in a specific reference frame. Note that this result is only valid after Do\+Update has been called. If members are added or removed after that call or change their weights or active state, this will not necessarily return correct information before the next update. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em observer} & The frame of reference in which to compute the bounding box\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The axis-\/aligned bounding box of the group, in the desired frame of reference
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_target_group_ad61fb6a61ad61cc55963c0b640794d6d}{Cinemachine.\+ICinemachine\+Target\+Group}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_a5cdbdde76b01b1abdfd3ebeaf71ed799}\index{Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}!GetWeightedBoundsForMember@{GetWeightedBoundsForMember}}
+\index{GetWeightedBoundsForMember@{GetWeightedBoundsForMember}!Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}}
+\doxysubsubsection{\texorpdfstring{GetWeightedBoundsForMember()}{GetWeightedBoundsForMember()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_target_group_a5cdbdde76b01b1abdfd3ebeaf71ed799} 
+Bounding\+Sphere Cinemachine.\+Cinemachine\+Target\+Group.\+Get\+Weighted\+Bounds\+For\+Member (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the bounding sphere of a group memebr, with the weight taken into account. As the member\textquotesingle{}s weight goes to 0, the position lerps to the group average position. Note that this result is only valid after Do\+Update has been called. If members are added or removed after that call or change their weights or active state, this will not necessarily return correct information before the next update. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Member index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The weighted bounding sphere
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_aaea525816121def8454b18ae2778ba5c}\index{Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}!RemoveMember@{RemoveMember}}
+\index{RemoveMember@{RemoveMember}!Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}}
+\doxysubsubsection{\texorpdfstring{RemoveMember()}{RemoveMember()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_target_group_aaea525816121def8454b18ae2778ba5c} 
+void Cinemachine.\+Cinemachine\+Target\+Group.\+Remove\+Member (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group_a2fc4dee3c24a0b1fb9369da145e387cc}{Transform}}}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove a member from the group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & The member to remove\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_a8acd92e88ea33fe48e93ca82d60c18a2}\index{Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}!BoundingBox@{BoundingBox}}
+\index{BoundingBox@{BoundingBox}!Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}}
+\doxysubsubsection{\texorpdfstring{BoundingBox}{BoundingBox}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_target_group_a8acd92e88ea33fe48e93ca82d60c18a2} 
+Bounds Cinemachine.\+Cinemachine\+Target\+Group.\+Bounding\+Box\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The axis-\/aligned bounding box of the group, computed using the targets positions and radii. 
+
+
+
+Implements \mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_target_group_a502890198c744336070a3efabf170e73}{Cinemachine.\+ICinemachine\+Target\+Group}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_ab63bde6e0b3c5c82ab26d4a5c70bf0e0}\index{Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}!IsEmpty@{IsEmpty}}
+\index{IsEmpty@{IsEmpty}!Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}}
+\doxysubsubsection{\texorpdfstring{IsEmpty}{IsEmpty}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_target_group_ab63bde6e0b3c5c82ab26d4a5c70bf0e0} 
+bool Cinemachine.\+Cinemachine\+Target\+Group.\+Is\+Empty\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Return true if there are no members with weight \texorpdfstring{$>$}{>} 0. This returns the cached member state and is only valid after a call to \doxylink{class_cinemachine_1_1_cinemachine_target_group_add58bad02c70a73f8d41128f8f5c1423}{Do\+Update()}. If members are added or removed after that call, this will not necessarily return correct information before the next update. 
+
+
+
+Implements \mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_target_group_a842d4a3bb6e3fbdfcb2dd3a544d7a222}{Cinemachine.\+ICinemachine\+Target\+Group}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_af3d0f81b965f4428862608637147b896}\index{Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}!Sphere@{Sphere}}
+\index{Sphere@{Sphere}!Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}}
+\doxysubsubsection{\texorpdfstring{Sphere}{Sphere}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_target_group_af3d0f81b965f4428862608637147b896} 
+Bounding\+Sphere Cinemachine.\+Cinemachine\+Target\+Group.\+Sphere\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The bounding sphere of the group, computed using the targets positions and radii. 
+
+
+
+Implements \mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_target_group_aa5d110555fe1f6f2c8f68134e9162eb8}{Cinemachine.\+ICinemachine\+Target\+Group}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_target_group_a2fc4dee3c24a0b1fb9369da145e387cc}\index{Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}!Transform@{Transform}}
+\index{Transform@{Transform}!Cinemachine.CinemachineTargetGroup@{Cinemachine.CinemachineTargetGroup}}
+\doxysubsubsection{\texorpdfstring{Transform}{Transform}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_target_group_a2fc4dee3c24a0b1fb9369da145e387cc} 
+Transform Cinemachine.\+Cinemachine\+Target\+Group.\+Transform\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Get the Mono\+Behaviour\textquotesingle{}s Transform. 
+
+
+
+Implements \mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_target_group_a74bb6526288cc6f73cb401998f1c98a8}{Cinemachine.\+ICinemachine\+Target\+Group}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Behaviours/Cinemachine\+Target\+Group.\+cs\end{DoxyCompactItemize}

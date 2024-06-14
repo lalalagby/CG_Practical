@@ -1,0 +1,48 @@
+\doxysection{NSubstitute.\+Core.\+Dependency\+Injection Namespace Reference}
+\hypertarget{namespace_n_substitute_1_1_core_1_1_dependency_injection}{}\label{namespace_n_substitute_1_1_core_1_1_dependency_injection}\index{NSubstitute.Core.DependencyInjection@{NSubstitute.Core.DependencyInjection}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Configurable\+NSub\+Container\+Extensions}
+\item 
+interface \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_configurable_n_sub_container}{IConfigurable\+NSub\+Container}}
+\item 
+interface \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_container}{INSub\+Container}}
+\item 
+interface \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_dependency_injection_1_1_i_n_sub_resolver}{INSub\+Resolver}}
+\item 
+class \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_dependency_injection_1_1_n_sub_container}{NSub\+Container}}
+\begin{DoxyCompactList}\small\item\em Tiny and very limited implementation of the DI services. Container supports the following features required by \doxylink{namespace_n_substitute}{NSubstitute}\+: \end{DoxyCompactList}\item 
+class {\bfseries NSubstitute\+Default\+Factory}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_n_substitute_1_1_core_1_1_dependency_injection_a3be4a98d6673cb5a24b30c50fa21a055}{NSub\+Lifetime}} \{ \mbox{\hyperlink{namespace_n_substitute_1_1_core_1_1_dependency_injection_a3be4a98d6673cb5a24b30c50fa21a055a6ff5f73c8b5ebd311406568c8ef50bfd}{Singleton}}
+, \mbox{\hyperlink{namespace_n_substitute_1_1_core_1_1_dependency_injection_a3be4a98d6673cb5a24b30c50fa21a055ac4bc876ff2fcfee9dfa2f970f5a18dd1}{Per\+Scope}}
+, \mbox{\hyperlink{namespace_n_substitute_1_1_core_1_1_dependency_injection_a3be4a98d6673cb5a24b30c50fa21a055ab1f023eff9a6b5308d6024e4c6b3d475}{Transient}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespace_n_substitute_1_1_core_1_1_dependency_injection_a3be4a98d6673cb5a24b30c50fa21a055}\index{NSubstitute.Core.DependencyInjection@{NSubstitute.Core.DependencyInjection}!NSubLifetime@{NSubLifetime}}
+\index{NSubLifetime@{NSubLifetime}!NSubstitute.Core.DependencyInjection@{NSubstitute.Core.DependencyInjection}}
+\doxysubsubsection{\texorpdfstring{NSubLifetime}{NSubLifetime}}
+{\footnotesize\ttfamily \label{namespace_n_substitute_1_1_core_1_1_dependency_injection_a3be4a98d6673cb5a24b30c50fa21a055} 
+enum \mbox{\hyperlink{namespace_n_substitute_1_1_core_1_1_dependency_injection_a3be4a98d6673cb5a24b30c50fa21a055}{NSubstitute.\+Core.\+Dependency\+Injection.\+NSub\+Lifetime}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Singleton@{Singleton}!NSubstitute.Core.DependencyInjection@{NSubstitute.Core.DependencyInjection}}\index{NSubstitute.Core.DependencyInjection@{NSubstitute.Core.DependencyInjection}!Singleton@{Singleton}}}\Hypertarget{namespace_n_substitute_1_1_core_1_1_dependency_injection_a3be4a98d6673cb5a24b30c50fa21a055a6ff5f73c8b5ebd311406568c8ef50bfd}\label{namespace_n_substitute_1_1_core_1_1_dependency_injection_a3be4a98d6673cb5a24b30c50fa21a055} 
+Singleton&Value is created only once. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PerScope@{PerScope}!NSubstitute.Core.DependencyInjection@{NSubstitute.Core.DependencyInjection}}\index{NSubstitute.Core.DependencyInjection@{NSubstitute.Core.DependencyInjection}!PerScope@{PerScope}}}\Hypertarget{namespace_n_substitute_1_1_core_1_1_dependency_injection_a3be4a98d6673cb5a24b30c50fa21a055ac4bc876ff2fcfee9dfa2f970f5a18dd1}\label{namespace_n_substitute_1_1_core_1_1_dependency_injection_a3be4a98d6673cb5a24b30c50fa21a055} 
+Per\+Scope&Value is created only once per scope. Allows to share the same instance across the objects in the same graph. If no explicit scope is created, an implicit scope is created per single resolve request. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Transient@{Transient}!NSubstitute.Core.DependencyInjection@{NSubstitute.Core.DependencyInjection}}\index{NSubstitute.Core.DependencyInjection@{NSubstitute.Core.DependencyInjection}!Transient@{Transient}}}\Hypertarget{namespace_n_substitute_1_1_core_1_1_dependency_injection_a3be4a98d6673cb5a24b30c50fa21a055ab1f023eff9a6b5308d6024e4c6b3d475}\label{namespace_n_substitute_1_1_core_1_1_dependency_injection_a3be4a98d6673cb5a24b30c50fa21a055} 
+Transient&New value is created for each time. \\
+\hline
+
+\end{DoxyEnumFields}

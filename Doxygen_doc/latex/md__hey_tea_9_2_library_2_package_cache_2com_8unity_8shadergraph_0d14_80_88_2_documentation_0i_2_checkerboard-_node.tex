@@ -1,0 +1,43 @@
+\chapter{Checkerboard Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_checkerboard-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_checkerboard-_node}\index{Checkerboard Node@{Checkerboard Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_checkerboard-_node_autotoc_md3026}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_checkerboard-_node_autotoc_md3026}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_checkerboard-_node_autotoc_md3027}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_checkerboard-_node_autotoc_md3027}
+Generates a checkerboard of alternating colors between inputs {\bfseries{Color A}} and {\bfseries{Color B}} based on input {\bfseries{UV}}. The checkerboard scale is defined by input {\bfseries{Frequency}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_checkerboard-_node_autotoc_md3028}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_checkerboard-_node_autotoc_md3028}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+UV   &Input   &Vector 2   &UV   &Input UV value    \\\cline{1-5}
+Color A   &Input   &Color RGB   &None   &First checker color    \\\cline{1-5}
+Color B   &Input   &Color RGB   &None   &Second checker color    \\\cline{1-5}
+Frequency   &Input   &Vector 2   &None   &Scale of checkerboard per axis    \\\cline{1-5}
+Out   &Output   &Vector 2   &None   &Output UV value   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_checkerboard-_node_autotoc_md3029}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_checkerboard-_node_autotoc_md3029}
+The following example code represents one possible outcome of this node.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Checkerboard\_float(float2\ UV,\ float3\ ColorA,\ float3\ ColorB,\ float2\ Frequency,\ out\ float3\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ UV\ =\ (UV.xy\ +\ 0.5)\ *\ Frequency;}
+\DoxyCodeLine{\ \ \ \ float4\ derivatives\ =\ float4(ddx(UV),\ ddy(UV));}
+\DoxyCodeLine{\ \ \ \ float2\ duv\_length\ =\ sqrt(float2(dot(derivatives.xz,\ derivatives.xz),\ dot(derivatives.yw,\ derivatives.yw)));}
+\DoxyCodeLine{\ \ \ \ float\ width\ =\ 1.0;}
+\DoxyCodeLine{\ \ \ \ float2\ distance3\ =\ 4.0\ *\ abs(frac(UV\ +\ 0.25)\ -\/\ 0.5)\ -\/\ width;}
+\DoxyCodeLine{\ \ \ \ float2\ scale\ =\ 0.35\ /\ duv\_length.xy;}
+\DoxyCodeLine{\ \ \ \ float\ freqLimiter\ =\ sqrt(clamp(1.1f\ -\/\ max(duv\_length.x,\ duv\_length.y),\ 0.0,\ 1.0));}
+\DoxyCodeLine{\ \ \ \ float2\ vector\_alpha\ =\ clamp(distance3\ *\ scale.xy,\ -\/1.0,\ 1.0);}
+\DoxyCodeLine{\ \ \ \ float\ alpha\ =\ saturate(0.5f\ +\ 0.5f\ *\ vector\_alpha.x\ *\ vector\_alpha.y\ *\ freqLimiter);}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(ColorA,\ ColorB,\ alpha.xxx);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

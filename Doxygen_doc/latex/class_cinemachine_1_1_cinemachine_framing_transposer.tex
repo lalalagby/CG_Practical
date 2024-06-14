@@ -1,0 +1,385 @@
+\doxysection{Cinemachine.\+Cinemachine\+Framing\+Transposer Class Reference}
+\hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer}{}\label{class_cinemachine_1_1_cinemachine_framing_transposer}\index{Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}}
+
+
+This is a \doxylink{namespace_cinemachine}{Cinemachine} Component in the Body section of the component pipeline. Its job is to position the camera in a fixed screen-\/space relationship to the vcam\textquotesingle{}s Follow target object, with offsets and damping.  
+
+
+Inheritance diagram for Cinemachine.\+Cinemachine\+Framing\+Transposer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_cinemachine_1_1_cinemachine_framing_transposer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer_a007c922753973f4b7f5ddb4687673032}{Framing\+Mode}} \{ \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer_a007c922753973f4b7f5ddb4687673032ac1b5fa03ecdb95d4a45dd1c40b02527f}{Horizontal}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer_a007c922753973f4b7f5ddb4687673032a06ce2a25e5d12c166a36f654dbea6012}{Vertical}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer_a007c922753973f4b7f5ddb4687673032a8a4ec9cfaa0a4f67a270b8741f45184b}{Horizontal\+And\+Vertical}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer_a007c922753973f4b7f5ddb4687673032a6adf97f83acf6453d4a6a4b1070f3754}{None}}
+ \}
+\begin{DoxyCompactList}\small\item\em What screen dimensions to consider when framing. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer_a3e2262bf8a8b3224b4c6c129da221d5f}{Adjustment\+Mode}} \{ \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer_a3e2262bf8a8b3224b4c6c129da221d5fa5596e681c19076a4a5ecceb43a55abc4}{Zoom\+Only}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer_a3e2262bf8a8b3224b4c6c129da221d5fa9d7434ac39965e2da13733ea20ff25e8}{Dolly\+Only}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer_a3e2262bf8a8b3224b4c6c129da221d5fadc96c9f9a562fee4d252d46b4266dd02}{Dolly\+Then\+Zoom}}
+ \}
+\begin{DoxyCompactList}\small\item\em How to adjust the camera to get the desired framing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer_a7cbe1750a99d47a8593d0ed3fb2028b0}{On\+Target\+Object\+Warped}} (Transform target, Vector3 position\+Delta)
+\begin{DoxyCompactList}\small\item\em This is called to notify the us that a target got warped, so that we can update its internal state to make the camera also warp seamlessy. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer_a33614f22f13d4303dbe7ec7c6170e6f4}{Force\+Camera\+Position}} (Vector3 pos, Quaternion rot)
+\begin{DoxyCompactList}\small\item\em Force the virtual camera to assume a given position and orientation. \end{DoxyCompactList}\item 
+override float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer_a7af7c4de49274f38ee1da86045a032dc}{Get\+Max\+Damp\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Report maximum damping time needed for this component. \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer_ab04c9f2c45c3af7d65bc169639f605e4}{On\+Transition\+From\+Camera}} (\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} from\+Cam, Vector3 world\+Up, float delta\+Time, ref \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_virtual_camera_base_1_1_transition_params}{Cinemachine\+Virtual\+Camera\+Base.\+Transition\+Params}} transition\+Params)
+\begin{DoxyCompactList}\small\item\em Notification that this virtual camera is going live. Base class implementation does nothing. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer_a05e7383d945d9d76471eee497ecd5e64}{Mutate\+Camera\+State}} (ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} cur\+State, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Positions the virtual camera according to the transposer rules. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base}{Cinemachine.\+Cinemachine\+Component\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_aacf2cbdefb4d8fd09dabb01ec65f2fbd}{Pre\+Pipeline\+Mutate\+Camera\+State}} (ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} cur\+State, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Override this to do such things as offset the Referece\+Look\+At. Base class implementation does nothing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_a9dea4262821631006faf71feb3df050f}{Mutate\+Camera\+State}} (ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} cur\+State, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Mutates the camera state. This state will later be applied to the camera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_af08315153ca05777b93dbed859ce8263}\label{class_cinemachine_1_1_cinemachine_framing_transposer_af08315153ca05777b93dbed859ce8263} 
+Vector3 {\bfseries m\+\_\+\+Tracked\+Object\+Offset}
+\begin{DoxyCompactList}\small\item\em Offset from the Follow Target object (in target-\/local co-\/ordinates). The camera will attempt to frame the point which is the target\textquotesingle{}s position plus this offset. Use it to correct for cases when the target\textquotesingle{}s origin is not the point of interest for the camera. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_ac3bccfc998c81c6d8b40aa67cc03b851}\label{class_cinemachine_1_1_cinemachine_framing_transposer_ac3bccfc998c81c6d8b40aa67cc03b851} 
+float {\bfseries m\+\_\+\+Lookahead\+Time} = 0
+\begin{DoxyCompactList}\small\item\em This setting will instruct the composer to adjust its target offset based on the motion of the target. The composer will look at a point where it estimates the target will be this many seconds into the future. Note that this setting is sensitive to noisy animation, and can amplify the noise, resulting in undesirable camera jitter. If the camera jitters unacceptably when the target is in motion, turn down this setting, or animate the target more smoothly. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a96ddfcab6a1c07d8860faa025e5e65b9}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a96ddfcab6a1c07d8860faa025e5e65b9} 
+float {\bfseries m\+\_\+\+Lookahead\+Smoothing} = 0
+\begin{DoxyCompactList}\small\item\em Controls the smoothness of the lookahead algorithm. Larger values smooth out jittery predictions and also increase prediction lag. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a2ef45ce3ecefef3607cbf97d9d9c60dd}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a2ef45ce3ecefef3607cbf97d9d9c60dd} 
+bool {\bfseries m\+\_\+\+Lookahead\+IgnoreY}
+\begin{DoxyCompactList}\small\item\em If checked, movement along the Y axis will be ignored for lookahead calculations. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a134c93518d85be7f2967131f27913613}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a134c93518d85be7f2967131f27913613} 
+float {\bfseries m\+\_\+\+XDamping} = 1f
+\begin{DoxyCompactList}\small\item\em How aggressively the camera tries to maintain the offset in the X-\/axis. Small numbers are more responsive, rapidly translating the camera to keep the target\textquotesingle{}s x-\/axis offset. Larger numbers give a more heavy slowly responding camera. Using different settings per axis can yield a wide range of camera behaviors. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a8abdf248559a9b5dff2a0f789e42fd86}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a8abdf248559a9b5dff2a0f789e42fd86} 
+float {\bfseries m\+\_\+\+YDamping} = 1f
+\begin{DoxyCompactList}\small\item\em How aggressively the camera tries to maintain the offset in the Y-\/axis. Small numbers are more responsive, rapidly translating the camera to keep the target\textquotesingle{}s y-\/axis offset. Larger numbers give a more heavy slowly responding camera. Using different settings per axis can yield a wide range of camera behaviors. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_aa2f2b55061bfa355c4444f9d94477b7a}\label{class_cinemachine_1_1_cinemachine_framing_transposer_aa2f2b55061bfa355c4444f9d94477b7a} 
+float {\bfseries m\+\_\+\+ZDamping} = 1f
+\begin{DoxyCompactList}\small\item\em How aggressively the camera tries to maintain the offset in the Z-\/axis. Small numbers are more responsive, rapidly translating the camera to keep the target\textquotesingle{}s z-\/axis offset. Larger numbers give a more heavy slowly responding camera. Using different settings per axis can yield a wide range of camera behaviors. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a4aa6021e2afa87e7ade973e93d932d08}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a4aa6021e2afa87e7ade973e93d932d08} 
+bool {\bfseries m\+\_\+\+Target\+Movement\+Only} = true
+\begin{DoxyCompactList}\small\item\em If set, damping will apply only to target motion, and not when the camera rotation changes. Turn this on to get an instant response when the rotation changes. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_ad834fedd28043307672d8a3b4b08dcd7}\label{class_cinemachine_1_1_cinemachine_framing_transposer_ad834fedd28043307672d8a3b4b08dcd7} 
+float {\bfseries m\+\_\+\+ScreenX} = 0.\+5f
+\begin{DoxyCompactList}\small\item\em Horizontal screen position for target. The camera will move to position the tracked object here. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a33a8352e0451154a9efeb077fe556e13}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a33a8352e0451154a9efeb077fe556e13} 
+float {\bfseries m\+\_\+\+ScreenY} = 0.\+5f
+\begin{DoxyCompactList}\small\item\em Vertical screen position for target, The camera will move to to position the tracked object here. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_aadb43ca0b667253eaaf797a2efee3e93}\label{class_cinemachine_1_1_cinemachine_framing_transposer_aadb43ca0b667253eaaf797a2efee3e93} 
+float {\bfseries m\+\_\+\+Camera\+Distance} = 10f
+\begin{DoxyCompactList}\small\item\em The distance along the camera axis that will be maintained from the Follow target. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a2459e9acff6a0c8a76a725dc589b8a9b}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a2459e9acff6a0c8a76a725dc589b8a9b} 
+float {\bfseries m\+\_\+\+Dead\+Zone\+Width} = 0f
+\begin{DoxyCompactList}\small\item\em Camera will not move horizontally if the target is within this range of the position. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_aad9e8817469a9efb15ff32ae7bba609b}\label{class_cinemachine_1_1_cinemachine_framing_transposer_aad9e8817469a9efb15ff32ae7bba609b} 
+float {\bfseries m\+\_\+\+Dead\+Zone\+Height} = 0f
+\begin{DoxyCompactList}\small\item\em Camera will not move vertically if the target is within this range of the position. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_abf8b9a825cfee58a8e280791d5148bc1}\label{class_cinemachine_1_1_cinemachine_framing_transposer_abf8b9a825cfee58a8e280791d5148bc1} 
+float {\bfseries m\+\_\+\+Dead\+Zone\+Depth} = 0
+\begin{DoxyCompactList}\small\item\em The camera will not move along its z-\/axis if the Follow target is within this distance of the specified camera distance. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_aed0ff0fdcedc9862b2c2de0ed20680ba}\label{class_cinemachine_1_1_cinemachine_framing_transposer_aed0ff0fdcedc9862b2c2de0ed20680ba} 
+bool {\bfseries m\+\_\+\+Unlimited\+Soft\+Zone} = false
+\begin{DoxyCompactList}\small\item\em If checked, then then soft zone will be unlimited in size. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a4d96496000f869054bb470d9bbe945fb}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a4d96496000f869054bb470d9bbe945fb} 
+float {\bfseries m\+\_\+\+Soft\+Zone\+Width} = 0.\+8f
+\begin{DoxyCompactList}\small\item\em When target is within this region, camera will gradually move to re-\/align towards the desired position, depending onm the damping speed. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a3a49bf4b0fa8af0a31ec312fafa57eb4}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a3a49bf4b0fa8af0a31ec312fafa57eb4} 
+float {\bfseries m\+\_\+\+Soft\+Zone\+Height} = 0.\+8f
+\begin{DoxyCompactList}\small\item\em When target is within this region, camera will gradually move to re-\/align towards the desired position, depending onm the damping speed. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a1596fa2b3a830670d4ff8bd42790a5cf}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a1596fa2b3a830670d4ff8bd42790a5cf} 
+float {\bfseries m\+\_\+\+BiasX} = 0f
+\begin{DoxyCompactList}\small\item\em A non-\/zero bias will move the targt position away from the center of the soft zone. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_adc9a7373c409333924e3e29885b9c635}\label{class_cinemachine_1_1_cinemachine_framing_transposer_adc9a7373c409333924e3e29885b9c635} 
+float {\bfseries m\+\_\+\+BiasY} = 0f
+\begin{DoxyCompactList}\small\item\em A non-\/zero bias will move the targt position away from the center of the soft zone. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a6080d25770d204f02013eed395a81899}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a6080d25770d204f02013eed395a81899} 
+bool {\bfseries m\+\_\+\+Center\+On\+Activate} = true
+\begin{DoxyCompactList}\small\item\em Force target to center of screen when this camera activates. If false, will clamp target to the edges of the dead zone. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a03f2f76fe90df9bf07fd016f3bb9f832}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a03f2f76fe90df9bf07fd016f3bb9f832} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer_a007c922753973f4b7f5ddb4687673032}{Framing\+Mode}} {\bfseries m\+\_\+\+Group\+Framing\+Mode} = \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer_a007c922753973f4b7f5ddb4687673032a8a4ec9cfaa0a4f67a270b8741f45184b}{Framing\+Mode.\+Horizontal\+And\+Vertical}}
+\begin{DoxyCompactList}\small\item\em What screen dimensions to consider when framing. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a243566911c69b82ef8a692aa69546f7a}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a243566911c69b82ef8a692aa69546f7a} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer_a3e2262bf8a8b3224b4c6c129da221d5f}{Adjustment\+Mode}} {\bfseries m\+\_\+\+Adjustment\+Mode} = \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer_a3e2262bf8a8b3224b4c6c129da221d5fa5596e681c19076a4a5ecceb43a55abc4}{Adjustment\+Mode.\+Zoom\+Only}}
+\begin{DoxyCompactList}\small\item\em How to adjust the camera to get the desired framing. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a4bf2e0ce0c3cb2a4558c659f0b7db347}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a4bf2e0ce0c3cb2a4558c659f0b7db347} 
+float {\bfseries m\+\_\+\+Group\+Framing\+Size} = 0.\+8f
+\begin{DoxyCompactList}\small\item\em How much of the screen to fill with the bounding box of the targets. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_aeac8796b515644af5862f700431d9e18}\label{class_cinemachine_1_1_cinemachine_framing_transposer_aeac8796b515644af5862f700431d9e18} 
+float {\bfseries m\+\_\+\+Max\+Dolly\+In} = 5000f
+\begin{DoxyCompactList}\small\item\em How much closer to the target can the camera go? \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_aec581ea3537ad518938311ec6a808bcf}\label{class_cinemachine_1_1_cinemachine_framing_transposer_aec581ea3537ad518938311ec6a808bcf} 
+float {\bfseries m\+\_\+\+Max\+Dolly\+Out} = 5000f
+\begin{DoxyCompactList}\small\item\em How much farther from the target can the camera go? \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a0a144cc1d9799eac47e501b43d0881f3}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a0a144cc1d9799eac47e501b43d0881f3} 
+float {\bfseries m\+\_\+\+Minimum\+Distance} = 1
+\begin{DoxyCompactList}\small\item\em Set this to limit how close to the target the camera can get. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a7de8a09ad676c93d688bc14024948e9f}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a7de8a09ad676c93d688bc14024948e9f} 
+float {\bfseries m\+\_\+\+Maximum\+Distance} = 5000f
+\begin{DoxyCompactList}\small\item\em Set this to limit how far from the taregt the camera can get. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_af56df296ed4db6f44df76509c4738263}\label{class_cinemachine_1_1_cinemachine_framing_transposer_af56df296ed4db6f44df76509c4738263} 
+float {\bfseries m\+\_\+\+Minimum\+FOV} = 3
+\begin{DoxyCompactList}\small\item\em If adjusting FOV, will not set the FOV lower than this. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a4f178207a5e655503e9b8398b097f946}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a4f178207a5e655503e9b8398b097f946} 
+float {\bfseries m\+\_\+\+Maximum\+FOV} = 60
+\begin{DoxyCompactList}\small\item\em If adjusting FOV, will not set the FOV higher than this. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a6d08a6dfcb86d193eb502ff57d7447d7}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a6d08a6dfcb86d193eb502ff57d7447d7} 
+float {\bfseries m\+\_\+\+Minimum\+Ortho\+Size} = 1
+\begin{DoxyCompactList}\small\item\em If adjusting Orthographic Size, will not set it lower than this. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_aa9cc5ffd77c83d55c46f2b226f5883cd}\label{class_cinemachine_1_1_cinemachine_framing_transposer_aa9cc5ffd77c83d55c46f2b226f5883cd} 
+float {\bfseries m\+\_\+\+Maximum\+Ortho\+Size} = 5000
+\begin{DoxyCompactList}\small\item\em If adjusting Orthographic Size, will not set it higher than this. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_acb2a7e09d9a1642ec53738818675b844}\label{class_cinemachine_1_1_cinemachine_framing_transposer_acb2a7e09d9a1642ec53738818675b844} 
+override bool {\bfseries Is\+Valid}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if component is enabled and has a valid Follow target. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_ab69087e2c728540fe01eabdc090bd26c}\label{class_cinemachine_1_1_cinemachine_framing_transposer_ab69087e2c728540fe01eabdc090bd26c} 
+override \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}} {\bfseries Stage}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{namespace_cinemachine}{Cinemachine} Pipeline stage that this component implements. Always returns the Body stage. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a029c651f7ae5429e466ccd124910a2db}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a029c651f7ae5429e466ccd124910a2db} 
+override bool {\bfseries Body\+Applies\+After\+Aim}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Framing\+Transposer\textquotesingle{}s algorithm tahes camera orientation as input, so even though it is a Body component, it must apply after Aim. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a941b07dd795ada9a7ad63eee659c84ec}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a941b07dd795ada9a7ad63eee659c84ec} 
+Vector3 {\bfseries Tracked\+Point}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Internal API for inspector. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_aa2b3a3e74ec220a116c3b4c0c415b8fa}\label{class_cinemachine_1_1_cinemachine_framing_transposer_aa2b3a3e74ec220a116c3b4c0c415b8fa} 
+Bounds {\bfseries Last\+Bounds}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For editor visulaization of the calculated bounding box of the group. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_ae8817173acb927fe06e2bda37173cab8}\label{class_cinemachine_1_1_cinemachine_framing_transposer_ae8817173acb927fe06e2bda37173cab8} 
+Matrix4x4 {\bfseries Last\+Bounds\+Matrix}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For editor visualization of the calculated bounding box of the group. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base}{Cinemachine.\+Cinemachine\+Component\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} {\bfseries Virtual\+Camera}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the associated \doxylink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}. \end{DoxyCompactList}\item 
+Transform {\bfseries Follow\+Target}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the owner vcam\textquotesingle{}s Follow target. \end{DoxyCompactList}\item 
+Transform {\bfseries Look\+At\+Target}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the owner vcam\textquotesingle{}s Look\+At target. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}} {\bfseries Abstract\+Follow\+Target\+Group}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get Follow target as \doxylink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}, or null if target is not a group. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}} {\bfseries Follow\+Target\+Group}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get Follow target as \doxylink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}, or null if target is not a \doxylink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}. \end{DoxyCompactList}\item 
+Vector3 {\bfseries Follow\+Target\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the position of the Follow target. Special handling\+: If the Follow target is a Virtual\+Camera, returns the vcam State\textquotesingle{}s position, not the transform\textquotesingle{}s position. \end{DoxyCompactList}\item 
+Quaternion {\bfseries Follow\+Target\+Rotation}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the rotation of the Follow target. Special handling\+: If the Follow target is a Virtual\+Camera, returns the vcam State\textquotesingle{}s rotation, not the transform\textquotesingle{}s rotation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}} {\bfseries Abstract\+Look\+At\+Target\+Group}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get Look\+At target as \doxylink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}, or null if target is not a group. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}} {\bfseries Look\+At\+Target\+Group}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get Look\+At target as \doxylink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}, or null if target is not a \doxylink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}. \end{DoxyCompactList}\item 
+Vector3 {\bfseries Look\+At\+Target\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the position of the Look\+At target. Special handling\+: If the Look\+At target is a Virtual\+Camera, returns the vcam State\textquotesingle{}s position, not the transform\textquotesingle{}s position. \end{DoxyCompactList}\item 
+Quaternion {\bfseries Look\+At\+Target\+Rotation}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the rotation of the Look\+At target. Special handling\+: If the Look\+At target is a Virtual\+Camera, returns the vcam State\textquotesingle{}s rotation, not the transform\textquotesingle{}s rotation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} {\bfseries Vcam\+State}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the owner vcam\textquotesingle{}s \doxylink{struct_cinemachine_1_1_camera_state}{Camera\+State}. \end{DoxyCompactList}\item 
+bool {\bfseries Is\+Valid}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if this object is enabled and set up to produce results. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}} {\bfseries Stage}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em What part of the pipeline this fits into. \end{DoxyCompactList}\item 
+virtual bool {\bfseries Body\+Applies\+After\+Aim}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Special for Body Stage compoments that want to be applied after Aim stage because they use the aim as inout for the procedural placement. \end{DoxyCompactList}\item 
+virtual bool {\bfseries Requires\+User\+Input}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Components that require user input should implement this and return true. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base}{Cinemachine.\+Cinemachine\+Component\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+const float {\bfseries Epsilon} = Utility.\+Unity\+Vector\+Extensions.\+Epsilon
+\begin{DoxyCompactList}\small\item\em Useful constant for very small floats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is a \doxylink{namespace_cinemachine}{Cinemachine} Component in the Body section of the component pipeline. Its job is to position the camera in a fixed screen-\/space relationship to the vcam\textquotesingle{}s Follow target object, with offsets and damping. 
+
+The camera will be first moved along the camera Z axis until the Follow target is at the desired distance from the camera\textquotesingle{}s X-\/Y plane. The camera will then be moved in its XY plane until the Follow target is at the desired point on the camera\textquotesingle{}s screen.
+
+The Framing\+Tansposer will only change the camera\textquotesingle{}s position in space. It will not re-\/orient or otherwise aim the camera.
+
+For this component to work properly, the vcam\textquotesingle{}s Look\+At target must be null. The Follow target will define what the camera is looking at.
+
+If the Follow target is a \doxylink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}, then additional controls will be available to dynamically adjust the camera\textquotesingle{}s view in order to frame the entire group.
+
+Although this component was designed for orthographic cameras, it works equally well with persective cameras and can be used in 3D environments. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a3e2262bf8a8b3224b4c6c129da221d5f}\index{Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}!AdjustmentMode@{AdjustmentMode}}
+\index{AdjustmentMode@{AdjustmentMode}!Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}}
+\doxysubsubsection{\texorpdfstring{AdjustmentMode}{AdjustmentMode}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_framing_transposer_a3e2262bf8a8b3224b4c6c129da221d5f} 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer_a3e2262bf8a8b3224b4c6c129da221d5f}{Cinemachine.\+Cinemachine\+Framing\+Transposer.\+Adjustment\+Mode}}}
+
+
+
+How to adjust the camera to get the desired framing. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ZoomOnly@{ZoomOnly}!Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}}\index{Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}!ZoomOnly@{ZoomOnly}}}\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a3e2262bf8a8b3224b4c6c129da221d5fa5596e681c19076a4a5ecceb43a55abc4}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a3e2262bf8a8b3224b4c6c129da221d5f} 
+Zoom\+Only&Do not move the camera, only adjust the FOV. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DollyOnly@{DollyOnly}!Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}}\index{Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}!DollyOnly@{DollyOnly}}}\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a3e2262bf8a8b3224b4c6c129da221d5fa9d7434ac39965e2da13733ea20ff25e8}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a3e2262bf8a8b3224b4c6c129da221d5f} 
+Dolly\+Only&Just move the camera, don\textquotesingle{}t change the FOV. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DollyThenZoom@{DollyThenZoom}!Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}}\index{Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}!DollyThenZoom@{DollyThenZoom}}}\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a3e2262bf8a8b3224b4c6c129da221d5fadc96c9f9a562fee4d252d46b4266dd02}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a3e2262bf8a8b3224b4c6c129da221d5f} 
+Dolly\+Then\+Zoom&Move the camera as much as permitted by the ranges, then adjust the FOV if necessary to make the shot. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a007c922753973f4b7f5ddb4687673032}\index{Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}!FramingMode@{FramingMode}}
+\index{FramingMode@{FramingMode}!Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}}
+\doxysubsubsection{\texorpdfstring{FramingMode}{FramingMode}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_framing_transposer_a007c922753973f4b7f5ddb4687673032} 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer_a007c922753973f4b7f5ddb4687673032}{Cinemachine.\+Cinemachine\+Framing\+Transposer.\+Framing\+Mode}}}
+
+
+
+What screen dimensions to consider when framing. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Horizontal@{Horizontal}!Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}}\index{Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}!Horizontal@{Horizontal}}}\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a007c922753973f4b7f5ddb4687673032ac1b5fa03ecdb95d4a45dd1c40b02527f}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a007c922753973f4b7f5ddb4687673032} 
+Horizontal&Consider only the horizontal dimension. Vertical framing is ignored. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Vertical@{Vertical}!Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}}\index{Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}!Vertical@{Vertical}}}\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a007c922753973f4b7f5ddb4687673032a06ce2a25e5d12c166a36f654dbea6012}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a007c922753973f4b7f5ddb4687673032} 
+Vertical&Consider only the vertical dimension. Horizontal framing is ignored. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HorizontalAndVertical@{HorizontalAndVertical}!Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}}\index{Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}!HorizontalAndVertical@{HorizontalAndVertical}}}\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a007c922753973f4b7f5ddb4687673032a8a4ec9cfaa0a4f67a270b8741f45184b}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a007c922753973f4b7f5ddb4687673032} 
+Horizontal\+And\+Vertical&The larger of the horizontal and vertical dimensions will dominate, to get the best fit. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}}\index{Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}!None@{None}}}\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a007c922753973f4b7f5ddb4687673032a6adf97f83acf6453d4a6a4b1070f3754}\label{class_cinemachine_1_1_cinemachine_framing_transposer_a007c922753973f4b7f5ddb4687673032} 
+None&Don\textquotesingle{}t do any framing adjustment. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a33614f22f13d4303dbe7ec7c6170e6f4}\index{Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}!ForceCameraPosition@{ForceCameraPosition}}
+\index{ForceCameraPosition@{ForceCameraPosition}!Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}}
+\doxysubsubsection{\texorpdfstring{ForceCameraPosition()}{ForceCameraPosition()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_framing_transposer_a33614f22f13d4303dbe7ec7c6170e6f4} 
+override void Cinemachine.\+Cinemachine\+Framing\+Transposer.\+Force\+Camera\+Position (\begin{DoxyParamCaption}\item[{Vector3}]{pos}{, }\item[{Quaternion}]{rot}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Force the virtual camera to assume a given position and orientation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Worldspace pposition to take\\
+\hline
+{\em rot} & Worldspace orientation to take\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_a2c1673f15b1bd3ff4d05c3e763ee6ee4}{Cinemachine.\+Cinemachine\+Component\+Base}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a7af7c4de49274f38ee1da86045a032dc}\index{Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}!GetMaxDampTime@{GetMaxDampTime}}
+\index{GetMaxDampTime@{GetMaxDampTime}!Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}}
+\doxysubsubsection{\texorpdfstring{GetMaxDampTime()}{GetMaxDampTime()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_framing_transposer_a7af7c4de49274f38ee1da86045a032dc} 
+override float Cinemachine.\+Cinemachine\+Framing\+Transposer.\+Get\+Max\+Damp\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Report maximum damping time needed for this component. 
+
+\begin{DoxyReturn}{Returns}
+Highest damping setting in this component
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_ab91f25cc642560ac98f89542be500153}{Cinemachine.\+Cinemachine\+Component\+Base}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a05e7383d945d9d76471eee497ecd5e64}\index{Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}!MutateCameraState@{MutateCameraState}}
+\index{MutateCameraState@{MutateCameraState}!Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}}
+\doxysubsubsection{\texorpdfstring{MutateCameraState()}{MutateCameraState()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_framing_transposer_a05e7383d945d9d76471eee497ecd5e64} 
+override void Cinemachine.\+Cinemachine\+Framing\+Transposer.\+Mutate\+Camera\+State (\begin{DoxyParamCaption}\item[{ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}}}]{cur\+State}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Positions the virtual camera according to the transposer rules. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cur\+State} & The current camera state\\
+\hline
+{\em delta\+Time} & Used for damping. If less than 0, no damping is done.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_a7cbe1750a99d47a8593d0ed3fb2028b0}\index{Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}!OnTargetObjectWarped@{OnTargetObjectWarped}}
+\index{OnTargetObjectWarped@{OnTargetObjectWarped}!Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}}
+\doxysubsubsection{\texorpdfstring{OnTargetObjectWarped()}{OnTargetObjectWarped()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_framing_transposer_a7cbe1750a99d47a8593d0ed3fb2028b0} 
+override void Cinemachine.\+Cinemachine\+Framing\+Transposer.\+On\+Target\+Object\+Warped (\begin{DoxyParamCaption}\item[{Transform}]{target}{, }\item[{Vector3}]{position\+Delta}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+This is called to notify the us that a target got warped, so that we can update its internal state to make the camera also warp seamlessy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The object that was warped\\
+\hline
+{\em position\+Delta} & The amount the target\textquotesingle{}s position changed\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_abfd9cdc5dfa5520f0553553b35e88fd5}{Cinemachine.\+Cinemachine\+Component\+Base}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_framing_transposer_ab04c9f2c45c3af7d65bc169639f605e4}\index{Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}!OnTransitionFromCamera@{OnTransitionFromCamera}}
+\index{OnTransitionFromCamera@{OnTransitionFromCamera}!Cinemachine.CinemachineFramingTransposer@{Cinemachine.CinemachineFramingTransposer}}
+\doxysubsubsection{\texorpdfstring{OnTransitionFromCamera()}{OnTransitionFromCamera()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_framing_transposer_ab04c9f2c45c3af7d65bc169639f605e4} 
+override bool Cinemachine.\+Cinemachine\+Framing\+Transposer.\+On\+Transition\+From\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}}}]{from\+Cam}{, }\item[{Vector3}]{world\+Up}{, }\item[{float}]{delta\+Time}{, }\item[{ref \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_virtual_camera_base_1_1_transition_params}{Cinemachine\+Virtual\+Camera\+Base.\+Transition\+Params}}}]{transition\+Params}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Notification that this virtual camera is going live. Base class implementation does nothing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from\+Cam} & The camera being deactivated. May be null.\\
+\hline
+{\em world\+Up} & Default world Up, set by the \doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain}\\
+\hline
+{\em delta\+Time} & Delta time for time-\/based effects (ignore if less than or equal to 0)\\
+\hline
+{\em transition\+Params} & Transition settings for this vcam\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the vcam should do an internal update as a result of this call
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_ab61a5ef5a8ae5713705a46a4091fa3c2}{Cinemachine.\+Cinemachine\+Component\+Base}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Components/Cinemachine\+Framing\+Transposer.\+cs\end{DoxyCompactItemize}

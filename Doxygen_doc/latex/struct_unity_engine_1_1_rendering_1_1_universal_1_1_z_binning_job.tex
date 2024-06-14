@@ -1,0 +1,79 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Universal.\+ZBinning\+Job Struct Reference}
+\hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job}{}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job}\index{UnityEngine.Rendering.Universal.ZBinningJob@{UnityEngine.Rendering.Universal.ZBinningJob}}
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Universal.\+ZBinning\+Job\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a4c5b3b53068012f1d16d3f6cd6dc0c06}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a4c5b3b53068012f1d16d3f6cd6dc0c06} 
+void {\bfseries Execute} (int job\+Index)
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_aab1f6824db4d80e2d743141815be66d8}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_aab1f6824db4d80e2d743141815be66d8} 
+void {\bfseries Fill\+ZBins} (int bin\+Start, int bin\+End, int item\+Start, int item\+End, int header\+Index, int item\+Offset, int bin\+Offset)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a1cb8ca6df1b9410bacac62300d96795f}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a1cb8ca6df1b9410bacac62300d96795f} 
+static uint {\bfseries Encode\+Header} (uint min, uint max)
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_ae57a4ea9c84c2100b025b2fbde158c8a}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_ae57a4ea9c84c2100b025b2fbde158c8a} 
+static uint {\bfseries Decode\+Header} (uint z\+Bin)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a29a7f892acd5520d3c43d8df7151ff2f}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a29a7f892acd5520d3c43d8df7151ff2f} 
+Native\+Array$<$ uint $>$ {\bfseries bins}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a83f40d8672df385b52876cbd817154c3}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a83f40d8672df385b52876cbd817154c3} 
+Native\+Array$<$ \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} $>$ {\bfseries min\+Max\+Zs}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a56c6d8ec5fb753a202fa5915aad7ddaa}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a56c6d8ec5fb753a202fa5915aad7ddaa} 
+float {\bfseries z\+Bin\+Scale}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a52868ca16e48a77a7f65565a42d29331}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a52868ca16e48a77a7f65565a42d29331} 
+float {\bfseries z\+Bin\+Offset}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a0cf2f4ab5160305b718a0e6d79145003}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a0cf2f4ab5160305b718a0e6d79145003} 
+int {\bfseries bin\+Count}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a941e9c892ef6f2f46d2dce3f501557c6}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a941e9c892ef6f2f46d2dce3f501557c6} 
+int {\bfseries words\+Per\+Tile}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a7ab4958ad7c95a7ff09edf18a5310ec3}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a7ab4958ad7c95a7ff09edf18a5310ec3} 
+int {\bfseries light\+Count}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a8186c171aedba99355bbd33aff5947dd}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a8186c171aedba99355bbd33aff5947dd} 
+int {\bfseries reflection\+Probe\+Count}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_ab89d3fb95c7f22d5efbfab1738d760f3}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_ab89d3fb95c7f22d5efbfab1738d760f3} 
+int {\bfseries batch\+Count}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_ade389c280dc77437b9fcdb63348b3836}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_ade389c280dc77437b9fcdb63348b3836} 
+int {\bfseries view\+Count}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a403ffd322eb1febcd33667db61b7edb4}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a403ffd322eb1febcd33667db61b7edb4} 
+bool {\bfseries is\+Orthographic}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a2858bd7856ef38afb3afd31d8b6998f9}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a2858bd7856ef38afb3afd31d8b6998f9} 
+const int {\bfseries batch\+Size} = 128
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a503a5ef184692e34b2073836bb9d3a3b}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_a503a5ef184692e34b2073836bb9d3a3b} 
+const int {\bfseries header\+Length} = 2
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_aae3905a97c6607cf3ce5213a75ddfe76}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_z_binning_job_aae3905a97c6607cf3ce5213a75ddfe76} 
+static {\bfseries uint}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/\+Tiling/ZBinning\+Job.\+cs\end{DoxyCompactItemize}

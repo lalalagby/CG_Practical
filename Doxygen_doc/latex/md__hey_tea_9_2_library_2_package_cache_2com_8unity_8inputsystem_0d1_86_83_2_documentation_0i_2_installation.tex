@@ -1,0 +1,35 @@
+\chapter{Installation guide}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_installation}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_installation}\index{Installation guide@{Installation guide}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_installation_autotoc_md1398}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_installation_autotoc_md1398}%
+
+\begin{DoxyItemize}
+\item Installing the package
+\item Enabling the new input backends
+\item Installing samples
+\end{DoxyItemize}
+
+This guide describes how to install and activate the Input \doxylink{namespace_system}{System} package for your \doxylink{namespace_unity}{Unity} Project.
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: The new Input \doxylink{namespace_system}{System} requires \doxylink{namespace_unity}{Unity} 2019.\+4+ and the .NET 4 runtime. It doesn\textquotesingle{}t work in projects using the old .NET 3.\+5 runtime.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_installation_autotoc_md1399}{}\doxysection{\texorpdfstring{Installing the package}{Installing the package}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_installation_autotoc_md1399}
+To install the new Input \doxylink{namespace_system}{System}, open \doxylink{namespace_unity}{Unity}\textquotesingle{}s package manager (menu\+: {\bfseries{Window \texorpdfstring{$>$}{>} Package Manager}}). Select the {\bfseries{Input \doxylink{namespace_system}{System}}} package from the list, then click {\bfseries{Install}}.
+
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_installation_autotoc_md1400}{}\doxysection{\texorpdfstring{Enabling the new input backends}{Enabling the new input backends}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_installation_autotoc_md1400}
+By default, \doxylink{namespace_unity}{Unity}\textquotesingle{}s classic Input Manager ({\ttfamily Unity\+Engine.\+Input}) is active and support for the new Input \doxylink{namespace_system}{System} is inactive. This allows existing \doxylink{namespace_unity}{Unity} Projects to keep working as they are.
+
+When you install the Input \doxylink{namespace_system}{System} package, \doxylink{namespace_unity}{Unity} will ask whether you want to enable the new backends. If you click {\bfseries{Yes}}, \doxylink{namespace_unity}{Unity} will enable the new backends and disable the old backends, and the Editor will restart.
+
+
+
+You can find the corresponding setting in the \doxylink{class_player}{Player} settings (menu\+: {\bfseries{Edit \texorpdfstring{$>$}{>} Project Settings \texorpdfstring{$>$}{>} \doxylink{class_player}{Player}}}), under {\bfseries{Active Input Handling}}. You can change this setting at any time. Doing so will restart the Editor.
+
+\texorpdfstring{$>$}{>}{\bfseries{Note\+:}} You can enable {\bfseries{both}} the old {\bfseries{and}} the new system at the same time. To do so, set {\bfseries{Active Input Handling}} to {\bfseries{Both}}.
+
+
+
+When the new input backends are enabled, the {\ttfamily ENABLE\+\_\+\+INPUT\+\_\+\+SYSTEM=1} C\# {\ttfamily \#define} is added to builds. Similarly, when the old input backends are enabled, the {\ttfamily ENABLE\+\_\+\+LEGACY\+\_\+\+INPUT\+\_\+\+MANAGER=1} C\# {\ttfamily \#define} is added. Because both can be enabled at the same time, it is possible for {\bfseries{both}} defines to be 1 at the same time.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_installation_autotoc_md1401}{}\doxysection{\texorpdfstring{Installing samples}{Installing samples}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_installation_autotoc_md1401}
+The Input \doxylink{namespace_system}{System} package comes with a number of samples. You can install these directly from the Package Manager window in \doxylink{namespace_unity}{Unity} (menu\+: {\bfseries{Window \texorpdfstring{$>$}{>} Package Manager}}). To see the list, select the Input \doxylink{namespace_system}{System} package in the Package Manager window. Click {\bfseries{Import into Project}} next to a sample to copy it into the current Project.
+
+
+
+For a more comprehensive demo project for the Input \doxylink{namespace_system}{System}, see the \href{https://github.com/UnityTechnologies/InputSystem_Warriors}{\texttt{ Input\+System\+\_\+\+Warriors}} Git\+Hub repository. 

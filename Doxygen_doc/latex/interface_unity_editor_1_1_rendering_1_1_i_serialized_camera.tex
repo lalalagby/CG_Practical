@@ -1,0 +1,241 @@
+\doxysection{Unity\+Editor.\+Rendering.\+ISerialized\+Camera Interface Reference}
+\hypertarget{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera}{}\label{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera}\index{UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}}
+
+
+Interface to be implemented by each pipeline to hold the Serialized\+Object for a Camera Editor.  
+
+
+Inheritance diagram for Unity\+Editor.\+Rendering.\+ISerialized\+Camera\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_a04b7e4ab0c2cff0151b3917718b64248}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Method that updates the Serialized\+Object of the Camera and the Additional Camera Data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_ae8d1b8470d43e3f23dad2b9d68eab910}{Apply}} ()
+\begin{DoxyCompactList}\small\item\em Applies the modified properties to the Serialized\+Object of the Camera and the Additional Camera Data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_a8e70c6bf625dd2161635c54d8c5fead6}{Refresh}} ()
+\begin{DoxyCompactList}\small\item\em Refreshes the Serialized\+Property of the Serialized\+Object of the Camera and the Additional Camera Data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Serialized\+Object \mbox{\hyperlink{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_a153c07ae6c91752313bbfb7218eb5fc8}{serialized\+Object}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The camera serialized. \end{DoxyCompactList}\item 
+Serialized\+Object \mbox{\hyperlink{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_aaede885933a4e112457cd455541bff48}{serialized\+Additional\+Data\+Object}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The additional camera data serialized. \end{DoxyCompactList}\item 
+Camera\+Editor.\+Settings \mbox{\hyperlink{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_a6ff87dbe3bd7bf2708b16204c059f0b0}{base\+Camera\+Settings}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The base camera settings. \end{DoxyCompactList}\item 
+Serialized\+Property \mbox{\hyperlink{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_ab4c2acb6270aaaf046cde4e12e8de82e}{projection\+Matrix\+Mode}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The projection matrix mode. \end{DoxyCompactList}\item 
+Serialized\+Property \mbox{\hyperlink{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_a9e58d5a4b5f2644e97c2f2a290718a82}{dithering}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Dithering property. \end{DoxyCompactList}\item 
+Serialized\+Property \mbox{\hyperlink{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_a130c905836fb353e08d7155f27918e60}{stop\+Na\+Ns}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Stop Na\+Ns property. \end{DoxyCompactList}\item 
+Serialized\+Property \mbox{\hyperlink{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_a0f942c955a7223bab25bf414d1bfedce}{allow\+Dynamic\+Resolution}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Allow Dynamic resolution property. \end{DoxyCompactList}\item 
+Serialized\+Property \mbox{\hyperlink{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_ac8d7d47f977512fd706c476b17a8eded}{volume\+Layer\+Mask}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Volume layer mask property. \end{DoxyCompactList}\item 
+Serialized\+Property \mbox{\hyperlink{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_a6b08f14b53a6bd7a8742b4bef641ad6e}{clear\+Depth}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Clear Depth property property. \end{DoxyCompactList}\item 
+Serialized\+Property \mbox{\hyperlink{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_abf08570e54e12e31cf4ba6a5956edc95}{antialiasing}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Anti aliasing property. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface to be implemented by each pipeline to hold the Serialized\+Object for a Camera Editor. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_ae8d1b8470d43e3f23dad2b9d68eab910}\index{UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}!Apply@{Apply}}
+\index{Apply@{Apply}!UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}}
+\doxysubsubsection{\texorpdfstring{Apply()}{Apply()}}
+{\footnotesize\ttfamily \label{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_ae8d1b8470d43e3f23dad2b9d68eab910} 
+void Unity\+Editor.\+Rendering.\+ISerialized\+Camera.\+Apply (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Applies the modified properties to the Serialized\+Object of the Camera and the Additional Camera Data. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_serialized_camera_a981bb5bebeff2492eb101ed30ea10bc7}{Unity\+Editor.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Serialized\+Camera}}.
+
+\Hypertarget{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_a8e70c6bf625dd2161635c54d8c5fead6}\index{UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}!Refresh@{Refresh}}
+\index{Refresh@{Refresh}!UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}}
+\doxysubsubsection{\texorpdfstring{Refresh()}{Refresh()}}
+{\footnotesize\ttfamily \label{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_a8e70c6bf625dd2161635c54d8c5fead6} 
+void Unity\+Editor.\+Rendering.\+ISerialized\+Camera.\+Refresh (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Refreshes the Serialized\+Property of the Serialized\+Object of the Camera and the Additional Camera Data. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_serialized_camera_a7ab8dfdda533ca38aa5705eb01d2b041}{Unity\+Editor.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Serialized\+Camera}}.
+
+\Hypertarget{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_a04b7e4ab0c2cff0151b3917718b64248}\index{UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}!Update@{Update}}
+\index{Update@{Update}!UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_a04b7e4ab0c2cff0151b3917718b64248} 
+void Unity\+Editor.\+Rendering.\+ISerialized\+Camera.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Method that updates the Serialized\+Object of the Camera and the Additional Camera Data. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_serialized_camera_ad2a2ecedc885df60854ab9777a38f641}{Unity\+Editor.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Serialized\+Camera}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_a0f942c955a7223bab25bf414d1bfedce}\index{UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}!allowDynamicResolution@{allowDynamicResolution}}
+\index{allowDynamicResolution@{allowDynamicResolution}!UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}}
+\doxysubsubsection{\texorpdfstring{allowDynamicResolution}{allowDynamicResolution}}
+{\footnotesize\ttfamily \label{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_a0f942c955a7223bab25bf414d1bfedce} 
+Serialized\+Property Unity\+Editor.\+Rendering.\+ISerialized\+Camera.\+allow\+Dynamic\+Resolution\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Allow Dynamic resolution property. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_serialized_camera_abd0745fdf0e50d93d786cc4cf6f24096}{Unity\+Editor.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Serialized\+Camera}}.
+
+\Hypertarget{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_abf08570e54e12e31cf4ba6a5956edc95}\index{UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}!antialiasing@{antialiasing}}
+\index{antialiasing@{antialiasing}!UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}}
+\doxysubsubsection{\texorpdfstring{antialiasing}{antialiasing}}
+{\footnotesize\ttfamily \label{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_abf08570e54e12e31cf4ba6a5956edc95} 
+Serialized\+Property Unity\+Editor.\+Rendering.\+ISerialized\+Camera.\+antialiasing\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Anti aliasing property. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_serialized_camera_a01da8f658023f8469590ae5c85d6074c}{Unity\+Editor.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Serialized\+Camera}}.
+
+\Hypertarget{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_a6ff87dbe3bd7bf2708b16204c059f0b0}\index{UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}!baseCameraSettings@{baseCameraSettings}}
+\index{baseCameraSettings@{baseCameraSettings}!UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}}
+\doxysubsubsection{\texorpdfstring{baseCameraSettings}{baseCameraSettings}}
+{\footnotesize\ttfamily \label{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_a6ff87dbe3bd7bf2708b16204c059f0b0} 
+Camera\+Editor.\+Settings Unity\+Editor.\+Rendering.\+ISerialized\+Camera.\+base\+Camera\+Settings\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The base camera settings. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_serialized_camera_a6b6c0f8497d5b7f9d838601cb4579c1f}{Unity\+Editor.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Serialized\+Camera}}.
+
+\Hypertarget{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_a6b08f14b53a6bd7a8742b4bef641ad6e}\index{UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}!clearDepth@{clearDepth}}
+\index{clearDepth@{clearDepth}!UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}}
+\doxysubsubsection{\texorpdfstring{clearDepth}{clearDepth}}
+{\footnotesize\ttfamily \label{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_a6b08f14b53a6bd7a8742b4bef641ad6e} 
+Serialized\+Property Unity\+Editor.\+Rendering.\+ISerialized\+Camera.\+clear\+Depth\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Clear Depth property property. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_serialized_camera_a0ed309315dcb703562f0f3c6bd98d5b4}{Unity\+Editor.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Serialized\+Camera}}.
+
+\Hypertarget{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_a9e58d5a4b5f2644e97c2f2a290718a82}\index{UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}!dithering@{dithering}}
+\index{dithering@{dithering}!UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}}
+\doxysubsubsection{\texorpdfstring{dithering}{dithering}}
+{\footnotesize\ttfamily \label{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_a9e58d5a4b5f2644e97c2f2a290718a82} 
+Serialized\+Property Unity\+Editor.\+Rendering.\+ISerialized\+Camera.\+dithering\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Dithering property. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_serialized_camera_afcfa5ba70bc76afd9fb2253096a8d485}{Unity\+Editor.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Serialized\+Camera}}.
+
+\Hypertarget{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_ab4c2acb6270aaaf046cde4e12e8de82e}\index{UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}!projectionMatrixMode@{projectionMatrixMode}}
+\index{projectionMatrixMode@{projectionMatrixMode}!UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}}
+\doxysubsubsection{\texorpdfstring{projectionMatrixMode}{projectionMatrixMode}}
+{\footnotesize\ttfamily \label{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_ab4c2acb6270aaaf046cde4e12e8de82e} 
+Serialized\+Property Unity\+Editor.\+Rendering.\+ISerialized\+Camera.\+projection\+Matrix\+Mode\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The projection matrix mode. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_serialized_camera_a804e79587ecf55f57346fe5adcfb9fc9}{Unity\+Editor.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Serialized\+Camera}}.
+
+\Hypertarget{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_aaede885933a4e112457cd455541bff48}\index{UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}!serializedAdditionalDataObject@{serializedAdditionalDataObject}}
+\index{serializedAdditionalDataObject@{serializedAdditionalDataObject}!UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}}
+\doxysubsubsection{\texorpdfstring{serializedAdditionalDataObject}{serializedAdditionalDataObject}}
+{\footnotesize\ttfamily \label{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_aaede885933a4e112457cd455541bff48} 
+Serialized\+Object Unity\+Editor.\+Rendering.\+ISerialized\+Camera.\+serialized\+Additional\+Data\+Object\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The additional camera data serialized. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_serialized_camera_ad763425defed8ea8506ac82e8c6c8cbd}{Unity\+Editor.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Serialized\+Camera}}.
+
+\Hypertarget{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_a153c07ae6c91752313bbfb7218eb5fc8}\index{UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}!serializedObject@{serializedObject}}
+\index{serializedObject@{serializedObject}!UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}}
+\doxysubsubsection{\texorpdfstring{serializedObject}{serializedObject}}
+{\footnotesize\ttfamily \label{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_a153c07ae6c91752313bbfb7218eb5fc8} 
+Serialized\+Object Unity\+Editor.\+Rendering.\+ISerialized\+Camera.\+serialized\+Object\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The camera serialized. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_serialized_camera_a8e22bc4ccc46af8d1cdbe9354c67086f}{Unity\+Editor.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Serialized\+Camera}}.
+
+\Hypertarget{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_a130c905836fb353e08d7155f27918e60}\index{UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}!stopNaNs@{stopNaNs}}
+\index{stopNaNs@{stopNaNs}!UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}}
+\doxysubsubsection{\texorpdfstring{stopNaNs}{stopNaNs}}
+{\footnotesize\ttfamily \label{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_a130c905836fb353e08d7155f27918e60} 
+Serialized\+Property Unity\+Editor.\+Rendering.\+ISerialized\+Camera.\+stop\+Na\+Ns\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Stop Na\+Ns property. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_serialized_camera_abb09f1be310dc3e6fffa6b05f23ad82b}{Unity\+Editor.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Serialized\+Camera}}.
+
+\Hypertarget{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_ac8d7d47f977512fd706c476b17a8eded}\index{UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}!volumeLayerMask@{volumeLayerMask}}
+\index{volumeLayerMask@{volumeLayerMask}!UnityEditor.Rendering.ISerializedCamera@{UnityEditor.Rendering.ISerializedCamera}}
+\doxysubsubsection{\texorpdfstring{volumeLayerMask}{volumeLayerMask}}
+{\footnotesize\ttfamily \label{interface_unity_editor_1_1_rendering_1_1_i_serialized_camera_ac8d7d47f977512fd706c476b17a8eded} 
+Serialized\+Property Unity\+Editor.\+Rendering.\+ISerialized\+Camera.\+volume\+Layer\+Mask\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Volume layer mask property. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_serialized_camera_aa5ec35e07fdc874fdd65461fd338342d}{Unity\+Editor.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Serialized\+Camera}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Editor/\+Camera/ISerialized\+Camera.\+cs\end{DoxyCompactItemize}

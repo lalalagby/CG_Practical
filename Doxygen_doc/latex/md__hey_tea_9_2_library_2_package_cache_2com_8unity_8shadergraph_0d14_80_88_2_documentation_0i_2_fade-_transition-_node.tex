@@ -1,0 +1,42 @@
+\chapter{Fade Transition Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fade-_transition-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fade-_transition-_node}\index{Fade Transition Node@{Fade Transition Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fade-_transition-_node_autotoc_md3230}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fade-_transition-_node_autotoc_md3230}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fade-_transition-_node_autotoc_md3231}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fade-_transition-_node_autotoc_md3231}
+Fade Transition is a method of adding noise to add variation while a function transitions from on to off. This node takes in a fade value and remaps it using the noise value (usually from a texture). When Fade\+Value is 0, the output is always 0, and when Fade\+Value is 1, the output is always exactly 1. In between 0 and 1 the transition will follow the pattern in the noise.
+
+This \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node}{Node}{0} is commonly used as an input to {\bfseries{Alpha}} on a Master Node to provide an LOD transition.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fade-_transition-_node_autotoc_md3232}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fade-_transition-_node_autotoc_md3232}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+Texture   &Input   &Texture 2D   &None   &Input value    \\\cline{1-5}
+Noise   &Input   &Float   &None   &The noise variation to apply to the fade function    \\\cline{1-5}
+Fade\+Value   &Input   &Float   &None   &The amount of transition to apply    \\\cline{1-5}
+Fade\+Contrast   &Input   &Float   &None   &The contrast at which a single pixel goes from fully transparent to fully opaque. Higher values cause sharper edges in the transition    \\\cline{1-5}
+Fade   &Output   &Float   &None   &The resulting fade value   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fade-_transition-_node_autotoc_md3233}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fade-_transition-_node_autotoc_md3233}
+The following example code represents one possible outcome of this node.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float\ Unity\_FadeTransitionNode\_ApplyFade\_float(float\ noise,\ float\ fadeValue,\ float\ fadeContrast)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ float\ ret\ =\ saturate(fadeValue*(fadeContrast+1)+(noise-\/1)*fadeContrast);}
+\DoxyCodeLine{\ \ \ \ return\ ret;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{float\ Result\ =\ Unity\_FadeTransitionNode\_ApplyFade\_float(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \_NoiseValue,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \_FadeValue,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \_FadeContrast);}
+
+\end{DoxyCode}
+ 

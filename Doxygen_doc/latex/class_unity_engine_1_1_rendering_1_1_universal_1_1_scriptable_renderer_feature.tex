@@ -1,0 +1,148 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Renderer\+Feature Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature}{}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature}\index{UnityEngine.Rendering.Universal.ScriptableRendererFeature@{UnityEngine.Rendering.Universal.ScriptableRendererFeature}}
+
+
+You can add a {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature}{Scriptable\+Renderer\+Feature}} to the {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Scriptable\+Renderer}}. Use this scriptable renderer feature to inject render passes into the renderer.  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Renderer\+Feature\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.513514cm]{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_a907fc1b52776f803d94f7fae73ef0581}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_a907fc1b52776f803d94f7fae73ef0581} 
+void {\bfseries Create} ()
+\begin{DoxyCompactList}\small\item\em Initializes this feature\textquotesingle{}s resources. This is called every time serialization happens. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_acdfd6aaa07f0bbd564d6d054597640fd}{On\+Camera\+Pre\+Cull}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Scriptable\+Renderer}} renderer, in \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_camera_data}{Camera\+Data}} camera\+Data)
+\begin{DoxyCompactList}\small\item\em Callback before cull happens in renderer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_af397bf0b2792eeef093cd483f8510e42}{Add\+Render\+Passes}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Scriptable\+Renderer}} renderer, ref \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}} rendering\+Data)
+\begin{DoxyCompactList}\small\item\em Injects one or multiple {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Scriptable\+Render\+Pass}} in the renderer. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_a100d4bf04924b49e6a14a533f0415add}{Setup\+Render\+Passes}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Scriptable\+Renderer}} renderer, in \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}} rendering\+Data)
+\begin{DoxyCompactList}\small\item\em Callback after render targets are initialized. This allows for accessing targets from renderer after they are created and ready. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_a1b9f657f59bc0ed8165d3e0fca5480e8}{Set\+Active}} (bool active)
+\begin{DoxyCompactList}\small\item\em Sets the state of Scriptable\+Render\+Feature (true\+: the feature is active, false\+: the feature is inactive). If the feature is active, it is added to the renderer it is attached to, otherwise the feature is skipped while rendering. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_ad2cc174f3ae439cb9a2a1402bc2a6663}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_ad2cc174f3ae439cb9a2a1402bc2a6663} 
+void {\bfseries Dispose} ()
+\begin{DoxyCompactList}\small\item\em Disposable pattern implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_a1117b623c2a8ba6a7c0020591b6d400f}{Dispose}} (bool disposing)
+\begin{DoxyCompactList}\small\item\em Called by \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_ad2cc174f3ae439cb9a2a1402bc2a6663}{Dispose()}. Override this function to clean up resources in your renderer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_a8e9412eed8213b0df0720edb0284f7af}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_a8e9412eed8213b0df0720edb0284f7af} 
+bool {\bfseries is\+Active}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the state of the Scriptable\+Render\+Feature (true\+: the feature is active, false\+: the feature is inactive). Use the method Scriptable\+Render\+Feature.\+Set\+Active to change the value of this variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+You can add a {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature}{Scriptable\+Renderer\+Feature}} to the {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Scriptable\+Renderer}}. Use this scriptable renderer feature to inject render passes into the renderer. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Scriptable\+Renderer}, \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Scriptable\+Render\+Pass}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_af397bf0b2792eeef093cd483f8510e42}\index{UnityEngine.Rendering.Universal.ScriptableRendererFeature@{UnityEngine.Rendering.Universal.ScriptableRendererFeature}!AddRenderPasses@{AddRenderPasses}}
+\index{AddRenderPasses@{AddRenderPasses}!UnityEngine.Rendering.Universal.ScriptableRendererFeature@{UnityEngine.Rendering.Universal.ScriptableRendererFeature}}
+\doxysubsubsection{\texorpdfstring{AddRenderPasses()}{AddRenderPasses()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_af397bf0b2792eeef093cd483f8510e42} 
+void Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Renderer\+Feature.\+Add\+Render\+Passes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Scriptable\+Renderer}}}]{renderer}{, }\item[{ref \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}}}]{rendering\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Injects one or multiple {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Scriptable\+Render\+Pass}} in the renderer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & Renderer used for adding render passes.\\
+\hline
+{\em rendering\+Data} & \doxylink{namespace_unity_engine_1_1_rendering}{Rendering} state. Use this to setup render passes.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_a1117b623c2a8ba6a7c0020591b6d400f}\index{UnityEngine.Rendering.Universal.ScriptableRendererFeature@{UnityEngine.Rendering.Universal.ScriptableRendererFeature}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!UnityEngine.Rendering.Universal.ScriptableRendererFeature@{UnityEngine.Rendering.Universal.ScriptableRendererFeature}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_a1117b623c2a8ba6a7c0020591b6d400f} 
+virtual void Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Renderer\+Feature.\+Dispose (\begin{DoxyParamCaption}\item[{bool}]{disposing}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called by \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_ad2cc174f3ae439cb9a2a1402bc2a6663}{Dispose()}. Override this function to clean up resources in your renderer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em disposing} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_full_screen_pass_renderer_feature_a4285a50ccd52b81e6bb6053b60b41e2d}{Full\+Screen\+Pass\+Renderer\+Feature}}, and \mbox{\hyperlink{class_keep_frame_feature_a2fa788317effeb078f84fb7d5c966fb0}{Keep\+Frame\+Feature}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_acdfd6aaa07f0bbd564d6d054597640fd}\index{UnityEngine.Rendering.Universal.ScriptableRendererFeature@{UnityEngine.Rendering.Universal.ScriptableRendererFeature}!OnCameraPreCull@{OnCameraPreCull}}
+\index{OnCameraPreCull@{OnCameraPreCull}!UnityEngine.Rendering.Universal.ScriptableRendererFeature@{UnityEngine.Rendering.Universal.ScriptableRendererFeature}}
+\doxysubsubsection{\texorpdfstring{OnCameraPreCull()}{OnCameraPreCull()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_acdfd6aaa07f0bbd564d6d054597640fd} 
+virtual void Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Renderer\+Feature.\+On\+Camera\+Pre\+Cull (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Scriptable\+Renderer}}}]{renderer}{, }\item[{in \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_camera_data}{Camera\+Data}}}]{camera\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Callback before cull happens in renderer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & Renderer of callback.\\
+\hline
+{\em camera\+Data} & \doxylink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_camera_data}{Camera\+Data} contains all relevant render target information for the camera.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_a1b9f657f59bc0ed8165d3e0fca5480e8}\index{UnityEngine.Rendering.Universal.ScriptableRendererFeature@{UnityEngine.Rendering.Universal.ScriptableRendererFeature}!SetActive@{SetActive}}
+\index{SetActive@{SetActive}!UnityEngine.Rendering.Universal.ScriptableRendererFeature@{UnityEngine.Rendering.Universal.ScriptableRendererFeature}}
+\doxysubsubsection{\texorpdfstring{SetActive()}{SetActive()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_a1b9f657f59bc0ed8165d3e0fca5480e8} 
+void Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Renderer\+Feature.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{active}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the state of Scriptable\+Render\+Feature (true\+: the feature is active, false\+: the feature is inactive). If the feature is active, it is added to the renderer it is attached to, otherwise the feature is skipped while rendering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em active} & The true value activates the Scriptable\+Render\+Feature and the false value deactivates it.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_a100d4bf04924b49e6a14a533f0415add}\index{UnityEngine.Rendering.Universal.ScriptableRendererFeature@{UnityEngine.Rendering.Universal.ScriptableRendererFeature}!SetupRenderPasses@{SetupRenderPasses}}
+\index{SetupRenderPasses@{SetupRenderPasses}!UnityEngine.Rendering.Universal.ScriptableRendererFeature@{UnityEngine.Rendering.Universal.ScriptableRendererFeature}}
+\doxysubsubsection{\texorpdfstring{SetupRenderPasses()}{SetupRenderPasses()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_a100d4bf04924b49e6a14a533f0415add} 
+virtual void Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Renderer\+Feature.\+Setup\+Render\+Passes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Scriptable\+Renderer}}}]{renderer}{, }\item[{in \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}}}]{rendering\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Callback after render targets are initialized. This allows for accessing targets from renderer after they are created and ready. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & Renderer used for adding render passes.\\
+\hline
+{\em rendering\+Data} & \doxylink{namespace_unity_engine_1_1_rendering}{Rendering} state. Use this to setup render passes.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_keep_frame_feature_a37905600977a3b5ba112dfe9ebcba949}{Keep\+Frame\+Feature}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/Scriptable\+Renderer\+Feature.\+cs\end{DoxyCompactItemize}

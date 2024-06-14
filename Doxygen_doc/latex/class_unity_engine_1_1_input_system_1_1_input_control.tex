@@ -1,0 +1,1146 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Input\+Control\texorpdfstring{$<$}{<} TValue \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_unity_engine_1_1_input_system_1_1_input_control}{}\label{class_unity_engine_1_1_input_system_1_1_input_control}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+
+
+A typed and named source of input values in a hierarchy of controls.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Input\+Control\texorpdfstring{$<$}{<} TValue \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=10.476191cm]{class_unity_engine_1_1_input_system_1_1_input_control}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_add7e6fae45c5135772098325a62e1705}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Return a string representation of the control useful for debugging. \end{DoxyCompactList}\item 
+unsafe float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Evaluate\+Magnitude}} ()
+\begin{DoxyCompactList}\small\item\em Compute an absolute, normalized magnitude value that indicates the extent to which the control is actuated. \end{DoxyCompactList}\item 
+virtual unsafe float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a039f4a670688b71cc026c661e0f9e80c}{Evaluate\+Magnitude}} (void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\begin{DoxyCompactList}\small\item\em Compute an absolute, normalized magnitude value that indicates the extent to which the control is actuated in the given state. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a93cbbf9962551781ebf9e45eeb433449}\label{class_unity_engine_1_1_input_system_1_1_input_control_a93cbbf9962551781ebf9e45eeb433449} 
+unsafe object {\bfseries Read\+Value\+From\+Buffer\+As\+Object} (void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size)
+\item 
+unsafe object \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a90e01e631b36eee981a31c308d96335e}{Read\+Value\+From\+State\+As\+Object}} (void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\begin{DoxyCompactList}\small\item\em Read the control\textquotesingle{}s final, processed value from the given state and return the value as an object. \end{DoxyCompactList}\item 
+unsafe void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_ac1692b72e9886b17c6439a87548ac73f}{Read\+Value\+From\+State\+Into\+Buffer}} (void \texorpdfstring{$\ast$}{*}state\+Ptr, void \texorpdfstring{$\ast$}{*}buffer\+Ptr, int buffer\+Size)
+\begin{DoxyCompactList}\small\item\em Read the control\textquotesingle{}s final, processed value from the given state and store it in the given buffer. \end{DoxyCompactList}\item 
+virtual unsafe void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a9337dcaddb6396e10b6de5a5e0012058}{Write\+Value\+From\+Buffer\+Into\+State}} (void \texorpdfstring{$\ast$}{*}buffer\+Ptr, int buffer\+Size, void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\begin{DoxyCompactList}\small\item\em Read a value from the given memory and store it as state. \end{DoxyCompactList}\item 
+virtual unsafe void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_ae0c47d69bbd2187830bdc0b72551788f}{Write\+Value\+From\+Object\+Into\+State}} (object \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}{value}}, void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\begin{DoxyCompactList}\small\item\em Read a value object and store it as state in the given memory. \end{DoxyCompactList}\item 
+unsafe bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a4cd88d98c79c75227e82734933fe83ac}{Compare\+Value}} (void \texorpdfstring{$\ast$}{*}first\+State\+Ptr, void \texorpdfstring{$\ast$}{*}second\+State\+Ptr)
+\begin{DoxyCompactList}\small\item\em Compare the value of the control as read from {\itshape first\+State\+Ptr}  to that read from {\itshape second\+State\+Ptr}  and return true if they are equal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a5426e6f11ab6c29da5d90256c8e7fe96}{Try\+Get\+Child\+Control}} (string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a60d8e17e65b94f2cf7a0ce7f10af0075}{path}})
+\begin{DoxyCompactList}\small\item\em Try to find a child control matching the given path. \end{DoxyCompactList}\item 
+TControl \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_aa0992bf4b4786f4a42887249c6890d78}{Try\+Get\+Child\+Control$<$ TControl $>$}} (string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a60d8e17e65b94f2cf7a0ce7f10af0075}{path}})
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_ac93b02c5baa5125f89d8f33a52044094}\label{class_unity_engine_1_1_input_system_1_1_input_control_ac93b02c5baa5125f89d8f33a52044094} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} {\bfseries Get\+Child\+Control} (string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a60d8e17e65b94f2cf7a0ce7f10af0075}{path}})
+\item 
+TControl \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_adb1b7bfd6ae75e1a70c313303ece19ed}{Get\+Child\+Control$<$ TControl $>$}} (string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a60d8e17e65b94f2cf7a0ce7f10af0075}{path}})
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_ab30a6abcfbefca2dfe3666298f3df349}{Apply\+Parameter\+Changes}} ()
+\begin{DoxyCompactList}\small\item\em Apply built-\/in parameters changes (e.\+g. \doxylink{class_unity_engine_1_1_input_system_1_1_controls_1_1_axis_control_a502c9aaacf2eccc60b765b446cd2723c}{Axis\+Control.\+invert}, others), recompute \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a653394729f37ee532b315993885873ca}{Input\+Control.\+optimized\+Control\+Data\+Type} for impacted controls and clear cached value. \end{DoxyCompactList}\item 
+TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a2130e1c517844e5ae729eba1cd798c94}{Read\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current value of the control after processors have been applied. \end{DoxyCompactList}\item 
+TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a9e24c5086ac2dae3033b1a6895dcc147}{Read\+Value\+From\+Previous\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Get the control\textquotesingle{}s value from the previous frame (Input\+Control.\+previous\+Frame\+State\+Ptr). \end{DoxyCompactList}\item 
+TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a832514a26fff85b4ba3db603d0ef794c}{Read\+Default\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Get the control\textquotesingle{}s default value. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a841e10da47a82193f1741a90925515f1}\label{class_unity_engine_1_1_input_system_1_1_input_control_a841e10da47a82193f1741a90925515f1} 
+unsafe TValue {\bfseries Read\+Value\+From\+State} (void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\item 
+unsafe TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_aaeb8d6dd5f5099345fa155f9c3c2f3d1}{Read\+Value\+From\+State\+With\+Caching}} (void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\begin{DoxyCompactList}\small\item\em Read value from provided {\itshape state\+Ptr}  and apply processors. Try cache result if possible. \end{DoxyCompactList}\item 
+unsafe TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a03e5a1d1bf49c38b59219e039da7a104}{Read\+Unprocessed\+Value\+From\+State\+With\+Caching}} (void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\begin{DoxyCompactList}\small\item\em Read value from provided {\itshape state\+Ptr} . Try cache result if possible. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a963b60d8776401d689e32b421c492831}\label{class_unity_engine_1_1_input_system_1_1_input_control_a963b60d8776401d689e32b421c492831} 
+TValue {\bfseries Read\+Unprocessed\+Value} ()
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a3a46a24407f3b1a9797b8a157a86c0bd}\label{class_unity_engine_1_1_input_system_1_1_input_control_a3a46a24407f3b1a9797b8a157a86c0bd} 
+unsafe TValue {\bfseries Read\+Unprocessed\+Value\+From\+State} (void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a6697d3069cc19818e0a881b2b027b7b4}\label{class_unity_engine_1_1_input_system_1_1_input_control_a6697d3069cc19818e0a881b2b027b7b4} 
+override unsafe object {\bfseries Read\+Value\+From\+State\+As\+Object} (void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_abbdaef2a033fe81f7e3db20cba86ff48}\label{class_unity_engine_1_1_input_system_1_1_input_control_abbdaef2a033fe81f7e3db20cba86ff48} 
+override unsafe void {\bfseries Read\+Value\+From\+State\+Into\+Buffer} (void \texorpdfstring{$\ast$}{*}state\+Ptr, void \texorpdfstring{$\ast$}{*}buffer\+Ptr, int buffer\+Size)
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a057c142767795a4918ddee0bd8867215}\label{class_unity_engine_1_1_input_system_1_1_input_control_a057c142767795a4918ddee0bd8867215} 
+override unsafe void {\bfseries Write\+Value\+From\+Buffer\+Into\+State} (void \texorpdfstring{$\ast$}{*}buffer\+Ptr, int buffer\+Size, void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a4666afad9d5b2ac7b916de549ec17f01}\label{class_unity_engine_1_1_input_system_1_1_input_control_a4666afad9d5b2ac7b916de549ec17f01} 
+override unsafe void {\bfseries Write\+Value\+From\+Object\+Into\+State} (object \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}{value}}, void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a821c1213adf3577a31e36043d40805d1}\label{class_unity_engine_1_1_input_system_1_1_input_control_a821c1213adf3577a31e36043d40805d1} 
+virtual unsafe void {\bfseries Write\+Value\+Into\+State} (TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}{value}}, void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a879e8788a912668669b8f4b8547b7e47}\label{class_unity_engine_1_1_input_system_1_1_input_control_a879e8788a912668669b8f4b8547b7e47} 
+override unsafe object {\bfseries Read\+Value\+From\+Buffer\+As\+Object} (void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size)
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a7657ac102ac4c7f1aa48752a6b82a438}\label{class_unity_engine_1_1_input_system_1_1_input_control_a7657ac102ac4c7f1aa48752a6b82a438} 
+override unsafe bool {\bfseries Compare\+Value} (void \texorpdfstring{$\ast$}{*}first\+State\+Ptr, void \texorpdfstring{$\ast$}{*}second\+State\+Ptr)
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a2170ca59db41f3dac8f60cda3eaa662d}\label{class_unity_engine_1_1_input_system_1_1_input_control_a2170ca59db41f3dac8f60cda3eaa662d} 
+TValue {\bfseries Process\+Value} (TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}{value}})
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_aad856d3c6754bb2eb3b46e0a45ef2ad9}{Process\+Value}} (ref TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}{value}})
+\begin{DoxyCompactList}\small\item\em Applies all control processors to the passed value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_ad017396c837bfdf27500932b4ecd77ce}{Finish\+Setup}} ()
+\begin{DoxyCompactList}\small\item\em Perform final initialization tasks after the control hierarchy has been put into place. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a96934d2028848054141a854553646df7}{Refresh\+Configuration\+If\+Needed}} ()
+\begin{DoxyCompactList}\small\item\em Call Refresh\+Configuration if the configuration has in the interim been invalidated by a Device\+Configuration\+Event. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_aa3fd7e9f04578307e642f5da86b1f3b2}{Refresh\+Configuration}} ()
+\item 
+virtual \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_four_c_c}{Four\+CC}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a25e0b34cbff9915c141124e943a4bbc9}{Calculate\+Optimized\+Control\+Data\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Calculates and returns a optimized data type that can represent a control\textquotesingle{}s value in memory directly. The value then is cached in \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a653394729f37ee532b315993885873ca}{Input\+Control.\+optimized\+Control\+Data\+Type}. This method is for internal use only, you should not call this from your own code. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a1cea097fe54ddc49c4c81be7dcbc5e24}\label{class_unity_engine_1_1_input_system_1_1_input_control_a1cea097fe54ddc49c4c81be7dcbc5e24} 
+override void {\bfseries Finish\+Setup} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a94f646dff1e9cbbbf84857bffa490274}{name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The name of the control, i.\+e. the final name part in its path. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_ac31c2a2f570e527aacc86ee8060e2ecc}{display\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The text to display as the name of the control. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_ab4716691d15fffa36ab61fec8c05c6ac}{short\+Display\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An alternate, abbreviated \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_ac31c2a2f570e527aacc86ee8060e2ecc}{display\+Name} (for example "{}\+LMB"{} instead of "{}\+Left Button"{}). \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a60d8e17e65b94f2cf7a0ce7f10af0075}{path}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Full path all the way from the root. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a8d349861ff83c7a74573bea9a2cf2886}{layout}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Layout the control is based on. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a89c641b9e70687d8d2d5049bb6c4bc46}{variants}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Semicolon-\/separated list of variants of the control layout or "{}default"{}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a5cb217f04299c9286604910b9caa2cd2}{device}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The device that this control is a part of. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_abce81da2e91c3b46a949185b66fff32d}{parent}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The immediate parent of the control or null if the control has no parent (which, once fully constructed) will only be the case for Input\+Devices). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a7861c4cd07f6b756c6f22c18f195a3c1}{children}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of immediate children. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_interned_string}{Interned\+String}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a09e4b347afac3558d9dbe4c4919457b8}{usages}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of usage tags associated with the control. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_aa072a95090fccf70989d3a85447d8760}\label{class_unity_engine_1_1_input_system_1_1_input_control_aa072a95090fccf70989d3a85447d8760} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_interned_string}{Interned\+String}} $>$ {\bfseries aliases}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_ad31d5b5e4de72ec09f9d97f0c9a3067e}\label{class_unity_engine_1_1_input_system_1_1_input_control_ad31d5b5e4de72ec09f9d97f0c9a3067e} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_block}{Input\+State\+Block}} {\bfseries state\+Block}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_afa5a8531d7c9a030e8e484560a59fe6f}{noisy}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the control is considered noisy. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a11348388ab9565068c0f1294de909b90}{synthetic}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the control is considered synthetic. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a133ddd2bc028dd97d624ff32fd842fff}{this\mbox{[}string path\mbox{]}}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Fetch a control from the control\textquotesingle{}s hierarchy by name. \end{DoxyCompactList}\item 
+Type \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_aa863a140183822dd850659336c9667ba}{value\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the underlying value type of this control. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a181a81b1a64265fec4919b1f09fe7940}{value\+Size\+In\+Bytes}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Size in bytes of values that the control returns. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_ab7546f119a75062ec7df894911cc5458}{magnitude}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Compute an absolute, normalized magnitude value that indicates the extent to which the control is actuated. Shortcut for \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Evaluate\+Magnitude()}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_four_c_c}{Four\+CC}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a653394729f37ee532b315993885873ca}{optimized\+Control\+Data\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For some types of control you can safely read/write state memory directly which is much faster than calling Read\+Unprocessed\+Value\+From\+State/\+Write\+Value\+Into\+State. This method returns a type that you can use for reading/writing the control directly, or it returns Input\+State\+Block.\+k\+Format\+Invalid if it\textquotesingle{}s not possible for this type of control. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_adf9367e7d3bd196b92f08cce5b0de1ed}\label{class_unity_engine_1_1_input_system_1_1_input_control_adf9367e7d3bd196b92f08cce5b0de1ed} 
+override Type {\bfseries value\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a423248354185238b94cf7fa23a739b67}\label{class_unity_engine_1_1_input_system_1_1_input_control_a423248354185238b94cf7fa23a739b67} 
+override int {\bfseries value\+Size\+In\+Bytes}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+ref readonly TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}{value}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the current value of the control after processors have been applied. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A typed and named source of input values in a hierarchy of controls. 
+
+Base class for input controls with a specific value type.
+
+\doxylink{namespace_unity_engine_1_1_input_system_1_1_controls}{Controls} can have children which in turn may have children. At the root of the child hierarchy is always an \doxylink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device} (which themselves are Input\+Controls).
+
+\doxylink{namespace_unity_engine_1_1_input_system_1_1_controls}{Controls} can be looked up by their \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a60d8e17e65b94f2cf7a0ce7f10af0075}{path} (see Input\+Control\+Path.\+Try\+Find\+Control).
+
+Each control must have a unique \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a94f646dff1e9cbbbf84857bffa490274}{name} within the \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a7861c4cd07f6b756c6f22c18f195a3c1}{children} of its \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_abce81da2e91c3b46a949185b66fff32d}{parent}. Multiple names can be assigned to controls using aliases (see aliases). Name lookup is case-\/insensitive.
+
+For display purposes, a control may have a separate \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_ac31c2a2f570e527aacc86ee8060e2ecc}{display\+Name}. This name will usually correspond to what the control is caused on the actual underlying hardware. For example, on an Xbox gamepad, the control with the name "{}button\+South"{} will have a display name of "{}\+A"{}. \doxylink{namespace_unity_engine_1_1_input_system_1_1_controls}{Controls} that have very long display names may also have a \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_ab4716691d15fffa36ab61fec8c05c6ac}{short\+Display\+Name}. This is the case for the "{}\+Left Button"{} on the \doxylink{class_unity_engine_1_1_input_system_1_1_mouse}{Mouse}, for example, which is commonly abbreviated "{}\+LMB"{}.
+
+In addition to names, a control may have usages associated with it (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a09e4b347afac3558d9dbe4c4919457b8}{usages}). A usage indicates how a control is meant to be used. For example, a button can be assigned the "{}\+Primary\+Action"{} usage to indicate it is the primary action button the device. Within a device, usages have to be unique. See Common\+Usages for a list of standardized usages.
+
+\doxylink{namespace_unity_engine_1_1_input_system_1_1_controls}{Controls} do not actually store values. Instead, every control receives an Input\+State\+Block which, after the control\textquotesingle{}s device has been added to the system, is used to read out values from the device\textquotesingle{}s backing store. This backing store is referred to as "{}state"{} in the API as opposed to "{}values"{} which represent the data resulting from reading state. The format that each control stores state in is specific to the control. It can vary not only between controls of different types but also between controls of the same type. An Axis\+Control, for example, can be stored as a float or as a byte or in a number of other formats. state\+Block identifies both where the control stores its state as well as the format it stores it in.
+
+\doxylink{namespace_unity_engine_1_1_input_system_1_1_controls}{Controls} are generally not created directly but are created internally by the input system from data known as "{}layouts"{} (see Input\+Control\+Layout). Each such layout describes the setup of a specific hierarchy of controls. The system internally maintains a registry of layouts and produces devices and controls from them as needed. The layout that a control has been created from can be queried using \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a8d349861ff83c7a74573bea9a2cf2886}{layout}. For most purposes, the intricacies of the control layout mechanisms can be ignored and it is sufficient to know the names of a small set of common device layouts such as "{}\+Keyboard"{}, "{}\+Mouse"{}, "{}\+Gamepad"{}, and "{}\+Touchscreen"{}.
+
+Each control has a single, fixed value type. The type can be queried at runtime using \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_aa863a140183822dd850659336c9667ba}{value\+Type}. Most types of controls are derived from Input\+Control$<$\+TValue$>$ which has APIs specific to the type of value of the control (e.\+g. \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a2130e1c517844e5ae729eba1cd798c94}{Input\+Control$<$\+TValue$>$.\+Read\+Value()}.
+
+The following example demonstrates various common operations performed on input controls\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Look\ up\ dpad/up\ control\ on\ current\ gamepad.}}
+\DoxyCodeLine{var\ dpadUpControl\ =\ Gamepad.current[\textcolor{stringliteral}{"{}dpad/up"{}}];}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Look\ up\ the\ back\ button\ on\ the\ current\ gamepad.}}
+\DoxyCodeLine{var\ backButton\ =\ Gamepad.current[\textcolor{stringliteral}{"{}\{Back\}"{}}];}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Look\ up\ all\ dpad/up\ controls\ on\ all\ gamepads\ in\ the\ system.}}
+\DoxyCodeLine{\textcolor{keyword}{using}\ (var\ controls\ =\ InputSystem.FindControls(\textcolor{stringliteral}{"{}<Gamepad>/dpad/up"{}}))}
+\DoxyCodeLine{\ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}Found\ \{controls.Count\}\ controls"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Display\ the\ value\ of\ all\ controls\ on\ the\ current\ gamepad.}}
+\DoxyCodeLine{\textcolor{keywordflow}{foreach}\ (var\ control\ \textcolor{keywordflow}{in}\ Gamepad.current.allControls)}
+\DoxyCodeLine{\ \ \ \ Debug.Log(controls.ReadValueAsObject());}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Track\ the\ value\ of\ the\ left\ stick\ on\ the\ current\ gamepad\ over\ time.}}
+\DoxyCodeLine{var\ leftStickHistory\ =\ \textcolor{keyword}{new}\ InputStateHistory(Gamepad.current.leftStick);}
+\DoxyCodeLine{leftStickHistory.Enable();}
+
+\end{DoxyCode}
+ 
+
+Input\+Control$<$\+TValue$>$ \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}, Input\+Control\+Path, Input\+State\+Block
+
+
+\end{DoxySeeAlso}
+
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TValue} & Type of value captured by the control. Note that this does not mean that the control has to store data in the given value format. A control that captures float values, for example, may be stored in state as byte values instead.\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TValue} : {\em struct}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_ab30a6abcfbefca2dfe3666298f3df349}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!ApplyParameterChanges@{ApplyParameterChanges}}
+\index{ApplyParameterChanges@{ApplyParameterChanges}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{ApplyParameterChanges()}{ApplyParameterChanges()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_ab30a6abcfbefca2dfe3666298f3df349} 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.Apply\+Parameter\+Changes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Apply built-\/in parameters changes (e.\+g. \doxylink{class_unity_engine_1_1_input_system_1_1_controls_1_1_axis_control_a502c9aaacf2eccc60b765b446cd2723c}{Axis\+Control.\+invert}, others), recompute \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a653394729f37ee532b315993885873ca}{Input\+Control.\+optimized\+Control\+Data\+Type} for impacted controls and clear cached value. 
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a25e0b34cbff9915c141124e943a4bbc9}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!CalculateOptimizedControlDataType@{CalculateOptimizedControlDataType}}
+\index{CalculateOptimizedControlDataType@{CalculateOptimizedControlDataType}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{CalculateOptimizedControlDataType()}{CalculateOptimizedControlDataType()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_a25e0b34cbff9915c141124e943a4bbc9} 
+virtual \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_four_c_c}{Four\+CC}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.Calculate\+Optimized\+Control\+Data\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Calculates and returns a optimized data type that can represent a control\textquotesingle{}s value in memory directly. The value then is cached in \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a653394729f37ee532b315993885873ca}{Input\+Control.\+optimized\+Control\+Data\+Type}. This method is for internal use only, you should not call this from your own code. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_axis_control_a043b5eadd1b71ca8e4535bcf4de30ce7}{Unity\+Engine.\+Input\+System.\+Controls.\+Axis\+Control}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_integer_control_a42a176f8a1cc01b66cd2ed0cd1fa5540}{Unity\+Engine.\+Input\+System.\+Controls.\+Integer\+Control}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_quaternion_control_a2e48fc5389525666a4b148456c11f791}{Unity\+Engine.\+Input\+System.\+Controls.\+Quaternion\+Control}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_vector2_control_a5ef5ee311e9ef550c40ad31414e7980d}{Unity\+Engine.\+Input\+System.\+Controls.\+Vector2\+Control}}, and \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_vector3_control_a4f96f5ffd8b24ae66461b48cc51d888a}{Unity\+Engine.\+Input\+System.\+Controls.\+Vector3\+Control}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a4cd88d98c79c75227e82734933fe83ac}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!CompareValue@{CompareValue}}
+\index{CompareValue@{CompareValue}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{CompareValue()}{CompareValue()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_a4cd88d98c79c75227e82734933fe83ac} 
+unsafe bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.Compare\+Value (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{first\+State\+Ptr}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{second\+State\+Ptr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Compare the value of the control as read from {\itshape first\+State\+Ptr}  to that read from {\itshape second\+State\+Ptr}  and return true if they are equal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first\+State\+Ptr} & Memory containing the control\textquotesingle{}s state\+Block.\\
+\hline
+{\em second\+State\+Ptr} & Memory containing the control\textquotesingle{}s state\+Block\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the value of the control is equal in both {\itshape first\+State\+Ptr}  and {\itshape second\+State\+Ptr} .
+\end{DoxyReturn}
+
+
+Unlike \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a4cd88d98c79c75227e82734933fe83ac}{Compare\+Value}, this method will have to do more than just compare the memory for the control in the two state buffers. It will have to read out state for the control and run the full processing machinery for the control to turn the state into a final, processed value. Compare\+Value is thus more costly than \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a4cd88d98c79c75227e82734933fe83ac}{Compare\+Value}.
+
+This method will apply epsilons (Mathf.\+Epsilon) when comparing floats. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a4cd88d98c79c75227e82734933fe83ac}{Compare\+Value}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!EvaluateMagnitude@{EvaluateMagnitude}}
+\index{EvaluateMagnitude@{EvaluateMagnitude}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{EvaluateMagnitude()}{EvaluateMagnitude()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c} 
+unsafe float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.Evaluate\+Magnitude (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compute an absolute, normalized magnitude value that indicates the extent to which the control is actuated. 
+
+REVIEW\+: The -\/1 behavior seems bad; probably better to just return 1 for controls that do not support finer levels of actuation
+
+\begin{DoxyReturn}{Returns}
+Amount of actuation of the control or -\/1 if it cannot be determined.
+\end{DoxyReturn}
+
+
+Magnitudes do not make sense for all types of controls. For example, for a control that represents an enumeration of values (such as Touch\+Phase\+Control), there is no meaningful linear ordering of values (one could derive a linear ordering through the actual enum values but their assignment may be entirely arbitrary; it is unclear whether a state of \doxylink{namespace_unity_engine_1_1_input_system_a586a6521911c62d23469e51a336d29dba0e22fe7d45f8e5632a4abf369b24e29c}{Touch\+Phase.\+Canceled} has a higher or lower "{}magnitude"{} as a state of \doxylink{namespace_unity_engine_1_1_input_system_a586a6521911c62d23469e51a336d29dba7b81520329371177ede3ccbc307bc85d}{Touch\+Phase.\+Began}).
+
+\doxylink{namespace_unity_engine_1_1_input_system_1_1_controls}{Controls} that have no meaningful magnitude will return -\/1 when calling this method. Any negative return value should be considered an invalid value. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a039f4a670688b71cc026c661e0f9e80c}{Evaluate\+Magnitude(void\texorpdfstring{$\ast$}{*})}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a039f4a670688b71cc026c661e0f9e80c}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!EvaluateMagnitude@{EvaluateMagnitude}}
+\index{EvaluateMagnitude@{EvaluateMagnitude}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{EvaluateMagnitude()}{EvaluateMagnitude()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_a039f4a670688b71cc026c661e0f9e80c} 
+virtual unsafe float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.Evaluate\+Magnitude (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{state\+Ptr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Compute an absolute, normalized magnitude value that indicates the extent to which the control is actuated in the given state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\+Ptr} & State containing the control\textquotesingle{}s state\+Block.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Amount of actuation of the control or -\/1 if it cannot be determined.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Evaluate\+Magnitude()}, state\+Block
+
+
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_axis_control_ac0447d1a40286ab720e85ed63ab47dbd}{Unity\+Engine.\+Input\+System.\+Controls.\+Axis\+Control}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_vector2_control_a2bcb1068fa598277613756438759edf1}{Unity\+Engine.\+Input\+System.\+Controls.\+Vector2\+Control}}, and \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_vector3_control_a68c332b99c4e667bc7fa2104e1b6ae5e}{Unity\+Engine.\+Input\+System.\+Controls.\+Vector3\+Control}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_ad017396c837bfdf27500932b4ecd77ce}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!FinishSetup@{FinishSetup}}
+\index{FinishSetup@{FinishSetup}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{FinishSetup()}{FinishSetup()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_ad017396c837bfdf27500932b4ecd77ce} 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.Finish\+Setup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Perform final initialization tasks after the control hierarchy has been put into place. 
+
+This method can be overridden to perform control-\/ or device-\/specific setup work. The most common use case is for looking up child controls and storing them in local getters.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyDevice\ :\ InputDevice}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ ButtonControl\ button\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ AxisControl\ axis\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnFinishSetup()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cache\ controls\ in\ getters.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ button\ =\ GetChildControl(\textcolor{stringliteral}{"{}button"{}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ axis\ =\ GetChildControl(\textcolor{stringliteral}{"{}axis"{}});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+Reimplemented in \mbox{\hyperlink{class_custom_device_aeeb415864d2144c23a79eb20a304ac7c}{Custom\+Device}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_accelerometer_a1768494c32364f3bad90e725580e9b73}{Unity\+Engine.\+Input\+System.\+Accelerometer}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_ambient_temperature_sensor_a98d5b43cc4731ffec277ac694d25641f}{Unity\+Engine.\+Input\+System.\+Ambient\+Temperature\+Sensor}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_attitude_sensor_a1a26ea4b904bdc55fbcc2f925dd165aa}{Unity\+Engine.\+Input\+System.\+Attitude\+Sensor}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_axis_control_a5d5b98f3b4ad4a358184daf0990f86a0}{Unity\+Engine.\+Input\+System.\+Controls.\+Axis\+Control}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_delta_control_a3cf6da50d655739935a2555dd9dfb26d}{Unity\+Engine.\+Input\+System.\+Controls.\+Delta\+Control}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_discrete_button_control_a0adc08ee3dd2cfd9d02ef76cbb2b5ea4}{Unity\+Engine.\+Input\+System.\+Controls.\+Discrete\+Button\+Control}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_dpad_control_1_1_dpad_axis_control_accf2fd0f8106554faaf5107157a61a59}{Unity\+Engine.\+Input\+System.\+Controls.\+Dpad\+Control.\+Dpad\+Axis\+Control}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_dpad_control_ad22e71163519fea60fb9fa6efadfc1f2}{Unity\+Engine.\+Input\+System.\+Controls.\+Dpad\+Control}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_quaternion_control_ab5fe3d334c9472384052afde9e3820a2}{Unity\+Engine.\+Input\+System.\+Controls.\+Quaternion\+Control}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_stick_control_a17c03d7a6553813a9b56de70a78915d8}{Unity\+Engine.\+Input\+System.\+Controls.\+Stick\+Control}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_touch_control_ad7566b09d644020b83c02199557984a5}{Unity\+Engine.\+Input\+System.\+Controls.\+Touch\+Control}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_touch_press_control_a892dd4b1b8cac980ae849f17c185eabf}{Unity\+Engine.\+Input\+System.\+Controls.\+Touch\+Press\+Control}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_vector2_control_aff92d4bed496e22a4fa3bfadac107a59}{Unity\+Engine.\+Input\+System.\+Controls.\+Vector2\+Control}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_vector3_control_a071261ae621dac52bfba84adaf394ac3}{Unity\+Engine.\+Input\+System.\+Controls.\+Vector3\+Control}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_dual_shock_1_1_dual_shock_gamepad_ab687b14c52a037492de6f576acaeb5f0}{Unity\+Engine.\+Input\+System.\+Dual\+Shock.\+Dual\+Shock\+Gamepad}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_a71ab4f14e505d141e58f5924ae7b8d93}{Unity\+Engine.\+Input\+System.\+Gamepad}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gravity_sensor_a29c027124700a0f1e42fd5d3f699d3bb}{Unity\+Engine.\+Input\+System.\+Gravity\+Sensor}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gyroscope_a18d09061b0fb38fb277bab147175c1f7}{Unity\+Engine.\+Input\+System.\+Gyroscope}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_humidity_sensor_a685cb8cba9b06ca012160f086b32d103}{Unity\+Engine.\+Input\+System.\+Humidity\+Sensor}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_joystick_a59bbe1c387d7165cd9a367b76caa1454}{Unity\+Engine.\+Input\+System.\+Joystick}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_keyboard_a2818554d64fa7e1f231900fda9863937}{Unity\+Engine.\+Input\+System.\+Keyboard}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_light_sensor_a582a2af0372855113815b5b6216dfa8f}{Unity\+Engine.\+Input\+System.\+Light\+Sensor}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_linear_acceleration_sensor_a8fb356f0cb7bde4f348083ac83065a50}{Unity\+Engine.\+Input\+System.\+Linear\+Acceleration\+Sensor}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_magnetic_field_sensor_ae26806cd8fd4918082f12ea12990133f}{Unity\+Engine.\+Input\+System.\+Magnetic\+Field\+Sensor}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_mouse_a7cd1f3796385bf7448b521e753e24894}{Unity\+Engine.\+Input\+System.\+Mouse}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_pen_a02d68e8d508512ea8519deb5726f89b2}{Unity\+Engine.\+Input\+System.\+Pen}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_pointer_a393ea39b9f736373f62cc01b9cd9e567}{Unity\+Engine.\+Input\+System.\+Pointer}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_pressure_sensor_a0c04ce2487180a05b9adc55dc8573229}{Unity\+Engine.\+Input\+System.\+Pressure\+Sensor}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_proximity_sensor_ad095a6c74c5703a71548240075308c4e}{Unity\+Engine.\+Input\+System.\+Proximity\+Sensor}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_step_counter_ad19bf3a2c68f7f6898dceea35eeef954}{Unity\+Engine.\+Input\+System.\+Step\+Counter}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_touchscreen_ae1209d00aa6da731031d7cc38f60034d}{Unity\+Engine.\+Input\+System.\+Touchscreen}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_tracked_device_a6e26ed63d4301f80a5fba3c8ec23c2e2}{Unity\+Engine.\+Input\+System.\+Tracked\+Device}}, and \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_input_1_1_x_input_controller_a2c62a8f77b0aebf4fadedb98e1252bbd}{Unity\+Engine.\+Input\+System.\+XInput.\+XInput\+Controller}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_adb1b7bfd6ae75e1a70c313303ece19ed}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!GetChildControl$<$ TControl $>$@{GetChildControl$<$ TControl $>$}}
+\index{GetChildControl$<$ TControl $>$@{GetChildControl$<$ TControl $>$}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{GetChildControl$<$ TControl $>$()}{GetChildControl< TControl >()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_adb1b7bfd6ae75e1a70c313303ece19ed} 
+TControl \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.Get\+Child\+Control$<$ TControl $>$ (\begin{DoxyParamCaption}\item[{string}]{path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TControl} : {\em Input\+Control}]\end{description}
+\end{Desc}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_aad856d3c6754bb2eb3b46e0a45ef2ad9}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!ProcessValue@{ProcessValue}}
+\index{ProcessValue@{ProcessValue}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{ProcessValue()}{ProcessValue()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_aad856d3c6754bb2eb3b46e0a45ef2ad9} 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.Process\+Value (\begin{DoxyParamCaption}\item[{ref TValue}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Applies all control processors to the passed value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+
+
+Use this overload when your state struct is large to avoid creating copies of the state. \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a832514a26fff85b4ba3db603d0ef794c}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!ReadDefaultValue@{ReadDefaultValue}}
+\index{ReadDefaultValue@{ReadDefaultValue}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{ReadDefaultValue()}{ReadDefaultValue()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_a832514a26fff85b4ba3db603d0ef794c} 
+TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.Read\+Default\+Value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the control\textquotesingle{}s default value. 
+
+\begin{DoxyReturn}{Returns}
+The control\textquotesingle{}s default value.
+\end{DoxyReturn}
+
+
+This is not necessarily equivalent to {\ttfamily default(\+TValue)}. A control\textquotesingle{}s default value is determined by reading its value from the default state (Input\+Control.\+default\+State\+Ptr) which in turn is determined from settings in the control\textquotesingle{}s registered layout (\doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_control_layout_1_1_control_item_a5d68782615098767cf2f0b9022400c66}{Input\+Control\+Layout.\+Control\+Item.\+default\+State}). \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a03e5a1d1bf49c38b59219e039da7a104}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!ReadUnprocessedValueFromStateWithCaching@{ReadUnprocessedValueFromStateWithCaching}}
+\index{ReadUnprocessedValueFromStateWithCaching@{ReadUnprocessedValueFromStateWithCaching}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{ReadUnprocessedValueFromStateWithCaching()}{ReadUnprocessedValueFromStateWithCaching()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_a03e5a1d1bf49c38b59219e039da7a104} 
+unsafe TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.Read\+Unprocessed\+Value\+From\+State\+With\+Caching (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{state\+Ptr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Read value from provided {\itshape state\+Ptr} . Try cache result if possible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\+Ptr} & State pointer to read from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The controls current value.
+\end{DoxyReturn}
+
+
+If {\itshape state\+Ptr}  is "{}current\+State\+Ptr"{}, then read will be done via unprocessed\+Value property to improve performance. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}{value}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a2130e1c517844e5ae729eba1cd798c94}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!ReadValue@{ReadValue}}
+\index{ReadValue@{ReadValue}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{ReadValue()}{ReadValue()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_a2130e1c517844e5ae729eba1cd798c94} 
+TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.Read\+Value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current value of the control after processors have been applied. 
+
+\begin{DoxyReturn}{Returns}
+The controls current value.
+\end{DoxyReturn}
+
+
+This can only be called on devices that have been added to the system (\doxylink{class_unity_engine_1_1_input_system_1_1_input_device_a4ff5e7586f91a321108317341566d4eb}{Input\+Device.\+added}).
+
+If internal feature "{}\+USE\+\_\+\+READ\+\_\+\+VALUE\+\_\+\+CACHING"{} is enabled, then this property implements caching to avoid applying processors when the underlying control has not changed. With this in mind, be aware of processors that use global state, such as the \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor}{Processors.\+Axis\+Deadzone\+Processor}. Unless the control unprocessed value has been changed, input system settings changed or \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_ab30a6abcfbefca2dfe3666298f3df349}{Input\+Control.\+Apply\+Parameter\+Changes()} invoked, the processors will not run and calls to \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}{value} will return the same result as previous calls.
+
+If a processor requires to be run on every read, override \doxylink{class_unity_engine_1_1_input_system_1_1_input_processor_a7ebb134435afbd127a8cdc6b0a58ab89}{Input\+Processor.\+caching\+Policy} property in the processor and set it to \doxylink{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4a4be46f7df52f374eba4b58a7cddf070c}{Input\+Processor.\+Caching\+Policy.\+Evaluate\+On\+Every\+Read}.
+
+To improve debugging try setting "{}\+PARANOID\+\_\+\+READ\+\_\+\+VALUE\+\_\+\+CACHING\+\_\+\+CHECKS"{} internal feature flag to check if cache value is still consistent. . 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}{value}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a9e24c5086ac2dae3033b1a6895dcc147}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!ReadValueFromPreviousFrame@{ReadValueFromPreviousFrame}}
+\index{ReadValueFromPreviousFrame@{ReadValueFromPreviousFrame}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{ReadValueFromPreviousFrame()}{ReadValueFromPreviousFrame()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_a9e24c5086ac2dae3033b1a6895dcc147} 
+TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.Read\+Value\+From\+Previous\+Frame (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the control\textquotesingle{}s value from the previous frame (Input\+Control.\+previous\+Frame\+State\+Ptr). 
+
+REVIEW\+: is \textquotesingle{}frame\textquotesingle{} really the best wording here?
+
+\begin{DoxyReturn}{Returns}
+The control\textquotesingle{}s value in the previous frame.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a90e01e631b36eee981a31c308d96335e}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!ReadValueFromStateAsObject@{ReadValueFromStateAsObject}}
+\index{ReadValueFromStateAsObject@{ReadValueFromStateAsObject}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{ReadValueFromStateAsObject()}{ReadValueFromStateAsObject()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_a90e01e631b36eee981a31c308d96335e} 
+unsafe object \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.Read\+Value\+From\+State\+As\+Object (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{state\+Ptr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Read the control\textquotesingle{}s final, processed value from the given state and return the value as an object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\+Ptr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The control\textquotesingle{}s value as stored in {\itshape state\+Ptr} .
+\end{DoxyReturn}
+
+
+This method allocates GC memory and should not be used during normal gameplay operation. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & {\itshape state\+Ptr}  is null.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_ac1692b72e9886b17c6439a87548ac73f}{Read\+Value\+From\+State\+Into\+Buffer}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_ac1692b72e9886b17c6439a87548ac73f}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!ReadValueFromStateIntoBuffer@{ReadValueFromStateIntoBuffer}}
+\index{ReadValueFromStateIntoBuffer@{ReadValueFromStateIntoBuffer}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{ReadValueFromStateIntoBuffer()}{ReadValueFromStateIntoBuffer()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_ac1692b72e9886b17c6439a87548ac73f} 
+unsafe void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.Read\+Value\+From\+State\+Into\+Buffer (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{state\+Ptr}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{buffer\+Ptr}{, }\item[{int}]{buffer\+Size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Read the control\textquotesingle{}s final, processed value from the given state and store it in the given buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\+Ptr} & State to read the value for the control from.\\
+\hline
+{\em buffer\+Ptr} & Buffer to store the value in.\\
+\hline
+{\em buffer\+Size} & Size of {\itshape buffer\+Ptr}  in bytes. Must be at least \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a181a81b1a64265fec4919b1f09fe7940}{value\+Size\+In\+Bytes}. If it is smaller, Argument\+Exception will be thrown.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & {\itshape state\+Ptr}  is null, or {\itshape buffer\+Ptr}  is null.\\
+\hline
+{\em Argument\+Exception} & {\itshape buffer\+Size}  is smaller than \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a181a81b1a64265fec4919b1f09fe7940}{value\+Size\+In\+Bytes}.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a90e01e631b36eee981a31c308d96335e}{Read\+Value\+From\+State\+As\+Object}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a9337dcaddb6396e10b6de5a5e0012058}{Write\+Value\+From\+Buffer\+Into\+State}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_aaeb8d6dd5f5099345fa155f9c3c2f3d1}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!ReadValueFromStateWithCaching@{ReadValueFromStateWithCaching}}
+\index{ReadValueFromStateWithCaching@{ReadValueFromStateWithCaching}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{ReadValueFromStateWithCaching()}{ReadValueFromStateWithCaching()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_aaeb8d6dd5f5099345fa155f9c3c2f3d1} 
+unsafe TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.Read\+Value\+From\+State\+With\+Caching (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{state\+Ptr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Read value from provided {\itshape state\+Ptr}  and apply processors. Try cache result if possible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\+Ptr} & State pointer to read from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The controls current value.
+\end{DoxyReturn}
+
+
+If {\itshape state\+Ptr}  is "{}current\+State\+Ptr"{}, then read will be done via \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}{value} property to improve performance. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}{value}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_aa3fd7e9f04578307e642f5da86b1f3b2}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!RefreshConfiguration@{RefreshConfiguration}}
+\index{RefreshConfiguration@{RefreshConfiguration}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{RefreshConfiguration()}{RefreshConfiguration()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_aa3fd7e9f04578307e642f5da86b1f3b2} 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.Refresh\+Configuration (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_keyboard_a13cf830a3af72bc1b3305022ebf28d09}{Unity\+Engine.\+Input\+System.\+Keyboard}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a96934d2028848054141a854553646df7}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!RefreshConfigurationIfNeeded@{RefreshConfigurationIfNeeded}}
+\index{RefreshConfigurationIfNeeded@{RefreshConfigurationIfNeeded}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{RefreshConfigurationIfNeeded()}{RefreshConfigurationIfNeeded()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_a96934d2028848054141a854553646df7} 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.Refresh\+Configuration\+If\+Needed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Call Refresh\+Configuration if the configuration has in the interim been invalidated by a Device\+Configuration\+Event. 
+
+This method is only relevant if you are implementing your own devices or new types of controls which are fetching configuration data from the devices (such as Key\+Control which is fetching display names for individual keys from the underlying platform).
+
+This method should be called if you are accessing cached data set up by Refresh\+Configuration.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Let's\ say\ your\ device\ has\ an\ associated\ orientation\ which\ it\ can\ be\ held\ with}}
+\DoxyCodeLine{\textcolor{comment}{//\ and\ you\ want\ to\ surface\ both\ as\ a\ property\ and\ as\ a\ usage\ on\ the\ device.}}
+\DoxyCodeLine{\textcolor{comment}{//\ Whenever\ your\ backend\ code\ detects\ a\ change\ in\ orientation,\ it\ should\ send}}
+\DoxyCodeLine{\textcolor{comment}{//\ a\ DeviceConfigurationEvent\ to\ your\ device\ to\ signal\ that\ the\ configuration}}
+\DoxyCodeLine{\textcolor{comment}{//\ of\ the\ device\ has\ changed.\ You\ can\ then\ implement\ RefreshConfiguration()\ to}}
+\DoxyCodeLine{\textcolor{comment}{//\ read\ out\ and\ update\ the\ device\ orientation\ on\ the\ managed\ InputDevice\ instance.}}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyDevice\ :\ InputDevice}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{enum}\ Orientation}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Horizontal,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Vertical,}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{private}\ Orientation\ m\_Orientation;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ Orientation\ orientation}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Call\ RefreshOrientation\ if\ the\ configuration\ of\ the\ device\ has\ been}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ invalidated\ since\ last\ time\ we\ initialized\ m\_Orientation.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ RefreshConfigurationIfNeeded();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_Orientation;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ RefreshConfiguration()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Fetch\ the\ current\ orientation\ from\ the\ backend.\ How\ you\ do\ this}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ depends\ on\ your\ device.\ Using\ DeviceCommands\ is\ one\ way.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ fetchOrientationCommand\ =\ \textcolor{keyword}{new}\ FetchOrientationCommand();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ExecuteCommand(ref\ fetchOrientationCommand);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_Orientation\ =\ fetchOrientation;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Reflect\ the\ orientation\ on\ the\ device.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (m\_Orientation)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Orientation.Vertical:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ InputSystem.RemoveDeviceUsage(\textcolor{keyword}{this},\ s\_Horizontal);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ InputSystem.AddDeviceUsage(\textcolor{keyword}{this},\ s\_Vertical);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Orientation.Horizontal:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ InputSystem.RemoveDeviceUsage(\textcolor{keyword}{this},\ s\_Vertical);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ InputSystem.AddDeviceUsage(\textcolor{keyword}{this},\ s\_Horizontal);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ InternedString\ s\_Vertical\ =\ \textcolor{keyword}{new}\ InternedString(\textcolor{stringliteral}{"{}Vertical"{}});}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ InternedString\ s\_Horizontal\ =\ \textcolor{keyword}{new}\ InternedString(\textcolor{stringliteral}{"{}Horizontal"{}});}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+Refresh\+Configuration
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_add7e6fae45c5135772098325a62e1705}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!ToString@{ToString}}
+\index{ToString@{ToString}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_add7e6fae45c5135772098325a62e1705} 
+override string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.To\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return a string representation of the control useful for debugging. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the control.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a5426e6f11ab6c29da5d90256c8e7fe96}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!TryGetChildControl@{TryGetChildControl}}
+\index{TryGetChildControl@{TryGetChildControl}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{TryGetChildControl()}{TryGetChildControl()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_a5426e6f11ab6c29da5d90256c8e7fe96} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.Try\+Get\+Child\+Control (\begin{DoxyParamCaption}\item[{string}]{path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Try to find a child control matching the given path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & A control path. See Input\+Control\+Path.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The first direct or indirect child control that matches the given {\itshape path}  or null if no control was found to match.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & {\itshape path}  is {\ttfamily null} or empty.\\
+\hline
+\end{DoxyExceptions}
+
+
+Note that if the given path matches multiple child controls, only the first control encountered in the search will be returned.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Returns\ the\ leftStick\ control\ of\ the\ current\ gamepad.}}
+\DoxyCodeLine{Gamepad.current.TryGetChildControl(\textcolor{stringliteral}{"{}leftStick"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Returns\ the\ X\ axis\ control\ of\ the\ leftStick\ on\ the\ current\ gamepad.}}
+\DoxyCodeLine{Gamepad.current.TryGetChildControl(\textcolor{stringliteral}{"{}leftStick/x"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Returns\ the\ first\ control\ ending\ with\ "{}stick"{}\ in\ its\ name.\ Note\ that\ it}}
+\DoxyCodeLine{\textcolor{comment}{//\ undetermined\ whether\ this\ is\ leftStick\ or\ rightStick\ (or\ even\ another\ stick}}
+\DoxyCodeLine{\textcolor{comment}{//\ added\ by\ the\ given\ gamepad).}}
+\DoxyCodeLine{Gamepad.current.TryGetChildControl(\textcolor{stringliteral}{"{}*stick"{}});}
+
+\end{DoxyCode}
+ 
+
+This method is equivalent to calling Input\+Control\+Path.\+Try\+Find\+Child. \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_aa0992bf4b4786f4a42887249c6890d78}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!TryGetChildControl$<$ TControl $>$@{TryGetChildControl$<$ TControl $>$}}
+\index{TryGetChildControl$<$ TControl $>$@{TryGetChildControl$<$ TControl $>$}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{TryGetChildControl$<$ TControl $>$()}{TryGetChildControl< TControl >()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_aa0992bf4b4786f4a42887249c6890d78} 
+TControl \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a5426e6f11ab6c29da5d90256c8e7fe96}{Try\+Get\+Child\+Control}}$<$ TControl $>$ (\begin{DoxyParamCaption}\item[{string}]{path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TControl} : {\em Input\+Control}]\end{description}
+\end{Desc}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a9337dcaddb6396e10b6de5a5e0012058}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!WriteValueFromBufferIntoState@{WriteValueFromBufferIntoState}}
+\index{WriteValueFromBufferIntoState@{WriteValueFromBufferIntoState}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{WriteValueFromBufferIntoState()}{WriteValueFromBufferIntoState()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_a9337dcaddb6396e10b6de5a5e0012058} 
+virtual unsafe void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.Write\+Value\+From\+Buffer\+Into\+State (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{buffer\+Ptr}{, }\item[{int}]{buffer\+Size}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{state\+Ptr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Read a value from the given memory and store it as state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer\+Ptr} & Memory containing value.\\
+\hline
+{\em buffer\+Size} & Size of {\itshape buffer\+Ptr}  in bytes. Must be at least \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a181a81b1a64265fec4919b1f09fe7940}{value\+Size\+In\+Bytes}.\\
+\hline
+{\em state\+Ptr} & State containing the control\textquotesingle{}s state\+Block. Will receive the state as converted from the given value.\\
+\hline
+\end{DoxyParams}
+
+
+Writing values will NOT apply processors to the given value. This can mean that when reading a value from a control after it has been written to its state, the resulting value differs from what was written. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Not\+Supported\+Exception} & The control does not support writing. This is the case, for example, that compute values (such as the magnitude of a vector).\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_ac1692b72e9886b17c6439a87548ac73f}{Read\+Value\+From\+State\+Into\+Buffer}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_ae0c47d69bbd2187830bdc0b72551788f}{Write\+Value\+From\+Object\+Into\+State}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_ae0c47d69bbd2187830bdc0b72551788f}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!WriteValueFromObjectIntoState@{WriteValueFromObjectIntoState}}
+\index{WriteValueFromObjectIntoState@{WriteValueFromObjectIntoState}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{WriteValueFromObjectIntoState()}{WriteValueFromObjectIntoState()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_ae0c47d69bbd2187830bdc0b72551788f} 
+virtual unsafe void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.Write\+Value\+From\+Object\+Into\+State (\begin{DoxyParamCaption}\item[{object}]{value}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{state\+Ptr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Read a value object and store it as state in the given memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value for the control.\\
+\hline
+{\em state\+Ptr} & State containing the control\textquotesingle{}s state\+Block. Will receive the state state as converted from the given value.\\
+\hline
+\end{DoxyParams}
+
+
+Writing values will NOT apply processors to the given value. This can mean that when reading a value from a control after it has been written to its state, the resulting value differs from what was written. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Not\+Supported\+Exception} & The control does not support writing. This is the case, for example, that compute values (such as the magnitude of a vector).\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a9337dcaddb6396e10b6de5a5e0012058}{Write\+Value\+From\+Buffer\+Into\+State}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a7861c4cd07f6b756c6f22c18f195a3c1}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!children@{children}}
+\index{children@{children}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{children}{children}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_a7861c4cd07f6b756c6f22c18f195a3c1} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}$>$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.children\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+List of immediate children. 
+
+Does not allocate. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_abce81da2e91c3b46a949185b66fff32d}{parent}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a5cb217f04299c9286604910b9caa2cd2}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!device@{device}}
+\index{device@{device}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{device}{device}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_a5cb217f04299c9286604910b9caa2cd2} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.device\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The device that this control is a part of. 
+
+This is the root of the control hierarchy. For the device at the root, this will point to itself. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_device_a145bc849c7d1afc083d7e54e9b05e61a}{Input\+Device.\+all\+Controls}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_ac31c2a2f570e527aacc86ee8060e2ecc}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!displayName@{displayName}}
+\index{displayName@{displayName}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{displayName}{displayName}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_ac31c2a2f570e527aacc86ee8060e2ecc} 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.display\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The text to display as the name of the control. 
+
+TODO\+: protect against empty strings
+
+Note that the display name of a control may change over time. For example, when changing from a QWERTY keyboard layout to an AZERTY keyboard layout, the "{}q"{} key (which will keep that \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a94f646dff1e9cbbbf84857bffa490274}{name}) will change its display name from "{}q"{} to "{}a"{}.
+
+By default, a control\textquotesingle{}s display name will come from its layout. If it is not assigned a display name there, the display name will default to \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a94f646dff1e9cbbbf84857bffa490274}{name}. However, specific controls may override this behavior. Key\+Control, for example, will set the display name to the actual key name corresponding to the current keyboard layout.
+
+For nested controls, the display name will include the display names of all parent controls, i.\+e. the display name will fully identify the control on the device. For example, the display name for the left D-\/\+Pad button on a gamepad is "{}\+D-\/\+Pad Left"{} and not just "{}\+Left"{}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_ab4716691d15fffa36ab61fec8c05c6ac}{short\+Display\+Name}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a8d349861ff83c7a74573bea9a2cf2886}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!layout@{layout}}
+\index{layout@{layout}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{layout}{layout}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_a8d349861ff83c7a74573bea9a2cf2886} 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.layout\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Layout the control is based on. 
+
+This is the layout name rather than a reference to an Input\+Control\+Layout as we only create layout instances during device creation and treat them as temporaries in general so as to not waste heap space during normal operation. \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_ab7546f119a75062ec7df894911cc5458}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!magnitude@{magnitude}}
+\index{magnitude@{magnitude}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{magnitude}{magnitude}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_ab7546f119a75062ec7df894911cc5458} 
+float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.magnitude\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Compute an absolute, normalized magnitude value that indicates the extent to which the control is actuated. Shortcut for \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Evaluate\+Magnitude()}. 
+
+\begin{DoxyReturn}{Returns}
+Amount of actuation of the control or -\/1 if it cannot be determined.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a039f4a670688b71cc026c661e0f9e80c}{Evaluate\+Magnitude(void\texorpdfstring{$\ast$}{*})}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Evaluate\+Magnitude()}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a94f646dff1e9cbbbf84857bffa490274}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!name@{name}}
+\index{name@{name}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_a94f646dff1e9cbbbf84857bffa490274} 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.name\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The name of the control, i.\+e. the final name part in its path. 
+
+Names of controls must be unique within the context of their parent.
+
+Note that this is the name of the control as assigned internally (like "{}button\+South"{}) and not necessarily a good display name. Use \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_ac31c2a2f570e527aacc86ee8060e2ecc}{display\+Name} for getting more readable names for display purposes (where available).
+
+Lookup of names is case-\/insensitive.
+
+This is set from the name of the control in the layout. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a60d8e17e65b94f2cf7a0ce7f10af0075}{path}, aliases, \doxylink{class_unity_engine_1_1_input_system_1_1_layouts_1_1_input_control_attribute_a08c050831324a2d364b2abc3f0fc6ebb}{Input\+Control\+Attribute.\+name}, \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_control_layout_1_1_control_item_a4e4b955e378c446de8ada591857d0941}{Input\+Control\+Layout.\+Control\+Item.\+name}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_afa5a8531d7c9a030e8e484560a59fe6f}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!noisy@{noisy}}
+\index{noisy@{noisy}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{noisy}{noisy}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_afa5a8531d7c9a030e8e484560a59fe6f} 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.noisy\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether the control is considered noisy. 
+
+True if the control produces noisy input.
+
+A control is considered "{}noisy"{} if it produces different values without necessarily requiring user interaction. A good example are sensors (see \doxylink{class_unity_engine_1_1_input_system_1_1_sensor}{Sensor}). For example, the PS4 controller which has a gyroscope sensor built into the device. Whereas sticks and buttons on the device require user interaction to produce non-\/default values, the gyro will produce varying values even if the device just sits there without user interaction.
+
+The value of this property is determined by the layout (Input\+Control\+Layout) that the control has been built from.
+
+Note that for devices (\doxylink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}) this property is true if any control on the device is marked as noisy.
+
+The primary effect of being noise is on \doxylink{class_unity_engine_1_1_input_system_1_1_input_device_a0a98203c32eb180ab8b7c862dc27635c}{Input\+Device.\+Make\+Current} and on interactive rebinding (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation}). However, being noisy also affects automatic resetting of controls that happens when the application loses focus. While other controls are reset to their default value (except if {\ttfamily Application.\+run\+In\+Background} is true and the device the control belongs to is marked as \doxylink{class_unity_engine_1_1_input_system_1_1_input_device_acecc008067d46ee9a1db3cf059f6c709}{Input\+Device.\+can\+Run\+In\+Background}), noisy controls will not be reset but rather remain at their current value. This is based on the assumption that noisy controls most often represent sensor values and snapping the last sampling value back to default will usually have undesirable effects on an application\textquotesingle{}s simulation logic. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_control_layout_1_1_control_item_a42861d9fb199f44aa0eca696b8779de2}{Input\+Control\+Layout.\+Control\+Item.\+is\+Noisy}, \doxylink{class_unity_engine_1_1_input_system_1_1_layouts_1_1_input_control_attribute_aa7fe5c7bc349cd4a78b9b78b59579e62}{Input\+Control\+Attribute.\+noisy}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a653394729f37ee532b315993885873ca}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!optimizedControlDataType@{optimizedControlDataType}}
+\index{optimizedControlDataType@{optimizedControlDataType}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{optimizedControlDataType}{optimizedControlDataType}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_a653394729f37ee532b315993885873ca} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_four_c_c}{Four\+CC}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.optimized\+Control\+Data\+Type\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+For some types of control you can safely read/write state memory directly which is much faster than calling Read\+Unprocessed\+Value\+From\+State/\+Write\+Value\+Into\+State. This method returns a type that you can use for reading/writing the control directly, or it returns Input\+State\+Block.\+k\+Format\+Invalid if it\textquotesingle{}s not possible for this type of control. 
+
+For example, Axis\+Control might be a "{}float"{} in state memory, and if no processing is applied during reading (e.\+g. no invert/scale/etc), then you could read it as float in memory directly without calling Read\+Unprocessed\+Value\+From\+State, which is faster. Additionally, if you have a Vector3\+Control which uses 3 Axis\+Controls as consecutive floats in memory, you can cast the Vector3\+Control state memory directly to Vector3 without calling Read\+Unprocessed\+Value\+From\+State on x/y/z axes.
+
+The value returned for any given control is computed automatically by the Input \doxylink{namespace_system}{System}, when the control\textquotesingle{}s setup configuration changes. \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a25e0b34cbff9915c141124e943a4bbc9}{Input\+Control.\+Calculate\+Optimized\+Control\+Data\+Type} There are some parameter changes which don\textquotesingle{}t trigger a configuration change (such as the clamp, invert, normalize, and scale parameters on Axis\+Control), so if you modify these, the optimized data type is not automatically updated. In this situation, you should manually update it by calling \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_ab30a6abcfbefca2dfe3666298f3df349}{Input\+Control.\+Apply\+Parameter\+Changes}. \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_abce81da2e91c3b46a949185b66fff32d}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!parent@{parent}}
+\index{parent@{parent}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_abce81da2e91c3b46a949185b66fff32d} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.parent\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The immediate parent of the control or null if the control has no parent (which, once fully constructed) will only be the case for Input\+Devices). 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a7861c4cd07f6b756c6f22c18f195a3c1}{children}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a60d8e17e65b94f2cf7a0ce7f10af0075}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!path@{path}}
+\index{path@{path}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_a60d8e17e65b94f2cf7a0ce7f10af0075} 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.path\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Full path all the way from the root. 
+
+This will always be the "{}effective"{} path of the control, i.\+e. it will not contain elements such as usages ({\ttfamily "{}\{\+Back\}"{}}) and other elements that can be part of control paths used for matching. Instead, this property will always be a simple linear ordering of names leading from the device at the top to the control with each element being separated by a forward slash ({\ttfamily /}).
+
+Allocates on first hit. Paths are not created until someone asks for them.
+
+Example\+: "{}/gamepad/left\+Stick/x"{} 
+
+\begin{DoxySeeAlso}{See also}
+Input\+Control\+Path
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_ab4716691d15fffa36ab61fec8c05c6ac}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!shortDisplayName@{shortDisplayName}}
+\index{shortDisplayName@{shortDisplayName}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{shortDisplayName}{shortDisplayName}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_ab4716691d15fffa36ab61fec8c05c6ac} 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.short\+Display\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+An alternate, abbreviated \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_ac31c2a2f570e527aacc86ee8060e2ecc}{display\+Name} (for example "{}\+LMB"{} instead of "{}\+Left Button"{}). 
+
+If the control has no abbreviated version, this will be null. Note that this behavior is different from \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_ac31c2a2f570e527aacc86ee8060e2ecc}{display\+Name} which will fall back to \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a94f646dff1e9cbbbf84857bffa490274}{name} if no display name has been assigned to the control.
+
+For nested controls, the short display name will include the short display names of all parent controls, that is, the display name will fully identify the control on the device. For example, the display name for the left D-\/\+Pad button on a gamepad is "{}\+D-\/\+Pad \textbackslash{}u2190"{} and not just "{}\textbackslash{}u2190"{}. Note that if a parent control has no short name, its long name will be used instead. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_ac31c2a2f570e527aacc86ee8060e2ecc}{display\+Name}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a11348388ab9565068c0f1294de909b90}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!synthetic@{synthetic}}
+\index{synthetic@{synthetic}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{synthetic}{synthetic}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_a11348388ab9565068c0f1294de909b90} 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.synthetic\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether the control is considered synthetic. 
+
+True if the control does not represent an actual physical control on the device.
+
+A control is considered "{}synthetic"{} if it does not correspond to an actual, physical control on the device. An example for this is \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_ade8d96be2b5c7890e7389d2e7e8b4350}{Keyboard.\+any\+Key} or the up/down/left/right buttons added by Stick\+Control.
+
+The value of this property is determined by the layout (Input\+Control\+Layout) that the control has been built from.
+
+The primary effect of being synthetic is in interactive rebinding (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_rebinding_extensions_1_1_rebinding_operation}{Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation}) where non-\/synthetic controls will be favored over synthetic ones. This means, for example, that if both {\ttfamily "{}<\+Gamepad>/left\+Stick/x"{}} and {\ttfamily "{}<\+Gamepad>/left\+Stick/left"{}} are suitable picks, {\ttfamily "{}<\+Gamepad>/left\+Stick/x"{}} will be favored as it represents input from an actual physical control whereas {\ttfamily "{}<\+Gamepad>/left\+Stick/left"{}} represents input from a made-\/up control. If, however, the "{}left"{} button is the only viable pick, it will be accepted. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_control_layout_1_1_control_item_a5f38021410ad5ce9479a2ba1aedd174e}{Input\+Control\+Layout.\+Control\+Item.\+is\+Synthetic}, \doxylink{class_unity_engine_1_1_input_system_1_1_layouts_1_1_input_control_attribute_a9314ed774785180992f7962c3ef0af2f}{Input\+Control\+Attribute.\+synthetic}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a133ddd2bc028dd97d624ff32fd842fff}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!this\mbox{[}string path\mbox{]}@{this[string path]}}
+\index{this\mbox{[}string path\mbox{]}@{this[string path]}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{this[string path]}{this[string path]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_a133ddd2bc028dd97d624ff32fd842fff} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.this\mbox{[}string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a60d8e17e65b94f2cf7a0ce7f10af0075}{path}}\mbox{]}\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Fetch a control from the control\textquotesingle{}s hierarchy by name. 
+
+Note that path matching is case-\/insensitive. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gamepad[\textcolor{stringliteral}{"{}leftStick"{}}]\ \textcolor{comment}{//\ Returns\ Gamepad.leftStick}}
+\DoxyCodeLine{gamepad[\textcolor{stringliteral}{"{}leftStick/x"{}}]\ \textcolor{comment}{//\ Returns\ Gamepad.leftStick.x}}
+\DoxyCodeLine{gamepad[\textcolor{stringliteral}{"{}\{PrimaryAction\}"{}}]\ \textcolor{comment}{//\ Returns\ the\ control\ with\ PrimaryAction\ usage,\ that\ is,\ Gamepad.aButton}}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Key\+Not\+Found\+Exception} & {\itshape path}  cannot be found.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+Input\+Control\+Path, \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a60d8e17e65b94f2cf7a0ce7f10af0075}{path}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5426e6f11ab6c29da5d90256c8e7fe96}{Try\+Get\+Child\+Control}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a09e4b347afac3558d9dbe4c4919457b8}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!usages@{usages}}
+\index{usages@{usages}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{usages}{usages}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_a09e4b347afac3558d9dbe4c4919457b8} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_interned_string}{Interned\+String}}$>$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.usages\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+List of usage tags associated with the control. 
+
+Usages apply "{}semantics"{} to a control. Whereas the name of a control identifies a particular "{}endpoint"{} within the control hierarchy, the usages of a control identify particular roles of specific control. A simple example is Common\+Usages.\+Back which identifies a control generally used to move backwards in the navigation history of a \doxylink{namespace_unity_engine_1_1_u_i}{UI}. On a keyboard, it is the escape key that generally fulfills this role whereas on a gamepad, it is generally the "{}\+B"{} / "{}\+Circle"{} button. Some devices may not have a control that generally fulfills this function and thus may not have any control with the "{}\+Back"{} usage.
+
+By looking up controls by usage rather than by name, it is possible to locate the correct control to use for certain standardized situation without having to know the particulars of the device or platform.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Bind\ to\ any\ control\ which\ is\ tagged\ with\ the\ "{}Back"{}\ usage\ on\ any\ device.}}
+\DoxyCodeLine{var\ backAction\ =\ \textcolor{keyword}{new}\ InputAction(binding:\ \textcolor{stringliteral}{"{}*\&zwj;/\{Back\}"{}});}
+
+\end{DoxyCode}
+ 
+
+Note that usages on devices work slightly differently than usages of controls on devices. They are also queried through this property but unlike the usages of controls, the set of usages of a device can be changed dynamically as the role of the device changes. For details, see Input\+System.\+Set\+Device\+Usage(\+Input\+Device,string). \doxylink{namespace_unity_engine_1_1_input_system_1_1_controls}{Controls}, on the other hand, can currently only be assigned usages through layouts (\doxylink{class_unity_engine_1_1_input_system_1_1_layouts_1_1_input_control_attribute_a2d66d6ee03226f943e6967c6425f112c}{Input\+Control\+Attribute.\+usage} or \doxylink{class_unity_engine_1_1_input_system_1_1_layouts_1_1_input_control_attribute_a845640c70e57a825851ccd31b6cb50ec}{Input\+Control\+Attribute.\+usages}). 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_layouts_1_1_input_control_attribute_a2d66d6ee03226f943e6967c6425f112c}{Input\+Control\+Attribute.\+usage}, \doxylink{class_unity_engine_1_1_input_system_1_1_layouts_1_1_input_control_attribute_a845640c70e57a825851ccd31b6cb50ec}{Input\+Control\+Attribute.\+usages}, Input\+System.\+Set\+Device\+Usage(\+Input\+Device,string), Input\+System.\+Add\+Device\+Usage(\+Input\+Device,string), Input\+System.\+Remove\+Device\+Usage(\+Input\+Device,string), Common\+Usages
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!value@{value}}
+\index{value@{value}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172} 
+ref readonly TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.value\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the current value of the control after processors have been applied. 
+
+\begin{DoxyReturn}{Returns}
+The controls current value.
+\end{DoxyReturn}
+
+
+This can only be called on devices that have been added to the system (\doxylink{class_unity_engine_1_1_input_system_1_1_input_device_a4ff5e7586f91a321108317341566d4eb}{Input\+Device.\+added}).
+
+If internal feature "{}\+USE\+\_\+\+READ\+\_\+\+VALUE\+\_\+\+CACHING"{} is enabled, then this property implements caching to avoid applying processors when the underlying control has not changed. With this in mind, be aware of processors that use global state, such as the \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor}{Processors.\+Axis\+Deadzone\+Processor}. Unless the control unprocessed value has been changed, input system settings changed or \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_ab30a6abcfbefca2dfe3666298f3df349}{Input\+Control.\+Apply\+Parameter\+Changes()} invoked, the processors will not run and calls to \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}{value} will return the same result as previous calls.
+
+If a processor requires to be run on every read, override \doxylink{class_unity_engine_1_1_input_system_1_1_input_processor_a7ebb134435afbd127a8cdc6b0a58ab89}{Input\+Processor.\+caching\+Policy} property in the processor and set it to \doxylink{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4a4be46f7df52f374eba4b58a7cddf070c}{Input\+Processor.\+Caching\+Policy.\+Evaluate\+On\+Every\+Read}.
+
+To improve debugging try setting "{}\+PARANOID\+\_\+\+READ\+\_\+\+VALUE\+\_\+\+CACHING\+\_\+\+CHECKS"{} internal feature flag to check if cache value is still consistent.
+
+Also note that this property returns the result as ref readonly. If custom control states are in use, i.\+e. any controls not shipped with the Input \doxylink{namespace_system}{System} package, be careful of accidental defensive copies . 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a2130e1c517844e5ae729eba1cd798c94}{Read\+Value}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a181a81b1a64265fec4919b1f09fe7940}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!valueSizeInBytes@{valueSizeInBytes}}
+\index{valueSizeInBytes@{valueSizeInBytes}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{valueSizeInBytes}{valueSizeInBytes}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_a181a81b1a64265fec4919b1f09fe7940} 
+int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.value\+Size\+In\+Bytes\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [abstract]}}
+
+
+
+Size in bytes of values that the control returns. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_aa863a140183822dd850659336c9667ba}{value\+Type}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_aa863a140183822dd850659336c9667ba}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!valueType@{valueType}}
+\index{valueType@{valueType}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{valueType}{valueType}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_aa863a140183822dd850659336c9667ba} 
+Type \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.value\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [abstract]}}
+
+
+
+Returns the underlying value type of this control. 
+
+Type of values produced by the control.
+
+This is the type of values that are returned when reading the current value of a control or when reading a value of a control from an event. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a181a81b1a64265fec4919b1f09fe7940}{value\+Size\+In\+Bytes}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a90e01e631b36eee981a31c308d96335e}{Read\+Value\+From\+State\+As\+Object}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_control_a89c641b9e70687d8d2d5049bb6c4bc46}\index{UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}!variants@{variants}}
+\index{variants@{variants}!UnityEngine.InputSystem.InputControl$<$ TValue $>$@{UnityEngine.InputSystem.InputControl$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{variants}{variants}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_control_a89c641b9e70687d8d2d5049bb6c4bc46} 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control}}$<$ TValue $>$.variants\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Semicolon-\/separated list of variants of the control layout or "{}default"{}. 
+
+"{}\+Lefty"{} when using the "{}\+Lefty"{} gamepad layout. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Controls/Input\+Control.\+cs\end{DoxyCompactItemize}

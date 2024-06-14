@@ -1,0 +1,412 @@
+\doxysection{Unity\+Editor.\+Shader\+Graph.\+Graph\+Data Class Reference}
+\hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data}{}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data}\index{UnityEditor.ShaderGraph.GraphData@{UnityEditor.ShaderGraph.GraphData}}
+Inheritance diagram for Unity\+Editor.\+Shader\+Graph.\+Graph\+Data\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.991150cm]{class_unity_editor_1_1_shader_graph_1_1_graph_data}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Graph\+Concretization}
+\item 
+class {\bfseries Graph\+Data\+Utils}
+\item 
+class {\bfseries Graph\+Setup}
+\item 
+class {\bfseries Graph\+Validation}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a4cba82797155c2397499a20822b50cf5}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a4cba82797155c2397499a20822b50cf5} 
+IEnumerable$<$ T $>$ {\bfseries Get\+Nodes$<$ T $>$} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a993ac4bc7573f27579de37aaec909bab}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a993ac4bc7573f27579de37aaec909bab} 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_i_group_item}{IGroup\+Item}} $>$ {\bfseries Get\+Items\+In\+Group} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_group_data}{Group\+Data}} group\+Data)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_af00a4c8e4718aa50ce01b37ff407d4a5}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_af00a4c8e4718aa50ce01b37ff407d4a5} 
+void {\bfseries Set\+Graph\+Default\+Precision} (Graph\+Precision new\+Graph\+Default\+Precision)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a5a5589b7a53786e94e4bfef34fd46c69}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a5a5589b7a53786e94e4bfef34fd46c69} 
+int {\bfseries Get\+Target\+Index\+By\+Known\+Type} (Type target\+Type)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a49d9da39ef928627349686ab5322c49f}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a49d9da39ef928627349686ab5322c49f} 
+int {\bfseries Get\+Target\+Index} (Target t)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a800f418813e2702d0545d3aacdcf4633}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a800f418813e2702d0545d3aacdcf4633} 
+List$<$ string $>$ {\bfseries Get\+Potential\+Target\+Display\+Names} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_acd3a9a9cd32cc7bec3423d5740906858}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_acd3a9a9cd32cc7bec3423d5740906858} 
+void {\bfseries Set\+Target\+Active} (Target target, bool skip\+Sort\+And\+Update=false)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a524fe873226ae91ed10b865b072afc4a}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a524fe873226ae91ed10b865b072afc4a} 
+void {\bfseries Set\+Target\+Active} (int target\+Index, bool skip\+Sort\+And\+Update=false)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a8a4d776929d7dcc8b906eff04d0cca61}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a8a4d776929d7dcc8b906eff04d0cca61} 
+void {\bfseries Set\+Target\+Inactive} (Target target, bool skip\+Sort\+And\+Update=false)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_adeb502797b0949cb2a8c7f1e6b735f17}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_adeb502797b0949cb2a8c7f1e6b735f17} 
+void {\bfseries Sort\+Active\+Targets} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a27250effd4466dbbdad2fe5d222c8421}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a27250effd4466dbbdad2fe5d222c8421} 
+void {\bfseries Initialize\+Outputs} (Target\mbox{[}$\,$\mbox{]} targets, Block\+Field\+Descriptor\mbox{[}$\,$\mbox{]} block\+Descriptors)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a389214beee5f23d378550c429680f2f4}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a389214beee5f23d378550c429680f2f4} 
+void {\bfseries Sort\+And\+Update\+Active\+Targets} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a87d4a34d1f24628ba60bfc1265d736b4}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a87d4a34d1f24628ba60bfc1265d736b4} 
+void {\bfseries Clear\+Changes} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_ac4183e8c607245f9114c5c41ee2e1e23}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_ac4183e8c607245f9114c5c41ee2e1e23} 
+void {\bfseries Add\+Node} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_abstract_material_node}{Abstract\+Material\+Node}} node)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_ab677aed478ce18193431f2a0edfc619c}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_ab677aed478ce18193431f2a0edfc619c} 
+void {\bfseries Create\+Group} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_group_data}{Group\+Data}} group\+Data)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a0213735f3e2b5a02ce2f8d147f845b28}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a0213735f3e2b5a02ce2f8d147f845b28} 
+void {\bfseries Remove\+Group} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_group_data}{Group\+Data}} group\+Data)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a88348ae025247d9479a42560a72ff733}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a88348ae025247d9479a42560a72ff733} 
+void {\bfseries Add\+Sticky\+Note} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_sticky_note_data}{Sticky\+Note\+Data}} sticky\+Note)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a7abd7205ecce12c1223df898dd6157a1}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a7abd7205ecce12c1223df898dd6157a1} 
+void {\bfseries Remove\+Sticky\+Note} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_sticky_note_data}{Sticky\+Note\+Data}} sticky\+Note)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a5e19f4fc98279a57367f9077ad76ea04}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a5e19f4fc98279a57367f9077ad76ea04} 
+void {\bfseries Set\+Group} (\mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_i_group_item}{IGroup\+Item}} node, \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_group_data}{Group\+Data}} group)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_abfb3fdfd1d37bdc81e96c9556a189ae6}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_abfb3fdfd1d37bdc81e96c9556a189ae6} 
+void {\bfseries Add\+Contexts} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a1587e5610d8857c4e1f20a271c66d296}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a1587e5610d8857c4e1f20a271c66d296} 
+void {\bfseries Add\+Block} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_block_node}{Block\+Node}} block\+Node, \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_context_data}{Context\+Data}} context\+Data, int index)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a2d601280a12bb9569a9a3bfdac153dde}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a2d601280a12bb9569a9a3bfdac153dde} 
+List$<$ Block\+Field\+Descriptor $>$ {\bfseries Get\+Active\+Blocks\+For\+All\+Active\+Targets} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a4ade49a3470ef917278ee762f3db61c2}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a4ade49a3470ef917278ee762f3db61c2} 
+void {\bfseries Update\+Active\+Blocks} (List$<$ Block\+Field\+Descriptor $>$ active\+Block\+Descriptors)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_af0904ebf1009a4a7ae2d775cb4134ac7}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_af0904ebf1009a4a7ae2d775cb4134ac7} 
+void {\bfseries Add\+Remove\+Blocks\+From\+Active\+List} (List$<$ Block\+Field\+Descriptor $>$ active\+Block\+Descriptors)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a997f5068d9c0ef5b6e2f69bac1733178}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a997f5068d9c0ef5b6e2f69bac1733178} 
+void {\bfseries Remove\+Node} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_abstract_material_node}{Abstract\+Material\+Node}} node)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_aa388b8cd8d80b46125f289aaa0ee824b}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_aa388b8cd8d80b46125f289aaa0ee824b} 
+\mbox{\hyperlink{interface_unity_editor_1_1_graphing_1_1_i_edge}{IEdge}} {\bfseries Connect} (\mbox{\hyperlink{struct_unity_editor_1_1_graphing_1_1_slot_reference}{Slot\+Reference}} from\+Slot\+Ref, \mbox{\hyperlink{struct_unity_editor_1_1_graphing_1_1_slot_reference}{Slot\+Reference}} to\+Slot\+Ref)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a37e536531e8e8a8aa5cf2f1834e4f767}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a37e536531e8e8a8aa5cf2f1834e4f767} 
+void {\bfseries Remove\+Edge} (\mbox{\hyperlink{interface_unity_editor_1_1_graphing_1_1_i_edge}{IEdge}} e)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a7fbd2a2ab5ceab618d755af5f79b4b88}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a7fbd2a2ab5ceab618d755af5f79b4b88} 
+void {\bfseries Remove\+Elements} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_abstract_material_node}{Abstract\+Material\+Node}}\mbox{[}$\,$\mbox{]} nodes, \mbox{\hyperlink{interface_unity_editor_1_1_graphing_1_1_i_edge}{IEdge}}\mbox{[}$\,$\mbox{]} edges, \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_group_data}{Group\+Data}}\mbox{[}$\,$\mbox{]} groups, \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_sticky_note_data}{Sticky\+Note\+Data}}\mbox{[}$\,$\mbox{]} notes)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_ab70b7e4603bb7cefe4d28554563bff26}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_ab70b7e4603bb7cefe4d28554563bff26} 
+\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_abstract_material_node}{Abstract\+Material\+Node}} {\bfseries Get\+Node\+From\+Id} (string node\+Id)
+\item 
+T \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_graph_data_aa0d7812509f4015a6779b70952f62a8e}{Get\+Node\+From\+Id$<$ T $>$}} (string node\+Id)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a176a0a0a0474bd1dc2a734b01556a828}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a176a0a0a0474bd1dc2a734b01556a828} 
+bool {\bfseries Contains\+Category} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_category_data}{Category\+Data}} category\+Data)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_ad2f9f41f54b42f77fa6016a79dcc395d}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_ad2f9f41f54b42f77fa6016a79dcc395d} 
+bool {\bfseries Contains\+Input} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_shader_input}{Shader\+Input}} shader\+Input)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_aa317fbf60f33a176c4540cb2a28c2f0e}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_aa317fbf60f33a176c4540cb2a28c2f0e} 
+bool {\bfseries Contains\+Node} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_abstract_material_node}{Abstract\+Material\+Node}} node)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_ad9acef1eb1942d44fa4490d890bd4afc}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_ad9acef1eb1942d44fa4490d890bd4afc} 
+void {\bfseries Get\+Edges} (\mbox{\hyperlink{struct_unity_editor_1_1_graphing_1_1_slot_reference}{Slot\+Reference}} s, List$<$ \mbox{\hyperlink{interface_unity_editor_1_1_graphing_1_1_i_edge}{IEdge}} $>$ found\+Edges)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a9f99641c9c9ac59c9267cc263a7b983e}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a9f99641c9c9ac59c9267cc263a7b983e} 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_editor_1_1_graphing_1_1_i_edge}{IEdge}} $>$ {\bfseries Get\+Edges} (\mbox{\hyperlink{struct_unity_editor_1_1_graphing_1_1_slot_reference}{Slot\+Reference}} s)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_afc1b2a98c550da0d5f1da019b6882690}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_afc1b2a98c550da0d5f1da019b6882690} 
+void {\bfseries Get\+Edges} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_abstract_material_node}{Abstract\+Material\+Node}} node, List$<$ \mbox{\hyperlink{interface_unity_editor_1_1_graphing_1_1_i_edge}{IEdge}} $>$ found\+Edges)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_ab39cae87149877e0209feefd2589f6f0}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_ab39cae87149877e0209feefd2589f6f0} 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_editor_1_1_graphing_1_1_i_edge}{IEdge}} $>$ {\bfseries Get\+Edges} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_abstract_material_node}{Abstract\+Material\+Node}} node)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_ac0fc3b3930fefd4daf68a9b3c1f6ed93}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_ac0fc3b3930fefd4daf68a9b3c1f6ed93} 
+void {\bfseries Foreach\+HLSLProperty} (Action$<$ HLSLProperty $>$ action)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a5d5c303e86e10264fa5e755416cbc96f}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a5d5c303e86e10264fa5e755416cbc96f} 
+void {\bfseries Collect\+Shader\+Properties} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_property_collector}{Property\+Collector}} collector, Generation\+Mode generation\+Mode)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_acacc3c2d95e427921ba1632fc9065953}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_acacc3c2d95e427921ba1632fc9065953} 
+void {\bfseries Collect\+Shader\+Keywords} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_keyword_collector}{Keyword\+Collector}} collector, Generation\+Mode generation\+Mode)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_aa5d84d064f15c45869e1b90096a69aad}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_aa5d84d064f15c45869e1b90096a69aad} 
+bool {\bfseries Is\+Input\+Allowed\+In\+Graph} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_shader_input}{Shader\+Input}} input)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a52bed336fdf8eb182625bb78774e5453}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a52bed336fdf8eb182625bb78774e5453} 
+bool {\bfseries Is\+Input\+Allowed\+In\+Graph} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_abstract_material_node}{Abstract\+Material\+Node}} node)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a8e3b3d2e1f491f421a38ef432842c8be}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a8e3b3d2e1f491f421a38ef432842c8be} 
+void {\bfseries Add\+Graph\+Input} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_shader_input}{Shader\+Input}} input, int index=-\/1)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a570d867a140b977475340b100c96051a}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a570d867a140b977475340b100c96051a} 
+List$<$ string $>$ {\bfseries Build\+Property\+Display\+Name\+List} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_abstract_shader_property}{Abstract\+Shader\+Property}} ignore\+Property, string ignore\+Name)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a8ba570ccb867aa2672ff5aff895301ba}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a8ba570ccb867aa2672ff5aff895301ba} 
+List$<$ string $>$ {\bfseries Build\+Property\+Reference\+Name\+List} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_abstract_shader_property}{Abstract\+Shader\+Property}} ignore\+Property, string ignore\+Name)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_af29a1d5c165cd143d046598166ed8a2e}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_af29a1d5c165cd143d046598166ed8a2e} 
+string {\bfseries Sanitize\+Graph\+Input\+Name} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_shader_input}{Shader\+Input}} input, string desired\+Name)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a4ce568cfeb6737b8a93be861a806bbaa}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a4ce568cfeb6737b8a93be861a806bbaa} 
+string {\bfseries Sanitize\+Graph\+Input\+Reference\+Name} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_shader_input}{Shader\+Input}} input, string desired\+Name)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a06b5b3e30ca62c9c801491a34993f396}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a06b5b3e30ca62c9c801491a34993f396} 
+\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_shader_input}{Shader\+Input}} {\bfseries Add\+Copy\+Of\+Shader\+Input} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_shader_input}{Shader\+Input}} source, int insert\+Index=-\/1)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a50428e4036cecc15be6d74ca0b14b558}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a50428e4036cecc15be6d74ca0b14b558} 
+void {\bfseries Remove\+Graph\+Input} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_shader_input}{Shader\+Input}} input)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a5d4640c6954000d74b49715535bd09f0}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a5d4640c6954000d74b49715535bd09f0} 
+void {\bfseries Move\+Category} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_category_data}{Category\+Data}} category, int new\+Index)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a5983e5102a188889c5bc5eff96c31521}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a5983e5102a188889c5bc5eff96c31521} 
+void {\bfseries Move\+Item\+In\+Category} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_shader_input}{Shader\+Input}} item\+To\+Move, int new\+Index, string associated\+Category\+Guid)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_ac4cbdd1ffb45530ff1785d19ec6306be}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_ac4cbdd1ffb45530ff1785d19ec6306be} 
+int {\bfseries Get\+Graph\+Input\+Index} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_shader_input}{Shader\+Input}} input)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a582314a8e94a0cc27b10607cf3bae854}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a582314a8e94a0cc27b10607cf3bae854} 
+void {\bfseries Replace\+Property\+Node\+With\+Concrete\+Node} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_property_node}{Property\+Node}} property\+Node)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a4e54b644bc621e90aefe38a75ba31203}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a4e54b644bc621e90aefe38a75ba31203} 
+void {\bfseries Add\+Category} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_category_data}{Category\+Data}} category\+Data\+Reference)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a29a5ca61ef58df40a391964a2554bfd8}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a29a5ca61ef58df40a391964a2554bfd8} 
+string {\bfseries Find\+Category\+For\+Input} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_shader_input}{Shader\+Input}} input)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a988e22400a6b7f76187cfa4d8e95bc96}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a988e22400a6b7f76187cfa4d8e95bc96} 
+void {\bfseries Change\+Category\+Name} (string category\+GUID, string new\+Name)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_ac52bef27c153d5ca13975e1f34077947}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_ac52bef27c153d5ca13975e1f34077947} 
+void {\bfseries Insert\+Item\+Into\+Category} (string category\+GUID, \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_shader_input}{Shader\+Input}} item\+To\+Add, int insertion\+Index=-\/1)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a1ef7e14c800e09fc0768dbda419c8aa6}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a1ef7e14c800e09fc0768dbda419c8aa6} 
+void {\bfseries Remove\+Item\+From\+Category} (string category\+GUID, \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_shader_input}{Shader\+Input}} item\+To\+Remove)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a7fac063e4fd764005437f0858e84e799}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a7fac063e4fd764005437f0858e84e799} 
+void {\bfseries Remove\+Category} (string category\+GUID)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_aa517923e5b09a496f61e652c2d089f8c}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_aa517923e5b09a496f61e652c2d089f8c} 
+\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_category_data}{Category\+Data}} {\bfseries Copy\+Category} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_category_data}{Category\+Data}} category\+To\+Copy)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_acf57c2aae217470edce1de1ecf0a6faf}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_acf57c2aae217470edce1de1ecf0a6faf} 
+void {\bfseries On\+Keyword\+Changed} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a3f678867036de7163ca5207620eb3a2a}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a3f678867036de7163ca5207620eb3a2a} 
+void {\bfseries On\+Keyword\+Changed\+No\+Validate} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_aa5d5b244c977efc985e6ffcb3c18a8e8}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_aa5d5b244c977efc985e6ffcb3c18a8e8} 
+void {\bfseries On\+Dropdown\+Changed} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_adb2bcea3ddb8a49b59dbfe70f70a8248}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_adb2bcea3ddb8a49b59dbfe70f70a8248} 
+void {\bfseries On\+Dropdown\+Changed\+No\+Validate} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a7fdd0f5ad5c51f4da294e2c8d163d6aa}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a7fdd0f5ad5c51f4da294e2c8d163d6aa} 
+void {\bfseries Cleanup\+Graph} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a83ad5269e21ed9eac585965f415d547e}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a83ad5269e21ed9eac585965f415d547e} 
+void {\bfseries Validate\+Graph} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a266c62b87ce44f0885461c0b9b54869b}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a266c62b87ce44f0885461c0b9b54869b} 
+void {\bfseries Add\+Validation\+Error} (string id, string error\+Message, Shader\+Compiler\+Message\+Severity severity=Shader\+Compiler\+Message\+Severity.\+Error)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a023abd7a97007def4e3d1e91bf3750df}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a023abd7a97007def4e3d1e91bf3750df} 
+void {\bfseries Add\+Setup\+Error} (string id, string error\+Message, Shader\+Compiler\+Message\+Severity severity=Shader\+Compiler\+Message\+Severity.\+Error)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a32a565fd20760d61630e48a1bbdeab9a}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a32a565fd20760d61630e48a1bbdeab9a} 
+void {\bfseries Add\+Concretization\+Error} (string id, string error\+Message, Shader\+Compiler\+Message\+Severity severity=Shader\+Compiler\+Message\+Severity.\+Error)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_ae7c38fb06ef8be337e000a18002b02f7}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_ae7c38fb06ef8be337e000a18002b02f7} 
+void {\bfseries Clear\+Errors\+For\+Node} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_abstract_material_node}{Abstract\+Material\+Node}} node)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a481b5d528ee5f0bc973f9591e729418e}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a481b5d528ee5f0bc973f9591e729418e} 
+void {\bfseries Replace\+With} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_graph_data}{Graph\+Data}} other)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a2a95750f29685b86ec596099d30cee89}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a2a95750f29685b86ec596099d30cee89} 
+override void {\bfseries On\+Before\+Serialize} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_ab7e3e25f8ce6ac26a2e7647911bc12fe}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_ab7e3e25f8ce6ac26a2e7647911bc12fe} 
+override void {\bfseries On\+After\+Deserialize} (string json)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a06223c69f9255498499ff66bd395c95c}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a06223c69f9255498499ff66bd395c95c} 
+override void {\bfseries On\+After\+Multi\+Deserialize} (string json)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a56289c64aa62ca92345d6e82a35eb2a9}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a56289c64aa62ca92345d6e82a35eb2a9} 
+void {\bfseries On\+Enable} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a24c9f0ae3d975157a14cac8351513e96}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a24c9f0ae3d975157a14cac8351513e96} 
+void {\bfseries On\+Disable} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_ac9bf6d9aeda437837f9de270bec14cb6}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_ac9bf6d9aeda437837f9de270bec14cb6} 
+override int {\bfseries latest\+Version}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a6a59f7034b00dda83569bbe542206f68}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a6a59f7034b00dda83569bbe542206f68} 
+\mbox{\hyperlink{class_unity_editor_1_1_graphing_1_1_graph_object}{Graph\+Object}} {\bfseries owner}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_ac9b9a7d821baeecbaed973ad94efe3ff}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_ac9b9a7d821baeecbaed973ad94efe3ff} 
+\mbox{\hyperlink{struct_unity_editor_1_1_shader_graph_1_1_serialization_1_1_data_value_enumerable}{Data\+Value\+Enumerable}}$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_abstract_shader_property}{Abstract\+Shader\+Property}} $>$ {\bfseries properties}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a6148e3331b86553d5004ad8af1eda934}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a6148e3331b86553d5004ad8af1eda934} 
+\mbox{\hyperlink{struct_unity_editor_1_1_shader_graph_1_1_serialization_1_1_data_value_enumerable}{Data\+Value\+Enumerable}}$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_shader_keyword}{Shader\+Keyword}} $>$ {\bfseries keywords}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a3e44fce46729c2f2de82927b8a552a13}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a3e44fce46729c2f2de82927b8a552a13} 
+\mbox{\hyperlink{struct_unity_editor_1_1_shader_graph_1_1_serialization_1_1_data_value_enumerable}{Data\+Value\+Enumerable}}$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_shader_dropdown}{Shader\+Dropdown}} $>$ {\bfseries dropdowns}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_aaaebbe5e4ef8157077a6bfd995dc21f2}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_aaaebbe5e4ef8157077a6bfd995dc21f2} 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_shader_input}{Shader\+Input}} $>$ {\bfseries added\+Inputs}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a8b8f924dd00595cf65d49a60a2e18181}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a8b8f924dd00595cf65d49a60a2e18181} 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_shader_input}{Shader\+Input}} $>$ {\bfseries removed\+Inputs}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_ac86e4f9e49f7f1375b64a69840784409}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_ac86e4f9e49f7f1375b64a69840784409} 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_shader_input}{Shader\+Input}} $>$ {\bfseries moved\+Inputs}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a7a429563fd50e66ccbbfd32b09e7555d}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a7a429563fd50e66ccbbfd32b09e7555d} 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_category_data}{Category\+Data}} $>$ {\bfseries added\+Categories}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a8d20cd7375327799798a9cfc4ac13c85}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a8d20cd7375327799798a9cfc4ac13c85} 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_category_data}{Category\+Data}} $>$ {\bfseries removed\+Categories}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a4f44249cc4f323ae4a338cefa8aa091e}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a4f44249cc4f323ae4a338cefa8aa091e} 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_category_data}{Category\+Data}} $>$ {\bfseries moved\+Categories}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a10e8a0e3594b64d1b83259605cbea6df}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a10e8a0e3594b64d1b83259605cbea6df} 
+bool {\bfseries moved\+Contexts}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_ac3be324e361df51793fc60c42b8c7fc6}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_ac3be324e361df51793fc60c42b8c7fc6} 
+string {\bfseries asset\+Guid}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_ad602a6a0e164532bb1d4dc8a901c6b9e}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_ad602a6a0e164532bb1d4dc8a901c6b9e} 
+\mbox{\hyperlink{struct_unity_editor_1_1_shader_graph_1_1_serialization_1_1_data_value_enumerable}{Data\+Value\+Enumerable}}$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_category_data}{Category\+Data}} $>$ {\bfseries categories}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_af6822c5dc7a8001296ac11c2082c101c}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_af6822c5dc7a8001296ac11c2082c101c} 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_abstract_material_node}{Abstract\+Material\+Node}} $>$ {\bfseries added\+Nodes}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a684927f5a34972d5ddcd2b4b4c248d98}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a684927f5a34972d5ddcd2b4b4c248d98} 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_abstract_material_node}{Abstract\+Material\+Node}} $>$ {\bfseries removed\+Nodes}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a9c55daad6b78b8b9e288e5963043b7fa}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a9c55daad6b78b8b9e288e5963043b7fa} 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_abstract_material_node}{Abstract\+Material\+Node}} $>$ {\bfseries pasted\+Nodes}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a0fcaec1049c1b2e511792c439ef79563}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a0fcaec1049c1b2e511792c439ef79563} 
+\mbox{\hyperlink{struct_unity_editor_1_1_shader_graph_1_1_serialization_1_1_data_value_enumerable}{Data\+Value\+Enumerable}}$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_group_data}{Group\+Data}} $>$ {\bfseries groups}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a2280c7365f4ae35ac68a64aa64b6e1fc}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a2280c7365f4ae35ac68a64aa64b6e1fc} 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_group_data}{Group\+Data}} $>$ {\bfseries added\+Groups}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a2d6d24d1cab459549075c6d37fd60967}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a2d6d24d1cab459549075c6d37fd60967} 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_group_data}{Group\+Data}} $>$ {\bfseries removed\+Groups}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_ac027a4b372a0e03c2c0f4b765e66f3cd}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_ac027a4b372a0e03c2c0f4b765e66f3cd} 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_group_data}{Group\+Data}} $>$ {\bfseries pasted\+Groups}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a5cb41eb77896008caad00483627caa9d}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a5cb41eb77896008caad00483627caa9d} 
+IEnumerable$<$ \mbox{\hyperlink{struct_unity_editor_1_1_shader_graph_1_1_parent_group_change}{Parent\+Group\+Change}} $>$ {\bfseries parent\+Group\+Changes}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a10f3b3abea156b6269406de935f7eb98}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a10f3b3abea156b6269406de935f7eb98} 
+\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_group_data}{Group\+Data}} {\bfseries most\+Recently\+Created\+Group}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a5cc08a2ee4bfe8a0dd4aa508d6677437}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a5cc08a2ee4bfe8a0dd4aa508d6677437} 
+\mbox{\hyperlink{struct_unity_editor_1_1_shader_graph_1_1_serialization_1_1_data_value_enumerable}{Data\+Value\+Enumerable}}$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_sticky_note_data}{Sticky\+Note\+Data}} $>$ {\bfseries sticky\+Notes}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a5295fd83c14f0a240b14e90f83ec1a92}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a5295fd83c14f0a240b14e90f83ec1a92} 
+List$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_sticky_note_data}{Sticky\+Note\+Data}} $>$ {\bfseries added\+Sticky\+Notes}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a910a9184adbce0b43a760890df3ef314}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a910a9184adbce0b43a760890df3ef314} 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_sticky_note_data}{Sticky\+Note\+Data}} $>$ {\bfseries removed\+Notes}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a5ebe9528f209c6577324df3e2f251d58}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a5ebe9528f209c6577324df3e2f251d58} 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_sticky_note_data}{Sticky\+Note\+Data}} $>$ {\bfseries pasted\+Sticky\+Notes}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a108cad1e8da378198c3d0035675e0cbd}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a108cad1e8da378198c3d0035675e0cbd} 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_graphing_1_1_edge}{Edge}} $>$ {\bfseries edges}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_ab95ad972e938ab439c71ec62a749603c}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_ab95ad972e938ab439c71ec62a749603c} 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_editor_1_1_graphing_1_1_i_edge}{IEdge}} $>$ {\bfseries added\+Edges}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a8af9c391cd1d4c3f0fe2b6010e67bfc2}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a8af9c391cd1d4c3f0fe2b6010e67bfc2} 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_editor_1_1_graphing_1_1_i_edge}{IEdge}} $>$ {\bfseries removed\+Edges}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a7216cae934ddf76f2709ec7e9e69a381}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a7216cae934ddf76f2709ec7e9e69a381} 
+\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_context_data}{Context\+Data}} {\bfseries vertex\+Context}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_af54626ee75df1c2437bb93e721754f4c}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_af54626ee75df1c2437bb93e721754f4c} 
+\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_context_data}{Context\+Data}} {\bfseries fragment\+Context}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a1a394b453b48410f472643107383fe9e}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a1a394b453b48410f472643107383fe9e} 
+List$<$ Block\+Field\+Descriptor $>$ {\bfseries block\+Field\+Descriptors}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a8ae162bdf153bf07c46cbb1b88ca5bf0}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a8ae162bdf153bf07c46cbb1b88ca5bf0} 
+\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_inspector_preview_data}{Inspector\+Preview\+Data}} {\bfseries preview\+Data}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a163c014f8d1244fd96a2553f06bf91ee}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a163c014f8d1244fd96a2553f06bf91ee} 
+string {\bfseries path}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a6b2f2984602f77b9b4d3d7a1becda5dc}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a6b2f2984602f77b9b4d3d7a1becda5dc} 
+\mbox{\hyperlink{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager}{Message\+Manager}} {\bfseries message\+Manager}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a5499781181e8b8304a50815f82f5d4d4}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a5499781181e8b8304a50815f82f5d4d4} 
+bool {\bfseries is\+Sub\+Graph}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a2a5641849d5fb19a1781eae0f153d6b3}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a2a5641849d5fb19a1781eae0f153d6b3} 
+Graph\+Precision {\bfseries graph\+Default\+Precision}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a52772f37ab83e4cd80822053851b744b}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a52772f37ab83e4cd80822053851b744b} 
+Concrete\+Precision {\bfseries graph\+Default\+Concrete\+Precision}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_ac38e84c3bd197782a2180c9248b27852}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_ac38e84c3bd197782a2180c9248b27852} 
+Preview\+Mode {\bfseries preview\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_af6b5c4033c0450ca3374fa8ac82c3121}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_af6b5c4033c0450ca3374fa8ac82c3121} 
+\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_abstract_material_node}{Abstract\+Material\+Node}} {\bfseries output\+Node}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a595a6e09a520aab0084514fbffbb4da8}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a595a6e09a520aab0084514fbffbb4da8} 
+\mbox{\hyperlink{struct_unity_editor_1_1_shader_graph_1_1_serialization_1_1_data_value_enumerable}{Data\+Value\+Enumerable}}$<$ Target $>$ {\bfseries active\+Targets}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a258f70e6e2fa0628fb6d0714b46c7d5e}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a258f70e6e2fa0628fb6d0714b46c7d5e} 
+IEnumerable$<$ Target $>$ {\bfseries all\+Potential\+Targets}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_ad4909ad39d4a2387a0f53725210b4509}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_ad4909ad39d4a2387a0f53725210b4509} 
+List$<$ Target $>$ {\bfseries unsupported\+Targets}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_a4635fa2e5da47f89a86bb09dca13d324}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_a4635fa2e5da47f89a86bb09dca13d324} 
+bool {\bfseries is\+VFXTarget}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_ad2d0f020f4f6c7842c212c106554522e}\label{class_unity_editor_1_1_shader_graph_1_1_graph_data_ad2d0f020f4f6c7842c212c106554522e} 
+bool {\bfseries is\+Only\+VFXTarget}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_graph_data_aa0d7812509f4015a6779b70952f62a8e}\index{UnityEditor.ShaderGraph.GraphData@{UnityEditor.ShaderGraph.GraphData}!GetNodeFromId$<$ T $>$@{GetNodeFromId$<$ T $>$}}
+\index{GetNodeFromId$<$ T $>$@{GetNodeFromId$<$ T $>$}!UnityEditor.ShaderGraph.GraphData@{UnityEditor.ShaderGraph.GraphData}}
+\doxysubsubsection{\texorpdfstring{GetNodeFromId$<$ T $>$()}{GetNodeFromId< T >()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_shader_graph_1_1_graph_data_aa0d7812509f4015a6779b70952f62a8e} 
+T Unity\+Editor.\+Shader\+Graph.\+Graph\+Data.\+Get\+Node\+From\+Id$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{node\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em class}]\end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+shadergraph@14.\+0.\+8/\+Editor/\+Data/\+Graphs/Graph\+Concretization.\+cs\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+shadergraph@14.\+0.\+8/\+Editor/\+Data/\+Graphs/Graph\+Data.\+cs\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+shadergraph@14.\+0.\+8/\+Editor/\+Data/\+Graphs/Graph\+Data\+Utils.\+cs\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+shadergraph@14.\+0.\+8/\+Editor/\+Data/\+Graphs/Graph\+Setup.\+cs\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+shadergraph@14.\+0.\+8/\+Editor/\+Data/\+Graphs/Graph\+Validation.\+cs\end{DoxyCompactItemize}

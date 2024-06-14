@@ -1,0 +1,67 @@
+\chapter{Post-\/processing in the Universal Render Pipeline}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do9e1490445e45fd9eef56dbe3e8613a42}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do9e1490445e45fd9eef56dbe3e8613a42}\index{Post-\/processing in the Universal Render Pipeline@{Post-\/processing in the Universal Render Pipeline}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do9e1490445e45fd9eef56dbe3e8613a42_autotoc_md2177}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do9e1490445e45fd9eef56dbe3e8613a42_autotoc_md2177}%
+ The Universal Render Pipeline (URP) includes an integrated implementation of \href{https://docs.unity3d.com/Manual/PostProcessingOverview.html}{\texttt{ post-\/processing}} effects. If you use URP, it\textquotesingle{}s not necessary to install an extra package for post-\/processing effects. URP is not compatible with the \href{https://docs.unity3d.com/Packages/com.unity.postprocessing@latest/index.html}{\texttt{ Post~Processing~Stack~v2}} package.
+
+URP uses the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_volumes}{Volume}{0} framework for post-\/processing effects.
+
+The images below show a Scene with and without URP post-\/processing.
+
+Without post-\/processing\+:~\newline
+ 
+
+With post-\/processing\+:~\newline
+ 
+
+\begin{quote}
+{\bfseries{Note\+:}} URP does not support Post-\/processing on Open\+GL~ES~2.\+0. \end{quote}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do9e1490445e45fd9eef56dbe3e8613a42_autotoc_md2178}{}\doxysection{\texorpdfstring{\label{_post-proc-how-to}%
+How to configure post-\/processing effects in URP}{\label{_post-proc-how-to}%
+How to configure post-\/processing effects in URP}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do9e1490445e45fd9eef56dbe3e8613a42_autotoc_md2178}
+This section describes how to configure Post-\/processing in URP.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do9e1490445e45fd9eef56dbe3e8613a42_autotoc_md2179}{}\doxysubsection{\texorpdfstring{Using post-\/processing in the URP Template Scene}{Using post-\/processing in the URP Template Scene}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do9e1490445e45fd9eef56dbe3e8613a42_autotoc_md2179}
+Post-\/processing is preconfigured in the Sample\+Scene Scene in URP Template.
+
+To see the preconfigured effects, select {\bfseries{Post-\/process Volume}} in the Scene.
+
+
+
+To add extra effects, \href{VolumeOverrides.md\#volume-add-override}{\texttt{ add Volume Overrides to the Volume}}.
+
+To configure location-\/based post-\/processing effects, see \href{Volumes.md\#volume-local}{\texttt{ How to use Local Volumes}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do9e1490445e45fd9eef56dbe3e8613a42_autotoc_md2180}{}\doxysubsection{\texorpdfstring{Configuring post-\/processing in a new URP Scene}{Configuring post-\/processing in a new URP Scene}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do9e1490445e45fd9eef56dbe3e8613a42_autotoc_md2180}
+To configure post-\/processing in a new Scene\+:
+
+
+\begin{DoxyEnumerate}
+\item Select a Camera, and select the {\bfseries{Post Processing}} check box.
+
+
+\item Add a Game\+Object with a \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_volumes}{Volume}{0} component in the Scene. This instruction adds a Global Volume. Select {\bfseries{Game\+Object \texorpdfstring{$>$}{>} Volume \texorpdfstring{$>$}{>} Global Volume}}.
+\item Select the {\bfseries{Global Volume}} Game\+Object. In the Volume component, create a new Profile by clicking {\bfseries{New}} button on the right side of the Profile property.
+
+
+\item Add post-\/processing effects to the Camera by adding \href{VolumeOverrides.md\#volume-add-override}{\texttt{ Volume Overrides}} to the Volume component.
+
+
+\end{DoxyEnumerate}
+
+Now you can adjust post-\/processing effect settings in Overrides in the Volume component.
+
+
+
+To configure location-\/based post-\/processing effects, see \href{Volumes.md\#volume-local}{\texttt{ How to use Local Volumes}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do9e1490445e45fd9eef56dbe3e8613a42_autotoc_md2181}{}\doxysection{\texorpdfstring{Post-\/processing in URP for mobile devices}{Post-\/processing in URP for mobile devices}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do9e1490445e45fd9eef56dbe3e8613a42_autotoc_md2181}
+Post-\/processing effects can take up a lot of frame time. If you’re using URP for mobile devices, these effects are the most “mobile-\/friendly” by default\+:
+
+
+\begin{DoxyItemize}
+\item Bloom (with {\bfseries{High Quality Filtering}} disabled)
+\item Chromatic Aberration
+\item Color Grading
+\item Lens Distortion
+\item Vignette
+\end{DoxyItemize}
+
+{\bfseries{Note\+:}} For depth-\/of field, \doxylink{namespace_unity}{Unity} recommends that you use Gaussian Depth of Field for lower-\/end devices. For console and desktop platforms, use Bokeh Depth of Field.
+
+{\bfseries{Note\+:}} For anti-\/aliasing on mobile platforms, \doxylink{namespace_unity}{Unity} recommends that you use FXAA.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do9e1490445e45fd9eef56dbe3e8613a42_autotoc_md2182}{}\doxysection{\texorpdfstring{Post-\/processing in URP for VR}{Post-\/processing in URP for VR}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do9e1490445e45fd9eef56dbe3e8613a42_autotoc_md2182}
+In VR apps and games, certain post-\/processing effects can cause nausea and disorientation. To reduce motion sickness in fast-\/paced or high-\/speed apps, use the Vignette effect for VR, and avoid the effects Lens Distortion, Chromatic Aberration, and Motion Blur for VR. 

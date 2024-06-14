@@ -1,0 +1,221 @@
+\doxysection{Cinemachine.\+Cinemachine\+Storyboard Class Reference}
+\hypertarget{class_cinemachine_1_1_cinemachine_storyboard}{}\label{class_cinemachine_1_1_cinemachine_storyboard}\index{Cinemachine.CinemachineStoryboard@{Cinemachine.CinemachineStoryboard}}
+
+
+An add-\/on module for \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera that places an image in screen space over the camera\textquotesingle{}s output.  
+
+
+Inheritance diagram for Cinemachine.\+Cinemachine\+Storyboard\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_cinemachine_1_1_cinemachine_storyboard}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_storyboard_ae72e32873212bf0a45f4fae16e302ed9}{Fill\+Strategy}} \{ \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_storyboard_ae72e32873212bf0a45f4fae16e302ed9a3be09308e76c7409a4e21584527d7f6e}{Best\+Fit}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_storyboard_ae72e32873212bf0a45f4fae16e302ed9acbaa4976ebd43d82bf9bdc03b591e650}{Crop\+Image\+To\+Fit}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_storyboard_ae72e32873212bf0a45f4fae16e302ed9a9edfd8b598a8f2ac044b26c4cb5dd4d0}{Stretch\+To\+Fit}}
+ \}
+\begin{DoxyCompactList}\small\item\em How to fit the image in the frame, in the event that the aspect ratios don\textquotesingle{}t match. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_storyboard_a2b3746239044dd7140351d24b46cfff5}{Storyboard\+Render\+Mode}} \{ \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_storyboard_a2b3746239044dd7140351d24b46cfff5ad4b612fd0e35f3771e6b215171845740}{Screen\+Space\+Overlay}} = Render\+Mode.\+Screen\+Space\+Overlay
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_storyboard_a2b3746239044dd7140351d24b46cfff5a34c0889e457c8a05edf8f2cf9f6071f2}{Screen\+Space\+Camera}} = Render\+Mode.\+Screen\+Space\+Camera
+ \}
+\begin{DoxyCompactList}\small\item\em Camera render modes supported by \doxylink{class_cinemachine_1_1_cinemachine_storyboard}{Cinemachine\+Storyboard}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_storyboard_a681b6eb86017e6490b9904a302cc13f5}\label{class_cinemachine_1_1_cinemachine_storyboard_a681b6eb86017e6490b9904a302cc13f5} 
+bool {\bfseries m\+\_\+\+Show\+Image} = true
+\begin{DoxyCompactList}\small\item\em If checked, the specified image will be displayed as an overlay over the virtual camera\textquotesingle{}s output. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_storyboard_a882e64aba7da9befb36b51eb76680378}\label{class_cinemachine_1_1_cinemachine_storyboard_a882e64aba7da9befb36b51eb76680378} 
+Texture {\bfseries m\+\_\+\+Image}
+\begin{DoxyCompactList}\small\item\em The image to display. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_storyboard_a948687ecc22cd6932a232639b52c51a5}\label{class_cinemachine_1_1_cinemachine_storyboard_a948687ecc22cd6932a232639b52c51a5} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_storyboard_ae72e32873212bf0a45f4fae16e302ed9}{Fill\+Strategy}} {\bfseries m\+\_\+\+Aspect} = \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_storyboard_ae72e32873212bf0a45f4fae16e302ed9a3be09308e76c7409a4e21584527d7f6e}{Fill\+Strategy.\+Best\+Fit}}
+\begin{DoxyCompactList}\small\item\em How to handle differences between image aspect and screen aspect. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_storyboard_adc89dfc3bb1ba5436ce3d8710b3ddeaa}\label{class_cinemachine_1_1_cinemachine_storyboard_adc89dfc3bb1ba5436ce3d8710b3ddeaa} 
+float {\bfseries m\+\_\+\+Alpha} = 1
+\begin{DoxyCompactList}\small\item\em The opacity of the image. 0 is transparent, 1 is opaque. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_storyboard_a0bc68664c9255b3a81ad200915efa1ad}\label{class_cinemachine_1_1_cinemachine_storyboard_a0bc68664c9255b3a81ad200915efa1ad} 
+Vector2 {\bfseries m\+\_\+\+Center} = Vector2.\+zero
+\begin{DoxyCompactList}\small\item\em The screen-\/space position at which to display the image. Zero is center. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_storyboard_a7cf81b2fa1f643c64b82bf71bb41625e}\label{class_cinemachine_1_1_cinemachine_storyboard_a7cf81b2fa1f643c64b82bf71bb41625e} 
+Vector3 {\bfseries m\+\_\+\+Rotation} = Vector3.\+zero
+\begin{DoxyCompactList}\small\item\em The screen-\/space rotation to apply to the image. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_storyboard_af9f23281dcf0ffb24289a855daa3ca79}\label{class_cinemachine_1_1_cinemachine_storyboard_af9f23281dcf0ffb24289a855daa3ca79} 
+Vector2 {\bfseries m\+\_\+\+Scale} = Vector3.\+one
+\begin{DoxyCompactList}\small\item\em The screen-\/space scaling to apply to the image. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_storyboard_a32b7b29ee007818baf476ef4291566d6}\label{class_cinemachine_1_1_cinemachine_storyboard_a32b7b29ee007818baf476ef4291566d6} 
+bool {\bfseries m\+\_\+\+Sync\+Scale} = true
+\begin{DoxyCompactList}\small\item\em If checked, X and Y scale are synchronized. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_storyboard_a6bc92921b478bec4d4f274687fd28c64}\label{class_cinemachine_1_1_cinemachine_storyboard_a6bc92921b478bec4d4f274687fd28c64} 
+bool {\bfseries m\+\_\+\+Mute\+Camera}
+\begin{DoxyCompactList}\small\item\em If checked, Camera transform will not be controlled by this virtual camera. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_storyboard_a1dd01112e19e0ae88feae4bc334fc9f4}\label{class_cinemachine_1_1_cinemachine_storyboard_a1dd01112e19e0ae88feae4bc334fc9f4} 
+float {\bfseries m\+\_\+\+Split\+View} = 0f
+\begin{DoxyCompactList}\small\item\em Wipe the image on and off horizontally. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_storyboard_a0d56a345e4516a1873bdf66c7632ab92}\label{class_cinemachine_1_1_cinemachine_storyboard_a0d56a345e4516a1873bdf66c7632ab92} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_storyboard_a2b3746239044dd7140351d24b46cfff5}{Storyboard\+Render\+Mode}} {\bfseries m\+\_\+\+Render\+Mode} = \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_storyboard_a2b3746239044dd7140351d24b46cfff5ad4b612fd0e35f3771e6b215171845740}{Storyboard\+Render\+Mode.\+Screen\+Space\+Overlay}}
+\begin{DoxyCompactList}\small\item\em The render mode of the canvas on which the storyboard is drawn. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_storyboard_ab48ef954cd49b7b07e103d4c0176f739}\label{class_cinemachine_1_1_cinemachine_storyboard_ab48ef954cd49b7b07e103d4c0176f739} 
+int {\bfseries m\+\_\+\+Sorting\+Order}
+\begin{DoxyCompactList}\small\item\em Allows ordering canvases to render on top or below other canvases. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_storyboard_a947b107a1a5cdb78ff88b6748a9dd1cf}\label{class_cinemachine_1_1_cinemachine_storyboard_a947b107a1a5cdb78ff88b6748a9dd1cf} 
+float {\bfseries m\+\_\+\+Plane\+Distance} = 100
+\begin{DoxyCompactList}\small\item\em How far away from the camera is the storyboard\textquotesingle{}s canvas generated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_storyboard_a9e839049c12b69a8a34954be29968b52}\label{class_cinemachine_1_1_cinemachine_storyboard_a9e839049c12b69a8a34954be29968b52} 
+static bool {\bfseries s\+\_\+\+Storyboard\+Global\+Mute}
+\begin{DoxyCompactList}\small\item\em If checked, all storyboards are globally muted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_storyboard_a796a4c2eeaf897109a85221939d530e8}{Post\+Pipeline\+Stage\+Callback}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} vcam, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}} stage, ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} state, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Callback to display the image. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_storyboard_a76c7aee6737702111df9bbb8118fed16}{Connect\+To\+Vcam}} (bool connect)
+\begin{DoxyCompactList}\small\item\em Connect to virtual camera. Adds/removes listener. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension}{Cinemachine.\+Cinemachine\+Extension}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Awake} ()
+\begin{DoxyCompactList}\small\item\em Connect to virtual camera pipeline. Override implementations must call this base implementation. \end{DoxyCompactList}\item 
+virtual void {\bfseries On\+Enable} ()
+\begin{DoxyCompactList}\small\item\em Does nothing. It\textquotesingle{}s here for the little checkbox in the inspector. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_adf1df72db4c68b49f91c2685470b80ef}{On\+Destroy}} ()
+\begin{DoxyCompactList}\small\item\em Disconnect from virtual camera pipeline. Override implementations must call this base implementation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a29d31e35cf1e1fee15d923eed7eeda43}{Post\+Pipeline\+Stage\+Callback}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} vcam, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}} stage, ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} state, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em This callback will be called after the virtual camera has implemented each stage in the pipeline. This method may modify the referenced state. If delta\+Time less than 0, reset all state info and perform no damping. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_abfd25e075e45a038b59e17ac7b55dc02}{Get\+Extra\+State$<$ T $>$}} (\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} vcam)
+\begin{DoxyCompactList}\small\item\em Because extensions can be placed on manager cams and will in that case be called for all the vcam children, vcam-\/specific state information should be stored here. Just define a class to hold your state info and use it exclusively when calling this. \end{DoxyCompactList}\item 
+List$<$ T $>$ \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a97f9c52f94e138ecefda901f891b0966}{Get\+All\+Extra\+States$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em Inefficient method to get all extra state info for all vcams. Intended for \doxylink{namespace_cinemachine_1_1_editor}{Editor} use only, not runtime! \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension}{Cinemachine.\+Cinemachine\+Extension}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_ab1cc3fb8f3edbcb9eb6a4aa96f998170}{Pre\+Pipeline\+Mutate\+Camera\+State\+Callback}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} vcam, ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} cur\+State, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Override this to do such things as offset the Referece\+Look\+At. Base class implementation does nothing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_ac896b83e871cb82b7a9669d07ac23f0d}{Invoke\+Post\+Pipeline\+Stage\+Callback}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} vcam, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}} stage, ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} state, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Legacy support. This is only here to avoid changing the API to make \doxylink{class_cinemachine_1_1_cinemachine_extension_a29d31e35cf1e1fee15d923eed7eeda43}{Post\+Pipeline\+Stage\+Callback()} public. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_ae0ca22a4b7cc143ac024ce70b196ef36}{On\+Target\+Object\+Warped}} (Transform target, Vector3 position\+Delta)
+\begin{DoxyCompactList}\small\item\em This is called to notify the extension that a target got warped, so that the extension can update its internal state to make the camera also warp seamlessy. Base class implementation does nothing. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_abfa0892159a67a17019163eca0802d1f}{Force\+Camera\+Position}} (Vector3 pos, Quaternion rot)
+\begin{DoxyCompactList}\small\item\em Force the virtual camera to assume a given position and orientation. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a6ff5692b6c0348f319da017ee4573594}{On\+Transition\+From\+Camera}} (\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} from\+Cam, Vector3 world\+Up, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Notification that this virtual camera is going live. Base class implementation must be called by any overridden method. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a539ec5013baf5d36cfd2bc98ae7a3248}{Get\+Max\+Damp\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Report maximum damping time needed for this extension. Only used in editor for timeline scrubbing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension}{Cinemachine.\+Cinemachine\+Extension}}}
+\begin{DoxyCompactItemize}
+\item 
+const float {\bfseries Epsilon} = Utility.\+Unity\+Vector\+Extensions.\+Epsilon
+\begin{DoxyCompactList}\small\item\em Useful constant for very small floats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension}{Cinemachine.\+Cinemachine\+Extension}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} {\bfseries Virtual\+Camera}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{class_cinemachine_1_1_cinemachine_virtual_camera}{Cinemachine\+Virtual\+Camera} to which this extension is attached. \end{DoxyCompactList}\item 
+virtual bool {\bfseries Requires\+User\+Input}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extensions that require user input should implement this and return true. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An add-\/on module for \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera that places an image in screen space over the camera\textquotesingle{}s output. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_storyboard_ae72e32873212bf0a45f4fae16e302ed9}\index{Cinemachine.CinemachineStoryboard@{Cinemachine.CinemachineStoryboard}!FillStrategy@{FillStrategy}}
+\index{FillStrategy@{FillStrategy}!Cinemachine.CinemachineStoryboard@{Cinemachine.CinemachineStoryboard}}
+\doxysubsubsection{\texorpdfstring{FillStrategy}{FillStrategy}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_storyboard_ae72e32873212bf0a45f4fae16e302ed9} 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_storyboard_ae72e32873212bf0a45f4fae16e302ed9}{Cinemachine.\+Cinemachine\+Storyboard.\+Fill\+Strategy}}}
+
+
+
+How to fit the image in the frame, in the event that the aspect ratios don\textquotesingle{}t match. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BestFit@{BestFit}!Cinemachine.CinemachineStoryboard@{Cinemachine.CinemachineStoryboard}}\index{Cinemachine.CinemachineStoryboard@{Cinemachine.CinemachineStoryboard}!BestFit@{BestFit}}}\Hypertarget{class_cinemachine_1_1_cinemachine_storyboard_ae72e32873212bf0a45f4fae16e302ed9a3be09308e76c7409a4e21584527d7f6e}\label{class_cinemachine_1_1_cinemachine_storyboard_ae72e32873212bf0a45f4fae16e302ed9} 
+Best\+Fit&Image will be as large as possible on the screen, without being cropped. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CropImageToFit@{CropImageToFit}!Cinemachine.CinemachineStoryboard@{Cinemachine.CinemachineStoryboard}}\index{Cinemachine.CinemachineStoryboard@{Cinemachine.CinemachineStoryboard}!CropImageToFit@{CropImageToFit}}}\Hypertarget{class_cinemachine_1_1_cinemachine_storyboard_ae72e32873212bf0a45f4fae16e302ed9acbaa4976ebd43d82bf9bdc03b591e650}\label{class_cinemachine_1_1_cinemachine_storyboard_ae72e32873212bf0a45f4fae16e302ed9} 
+Crop\+Image\+To\+Fit&Image will be cropped if necessary so that the screen is entirely filled. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{StretchToFit@{StretchToFit}!Cinemachine.CinemachineStoryboard@{Cinemachine.CinemachineStoryboard}}\index{Cinemachine.CinemachineStoryboard@{Cinemachine.CinemachineStoryboard}!StretchToFit@{StretchToFit}}}\Hypertarget{class_cinemachine_1_1_cinemachine_storyboard_ae72e32873212bf0a45f4fae16e302ed9a9edfd8b598a8f2ac044b26c4cb5dd4d0}\label{class_cinemachine_1_1_cinemachine_storyboard_ae72e32873212bf0a45f4fae16e302ed9} 
+Stretch\+To\+Fit&Image will be stretched to cover any aspect mismatch with the screen. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_cinemachine_1_1_cinemachine_storyboard_a2b3746239044dd7140351d24b46cfff5}\index{Cinemachine.CinemachineStoryboard@{Cinemachine.CinemachineStoryboard}!StoryboardRenderMode@{StoryboardRenderMode}}
+\index{StoryboardRenderMode@{StoryboardRenderMode}!Cinemachine.CinemachineStoryboard@{Cinemachine.CinemachineStoryboard}}
+\doxysubsubsection{\texorpdfstring{StoryboardRenderMode}{StoryboardRenderMode}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_storyboard_a2b3746239044dd7140351d24b46cfff5} 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_storyboard_a2b3746239044dd7140351d24b46cfff5}{Cinemachine.\+Cinemachine\+Storyboard.\+Storyboard\+Render\+Mode}}}
+
+
+
+Camera render modes supported by \doxylink{class_cinemachine_1_1_cinemachine_storyboard}{Cinemachine\+Storyboard}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ScreenSpaceOverlay@{ScreenSpaceOverlay}!Cinemachine.CinemachineStoryboard@{Cinemachine.CinemachineStoryboard}}\index{Cinemachine.CinemachineStoryboard@{Cinemachine.CinemachineStoryboard}!ScreenSpaceOverlay@{ScreenSpaceOverlay}}}\Hypertarget{class_cinemachine_1_1_cinemachine_storyboard_a2b3746239044dd7140351d24b46cfff5ad4b612fd0e35f3771e6b215171845740}\label{class_cinemachine_1_1_cinemachine_storyboard_a2b3746239044dd7140351d24b46cfff5} 
+Screen\+Space\+Overlay&Renders in camera screen space. This means, that the storyboard is going to be displayed in front of any objects in the scene. Equivalent to \doxylink{namespace_unity}{Unity}\textquotesingle{}s Render\+Mode.\+Screen\+Space\+Overlay. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ScreenSpaceCamera@{ScreenSpaceCamera}!Cinemachine.CinemachineStoryboard@{Cinemachine.CinemachineStoryboard}}\index{Cinemachine.CinemachineStoryboard@{Cinemachine.CinemachineStoryboard}!ScreenSpaceCamera@{ScreenSpaceCamera}}}\Hypertarget{class_cinemachine_1_1_cinemachine_storyboard_a2b3746239044dd7140351d24b46cfff5a34c0889e457c8a05edf8f2cf9f6071f2}\label{class_cinemachine_1_1_cinemachine_storyboard_a2b3746239044dd7140351d24b46cfff5} 
+Screen\+Space\+Camera&Render using the vcam on which the storyboard is on. This is useful, if you\textquotesingle{}d like to render the storyboard at a specific distance from the vcam. Equivalent to \doxylink{namespace_unity}{Unity}\textquotesingle{}s Render\+Mode.\+Screen\+Space\+Camera. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_storyboard_a76c7aee6737702111df9bbb8118fed16}\index{Cinemachine.CinemachineStoryboard@{Cinemachine.CinemachineStoryboard}!ConnectToVcam@{ConnectToVcam}}
+\index{ConnectToVcam@{ConnectToVcam}!Cinemachine.CinemachineStoryboard@{Cinemachine.CinemachineStoryboard}}
+\doxysubsubsection{\texorpdfstring{ConnectToVcam()}{ConnectToVcam()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_storyboard_a76c7aee6737702111df9bbb8118fed16} 
+override void Cinemachine.\+Cinemachine\+Storyboard.\+Connect\+To\+Vcam (\begin{DoxyParamCaption}\item[{bool}]{connect}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Connect to virtual camera. Adds/removes listener. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connect} & True if connecting, false if disconnecting\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a65b00ddb064ec30c6e8a53082868befe}{Cinemachine.\+Cinemachine\+Extension}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_storyboard_a796a4c2eeaf897109a85221939d530e8}\index{Cinemachine.CinemachineStoryboard@{Cinemachine.CinemachineStoryboard}!PostPipelineStageCallback@{PostPipelineStageCallback}}
+\index{PostPipelineStageCallback@{PostPipelineStageCallback}!Cinemachine.CinemachineStoryboard@{Cinemachine.CinemachineStoryboard}}
+\doxysubsubsection{\texorpdfstring{PostPipelineStageCallback()}{PostPipelineStageCallback()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_storyboard_a796a4c2eeaf897109a85221939d530e8} 
+override void Cinemachine.\+Cinemachine\+Storyboard.\+Post\+Pipeline\+Stage\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}}}]{vcam}{, }\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}}}]{stage}{, }\item[{ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}}}]{state}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Callback to display the image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vcam} & The virtual camera being processed\\
+\hline
+{\em stage} & The current pipeline stage\\
+\hline
+{\em state} & The current virtual camera state\\
+\hline
+{\em delta\+Time} & The current applicable delta\+Time\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Behaviours/Cinemachine\+Storyboard.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,43 @@
+\chapter{URP Global Settings}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doece8285cd83d5279186a929bc731aefc}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doece8285cd83d5279186a929bc731aefc}\index{URP Global Settings@{URP Global Settings}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doece8285cd83d5279186a929bc731aefc_autotoc_md2640}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doece8285cd83d5279186a929bc731aefc_autotoc_md2640}%
+ If a project has the URP package installed, \doxylink{namespace_unity}{Unity} shows the URP Global Settings section in the \doxylink{namespace_graphics}{Graphics} tab in the Project Settings window.
+
+The URP Global Settings section lets you define project-\/wide settings for URP.
+
+
+
+The section contains the following settings.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doece8285cd83d5279186a929bc731aefc_autotoc_md2641}{}\doxysection{\texorpdfstring{Rendering Layers (3D)}{Rendering Layers (3D)}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doece8285cd83d5279186a929bc731aefc_autotoc_md2641}
+Use this section to define the names of Rendering Layers. Rendering Layers only work with 3D Renderers.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doece8285cd83d5279186a929bc731aefc_autotoc_md2642}{}\doxysection{\texorpdfstring{Shader Stripping}{Shader Stripping}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doece8285cd83d5279186a929bc731aefc_autotoc_md2642}
+The check boxes in this section define which shader variants \doxylink{namespace_unity}{Unity} strips when you build the \doxylink{class_player}{Player}.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+Shader Variant Log Level   &Select what information about Shader variants \doxylink{namespace_unity}{Unity} saves in logs when you build your \doxylink{namespace_unity}{Unity} Project.~\newline
+Options\+:~\newline
+• Disabled\+: \doxylink{namespace_unity}{Unity} doesn\textquotesingle{}t save any shader variant information.~\newline
+• Only SRP Shaders\+: \doxylink{namespace_unity}{Unity} saves only shader variant information for URP shaders.~\newline
+• All Shaders\+: \doxylink{namespace_unity}{Unity} saves shader variant information for every shader type.    \\\cline{1-2}
+Strip Debug Variants   &When enabled, \doxylink{namespace_unity}{Unity} strips all debug view shader variants when you build the \doxylink{class_player}{Player}. This decreases build time, but prevents the use of Rendering Debugger in \doxylink{class_player}{Player} builds.    \\\cline{1-2}
+Strip Unused Post Processing Variants   &When enabled, \doxylink{namespace_unity}{Unity} assumes that the \doxylink{class_player}{Player} does not create new \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_volume_profile}{Volume Profiles}{0} at runtime. With this assumption, \doxylink{namespace_unity}{Unity} only keeps the shader variants that the existing \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_volume_profile}{Volume Profiles}{0} use, and strips all the other variants. \doxylink{namespace_unity}{Unity} keeps shader variants used in Volume Profiles even if the Scenes in the project do not use the Profiles.    \\\cline{1-2}
+Strip Unused Variants   &When enabled, \doxylink{namespace_unity}{Unity} performs shader stripping in a more efficient way. This option reduces the amount of shader variants in the \doxylink{class_player}{Player} by a factor of 2 if the project uses the following URP features\+:
+\begin{DoxyItemize}
+\item Rendering Layers
+\item Native Render Pass
+\item Reflection Probe Blending
+\item Reflection Probe Box Projection
+\item SSAO Renderer Feature
+\item Decal Renderer Feature
+\item Certain post-\/processing effects
+\end{DoxyItemize}Disable this option only if you see issues in the \doxylink{class_player}{Player}.    \\\cline{1-2}
+Strip Screen Coord Override Variants   &When enabled, \doxylink{namespace_unity}{Unity} strips Screen Coordinates Override shader variants in \doxylink{class_player}{Player} builds.   \\\cline{1-2}
+\end{longtabu}

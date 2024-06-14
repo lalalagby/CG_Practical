@@ -1,0 +1,500 @@
+\doxysection{Cinemachine.\+Cinemachine\+Path\+Base Class Reference}
+\hypertarget{class_cinemachine_1_1_cinemachine_path_base}{}\label{class_cinemachine_1_1_cinemachine_path_base}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}
+
+
+Abstract base class for a world-\/space path, suitable for a camera dolly track.  
+
+
+Inheritance diagram for Cinemachine.\+Cinemachine\+Path\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_cinemachine_1_1_cinemachine_path_base}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_1_1_appearance}{Appearance}}
+\begin{DoxyCompactList}\small\item\em This class holds the settings that control how the path will appear in the editor scene view. The path is not visible in the game view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e}{Position\+Units}} \{ \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69ea57b6e5dee6587ea54ef9ccc4050fee97}{Path\+Units}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69ea0aa6f4210bf373c95eda00232e93cd98}{Distance}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69ea66b28fcf83c9f24cd5b4d7bdc8f8ba0e}{Normalized}}
+ \}
+\begin{DoxyCompactList}\small\item\em How to interpret the Path Position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_a5419fa21834588e85ac3cdb673dcbb42}{Standardize\+Pos}} (float pos)
+\begin{DoxyCompactList}\small\item\em Get a standardized path position, taking spins into account if looped. \end{DoxyCompactList}\item 
+virtual Vector3 \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_a2aff99bb1cbef6a7e0c597a947157865}{Evaluate\+Position}} (float pos)
+\begin{DoxyCompactList}\small\item\em Get a worldspace position of a point along the path. \end{DoxyCompactList}\item 
+virtual Vector3 \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ab95feac42b3e2729f362283ddb757714}{Evaluate\+Tangent}} (float pos)
+\begin{DoxyCompactList}\small\item\em Get the world-\/space tangent of the curve at a point along the path. \end{DoxyCompactList}\item 
+virtual Quaternion \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_aeb8ae6dc934f7e7e122d05bc3a480f01}{Evaluate\+Orientation}} (float pos)
+\begin{DoxyCompactList}\small\item\em Get the world-\/space orientation the curve at a point along the path. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_a5000ff878cd43555d7b1fa3fde61038e}{Evaluate\+Local\+Position}} (float pos)
+\begin{DoxyCompactList}\small\item\em Get a worldspace position of a point along the path. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ac0cc0c9384e33591813e50b94cb0033e}{Evaluate\+Local\+Tangent}} (float pos)
+\begin{DoxyCompactList}\small\item\em Get the tangent of the curve at a point along the path. \end{DoxyCompactList}\item 
+Quaternion \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_a2376ae58494e4a7fffd8aa504393f3a9}{Evaluate\+Local\+Orientation}} (float pos)
+\begin{DoxyCompactList}\small\item\em Get the orientation the curve at a point along the path. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ab674e5957b55cbe0329feb929277844f}{Find\+Closest\+Point}} (Vector3 p, int start\+Segment, int search\+Radius, int steps\+Per\+Segment)
+\begin{DoxyCompactList}\small\item\em Find the closest point on the path to a given worldspace target point. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_aabd1581473d62acf2113d34e6bb26884}{Min\+Unit}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e}{Position\+Units}} units)
+\begin{DoxyCompactList}\small\item\em Get the minimum value, for the given unit type. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_a178e688ee877c258a43574370b852e8b}{Max\+Unit}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e}{Position\+Units}} units)
+\begin{DoxyCompactList}\small\item\em Get the maximum value, for the given unit type. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_a6521e72687c3438b77e497df60e41c58}{Standardize\+Unit}} (float pos, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e}{Position\+Units}} units)
+\begin{DoxyCompactList}\small\item\em Standardize the unit, so that it lies between Min\+Umit and Max\+Unit. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_a1ea2ea848341f7a8fb0d62ca8457a5a0}{Evaluate\+Position\+At\+Unit}} (float pos, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e}{Position\+Units}} units)
+\begin{DoxyCompactList}\small\item\em Get a worldspace position of a point along the path. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_aa201e2e03736063f37e8202874d5d82e}{Evaluate\+Tangent\+At\+Unit}} (float pos, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e}{Position\+Units}} units)
+\begin{DoxyCompactList}\small\item\em Get the tangent of the curve at a point along the path. \end{DoxyCompactList}\item 
+Quaternion \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ac97a5070d67f133a10044d1052aec4a4}{Evaluate\+Orientation\+At\+Unit}} (float pos, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e}{Position\+Units}} units)
+\begin{DoxyCompactList}\small\item\em Get the orientation the curve at a point along the path. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_a137dfb8aa6b4f0162d6eb7a09f7cc17c}{Invalidate\+Distance\+Cache}} ()
+\begin{DoxyCompactList}\small\item\em Call this if the path changes in such a way as to affect distances or other cached path elements. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_af026661268a1b13370557022f24884bc}{Distance\+Cache\+Is\+Valid}} ()
+\begin{DoxyCompactList}\small\item\em See whether the distance cache is valid. If it\textquotesingle{}s not valid, then any call to Get\+Path\+Length() or \doxylink{class_cinemachine_1_1_cinemachine_path_base_a80e98296e825f920f24c60842146406e}{To\+Native\+Path\+Units()} will trigger a potentially costly regeneration of the path distance cache. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_aa1aff341c3eee3722dd7e9d6e6397b15}{Standardize\+Path\+Distance}} (float distance)
+\begin{DoxyCompactList}\small\item\em Standardize a distance along the path based on the path length. If the distance cache is not valid, then calling this will trigger a potentially costly regeneration of the path distance cache. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_a80e98296e825f920f24c60842146406e}{To\+Native\+Path\+Units}} (float pos, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e}{Position\+Units}} units)
+\begin{DoxyCompactList}\small\item\em Get the path position to native path units. If the distance cache is not valid, then calling this will trigger a potentially costly regeneration of the path distance cache. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad22c4f610dc821c9a248eb305c3e17d8}{From\+Path\+Native\+Units}} (float pos, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e}{Position\+Units}} units)
+\begin{DoxyCompactList}\small\item\em Convert a path position from native path units to the desired units. If the distance cache is not valid, then calling this will trigger a potentially costly regeneration of the path distance cache. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_a87d542bfbdf4d802ac2326ce75f2229c}\label{class_cinemachine_1_1_cinemachine_path_base_a87d542bfbdf4d802ac2326ce75f2229c} 
+int {\bfseries m\+\_\+\+Resolution} = 20
+\begin{DoxyCompactList}\small\item\em Path samples per waypoint. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_aabfcb42c5a6971de486bb99c05518c0f}\label{class_cinemachine_1_1_cinemachine_path_base_aabfcb42c5a6971de486bb99c05518c0f} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_1_1_appearance}{Appearance}} {\bfseries m\+\_\+\+Appearance} = new \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_1_1_appearance}{Appearance}}()
+\begin{DoxyCompactList}\small\item\em The settings that control how the path will appear in the editor scene view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_a84dc4bd9aa826290df42f1521599be8f}\label{class_cinemachine_1_1_cinemachine_path_base_a84dc4bd9aa826290df42f1521599be8f} 
+float {\bfseries Min\+Pos}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The minimum value for the path position. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_a3273176fda825bb8765aac9ebe412e7e}\label{class_cinemachine_1_1_cinemachine_path_base_a3273176fda825bb8765aac9ebe412e7e} 
+float {\bfseries Max\+Pos}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The maximum value for the path position. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_a5b981bf54989ce53abb7a79146937985}\label{class_cinemachine_1_1_cinemachine_path_base_a5b981bf54989ce53abb7a79146937985} 
+bool {\bfseries Looped}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the path ends are joined to form a continuous loop. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_ac89967ecdac2aeb9e4f7ee437a342b23}\label{class_cinemachine_1_1_cinemachine_path_base_ac89967ecdac2aeb9e4f7ee437a342b23} 
+int {\bfseries Distance\+Cache\+Sample\+Steps\+Per\+Segment}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em When calculating the distance cache, sample the path this many times between points. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_a66c7835ad33d6d7e6a8bd20816945919}{Path\+Length}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the length of the path in distance units. If the distance cache is not valid, then calling this will trigger a potentially costly regeneration of the path distance cache. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for a world-\/space path, suitable for a camera dolly track. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}!PositionUnits@{PositionUnits}}
+\index{PositionUnits@{PositionUnits}!Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}
+\doxysubsubsection{\texorpdfstring{PositionUnits}{PositionUnits}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e} 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e}{Cinemachine.\+Cinemachine\+Path\+Base.\+Position\+Units}}}
+
+
+
+How to interpret the Path Position. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PathUnits@{PathUnits}!Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}!PathUnits@{PathUnits}}}\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69ea57b6e5dee6587ea54ef9ccc4050fee97}\label{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e} 
+Path\+Units&Use Path\+Position units, where 0 is first waypoint, 1 is second waypoint, etc. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Distance@{Distance}!Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}!Distance@{Distance}}}\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69ea0aa6f4210bf373c95eda00232e93cd98}\label{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e} 
+Distance&Use Distance Along Path. Path will be sampled according to its Resolution setting, and a distance lookup table will be cached internally. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Normalized@{Normalized}!Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}!Normalized@{Normalized}}}\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69ea66b28fcf83c9f24cd5b4d7bdc8f8ba0e}\label{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e} 
+Normalized&Normalized units, where 0 is the start of the path, and 1 is the end. Path will be sampled according to its Resolution setting, and a distance lookup table will be cached internally. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_af026661268a1b13370557022f24884bc}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}!DistanceCacheIsValid@{DistanceCacheIsValid}}
+\index{DistanceCacheIsValid@{DistanceCacheIsValid}!Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}
+\doxysubsubsection{\texorpdfstring{DistanceCacheIsValid()}{DistanceCacheIsValid()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_path_base_af026661268a1b13370557022f24884bc} 
+bool Cinemachine.\+Cinemachine\+Path\+Base.\+Distance\+Cache\+Is\+Valid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+See whether the distance cache is valid. If it\textquotesingle{}s not valid, then any call to Get\+Path\+Length() or \doxylink{class_cinemachine_1_1_cinemachine_path_base_a80e98296e825f920f24c60842146406e}{To\+Native\+Path\+Units()} will trigger a potentially costly regeneration of the path distance cache. 
+
+\begin{DoxyReturn}{Returns}
+Whether the cache is valid
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_a2376ae58494e4a7fffd8aa504393f3a9}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}!EvaluateLocalOrientation@{EvaluateLocalOrientation}}
+\index{EvaluateLocalOrientation@{EvaluateLocalOrientation}!Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}
+\doxysubsubsection{\texorpdfstring{EvaluateLocalOrientation()}{EvaluateLocalOrientation()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_path_base_a2376ae58494e4a7fffd8aa504393f3a9} 
+Quaternion Cinemachine.\+Cinemachine\+Path\+Base.\+Evaluate\+Local\+Orientation (\begin{DoxyParamCaption}\item[{float}]{pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Get the orientation the curve at a point along the path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Postion along the path. Need not be standardized.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Local-\/space orientation of the path
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_a5000ff878cd43555d7b1fa3fde61038e}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}!EvaluateLocalPosition@{EvaluateLocalPosition}}
+\index{EvaluateLocalPosition@{EvaluateLocalPosition}!Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}
+\doxysubsubsection{\texorpdfstring{EvaluateLocalPosition()}{EvaluateLocalPosition()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_path_base_a5000ff878cd43555d7b1fa3fde61038e} 
+Vector3 Cinemachine.\+Cinemachine\+Path\+Base.\+Evaluate\+Local\+Position (\begin{DoxyParamCaption}\item[{float}]{pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Get a worldspace position of a point along the path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Postion along the path. Need not be standardized.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Local-\/space position of the point along at path at pos
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_ac0cc0c9384e33591813e50b94cb0033e}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}!EvaluateLocalTangent@{EvaluateLocalTangent}}
+\index{EvaluateLocalTangent@{EvaluateLocalTangent}!Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}
+\doxysubsubsection{\texorpdfstring{EvaluateLocalTangent()}{EvaluateLocalTangent()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_path_base_ac0cc0c9384e33591813e50b94cb0033e} 
+Vector3 Cinemachine.\+Cinemachine\+Path\+Base.\+Evaluate\+Local\+Tangent (\begin{DoxyParamCaption}\item[{float}]{pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Get the tangent of the curve at a point along the path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Postion along the path. Need not be standardized.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Local-\/space direction of the path tangent. Length of the vector represents the tangent strength
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_aeb8ae6dc934f7e7e122d05bc3a480f01}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}!EvaluateOrientation@{EvaluateOrientation}}
+\index{EvaluateOrientation@{EvaluateOrientation}!Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}
+\doxysubsubsection{\texorpdfstring{EvaluateOrientation()}{EvaluateOrientation()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_path_base_aeb8ae6dc934f7e7e122d05bc3a480f01} 
+virtual Quaternion Cinemachine.\+Cinemachine\+Path\+Base.\+Evaluate\+Orientation (\begin{DoxyParamCaption}\item[{float}]{pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the world-\/space orientation the curve at a point along the path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Postion along the path. Need not be standardized.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+World-\/space orientation of the path
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_ac97a5070d67f133a10044d1052aec4a4}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}!EvaluateOrientationAtUnit@{EvaluateOrientationAtUnit}}
+\index{EvaluateOrientationAtUnit@{EvaluateOrientationAtUnit}!Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}
+\doxysubsubsection{\texorpdfstring{EvaluateOrientationAtUnit()}{EvaluateOrientationAtUnit()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_path_base_ac97a5070d67f133a10044d1052aec4a4} 
+Quaternion Cinemachine.\+Cinemachine\+Path\+Base.\+Evaluate\+Orientation\+At\+Unit (\begin{DoxyParamCaption}\item[{float}]{pos}{, }\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e}{Position\+Units}}}]{units}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the orientation the curve at a point along the path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Postion along the path. Need not be normalized.\\
+\hline
+{\em units} & The unit to use when interpreting the value of pos.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+World-\/space orientation of the path
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_a2aff99bb1cbef6a7e0c597a947157865}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}!EvaluatePosition@{EvaluatePosition}}
+\index{EvaluatePosition@{EvaluatePosition}!Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}
+\doxysubsubsection{\texorpdfstring{EvaluatePosition()}{EvaluatePosition()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_path_base_a2aff99bb1cbef6a7e0c597a947157865} 
+virtual Vector3 Cinemachine.\+Cinemachine\+Path\+Base.\+Evaluate\+Position (\begin{DoxyParamCaption}\item[{float}]{pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get a worldspace position of a point along the path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Postion along the path. Need not be standardized.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+World-\/space position of the point along at path at pos
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_a1ea2ea848341f7a8fb0d62ca8457a5a0}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}!EvaluatePositionAtUnit@{EvaluatePositionAtUnit}}
+\index{EvaluatePositionAtUnit@{EvaluatePositionAtUnit}!Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}
+\doxysubsubsection{\texorpdfstring{EvaluatePositionAtUnit()}{EvaluatePositionAtUnit()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_path_base_a1ea2ea848341f7a8fb0d62ca8457a5a0} 
+Vector3 Cinemachine.\+Cinemachine\+Path\+Base.\+Evaluate\+Position\+At\+Unit (\begin{DoxyParamCaption}\item[{float}]{pos}{, }\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e}{Position\+Units}}}]{units}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a worldspace position of a point along the path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Postion along the path. Need not be normalized.\\
+\hline
+{\em units} & The unit to use when interpreting the value of pos.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+World-\/space position of the point along at path at pos
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_ab95feac42b3e2729f362283ddb757714}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}!EvaluateTangent@{EvaluateTangent}}
+\index{EvaluateTangent@{EvaluateTangent}!Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}
+\doxysubsubsection{\texorpdfstring{EvaluateTangent()}{EvaluateTangent()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_path_base_ab95feac42b3e2729f362283ddb757714} 
+virtual Vector3 Cinemachine.\+Cinemachine\+Path\+Base.\+Evaluate\+Tangent (\begin{DoxyParamCaption}\item[{float}]{pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the world-\/space tangent of the curve at a point along the path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Postion along the path. Need not be standardized.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+World-\/space direction of the path tangent. Length of the vector represents the tangent strength
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_aa201e2e03736063f37e8202874d5d82e}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}!EvaluateTangentAtUnit@{EvaluateTangentAtUnit}}
+\index{EvaluateTangentAtUnit@{EvaluateTangentAtUnit}!Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}
+\doxysubsubsection{\texorpdfstring{EvaluateTangentAtUnit()}{EvaluateTangentAtUnit()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_path_base_aa201e2e03736063f37e8202874d5d82e} 
+Vector3 Cinemachine.\+Cinemachine\+Path\+Base.\+Evaluate\+Tangent\+At\+Unit (\begin{DoxyParamCaption}\item[{float}]{pos}{, }\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e}{Position\+Units}}}]{units}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the tangent of the curve at a point along the path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Postion along the path. Need not be normalized.\\
+\hline
+{\em units} & The unit to use when interpreting the value of pos.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+World-\/space direction of the path tangent. Length of the vector represents the tangent strength
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_ab674e5957b55cbe0329feb929277844f}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}!FindClosestPoint@{FindClosestPoint}}
+\index{FindClosestPoint@{FindClosestPoint}!Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}
+\doxysubsubsection{\texorpdfstring{FindClosestPoint()}{FindClosestPoint()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_path_base_ab674e5957b55cbe0329feb929277844f} 
+virtual float Cinemachine.\+Cinemachine\+Path\+Base.\+Find\+Closest\+Point (\begin{DoxyParamCaption}\item[{Vector3}]{p}{, }\item[{int}]{start\+Segment}{, }\item[{int}]{search\+Radius}{, }\item[{int}]{steps\+Per\+Segment}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Find the closest point on the path to a given worldspace target point. 
+
+Performance could be improved by checking the bounding polygon of each segment, and only entering the best segment(s)
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Worldspace target that we want to approach\\
+\hline
+{\em start\+Segment} & In what segment of the path to start the search. A Segment is a section of path between 2 waypoints.\\
+\hline
+{\em search\+Radius} & How many segments on either side of the start\+Segment to search. -\/1 means no limit, i.\+e. search the entire path\\
+\hline
+{\em steps\+Per\+Segment} & We search a segment by dividing it into this many straight pieces. The higher the number, the more accurate the result, but performance is proportionally slower for higher numbers\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The position along the path that is closest to the target point. The value is in Path Units, not Distance units.
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_ad22c4f610dc821c9a248eb305c3e17d8}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}!FromPathNativeUnits@{FromPathNativeUnits}}
+\index{FromPathNativeUnits@{FromPathNativeUnits}!Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}
+\doxysubsubsection{\texorpdfstring{FromPathNativeUnits()}{FromPathNativeUnits()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_path_base_ad22c4f610dc821c9a248eb305c3e17d8} 
+float Cinemachine.\+Cinemachine\+Path\+Base.\+From\+Path\+Native\+Units (\begin{DoxyParamCaption}\item[{float}]{pos}{, }\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e}{Position\+Units}}}]{units}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert a path position from native path units to the desired units. If the distance cache is not valid, then calling this will trigger a potentially costly regeneration of the path distance cache. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The value to convert from, in native units\\
+\hline
+{\em units} & The units to convert to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tha path position, in the requested units
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_a137dfb8aa6b4f0162d6eb7a09f7cc17c}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}!InvalidateDistanceCache@{InvalidateDistanceCache}}
+\index{InvalidateDistanceCache@{InvalidateDistanceCache}!Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}
+\doxysubsubsection{\texorpdfstring{InvalidateDistanceCache()}{InvalidateDistanceCache()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_path_base_a137dfb8aa6b4f0162d6eb7a09f7cc17c} 
+virtual void Cinemachine.\+Cinemachine\+Path\+Base.\+Invalidate\+Distance\+Cache (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Call this if the path changes in such a way as to affect distances or other cached path elements. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_smooth_path_a724394663af51e29ce8ee83bac73055a}{Cinemachine.\+Cinemachine\+Smooth\+Path}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_a178e688ee877c258a43574370b852e8b}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}!MaxUnit@{MaxUnit}}
+\index{MaxUnit@{MaxUnit}!Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}
+\doxysubsubsection{\texorpdfstring{MaxUnit()}{MaxUnit()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_path_base_a178e688ee877c258a43574370b852e8b} 
+float Cinemachine.\+Cinemachine\+Path\+Base.\+Max\+Unit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e}{Position\+Units}}}]{units}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the maximum value, for the given unit type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em units} & The unit type\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The maximum allowable value for this path
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_aabd1581473d62acf2113d34e6bb26884}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}!MinUnit@{MinUnit}}
+\index{MinUnit@{MinUnit}!Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}
+\doxysubsubsection{\texorpdfstring{MinUnit()}{MinUnit()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_path_base_aabd1581473d62acf2113d34e6bb26884} 
+float Cinemachine.\+Cinemachine\+Path\+Base.\+Min\+Unit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e}{Position\+Units}}}]{units}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the minimum value, for the given unit type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em units} & The unit type\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The minimum allowable value for this path
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_aa1aff341c3eee3722dd7e9d6e6397b15}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}!StandardizePathDistance@{StandardizePathDistance}}
+\index{StandardizePathDistance@{StandardizePathDistance}!Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}
+\doxysubsubsection{\texorpdfstring{StandardizePathDistance()}{StandardizePathDistance()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_path_base_aa1aff341c3eee3722dd7e9d6e6397b15} 
+float Cinemachine.\+Cinemachine\+Path\+Base.\+Standardize\+Path\+Distance (\begin{DoxyParamCaption}\item[{float}]{distance}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Standardize a distance along the path based on the path length. If the distance cache is not valid, then calling this will trigger a potentially costly regeneration of the path distance cache. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em distance} & The distance to standardize\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The standardized distance, ranging from 0 to path length
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_a5419fa21834588e85ac3cdb673dcbb42}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}!StandardizePos@{StandardizePos}}
+\index{StandardizePos@{StandardizePos}!Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}
+\doxysubsubsection{\texorpdfstring{StandardizePos()}{StandardizePos()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_path_base_a5419fa21834588e85ac3cdb673dcbb42} 
+virtual float Cinemachine.\+Cinemachine\+Path\+Base.\+Standardize\+Pos (\begin{DoxyParamCaption}\item[{float}]{pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get a standardized path position, taking spins into account if looped. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Position along the path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Standardized position, between Min\+Pos and Max\+Pos
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_a6521e72687c3438b77e497df60e41c58}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}!StandardizeUnit@{StandardizeUnit}}
+\index{StandardizeUnit@{StandardizeUnit}!Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}
+\doxysubsubsection{\texorpdfstring{StandardizeUnit()}{StandardizeUnit()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_path_base_a6521e72687c3438b77e497df60e41c58} 
+virtual float Cinemachine.\+Cinemachine\+Path\+Base.\+Standardize\+Unit (\begin{DoxyParamCaption}\item[{float}]{pos}{, }\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e}{Position\+Units}}}]{units}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Standardize the unit, so that it lies between Min\+Umit and Max\+Unit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The value to be standardized\\
+\hline
+{\em units} & The unit type\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The standardized value of pos, between Min\+Unit and Max\+Unit
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_a80e98296e825f920f24c60842146406e}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}!ToNativePathUnits@{ToNativePathUnits}}
+\index{ToNativePathUnits@{ToNativePathUnits}!Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}
+\doxysubsubsection{\texorpdfstring{ToNativePathUnits()}{ToNativePathUnits()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_path_base_a80e98296e825f920f24c60842146406e} 
+float Cinemachine.\+Cinemachine\+Path\+Base.\+To\+Native\+Path\+Units (\begin{DoxyParamCaption}\item[{float}]{pos}{, }\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e}{Position\+Units}}}]{units}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the path position to native path units. If the distance cache is not valid, then calling this will trigger a potentially costly regeneration of the path distance cache. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The value to convert from\\
+\hline
+{\em units} & The units in which pos is expressed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The path position, in native units
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_path_base_a66c7835ad33d6d7e6a8bd20816945919}\index{Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}!PathLength@{PathLength}}
+\index{PathLength@{PathLength}!Cinemachine.CinemachinePathBase@{Cinemachine.CinemachinePathBase}}
+\doxysubsubsection{\texorpdfstring{PathLength}{PathLength}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_path_base_a66c7835ad33d6d7e6a8bd20816945919} 
+float Cinemachine.\+Cinemachine\+Path\+Base.\+Path\+Length\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Get the length of the path in distance units. If the distance cache is not valid, then calling this will trigger a potentially costly regeneration of the path distance cache. 
+
+\begin{DoxyReturn}{Returns}
+The length of the path in distance units, when sampled at this rate
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Core/Cinemachine\+Path\+Base.\+cs\end{DoxyCompactItemize}

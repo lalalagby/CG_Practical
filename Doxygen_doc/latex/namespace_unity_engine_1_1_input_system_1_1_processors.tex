@@ -1,0 +1,33 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Processors Namespace Reference}
+\hypertarget{namespace_unity_engine_1_1_input_system_1_1_processors}{}\label{namespace_unity_engine_1_1_input_system_1_1_processors}\index{UnityEngine.InputSystem.Processors@{UnityEngine.InputSystem.Processors}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor}{Axis\+Deadzone\+Processor}}
+\begin{DoxyCompactList}\small\item\em Clamps values to the range given by \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_a2de9a092dc4d3d808207e4cc14bb6637}{min} and \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_aabd1df6081e38695f80bcbfd72ef43a4}{max} and re-\/normalizes the resulting value to \mbox{[}0..1\mbox{]}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_processors_1_1_clamp_processor}{Clamp\+Processor}}
+\begin{DoxyCompactList}\small\item\em Clamp a floating-\/point input to between \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_clamp_processor_ab66841ff542bb80b9602e3a71fa80582}{min} and \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_clamp_processor_a5422b6fe7cea61651f31243bd7d36aa7}{max}. This is equivalent to {\ttfamily Mathf.\+Clamp(value, min, max)}. \end{DoxyCompactList}\item 
+class {\bfseries Compensate\+Direction\+Processor}
+\item 
+class {\bfseries Compensate\+Rotation\+Processor}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_processors_1_1_invert_processor}{Invert\+Processor}}
+\begin{DoxyCompactList}\small\item\em An input processor that inverts its input value. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_processors_1_1_invert_vector2_processor}{Invert\+Vector2\+Processor}}
+\begin{DoxyCompactList}\small\item\em Inverts the {\ttfamily x} and/or {\ttfamily y} channel of a {\ttfamily Vector2}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_processors_1_1_invert_vector3_processor}{Invert\+Vector3\+Processor}}
+\begin{DoxyCompactList}\small\item\em Inverts the {\ttfamily x} and/or {\ttfamily y} and/or {\ttfamily z} channel of a {\ttfamily Vector3}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_processors_1_1_normalize_processor}{Normalize\+Processor}}
+\begin{DoxyCompactList}\small\item\em Normalizes input values in the range \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_normalize_processor_aaa33b42272a4e6ee030ad9387edabea0}{min} and \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_normalize_processor_a4b7d6f0f16a3b116145ea4b603bc1491}{max} to unsigned normalized form \mbox{[}0..1\mbox{]} if \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_normalize_processor_af2430a68328562e7a240ed392de0e181}{zero} is placed at (or below) \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_normalize_processor_aaa33b42272a4e6ee030ad9387edabea0}{min} or to signed normalized form \mbox{[}-\/1..1\mbox{]} if \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_normalize_processor_af2430a68328562e7a240ed392de0e181}{zero} is placed in-\/between \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_normalize_processor_aaa33b42272a4e6ee030ad9387edabea0}{min} and \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_normalize_processor_a4b7d6f0f16a3b116145ea4b603bc1491}{max}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_processors_1_1_normalize_vector2_processor}{Normalize\+Vector2\+Processor}}
+\begin{DoxyCompactList}\small\item\em Normalizes a {\ttfamily Vector2} input value. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_processors_1_1_normalize_vector3_processor}{Normalize\+Vector3\+Processor}}
+\begin{DoxyCompactList}\small\item\em Normalizes a {\ttfamily Vector3} input value. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_processors_1_1_scale_processor}{Scale\+Processor}}
+\begin{DoxyCompactList}\small\item\em Scale a float value by a constant factor. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_processors_1_1_scale_vector2_processor}{Scale\+Vector2\+Processor}}
+\begin{DoxyCompactList}\small\item\em Scale the components of a Vector2 by constant factors. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_processors_1_1_scale_vector3_processor}{Scale\+Vector3\+Processor}}
+\begin{DoxyCompactList}\small\item\em Scale the components of a Vector3 by constant factors. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_processors_1_1_stick_deadzone_processor}{Stick\+Deadzone\+Processor}}
+\begin{DoxyCompactList}\small\item\em Processes a Vector2 to apply deadzoning according to the magnitude of the vector (rather than just clamping individual axes). Normalizes to the min/max range. \end{DoxyCompactList}\end{DoxyCompactItemize}

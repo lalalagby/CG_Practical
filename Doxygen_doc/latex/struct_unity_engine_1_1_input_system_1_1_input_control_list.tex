@@ -1,0 +1,444 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Input\+Control\+List\texorpdfstring{$<$}{<} TControl \texorpdfstring{$>$}{>} Struct Template Reference}
+\hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list}{}\label{struct_unity_engine_1_1_input_system_1_1_input_control_list}\index{UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}}
+
+
+Keep a list of \doxylink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}s without allocating managed memory.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Input\+Control\+List\texorpdfstring{$<$}{<} TControl \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.163032cm]{struct_unity_engine_1_1_input_system_1_1_input_control_list}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list_a5c91cbc26c48b35167269b2471a652ea}{Input\+Control\+List}} (Allocator allocator, int initial\+Capacity=0)
+\begin{DoxyCompactList}\small\item\em Construct a list that allocates unmanaged memory from the given allocator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list_a090f69d86bd946d7151cdd823cf8ea26}{Input\+Control\+List}} (IEnumerable$<$ TControl $>$ values, Allocator allocator=Allocator.\+Persistent)
+\begin{DoxyCompactList}\small\item\em Construct a list and populate it with the given values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list_aea84e051b128e516af60808d78ec2495}{Input\+Control\+List}} (params TControl\mbox{[}$\,$\mbox{]} values)
+\begin{DoxyCompactList}\small\item\em Construct a list and add the given values to it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list_ae51f786fc679759ecaa035338da85fa6}{Resize}} (int size)
+\begin{DoxyCompactList}\small\item\em Resizes the list to be exactly {\itshape size}  entries. If this is less than the current \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_list_ad0bb078fdbb6b7b59b704e92e604fb05}{Count}, additional entries are dropped. If it is more than the current \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_list_ad0bb078fdbb6b7b59b704e92e604fb05}{Count}, additional {\ttfamily null} entries are appended to the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list_ac533e1dc7180b0b409c4b0475a2c51e3}{Add}} (TControl item)
+\begin{DoxyCompactList}\small\item\em Add a control to the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list_a2ee34e01b267820c52b3bd49c3ef8ecb}{Add\+Slice$<$ TList $>$}} (TList list, int count=-\/1, int destination\+Index=-\/1, int source\+Index=0)
+\begin{DoxyCompactList}\small\item\em Add a slice of elements taken from the given list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list_ae37f69454564cfdbbd69794f23d76944}{Add\+Range}} (IEnumerable$<$ TControl $>$ list, int count=-\/1, int destination\+Index=-\/1)
+\begin{DoxyCompactList}\small\item\em Add a sequence of controls to the list. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list_a678a8bfd478bf71b2ac653a16d17a19f}{Remove}} (TControl item)
+\begin{DoxyCompactList}\small\item\em Remove a control from the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list_a54151be1631a6b664f29a02ecaae386f}{Remove\+At}} (int index)
+\begin{DoxyCompactList}\small\item\em Remove the control at the given index. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_abded67a28970a07e9cd82578064b9905}\label{struct_unity_engine_1_1_input_system_1_1_input_control_list_abded67a28970a07e9cd82578064b9905} 
+void {\bfseries Copy\+To} (TControl\mbox{[}$\,$\mbox{]} array, int array\+Index)
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_a109d36104475854d3a9b2a0b9e5db017}\label{struct_unity_engine_1_1_input_system_1_1_input_control_list_a109d36104475854d3a9b2a0b9e5db017} 
+int {\bfseries Index\+Of} (TControl item)
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_aa2b799e802b6a9499f173f017d45f6d5}\label{struct_unity_engine_1_1_input_system_1_1_input_control_list_aa2b799e802b6a9499f173f017d45f6d5} 
+int {\bfseries Index\+Of} (TControl item, int start\+Index, int count=-\/1)
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_a205df5703ada9fbc02896fac7d5444e4}\label{struct_unity_engine_1_1_input_system_1_1_input_control_list_a205df5703ada9fbc02896fac7d5444e4} 
+void {\bfseries Insert} (int index, TControl item)
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_ada4db2b508ac5ec575b934173f1cbb28}\label{struct_unity_engine_1_1_input_system_1_1_input_control_list_ada4db2b508ac5ec575b934173f1cbb28} 
+void {\bfseries Clear} ()
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_a4ade7fd4d58c1e327669768b9de36a0c}\label{struct_unity_engine_1_1_input_system_1_1_input_control_list_a4ade7fd4d58c1e327669768b9de36a0c} 
+bool {\bfseries Contains} (TControl item)
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_a1ab5a5fcadad89567278afc3d4a8843e}\label{struct_unity_engine_1_1_input_system_1_1_input_control_list_a1ab5a5fcadad89567278afc3d4a8843e} 
+bool {\bfseries Contains} (TControl item, int start\+Index, int count=-\/1)
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_ae3a2f9536be31fc687e191c94f420eb4}\label{struct_unity_engine_1_1_input_system_1_1_input_control_list_ae3a2f9536be31fc687e191c94f420eb4} 
+void {\bfseries Swap\+Elements} (int index1, int index2)
+\item 
+void \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list_a0a6d04b49a8972ab8ad74a5b9dc6891c}{Sort$<$ TCompare $>$}} (int start\+Index, int count, TCompare comparer)
+\item 
+TControl\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list_ac633c97804db9abec4331074bd9096b1}{To\+Array}} (bool dispose=false)
+\begin{DoxyCompactList}\small\item\em Convert the contents of the list to an array. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_a5f83220e8ce841d9c4bf37a87f42dc64}\label{struct_unity_engine_1_1_input_system_1_1_input_control_list_a5f83220e8ce841d9c4bf37a87f42dc64} 
+void {\bfseries Dispose} ()
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_ac6d3cec09243cfb8d92aa86d6a0725b4}\label{struct_unity_engine_1_1_input_system_1_1_input_control_list_ac6d3cec09243cfb8d92aa86d6a0725b4} 
+IEnumerator$<$ TControl $>$ {\bfseries Get\+Enumerator} ()
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_af9b42f472062416096fac28aef35c5df}\label{struct_unity_engine_1_1_input_system_1_1_input_control_list_af9b42f472062416096fac28aef35c5df} 
+IEnumerator IEnumerable. {\bfseries Get\+Enumerator} ()
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_af673cb55bde7c60a8c9268890c5304ec}\label{struct_unity_engine_1_1_input_system_1_1_input_control_list_af673cb55bde7c60a8c9268890c5304ec} 
+override string {\bfseries To\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list_ad0bb078fdbb6b7b59b704e92e604fb05}{Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current number of controls in the list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list_a722dc7a0b9d2bd7c612e17d969eb1ab6}{Capacity}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Total number of controls that can currently be stored in the list. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list_a297b08513fd5c67d78835ab35b5c5785}{Is\+Read\+Only}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This is always false. \end{DoxyCompactList}\item 
+TControl \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list_ac2952e5c7e0c1276d4f4b47f3fe1e3af}{this\mbox{[}int index\mbox{]}}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Return the control at the given index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Keep a list of \doxylink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}s without allocating managed memory. 
+
+This struct is mainly used by methods such as Input\+System.\+Find\+Controls(string) or Input\+Control\+Path.\+Try\+Find\+Controls$<$\+TControl$>$ to store an arbitrary length list of resulting matches without having to allocate GC heap memory.
+
+Requires the control setup in the system to not change while the list is being used. If devices are removed from the system, the list will no longer be valid. Also, only works with controls of devices that have been added to the system (\doxylink{class_unity_engine_1_1_input_system_1_1_input_device_a4ff5e7586f91a321108317341566d4eb}{Input\+Device.\+added}). The reason for these constraints is that internally, the list only stores integer indices that are translates to \doxylink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control} references on the fly. If the device setup in the system changes, the indices may become invalid.
+
+This struct allocates unmanaged memory and thus must be disposed or it will leak memory. By default allocates {\ttfamily Allocator.\+Persistent} memory. You can direct it to use another allocator by passing an Allocator value to one of the constructors.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Find\ all\ controls\ with\ the\ "{}Submit"{}\ usage\ in\ the\ system.}}
+\DoxyCodeLine{\textcolor{comment}{//\ By\ wrapping\ it\ in\ a\ <tt>using</tt>\ block,\ the\ list\ of\ controls\ will\ automatically\ be\ disposed\ at\ the\ end.}}
+\DoxyCodeLine{\textcolor{keyword}{using}\ (var\ controls\ =\ InputSystem.FindControls(\textcolor{stringliteral}{"{}*\&zwj;/\{Submit\}"{}}))}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{/*\ ...\ *\&zwj;/;}}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TControl} & Type of \doxylink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control} to store in the list.\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TControl} : {\em \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_a5c91cbc26c48b35167269b2471a652ea}\index{UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}!InputControlList@{InputControlList}}
+\index{InputControlList@{InputControlList}!UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}}
+\doxysubsubsection{\texorpdfstring{InputControlList()}{InputControlList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_list_a5c91cbc26c48b35167269b2471a652ea} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list}{Unity\+Engine.\+Input\+System.\+Input\+Control\+List}}$<$ TControl $>$.\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list}{Input\+Control\+List}} (\begin{DoxyParamCaption}\item[{Allocator}]{allocator}{, }\item[{int}]{initial\+Capacity}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a list that allocates unmanaged memory from the given allocator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em allocator} & Allocator to use for requesting unmanaged memory.\\
+\hline
+{\em initial\+Capacity} & If greater than zero, will immediately allocate memory and set \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_list_a722dc7a0b9d2bd7c612e17d969eb1ab6}{Capacity} accordingly.\\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ a\ control\ list\ that\ allocates\ from\ the\ temporary\ memory\ allocator.}}
+\DoxyCodeLine{\textcolor{keyword}{using}\ (var\ list\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list_a5c91cbc26c48b35167269b2471a652ea}{InputControlList}}(Allocator.Temp))}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Add\ all\ gamepads\ to\ the\ list.}}
+\DoxyCodeLine{\ \ \ \ InputSystem.FindControls(\textcolor{stringliteral}{"{}<Gamepad>"{}},\ ref\ list);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_a090f69d86bd946d7151cdd823cf8ea26}\index{UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}!InputControlList@{InputControlList}}
+\index{InputControlList@{InputControlList}!UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}}
+\doxysubsubsection{\texorpdfstring{InputControlList()}{InputControlList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_list_a090f69d86bd946d7151cdd823cf8ea26} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list}{Unity\+Engine.\+Input\+System.\+Input\+Control\+List}}$<$ TControl $>$.\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list}{Input\+Control\+List}} (\begin{DoxyParamCaption}\item[{IEnumerable$<$ TControl $>$}]{values}{, }\item[{Allocator}]{allocator}{ = {\ttfamily Allocator\+:\+:Persistent}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a list and populate it with the given values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & Sequence of values to populate the list with.\\
+\hline
+{\em allocator} & Allocator to use for requesting unmanaged memory.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & {\itshape values}  is {\ttfamily null}.\\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_aea84e051b128e516af60808d78ec2495}\index{UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}!InputControlList@{InputControlList}}
+\index{InputControlList@{InputControlList}!UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}}
+\doxysubsubsection{\texorpdfstring{InputControlList()}{InputControlList()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_list_aea84e051b128e516af60808d78ec2495} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list}{Unity\+Engine.\+Input\+System.\+Input\+Control\+List}}$<$ TControl $>$.\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list}{Input\+Control\+List}} (\begin{DoxyParamCaption}\item[{params TControl\mbox{[}$\,$\mbox{]}}]{values}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a list and add the given values to it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & Sequence of controls to add to the list.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & {\itshape values}  is null.\\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_ac533e1dc7180b0b409c4b0475a2c51e3}\index{UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}!Add@{Add}}
+\index{Add@{Add}!UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_list_ac533e1dc7180b0b409c4b0475a2c51e3} 
+void \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list}{Unity\+Engine.\+Input\+System.\+Input\+Control\+List}}$<$ TControl $>$.Add (\begin{DoxyParamCaption}\item[{TControl}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a control to the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Control to add. Allowed to be {\ttfamily null}.\\
+\hline
+\end{DoxyParams}
+
+
+If necessary, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_list_a722dc7a0b9d2bd7c612e17d969eb1ab6}{Capacity} will be increased.
+
+It is allowed to add nulls to the list. This can be useful, for example, when specific indices in the list correlate with specific matches and a given match needs to be marked as "{}matches nothing"{}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_list_a678a8bfd478bf71b2ac653a16d17a19f}{Remove}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_ae37f69454564cfdbbd69794f23d76944}\index{UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}!AddRange@{AddRange}}
+\index{AddRange@{AddRange}!UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}}
+\doxysubsubsection{\texorpdfstring{AddRange()}{AddRange()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_list_ae37f69454564cfdbbd69794f23d76944} 
+void \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list}{Unity\+Engine.\+Input\+System.\+Input\+Control\+List}}$<$ TControl $>$.Add\+Range (\begin{DoxyParamCaption}\item[{IEnumerable$<$ TControl $>$}]{list}{, }\item[{int}]{count}{ = {\ttfamily -\/1}, }\item[{int}]{destination\+Index}{ = {\ttfamily -\/1}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a sequence of controls to the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & Sequence of controls to add.\\
+\hline
+{\em count} & Number of controls from {\itshape list}  to add. If negative (default), all controls from {\itshape list}  will be added.\\
+\hline
+{\em destination\+Index} & Index in the control list to start inserting controls at. If negative (default), controls will be appended to the end of the control list.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & {\itshape list}  is {\ttfamily null}.\\
+\hline
+\end{DoxyExceptions}
+
+
+If {\itshape count}  is not supplied, {\itshape list}  will be iterated over twice. \Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_a2ee34e01b267820c52b3bd49c3ef8ecb}\index{UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}!AddSlice$<$ TList $>$@{AddSlice$<$ TList $>$}}
+\index{AddSlice$<$ TList $>$@{AddSlice$<$ TList $>$}!UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}}
+\doxysubsubsection{\texorpdfstring{AddSlice$<$ TList $>$()}{AddSlice< TList >()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_list_a2ee34e01b267820c52b3bd49c3ef8ecb} 
+void \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list}{Unity\+Engine.\+Input\+System.\+Input\+Control\+List}}$<$ TControl $>$.Add\+Slice$<$ TList $>$ (\begin{DoxyParamCaption}\item[{TList}]{list}{, }\item[{int}]{count}{ = {\ttfamily -\/1}, }\item[{int}]{destination\+Index}{ = {\ttfamily -\/1}, }\item[{int}]{source\+Index}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a slice of elements taken from the given list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & List to take the slice of values from.\\
+\hline
+{\em count} & Number of elements to copy from {\itshape list} .\\
+\hline
+{\em destination\+Index} & Starting index in the current control list to copy to. This can be beyond \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_list_ad0bb078fdbb6b7b59b704e92e604fb05}{Count} or even \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_list_a722dc7a0b9d2bd7c612e17d969eb1ab6}{Capacity}. Memory is allocated as needed.\\
+\hline
+{\em source\+Index} & Source index in {\itshape list}  to start copying from. {\itshape count}  elements are copied starting at {\itshape source\+Index} .\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TList} & Type of list. This is a type parameter to avoid boxing in case the given list is a struct (such as \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_list}{Input\+Control\+List} itself).\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Out\+Of\+Range\+Exception} & The range of {\itshape count}  and {\itshape source\+Index}  is at least partially outside the range of values available in {\itshape list} .\\
+\hline
+\end{DoxyExceptions}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TList} : {\em IRead\+Only\+List$<$TControl$>$}]\end{description}
+\end{Desc}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_a678a8bfd478bf71b2ac653a16d17a19f}\index{UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_list_a678a8bfd478bf71b2ac653a16d17a19f} 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list}{Unity\+Engine.\+Input\+System.\+Input\+Control\+List}}$<$ TControl $>$.Remove (\begin{DoxyParamCaption}\item[{TControl}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove a control from the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Control to remove. Can be null.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the control was found in the list and removed, false otherwise.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_list_ac533e1dc7180b0b409c4b0475a2c51e3}{Add}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_a54151be1631a6b664f29a02ecaae386f}\index{UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}!RemoveAt@{RemoveAt}}
+\index{RemoveAt@{RemoveAt}!UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}}
+\doxysubsubsection{\texorpdfstring{RemoveAt()}{RemoveAt()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_list_a54151be1631a6b664f29a02ecaae386f} 
+void \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list}{Unity\+Engine.\+Input\+System.\+Input\+Control\+List}}$<$ TControl $>$.Remove\+At (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove the control at the given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of control to remove.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Out\+Of\+Range\+Exception} & {\itshape index}  is negative or equal or greater than \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_list_ad0bb078fdbb6b7b59b704e92e604fb05}{Count}.\\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_ae51f786fc679759ecaa035338da85fa6}\index{UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}!Resize@{Resize}}
+\index{Resize@{Resize}!UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}}
+\doxysubsubsection{\texorpdfstring{Resize()}{Resize()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_list_ae51f786fc679759ecaa035338da85fa6} 
+void \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list}{Unity\+Engine.\+Input\+System.\+Input\+Control\+List}}$<$ TControl $>$.Resize (\begin{DoxyParamCaption}\item[{int}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Resizes the list to be exactly {\itshape size}  entries. If this is less than the current \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_list_ad0bb078fdbb6b7b59b704e92e604fb05}{Count}, additional entries are dropped. If it is more than the current \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_list_ad0bb078fdbb6b7b59b704e92e604fb05}{Count}, additional {\ttfamily null} entries are appended to the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The new value for \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_list_ad0bb078fdbb6b7b59b704e92e604fb05}{Count}.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Out\+Of\+Range\+Exception} & {\itshape size}  is negative.\\
+\hline
+\end{DoxyExceptions}
+
+
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_list_a722dc7a0b9d2bd7c612e17d969eb1ab6}{Capacity} is increased if necessary. It will, however, not be decreased if it is larger than {\itshape size}  entries. \Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_a0a6d04b49a8972ab8ad74a5b9dc6891c}\index{UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}!Sort$<$ TCompare $>$@{Sort$<$ TCompare $>$}}
+\index{Sort$<$ TCompare $>$@{Sort$<$ TCompare $>$}!UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}}
+\doxysubsubsection{\texorpdfstring{Sort$<$ TCompare $>$()}{Sort< TCompare >()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_list_a0a6d04b49a8972ab8ad74a5b9dc6891c} 
+void \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list}{Unity\+Engine.\+Input\+System.\+Input\+Control\+List}}$<$ TControl $>$.Sort$<$ TCompare $>$ (\begin{DoxyParamCaption}\item[{int}]{start\+Index}{, }\item[{int}]{count}{, }\item[{TCompare}]{comparer}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TCompare} : {\em IComparer$<$TControl$>$}]\end{description}
+\end{Desc}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_ac633c97804db9abec4331074bd9096b1}\index{UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}!ToArray@{ToArray}}
+\index{ToArray@{ToArray}!UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}}
+\doxysubsubsection{\texorpdfstring{ToArray()}{ToArray()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_list_ac633c97804db9abec4331074bd9096b1} 
+TControl\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list}{Unity\+Engine.\+Input\+System.\+Input\+Control\+List}}$<$ TControl $>$.To\+Array (\begin{DoxyParamCaption}\item[{bool}]{dispose}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert the contents of the list to an array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dispose} & If true, the control list will be disposed of as part of the operation, i.\+e. Dispose will be called as a side-\/effect.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array mirroring the contents of the list. Not null.
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_a722dc7a0b9d2bd7c612e17d969eb1ab6}\index{UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}!Capacity@{Capacity}}
+\index{Capacity@{Capacity}!UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}}
+\doxysubsubsection{\texorpdfstring{Capacity}{Capacity}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_list_a722dc7a0b9d2bd7c612e17d969eb1ab6} 
+int \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list}{Unity\+Engine.\+Input\+System.\+Input\+Control\+List}}$<$ TControl $>$.Capacity\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Total number of controls that can currently be stored in the list. 
+
+Total size of array as currently allocated.
+
+This can be set ahead of time to avoid repeated allocations.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Add\ all\ keys\ from\ the\ keyboard\ to\ a\ list.}}
+\DoxyCodeLine{var\ keys\ =\ Keyboard.current.allKeys;}
+\DoxyCodeLine{var\ list\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list_a5c91cbc26c48b35167269b2471a652ea}{InputControlList<KeyControl>}}(keys.Count);}
+\DoxyCodeLine{list.AddRange(keys);}
+
+\end{DoxyCode}
+ \Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_ad0bb078fdbb6b7b59b704e92e604fb05}\index{UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}!Count@{Count}}
+\index{Count@{Count}!UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}}
+\doxysubsubsection{\texorpdfstring{Count}{Count}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_list_ad0bb078fdbb6b7b59b704e92e604fb05} 
+int \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list}{Unity\+Engine.\+Input\+System.\+Input\+Control\+List}}$<$ TControl $>$.Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Current number of controls in the list. 
+
+Number of controls currently in the list.\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_a297b08513fd5c67d78835ab35b5c5785}\index{UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}!IsReadOnly@{IsReadOnly}}
+\index{IsReadOnly@{IsReadOnly}!UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}}
+\doxysubsubsection{\texorpdfstring{IsReadOnly}{IsReadOnly}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_list_a297b08513fd5c67d78835ab35b5c5785} 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list}{Unity\+Engine.\+Input\+System.\+Input\+Control\+List}}$<$ TControl $>$.Is\+Read\+Only\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+This is always false. 
+
+Always false.\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_list_ac2952e5c7e0c1276d4f4b47f3fe1e3af}\index{UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}!this\mbox{[}int index\mbox{]}@{this[int index]}}
+\index{this\mbox{[}int index\mbox{]}@{this[int index]}!UnityEngine.InputSystem.InputControlList$<$ TControl $>$@{UnityEngine.InputSystem.InputControlList$<$ TControl $>$}}
+\doxysubsubsection{\texorpdfstring{this[int index]}{this[int index]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_list_ac2952e5c7e0c1276d4f4b47f3fe1e3af} 
+TControl \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list}{Unity\+Engine.\+Input\+System.\+Input\+Control\+List}}$<$ TControl $>$.this\mbox{[}int index\mbox{]}\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Return the control at the given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of control.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Out\+Of\+Range\+Exception} & {\itshape index}  is less than 0 or greater than or equal to \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_list_ad0bb078fdbb6b7b59b704e92e604fb05}{Count} \\
+\hline
+\end{DoxyExceptions}
+
+
+Internally, the list only stores indices. Resolution to \doxylink{}{controls} happens dynamically by looking them up globally. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Controls/Input\+Control\+List.\+cs\end{DoxyCompactItemize}

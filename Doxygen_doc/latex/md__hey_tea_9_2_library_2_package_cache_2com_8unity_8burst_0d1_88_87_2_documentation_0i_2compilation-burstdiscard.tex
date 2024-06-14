@@ -1,0 +1,47 @@
+\chapter{Burst\+Discard attribute}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2compilation-burstdiscard}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2compilation-burstdiscard}\index{BurstDiscard attribute@{BurstDiscard attribute}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2compilation-burstdiscard_autotoc_md300}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2compilation-burstdiscard_autotoc_md300}%
+ If you\textquotesingle{}re running C\# code not inside Burst-\/compiled code, you might want to use managed objects, but not compile these portions of code within \doxylink{namespace_burst}{Burst}. To do this, use the {\ttfamily \mbox{[}Burst\+Discard\mbox{]}} attribute on a method\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{[BurstCompile]}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{struct\ }MyJob\ :\ IJob}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Execute()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Only\ executed\ when\ running\ from\ a\ full\ .NET\ runtime}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ this\ method\ call\ will\ be\ discard\ when\ compiling\ this\ job\ with}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ [BurstCompile]\ attribute}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ MethodToDiscard();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ [BurstDiscard]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ MethodToDiscard(\textcolor{keywordtype}{int}\ arg)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}This\ is\ a\ test:\ \{arg\}"{}});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \texorpdfstring{$>$}{>}\mbox{[}!\+NOTE\mbox{]} \texorpdfstring{$>$}{>}A method with {\ttfamily \mbox{[}Burst\+Discard\mbox{]}} can\textquotesingle{}t have a return value.
+
+You can use a {\ttfamily ref} or {\ttfamily out} parameter, which indicates whether the code is running on \doxylink{namespace_burst}{Burst} or managed\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{[BurstDiscard]}
+\DoxyCodeLine{\textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ SetIfManaged(ref\ \textcolor{keywordtype}{bool}\ b)\ =>\ b\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ IsBurst()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ var\ b\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\ \ \ \ SetIfManaged(ref\ b);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ b;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

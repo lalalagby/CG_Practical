@@ -1,0 +1,27 @@
+\chapter{White Balance}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do45b3250fc179460d0fcdd84809896e7a}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do45b3250fc179460d0fcdd84809896e7a}\index{White Balance@{White Balance}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do45b3250fc179460d0fcdd84809896e7a_autotoc_md2342}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do45b3250fc179460d0fcdd84809896e7a_autotoc_md2342}%
+ The White Balance component applies a white balance effect that removes unrealistic color casts, so that items that would appear white in real life render as white in your final image. You can also use white balance to create an overall colder or warmer feel in the final render.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do45b3250fc179460d0fcdd84809896e7a_autotoc_md2343}{}\doxysection{\texorpdfstring{Using White Balance}{Using White Balance}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do45b3250fc179460d0fcdd84809896e7a_autotoc_md2343}
+{\bfseries{White Balance}} uses the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_volumes}{Volume}{0} framework, so to enable and modify {\bfseries{White Balance}} properties, you must add a {\bfseries{White Balance}} override to a \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_volumes}{Volume}{0} in your Scene. To add {\bfseries{White Balance}} to a Volume\+:
+
+
+\begin{DoxyEnumerate}
+\item In the Scene or Hierarchy view, select a Game\+Object that contains a Volume component to view it in the Inspector.
+\item In the Inspector, navigate to {\bfseries{Add Override \texorpdfstring{$>$}{>} Post-\/processing}} and click on {\bfseries{White Balance}}. URP now applies {\bfseries{White Balance}} to any Camera this Volume affects.
+\end{DoxyEnumerate}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do45b3250fc179460d0fcdd84809896e7a_autotoc_md2344}{}\doxysection{\texorpdfstring{Properties}{Properties}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do45b3250fc179460d0fcdd84809896e7a_autotoc_md2344}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Temperature}}   &Use the slider to set the white balance to a custom color temperature. Higher values result in a warmer color temperature and lower values result in a colder color temperature. See \href{https://en.wikipedia.org/wiki/Color_balance}{\texttt{ Wikipedia\+: Color balance}} for more information about color temperature.    \\\cline{1-2}
+{\bfseries{Tint}}   &Use the slider to compensate for a green or magenta tint.   \\\cline{1-2}
+\end{longtabu}

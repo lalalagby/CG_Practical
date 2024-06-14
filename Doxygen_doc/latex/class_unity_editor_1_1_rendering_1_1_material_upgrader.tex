@@ -1,0 +1,520 @@
+\doxysection{Unity\+Editor.\+Rendering.\+Material\+Upgrader Class Reference}
+\hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader}{}\label{class_unity_editor_1_1_rendering_1_1_material_upgrader}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}
+
+
+Material Upgrader class.  
+
+
+Inheritance diagram for Unity\+Editor.\+Rendering.\+Material\+Upgrader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.886544cm]{class_unity_editor_1_1_rendering_1_1_material_upgrader}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51}{Material\+Property\+Type}} \{ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51aa3e8ae43188ae76d38f414b2bdb0077b}{Texture}}
+, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51a22ae0e2b89e5e3d477f988cc36d3272b}{Float}}
+, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51acb5feb1b7314637725a2e73bdc9f7295}{Color}}
+ \}
+\begin{DoxyCompactList}\small\item\em Type of property to rename. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}} \{ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8a6adf97f83acf6453d4a6a4b1070f3754}{None}} = 0
+, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8adedfb5279a145fee76a2720ba500184a}{Log\+Error\+On\+Non\+Existing\+Property}} = 1
+, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8a17c3c53d026358756bd79472afa85790}{Cleanup\+Non\+Upgraded\+Properties}} = 2
+, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8aacb4b21b9740d0730d09a07a5722878e}{Log\+Message\+When\+No\+Upgrader\+Found}} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em Upgrade Flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+delegate void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a98234da890880f41e988d8c44b3f71b8}{Material\+Finalizer}} (Material mat)
+\begin{DoxyCompactList}\small\item\em Material Upgrader finalizer delegate. \end{DoxyCompactList}\item 
+IRead\+Only\+Dictionary$<$ string, string $>$ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_af0c6f8e80d6b69b479151911a5f495c2}{Get\+Property\+Rename\+Map}} (\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51}{Material\+Property\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Retrieves a collection of renamed parameters of a specific Material\+Property\+Type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a320d09c23a39770795772cf030f0aef6}{Upgrade}} (Material material, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}} flags)
+\begin{DoxyCompactList}\small\item\em Upgrade method. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a62c80501072104c7deb5f603b03dd9ce}{Convert}} (Material src\+Material, Material dst\+Material)
+\begin{DoxyCompactList}\small\item\em Custom material conversion method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a9b14630063e12bdd34bc86e64ba8bceb}{Rename\+Shader}} (string old\+Name, string new\+Name, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a98234da890880f41e988d8c44b3f71b8}{Material\+Finalizer}} finalizer=null)
+\begin{DoxyCompactList}\small\item\em Rename shader. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a0d7dc09f609292bfe091925e4acb77af}{Rename\+Texture}} (string old\+Name, string new\+Name)
+\begin{DoxyCompactList}\small\item\em Rename Texture Parameter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a2a9b4da70759e4d5d8b595d28dc37289}{Rename\+Float}} (string old\+Name, string new\+Name)
+\begin{DoxyCompactList}\small\item\em Rename Float Parameter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_aff5da4e0aae4321e3f975216937b5345}{Rename\+Color}} (string old\+Name, string new\+Name)
+\begin{DoxyCompactList}\small\item\em Rename Color Parameter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a60a2c90e0a82a6b73ff4081e06a3fb32}{Remove\+Texture}} (string name)
+\begin{DoxyCompactList}\small\item\em Remove Texture Parameter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a0467b661019b8d65ec8314e0f526f98e}{Set\+Float}} (string property\+Name, float value)
+\begin{DoxyCompactList}\small\item\em Set float property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a9c20b05aa0a8b29d9d6806b6ee1a0684}{Set\+Color}} (string property\+Name, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51acb5feb1b7314637725a2e73bdc9f7295}{Color}} value)
+\begin{DoxyCompactList}\small\item\em Set color property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_ac4257426897f3b9886a499153398afb4}{Set\+Texture}} (string property\+Name, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51aa3e8ae43188ae76d38f414b2bdb0077b}{Texture}} value)
+\begin{DoxyCompactList}\small\item\em Set texture property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a8f1fd4f68774f41868984368d1f5126d}{Rename\+Keyword\+To\+Float}} (string old\+Name, string new\+Name, float set\+Val, float unset\+Val)
+\begin{DoxyCompactList}\small\item\em Rename a keyword to float. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a1832602e3a534a9a2984362a24a63796}{Upgrade\+Project\+Folder}} (List$<$ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Material\+Upgrader}} $>$ upgraders, string progress\+Bar\+Name, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}} flags=\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8a6adf97f83acf6453d4a6a4b1070f3754}{Upgrade\+Flags.\+None}})
+\begin{DoxyCompactList}\small\item\em Upgrade the project folder. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a2f0d2139ae69be45475de2bf20709506}{Upgrade\+Project\+Folder}} (List$<$ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Material\+Upgrader}} $>$ upgraders, Hash\+Set$<$ string $>$ shader\+Names\+To\+Ignore, string progress\+Bar\+Name, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}} flags=\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8a6adf97f83acf6453d4a6a4b1070f3754}{Upgrade\+Flags.\+None}})
+\begin{DoxyCompactList}\small\item\em Upgrade the project folder. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a5ec367f95189095c37a9deee6dcec533}{Upgrade}} (Material material, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Material\+Upgrader}} upgrader, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}} flags)
+\begin{DoxyCompactList}\small\item\em Upgrade a material. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_ab1ae60ee10b5d6507175d9e64b7038a1}{Upgrade}} (Material material, List$<$ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Material\+Upgrader}} $>$ upgraders, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}} flags)
+\begin{DoxyCompactList}\small\item\em Upgrade a material. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_aae262b25520e3c9d41b3337d9dbfd73f}{Upgrade}} (Material material, List$<$ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Material\+Upgrader}} $>$ upgraders, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}} flags, ref string message)
+\begin{DoxyCompactList}\small\item\em Upgrade a material. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a782192367d0a93d3064be96e93796557}{Upgrade\+Selection}} (List$<$ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Material\+Upgrader}} $>$ upgraders, string progress\+Bar\+Name, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}} flags=\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8a6adf97f83acf6453d4a6a4b1070f3754}{Upgrade\+Flags.\+None}})
+\begin{DoxyCompactList}\small\item\em Upgrade the selection. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_abc05774981e1420dba2e4781ba6f5eea}{Upgrade\+Selection}} (List$<$ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Material\+Upgrader}} $>$ upgraders, Hash\+Set$<$ string $>$ shader\+Names\+To\+Ignore, string progress\+Bar\+Name, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}} flags=\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8a6adf97f83acf6453d4a6a4b1070f3754}{Upgrade\+Flags.\+None}})
+\begin{DoxyCompactList}\small\item\em Upgrade the selection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_a9dedfd9b449426ba386242f82ce04781}\label{class_unity_editor_1_1_rendering_1_1_material_upgrader_a9dedfd9b449426ba386242f82ce04781} 
+string {\bfseries New\+Shader\+Path}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Retrieves path to new shader. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Material Upgrader class. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!MaterialPropertyType@{MaterialPropertyType}}
+\index{MaterialPropertyType@{MaterialPropertyType}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{MaterialPropertyType}{MaterialPropertyType}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51} 
+enum \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51}{Unity\+Editor.\+Rendering.\+Material\+Upgrader.\+Material\+Property\+Type}}}
+
+
+
+Type of property to rename. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Texture@{Texture}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!Texture@{Texture}}}\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51aa3e8ae43188ae76d38f414b2bdb0077b}\label{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51} 
+Texture&Texture reference property. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Float@{Float}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!Float@{Float}}}\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51a22ae0e2b89e5e3d477f988cc36d3272b}\label{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51} 
+Float&Float property. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Color@{Color}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!Color@{Color}}}\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51acb5feb1b7314637725a2e73bdc9f7295}\label{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51} 
+Color&Color property. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!UpgradeFlags@{UpgradeFlags}}
+\index{UpgradeFlags@{UpgradeFlags}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{UpgradeFlags}{UpgradeFlags}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8} 
+enum \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Unity\+Editor.\+Rendering.\+Material\+Upgrader.\+Upgrade\+Flags}}}
+
+
+
+Upgrade Flags. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!None@{None}}}\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8a6adf97f83acf6453d4a6a4b1070f3754}\label{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8} 
+None&None. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LogErrorOnNonExistingProperty@{LogErrorOnNonExistingProperty}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!LogErrorOnNonExistingProperty@{LogErrorOnNonExistingProperty}}}\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8adedfb5279a145fee76a2720ba500184a}\label{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8} 
+Log\+Error\+On\+Non\+Existing\+Property&Log\+Error\+On\+Non\+Existing\+Property. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CleanupNonUpgradedProperties@{CleanupNonUpgradedProperties}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!CleanupNonUpgradedProperties@{CleanupNonUpgradedProperties}}}\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8a17c3c53d026358756bd79472afa85790}\label{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8} 
+Cleanup\+Non\+Upgraded\+Properties&Cleanup\+Non\+Upgraded\+Properties. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LogMessageWhenNoUpgraderFound@{LogMessageWhenNoUpgraderFound}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!LogMessageWhenNoUpgraderFound@{LogMessageWhenNoUpgraderFound}}}\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8aacb4b21b9740d0730d09a07a5722878e}\label{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8} 
+Log\+Message\+When\+No\+Upgrader\+Found&Log\+Message\+When\+No\+Upgrader\+Found. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_a62c80501072104c7deb5f603b03dd9ce}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!Convert@{Convert}}
+\index{Convert@{Convert}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{Convert()}{Convert()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_upgrader_a62c80501072104c7deb5f603b03dd9ce} 
+virtual void Unity\+Editor.\+Rendering.\+Material\+Upgrader.\+Convert (\begin{DoxyParamCaption}\item[{Material}]{src\+Material}{, }\item[{Material}]{dst\+Material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Custom material conversion method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src\+Material} & Source material.\\
+\hline
+{\em dst\+Material} & Destination material.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_universal_1_1_autodesk_interactive_upgrader_aa3d20e20f5b2e3b48ab747866ea2c4bb}{Unity\+Editor.\+Rendering.\+Universal.\+Autodesk\+Interactive\+Upgrader}}.
+
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_af0c6f8e80d6b69b479151911a5f495c2}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!GetPropertyRenameMap@{GetPropertyRenameMap}}
+\index{GetPropertyRenameMap@{GetPropertyRenameMap}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{GetPropertyRenameMap()}{GetPropertyRenameMap()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_upgrader_af0c6f8e80d6b69b479151911a5f495c2} 
+IRead\+Only\+Dictionary$<$ string, string $>$ Unity\+Editor.\+Rendering.\+Material\+Upgrader.\+Get\+Property\+Rename\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51}{Material\+Property\+Type}}}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves a collection of renamed parameters of a specific Material\+Property\+Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Material Property Type\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Dictionary of property names to their renamed values.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & type is not valid.\\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_a98234da890880f41e988d8c44b3f71b8}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!MaterialFinalizer@{MaterialFinalizer}}
+\index{MaterialFinalizer@{MaterialFinalizer}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{MaterialFinalizer()}{MaterialFinalizer()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_upgrader_a98234da890880f41e988d8c44b3f71b8} 
+delegate void Unity\+Editor.\+Rendering.\+Material\+Upgrader.\+Material\+Finalizer (\begin{DoxyParamCaption}\item[{Material}]{mat}{}\end{DoxyParamCaption})}
+
+
+
+Material Upgrader finalizer delegate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat} & Material\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_a60a2c90e0a82a6b73ff4081e06a3fb32}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!RemoveTexture@{RemoveTexture}}
+\index{RemoveTexture@{RemoveTexture}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{RemoveTexture()}{RemoveTexture()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_upgrader_a60a2c90e0a82a6b73ff4081e06a3fb32} 
+void Unity\+Editor.\+Rendering.\+Material\+Upgrader.\+Remove\+Texture (\begin{DoxyParamCaption}\item[{string}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove Texture Parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Parameter name.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_aff5da4e0aae4321e3f975216937b5345}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!RenameColor@{RenameColor}}
+\index{RenameColor@{RenameColor}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{RenameColor()}{RenameColor()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_upgrader_aff5da4e0aae4321e3f975216937b5345} 
+void Unity\+Editor.\+Rendering.\+Material\+Upgrader.\+Rename\+Color (\begin{DoxyParamCaption}\item[{string}]{old\+Name}{, }\item[{string}]{new\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rename Color Parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em old\+Name} & Old name.\\
+\hline
+{\em new\+Name} & New name.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_a2a9b4da70759e4d5d8b595d28dc37289}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!RenameFloat@{RenameFloat}}
+\index{RenameFloat@{RenameFloat}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{RenameFloat()}{RenameFloat()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_upgrader_a2a9b4da70759e4d5d8b595d28dc37289} 
+void Unity\+Editor.\+Rendering.\+Material\+Upgrader.\+Rename\+Float (\begin{DoxyParamCaption}\item[{string}]{old\+Name}{, }\item[{string}]{new\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rename Float Parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em old\+Name} & Old name.\\
+\hline
+{\em new\+Name} & New name.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_a8f1fd4f68774f41868984368d1f5126d}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!RenameKeywordToFloat@{RenameKeywordToFloat}}
+\index{RenameKeywordToFloat@{RenameKeywordToFloat}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{RenameKeywordToFloat()}{RenameKeywordToFloat()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_upgrader_a8f1fd4f68774f41868984368d1f5126d} 
+void Unity\+Editor.\+Rendering.\+Material\+Upgrader.\+Rename\+Keyword\+To\+Float (\begin{DoxyParamCaption}\item[{string}]{old\+Name}{, }\item[{string}]{new\+Name}{, }\item[{float}]{set\+Val}{, }\item[{float}]{unset\+Val}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rename a keyword to float. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em old\+Name} & Old name.\\
+\hline
+{\em new\+Name} & New name.\\
+\hline
+{\em set\+Val} & Value when set.\\
+\hline
+{\em unset\+Val} & Value when unset.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_a9b14630063e12bdd34bc86e64ba8bceb}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!RenameShader@{RenameShader}}
+\index{RenameShader@{RenameShader}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{RenameShader()}{RenameShader()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_upgrader_a9b14630063e12bdd34bc86e64ba8bceb} 
+void Unity\+Editor.\+Rendering.\+Material\+Upgrader.\+Rename\+Shader (\begin{DoxyParamCaption}\item[{string}]{old\+Name}{, }\item[{string}]{new\+Name}{, }\item[{\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a98234da890880f41e988d8c44b3f71b8}{Material\+Finalizer}}}]{finalizer}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rename shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em old\+Name} & Old name.\\
+\hline
+{\em new\+Name} & New name.\\
+\hline
+{\em finalizer} & Finalizer delegate.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_a0d7dc09f609292bfe091925e4acb77af}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!RenameTexture@{RenameTexture}}
+\index{RenameTexture@{RenameTexture}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{RenameTexture()}{RenameTexture()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_upgrader_a0d7dc09f609292bfe091925e4acb77af} 
+void Unity\+Editor.\+Rendering.\+Material\+Upgrader.\+Rename\+Texture (\begin{DoxyParamCaption}\item[{string}]{old\+Name}{, }\item[{string}]{new\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rename Texture Parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em old\+Name} & Old name.\\
+\hline
+{\em new\+Name} & New name.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_a9c20b05aa0a8b29d9d6806b6ee1a0684}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!SetColor@{SetColor}}
+\index{SetColor@{SetColor}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{SetColor()}{SetColor()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_upgrader_a9c20b05aa0a8b29d9d6806b6ee1a0684} 
+void Unity\+Editor.\+Rendering.\+Material\+Upgrader.\+Set\+Color (\begin{DoxyParamCaption}\item[{string}]{property\+Name}{, }\item[{\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51acb5feb1b7314637725a2e73bdc9f7295}{Color}}}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set color property. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & Property name.\\
+\hline
+{\em value} & Property value.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_a0467b661019b8d65ec8314e0f526f98e}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!SetFloat@{SetFloat}}
+\index{SetFloat@{SetFloat}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{SetFloat()}{SetFloat()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_upgrader_a0467b661019b8d65ec8314e0f526f98e} 
+void Unity\+Editor.\+Rendering.\+Material\+Upgrader.\+Set\+Float (\begin{DoxyParamCaption}\item[{string}]{property\+Name}{, }\item[{float}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set float property. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & Property name.\\
+\hline
+{\em value} & Property value.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_ac4257426897f3b9886a499153398afb4}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!SetTexture@{SetTexture}}
+\index{SetTexture@{SetTexture}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{SetTexture()}{SetTexture()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_upgrader_ac4257426897f3b9886a499153398afb4} 
+void Unity\+Editor.\+Rendering.\+Material\+Upgrader.\+Set\+Texture (\begin{DoxyParamCaption}\item[{string}]{property\+Name}{, }\item[{\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51aa3e8ae43188ae76d38f414b2bdb0077b}{Texture}}}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set texture property. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & Property name.\\
+\hline
+{\em value} & Property value.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_ab1ae60ee10b5d6507175d9e64b7038a1}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!Upgrade@{Upgrade}}
+\index{Upgrade@{Upgrade}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{Upgrade()}{Upgrade()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_upgrader_ab1ae60ee10b5d6507175d9e64b7038a1} 
+static void Unity\+Editor.\+Rendering.\+Material\+Upgrader.\+Upgrade (\begin{DoxyParamCaption}\item[{Material}]{material}{, }\item[{List$<$ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Material\+Upgrader}} $>$}]{upgraders}{, }\item[{\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}}}]{flags}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Upgrade a material. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & Material to upgrade.\\
+\hline
+{\em upgraders} & List of Material upgraders.\\
+\hline
+{\em flags} & Material Upgrader flags.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_aae262b25520e3c9d41b3337d9dbfd73f}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!Upgrade@{Upgrade}}
+\index{Upgrade@{Upgrade}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{Upgrade()}{Upgrade()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_upgrader_aae262b25520e3c9d41b3337d9dbfd73f} 
+static bool Unity\+Editor.\+Rendering.\+Material\+Upgrader.\+Upgrade (\begin{DoxyParamCaption}\item[{Material}]{material}{, }\item[{List$<$ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Material\+Upgrader}} $>$}]{upgraders}{, }\item[{\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}}}]{flags}{, }\item[{ref string}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Upgrade a material. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & Material to upgrade.\\
+\hline
+{\em upgraders} & List of Material upgraders.\\
+\hline
+{\em flags} & Material upgrader flags.\\
+\hline
+{\em message} & Error message to be outputted when no material upgraders are suitable for given material if the flags \doxylink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8aacb4b21b9740d0730d09a07a5722878e}{Upgrade\+Flags.\+Log\+Message\+When\+No\+Upgrader\+Found} is used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the upgrader was found for the passed in material.
+\end{DoxyReturn}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_a5ec367f95189095c37a9deee6dcec533}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!Upgrade@{Upgrade}}
+\index{Upgrade@{Upgrade}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{Upgrade()}{Upgrade()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_upgrader_a5ec367f95189095c37a9deee6dcec533} 
+static void Unity\+Editor.\+Rendering.\+Material\+Upgrader.\+Upgrade (\begin{DoxyParamCaption}\item[{Material}]{material}{, }\item[{\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Material\+Upgrader}}}]{upgrader}{, }\item[{\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}}}]{flags}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Upgrade a material. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & Material to upgrade.\\
+\hline
+{\em upgrader} & Material upgrader.\\
+\hline
+{\em flags} & Material Upgrader flags.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_a320d09c23a39770795772cf030f0aef6}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!Upgrade@{Upgrade}}
+\index{Upgrade@{Upgrade}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{Upgrade()}{Upgrade()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_upgrader_a320d09c23a39770795772cf030f0aef6} 
+void Unity\+Editor.\+Rendering.\+Material\+Upgrader.\+Upgrade (\begin{DoxyParamCaption}\item[{Material}]{material}{, }\item[{\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}}}]{flags}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Upgrade method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & Material to upgrade.\\
+\hline
+{\em flags} & Upgrade flag\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_a2f0d2139ae69be45475de2bf20709506}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!UpgradeProjectFolder@{UpgradeProjectFolder}}
+\index{UpgradeProjectFolder@{UpgradeProjectFolder}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{UpgradeProjectFolder()}{UpgradeProjectFolder()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_upgrader_a2f0d2139ae69be45475de2bf20709506} 
+static void Unity\+Editor.\+Rendering.\+Material\+Upgrader.\+Upgrade\+Project\+Folder (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Material\+Upgrader}} $>$}]{upgraders}{, }\item[{Hash\+Set$<$ string $>$}]{shader\+Names\+To\+Ignore}{, }\item[{string}]{progress\+Bar\+Name}{, }\item[{\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}}}]{flags}{ = {\ttfamily \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8a6adf97f83acf6453d4a6a4b1070f3754}{Upgrade\+Flags\+::\+None}}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Upgrade the project folder. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em upgraders} & List of upgraders.\\
+\hline
+{\em shader\+Names\+To\+Ignore} & Set of shader names to ignore.\\
+\hline
+{\em progress\+Bar\+Name} & Name of the progress bar.\\
+\hline
+{\em flags} & Material Upgrader flags.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_a1832602e3a534a9a2984362a24a63796}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!UpgradeProjectFolder@{UpgradeProjectFolder}}
+\index{UpgradeProjectFolder@{UpgradeProjectFolder}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{UpgradeProjectFolder()}{UpgradeProjectFolder()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_upgrader_a1832602e3a534a9a2984362a24a63796} 
+static void Unity\+Editor.\+Rendering.\+Material\+Upgrader.\+Upgrade\+Project\+Folder (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Material\+Upgrader}} $>$}]{upgraders}{, }\item[{string}]{progress\+Bar\+Name}{, }\item[{\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}}}]{flags}{ = {\ttfamily \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8a6adf97f83acf6453d4a6a4b1070f3754}{Upgrade\+Flags\+::\+None}}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Upgrade the project folder. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em upgraders} & List of upgraders.\\
+\hline
+{\em progress\+Bar\+Name} & Name of the progress bar.\\
+\hline
+{\em flags} & Material Upgrader flags.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_abc05774981e1420dba2e4781ba6f5eea}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!UpgradeSelection@{UpgradeSelection}}
+\index{UpgradeSelection@{UpgradeSelection}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{UpgradeSelection()}{UpgradeSelection()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_upgrader_abc05774981e1420dba2e4781ba6f5eea} 
+static void Unity\+Editor.\+Rendering.\+Material\+Upgrader.\+Upgrade\+Selection (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Material\+Upgrader}} $>$}]{upgraders}{, }\item[{Hash\+Set$<$ string $>$}]{shader\+Names\+To\+Ignore}{, }\item[{string}]{progress\+Bar\+Name}{, }\item[{\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}}}]{flags}{ = {\ttfamily \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8a6adf97f83acf6453d4a6a4b1070f3754}{Upgrade\+Flags\+::\+None}}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Upgrade the selection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em upgraders} & List of upgraders.\\
+\hline
+{\em shader\+Names\+To\+Ignore} & Set of shader names to ignore.\\
+\hline
+{\em progress\+Bar\+Name} & Name of the progress bar.\\
+\hline
+{\em flags} & Material Upgrader flags.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_upgrader_a782192367d0a93d3064be96e93796557}\index{UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}!UpgradeSelection@{UpgradeSelection}}
+\index{UpgradeSelection@{UpgradeSelection}!UnityEditor.Rendering.MaterialUpgrader@{UnityEditor.Rendering.MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{UpgradeSelection()}{UpgradeSelection()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_upgrader_a782192367d0a93d3064be96e93796557} 
+static void Unity\+Editor.\+Rendering.\+Material\+Upgrader.\+Upgrade\+Selection (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Material\+Upgrader}} $>$}]{upgraders}{, }\item[{string}]{progress\+Bar\+Name}{, }\item[{\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}}}]{flags}{ = {\ttfamily \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8a6adf97f83acf6453d4a6a4b1070f3754}{Upgrade\+Flags\+::\+None}}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Upgrade the selection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em upgraders} & List of upgraders.\\
+\hline
+{\em progress\+Bar\+Name} & Name of the progress bar.\\
+\hline
+{\em flags} & Material Upgrader flags.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Editor/Material\+Upgrader.\+cs\end{DoxyCompactItemize}

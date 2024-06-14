@@ -1,0 +1,75 @@
+\chapter{Filtering impulses}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_filtering}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_filtering}\index{Filtering impulses@{Filtering impulses}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_filtering_autotoc_md688}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_filtering_autotoc_md688}%
+ Filtering lets you fine-\/tune how and when an Impulse Source generates impulses. \doxylink{namespace_cinemachine}{Cinemachine} Impulse allows two types of filtering\+:
+
+
+\begin{DoxyItemize}
+\item Use channel filtering to set things up so that an Impulse Listener reacts to certain Impulse Sources and ignores others. See \doxylink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_filtering_ChannelFiltering}{Filtering with channels} below for details.
+\item Use Trigger Object Filtering with Collision Impulse Sources to set things up so that only certain Game\+Objects trigger an impulse. See \doxylink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_filtering_TriggerObjectFiltering}{Filtering with layers and tags} for details.
+\end{DoxyItemize}
+
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_filtering_ChannelFiltering}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_filtering_ChannelFiltering}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_filtering_autotoc_md689}{}\doxysection{\texorpdfstring{Filtering with channels}{Filtering with channels}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_filtering_autotoc_md689}
+By default, every Impulse Listener reacts to every Impulse Source within range. Channels allow you to more precisely control which Impulse Sources an Impulse Listener reacts to. To set up channel filtering, you need to do three things\+:
+
+
+\begin{DoxyItemize}
+\item Set up your channels
+\item Set your Impulse Sources to broadcast on one or more channels
+\item Set your Impulse Listeners to listen to one or more channels
+\end{DoxyItemize}
+
+When an Impulse Listener is listening to specific channels, it only reacts to Impulse Sources that broadcast on those channels.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_filtering_autotoc_md690}{}\doxysubsection{\texorpdfstring{Adding channels}{Adding channels}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_filtering_autotoc_md690}
+The {\bfseries{Cinemachine\+Impulse\+Channels}} script creates channels in your Scene. It has one channel by default, and you can add as many new channels as you need, up to a maximum of 31.
+
+To add new channels\+:
+
+
+\begin{DoxyEnumerate}
+\item Inspect the {\bfseries{Cinemachine\+Impulse\+Channels}} ({\bfseries{Impulse Channel \texorpdfstring{$>$}{>} Edit}}) script by doing one of the following\+:
+\begin{DoxyItemize}
+\item In the \doxylink{namespace_cinemachine}{Cinemachine} Impulse Listener inspector, navigate to the {\bfseries{Channel Mask}} drop-\/down and click the {\bfseries{Edit}} button next to it.
+\item In the \doxylink{namespace_cinemachine}{Cinemachine} Impulse Source or \doxylink{namespace_cinemachine}{Cinemachine} Collision Impulse Source inspector, navigate to the {\bfseries{Impulse Channel}} drop-\/down and click the {\bfseries{Edit}} button next to it.
+\end{DoxyItemize}
+\item Expand the {\bfseries{Impulse Channels}} property group and set the {\bfseries{Size}} property to the number of channels you want. A new entry appears for each channel.
+\item Rename your new channels.
+
+
+
+Channels are available from the channel drop-\/down in the Inspector as soon as you add them.
+\end{DoxyEnumerate}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_filtering_autotoc_md691}{}\doxysubsection{\texorpdfstring{Setting listen / broadcast channels}{Setting listen / broadcast channels}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_filtering_autotoc_md691}
+After setting up your channels, you need to define how your Impulse Listeners and Impulse Sources use them.
+
+
+\begin{DoxyItemize}
+\item Inspect each Impulse Listener, and choose the channels you want it to listen to from the {\bfseries{Channel Mask}} drop-\/down.
+
+
+\item Inspect each Impulse Source or Collision Impulse Source, and choose the channels you want it to broadcast on from the {\bfseries{Impulse Channel}} drop-\/down.
+
+
+
+You can select multiple filters from the drop down. You can also choose {\bfseries{Everything}} to use all filters, or {\bfseries{Nothing}} to use none of them.
+\end{DoxyItemize}
+
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_filtering_TriggerObjectFiltering}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_filtering_TriggerObjectFiltering}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_filtering_autotoc_md692}{}\doxysection{\texorpdfstring{Filtering with layers and tags}{Filtering with layers and tags}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_filtering_autotoc_md692}
+You can use Unity’s \href{https://docs.unity3d.com/Manual/Layers.html}{\texttt{ Layers}} and \href{https://docs.unity3d.com/Manual/Tags.html}{\texttt{ Tags}} to specify which Game\+Objects trigger an impulse when they collide with a Collision Impulse Source, or enter a trigger zone. This is called {\bfseries{Trigger Object Filtering}}.
+
+The \doxylink{namespace_cinemachine}{Cinemachine} Collision Impulse Source component has two {\bfseries{Trigger Object Filter}} properties\+:
+
+
+\begin{DoxyItemize}
+\item The {\bfseries{Layer Mask}} drop-\/down lists all of the Scene’s layers. When you select one or more layers, Game\+Objects in those layers trigger impulses when they collide with the Impulse Source. The Impulse Source ignores collisions with Game\+Objects on other layers.
+\item The {\bfseries{Ignore Tag}} drop-\/down lists all of the Scene’s tags. When you select a tag, Game\+Objects with that tag do not trigger impulses when they collide with the Impulse Source, even if they are in a layer specified in Layer Mask.
+\end{DoxyItemize}
+
+For example, in a Scene where a large animal is lumbering through a forest, you might want the camera to shake when it collides with large trees, but not small saplings.
+
+One way to set that up would be to make the animal a Collision Impulse Source, put all of the large trees on their own layer, and select that as the Layer Mask.
+
+If all of the trees, large ones and saplings alike, are already on the same layer, you could assign a special tag to the saplings, and use the {\bfseries{Ignore Tag}} property to filter them out. 

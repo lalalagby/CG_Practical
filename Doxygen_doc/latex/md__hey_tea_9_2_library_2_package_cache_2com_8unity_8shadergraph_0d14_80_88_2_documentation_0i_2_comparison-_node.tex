@@ -1,0 +1,107 @@
+\chapter{Comparison Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_comparison-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_comparison-_node}\index{Comparison Node@{Comparison Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_comparison-_node_autotoc_md3062}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_comparison-_node_autotoc_md3062}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_comparison-_node_autotoc_md3063}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_comparison-_node_autotoc_md3063}
+Compares the two input values {\bfseries{A}} and {\bfseries{B}} based on the condition selected on the dropdown. This is often used as an input to the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_branch-_node}{Branch Node}{0}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_comparison-_node_autotoc_md3064}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_comparison-_node_autotoc_md3064}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+A   &Input   &Float   &None   &First input value    \\\cline{1-5}
+B   &Input   &Float   &None   &Second input value    \\\cline{1-5}
+Out   &Output   &Boolean   &None   &Output value   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_comparison-_node_autotoc_md3065}{}\doxysection{\texorpdfstring{Controls}{Controls}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_comparison-_node_autotoc_md3065}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endhead
+&Dropdown   &Equal, Not\+Equal, Less, Less\+Or\+Equal, Greater, Greater\+Or\+Equal   &Condition for comparison   \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_comparison-_node_autotoc_md3066}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_comparison-_node_autotoc_md3066}
+The following example code represents one possible outcome of this node per comparison type.
+
+{\bfseries{Equal}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Comparison\_Equal\_float(float\ A,\ float\ B,\ out\ float\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ A\ ==\ B\ ?\ 1\ :\ 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Not\+Equal}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Comparison\_NotEqual\_float(float\ A,\ float\ B,\ out\ float\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ A\ !=\ B\ ?\ 1\ :\ 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Less}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Comparison\_Less\_float(float\ A,\ float\ B,\ out\ float\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ A\ <\ B\ ?\ 1\ :\ 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Less\+Or\+Equal}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Comparison\_LessOrEqual\_float(float\ A,\ float\ B,\ out\ float\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ A\ <=\ B\ ?\ 1\ :\ 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Greater}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Comparison\_Greater\_float(float\ A,\ float\ B,\ out\ float\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ A\ >\ B\ ?\ 1\ :\ 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Greater\+Or\+Equal}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Comparison\_GreaterOrEqual\_float(float\ A,\ float\ B,\ out\ float\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ A\ >=\ B\ ?\ 1\ :\ 0;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

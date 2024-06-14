@@ -1,0 +1,222 @@
+\doxysection{Cinemachine Namespace Reference}
+\hypertarget{namespace_cinemachine}{}\label{namespace_cinemachine}\index{Cinemachine@{Cinemachine}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_cinemachine_1_1_axis_base}{Axis\+Base}}
+\begin{DoxyCompactList}\small\item\em Alternative to \doxylink{struct_cinemachine_1_1_axis_state}{Axis\+State} -\/ a simplified structure to hold the definition of an input axis. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_cinemachine_1_1_axis_state}{Axis\+State}}
+\begin{DoxyCompactList}\small\item\em Axis state for defining how to react to player input. The settings here control the responsiveness of the axis to player input. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_axis_state_property_attribute}{Axis\+State\+Property\+Attribute}}
+\begin{DoxyCompactList}\small\item\em Property applied to \doxylink{struct_cinemachine_1_1_axis_state}{Axis\+State}. Used for custom drawing in the inspector. \end{DoxyCompactList}\item 
+class {\bfseries Blend\+Source\+Virtual\+Camera}
+\begin{DoxyCompactList}\small\item\em Blend result source for blending. This exposes a \doxylink{class_cinemachine_1_1_cinemachine_blend}{Cinemachine\+Blend} object as an ersatz virtual camera for the purposes of blending. This achieves the purpose of blending the result oif a blend. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}}
+\begin{DoxyCompactList}\small\item\em The output of the \doxylink{namespace_cinemachine}{Cinemachine} engine for a specific virtual camera. The information in this struct can be blended, and provides what is needed to calculate an appropriate camera position, orientation, and lens setting. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine3rd_person_aim}{Cinemachine3rd\+Person\+Aim}}
+\begin{DoxyCompactList}\small\item\em An add-\/on module for \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera that forces the Look\+At point to the center of the screen, based on the Follow target\textquotesingle{}s orientation, cancelling noise and other corrections. This is useful for third-\/person style aim cameras that want a dead-\/accurate aim at all times, even in the presence of positional or rotational noise. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine3rd_person_follow}{Cinemachine3rd\+Person\+Follow}}
+\begin{DoxyCompactList}\small\item\em Third-\/person follower, with complex pivoting\+: horizontal about the origin, vertical about the shoulder. ~\newline
+ \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_basic_multi_channel_perlin}{Cinemachine\+Basic\+Multi\+Channel\+Perlin}}
+\begin{DoxyCompactList}\small\item\em As a part of the \doxylink{namespace_cinemachine}{Cinemachine} Pipeline implementing the Noise stage, this component adds Perlin Noise to the Camera state, in the Correction channel of the \doxylink{struct_cinemachine_1_1_camera_state}{Camera\+State}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_blend}{Cinemachine\+Blend}}
+\begin{DoxyCompactList}\small\item\em Describes a blend between 2 \doxylink{namespace_cinemachine}{Cinemachine} Virtual Cameras, and holds the current state of the blend. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_blend_definition}{Cinemachine\+Blend\+Definition}}
+\begin{DoxyCompactList}\small\item\em Definition of a Camera blend. This struct holds the information necessary to generate a suitable Animation\+Curve for a \doxylink{namespace_cinemachine}{Cinemachine} Blend. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_blend_definition_property_attribute}{Cinemachine\+Blend\+Definition\+Property\+Attribute}}
+\begin{DoxyCompactList}\small\item\em Property applied to \doxylink{struct_cinemachine_1_1_cinemachine_blend_definition}{Cinemachine\+Blend\+Definition}. Used for custom drawing in the inspector. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_blender_settings}{Cinemachine\+Blender\+Settings}}
+\begin{DoxyCompactList}\small\item\em Asset that defines the rules for blending between Virtual Cameras. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_blend_list_camera}{Cinemachine\+Blend\+List\+Camera}}
+\begin{DoxyCompactList}\small\item\em This is a virtual camera "{}manager"{} that owns and manages a collection of child Virtual Cameras. When the camera goes live, these child vcams are enabled, one after another, holding each camera for a designated time. Blends between cameras are specified. The last camera is held indefinitely. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain} is the link between the \doxylink{namespace_unity}{Unity} Camera and the \doxylink{namespace_cinemachine}{Cinemachine} Virtual Cameras in the scene. It monitors the priority stack to choose the current Virtual Camera, and blend with another if necessary. Finally and most importantly, it applies the Virtual Camera state to the attached \doxylink{namespace_unity}{Unity} Camera. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_clear_shot}{Cinemachine\+Clear\+Shot}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_cinemachine}{Cinemachine} Clear\+Shot is a "{}manager camera"{} that owns and manages a set of Virtual Camera game\+Object children. When Live, the Clear\+Shot will check the children, and choose the one with the best quality shot and make it Live. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_collider}{Cinemachine\+Collider}}
+\begin{DoxyCompactList}\small\item\em An add-\/on module for \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera that post-\/processes the final position of the virtual camera. Based on the supplied settings, the Collider will attempt to preserve the line of sight with the Look\+At target of the virtual camera by moving away from objects that will obstruct the view. \end{DoxyCompactList}\item 
+class {\bfseries Cinemachine\+Collider\+Prefs}
+\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_collision_impulse_source}{Cinemachine\+Collision\+Impulse\+Source}}
+\begin{DoxyCompactList}\small\item\em Generate an Impulse Event this object\textquotesingle{}s Collider collides with something or its trigger zone is entered. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base}{Cinemachine\+Component\+Base}}
+\begin{DoxyCompactList}\small\item\em An abstract representation of a mutator acting on a \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_composer}{Cinemachine\+Composer}}
+\begin{DoxyCompactList}\small\item\em This is a Cinemachine\+Component in the Aim section of the component pipeline. Its job is to aim the camera at the vcam\textquotesingle{}s Look\+At target object, with configurable offsets, damping, and composition rules. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_confiner}{Cinemachine\+Confiner}}
+\begin{DoxyCompactList}\small\item\em An add-\/on module for \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera that post-\/processes the final position of the virtual camera. It will confine the virtual camera\textquotesingle{}s position to the volume specified in the Bounding Volume field. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_confiner2_d}{Cinemachine\+Confiner2D}}
+\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core}{Cinemachine\+Core}}
+\begin{DoxyCompactList}\small\item\em A singleton that manages complete lists of \doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain} and, \doxylink{namespace_cinemachine}{Cinemachine} Virtual Cameras, and the priority queue. Provides services to keeping track of whether \doxylink{namespace_cinemachine}{Cinemachine} Virtual Cameras have been updated each frame. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_dolly_cart}{Cinemachine\+Dolly\+Cart}}
+\begin{DoxyCompactList}\small\item\em This is a very simple behaviour that constrains its transform to a \doxylink{class_cinemachine_1_1_cinemachine_path}{Cinemachine\+Path}. ~\newline
+ It can be used to animate any objects along a path, or as a Follow target for \doxylink{namespace_cinemachine}{Cinemachine} Virtual Cameras. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_embedded_asset_property_attribute}{Cinemachine\+Embedded\+Asset\+Property\+Attribute}}
+\begin{DoxyCompactList}\small\item\em Used for custom drawing in the inspector. Inspector will show a foldout with the asset contents. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension}{Cinemachine\+Extension}}
+\begin{DoxyCompactList}\small\item\em Base class for a \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera extension module. Hooks into the \doxylink{namespace_cinemachine}{Cinemachine} Pipeline. Use this to add extra processing to the vcam, modifying its generated state. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_external_camera}{Cinemachine\+External\+Camera}}
+\begin{DoxyCompactList}\small\item\em This component will expose a non-\/cinemachine camera to the cinemachine system, allowing it to participate in blends. Just add it as a component alongside an existing \doxylink{namespace_unity}{Unity} Camera component. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_fixed_signal}{Cinemachine\+Fixed\+Signal}}
+\begin{DoxyCompactList}\small\item\em A definition of an impulse signal that gets propagated to listeners. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_follow_zoom}{Cinemachine\+Follow\+Zoom}}
+\begin{DoxyCompactList}\small\item\em An add-\/on module for \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera that adjusts the FOV of the lens to keep the target object at a constant size on the screen, regardless of camera and target position. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer}{Cinemachine\+Framing\+Transposer}}
+\begin{DoxyCompactList}\small\item\em This is a \doxylink{namespace_cinemachine}{Cinemachine} Component in the Body section of the component pipeline. Its job is to position the camera in a fixed screen-\/space relationship to the vcam\textquotesingle{}s Follow target object, with offsets and damping. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_free_look}{Cinemachine\+Free\+Look}}
+\begin{DoxyCompactList}\small\item\em A \doxylink{namespace_cinemachine}{Cinemachine} Camera geared towards a 3rd person camera experience. The camera orbits around its subject with three separate camera rigs defining rings around the target. Each rig has its own radius, height offset, composer, and lens settings. Depending on the camera\textquotesingle{}s position along the spline connecting these three rigs, these settings are interpolated to give the final camera position and state. \end{DoxyCompactList}\item 
+class {\bfseries Cinemachine\+Free\+Look\+Editor}
+\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_group_composer}{Cinemachine\+Group\+Composer}}
+\begin{DoxyCompactList}\small\item\em This is a Cinemachine\+Component in the Aim section of the component pipeline. Its job is to aim the camera at a target object, with configurable offsets, damping, and composition rules. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_hard_lock_to_target}{Cinemachine\+Hard\+Lock\+To\+Target}}
+\begin{DoxyCompactList}\small\item\em This is a Cinemachine\+Component in the Aim section of the component pipeline. Its job is to place the camera on the Follow Target. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_hard_look_at}{Cinemachine\+Hard\+Look\+At}}
+\begin{DoxyCompactList}\small\item\em This is a Cinemachine\+Component in the Aim section of the component pipeline. Its job is to aim the camera hard at the Look\+At target. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_impulse_channel_property_attribute}{Cinemachine\+Impulse\+Channel\+Property\+Attribute}}
+\begin{DoxyCompactList}\small\item\em Property applied to \doxylink{class_cinemachine_1_1_cinemachine_impulse_manager}{Cinemachine\+Impulse\+Manager} Channels. Used for custom drawing in the inspector. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_impulse_definition}{Cinemachine\+Impulse\+Definition}}
+\begin{DoxyCompactList}\small\item\em Definition of an impulse signal that gets propagated to listeners. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_impulse_definition_property_attribute}{Cinemachine\+Impulse\+Definition\+Property\+Attribute}}
+\begin{DoxyCompactList}\small\item\em Property applied to \doxylink{class_cinemachine_1_1_cinemachine_impulse_manager}{Cinemachine\+Impulse\+Manager} Channels. ~\newline
+ Used for custom drawing in the inspector. This is obsolete and no longer used. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_impulse_envelope_property_attribute}{Cinemachine\+Impulse\+Envelope\+Property\+Attribute}}
+\begin{DoxyCompactList}\small\item\em Property applied to \doxylink{struct_cinemachine_1_1_cinemachine_impulse_manager_1_1_envelope_definition}{Cinemachine\+Impulse\+Manager.\+Envelope\+Definition}. Used for custom drawing in the inspector. This attribute is obsolete and not used. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_impulse_listener}{Cinemachine\+Impulse\+Listener}}
+\begin{DoxyCompactList}\small\item\em An extension for \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera which post-\/processes the final position of the virtual camera. It listens for Cinemachine\+Impulse signals on the specified channels, and moves the camera in response to them. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_impulse_manager}{Cinemachine\+Impulse\+Manager}}
+\begin{DoxyCompactList}\small\item\em This is a singleton object that manages all Impulse Events generated by the \doxylink{namespace_cinemachine}{Cinemachine} Impulse module. This singleton owns and manages all \doxylink{class_cinemachine_1_1_cinemachine_impulse_manager_1_1_impulse_event}{Impulse\+Event} objectss. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_impulse_source}{Cinemachine\+Impulse\+Source}}
+\begin{DoxyCompactList}\small\item\em An event-\/driven class that broadcasts an impulse signal to listeners. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_independent_impulse_listener}{Cinemachine\+Independent\+Impulse\+Listener}}
+\begin{DoxyCompactList}\small\item\em This behaviour can be attached to any object to make it shake in response to Impulses. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_input_axis_driver}{Cinemachine\+Input\+Axis\+Driver}}
+\begin{DoxyCompactList}\small\item\em A helper class to drive an input axis, as an alternative to the standard \doxylink{struct_cinemachine_1_1_axis_state}{Cinemachine.\+Axis\+State}. Behaviour is a simple direct scaling of the input channel, with no max speed. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_input_provider}{Cinemachine\+Input\+Provider}}
+\begin{DoxyCompactList}\small\item\em This is an add-\/on to override the legacy input system and read input using the Unity\+Engine.\+Input package API. Add this behaviour to any \doxylink{class_cinemachine_1_1_cinemachine_virtual_camera}{Cinemachine\+Virtual\+Camera} or Free\+Look that requires user input, and drag in the the desired actions. If the Input \doxylink{namespace_system}{System} Package is not installed, then this behaviour does nothing. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_mixing_camera}{Cinemachine\+Mixing\+Camera}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_cinemachine_1_1_cinemachine_mixing_camera}{Cinemachine\+Mixing\+Camera} is a "{}manager camera"{} that takes on the state of the weighted average of the states of its child virtual cameras. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_orbital_transposer}{Cinemachine\+Orbital\+Transposer}}
+\begin{DoxyCompactList}\small\item\em This is a Cinemachine\+Component in the the Body section of the component pipeline. Its job is to position the camera in a variable relationship to a the vcam\textquotesingle{}s Follow target object, with offsets and damping. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path}{Cinemachine\+Path}}
+\begin{DoxyCompactList}\small\item\em Defines a world-\/space path, consisting of an array of waypoints, each of which has position, tangent, and roll settings. Bezier interpolation is performed between the waypoints, to get a smooth and continuous path. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base}{Cinemachine\+Path\+Base}}
+\begin{DoxyCompactList}\small\item\em Abstract base class for a world-\/space path, suitable for a camera dolly track. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_pipeline}{Cinemachine\+Pipeline}}
+\begin{DoxyCompactList}\small\item\em Internal container for \doxylink{class_cinemachine_1_1_cinemachine_component_base}{Cinemachine\+Component\+Base}. Does nothing but contain. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_pixel_perfect}{Cinemachine\+Pixel\+Perfect}}
+\begin{DoxyCompactList}\small\item\em An add-\/on module for \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera that tweaks the orthographic size of the virtual camera. It detects the presence of the Pixel Perfect Camera component and use the settings from that Pixel Perfect Camera to correct the orthographic size so that pixel art sprites would appear pixel perfect when the virtual camera becomes live. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_p_o_v}{Cinemachine\+POV}}
+\begin{DoxyCompactList}\small\item\em This is a Cinemachine\+Component in the Aim section of the component pipeline. Its job is to aim the camera in response to the user\textquotesingle{}s mouse or joystick input. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_same_as_follow_target}{Cinemachine\+Same\+As\+Follow\+Target}}
+\begin{DoxyCompactList}\small\item\em This is a Cinemachine\+Component in the Aim section of the component pipeline. Its job is to match the orientation of the Follow target. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_smooth_path}{Cinemachine\+Smooth\+Path}}
+\begin{DoxyCompactList}\small\item\em Defines a world-\/space path, consisting of an array of waypoints, each of which has position and roll settings. Bezier interpolation is performed between the waypoints, to get a smooth and continuous path. The path will pass through all waypoints, and (unlike \doxylink{class_cinemachine_1_1_cinemachine_path}{Cinemachine\+Path}) first and second order continuity is guaranteed. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_state_driven_camera}{Cinemachine\+State\+Driven\+Camera}}
+\begin{DoxyCompactList}\small\item\em This is a virtual camera "{}manager"{} that owns and manages a collection of child Virtual Cameras. These child vcams are mapped to individual states in an animation state machine, allowing you to associate specific vcams to specific animation states. When that state is active in the state machine, then the associated camera will be activated. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_storyboard}{Cinemachine\+Storyboard}}
+\begin{DoxyCompactList}\small\item\em An add-\/on module for \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera that places an image in screen space over the camera\textquotesingle{}s output. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}}
+\begin{DoxyCompactList}\small\item\em Defines a group of target objects, each with a radius and a weight. The weight is used when calculating the average position of the target group. Higher-\/weighted members of the group will count more. The bounding box is calculated by taking the member positions, weight, and radii into account. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_tracked_dolly}{Cinemachine\+Tracked\+Dolly}}
+\begin{DoxyCompactList}\small\item\em A \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera Body component that constrains camera motion to a \doxylink{class_cinemachine_1_1_cinemachine_path}{Cinemachine\+Path}. The camera can move along the path. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer}{Cinemachine\+Transposer}}
+\begin{DoxyCompactList}\small\item\em This is a Cinemachine\+Component in the Body section of the component pipeline. Its job is to position the camera in a fixed relationship to the vcam\textquotesingle{}s Follow target object, with offsets and damping. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_trigger_action}{Cinemachine\+Trigger\+Action}}
+\begin{DoxyCompactList}\small\item\em A multi-\/purpose script which causes an action to occur when a trigger collider is entered and exited. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera}{Cinemachine\+Virtual\+Camera}}
+\begin{DoxyCompactList}\small\item\em This behaviour is intended to be attached to an empty Transform Game\+Object, and it represents a Virtual Camera within the \doxylink{namespace_unity}{Unity} scene. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}}
+\begin{DoxyCompactList}\small\item\em Base class for a Monobehaviour that represents a Virtual Camera within the \doxylink{namespace_unity}{Unity} scene. \end{DoxyCompactList}\item 
+class {\bfseries Clipper\+Lib}
+\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_confiner_oven}{Confiner\+Oven}}
+\begin{DoxyCompactList}\small\item\em Responsible for baking confiners via Bake\+Confiner function. \end{DoxyCompactList}\item 
+class {\bfseries Documentation}
+\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_documentation_sorting_attribute}{Documentation\+Sorting\+Attribute}}
+\begin{DoxyCompactList}\small\item\em Atrtribute to control the automatic generation of documentation. This attribute is obsolete and not used. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_group_weight_manipulator}{Group\+Weight\+Manipulator}}
+\begin{DoxyCompactList}\small\item\em A class to get around the limitation in timeline that array members can\textquotesingle{}t be animated. A fixed number of slots are made available, rather than a dynamic array. ~\newline
+ If you want to add more slots, just modify this code. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_cinemachine_1_1_i_camera_override_stack}{ICamera\+Override\+Stack}}
+\begin{DoxyCompactList}\small\item\em This interface is specifically for \doxylink{namespace_timeline}{Timeline}. Do not use it. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}}
+\begin{DoxyCompactList}\small\item\em An abstract representation of a virtual camera which lives within the \doxylink{namespace_unity}{Unity} scene. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}}
+\begin{DoxyCompactList}\small\item\em Interface representing something that can be used as a vcam target. ~\newline
+ It has a transform, a bounding box, and a bounding sphere. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_cinemachine_1_1_i_signal_source6_d}{ISignal\+Source6D}}
+\begin{DoxyCompactList}\small\item\em Interface for raw signal provider. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings}}
+\begin{DoxyCompactList}\small\item\em Describes the FOV and clip planes for a camera. This generally mirrors the \doxylink{namespace_unity}{Unity} Camera\textquotesingle{}s lens settings, and will be used to drive the \doxylink{namespace_unity}{Unity} camera when the vcam is active. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_lens_settings_property_attribute}{Lens\+Settings\+Property\+Attribute}}
+\begin{DoxyCompactList}\small\item\em This attributs is obsolete and unused. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_noise_settings}{Noise\+Settings}}
+\begin{DoxyCompactList}\small\item\em This is an asset that defines a noise profile. A noise profile is the shape of the noise signal as a function of time. You can build arbitrarily complex shapes by combining different base perlin noise frequencies at different amplitudes. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_noise_settings_property_attribute}{Noise\+Settings\+Property\+Attribute}}
+\begin{DoxyCompactList}\small\item\em Property field is a \doxylink{class_cinemachine_1_1_noise_settings}{Noise\+Settings} asset. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_no_save_during_play_attribute}{No\+Save\+During\+Play\+Attribute}}
+\begin{DoxyCompactList}\small\item\em Suppresses play-\/mode-\/save for a field. Use it if the calsee has \mbox{[}\doxylink{namespace_save_during_play}{Save\+During\+Play}\mbox{]} attribute but there are fields in the class that shouldn\textquotesingle{}t be saved. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_orbital_transposer_heading_property_attribute}{Orbital\+Transposer\+Heading\+Property\+Attribute}}
+\begin{DoxyCompactList}\small\item\em Property applied to Orbital\+Transposer.\+Heading. Used for custom drawing in the inspector. \end{DoxyCompactList}\item 
+class {\bfseries Runtime\+Utility}
+\begin{DoxyCompactList}\small\item\em An ad-\/hoc collection of helpers, used by \doxylink{namespace_cinemachine}{Cinemachine} or its editor tools in various places. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_save_during_play_attribute}{Save\+During\+Play\+Attribute}}
+\begin{DoxyCompactList}\small\item\em Invoke play-\/mode-\/save for a class. This class\textquotesingle{}s fields will be scanned upon exiting play mode, and its property values will be applied to the scene object. This is a stopgap measure that will become obsolete once \doxylink{namespace_unity}{Unity} implements play-\/mode-\/save in a more general way. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_signal_source_asset}{Signal\+Source\+Asset}}
+\begin{DoxyCompactList}\small\item\em This is an asset that defines a 6D signal that can be retrieved in a random-\/access fashion. This is used by the \doxylink{namespace_cinemachine}{Cinemachine} Impulse module. \end{DoxyCompactList}\item 
+class {\bfseries Static\+Point\+Virtual\+Camera}
+\begin{DoxyCompactList}\small\item\em Point source for blending. It\textquotesingle{}s not really a virtual camera, but takes a \doxylink{struct_cinemachine_1_1_camera_state}{Camera\+State} and exposes it as a virtual camera for the purposes of blending. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_tag_field_attribute}{Tag\+Field\+Attribute}}
+\begin{DoxyCompactList}\small\item\em Property field is a Tag. \end{DoxyCompactList}\item 
+class {\bfseries Target\+Position\+Cache}
+\item 
+class {\bfseries Update\+Tracker}
+\begin{DoxyCompactList}\small\item\em Attempt to track on what clock transforms get updated. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_vcam_target_property_attribute}{Vcam\+Target\+Property\+Attribute}}
+\begin{DoxyCompactList}\small\item\em Property applied to Vcam Target fields. Used for custom drawing in the inspector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespace_cinemachine_a8cfe1d3b7a7eb7dc78ae3d7bae8d81bd}\label{namespace_cinemachine_a8cfe1d3b7a7eb7dc78ae3d7bae8d81bd} 
+using {\bfseries Int\+Point} = \mbox{\hyperlink{struct_cinemachine_1_1_clipper_lib_1_1_int_point}{Clipper\+Lib.\+Int\+Point}}
+\item 
+\Hypertarget{namespace_cinemachine_a0673e0073babc17735d9f71fbee05fae}\label{namespace_cinemachine_a0673e0073babc17735d9f71fbee05fae} 
+using {\bfseries Clipper} = \mbox{\hyperlink{class_cinemachine_1_1_clipper_lib_1_1_clipper}{Clipper\+Lib.\+Clipper}}
+\item 
+\Hypertarget{namespace_cinemachine_a050d2d3a35fbd66774bc7321ad731849}\label{namespace_cinemachine_a050d2d3a35fbd66774bc7321ad731849} 
+using {\bfseries Clipper\+Offset} = \mbox{\hyperlink{class_cinemachine_1_1_clipper_lib_1_1_clipper_offset}{Clipper\+Lib.\+Clipper\+Offset}}
+\item 
+\Hypertarget{namespace_cinemachine_a9f38593b22c99619756d467f8eceb04c}\label{namespace_cinemachine_a9f38593b22c99619756d467f8eceb04c} 
+using {\bfseries Clipper\+Base} = \mbox{\hyperlink{class_cinemachine_1_1_clipper_lib_1_1_clipper_base}{Clipper\+Lib.\+Clipper\+Base}}
+\item 
+\Hypertarget{namespace_cinemachine_a393e31ed05038118653cef44e37295f4}\label{namespace_cinemachine_a393e31ed05038118653cef44e37295f4} 
+using {\bfseries Int\+Rect} = \mbox{\hyperlink{struct_cinemachine_1_1_clipper_lib_1_1_int_rect}{Clipper\+Lib.\+Int\+Rect}}
+\item 
+\Hypertarget{namespace_cinemachine_a72a990f0b9e0699401593dbf87d69d57}\label{namespace_cinemachine_a72a990f0b9e0699401593dbf87d69d57} 
+using {\bfseries Join\+Type} = Clipper\+Lib.\+Join\+Type
+\item 
+\Hypertarget{namespace_cinemachine_acaa22a442aad32b80657c7c1c95d1981}\label{namespace_cinemachine_acaa22a442aad32b80657c7c1c95d1981} 
+using {\bfseries End\+Type} = Clipper\+Lib.\+End\+Type
+\item 
+\Hypertarget{namespace_cinemachine_a0596c748080b43e31121f63716b4942b}\label{namespace_cinemachine_a0596c748080b43e31121f63716b4942b} 
+using {\bfseries Poly\+Type} = Clipper\+Lib.\+Poly\+Type
+\item 
+\Hypertarget{namespace_cinemachine_a6761f4f1a3c65f3d72d5eba6c67d7577}\label{namespace_cinemachine_a6761f4f1a3c65f3d72d5eba6c67d7577} 
+using {\bfseries Poly\+Fill\+Type} = Clipper\+Lib.\+Poly\+Fill\+Type
+\item 
+\Hypertarget{namespace_cinemachine_a7cd930bba2538bf5f31b301a30585b87}\label{namespace_cinemachine_a7cd930bba2538bf5f31b301a30585b87} 
+using {\bfseries Clip\+Type} = Clipper\+Lib.\+Clip\+Type
+\item 
+\Hypertarget{namespace_cinemachine_a9b6f66196132bb72a070dabca1a66174}\label{namespace_cinemachine_a9b6f66196132bb72a070dabca1a66174} 
+using {\bfseries c\+Int} = Int64
+\item 
+\Hypertarget{namespace_cinemachine_aa1c149d86dd5c0faa36190e729d1e3f1}\label{namespace_cinemachine_aa1c149d86dd5c0faa36190e729d1e3f1} 
+using {\bfseries Path} = List$<$\mbox{\hyperlink{struct_cinemachine_1_1_clipper_lib_1_1_int_point}{Clipper\+Lib.\+Int\+Point}}$>$
+\item 
+\Hypertarget{namespace_cinemachine_af7ef9ba71ce8fa4511f06077e5001168}\label{namespace_cinemachine_af7ef9ba71ce8fa4511f06077e5001168} 
+using {\bfseries Paths} = List$<$List$<$\mbox{\hyperlink{struct_cinemachine_1_1_clipper_lib_1_1_int_point}{Clipper\+Lib.\+Int\+Point}}$>$$>$
+\end{DoxyCompactItemize}

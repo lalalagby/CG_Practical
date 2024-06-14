@@ -1,0 +1,76 @@
+\chapter{Sample Texture 2D LOD Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_273becce7211d9aa12b6abe634631301d}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_273becce7211d9aa12b6abe634631301d}\index{Sample Texture 2D LOD Node@{Sample Texture 2D LOD Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_273becce7211d9aa12b6abe634631301d_autotoc_md3760}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_273becce7211d9aa12b6abe634631301d_autotoc_md3760}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_273becce7211d9aa12b6abe634631301d_autotoc_md3761}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_273becce7211d9aa12b6abe634631301d_autotoc_md3761}
+\doxylink{namespace_samples}{Samples} a {\bfseries{Texture 2D}} and returns a {\bfseries{Vector 4}} color value for use in the shader. You can override the {\bfseries{UV}} coordinates using the {\bfseries{UV}} input and define a custom {\bfseries{Sampler State}} using the {\bfseries{Sampler}} input. Use the {\bfseries{LOD}} input to adjust the level of detail of the sample.
+
+To use the {\bfseries{Sample Texture 2D LOD Node}} to sample a normal map, set the {\bfseries{Type}} dropdown parameter to {\bfseries{Normal}}.
+
+This \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node}{Node}{0} is useful for sampling a {\bfseries{Texture}} in the vertex \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_shader-_stage}{Shader Stage}{0} as the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_sample-_texture-2_d-_node}{Sample Texture 2D Node}{0} is unavailable in this \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_shader-_stage}{Shader Stage}{0}.
+
+On platforms that do not support this operation, opaque black is returned instead.
+
+If you experience texture sampling errors while using this node in a graph which includes Custom Function Nodes or Sub Graphs, you can resolve them by upgrading to version 10.\+3 or later.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_273becce7211d9aa12b6abe634631301d_autotoc_md3762}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_273becce7211d9aa12b6abe634631301d_autotoc_md3762}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+Texture   &Input   &Texture 2D   &None   &Texture 2D to sample    \\\cline{1-5}
+UV   &Input   &Vector 2   &UV   &UV coordinates    \\\cline{1-5}
+Sampler   &Input   &Sampler State   &Default sampler state   &Sampler for the texture    \\\cline{1-5}
+LOD   &Input   &Float   &None   &Level of detail to sample    \\\cline{1-5}
+RGBA   &Output   &Vector 4   &None   &Output value as RGBA    \\\cline{1-5}
+R   &Output   &Float   &None   &red (x) component of RGBA output    \\\cline{1-5}
+G   &Output   &Float   &None   &green (y) component of RGBA output    \\\cline{1-5}
+B   &Output   &Float   &None   &blue (z) component of RGBA output    \\\cline{1-5}
+A   &Output   &Float   &None   &alpha (w) component of RGBA output   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_273becce7211d9aa12b6abe634631301d_autotoc_md3763}{}\doxysection{\texorpdfstring{Controls}{Controls}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_273becce7211d9aa12b6abe634631301d_autotoc_md3763}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endhead
+Type   &Dropdown   &Default, Normal   &Selects the texture type   \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_273becce7211d9aa12b6abe634631301d_autotoc_md3764}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_273becce7211d9aa12b6abe634631301d_autotoc_md3764}
+The following example code represents one possible outcome of this node per {\bfseries{Type}} mode.
+
+{\bfseries{Default}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float4\ \_SampleTexture2DLOD\_RGBA\ =\ SAMPLE\_TEXTURE2D\_LOD(Texture,\ Sampler,\ UV,\ LOD);}
+\DoxyCodeLine{float\ \_SampleTexture2DLOD\_R\ =\ \_SampleTexture2DLOD\_RGBA.r;}
+\DoxyCodeLine{float\ \_SampleTexture2DLOD\_G\ =\ \_SampleTexture2DLOD\_RGBA.g;}
+\DoxyCodeLine{float\ \_SampleTexture2DLOD\_B\ =\ \_SampleTexture2DLOD\_RGBA.b;}
+\DoxyCodeLine{float\ \_SampleTexture2DLOD\_A\ =\ \_SampleTexture2DLOD\_RGBA.a;}
+
+\end{DoxyCode}
+
+
+{\bfseries{Normal}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float4\ \_SampleTexture2DLOD\_RGBA\ =\ SAMPLE\_TEXTURE2D\_LOD(Texture,\ Sampler,\ UV,\ LOD);}
+\DoxyCodeLine{\_SampleTexture2DLOD\_RGBA.rgb\ =\ UnpackNormalRGorAG(\_SampleTexture2DLOD\_RGBA);}
+\DoxyCodeLine{float\ \_SampleTexture2DLOD\_R\ =\ \_SampleTexture2DLOD\_RGBA.r;}
+\DoxyCodeLine{float\ \_SampleTexture2DLOD\_G\ =\ \_SampleTexture2DLOD\_RGBA.g;}
+\DoxyCodeLine{float\ \_SampleTexture2DLOD\_B\ =\ \_SampleTexture2DLOD\_RGBA.b;}
+\DoxyCodeLine{float\ \_SampleTexture2DLOD\_A\ =\ \_SampleTexture2DLOD\_RGBA.a;}
+
+\end{DoxyCode}
+ 

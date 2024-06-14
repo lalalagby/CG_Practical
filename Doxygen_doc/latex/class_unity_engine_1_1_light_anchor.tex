@@ -1,0 +1,173 @@
+\doxysection{Unity\+Engine.\+Light\+Anchor Class Reference}
+\hypertarget{class_unity_engine_1_1_light_anchor}{}\label{class_unity_engine_1_1_light_anchor}\index{UnityEngine.LightAnchor@{UnityEngine.LightAnchor}}
+
+
+Represents camera-\/space light controls around a virtual pivot point.  
+
+
+Inheritance diagram for Unity\+Engine.\+Light\+Anchor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_light_anchor}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_light_anchor_a6164a8990c7dfdefafd0dc475e389208}{Up\+Direction}} \{ \mbox{\hyperlink{class_unity_engine_1_1_light_anchor_a6164a8990c7dfdefafd0dc475e389208af5a7924e621e84c9280a9a27e1bcb7f6}{World}} = Space.\+World
+, \mbox{\hyperlink{class_unity_engine_1_1_light_anchor_a6164a8990c7dfdefafd0dc475e389208a509820290d57f333403f490dde7316f4}{Local}} = Space.\+Self
+ \}
+\begin{DoxyCompactList}\small\item\em Enum to describes to up vector for the Light Anchor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_light_anchor_a79f3410cff88ec597c010a531af07907}{Synchronize\+On\+Transform}} (Camera camera)
+\begin{DoxyCompactList}\small\item\em Updates Yaw, Pitch, Roll, and Distance based on the Transform. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_light_anchor_a7e715a722abfa06ace3e0171136c25f3}{Update\+Transform}} (Camera camera, Vector3 anchor)
+\begin{DoxyCompactList}\small\item\em Updates the light\textquotesingle{}s transform with respect to a given camera and anchor point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static float \mbox{\hyperlink{class_unity_engine_1_1_light_anchor_ac9cc523d148b8ec90823881c10dbccf2}{Normalize\+Angle\+Degree}} (float angle)
+\begin{DoxyCompactList}\small\item\em Normalizes the input angle to be in the range of -\/180 and 180. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_light_anchor_aaeb2dcfea6265df41da64bf0e1300f3b}{yaw}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The camera-\/relative yaw. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_light_anchor_a33f61c32c1d231ac44e85362f6473bf5}{pitch}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The pitch relative to the horizon or camera depending on value of m\+\_\+\+Space. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_light_anchor_ae4ccb3c03b3507b0c03e6f2523eae103}{roll}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The camera-\/relative roll. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_light_anchor_a849b60354762499baa82c7c23f31bb63}\label{class_unity_engine_1_1_light_anchor_a849b60354762499baa82c7c23f31bb63} 
+float {\bfseries distance}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The distance from the light\textquotesingle{}s anchor point. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_light_anchor_a597694a779ef7753eede57db3065b9ad}\label{class_unity_engine_1_1_light_anchor_a597694a779ef7753eede57db3065b9ad} 
+\mbox{\hyperlink{class_unity_engine_1_1_light_anchor_a6164a8990c7dfdefafd0dc475e389208}{Up\+Direction}} {\bfseries frame\+Space}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates whether the up vector should be in world or camera space. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_light_anchor_ae80ab2130faefa45328f514a394b52bc}\label{class_unity_engine_1_1_light_anchor_ae80ab2130faefa45328f514a394b52bc} 
+Vector3 {\bfseries anchor\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The position of the light\textquotesingle{}s anchor point. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_light_anchor_a26309cd64d5048cd8918a6aae733f933}\label{class_unity_engine_1_1_light_anchor_a26309cd64d5048cd8918a6aae733f933} 
+Transform {\bfseries anchor\+Position\+Override}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Overrides the pivot of used to compute the light position. This is useful to track an existing object in the scene. The transform of the light will be automatically updated by the Update() method of the \doxylink{class_unity_engine_1_1_light_anchor}{Light\+Anchor}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_light_anchor_a27ef9dd6e2539bcc55562cb9ac926f15}\label{class_unity_engine_1_1_light_anchor_a27ef9dd6e2539bcc55562cb9ac926f15} 
+Vector3 {\bfseries anchor\+Position\+Offset}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Offset relative to the position of the anchor position override transform in object space. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents camera-\/space light controls around a virtual pivot point. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_unity_engine_1_1_light_anchor_a6164a8990c7dfdefafd0dc475e389208}\index{UnityEngine.LightAnchor@{UnityEngine.LightAnchor}!UpDirection@{UpDirection}}
+\index{UpDirection@{UpDirection}!UnityEngine.LightAnchor@{UnityEngine.LightAnchor}}
+\doxysubsubsection{\texorpdfstring{UpDirection}{UpDirection}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_light_anchor_a6164a8990c7dfdefafd0dc475e389208} 
+enum \mbox{\hyperlink{class_unity_engine_1_1_light_anchor_a6164a8990c7dfdefafd0dc475e389208}{Unity\+Engine.\+Light\+Anchor.\+Up\+Direction}}}
+
+
+
+Enum to describes to up vector for the Light Anchor. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{World@{World}!UnityEngine.LightAnchor@{UnityEngine.LightAnchor}}\index{UnityEngine.LightAnchor@{UnityEngine.LightAnchor}!World@{World}}}\Hypertarget{class_unity_engine_1_1_light_anchor_a6164a8990c7dfdefafd0dc475e389208af5a7924e621e84c9280a9a27e1bcb7f6}\label{class_unity_engine_1_1_light_anchor_a6164a8990c7dfdefafd0dc475e389208} 
+World&Up vector is world space Vector3.\+up. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Local@{Local}!UnityEngine.LightAnchor@{UnityEngine.LightAnchor}}\index{UnityEngine.LightAnchor@{UnityEngine.LightAnchor}!Local@{Local}}}\Hypertarget{class_unity_engine_1_1_light_anchor_a6164a8990c7dfdefafd0dc475e389208a509820290d57f333403f490dde7316f4}\label{class_unity_engine_1_1_light_anchor_a6164a8990c7dfdefafd0dc475e389208} 
+Local&Up vector is the up of the main camera. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_light_anchor_ac9cc523d148b8ec90823881c10dbccf2}\index{UnityEngine.LightAnchor@{UnityEngine.LightAnchor}!NormalizeAngleDegree@{NormalizeAngleDegree}}
+\index{NormalizeAngleDegree@{NormalizeAngleDegree}!UnityEngine.LightAnchor@{UnityEngine.LightAnchor}}
+\doxysubsubsection{\texorpdfstring{NormalizeAngleDegree()}{NormalizeAngleDegree()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_light_anchor_ac9cc523d148b8ec90823881c10dbccf2} 
+static float Unity\+Engine.\+Light\+Anchor.\+Normalize\+Angle\+Degree (\begin{DoxyParamCaption}\item[{float}]{angle}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Normalizes the input angle to be in the range of -\/180 and 180. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & Raw input angle or rotation.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the angle of rotation between -\/180 and 180.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_light_anchor_a79f3410cff88ec597c010a531af07907}\index{UnityEngine.LightAnchor@{UnityEngine.LightAnchor}!SynchronizeOnTransform@{SynchronizeOnTransform}}
+\index{SynchronizeOnTransform@{SynchronizeOnTransform}!UnityEngine.LightAnchor@{UnityEngine.LightAnchor}}
+\doxysubsubsection{\texorpdfstring{SynchronizeOnTransform()}{SynchronizeOnTransform()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_light_anchor_a79f3410cff88ec597c010a531af07907} 
+void Unity\+Engine.\+Light\+Anchor.\+Synchronize\+On\+Transform (\begin{DoxyParamCaption}\item[{Camera}]{camera}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates Yaw, Pitch, Roll, and Distance based on the Transform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & The Camera to which light values are relative.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_light_anchor_a7e715a722abfa06ace3e0171136c25f3}\index{UnityEngine.LightAnchor@{UnityEngine.LightAnchor}!UpdateTransform@{UpdateTransform}}
+\index{UpdateTransform@{UpdateTransform}!UnityEngine.LightAnchor@{UnityEngine.LightAnchor}}
+\doxysubsubsection{\texorpdfstring{UpdateTransform()}{UpdateTransform()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_light_anchor_a7e715a722abfa06ace3e0171136c25f3} 
+void Unity\+Engine.\+Light\+Anchor.\+Update\+Transform (\begin{DoxyParamCaption}\item[{Camera}]{camera}{, }\item[{Vector3}]{anchor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the light\textquotesingle{}s transform with respect to a given camera and anchor point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & The camera to which values are relative.\\
+\hline
+{\em anchor} & The anchor position.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_light_anchor_a33f61c32c1d231ac44e85362f6473bf5}\index{UnityEngine.LightAnchor@{UnityEngine.LightAnchor}!pitch@{pitch}}
+\index{pitch@{pitch}!UnityEngine.LightAnchor@{UnityEngine.LightAnchor}}
+\doxysubsubsection{\texorpdfstring{pitch}{pitch}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_light_anchor_a33f61c32c1d231ac44e85362f6473bf5} 
+float Unity\+Engine.\+Light\+Anchor.\+pitch\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The pitch relative to the horizon or camera depending on value of m\+\_\+\+Space. 
+
+The range is -\/180 through 180 inclusive. Values between 0 and 180 are below the camera, and values between 0 and -\/180 are above the camera. \Hypertarget{class_unity_engine_1_1_light_anchor_ae4ccb3c03b3507b0c03e6f2523eae103}\index{UnityEngine.LightAnchor@{UnityEngine.LightAnchor}!roll@{roll}}
+\index{roll@{roll}!UnityEngine.LightAnchor@{UnityEngine.LightAnchor}}
+\doxysubsubsection{\texorpdfstring{roll}{roll}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_light_anchor_ae4ccb3c03b3507b0c03e6f2523eae103} 
+float Unity\+Engine.\+Light\+Anchor.\+roll\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The camera-\/relative roll. 
+
+The range is -\/180 through 180 inclusive. Values between 0 and 180 are to the right of the camera, and values between 0 and -\/180 are to the left of the camera. \Hypertarget{class_unity_engine_1_1_light_anchor_aaeb2dcfea6265df41da64bf0e1300f3b}\index{UnityEngine.LightAnchor@{UnityEngine.LightAnchor}!yaw@{yaw}}
+\index{yaw@{yaw}!UnityEngine.LightAnchor@{UnityEngine.LightAnchor}}
+\doxysubsubsection{\texorpdfstring{yaw}{yaw}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_light_anchor_aaeb2dcfea6265df41da64bf0e1300f3b} 
+float Unity\+Engine.\+Light\+Anchor.\+yaw\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The camera-\/relative yaw. 
+
+The range is -\/180 through 180 inclusive. Values between 0 and 180 are to the right of the camera, and values between 0 and -\/180 to the left. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Lights/Light\+Anchor.\+cs\end{DoxyCompactItemize}

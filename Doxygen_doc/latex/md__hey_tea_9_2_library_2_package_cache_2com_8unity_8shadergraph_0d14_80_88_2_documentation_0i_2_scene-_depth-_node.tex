@@ -1,0 +1,57 @@
+\chapter{Scene Depth Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_depth-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_depth-_node}\index{Scene Depth Node@{Scene Depth Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_depth-_node_autotoc_md3818}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_depth-_node_autotoc_md3818}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_depth-_node_autotoc_md3819}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_depth-_node_autotoc_md3819}
+Provides access to the current {\bfseries{Camera}}\textquotesingle{}s depth buffer using input {\bfseries{UV}}, which is expected to be normalized screen coordinates.
+
+Note\+: Depth buffer access requires depth buffer to be enabled on the active {\bfseries{Render Pipeline}}. This process is different per {\bfseries{Render Pipeline}}. It is recommended you read the documentation of your active {\bfseries{Render Pipeline}} for information on enabling the depth buffer. If the depth buffer is unavailable this \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node}{Node}{0} will return mid grey.
+
+Note\+: The executed HLSL code for this \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node}{Node}{0} is defined per {\bfseries{Render Pipeline}}, and different {\bfseries{Render Pipelines}} may produce different results. Custom {\bfseries{Render Pipelines}} that wish to support this \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node}{Node}{0} will also need to explicitly define the behaviour for it. If undefined this \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node}{Node}{0} will return 1 (white).
+
+NOTE\+: This \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node}{Node}{0} can only be used in the {\bfseries{Fragment}} \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_shader-_stage}{Shader Stage}{0} and it is not guaranteed to work with an opaque material.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_depth-_node_autotoc_md3820}{}\doxysubsubsection{\texorpdfstring{Unity Render Pipelines Support}{Unity Render Pipelines Support}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_depth-_node_autotoc_md3820}
+
+\begin{DoxyItemize}
+\item High Definition Render Pipeline
+\item Universal Render Pipeline
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_depth-_node_autotoc_md3821}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_depth-_node_autotoc_md3821}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+UV   &Input   &Vector 4   &Screen Position   &Normalized screen coordinates    \\\cline{1-5}
+Out   &Output   &Float   &None   &Output value   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_depth-_node_autotoc_md3822}{}\doxysection{\texorpdfstring{Depth Sampling modes}{Depth Sampling modes}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_depth-_node_autotoc_md3822}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+Linear01   &Linear depth value between 0 and 1    \\\cline{1-2}
+Raw   &Raw depth value    \\\cline{1-2}
+Eye   &Depth converted to eye space units   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_depth-_node_autotoc_md3823}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_scene-_depth-_node_autotoc_md3823}
+The following example code represents one possible outcome of this node.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_SceneDepth\_Raw\_float(float4\ UV,\ out\ float\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ SHADERGRAPH\_SAMPLE\_SCENE\_DEPTH(UV);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

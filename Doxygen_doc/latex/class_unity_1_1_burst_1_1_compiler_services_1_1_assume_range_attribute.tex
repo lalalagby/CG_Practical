@@ -1,0 +1,69 @@
+\doxysection{Unity.\+Burst.\+Compiler\+Services.\+Assume\+Range\+Attribute Class Reference}
+\hypertarget{class_unity_1_1_burst_1_1_compiler_services_1_1_assume_range_attribute}{}\label{class_unity_1_1_burst_1_1_compiler_services_1_1_assume_range_attribute}\index{Unity.Burst.CompilerServices.AssumeRangeAttribute@{Unity.Burst.CompilerServices.AssumeRangeAttribute}}
+
+
+Can be used to specify that a parameter or return has a range assumption. Assumptions feed directly into the optimizer and allow better codegen.  
+
+
+Inheritance diagram for Unity.\+Burst.\+Compiler\+Services.\+Assume\+Range\+Attribute\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_1_1_burst_1_1_compiler_services_1_1_assume_range_attribute}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_1_1_burst_1_1_compiler_services_1_1_assume_range_attribute_a7d6c2e30d29b24dded0b62da53e71049}{Assume\+Range\+Attribute}} (long min, long max)
+\begin{DoxyCompactList}\small\item\em Assume that an integer is in the signed closed interval \mbox{[}min..max\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_1_1_burst_1_1_compiler_services_1_1_assume_range_attribute_a8d2f545e2c65d1a5c61b9308b2af848f}{Assume\+Range\+Attribute}} (ulong min, ulong max)
+\begin{DoxyCompactList}\small\item\em Assume that an integer is in the unsigned closed interval \mbox{[}min..max\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Can be used to specify that a parameter or return has a range assumption. Assumptions feed directly into the optimizer and allow better codegen. 
+
+Only usable on values of type scalar integer.
+
+The range is a closed interval \mbox{[}min..max\mbox{]} -\/ EG. the attributed value is greater-\/than-\/or-\/equal-\/to min and less-\/than-\/or-\/equal-\/to max. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_1_1_burst_1_1_compiler_services_1_1_assume_range_attribute_a7d6c2e30d29b24dded0b62da53e71049}\index{Unity.Burst.CompilerServices.AssumeRangeAttribute@{Unity.Burst.CompilerServices.AssumeRangeAttribute}!AssumeRangeAttribute@{AssumeRangeAttribute}}
+\index{AssumeRangeAttribute@{AssumeRangeAttribute}!Unity.Burst.CompilerServices.AssumeRangeAttribute@{Unity.Burst.CompilerServices.AssumeRangeAttribute}}
+\doxysubsubsection{\texorpdfstring{AssumeRangeAttribute()}{AssumeRangeAttribute()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_unity_1_1_burst_1_1_compiler_services_1_1_assume_range_attribute_a7d6c2e30d29b24dded0b62da53e71049} 
+Unity.\+Burst.\+Compiler\+Services.\+Assume\+Range\+Attribute.\+Assume\+Range\+Attribute (\begin{DoxyParamCaption}\item[{long}]{min}{, }\item[{long}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Assume that an integer is in the signed closed interval \mbox{[}min..max\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & The inclusive minimum value.\\
+\hline
+{\em max} & The inclusive maximum value.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_1_1_burst_1_1_compiler_services_1_1_assume_range_attribute_a8d2f545e2c65d1a5c61b9308b2af848f}\index{Unity.Burst.CompilerServices.AssumeRangeAttribute@{Unity.Burst.CompilerServices.AssumeRangeAttribute}!AssumeRangeAttribute@{AssumeRangeAttribute}}
+\index{AssumeRangeAttribute@{AssumeRangeAttribute}!Unity.Burst.CompilerServices.AssumeRangeAttribute@{Unity.Burst.CompilerServices.AssumeRangeAttribute}}
+\doxysubsubsection{\texorpdfstring{AssumeRangeAttribute()}{AssumeRangeAttribute()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_unity_1_1_burst_1_1_compiler_services_1_1_assume_range_attribute_a8d2f545e2c65d1a5c61b9308b2af848f} 
+Unity.\+Burst.\+Compiler\+Services.\+Assume\+Range\+Attribute.\+Assume\+Range\+Attribute (\begin{DoxyParamCaption}\item[{ulong}]{min}{, }\item[{ulong}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Assume that an integer is in the unsigned closed interval \mbox{[}min..max\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & The inclusive minimum value.\\
+\hline
+{\em max} & The inclusive maximum value.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+burst@1.\+8.\+7/\+Runtime/\+Compiler\+Services/Assume\+Range\+Attribute.\+cs\end{DoxyCompactItemize}

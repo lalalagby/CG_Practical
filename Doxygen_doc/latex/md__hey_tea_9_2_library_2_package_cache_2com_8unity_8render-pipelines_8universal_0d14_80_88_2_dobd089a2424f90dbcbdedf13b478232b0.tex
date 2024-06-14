@@ -1,0 +1,32 @@
+\chapter{Vignette}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dobd089a2424f90dbcbdedf13b478232b0}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dobd089a2424f90dbcbdedf13b478232b0}\index{Vignette@{Vignette}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dobd089a2424f90dbcbdedf13b478232b0_autotoc_md2339}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dobd089a2424f90dbcbdedf13b478232b0_autotoc_md2339}%
+ In photography, vignetting is the term for the darkening and/or desaturating towards the edges of an image compared to the center. In real life, thick or stacked filters, secondary lenses, and improper lens hoods are usually the cause of this effect. You can use vignetting to draw focus to the center of an image.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dobd089a2424f90dbcbdedf13b478232b0_autotoc_md2340}{}\doxysection{\texorpdfstring{Using Vignette}{Using Vignette}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dobd089a2424f90dbcbdedf13b478232b0_autotoc_md2340}
+{\bfseries{Vignette}} uses the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_volumes}{Volume}{0} system, so to enable and modify {\bfseries{Vignette}} properties, you must add a {\bfseries{Vignette}} override to a \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_volumes}{Volume}{0} in your Scene.
+
+To add {\bfseries{Vignette}} to a Volume\+:
+
+
+\begin{DoxyEnumerate}
+\item In the Scene or Hierarchy view, select a Game\+Object that contains a Volume component to view it in the Inspector.
+\item In the Inspector, navigate to {\bfseries{Add Override}} \texorpdfstring{$>$}{>} {\bfseries{Post-\/processing}} and click on {\bfseries{Vignette}}. Universal Render Pipeline applies {\bfseries{Vignette}} to any Camera this Volume affects.
+\end{DoxyEnumerate}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dobd089a2424f90dbcbdedf13b478232b0_autotoc_md2341}{}\doxysection{\texorpdfstring{Properties}{Properties}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dobd089a2424f90dbcbdedf13b478232b0_autotoc_md2341}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Color}}   &Use the color picker to set the color of the vignette.    \\\cline{1-2}
+{\bfseries{Center}}   &Set the vignette center point. For reference, the screen center is \mbox{[}0.\+5, 0.\+5\mbox{]}.    \\\cline{1-2}
+{\bfseries{Intensity}}   &Set the strength of the vignette effect.    \\\cline{1-2}
+{\bfseries{Smoothness}}   &Use the slider to set the smoothness of the vignette borders. Values range between 0.\+01 and 1. The higher the value, the smoother the vignette border. The default value is 0.\+2.    \\\cline{1-2}
+{\bfseries{Rounded}}   &When enabled, the vignette is perfectly round. When disabled, the vignette matches the shape on the current aspect ratio.   \\\cline{1-2}
+\end{longtabu}

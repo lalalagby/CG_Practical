@@ -1,0 +1,258 @@
+\doxysection{Cinemachine.\+Camera\+State Struct Reference}
+\hypertarget{struct_cinemachine_1_1_camera_state}{}\label{struct_cinemachine_1_1_camera_state}\index{Cinemachine.CameraState@{Cinemachine.CameraState}}
+
+
+The output of the \doxylink{namespace_cinemachine}{Cinemachine} engine for a specific virtual camera. The information in this struct can be blended, and provides what is needed to calculate an appropriate camera position, orientation, and lens setting.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_cinemachine_1_1_camera_state_1_1_custom_blendable}{Custom\+Blendable}}
+\begin{DoxyCompactList}\small\item\em Opaque structure represent extra blendable stuff and its weight. The base system ignores this data -\/ it is intended for extension modules. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9ea}{Blend\+Hint\+Value}} \{ \newline
+\mbox{\hyperlink{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9eaaf80a4ad87fee7c9fdc19b7769495fdb5}{Nothing}} = 0
+, \mbox{\hyperlink{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9eaaa30e8b5e793b9c004e6669490376efc6}{No\+Position}} = 1
+, \mbox{\hyperlink{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9eaa2b71fefa681b7fd0589f3a3575a6d2a7}{No\+Orientation}} = 2
+, \mbox{\hyperlink{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9eaac8c9fe0abed7ae3bab93a24ac8ac1e97}{No\+Transform}} = No\+Position \texorpdfstring{$\vert$}{|} No\+Orientation
+, \newline
+\mbox{\hyperlink{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9eaabb21d887c83a5079a6ce3eabe72a0ece}{Spherical\+Position\+Blend}} = 4
+, \mbox{\hyperlink{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9eaa9385cf2c31960d67b3e1cc49e6bec568}{Cylindrical\+Position\+Blend}} = 8
+, \mbox{\hyperlink{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9eaa4a4888d0a530ba8dfb56765eb3a70d7c}{Radial\+Aim\+Blend}} = 16
+, \mbox{\hyperlink{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9eaa2b500461b5894232b33304ddca8104aa}{Ignore\+Look\+At\+Target}} = 32
+, \newline
+\mbox{\hyperlink{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9eaa70e7f30dff7ec5cfbb796ebe9512e35c}{No\+Lens}} = 64
+ \}
+\begin{DoxyCompactList}\small\item\em These hints can be or\textquotesingle{}ed toether to influence how blending is done, and how state is applied to the camera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_cinemachine_1_1_camera_state_1_1_custom_blendable}{Custom\+Blendable}} \mbox{\hyperlink{struct_cinemachine_1_1_camera_state_a0cdf7c90dbecec6fae6b87ad01e5d487}{Get\+Custom\+Blendable}} (int index)
+\begin{DoxyCompactList}\small\item\em Get a custom blendable that will be applied to the camera. ~\newline
+ The base system manages but otherwise ignores this data -\/ it is intended for extension modules. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_a68effee4169c28b6cc4bf787555fd947}\label{struct_cinemachine_1_1_camera_state_a68effee4169c28b6cc4bf787555fd947} 
+int {\bfseries Find\+Custom\+Blendable} (Object custom)
+\item 
+void \mbox{\hyperlink{struct_cinemachine_1_1_camera_state_a6ae8505931e075be72ad0aa3494c8314}{Add\+Custom\+Blendable}} (\mbox{\hyperlink{struct_cinemachine_1_1_camera_state_1_1_custom_blendable}{Custom\+Blendable}} b)
+\begin{DoxyCompactList}\small\item\em Add a custom blendable to the pot for eventual application to the camera. The base system manages but otherwise ignores this data -\/ it is intended for extension modules. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_ae1ead0f9133d2ec13e16f551c1d5b8a9}\label{struct_cinemachine_1_1_camera_state_ae1ead0f9133d2ec13e16f551c1d5b8a9} 
+Vector3 {\bfseries Interpolate\+Position} (Vector3 posA, Vector3 pivotA, Vector3 posB, Vector3 pivotB, float t)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} \mbox{\hyperlink{struct_cinemachine_1_1_camera_state_a009a9e8d8e27361020a3431a3d9a1326}{Lerp}} (\mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} stateA, \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} stateB, float t)
+\begin{DoxyCompactList}\small\item\em Intelligently blend the contents of two states. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_aa86b91a96249fb31dbbf4e4da92b3d2d}\label{struct_cinemachine_1_1_camera_state_aa86b91a96249fb31dbbf4e4da92b3d2d} 
+static float {\bfseries Interpolate\+FOV} (float fovA, float fovB, float dA, float dB, float t)
+\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_aef6be7ce204bc5bb128c2a010225e878}\label{struct_cinemachine_1_1_camera_state_aef6be7ce204bc5bb128c2a010225e878} 
+static Vector3 {\bfseries Apply\+Pos\+Blend\+Hint} (Vector3 posA, \mbox{\hyperlink{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9ea}{Blend\+Hint\+Value}} hintA, Vector3 posB, \mbox{\hyperlink{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9ea}{Blend\+Hint\+Value}} hintB, Vector3 original, Vector3 blended)
+\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_a7612ef62e1df6ef8c052f0b76dbcbc38}\label{struct_cinemachine_1_1_camera_state_a7612ef62e1df6ef8c052f0b76dbcbc38} 
+static Quaternion {\bfseries Apply\+Rot\+Blend\+Hint} (Quaternion rotA, \mbox{\hyperlink{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9ea}{Blend\+Hint\+Value}} hintA, Quaternion rotB, \mbox{\hyperlink{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9ea}{Blend\+Hint\+Value}} hintB, Quaternion original, Quaternion blended)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_a19bfb4000486c38788fb3d826b4fb7db}\label{struct_cinemachine_1_1_camera_state_a19bfb4000486c38788fb3d826b4fb7db} 
+\mbox{\hyperlink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings}} {\bfseries Lens}
+\begin{DoxyCompactList}\small\item\em Camera Lens Settings. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_a01cd67eb564056eea23ecd75f934fbcf}\label{struct_cinemachine_1_1_camera_state_a01cd67eb564056eea23ecd75f934fbcf} 
+Vector3 {\bfseries Reference\+Up}
+\begin{DoxyCompactList}\small\item\em Which way is up. World space unit vector. Must have a length of 1. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_aabf797acf880592150c84e756b092e02}\label{struct_cinemachine_1_1_camera_state_aabf797acf880592150c84e756b092e02} 
+Vector3 {\bfseries Reference\+Look\+At}
+\begin{DoxyCompactList}\small\item\em The world space focus point of the camera. What the camera wants to look at. There is a special constant define to represent "{}nothing"{}. Be careful to check for that (or check the Has\+Look\+At property). \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_a72a15bb38ca45b9d1d6b17c80a11cc0d}\label{struct_cinemachine_1_1_camera_state_a72a15bb38ca45b9d1d6b17c80a11cc0d} 
+Vector3 {\bfseries Raw\+Position}
+\begin{DoxyCompactList}\small\item\em Raw (un-\/corrected) world space position of this camera. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_a468b74d33fbf45b61cc2551d765eb6da}\label{struct_cinemachine_1_1_camera_state_a468b74d33fbf45b61cc2551d765eb6da} 
+Quaternion {\bfseries Raw\+Orientation}
+\begin{DoxyCompactList}\small\item\em Raw (un-\/corrected) world space orientation of this camera. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_ae4f7353e9ff8c9617f67cbcabd4893e4}\label{struct_cinemachine_1_1_camera_state_ae4f7353e9ff8c9617f67cbcabd4893e4} 
+Vector3 {\bfseries Position\+Damping\+Bypass}
+\begin{DoxyCompactList}\small\item\em This is a way for the Body component to bypass aim damping, useful for when the body needs to rotate its point of view, but does not want interference from the aim damping. The value is the camera rotation, in Euler degrees. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_a6ca0f4c0b7e80840c941c134a980cbf8}\label{struct_cinemachine_1_1_camera_state_a6ca0f4c0b7e80840c941c134a980cbf8} 
+float {\bfseries Shot\+Quality}
+\begin{DoxyCompactList}\small\item\em Subjective estimation of how "{}good"{} the shot is. Larger values mean better quality. Default is 1. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_a9ac37b645760e733f4c2c69d16aea8fb}\label{struct_cinemachine_1_1_camera_state_a9ac37b645760e733f4c2c69d16aea8fb} 
+Vector3 {\bfseries Position\+Correction}
+\begin{DoxyCompactList}\small\item\em Position correction. This will be added to the raw position. This value doesn\textquotesingle{}t get fed back into the system when calculating the next frame. Can be noise, or smoothing, or both, or something else. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_a0a810bad31d647e4349a5cd4309ca4d9}\label{struct_cinemachine_1_1_camera_state_a0a810bad31d647e4349a5cd4309ca4d9} 
+Quaternion {\bfseries Orientation\+Correction}
+\begin{DoxyCompactList}\small\item\em Orientation correction. This will be added to the raw orientation. This value doesn\textquotesingle{}t get fed back into the system when calculating the next frame. Can be noise, or smoothing, or both, or something else. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_a1e65164633ffd19cf98e88f65bbe2c84}\label{struct_cinemachine_1_1_camera_state_a1e65164633ffd19cf98e88f65bbe2c84} 
+\mbox{\hyperlink{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9ea}{Blend\+Hint\+Value}} {\bfseries Blend\+Hint}
+\begin{DoxyCompactList}\small\item\em These hints can be or\textquotesingle{}ed toether to influence how blending is done, and how state is applied to the camera. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_a7a60a25cd70446f5ff56aed6ae9b8b55}\label{struct_cinemachine_1_1_camera_state_a7a60a25cd70446f5ff56aed6ae9b8b55} 
+\mbox{\hyperlink{struct_cinemachine_1_1_camera_state_1_1_custom_blendable}{Custom\+Blendable}} {\bfseries m\+Custom0}
+\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_ae11f6bc67b3310a9237c4508c2b4d7ff}\label{struct_cinemachine_1_1_camera_state_ae11f6bc67b3310a9237c4508c2b4d7ff} 
+\mbox{\hyperlink{struct_cinemachine_1_1_camera_state_1_1_custom_blendable}{Custom\+Blendable}} {\bfseries m\+Custom1}
+\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_a76004df845f3e7cf0fe0e030b3218256}\label{struct_cinemachine_1_1_camera_state_a76004df845f3e7cf0fe0e030b3218256} 
+\mbox{\hyperlink{struct_cinemachine_1_1_camera_state_1_1_custom_blendable}{Custom\+Blendable}} {\bfseries m\+Custom2}
+\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_a905eadd2cf157706686e7f9b6339de01}\label{struct_cinemachine_1_1_camera_state_a905eadd2cf157706686e7f9b6339de01} 
+\mbox{\hyperlink{struct_cinemachine_1_1_camera_state_1_1_custom_blendable}{Custom\+Blendable}} {\bfseries m\+Custom3}
+\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_ab9b58d14d8b993c2a8dba223f496696a}\label{struct_cinemachine_1_1_camera_state_ab9b58d14d8b993c2a8dba223f496696a} 
+List$<$ \mbox{\hyperlink{struct_cinemachine_1_1_camera_state_1_1_custom_blendable}{Custom\+Blendable}} $>$ {\bfseries m\+\_\+\+Custom\+Overflow}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_a745870cb1bdeb5f3ba3af9b90bf8572b}\label{struct_cinemachine_1_1_camera_state_a745870cb1bdeb5f3ba3af9b90bf8572b} 
+static Vector3 {\bfseries k\+No\+Point} = new Vector3(float.\+NaN, float.\+NaN, float.\+NaN)
+\begin{DoxyCompactList}\small\item\em This constant represents "{}no point in space"{} or "{}no direction"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_a7fdab39fc138e9e30c6b3740f511fec5}\label{struct_cinemachine_1_1_camera_state_a7fdab39fc138e9e30c6b3740f511fec5} 
+bool {\bfseries Has\+Look\+At}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if this state has a valid Reference\+Look\+At value. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_ab5696c22356da307082190f4d3feb1ea}\label{struct_cinemachine_1_1_camera_state_ab5696c22356da307082190f4d3feb1ea} 
+Vector3 {\bfseries Corrected\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Position with correction applied. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_a3532740c170446f26d6679a36d2e1a4b}\label{struct_cinemachine_1_1_camera_state_a3532740c170446f26d6679a36d2e1a4b} 
+Quaternion {\bfseries Corrected\+Orientation}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Orientation with correction applied. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_adfd8629deb6e95cee0387011d68d4a56}\label{struct_cinemachine_1_1_camera_state_adfd8629deb6e95cee0387011d68d4a56} 
+Vector3 {\bfseries Final\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Position with correction applied. This is what the final camera gets. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_a8f4c172c9e046939b2cdcc8f424156d6}\label{struct_cinemachine_1_1_camera_state_a8f4c172c9e046939b2cdcc8f424156d6} 
+Quaternion {\bfseries Final\+Orientation}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Orientation with correction and dutch applied. This is what the final camera gets. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_a69eb97d19b401a488ba533ecd1275a2f}\label{struct_cinemachine_1_1_camera_state_a69eb97d19b401a488ba533ecd1275a2f} 
+static \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} {\bfseries Default}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em State with default values. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_camera_state_ab3148e1dd1d0525457cf8fd4898246e9}\label{struct_cinemachine_1_1_camera_state_ab3148e1dd1d0525457cf8fd4898246e9} 
+int {\bfseries Num\+Custom\+Blendables}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of custom blendables that will be applied to the camera. ~\newline
+ The base system manages but otherwise ignores this data -\/ it is intended for extension modules. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The output of the \doxylink{namespace_cinemachine}{Cinemachine} engine for a specific virtual camera. The information in this struct can be blended, and provides what is needed to calculate an appropriate camera position, orientation, and lens setting. 
+
+Raw values are what the \doxylink{namespace_cinemachine}{Cinemachine} behaviours generate. The correction channel holds perturbations to the raw values -\/ e.\+g. noise or smoothing, or obstacle avoidance corrections. Coirrections are not considered when making time-\/based calculations such as damping.
+
+The Final position and orientation is the comination of the raw values and their corrections. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9ea}\index{Cinemachine.CameraState@{Cinemachine.CameraState}!BlendHintValue@{BlendHintValue}}
+\index{BlendHintValue@{BlendHintValue}!Cinemachine.CameraState@{Cinemachine.CameraState}}
+\doxysubsubsection{\texorpdfstring{BlendHintValue}{BlendHintValue}}
+{\footnotesize\ttfamily \label{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9ea} 
+enum \mbox{\hyperlink{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9ea}{Cinemachine.\+Camera\+State.\+Blend\+Hint\+Value}}}
+
+
+
+These hints can be or\textquotesingle{}ed toether to influence how blending is done, and how state is applied to the camera. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Nothing@{Nothing}!Cinemachine.CameraState@{Cinemachine.CameraState}}\index{Cinemachine.CameraState@{Cinemachine.CameraState}!Nothing@{Nothing}}}\Hypertarget{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9eaaf80a4ad87fee7c9fdc19b7769495fdb5}\label{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9ea} 
+Nothing&Normal state blending. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NoPosition@{NoPosition}!Cinemachine.CameraState@{Cinemachine.CameraState}}\index{Cinemachine.CameraState@{Cinemachine.CameraState}!NoPosition@{NoPosition}}}\Hypertarget{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9eaaa30e8b5e793b9c004e6669490376efc6}\label{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9ea} 
+No\+Position&This state does not affect the camera position. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NoOrientation@{NoOrientation}!Cinemachine.CameraState@{Cinemachine.CameraState}}\index{Cinemachine.CameraState@{Cinemachine.CameraState}!NoOrientation@{NoOrientation}}}\Hypertarget{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9eaa2b71fefa681b7fd0589f3a3575a6d2a7}\label{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9ea} 
+No\+Orientation&This state does not affect the camera rotation. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NoTransform@{NoTransform}!Cinemachine.CameraState@{Cinemachine.CameraState}}\index{Cinemachine.CameraState@{Cinemachine.CameraState}!NoTransform@{NoTransform}}}\Hypertarget{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9eaac8c9fe0abed7ae3bab93a24ac8ac1e97}\label{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9ea} 
+No\+Transform&Combination of No\+Position and No\+Orientation. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SphericalPositionBlend@{SphericalPositionBlend}!Cinemachine.CameraState@{Cinemachine.CameraState}}\index{Cinemachine.CameraState@{Cinemachine.CameraState}!SphericalPositionBlend@{SphericalPositionBlend}}}\Hypertarget{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9eaabb21d887c83a5079a6ce3eabe72a0ece}\label{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9ea} 
+Spherical\+Position\+Blend&Spherical blend about the Look\+At target (if any) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CylindricalPositionBlend@{CylindricalPositionBlend}!Cinemachine.CameraState@{Cinemachine.CameraState}}\index{Cinemachine.CameraState@{Cinemachine.CameraState}!CylindricalPositionBlend@{CylindricalPositionBlend}}}\Hypertarget{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9eaa9385cf2c31960d67b3e1cc49e6bec568}\label{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9ea} 
+Cylindrical\+Position\+Blend&Cylindrical blend about the Look\+At target (if any) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RadialAimBlend@{RadialAimBlend}!Cinemachine.CameraState@{Cinemachine.CameraState}}\index{Cinemachine.CameraState@{Cinemachine.CameraState}!RadialAimBlend@{RadialAimBlend}}}\Hypertarget{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9eaa4a4888d0a530ba8dfb56765eb3a70d7c}\label{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9ea} 
+Radial\+Aim\+Blend&Radial blend when the Look\+At target changes(if any) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IgnoreLookAtTarget@{IgnoreLookAtTarget}!Cinemachine.CameraState@{Cinemachine.CameraState}}\index{Cinemachine.CameraState@{Cinemachine.CameraState}!IgnoreLookAtTarget@{IgnoreLookAtTarget}}}\Hypertarget{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9eaa2b500461b5894232b33304ddca8104aa}\label{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9ea} 
+Ignore\+Look\+At\+Target&Ignore the Look\+At target and just slerp the orientation. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NoLens@{NoLens}!Cinemachine.CameraState@{Cinemachine.CameraState}}\index{Cinemachine.CameraState@{Cinemachine.CameraState}!NoLens@{NoLens}}}\Hypertarget{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9eaa70e7f30dff7ec5cfbb796ebe9512e35c}\label{struct_cinemachine_1_1_camera_state_af14ffd419d1f95058f08840feab4e9ea} 
+No\+Lens&This state does not affect the lens. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_cinemachine_1_1_camera_state_a6ae8505931e075be72ad0aa3494c8314}\index{Cinemachine.CameraState@{Cinemachine.CameraState}!AddCustomBlendable@{AddCustomBlendable}}
+\index{AddCustomBlendable@{AddCustomBlendable}!Cinemachine.CameraState@{Cinemachine.CameraState}}
+\doxysubsubsection{\texorpdfstring{AddCustomBlendable()}{AddCustomBlendable()}}
+{\footnotesize\ttfamily \label{struct_cinemachine_1_1_camera_state_a6ae8505931e075be72ad0aa3494c8314} 
+void Cinemachine.\+Camera\+State.\+Add\+Custom\+Blendable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cinemachine_1_1_camera_state_1_1_custom_blendable}{Custom\+Blendable}}}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a custom blendable to the pot for eventual application to the camera. The base system manages but otherwise ignores this data -\/ it is intended for extension modules. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & The custom blendable to add. If b.\+m\+\_\+\+Custom is the same as an already-\/added custom blendable, then they will be merged and the weights combined.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_cinemachine_1_1_camera_state_a0cdf7c90dbecec6fae6b87ad01e5d487}\index{Cinemachine.CameraState@{Cinemachine.CameraState}!GetCustomBlendable@{GetCustomBlendable}}
+\index{GetCustomBlendable@{GetCustomBlendable}!Cinemachine.CameraState@{Cinemachine.CameraState}}
+\doxysubsubsection{\texorpdfstring{GetCustomBlendable()}{GetCustomBlendable()}}
+{\footnotesize\ttfamily \label{struct_cinemachine_1_1_camera_state_a0cdf7c90dbecec6fae6b87ad01e5d487} 
+\mbox{\hyperlink{struct_cinemachine_1_1_camera_state_1_1_custom_blendable}{Custom\+Blendable}} Cinemachine.\+Camera\+State.\+Get\+Custom\+Blendable (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get a custom blendable that will be applied to the camera. ~\newline
+ The base system manages but otherwise ignores this data -\/ it is intended for extension modules. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Which one to get. Must be in range \mbox{[}0...Num\+Custom\+Blendables)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The custom blendable at the specified index.
+\end{DoxyReturn}
+\Hypertarget{struct_cinemachine_1_1_camera_state_a009a9e8d8e27361020a3431a3d9a1326}\index{Cinemachine.CameraState@{Cinemachine.CameraState}!Lerp@{Lerp}}
+\index{Lerp@{Lerp}!Cinemachine.CameraState@{Cinemachine.CameraState}}
+\doxysubsubsection{\texorpdfstring{Lerp()}{Lerp()}}
+{\footnotesize\ttfamily \label{struct_cinemachine_1_1_camera_state_a009a9e8d8e27361020a3431a3d9a1326} 
+static \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} Cinemachine.\+Camera\+State.\+Lerp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}}}]{stateA}{, }\item[{\mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}}}]{stateB}{, }\item[{float}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Intelligently blend the contents of two states. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stateA} & The first state, corresponding to t=0\\
+\hline
+{\em stateB} & The second state, corresponding to t=1\\
+\hline
+{\em t} & How much to interpolate. Internally clamped to 0..1\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Linearly interpolated \doxylink{struct_cinemachine_1_1_camera_state}{Camera\+State}
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Core/Camera\+State.\+cs\end{DoxyCompactItemize}

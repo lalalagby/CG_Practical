@@ -1,0 +1,109 @@
+\chapter{Look Dev}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev}\index{Look Dev@{Look Dev}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1799}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1799}%
+ Look Dev is an image-\/based lighting tool that contains a viewer for you to check and compare Assets to ensure they work well in various lighting conditions. Look Dev uses the Scriptable Render Pipeline, so it can display the Asset in the same way as it looks in your Scene. You can load Assets into Look Dev either as Prefabs or from the Hierarchy window.
+
+Look Dev is only available in Edit mode. The Look Dev window closes when you enter Play mode.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1800}{}\doxysubsection{\texorpdfstring{Asset validation}{Asset validation}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1800}
+Asset validation confirms whether Assets are authored correctly and behave as expected in different lighting environments.
+
+You must use an HDRI (high dynamic range image) to validate your Assets in Look Dev. An HDRI contains real-\/world lighting with incredibly high detail. As such, it offers perfect lighting that is difficult to create by hand. By using such an accurate lighting environment to test an Asset, you can determine whether the Asset itself or your Project\textquotesingle{}s lighting is reducing the visual quality of your Scene.
+
+You can load two different Assets into Look Dev at the same time and compare them in two viewports. For example, an Art Director can check that a new Asset matches the art direction guidelines of a reference Asset.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1801}{}\doxysection{\texorpdfstring{Using Look Dev}{Using Look Dev}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1801}
+To open Look Dev in the \doxylink{namespace_unity}{Unity} Editor, select {\bfseries{Window \texorpdfstring{$>$}{>} Rendering \texorpdfstring{$>$}{>} Look Dev}}. The first time you use Look Dev, you must either create a new \href{Look-Dev-Environment-Library.html}{\texttt{ Environment Library}} or load one. For information on how to create an Environment Library, see the \href{Look-Dev-Environment-Library.html}{\texttt{ Environment Library documentation}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1802}{}\doxysubsection{\texorpdfstring{Viewports}{Viewports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1802}
+By default, there is only one viewport in Look Dev, but you can choose from a selection of split-\/screen views (see the \doxylink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_MultiView}{Multi-\/view section}).\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1803}{}\doxysubsection{\texorpdfstring{Controls}{Controls}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1803}
+Navigation with the Look Dev Camera works in a similar way to the \href{https://docs.unity3d.com/Manual/SceneViewNavigation.html}{\texttt{ Scene view Camera}}\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Rotate around pivot\+:}} Left click and drag (this is similar to the Scene view except that you need to press the Alt key for the Scene view Camera).
+\item {\bfseries{Pan camera\+:}} Middle click and drag.
+\item {\bfseries{Zoom\+:}} Alt + right click and drag.
+\item {\bfseries{Forward/backward\+:}} Mouse wheel.
+\item {\bfseries{First Person mode\+:}} Right click + W, A,S, and D.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1804}{}\doxysubsection{\texorpdfstring{Loading Assets into Look Dev}{Loading Assets into Look Dev}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1804}
+Look Dev lets you view\+:
+
+{\bfseries{Prefabs}} -\/ To load a Prefab into Look Dev, drag it from the Project window into the Look Dev viewport.
+
+{\bfseries{Game\+Objects}} -\/ To load a copy of a Hierarchy Game\+Object, drag the Game\+Object from the Hierarchy into the Look Dev viewport.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1805}{}\doxysection{\texorpdfstring{Viewport modes}{Viewport modes}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1805}
+Use the toolbar in the top-\/left of the window to change which viewing mode Look Dev uses.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1806}{}\doxysubsection{\texorpdfstring{Single viewport}{Single viewport}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1806}
+
+
+By default, Look Dev displays a single viewport which contains the Prefab or Game\+Object you are working with. If you are in another viewing mode, you can click either the number {\bfseries{1}} or number {\bfseries{2}} button to go back to single view. Each button corresponds to a viewport in Look Dev. Select button {\bfseries{1}} to use viewport 1, and button 2 to use viewport {\bfseries{2}}.
+
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_MultiView}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_MultiView}%
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1807}{}\doxysubsection{\texorpdfstring{Multi-\/viewport}{Multi-\/viewport}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1807}
+
+
+Use multiple viewports to compare different environments and settings for the same Asset. You can arrange viewports\+:
+
+
+\begin{DoxyItemize}
+\item Vertically side-\/by-\/side. Use this mode to compare two different lighting conditions on the same Asset to check that the Asset behaves correctly.
+\item Horizontally side-\/by-\/side. Use this mode to compare two different lighting conditions for horizontal objects, like an environment Asset, to check that the Asset behaves correctly.
+\item Split-\/screen. Use this mode investigate texture problems using a debug Shader mode (for example, use one screen to view Normal or Albedo shading, and the other for environment-\/lit mode).
+\item Side-\/by-\/side and split-\/screen\+: Use this mode to compare two different versions of the same Asset using the same lighting conditions to see which changes improve the Asset’s quality.
+\end{DoxyItemize}
+
+All three of these modes are useful to compare two different versions of the same Asset using the same lighting conditions to see which changes improve the Asset’s quality.
+
+To load a different Prefab or Hierarchy Game\+Object into each split-\/screen view, drag and drop the Asset into the viewport that you want to view it in.
+
+When using multiple viewports, it only makes sense to compare different Prefabs or Game\+Objects when you want to look at two versions of the same Asset. Comparing completely different Assets doesn’t give you a good idea of the difference in lighting or visual effect.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1808}{}\doxysubsubsubsection{\texorpdfstring{Vertical or horizontal side-\/by-\/side}{Vertical or horizontal side-\/by-\/side}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1808}
+Vertical and horizontal side-\/by-\/side viewports show an identical view of your Asset.
+
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1809}{}\doxysubsubsubsection{\texorpdfstring{Split-\/screen}{Split-\/screen}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1809}
+In a split-\/screen view, there is a red/blue manipulation Gizmo that separates the two viewports. For information on how to use this Gizmo, see \doxylink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_ManipulationGizmo}{Using the manipulation Gizmo}.
+
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1810}{}\doxysubsubsection{\texorpdfstring{Multi-\/viewport Camera}{Multi-\/viewport Camera}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1810}
+By default, Look Dev synchronizes the camera movement for both views. To decouple the Cameras from one another, and manipulate them independently, click the {\bfseries{Synchronized Cameras}} button in-\/between the two numbered Camera buttons.
+
+
+
+To align the cameras with each other, or reset them, click on the drop-\/down arrow next to the viewport {\bfseries{2}} icon\+:
+
+
+
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_ManipulationGizmo}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_ManipulationGizmo}%
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1811}{}\doxysubsection{\texorpdfstring{Using the manipulation Gizmo}{Using the manipulation Gizmo}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1811}
+The manipulation Gizmo represents the separation plane between the two viewports. It has different behavior in split-\/screen mode, but you use it in the same way for both side-\/by-\/side or split-\/screen modes.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1812}{}\doxysubsubsection{\texorpdfstring{Moving the separator}{Moving the separator}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1812}
+To move the separator, click and drag the straight line of the Gizmo to the location you want.
+
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1813}{}\doxysubsubsection{\texorpdfstring{Changing the orientation and length}{Changing the orientation and length}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1813}
+To change the orientation and length of the manipulator Gizmo, click and drag the circle at either end of the manipulator. Changing the length of the Gizmo lets you set the orientation and \doxylink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_Blending}{blending} values more precisely.
+
+)\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1814}{}\doxysubsubsection{\texorpdfstring{Changing the split in increments}{Changing the split in increments}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1814}
+To change the split in increments, click and hold the circle on the end of the manipulation Gizmo, then hold Shift as you move the mouse. This snaps the manipulation Gizmo to set angles in increments of 22.\+5°, which is useful for a perfectly horizontal, vertical or diagonal angle.
+
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_Blending}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_Blending}%
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1815}{}\doxysubsubsection{\texorpdfstring{Blending}{Blending}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1815}
+The central white circle on the separator allows you to blend between the two views. Left click on it and drag along the red line to blend the left-\/hand view with the right-\/hand view. Drag along the blue line to blend the right-\/hand view with the left-\/hand view (as shown in the image below).
+
+The white circle automatically snaps back into the center when you drag it back. This helps you get back to the default blending value quickly.
+
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1816}{}\doxysubsection{\texorpdfstring{HDRI environments in Look Dev}{HDRI environments in Look Dev}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1816}
+Lighting in Look Dev uses an HDRI. The Look Dev view allows you to manipulate and easily switch between HDRIs to simulate different environments for the Asset you are working on.
+
+Look Dev uses the \href{Look-Dev-Environment-Library.html}{\texttt{ Environment Library}} Asset to store a list of environments, which are HDRIs with extra properties that you can use to further refine the environment. For information on how to create, edit, and assign Environment Libraries, see the \href{Look-Dev-Environment-Library.html\#Creation}{\texttt{ Environment Library documentation}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1817}{}\doxysection{\texorpdfstring{Implementing Look Dev for your custom Scriptable Render Pipeline}{Implementing Look Dev for your custom Scriptable Render Pipeline}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documentation_0i_2_look-_dev_autotoc_md1817}
+In order to use Look Dev in your custom Scriptable Render Pipeline, you must implement the {\bfseries{\doxylink{interface_unity_engine_1_1_rendering_1_1_look_dev_1_1_i_data_provider}{Unity\+Engine.\+Rendering.\+Look\+Dev.\+IData\+Provider}}} interface.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+{\bfseries{void First\+Init\+Scene(\+Stage\+Runtime\+Interface stage)}}   &Look Dev calls this function after it initializes the Scene with a Light and Camera. It uses this function to add and configure extra components according to the needs of your Scriptable Render Pipeline.    \\\cline{1-2}
+{\bfseries{void Update\+Sky(\+Camera camera, Sky sky, Stage\+Runtime\+Interface stage)}}   &Look Dev uses this function to update the environment when you change something in Look Dev. You can handle the sky in various ways, so add code that corresponds to your Scriptable Render Pipeline.    \\\cline{1-2}
+{\bfseries{IEnumerable\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}$<$string$>$}} {\bfseries{supported\+Debug\+Modes \{ get; \}}}   &Use this function to specify the list of supported debug modes. You do not need to add {\bfseries{None}} because Look Dev handles that automatically.    \\\cline{1-2}
+{\bfseries{void Update\+Debug\+Mode(int debug\+Index)}}   &Use this function to update the debug mode based on what the user selects. The {\bfseries{debug\+Index}} matches the list in {\bfseries{supported\+Debug\+Modes}}. If the user selects {\bfseries{None}}, then the {\bfseries{debug\+Index}} is {\bfseries{-\/1}};    \\\cline{1-2}
+{\bfseries{void Get\+Shadow\+Mask(ref Render\+Texture output, Stage\+Runtime\+Interface stage)}}   &This function computes a shadow map. The given {\bfseries{Stage\+Runtime\+Interface}} contains access to the Camera and a Light simulating the sun.   \\\cline{1-2}
+\end{longtabu}

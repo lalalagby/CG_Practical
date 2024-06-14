@@ -1,0 +1,40 @@
+\chapter{Evaluate Foam Data}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_27e87d89e4717fdc44d9b88442fc499f2}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_27e87d89e4717fdc44d9b88442fc499f2}\index{Evaluate Foam Data@{Evaluate Foam Data}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_27e87d89e4717fdc44d9b88442fc499f2_autotoc_md3194}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_27e87d89e4717fdc44d9b88442fc499f2_autotoc_md3194}%
+ This node calculates water foam intensity.
+
+This node outputs foam as monochrome in the red channel. If you connect the output of this node to a {\bfseries{Base Color}} block, all the channels are red. To prevent this, split the output and use only the red channel. You can\textquotesingle{}t apply a tint to foam.
+
+The High Definition Render Pipeline (HDRP) uses this node in the default water shader graph. See the HDRP documentation for more information about \href{https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@14.0/manual/WaterSystem.html}{\texttt{ the Water System}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_27e87d89e4717fdc44d9b88442fc499f2_autotoc_md3195}{}\doxysection{\texorpdfstring{Render pipeline compatibility}{Render pipeline compatibility}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_27e87d89e4717fdc44d9b88442fc499f2_autotoc_md3195}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Node}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Universal Render Pipeline (URP)}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{High Definition Render Pipeline (HDRP)}}    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Node}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Universal Render Pipeline (URP)}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{High Definition Render Pipeline (HDRP)}}    }\\\cline{1-3}
+\endhead
+{\bfseries{Evaluate Foam Data}}   &No   &Yes   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_27e87d89e4717fdc44d9b88442fc499f2_autotoc_md3196}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_27e87d89e4717fdc44d9b88442fc499f2_autotoc_md3196}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Direction}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Direction}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-4}
+\endhead
+{\bfseries{Surface\+Gradient}}   &Input   &Vector3   &The perturbation of the normal, as a surface gradient.    \\\cline{1-4}
+{\bfseries{Low\+Frequency\+Surface\+Gradient}}   &Input   &Vector3   &The perturbation of the low frequency normal, as a surface gradient. The low frequency normal is the normal of the water surface without high frequency details such as ripples.    \\\cline{1-4}
+{\bfseries{Simulation\+Foam}}   &Input   &Float   &The amount of foam. HDRP uses this property in the default water shader graph to fetch foam data from the simulation.    \\\cline{1-4}
+{\bfseries{Custom\+Foam}}   &Input   &Float   &The amount of foam, if you create your own foam.    \\\cline{1-4}
+{\bfseries{Surface\+Gradient}}   &Output   &Vector3   &The calculated water surface normal, as a surface gradient.    \\\cline{1-4}
+{\bfseries{Foam}}   &Output   &Float   &The combination of the amount of foam and a foam texture.    \\\cline{1-4}
+{\bfseries{Smoothness}}   &Output   &Float   &The smoothness of the water surface. For more information about this property, see \href{https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@14.0/manual/WaterSystem-Properties.html}{\texttt{ Settings and Properties Related to the Water System}}.   \\\cline{1-4}
+\end{longtabu}

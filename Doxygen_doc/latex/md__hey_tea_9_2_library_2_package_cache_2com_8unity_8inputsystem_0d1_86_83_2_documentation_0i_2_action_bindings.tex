@@ -1,0 +1,1152 @@
+\chapter{Input Bindings}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings}\index{Input Bindings@{Input Bindings}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1237}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1237}%
+
+\begin{DoxyItemize}
+\item Composite Bindings
+\begin{DoxyItemize}
+\item 1D Axis
+\item 2D Vector
+\item 3D Vector
+\item One Modifier
+\item Two Modifiers
+\item Writing custom Composites
+\end{DoxyItemize}
+\item Working with Bindings
+\begin{DoxyItemize}
+\item Looking up Bindings
+\item Changing Bindings
+\begin{DoxyItemize}
+\item Applying overrides
+\item Erasing Bindings
+\item Adding Bindings
+\item Setting parameters
+\end{DoxyItemize}
+\item Interactive rebinding
+\item Saving and loading rebinds
+\item Restoring original Bindings
+\item Displaying Bindings
+\end{DoxyItemize}
+\item Control schemes
+\item Details
+\begin{DoxyItemize}
+\item Binding resolution
+\begin{DoxyItemize}
+\item Binding resolution while Actions are enabled
+\item Choosing which Devices to use
+\end{DoxyItemize}
+\item Conflicting inputs
+\item Initial state check
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+An \href{../api/UnityEngine.InputSystem.InputBinding.html}{\texttt{ {\ttfamily Input\+Binding}}} represents a connection between an \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions}{Action}{0} and one or more \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls}{Controls}{0} identified by a \href{Controls.md\#control-paths}{\texttt{ Control path}}. An Action can have an arbitrary number of Bindings pointed at it. Multiple Bindings can reference the same Control.
+
+Each Binding has the following properties\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+\href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_path}{\texttt{ {\ttfamily path}}}   &\href{Controls.md\#control-paths}{\texttt{ Control path}} that identifies the control(s) from which the Action should receive input.~\newline
+~\newline
+Example\+: {\ttfamily "{}$<$\+Gamepad$>$/left\+Stick"{}}    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_overridePath}{\texttt{ {\ttfamily override\+Path}}}   &\href{Controls.md\#control-paths}{\texttt{ Control path}} that overrides {\ttfamily path}. Unlike {\ttfamily path}, {\ttfamily override\+Path} is not persistent, so you can use it to non-\/destructively override the path on a Binding. If it is set to something other than null, it takes effect and overrides {\ttfamily path}. To get the path which is currently in effect (that is, either {\ttfamily path} or {\ttfamily override\+Path}), you can query the \href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_effectivePath}{\texttt{ {\ttfamily effective\+Path}}} property.    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_action}{\texttt{ {\ttfamily action}}}   &The name or ID of the Action that the Binding should trigger. Note that this can be null or empty (for instance, for composites). Not case-\/sensitive.~\newline
+~\newline
+Example\+: {\ttfamily "{}fire"{}}    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_groups}{\texttt{ {\ttfamily groups}}}   &A semicolon-\/separated list of Binding groups that the Binding belongs to. Can be null or empty. Binding groups can be anything, but are mostly used for Control Schemes. Not case-\/sensitive.~\newline
+~\newline
+Example\+: {\ttfamily "{}\+Keyboard\&\+Mouse;\+Gamepad"{}}    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_interactions}{\texttt{ {\ttfamily interactions}}}   &A semicolon-\/separated list of \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_interactions}{Interactions}{0} to apply to input on this Binding. Note that \doxylink{namespace_unity}{Unity} appends Interactions applied to the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions}{Action}{0} itself (if any) to this list. Not case-\/sensitive.~\newline
+~\newline
+Example\+: {\ttfamily "{}slow\+Tap;hold(duration=0.\+75)"{}}    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_processors}{\texttt{ {\ttfamily processors}}}   &A semicolon-\/separated list of \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors}{Processors}{0} to apply to input on this Binding. Note that \doxylink{namespace_unity}{Unity} appends Processors applied to the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions}{Action}{0} itself (if any) to this list. Not case-\/sensitive.~\newline
+~\newline
+Processors on Bindings apply in addition to Processors on Controls that are providing values. For example, if you put a {\ttfamily stick\+Deadzone} Processor on a Binding and then bind it to {\ttfamily \texorpdfstring{$<$}{<}Gamepad\texorpdfstring{$>$}{>}/left\+Stick}, you get deadzones applied twice\+: once from the deadzone Processor sitting on the {\ttfamily left\+Stick} Control, and once from the Binding.~\newline
+~\newline
+Example\+: {\ttfamily "{}invert;axis\+Deadzone(min=0.\+1,max=0.\+95)"{}}    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_id}{\texttt{ {\ttfamily id}}}   &Unique ID of the Binding. You can use it to identify the Binding when storing Binding overrides in user settings, for example.    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_name}{\texttt{ {\ttfamily name}}}   &Optional name of the Binding. Identifies part names inside Composites.~\newline
+~\newline
+Example\+: {\ttfamily "{}\+Positive"{}}    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_isComposite}{\texttt{ {\ttfamily is\+Composite}}}   &Whether the Binding acts as a Composite.    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_isPartOfComposite}{\texttt{ {\ttfamily is\+Part\+Of\+Composite}}}   &Whether the Binding is part of a Composite.   \\\cline{1-2}
+\end{longtabu}
+
+
+To query the Bindings to a particular Action, you can use \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_bindings}{\texttt{ {\ttfamily Input\+Action.\+bindings}}}. To query a flat list of Bindings for all Actions in an Action Map, you can use \href{../api/UnityEngine.InputSystem.InputActionMap.html\#UnityEngine_InputSystem_InputActionMap_bindings}{\texttt{ {\ttfamily Input\+Action\+Map.\+bindings}}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1238}{}\doxysection{\texorpdfstring{Composite Bindings}{Composite Bindings}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1238}
+Sometimes, you might want to have several Controls act in unison to mimic a different type of Control. The most common example of this is using the W, A, S, and D keys on the keyboard to form a 2D vector Control equivalent to mouse deltas or gamepad sticks. Another example is to use two keys to form a 1D axis equivalent to a mouse scroll axis.
+
+This is difficult to implement with normal Bindings. You can bind a \href{../api/UnityEngine.InputSystem.Controls.ButtonControl.html}{\texttt{ {\ttfamily Button\+Control}}} to an action expecting a {\ttfamily Vector2}, but doing so results in an exception at runtime when the Input \doxylink{namespace_system}{System} tries to read a {\ttfamily Vector2} from a Control that can deliver only a {\ttfamily float}.
+
+Composite Bindings (that is, Bindings that are made up of other Bindings) solve this problem. Composites themselves don\textquotesingle{}t bind directly to Controls; instead, they source values from other Bindings that do, and then synthesize input on the fly from those values.
+
+To see how to create Composites in the editor UI, see documentation on \href{ActionAssets.md\#editing-composite-bindings}{\texttt{ editing Composite Bindings}}.
+
+To create composites in code, you can use the \href{../api/UnityEngine.InputSystem.InputActionSetupExtensions.html\#UnityEngine_InputSystem_InputActionSetupExtensions_AddCompositeBinding_UnityEngine_InputSystem_InputAction_System_String_System_String_System_String_}{\texttt{ {\ttfamily Add\+Composite\+Binding}}} syntax.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{myAction.AddCompositeBinding(\textcolor{stringliteral}{"{}Axis"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Positive"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/rightTrigger"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Negative"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftTrigger"{}});}
+
+\end{DoxyCode}
+
+
+Each Composite consists of one Binding that has \href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_isComposite}{\texttt{ {\ttfamily Input\+Binding.\+is\+Composite}}} set to true, followed by one or more Bindings that have \href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_isPartOfComposite}{\texttt{ {\ttfamily Input\+Binding.\+is\+Part\+Of\+Composiste}}} set to true. In other words, several consecutive entries in \href{../api/UnityEngine.InputSystem.InputActionMap.html\#UnityEngine_InputSystem_InputActionMap_bindings}{\texttt{ {\ttfamily Input\+Action\+Map.\+bindings}}} or \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_bindings}{\texttt{ {\ttfamily Input\+Action.\+bindings}}} together form a Composite.
+
+Note that each composite part can be bound arbitrary many times.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Make\ both\ shoulders\ and\ triggers\ pull\ on\ the\ axis.}}
+\DoxyCodeLine{myAction.AddCompositeBinding(\textcolor{stringliteral}{"{}Axis"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Positive"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/rightTrigger"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Positive"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/rightShoulder"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Negative"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftTrigger"{}});}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Negative"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftShoulder"{}});}
+
+\end{DoxyCode}
+
+
+Composites can have parameters, just like \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_interactions}{Interactions}{0} and \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors}{Processors}{0}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{myAction.AddCompositeBinding(\textcolor{stringliteral}{"{}Axis(whichSideWins=1)"{}});}
+
+\end{DoxyCode}
+
+
+There are currently five Composite types that come with the system out of the box\+: 1\+D-\/\+Axis, 2\+D-\/\+Vector, 3\+D-\/\+Vector, One Modifier and Two Modifiers. Additionally, you can add your own types of Composites.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1239}{}\doxysubsection{\texorpdfstring{1D axis}{1D axis}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1239}
+
+
+
+
+A Composite made of two buttons\+: one that pulls a 1D axis in its negative direction, and another that pulls it in its positive direction. Implemented in the \href{../api/UnityEngine.InputSystem.Composites.AxisComposite.html}{\texttt{ {\ttfamily Axis\+Composite}}} class. The result is a {\ttfamily float}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{myAction.AddCompositeBinding(\textcolor{stringliteral}{"{}1DAxis"{}})\ \textcolor{comment}{//\ Or\ just\ "{}Axis"{}}}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Positive"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/rightTrigger"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Negative"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftTrigger"{}});}
+
+\end{DoxyCode}
+
+
+The axis Composite has two part bindings.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Part   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Part   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+\href{../api/UnityEngine.InputSystem.Composites.AxisComposite.html\#UnityEngine_InputSystem_Composites_AxisComposite_positive}{\texttt{ {\ttfamily positive}}}   &{\ttfamily Button}   &Controls pulling in the positive direction (towards \href{../api/UnityEngine.InputSystem.Composites.AxisComposite.html\#UnityEngine_InputSystem_Composites_AxisComposite_maxValue}{\texttt{ {\ttfamily max\+Value}}}).    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Composites.AxisComposite.html\#UnityEngine_InputSystem_Composites_AxisComposite_negative}{\texttt{ {\ttfamily negative}}}   &{\ttfamily Button}   &Controls pulling in the negative direction, (towards \href{../api/UnityEngine.InputSystem.Composites.AxisComposite.html\#UnityEngine_InputSystem_Composites_AxisComposite_minValue}{\texttt{ {\ttfamily min\+Value}}}).   \\\cline{1-3}
+\end{longtabu}
+
+
+You can set the following parameters on an axis Composite\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Parameter   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Parameter   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+\href{../api/UnityEngine.InputSystem.Composites.AxisComposite.html\#UnityEngine_InputSystem_Composites_AxisComposite_whichSideWins}{\texttt{ {\ttfamily which\+Side\+Wins}}}   &What happens if both \href{../api/UnityEngine.InputSystem.Composites.AxisComposite.html\#UnityEngine_InputSystem_Composites_AxisComposite_positive}{\texttt{ {\ttfamily positive}}} and \href{../api/UnityEngine.InputSystem.Composites.AxisComposite.html\#UnityEngine_InputSystem_Composites_AxisComposite_negative}{\texttt{ {\ttfamily negative}}} are actuated. See table below.    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.Composites.AxisComposite.html\#UnityEngine_InputSystem_Composites_AxisComposite_minValue}{\texttt{ {\ttfamily min\+Value}}}   &The value returned if the \href{../api/UnityEngine.InputSystem.Composites.AxisComposite.html\#UnityEngine_InputSystem_Composites_AxisComposite_negative}{\texttt{ {\ttfamily negative}}} side is actuated. Default is -\/1.    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.Composites.AxisComposite.html\#UnityEngine_InputSystem_Composites_AxisComposite_maxValue}{\texttt{ {\ttfamily max\+Value}}}   &The value returned if the \href{../api/UnityEngine.InputSystem.Composites.AxisComposite.html\#UnityEngine_InputSystem_Composites_AxisComposite_positive}{\texttt{ {\ttfamily positive}}} side is actuated. Default is 1.   \\\cline{1-2}
+\end{longtabu}
+
+
+If Controls from both the {\ttfamily positive} and the {\ttfamily negative} side are actuated, then the resulting value of the axis Composite depends on the {\ttfamily which\+Side\+Win} parameter setting.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Composites.AxisComposite.WhichSideWins.html}{\texttt{ {\ttfamily Which\+Side\+Wins}}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \href{../api/UnityEngine.InputSystem.Composites.AxisComposite.WhichSideWins.html}{\texttt{ {\ttfamily Which\+Side\+Wins}}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+(0) {\ttfamily Neither}   &Neither side has precedence. The Composite returns the midpoint between {\ttfamily min\+Value} and {\ttfamily max\+Value} as a result. At their default settings, this is 0.~\newline
+~\newline
+This is the default value for this setting.    \\\cline{1-2}
+(1) {\ttfamily Positive}   &The positive side has precedence and the Composite returns {\ttfamily max\+Value}.    \\\cline{1-2}
+(2) {\ttfamily Negative}   &The negative side has precedence and the Composite returns {\ttfamily min\+Value}.   \\\cline{1-2}
+\end{longtabu}
+
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: There is no support yet for interpolating between the positive and negative over time.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1240}{}\doxysubsection{\texorpdfstring{2D vector}{2D vector}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1240}
+
+
+
+
+A Composite that represents a 4-\/way button setup like the D-\/pad on gamepads. Each button represents a cardinal direction. Implemented in the \href{../api/UnityEngine.InputSystem.Composites.Vector2Composite.html}{\texttt{ {\ttfamily Vector2\+Composite}}} class. The result is a {\ttfamily Vector2}.
+
+This Composite is most useful for representing up-\/down-\/left-\/right controls, such as WASD keyboard input.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{myAction.AddCompositeBinding(\textcolor{stringliteral}{"{}2DVector"{}})\ \textcolor{comment}{//\ Or\ "{}Dpad"{}}}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Up"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/w"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Down"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/s"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Left"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/a"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Right"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/d"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ To\ set\ mode\ (2=analog,\ 1=digital,\ 0=digitalNormalized):}}
+\DoxyCodeLine{myAction.AddCompositeBinding(\textcolor{stringliteral}{"{}2DVector(mode=2)"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Up"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftStick/up"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Down"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftStick/down"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Left"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftStick/left"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Right"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftStick/right"{}});}
+
+\end{DoxyCode}
+
+
+The 2D vector Composite has four part Bindings.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Part   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Part   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+\href{../api/UnityEngine.InputSystem.Composites.Vector2Composite.html\#UnityEngine_InputSystem_Composites_Vector2Composite_up}{\texttt{ {\ttfamily up}}}   &{\ttfamily Button}   &Controls representing {\ttfamily (0,1)} (+Y).    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Composites.Vector2Composite.html\#UnityEngine_InputSystem_Composites_Vector2Composite_down}{\texttt{ {\ttfamily down}}}   &{\ttfamily Button}   &Controls representing {\ttfamily (0,-\/1)} (-\/Y).    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Composites.Vector2Composite.html\#UnityEngine_InputSystem_Composites_Vector2Composite_left}{\texttt{ {\ttfamily left}}}   &{\ttfamily Button}   &Controls representing {\ttfamily (-\/1,0)} (-\/X).    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Composites.Vector2Composite.html\#UnityEngine_InputSystem_Composites_Vector2Composite_right}{\texttt{ {\ttfamily right}}}   &{\ttfamily Button}   &Controls representing {\ttfamily (1,0)} (+X).   \\\cline{1-3}
+\end{longtabu}
+
+
+In addition, you can set the following parameters on a 2D vector Composite\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Parameter   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Parameter   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+\href{../api/UnityEngine.InputSystem.Composites.Vector2Composite.html\#UnityEngine_InputSystem_Composites_Vector2Composite_mode}{\texttt{ {\ttfamily mode}}}   &Whether to treat the inputs as digital or as analog controls.~\newline
+~\newline
+If this is set to \href{../api/UnityEngine.InputSystem.Composites.Vector2Composite.Mode.html\#UnityEngine_InputSystem_Composites_Vector2Composite_Mode_DigitalNormalized}{\texttt{ {\ttfamily Mode.\+Digital\+Normalized}}}, inputs are treated as buttons (off if below \href{../api/UnityEngine.InputSystem.InputSettings.html\#UnityEngine_InputSystem_InputSettings_defaultButtonPressPoint}{\texttt{ {\ttfamily default\+Button\+Press\+Point}}} and on if equal to or greater). Each input is 0 or 1 depending on whether the button is pressed or not. The vector resulting from the up/down/left/right parts is normalized. The result is a diamond-\/shaped 2D input range.~\newline
+~\newline
+If this is set to \href{../api/UnityEngine.InputSystem.Composites.Vector2Composite.Mode.html\#UnityEngine_InputSystem_Composites_Vector2Composite_Mode_Digital}{\texttt{ {\ttfamily Mode.\+Digital}}}, the behavior is essentially the same as \href{../api/UnityEngine.InputSystem.Composites.Vector2Composite.Mode.html\#UnityEngine_InputSystem_Composites_Vector2Composite_Mode_DigitalNormalized}{\texttt{ {\ttfamily Mode.\+Digital\+Normalized}}} except that the resulting vector is not normalized.~\newline
+~\newline
+Finally, if this is set to \href{../api/UnityEngine.InputSystem.Composites.Vector2Composite.Mode.html\#UnityEngine_InputSystem_Composites_Vector2Composite_Mode_Analog}{\texttt{ {\ttfamily Mode.\+Analog}}}, inputs are treated as analog (i.\+e. full floating-\/point values) and, other than \href{../api/UnityEngine.InputSystem.Composites.Vector2Composite.html\#UnityEngine_InputSystem_Composites_Vector2Composite_down}{\texttt{ {\ttfamily down}}} and \href{../api/UnityEngine.InputSystem.Composites.Vector2Composite.html\#UnityEngine_InputSystem_Composites_Vector2Composite_left}{\texttt{ {\ttfamily left}}} being inverted, values will be passed through as is.~\newline
+~\newline
+The default is \href{../api/UnityEngine.InputSystem.Composites.Vector2Composite.Mode.html\#UnityEngine_InputSystem_Composites_Vector2Composite_Mode_DigitalNormalized}{\texttt{ {\ttfamily Mode.\+Digital\+Normalized}}}.   \\\cline{1-2}
+\end{longtabu}
+
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: There is no support yet for interpolating between the up/down/left/right over time.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1241}{}\doxysubsection{\texorpdfstring{3D vector}{3D vector}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1241}
+
+
+
+
+A Composite that represents a 6-\/way button where two combinations each control one axis of a 3D vector. Implemented in the \href{../api/UnityEngine.InputSystem.Composites.Vector3Composite.html}{\texttt{ {\ttfamily Vector3\+Composite}}} class. The result is a {\ttfamily Vector3}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{myAction.AddCompositeBinding(\textcolor{stringliteral}{"{}3DVector"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Up"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/w"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Down"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/s"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Left"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/a"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Right"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/d"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ To\ set\ mode\ (2=analog,\ 1=digital,\ 0=digitalNormalized):}}
+\DoxyCodeLine{myAction.AddCompositeBinding(\textcolor{stringliteral}{"{}3DVector(mode=2)"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Up"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftStick/up"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Down"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftStick/down"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Left"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftStick/left"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Right"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/leftStick/right"{}});}
+
+\end{DoxyCode}
+
+
+The 3D vector Composite has four part Bindings.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Part   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Part   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+\href{../api/UnityEngine.InputSystem.Composites.Vector3Composite.html\#UnityEngine_InputSystem_Composites_Vector3Composite_up}{\texttt{ {\ttfamily up}}}   &{\ttfamily Button}   &Controls representing {\ttfamily (0,1,0)} (+Y).    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Composites.Vector3Composite.html\#UnityEngine_InputSystem_Composites_Vector3Composite_down}{\texttt{ {\ttfamily down}}}   &{\ttfamily Button}   &Controls representing {\ttfamily (0,-\/1,0)} (-\/Y).    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Composites.Vector3Composite.html\#UnityEngine_InputSystem_Composites_Vector3Composite_left}{\texttt{ {\ttfamily left}}}   &{\ttfamily Button}   &Controls representing {\ttfamily (-\/1,0,0)} (-\/X).    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Composites.Vector3Composite.html\#UnityEngine_InputSystem_Composites_Vector3Composite_right}{\texttt{ {\ttfamily right}}}   &{\ttfamily Button}   &Controls representing {\ttfamily (1,0,0)} (+X).    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Composites.Vector3Composite.html\#UnityEngine_InputSystem_Composites_Vector3Composite_forward}{\texttt{ {\ttfamily forward}}}   &{\ttfamily Button}   &Controls representing {\ttfamily (0,0,1)} (+Z).    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Composites.Vector3Composite.html\#UnityEngine_InputSystem_Composites_Vector3Composite_backward}{\texttt{ {\ttfamily backward}}}   &{\ttfamily Button}   &Controls representing {\ttfamily (0,0,-\/1)} (-\/Z).   \\\cline{1-3}
+\end{longtabu}
+
+
+In addition, you can set the following parameters on a 3D vector Composite\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Parameter   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Parameter   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+\href{../api/UnityEngine.InputSystem.Composites.Vector3Composite.html\#UnityEngine_InputSystem_Composites_Vector3Composite_mode}{\texttt{ {\ttfamily mode}}}   &Whether to treat the inputs as digital or as analog controls.~\newline
+~\newline
+If this is set to \href{../api/UnityEngine.InputSystem.Composites.Vector3Composite.Mode.html\#UnityEngine_InputSystem_Composites_Vector3Composite_Mode_DigitalNormalized}{\texttt{ {\ttfamily Mode.\+Digital\+Normalized}}}, inputs are treated as buttons (off if below \href{../api/UnityEngine.InputSystem.InputSettings.html\#UnityEngine_InputSystem_InputSettings_defaultButtonPressPoint}{\texttt{ {\ttfamily default\+Button\+Press\+Point}}} and on if equal to or greater). Each input is 0 or 1 depending on whether the button is pressed or not. The vector resulting from the up/down/left/right/forward/backward parts is normalized.~\newline
+~\newline
+If this is set to \href{../api/UnityEngine.InputSystem.Composites.Vector3Composite.Mode.html\#UnityEngine_InputSystem_Composites_Vector3Composite_Mode_Digital}{\texttt{ {\ttfamily Mode.\+Digital}}}, the behavior is essentially the same as \href{../api/UnityEngine.InputSystem.Composites.Vector3Composite.Mode.html\#UnityEngine_InputSystem_Composites_Vector3Composite_Mode_DigitalNormalized}{\texttt{ {\ttfamily Mode.\+Digital\+Normalized}}} except that the resulting vector is not normalized.~\newline
+~\newline
+Finally, if this is set to \href{../api/UnityEngine.InputSystem.Composites.Vector3Composite.Mode.html\#UnityEngine_InputSystem_Composites_Vector3Composite_Mode_Analog}{\texttt{ {\ttfamily Mode.\+Analog}}}, inputs are treated as analog (that is, full floating-\/point values) and, other than \href{../api/UnityEngine.InputSystem.Composites.Vector3Composite.html\#UnityEngine_InputSystem_Composites_Vector3Composite_down}{\texttt{ {\ttfamily down}}}, \href{../api/UnityEngine.InputSystem.Composites.Vector3Composite.html\#UnityEngine_InputSystem_Composites_Vector3Composite_left}{\texttt{ {\ttfamily left}}}, and \href{../api/UnityEngine.InputSystem.Composites.Vector3Composite.html\#UnityEngine_InputSystem_Composites_Vector3Composite_backward}{\texttt{ {\ttfamily backward}}} being inverted, values will be passed through as they are.~\newline
+~\newline
+The default is \href{../api/UnityEngine.InputSystem.Composites.Vector3Composite.Mode.html\#UnityEngine_InputSystem_Composites_Vector3Composite_Mode_Analog}{\texttt{ {\ttfamily Analog}}}.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1242}{}\doxysubsection{\texorpdfstring{One Modifier}{One Modifier}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1242}
+
+
+
+
+A Composite that requires the user to hold down a "{}modifier"{} button in addition to another control from which the actual value of the Binding is determined. This can be used, for example, for Bindings such as "{}\+SHIFT+1"{}. Implemented in the \href{../api/UnityEngine.InputSystem.Composites.OneModifierComposite.html}{\texttt{ {\ttfamily One\+Modifier\+Composite}}} class. The buttons can be on any Device, and can be toggle buttons or full-\/range buttons such as gamepad triggers.
+
+The result is a value of the same type as the controls bound to the \href{../api/UnityEngine.InputSystem.Composites.OneModifierComposite.html\#UnityEngine_InputSystem_Composites_OneModifierComposite_binding}{\texttt{ {\ttfamily binding}}} part.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Add\ binding\ for\ "{}CTRL+1"{}.}}
+\DoxyCodeLine{myAction.AddCompositeBinding(\textcolor{stringliteral}{"{}OneModifier"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Binding"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/1"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Modifier"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/ctrl"{}})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Add\ binding\ to\ mouse\ delta\ such\ that\ it\ only\ takes\ effect}}
+\DoxyCodeLine{\textcolor{comment}{//\ while\ the\ ALT\ key\ is\ down.}}
+\DoxyCodeLine{myAction.AddCompositeBinding(\textcolor{stringliteral}{"{}OneModifier"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Binding"{}},\ \textcolor{stringliteral}{"{}<Mouse>/delta"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Modifier"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/alt"{}});}
+
+\end{DoxyCode}
+
+
+The button with one modifier Composite has two part Bindings.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Part   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Part   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+\href{../api/UnityEngine.InputSystem.Composites.OneModifierComposite.html\#UnityEngine_InputSystem_Composites_OneModifierComposite_modifier}{\texttt{ {\ttfamily modifier}}}   &{\ttfamily Button}   &Modifier that has to be held for {\ttfamily binding} to come through. If the user holds any of the buttons bound to the {\ttfamily modifier} at the same time as the button that triggers the action, the Composite assumes the value of the {\ttfamily modifier} Binding. If the user does not press any button bound to the {\ttfamily modifier}, the Composite remains at default value.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Composites.OneModifierComposite.html\#UnityEngine_InputSystem_Composites_OneModifierComposite_binding}{\texttt{ {\ttfamily binding}}}   &Any   &The control(s) whose value the Composite assumes while the user holds down the {\ttfamily modifier} button.   \\\cline{1-3}
+\end{longtabu}
+
+
+This Composite has no parameters.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1243}{}\doxysubsection{\texorpdfstring{Two Modifiers}{Two Modifiers}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1243}
+
+
+
+
+A Composite that requires the user to hold down two "{}modifier"{} buttons in addition to another control from which the actual value of the Binding is determined. This can be used, for example, for Bindings such as "{}\+SHIFT+\+CTRL+1"{}. Implemented in the \href{../api/UnityEngine.InputSystem.Composites.TwoModifiersComposite.html}{\texttt{ {\ttfamily Two\+Modifiers\+Composite}}} class. The buttons can be on any Device, and can be toggle buttons or full-\/range buttons such as gamepad triggers.
+
+The result is a value of the same type as the controls bound to the \href{../api/UnityEngine.InputSystem.Composites.TwoModifiersComposite.html\#UnityEngine_InputSystem_Composites_TwoModifiersComposite_binding}{\texttt{ {\ttfamily binding}}} part.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{myAction.AddCompositeBinding(\textcolor{stringliteral}{"{}TwoModifiers"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Button"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/1"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Modifier1"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/leftCtrl"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Modifier1"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/rightCtrl"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Modifier2"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/leftShift"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Modifier2"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/rightShift"{}});}
+
+\end{DoxyCode}
+
+
+The button with two modifiers Composite has three part Bindings.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Part   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Part   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+\href{../api/UnityEngine.InputSystem.Composites.TwoModifiersComposite.html\#UnityEngine_InputSystem_Composites_TwoModifiersComposite_modifier1}{\texttt{ {\ttfamily modifier1}}}   &{\ttfamily Button}   &The first modifier the user must hold alongside {\ttfamily modifier2}, for {\ttfamily binding} to come through. If the user does not press any button bound to the {\ttfamily modifier1}, the Composite remains at default value.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Composites.TwoModifiersComposite.html\#UnityEngine_InputSystem_Composites_TwoModifiersComposite_modifier2}{\texttt{ {\ttfamily modifier2}}}   &{\ttfamily Button}   &The second modifier the user must hold alongside {\ttfamily modifier1}, for {\ttfamily binding} to come through. If the user does not press any button bound to the {\ttfamily modifier2}, the Composite remains at default value.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Composites.TwoModifiersComposite.html\#UnityEngine_InputSystem_Composites_TwoModifiersComposite_binding}{\texttt{ {\ttfamily binding}}}   &Any   &The control(s) whose value the Composite assumes while the user presses both {\ttfamily modifier1} and {\ttfamily modifier2} at the same time.   \\\cline{1-3}
+\end{longtabu}
+
+
+This Composite has no parameters.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1244}{}\doxysubsection{\texorpdfstring{Writing custom Composites}{Writing custom Composites}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1244}
+You can define new types of Composites, and register them with the API. \doxylink{namespace_unity}{Unity} treats these the same as predefined types, which the Input \doxylink{namespace_system}{System} internally defines and registers in the same way.
+
+To define a new type of Composite, create a class based on \href{../api/UnityEngine.InputSystem.InputBindingComposite-1.html}{\texttt{ {\ttfamily Input\+Binding\+Composite\texorpdfstring{$<$}{<}TValue\texorpdfstring{$>$}{>}}}}.
+
+\begin{quote}
+{\bfseries{IMPORTANT}}\+: Composites must be {\bfseries{stateless}}. This means that you cannot store local state that changes depending on the input being processed. For {\bfseries{stateful}} processing on Bindings, see \href{./Interactions.md\#writing-custom-interactions}{\texttt{ interactions}}. \end{quote}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Use\ InputBindingComposite<TValue>\ as\ a\ base\ class\ for\ a\ composite\ that\ returns}}
+\DoxyCodeLine{\textcolor{comment}{//\ values\ of\ type\ TValue.}}
+\DoxyCodeLine{\textcolor{comment}{//\ NOTE:\ It\ is\ possible\ to\ define\ a\ composite\ that\ returns\ different\ kinds\ of\ values}}
+\DoxyCodeLine{\textcolor{comment}{//\ \ \ \ \ \ \ but\ doing\ so\ requires\ deriving\ directly\ from\ InputBindingComposite.}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{[InitializeOnLoad]\ \textcolor{comment}{//\ Automatically\ register\ in\ editor.}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\textcolor{comment}{//\ Determine\ how\ GetBindingDisplayString()\ formats\ the\ composite\ by\ applying}}
+\DoxyCodeLine{\textcolor{comment}{//\ the\ \ DisplayStringFormat\ attribute.}}
+\DoxyCodeLine{[DisplayStringFormat(\textcolor{stringliteral}{"{}\{firstPart\}+\{secondPart\}"{}})]}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_custom_composite}{CustomComposite}}\ :\ InputBindingComposite<float>}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Each\ part\ binding\ is\ represented\ as\ a\ field\ of\ type\ int\ and\ annotated\ with}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ InputControlAttribute.\ Setting\ "{}layout"{}\ restricts\ the\ controls\ that}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ are\ made\ available\ for\ picking\ in\ the\ UI.}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ On\ creation,\ the\ int\ value\ is\ set\ to\ an\ integer\ identifier\ for\ the\ binding}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ part.\ This\ identifier\ can\ read\ values\ from\ InputBindingCompositeContext.}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ See\ ReadValue()\ below.}}
+\DoxyCodeLine{\ \ \ \ [InputControl(layout\ =\ \textcolor{stringliteral}{"{}Button"{}})]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ firstPart;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ [InputControl(layout\ =\ \textcolor{stringliteral}{"{}Button"{}})]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ secondPart;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Any\ public\ field\ that\ is\ not\ annotated\ with\ InputControlAttribute\ is\ considered}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ a\ parameter\ of\ the\ composite.\ This\ can\ be\ set\ graphically\ in\ the\ UI\ and\ also}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ in\ the\ data\ (e.g.\ "{}custom(floatParameter=2.0)"{}).}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ floatParameter;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ boolParameter;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ This\ method\ computes\ the\ resulting\ input\ value\ of\ the\ composite\ based}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ on\ the\ input\ from\ its\ part\ bindings.}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{float}\ ReadValue(ref\ InputBindingCompositeContext\ context)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ firstPartValue\ =\ context.ReadValue<\textcolor{keywordtype}{float}>(firstPart);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ secondPartValue\ =\ context.ReadValue<\textcolor{keywordtype}{float}>(secondPart);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//...\ do\ some\ processing\ and\ return\ value}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ This\ method\ computes\ the\ current\ actuation\ of\ the\ binding\ as\ a\ whole.}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a91ab7a703dfa5219da6d37b060b801f3}{EvaluateMagnitude}}(ref\ InputBindingCompositeContext\ context)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Compute\ normalized\ [0..1]\ magnitude\ value\ for\ current\ actuation\ level.}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_custom_composite}{CustomComposite}}()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Can\ give\ custom\ name\ or\ use\ default\ (type\ name\ with\ "{}Composite"{}\ clipped\ off).}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Same\ composite\ can\ be\ registered\ multiple\ times\ with\ different\ names\ to\ introduce}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ aliases.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ NOTE:\ Registering\ from\ the\ static\ constructor\ using\ InitializeOnLoad\ and}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ RuntimeInitializeOnLoadMethod\ is\ only\ one\ way.\ You\ can\ register\ the}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ composite\ from\ wherever\ it\ works\ best\ for\ you.\ Note,\ however,\ that}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ the\ registration\ has\ to\ take\ place\ before\ the\ composite\ is\ first\ used}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ in\ a\ binding.\ Also,\ for\ the\ composite\ to\ show\ in\ the\ editor,\ it\ has}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ to\ be\ registered\ from\ code\ that\ runs\ in\ edit\ mode.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ InputSystem.RegisterBindingComposite<\mbox{\hyperlink{class_custom_composite}{CustomComposite}}>();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Init()\ \{\}\ \textcolor{comment}{//\ Trigger\ static\ constructor.}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+The Composite should now appear in the editor UI when you add a Binding, and you can now use it in scripts.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{myAction.AddCompositeBinding(\textcolor{stringliteral}{"{}custom(floatParameter=2.0)"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}firstpart"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/buttonSouth"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}secondpart"{}},\ \textcolor{stringliteral}{"{}<Gamepad>/buttonNorth"{}});}
+
+\end{DoxyCode}
+
+
+To define a custom parameter editor for the Composite, you can derive from \href{../api/UnityEngine.InputSystem.Editor.InputParameterEditor-1.html}{\texttt{ {\ttfamily Input\+Parameter\+Editor\texorpdfstring{$<$}{<}TObject\texorpdfstring{$>$}{>}}}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }CustomParameterEditor\ :\ InputParameterEditor<CustomComposite>}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnGUI()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ EditorGUILayout.Label(\textcolor{stringliteral}{"{}Custom\ stuff"{}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ target.floatParameter\ =\ EditorGUILayout.FloatField(\textcolor{stringliteral}{"{}Some\ Parameter"{}},\ target.floatParameter);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1245}{}\doxysection{\texorpdfstring{Working with Bindings}{Working with Bindings}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1245}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1246}{}\doxysection{\texorpdfstring{Looking up Bindings}{Looking up Bindings}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1246}
+You can retrieve the bindings of an action using its \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_bindings}{\texttt{ {\ttfamily Input\+Action.\+bindings}}} property which returns a read-\/only array of \href{../api/UnityEngine.InputSystem.InputBinding.html}{\texttt{ {\ttfamily Input\+Binding}}} structs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Get\ bindings\ of\ "{}fire"{}\ action.}}
+\DoxyCodeLine{var\ fireBindings\ =\ playerInput.actions[\textcolor{stringliteral}{"{}fire"{}}].bindings;}
+
+\end{DoxyCode}
+
+
+Also, all the bindings for all actions in an \href{../api/UnityEngine.InputSystem.InputActionMap.html}{\texttt{ {\ttfamily Input\+Action\+Map}}} are made available through the \href{../api/UnityEngine.InputSystem.InputActionMap.html\#UnityEngine_InputSystem_InputActionMap_bindings}{\texttt{ {\ttfamily Input\+Action\+Map.\+bindings}}} property. The bindings are associated with actions through an \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_id}{\texttt{ action ID}} or \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_name}{\texttt{ action name}} stored in the \href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_action}{\texttt{ {\ttfamily Input\+Binding.\+action}}} property.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Get\ all\ bindings\ in\ "{}gameplay"{}\ action\ map.}}
+\DoxyCodeLine{var\ gameplayBindings\ =\ playerInput.actions.FindActionMap(\textcolor{stringliteral}{"{}gameplay"{}}).bindings;}
+
+\end{DoxyCode}
+
+
+You can also look up specific the indices of specific bindings in \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_bindings}{\texttt{ {\ttfamily Input\+Action.\+bindings}}} using the \href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html\#UnityEngine_InputSystem_InputActionRebindingExtensions_GetBindingIndex_UnityEngine_InputSystem_InputAction_UnityEngine_InputSystem_InputBinding_}{\texttt{ {\ttfamily Input\+Action\+Rebinding\+Extensions.\+Get\+Binding\+Index}}} method.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Find\ the\ binding\ in\ the\ "{}Keyboard"{}\ control\ scheme.}}
+\DoxyCodeLine{playerInput.actions[\textcolor{stringliteral}{"{}fire"{}}].GetBindingIndex(group:\ \textcolor{stringliteral}{"{}Keyboard"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Find\ the\ first\ binding\ to\ the\ space\ key\ in\ the\ "{}gameplay"{}\ action\ map.}}
+\DoxyCodeLine{playerInput.FindActionMap(\textcolor{stringliteral}{"{}gameplay"{}}).GetBindingIndex(}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{new}\ InputBinding\ \{\ path\ =\ \textcolor{stringliteral}{"{}<Keyboard>/space"{}}\ \});}
+
+\end{DoxyCode}
+
+
+Finally, you can look up the binding that corresponds to a specific control through \href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html\#UnityEngine_InputSystem_InputActionRebindingExtensions_GetBindingIndexForControl_}{\texttt{ {\ttfamily Get\+Binding\+Index\+For\+Control}}}. This way, you can, for example, map a control found in the \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_controls}{\texttt{ {\ttfamily controls}}} array of an \href{../api/UnityEngine.InputSystem.InputAction.html}{\texttt{ {\ttfamily Input\+Action}}} back to an \href{../api/UnityEngine.InputSystem.InputBinding.html}{\texttt{ {\ttfamily Input\+Binding}}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Find\ the\ binding\ that\ binds\ LMB\ to\ "{}fire"{}.\ If\ there\ is\ no\ such\ binding,}}
+\DoxyCodeLine{\textcolor{comment}{//\ bindingIndex\ will\ be\ -\/1.}}
+\DoxyCodeLine{var\ fireAction\ =\ playerInput.actions[\textcolor{stringliteral}{"{}fire"{}}];}
+\DoxyCodeLine{var\ bindingIndex\ =\ fireAction.GetBindingIndexForControl(Mouse.current.leftButton);}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (binding\ ==\ -\/1)}
+\DoxyCodeLine{\ \ \ \ Debug.Log(\textcolor{stringliteral}{"{}Fire\ is\ not\ bound\ to\ LMB\ of\ the\ current\ mouse."{}});}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1247}{}\doxysection{\texorpdfstring{Changing Bindings}{Changing Bindings}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1247}
+In general, you can change existing bindings via the \href{../api/UnityEngine.InputSystem.InputActionSetupExtensions.html\#UnityEngine_InputSystem_InputActionSetupExtensions_ChangeBinding_UnityEngine_InputSystem_InputAction_System_Int32_}{\texttt{ {\ttfamily Input\+Action\+Setup\+Extensions.\+Change\+Binding}}} method. This returns an accessor that can be used to modify the properties of the targeted \href{../api/UnityEngine.InputSystem.InputBinding.html}{\texttt{ {\ttfamily Input\+Binding}}}. Note that most of the write operations of the accessor are destructive. For non-\/destructive changes to bindings, see Applying Overrides.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Get\ write\ access\ to\ the\ second\ binding\ of\ the\ 'fire'\ action.}}
+\DoxyCodeLine{var\ accessor\ =\ playerInput.actions[\textcolor{stringliteral}{'fire'}].ChangeBinding(1);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ You\ can\ also\ gain\ access\ through\ the\ InputActionMap.\ Each}}
+\DoxyCodeLine{\textcolor{comment}{//\ map\ contains\ an\ array\ of\ all\ its\ bindings\ (see\ InputActionMap.bindings).}}
+\DoxyCodeLine{\textcolor{comment}{//\ Here\ we\ gain\ access\ to\ the\ third\ binding\ in\ the\ map.}}
+\DoxyCodeLine{accessor\ =\ playerInput.actions.FindActionMap(\textcolor{stringliteral}{"{}gameplay"{}}).ChangeBinding(2);}
+
+\end{DoxyCode}
+
+
+You can use the resulting accessor to modify properties through methods such as \href{../api/UnityEngine.InputSystem.InputActionSetupExtensions.BindingSyntax.html\#UnityEngine_InputSystem_InputActionSetupExtensions_BindingSyntax_WithPath_}{\texttt{ {\ttfamily With\+Path}}} or \href{../api/UnityEngine.InputSystem.InputActionSetupExtensions.BindingSyntax.html\#UnityEngine_InputSystem_InputActionSetupExtensions_BindingSyntax_WithProcessors_}{\texttt{ {\ttfamily With\+Processors}}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{playerInput.actions[\textcolor{stringliteral}{"{}fire"{}}].ChangeBinding(1)}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Change\ path\ to\ space\ key.}}
+\DoxyCodeLine{\ \ \ \ .WithPath(\textcolor{stringliteral}{"{}<Keyboard>/space"{}});}
+
+\end{DoxyCode}
+
+
+You can also use the accessor to iterate through bindings using \href{../api/UnityEngine.InputSystem.InputActionSetupExtensions.BindingSyntax.html\#UnityEngine_InputSystem_InputActionSetupExtensions_BindingSyntax_PreviousBinding_}{\texttt{ {\ttfamily Previous\+Binding}}} and \href{../api/UnityEngine.InputSystem.InputActionSetupExtensions.BindingSyntax.html\#UnityEngine_InputSystem_InputActionSetupExtensions_BindingSyntax_NextBinding_}{\texttt{ {\ttfamily Next\+Binding}}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Move\ accessor\ to\ previous\ binding.}}
+\DoxyCodeLine{accessor\ =\ accessor.PreviousBinding();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Move\ accessor\ to\ next\ binding.}}
+\DoxyCodeLine{accessor\ =\ accessor.NextBinding();}
+
+\end{DoxyCode}
+
+
+If the given binding is a \href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_isComposite}{\texttt{ composite}}, you can address it by its name rather than by index.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Change\ the\ 2DVector\ composite\ of\ the\ "{}move"{}\ action.}}
+\DoxyCodeLine{playerInput.actions[\textcolor{stringliteral}{"{}move"{}}].ChangeCompositeBinding(\textcolor{stringliteral}{"{}2DVector"{}})}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//}}
+\DoxyCodeLine{playerInput.actions[\textcolor{stringliteral}{"{}move"{}}].ChangeBinding(\textcolor{stringliteral}{"{}WASD"{}})}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1248}{}\doxysubsection{\texorpdfstring{Applying overrides}{Applying overrides}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1248}
+You can override aspects of any Binding at run-\/time non-\/destructively. Specific properties of \href{../api/UnityEngine.InputSystem.InputBinding.html}{\texttt{ {\ttfamily Input\+Binding}}} have an {\ttfamily override} variant that, if set, will take precedent over the property that they shadow. All {\ttfamily override} properties are of type {\ttfamily String}.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Override   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Override   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+\href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_path}{\texttt{ {\ttfamily path}}}   &\href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_overridePath}{\texttt{ {\ttfamily override\+Path}}}   &Replaces the \href{./Controls.md\#control-paths}{\texttt{ Control path}} that determines which Control(s) are referenced in the binding. If \href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_overridePath}{\texttt{ {\ttfamily override\+Path}}} is set to an empty string, the binding is effectively disabled.~\newline
+~\newline
+Example\+: {\ttfamily "{}$<$\+Gamepad$>$/left\+Stick"{}}    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_processors}{\texttt{ {\ttfamily processors}}}   &\href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_overrideProcessors}{\texttt{ {\ttfamily override\+Processors}}}   &Replaces the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors}{processors}{0} applied to the binding.~\newline
+~\newline
+Example\+: {\ttfamily "{}invert,normalize(min=0,max=10)"{}}    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_interactions}{\texttt{ {\ttfamily interactions}}}   &\href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_overrideInteractions}{\texttt{ {\ttfamily override\+Interactions}}}   &Replaces the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_interactions}{interactions}{0} applied to the binding.~\newline
+~\newline
+Example\+: {\ttfamily "{}tap(duration=0.\+5)"{}}   \\\cline{1-3}
+\end{longtabu}
+
+
+\texorpdfstring{$>$}{>}NOTE\+: The {\ttfamily override} property values will not be saved along with the Actions (for example, when calling \href{../api/UnityEngine.InputSystem.InputActionAsset.html\#UnityEngine_InputSystem_InputActionAsset_ToJson}{\texttt{ {\ttfamily Input\+Action\+Asset.\+To\+Json()}}}). See Saving and loading rebinds for details about how to persist user rebinds.
+
+To set the various {\ttfamily override} properties, you can use the \href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html\#UnityEngine_InputSystem_InputActionRebindingExtensions_ApplyBindingOverride_UnityEngine_InputSystem_InputAction_UnityEngine_InputSystem_InputBinding_}{\texttt{ {\ttfamily Apply\+Binding\+Override}}} APIs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Rebind\ the\ "{}fire"{}\ action\ to\ the\ left\ trigger\ on\ the\ gamepad.}}
+\DoxyCodeLine{playerInput.actions[\textcolor{stringliteral}{"{}fire"{}}].ApplyBindingOverride(\textcolor{stringliteral}{"{}<Gamepad>/leftTrigger"{}});}
+
+\end{DoxyCode}
+
+
+In most cases, it is best to locate specific bindings using APIs such as \href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html\#UnityEngine_InputSystem_InputActionRebindingExtensions_GetBindingIndexForControl_}{\texttt{ {\ttfamily Get\+Binding\+Index\+For\+Control}}} and to then apply the override to that specific binding.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Find\ the\ "{}Jump"{}\ binding\ for\ the\ space\ key.}}
+\DoxyCodeLine{var\ jumpAction\ =\ playerInput.actions[\textcolor{stringliteral}{"{}Jump"{}}];}
+\DoxyCodeLine{var\ bindingIndex\ =\ jumpAction.GetBindingIndexForControl(Keyboard.current.spaceKey);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ And\ change\ it\ to\ the\ enter\ key.}}
+\DoxyCodeLine{jumpAction.ApplyBindingOverride(bindingIndex,\ \textcolor{stringliteral}{"{}<Keyboard>/enter"{}});}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1249}{}\doxysubsection{\texorpdfstring{Erasing Bindings}{Erasing Bindings}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1249}
+You can erase a binding by calling \href{../api/UnityEngine.InputSystem.InputActionSetupExtensions.BindingSyntax.html\#UnityEngine_InputSystem_InputActionSetupExtensions_BindingSyntax_Erase_}{\texttt{ {\ttfamily Erase}}} on the \href{../api/UnityEngine.InputSystem.InputActionSetupExtensions.BindingSyntax.html}{\texttt{ binding accessor}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Erase\ first\ binding\ on\ "{}fire"{}\ action.}}
+\DoxyCodeLine{playerInput.actions[\textcolor{stringliteral}{"{}fire"{}}].ChangeBinding(0).Erase();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Erase\ "{}2DVector"{}\ composite.\ This\ will\ also\ erase\ the\ part}}
+\DoxyCodeLine{\textcolor{comment}{//\ bindings\ of\ the\ composite.}}
+\DoxyCodeLine{playerInput.actions[\textcolor{stringliteral}{"{}move"{}}].ChangeCompositeBinding(\textcolor{stringliteral}{"{}2DVector"{}}).Erase();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Can\ also\ do\ this\ by\ using\ the\ name\ given\ to\ the\ composite\ binding.}}
+\DoxyCodeLine{playerInput.actions[\textcolor{stringliteral}{"{}move"{}}].ChangeCompositeBinding(\textcolor{stringliteral}{"{}WASD"{}}).Erase();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Erase\ first\ binding\ in\ "{}gameplay"{}\ action\ map.}}
+\DoxyCodeLine{playerInput.actions.FindActionMap(\textcolor{stringliteral}{"{}gameplay"{}}).ChangeBinding(0).Erase();}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1250}{}\doxysubsection{\texorpdfstring{Adding Bindings}{Adding Bindings}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1250}
+New bindings can be added to an Action using \href{../api/UnityEngine.InputSystem.InputActionSetupExtensions.html\#UnityEngine_InputSystem_InputActionSetupExtensions_AddBinding_UnityEngine_InputSystem_InputAction_System_String_System_String_System_String_System_String_}{\texttt{ {\ttfamily Add\+Action}}} or \href{../api/UnityEngine.InputSystem.InputActionSetupExtensions.html\#UnityEngine_InputSystem_InputActionSetupExtensions_AddCompositeBinding_UnityEngine_InputSystem_InputAction_System_String_System_String_System_String_}{\texttt{ {\ttfamily Add\+Composite\+Binding}}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Add\ a\ binding\ for\ the\ left\ mouse\ button\ to\ the\ "{}fire"{}\ action.}}
+\DoxyCodeLine{playerInput.actions[\textcolor{stringliteral}{"{}fire"{}}].AddBinding(\textcolor{stringliteral}{"{}<Mouse>/leftButton"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Add\ a\ WASD\ composite\ binding\ to\ the\ "{}move"{}\ action.}}
+\DoxyCodeLine{playerInput.actions[\textcolor{stringliteral}{"{}move"{}}]}
+\DoxyCodeLine{\ \ \ \ .AddCompositeBinding(\textcolor{stringliteral}{"{}2DVector"{}})}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .With(\textcolor{stringliteral}{"{}Up"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/w"{}})}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .With(\textcolor{stringliteral}{"{}Left"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/a"{}})}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .With(\textcolor{stringliteral}{"{}Down"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/s"{}})}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .With(\textcolor{stringliteral}{"{}Right"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/d"{}});}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1251}{}\doxysubsection{\texorpdfstring{Setting parameters}{Setting parameters}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1251}
+A Binding may, either through itself or through its associated Action, lead to \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors}{processor}{0}, \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_interactions}{interaction}{0}, and/or composite objects being created. These objects can have parameters you can configure through in the \href{ActionAssets.md\#editing-bindings}{\texttt{ Binding properties view}} of the Action editor or through the API. This configuration will give parameters their default value.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ an\ action\ with\ a\ "{}Hold"{}\ interaction\ on\ it.}}
+\DoxyCodeLine{\textcolor{comment}{//\ Set\ the\ "{}duration"{}\ parameter\ to\ 4\ seconds.}}
+\DoxyCodeLine{var\ action\ =\ \textcolor{keyword}{new}\ InputAction(interactions:\ \textcolor{stringliteral}{"{}hold(duration=4)"{}});}
+
+\end{DoxyCode}
+
+
+You can query the current value of any such parameter using the \href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html\#UnityEngine_InputSystem_InputActionRebindingExtensions_GetParameterValue_UnityEngine_InputSystem_InputAction_System_String_UnityEngine_InputSystem_InputBinding_}{\texttt{ {\ttfamily Get\+Parameter\+Value}}} API.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ This\ returns\ a\ PrimitiveValue?.\ It\ will\ be\ null\ if\ the}}
+\DoxyCodeLine{\textcolor{comment}{//\ parameter\ is\ not\ found.\ Otherwise,\ it\ is\ a\ PrimitiveValue}}
+\DoxyCodeLine{\textcolor{comment}{//\ which\ can\ be\ converted\ to\ a\ number\ or\ boolean.}}
+\DoxyCodeLine{var\ p\ =\ action.GetParameterValue(\textcolor{stringliteral}{"{}duration"{}});}
+\DoxyCodeLine{Debug.Log(\textcolor{stringliteral}{"{}'duration'\ is\ set\ to:\ "{}}\ +\ p.Value);}
+
+\end{DoxyCode}
+
+
+The above looks for the parameter on any object found on any of the bindings on the action. You can restrict either or both to a more narrow set.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Retrieve\ the\ value\ of\ the\ "{}duration"{}\ parameter\ specifically\ of\ a}}
+\DoxyCodeLine{\textcolor{comment}{//\ "{}Hold"{}\ interaction\ and\ only\ look\ on\ bindings\ in\ the\ "{}Gamepad"{}\ group.}}
+\DoxyCodeLine{action.GetParameterValue(\textcolor{stringliteral}{"{}hold:duration"{}},\ InputBinding.MaskByGroup(\textcolor{stringliteral}{"{}Gamepad"{}}));}
+
+\end{DoxyCode}
+
+
+Alternatively, you can use an expression parameter to encapsulate both the type and the name of the parameter you want to get the value of. This has the advantage of not needing a string parameter but rather references both the type and the name of the parameter in a typesafe way.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Retrieve\ the\ value\ of\ the\ "{}duration"{}\ parameter\ of\ TapInteraction.}}
+\DoxyCodeLine{\textcolor{comment}{//\ This\ version\ returns\ a\ float?\ instead\ of\ a\ PrimitiveValue?\ as\ it}}
+\DoxyCodeLine{\textcolor{comment}{//\ sees\ the\ type\ of\ "{}duration"{}\ at\ compile-\/time.}}
+\DoxyCodeLine{action.GetParameterValue((TapInteraction\ x)\ =>\ x.duration);}
+
+\end{DoxyCode}
+
+
+To alter the current value of a parameter, you can use what is referred to as a "{}parameter override"{}. You can apply these at the level of an individual \href{../api/UnityEngine.InputSystem.InputAction.html}{\texttt{ {\ttfamily Input\+Action}}}, or at the level of an entire \href{../api/UnityEngine.InputSystem.InputActionMap.html}{\texttt{ {\ttfamily Input\+Action\+Map}}}, or even at the level of an entire \href{../api/UnityEngine.InputSystem.InputActionAsset.html}{\texttt{ {\ttfamily Input\+Action\+Asset}}}. Such overrides are stored internally and applied automatically even on bindings added later.
+
+To add an override, use the \href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html\#UnityEngine_InputSystem_InputActionRebindingExtensions_ApplyParameterOverride_UnityEngine_InputSystem_InputAction_System_String_UnityEngine_InputSystem_Utilities_PrimitiveValue_UnityEngine_InputSystem_InputBinding_}{\texttt{ {\ttfamily Apply\+Parameter\+Override}}} API or any of its overloads.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Set\ the\ "{}duration"{}\ parameter\ on\ all\ bindings\ of\ the\ action\ to\ 4.}}
+\DoxyCodeLine{action.ApplyParameterOverride(\textcolor{stringliteral}{"{}duration"{}},\ 4f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Set\ the\ "{}duration"{}\ parameter\ specifically\ for\ "{}tap"{}\ interactions\ only.}}
+\DoxyCodeLine{action.ApplyParameterOverride(\textcolor{stringliteral}{"{}tap:duration"{}},\ 0.5f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Set\ the\ "{}duration"{}\ parameter\ on\ tap\ interactions\ but\ only\ for\ bindings}}
+\DoxyCodeLine{\textcolor{comment}{//\ in\ the\ "{}Gamepad"{}\ group.}}
+\DoxyCodeLine{action.ApplyParameterOverride(\textcolor{stringliteral}{"{}tap:duration"{}},\ 0.5f,\ InputBinding.MaskByGroup(\textcolor{stringliteral}{"{}Gamepad"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Set\ tap\ duration\ for\ all\ bindings\ in\ an\ action\ map.}}
+\DoxyCodeLine{map.ApplyParameterOverride(\textcolor{stringliteral}{"{}tap:duration"{}},\ 0.5f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Set\ tap\ duration\ for\ all\ bindings\ in\ an\ entire\ asset.}}
+\DoxyCodeLine{asset.ApplyParameterOverride(\textcolor{stringliteral}{"{}tap:duration"{}},\ 0.5f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Like\ for\ GetParameterValue,\ overloads\ are\ available\ that\ take}}
+\DoxyCodeLine{\textcolor{comment}{//\ an\ expression\ instead.}}
+\DoxyCodeLine{action.ApplyParameterOverride((TapInteraction\ x)\ =>\ x.duration,\ 0.4f);}
+\DoxyCodeLine{map.ApplyParameterOverride((TapInteraction\ x)\ =>\ x.duration,\ 0.4f);}
+\DoxyCodeLine{asset.ApplyParameterOverride((TapInteraction\ x)\ =>\ x.duration,\ 0.4f);}
+
+\end{DoxyCode}
+
+
+The new value will be applied immediately and affect all composites, processors, and interactions already in use and targeted by the override.
+
+Note that if multiple parameter overrides are applied -- especially when applying some directly to actions and some to maps or assets --, there may be conflicts between which override to apply. In this case, an attempt is made to chose the "{}most specific"{} override to apply.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Let's\ say\ you\ have\ an\ InputAction\ \`{}action`\ that\ is\ part\ of\ an\ InputActionAsset\ asset.}}
+\DoxyCodeLine{var\ map\ =\ action.actionMap;}
+\DoxyCodeLine{var\ asset\ =\ map.asset;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ And\ you\ apply\ a\ "{}tap:duration"{}\ override\ to\ the\ action.}}
+\DoxyCodeLine{action.ApplyParameterOverride(\textcolor{stringliteral}{"{}tap:duration"{}},\ 0.6f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ But\ also\ apply\ a\ "{}tap:duration"{}\ override\ to\ the\ action\ specifically}}
+\DoxyCodeLine{\textcolor{comment}{//\ for\ bindings\ in\ the\ "{}Gamepad"{}\ group.}}
+\DoxyCodeLine{action.ApplyParameterOverride(\textcolor{stringliteral}{"{}tap:duration"{}},\ 1f,\ InputBinding.MaskByGroup(\textcolor{stringliteral}{"{}Gamepad"{}}));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ And\ finally\ also\ apply\ a\ "{}tap:duration"{}\ override\ to\ the\ entire\ asset.}}
+\DoxyCodeLine{asset.ApplyParameterOverride(\textcolor{stringliteral}{"{}tap:duration"{}},\ 0.3f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Now,\ bindings\ on\ \`{}action`\ in\ the\ "{}Gamepad"{}\ group\ will\ use\ a\ value\ of\ 1\ for\ tap\ durations,}}
+\DoxyCodeLine{\textcolor{comment}{//\ other\ bindings\ on\ \`{}action`\ will\ use\ 0.6,\ and\ every\ other\ binding\ in\ the\ asset\ will\ use\ 0.3.}}
+
+\end{DoxyCode}
+
+
+You can use parameter overrides, for example, to scale mouse delta values on a "{}\+Look"{} action.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Set\ up\ an\ example\ "{}Look"{}\ action.}}
+\DoxyCodeLine{var\ look\ =\ \textcolor{keyword}{new}\ InputAction(\textcolor{stringliteral}{"{}look"{}},\ type:\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94b}{InputActionType}}.\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Value}});}
+\DoxyCodeLine{look.AddBinding(\textcolor{stringliteral}{"{}<Mouse>/delta"{}},\ groups:\ \textcolor{stringliteral}{"{}KeyboardMouse"{}},\ processors:\ \textcolor{stringliteral}{"{}scaleVector2"{}});}
+\DoxyCodeLine{look.AddBinding(\textcolor{stringliteral}{"{}<Gamepad>/rightStick"{}},\ groups:\ \textcolor{stringliteral}{"{}Gamepad"{}},\ processors:\ \textcolor{stringliteral}{"{}scaleVector2"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Now\ you\ can\ adjust\ stick\ sensitivity\ separately\ from\ mouse\ sensitivity.}}
+\DoxyCodeLine{look.ApplyParameterOverride(\textcolor{stringliteral}{"{}scaleVector2:x"{}},\ 0.5f,\ InputBinding.MaskByGroup(\textcolor{stringliteral}{"{}KeyboardMouse"{}}));}
+\DoxyCodeLine{look.ApplyParameterOverride(\textcolor{stringliteral}{"{}scaleVector2:y"{}},\ 0.5f,\ InputBinding.MaskByGroup(\textcolor{stringliteral}{"{}KeyboardMouse"{}}));}
+\DoxyCodeLine{}
+\DoxyCodeLine{look.ApplyParameterOverride(\textcolor{stringliteral}{"{}scaleVector2:x"{}},\ 2f,\ InputBinding.MaskByGroup(\textcolor{stringliteral}{"{}Gamepad"{}}));}
+\DoxyCodeLine{look.ApplyParameterOverride(\textcolor{stringliteral}{"{}scaleVector2:y"{}},\ 2f,\ InputBinding.MaskByGroup(\textcolor{stringliteral}{"{}Gamepad"{}}));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Alternative\ to\ using\ groups,\ you\ can\ also\ apply\ overrides\ directly\ to\ specific\ binding\ paths.}}
+\DoxyCodeLine{look.ApplyParameterOverride(\textcolor{stringliteral}{"{}scaleVector2:x"{}},\ 0.5f,\ \textcolor{keyword}{new}\ InputBinding(\textcolor{stringliteral}{"{}<Mouse>/delta"{}}));}
+\DoxyCodeLine{look.ApplyParameterOverride(\textcolor{stringliteral}{"{}scaleVector2:y"{}},\ 0.5f,\ \textcolor{keyword}{new}\ InputBinding(\textcolor{stringliteral}{"{}<Mouse>/delta"{}}));}
+
+\end{DoxyCode}
+
+
+\texorpdfstring{$>$}{>}NOTE\+: Parameter overrides are {\itshape not} persisted along with an asset.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1252}{}\doxysection{\texorpdfstring{Interactive rebinding}{Interactive rebinding}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1252}
+\texorpdfstring{$>$}{>}{\bfseries{Note\+:}} To download a sample project which demonstrates how to set up a rebinding user interface with Input \doxylink{namespace_system}{System} APIs, open the Package Manager, select the Input \doxylink{namespace_system}{System} Package, and choose the sample project "{}\+Rebinding UI"{} to download.
+
+Runtime rebinding allows users of your application to set their own Bindings.
+
+To allow users to choose their own Bindings interactively, use the \href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.html}{\texttt{ {\ttfamily Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation}}} class. Call the \href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html\#UnityEngine_InputSystem_InputActionRebindingExtensions_PerformInteractiveRebinding_UnityEngine_InputSystem_InputAction_System_Int32_}{\texttt{ {\ttfamily Perform\+Interactive\+Rebinding()}}} method on an Action to create a rebinding operation. This operation waits for the Input \doxylink{namespace_system}{System} to register any input from any Device which matches the Action\textquotesingle{}s expected Control type, then uses \href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_overridePath}{\texttt{ {\ttfamily Input\+Binding.\+override\+Path}}} to assign the Control path for that Control to the Action\textquotesingle{}s Bindings. If the user actuates multiple Controls, the rebinding operation chooses the Control with the highest \href{Controls.md\#control-actuation}{\texttt{ magnitude}}.
+
+\texorpdfstring{$>$}{>}IMPORTANT\+: You must dispose of \href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.html}{\texttt{ {\ttfamily Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation}}} instances via {\ttfamily Dispose()}, so that they don\textquotesingle{}t leak memory on the unmanaged memory heap.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#}}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{void}\ RemapButtonClicked(InputAction\ actionToRebind)}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ var\ rebindOperation\ =\ actionToRebind}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ .PerformInteractiveRebinding().Start();}
+\DoxyCodeLine{\ \ \ \}}
+
+\end{DoxyCode}
+
+
+The \href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.html}{\texttt{ {\ttfamily Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation}}} API is highly configurable to match your needs. For example, you can\+:
+
+
+\begin{DoxyItemize}
+\item Choose expected Control types (\href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.html\#UnityEngine_InputSystem_InputActionRebindingExtensions_RebindingOperation_WithExpectedControlType_System_Type_}{\texttt{ {\ttfamily With\+Expected\+Control\+Type()}}}).
+\item Exclude certain Controls (\href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.html\#UnityEngine_InputSystem_InputActionRebindingExtensions_RebindingOperation_WithControlsExcluding_System_String_}{\texttt{ {\ttfamily With\+Controls\+Excluding()}}}).
+\item Set a Control to cancel the operation (\href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.html\#UnityEngine_InputSystem_InputActionRebindingExtensions_RebindingOperation_WithCancelingThrough_UnityEngine_InputSystem_InputControl_}{\texttt{ {\ttfamily With\+Canceling\+Through()}}}).
+\item Choose which Bindings to apply the operation on if the Action has multiple Bindings (\href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.html\#UnityEngine_InputSystem_InputActionRebindingExtensions_RebindingOperation_WithTargetBinding_System_Int32_}{\texttt{ {\ttfamily With\+Target\+Binding()}}}, \href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.html\#UnityEngine_InputSystem_InputActionRebindingExtensions_RebindingOperation_WithBindingGroup_System_String_}{\texttt{ {\ttfamily With\+Binding\+Group()}}}, \href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.html\#UnityEngine_InputSystem_InputActionRebindingExtensions_RebindingOperation_WithBindingMask_System_Nullable_UnityEngine_InputSystem_InputBinding__}{\texttt{ {\ttfamily With\+Binding\+Mask()}}}).
+\end{DoxyItemize}
+
+Refer to the scripting API reference for \href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.html}{\texttt{ {\ttfamily Input\+Action\+Rebinding\+Extensions.\+Rebinding\+Operation}}} for a full overview.
+
+Note that \href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html\#UnityEngine_InputSystem_InputActionRebindingExtensions_PerformInteractiveRebinding_UnityEngine_InputSystem_InputAction_System_Int32_}{\texttt{ {\ttfamily Perform\+Interactive\+Rebinding()}}} automatically applies a set of default configurations based on the given action and targeted binding.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1253}{}\doxysection{\texorpdfstring{Saving and loading rebinds}{Saving and loading rebinds}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1253}
+You can serialize override properties of \href{../api/UnityEngine.InputSystem.InputBinding.html}{\texttt{ Bindings}} by serializing them as JSON strings and restoring them from these. Use \href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html\#UnityEngine_InputSystem_InputActionRebindingExtensions_SaveBindingOverridesAsJson_UnityEngine_InputSystem_IInputActionCollection2_}{\texttt{ {\ttfamily Save\+Binding\+Overrides\+As\+Json}}} to create these strings and \href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html\#UnityEngine_InputSystem_InputActionRebindingExtensions_LoadBindingOverridesFromJson_UnityEngine_InputSystem_IInputActionCollection2_System_String_System_Boolean_}{\texttt{ {\ttfamily Load\+Binding\+Overrides\+From\+Json}}} to restore overrides from them.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Store\ player\ rebinds\ in\ PlayerPrefs.}}
+\DoxyCodeLine{var\ rebinds\ =\ playerInput.actions.SaveBindingOverridesAsJson();}
+\DoxyCodeLine{PlayerPrefs.SetString(\textcolor{stringliteral}{"{}rebinds"{}},\ rebinds);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Restore\ player\ rebinds\ from\ PlayerPrefs\ (removes\ all\ existing}}
+\DoxyCodeLine{\textcolor{comment}{//\ overrides\ on\ the\ actions;\ pass\ \`{}false`\ for\ second\ argument}}
+\DoxyCodeLine{\textcolor{comment}{//\ in\ case\ you\ want\ to\ prevent\ that).}}
+\DoxyCodeLine{var\ rebinds\ =\ PlayerPrefs.GetString(\textcolor{stringliteral}{"{}rebinds"{}});}
+\DoxyCodeLine{playerInput.actions.LoadBindingOverridesFromJson(rebinds);}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1254}{}\doxysubsection{\texorpdfstring{Restoring original Bindings}{Restoring original Bindings}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1254}
+You can remove Binding overrides and thus restore defaults by using \href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html\#UnityEngine_InputSystem_InputActionRebindingExtensions_RemoveBindingOverride_UnityEngine_InputSystem_InputAction_System_Int32_}{\texttt{ {\ttfamily Remove\+Binding\+Override}}} or \href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html\#UnityEngine_InputSystem_InputActionRebindingExtensions_RemoveAllBindingOverrides_UnityEngine_InputSystem_IInputActionCollection2_}{\texttt{ {\ttfamily Remove\+All\+Binding\+Overrides}}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Remove\ binding\ overrides\ from\ the\ first\ binding\ of\ the\ "{}fire"{}\ action.}}
+\DoxyCodeLine{playerInput.actions[\textcolor{stringliteral}{"{}fire"{}}].RemoveBindingOverride(0);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Remove\ all\ binding\ overrides\ from\ the\ "{}fire"{}\ action.}}
+\DoxyCodeLine{playerInput.actions[\textcolor{stringliteral}{"{}fire"{}}].RemoveAllBindingOverrides();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Remove\ all\ binding\ overrides\ from\ a\ player's\ actions.}}
+\DoxyCodeLine{playerInput.actions.RemoveAllBindingOverrides();}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1255}{}\doxysubsection{\texorpdfstring{Displaying Bindings}{Displaying Bindings}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1255}
+It can be useful for the user to know what an Action is currently bound to (taking any potentially active rebindings into account) while rebinding UIs, and for on-\/screen hints while the app is running. You can use \href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_effectivePath}{\texttt{ {\ttfamily Input\+Binding.\+effective\+Path}}} to get the currently active path for a Binding (which returns \href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_overridePath}{\texttt{ {\ttfamily override\+Path}}} if set, or otherwise returns \href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_path}{\texttt{ {\ttfamily path}}}).
+
+The easiest way to retrieve a display string for an action is to call \href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.html\#UnityEngine_InputSystem_InputActionRebindingExtensions_GetBindingDisplayString_}{\texttt{ {\ttfamily Input\+Action\+Rebinding\+Extensions.\+Get\+Binding\+Display\+String}}} which is an extension method for \href{../api/UnityEngine.InputSystem.InputAction.html}{\texttt{ {\ttfamily Input\+Action}}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Get\ a\ binding\ string\ for\ the\ action\ as\ a\ whole.\ This\ takes\ into\ account\ which}}
+\DoxyCodeLine{\textcolor{comment}{//\ bindings\ are\ currently\ active\ and\ the\ actual\ controls\ bound\ to\ the\ action.}}
+\DoxyCodeLine{m\_RebindButton.GetComponentInChildren<Text>().text\ =\ action.GetBindingDisplayString();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Get\ a\ binding\ string\ for\ a\ specific\ binding\ on\ an\ action\ by\ index.}}
+\DoxyCodeLine{m\_RebindButton.GetComponentInChildren<Text>().text\ =\ action.GetBindingDisplayString(1);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Look\ up\ binding\ indices\ with\ GetBindingIndex.}}
+\DoxyCodeLine{var\ bindingIndex\ =\ action.GetBindingIndex(InputBinding.MaskByGroup(\textcolor{stringliteral}{"{}Gamepad"{}}));}
+\DoxyCodeLine{m\_RebindButton.GetComponentInChildren<Text>().text\ =}
+\DoxyCodeLine{\ \ \ \ action.GetBindingDisplayString(bindingIndex);}
+
+\end{DoxyCode}
+
+
+You can also use this method to replace the text string with images.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Call\ GetBindingDisplayString()\ such\ that\ it\ also\ returns\ information\ about\ the}}
+\DoxyCodeLine{\textcolor{comment}{//\ name\ of\ the\ device\ layout\ and\ path\ of\ the\ control\ on\ the\ device.\ This\ information}}
+\DoxyCodeLine{\textcolor{comment}{//\ is\ useful\ for\ reliably\ associating\ imagery\ with\ individual\ controls.}}
+\DoxyCodeLine{\textcolor{comment}{//\ NOTE:\ The\ first\ argument\ is\ the\ index\ of\ the\ binding\ within\ InputAction.bindings.}}
+\DoxyCodeLine{var\ bindingString\ =\ action.GetBindingDisplayString(0,\ out\ deviceLayout,\ out\ controlPath);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ If\ it's\ a\ gamepad,\ look\ up\ an\ icon\ for\ the\ control.}}
+\DoxyCodeLine{Sprite\ icon\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (!\textcolor{keywordtype}{string}.IsNullOrEmpty(deviceLayout)}
+\DoxyCodeLine{\ \ \ \ \&\&\ !\textcolor{keywordtype}{string}.IsNullOrEmpty(controlPath)}
+\DoxyCodeLine{\ \ \ \ \&\&\ InputSystem.IsFirstLayoutBasedOnSecond(deviceLayout,\ \textcolor{stringliteral}{"{}Gamepad"{}}))}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{switch}\ (controlPath)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}buttonSouth"{}}:\ icon\ =\ aButtonIcon;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}dpad/up"{}}:\ icon\ =\ dpadUpIcon;\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//...}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ If\ you\ have\ an\ icon,\ display\ it\ instead\ of\ the\ text.}}
+\DoxyCodeLine{var\ text\ =\ m\_RebindButton.GetComponentInChildren<Text>();}
+\DoxyCodeLine{var\ image\ =\ m\_RebindButton.GetComponentInChildren<\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a42fac7aa61a542c480b54692c3ea9711abe53a0541a6d36f6ecb879fa2c584b08}{Image}}>();}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (icon\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Display\ icon.}}
+\DoxyCodeLine{\ \ \ \ text.gameObject.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\ \ \ \ image.gameObject.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\ \ \ \ image.sprite\ =\ icon;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{keywordflow}{else}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Display\ text.}}
+\DoxyCodeLine{\ \ \ \ text.gameObject.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\ \ \ \ image.gameObject.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{\ \ \ \ text.text\ =\ bindingString;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Additionally, each Binding has a \href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_ToDisplayString_UnityEngine_InputSystem_InputBinding_DisplayStringOptions_UnityEngine_InputSystem_InputControl_}{\texttt{ {\ttfamily To\+Display\+String}}} method, which you can use to turn individual Bindings into display strings. There is also a generic formatting method for Control paths, \href{../api/UnityEngine.InputSystem.InputControlPath.html\#UnityEngine_InputSystem_InputControlPath_ToHumanReadableString_System_String_UnityEngine_InputSystem_InputControlPath_HumanReadableStringOptions_UnityEngine_InputSystem_InputControl_}{\texttt{ {\ttfamily Input\+Control\+Path.\+To\+Human\+Readable\+String}}}, which you can use with arbitrary Control path strings.
+
+Note that the Controls a Binding resolves to can change at any time, and the display strings for controls might change dynamically. For example, if the user switches the currently active keyboard layout, the display string for each individual key on the \href{../api/UnityEngine.InputSystem.Keyboard.html}{\texttt{ {\ttfamily Keyboard}}} might change.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1256}{}\doxysection{\texorpdfstring{Control Schemes}{Control Schemes}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1256}
+A Binding can belong to any number of Binding groups. \doxylink{namespace_unity}{Unity} stores these on the \href{../api/UnityEngine.InputSystem.InputBinding.html}{\texttt{ {\ttfamily Input\+Binding}}} class as a semicolon-\/separated string in the \href{../api/UnityEngine.InputSystem.InputBinding.html\#UnityEngine_InputSystem_InputBinding_groups}{\texttt{ {\ttfamily Input\+Binding.\+groups}}} property, and you can use them for any arbitrary grouping of bindings. To enable different sets of binding groups for an \href{../api/UnityEngine.InputSystem.InputActionMap.html}{\texttt{ {\ttfamily Input\+Action\+Map}}} or \href{../api/UnityEngine.InputSystem.InputActionAsset.html}{\texttt{ {\ttfamily Input\+Action\+Asset}}}, you can use the \href{../api/UnityEngine.InputSystem.InputActionMap.html\#UnityEngine_InputSystem_InputActionMap_bindingMask}{\texttt{ {\ttfamily Input\+Action\+Map.\+binding\+Mask}}}/\href{../api/UnityEngine.InputSystem.InputActionAsset.html\#UnityEngine_InputSystem_InputActionAsset_bindingMask}{\texttt{ {\ttfamily Input\+Action\+Asset.\+binding\+Mask}}} property. The Input \doxylink{namespace_system}{System} uses this to implement the concept of grouping Bindings into different \href{../api/UnityEngine.InputSystem.InputControlScheme.html}{\texttt{ {\ttfamily Input\+Control\+Schemes}}}.
+
+Control Schemes use Binding groups to map Bindings in an \href{../api/UnityEngine.InputSystem.InputActionMap.html}{\texttt{ {\ttfamily Input\+Action\+Map}}} or \href{../api/UnityEngine.InputSystem.InputActionAsset.html}{\texttt{ {\ttfamily Input\+Action\+Asset}}} to different types of Devices. The \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input}{{\ttfamily Player\+Input}}{0} class uses these to enable a matching Control Scheme for a new \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_user_management}{user}{0} joining the game, based on the Device they are playing on.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1257}{}\doxysection{\texorpdfstring{Details}{Details}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1257}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1258}{}\doxysubsection{\texorpdfstring{Binding resolution}{Binding resolution}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1258}
+When the Input \doxylink{namespace_system}{System} accesses the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls}{Controls}{0} bound to an Action for the first time, the Action resolves its Bindings to match them to existing Controls on existing Devices. In this process, the Action calls \href{../api/UnityEngine.InputSystem.InputSystem.html\#UnityEngine_InputSystem_InputSystem_FindControls__1_System_String_UnityEngine_InputSystem_InputControlList___0___}{\texttt{ {\ttfamily Input\+System.\+Find\+Controls\texorpdfstring{$<$}{<}\texorpdfstring{$>$}{>}()}}} (filtering for devices assigned to the Input\+Action\+Map, if there are any) for the Binding path of each of the Action\textquotesingle{}s bindings. This creates a list of resolved Controls that are now bound to the Action.
+
+Note that a single \href{Controls.md\#control-paths}{\texttt{ Binding path}} can match multiple Controls\+:
+
+
+\begin{DoxyItemize}
+\item A specific Device path such as {\ttfamily \texorpdfstring{$<$}{<}Dual\+Shock\+Gamepad\texorpdfstring{$>$}{>}/button\+East} matches the "{}\+Circle"{} button on a \href{Gamepad.md\#playstation-controllers}{\texttt{ Play\+Station controller}}. If you have multiple Play\+Station controllers connected, it resolves to the "{}\+Circle"{} button on each of these controllers.
+\item An abstract Device path such as {\ttfamily \texorpdfstring{$<$}{<}Gamepad\texorpdfstring{$>$}{>}/button\+East} matches the right action button on any connected gamepad. If you have a Play\+Station controller and an \href{Gamepad.md\#xbox-controllers}{\texttt{ Xbox controller}} connected, it resolves to the "{}\+Circle"{} button on the Play\+Station controller, and to the "{}\+B"{} button on the Xbox controller.
+\item A Binding path can also contain wildcards, such as {\ttfamily \texorpdfstring{$<$}{<}Gamepad\texorpdfstring{$>$}{>}/button\texorpdfstring{$\ast$}{*}}. This matches any Control on any gamepad with a name starting with "{}button"{}, which matches all the four action buttons on any connected gamepad. A different example\+: {\ttfamily \texorpdfstring{$\ast$}{*}/\{Submit\}} matches any Control tagged with the "{}\+Submit"{} \href{Controls.md\#control-usages}{\texttt{ usage}} on any Device.
+\end{DoxyItemize}
+
+If there are multiple Bindings on the same Action that all reference the same Control(s), the Control will effectively feed into the Action multiple times. This is to allow, for example, a single Control to produce different input on the same Action by virtue of being bound in a different fashion (composites, processors, interactions, etc). However, regardless of how many times a Control is bound on any given action, it will only be mentioned once in the Action\textquotesingle{}s \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_controls}{\texttt{ array of {\ttfamily controls}}}.
+
+To query the Controls that an Action resolves to, you can use \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_controls}{\texttt{ {\ttfamily Input\+Action.\+controls}}}. You can also run this query if the Action is disabled.
+
+To be notified when binding resolution happens, you can listen to \href{../api/UnityEngine.InputSystem.InputSystem.html\#UnityEngine_InputSystem_InputSystem_onActionChange}{\texttt{ {\ttfamily Input\+System.\+on\+Action\+Change}}} which triggers \href{../api/UnityEngine.InputSystem.InputActionChange.html\#UnityEngine_InputSystem_InputActionChange_BoundControlsAboutToChange}{\texttt{ {\ttfamily Input\+Action\+Change.\+Bound\+Controls\+About\+To\+Change}}} before modifying Control lists and triggers \href{../api/UnityEngine.InputSystem.InputActionChange.html\#UnityEngine_InputSystem_InputActionChange_BoundControlsChanged}{\texttt{ {\ttfamily Input\+Action\+Change.\+Bound\+Controls\+Changed}}} after having updated them.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1259}{}\doxysubsubsection{\texorpdfstring{Binding resolution while Actions are enabled}{Binding resolution while Actions are enabled}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1259}
+In certain situations, the \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_controls}{\texttt{ Controls}} bound to an Action have to be updated more than once. For example, if a new \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_devices}{Device}{0} becomes usable with an Action, the Action may now pick up input from additional controls. Also, if Bindings are added, removed, or modified, Control lists will need to be updated.
+
+This updating of Controls usually happens transparently in the background. However, when an Action is \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_enabled}{\texttt{ enabled}} and especially when it is \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_IsInProgress_}{\texttt{ in progress}}, there may be a noticeable effect on the Action.
+
+Adding or removing a device -- either \href{../api/UnityEngine.InputSystem.InputSystem.html\#UnityEngine_InputSystem_InputSystem_devices}{\texttt{ globally}} or to/from the \href{../api/UnityEngine.InputSystem.InputActionAsset.html\#UnityEngine_InputSystem_InputActionAsset_devices}{\texttt{ device list}} of an Action -- will remain transparent {\bfseries{except}} if an Action is in progress and it is the device of its \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_activeControl}{\texttt{ active Control}} that is being removed. In this case, the Action will automatically be \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_canceled}{\texttt{ cancelled}}.
+
+Modifying the \href{../api/UnityEngine.InputSystem.InputActionAsset.html\#UnityEngine_InputSystem_InputActionAsset_bindingMask}{\texttt{ binding mask}} or modifying any of the Bindings (such as through rebinding or by adding or removing bindings) will, however, lead to all enabled Actions being temporarily disabled and then re-\/enabled and resumed.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1260}{}\doxysubsubsection{\texorpdfstring{Choosing which Devices to use}{Choosing which Devices to use}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1260}
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_user_management}{{\ttfamily Input\+User}}{0} and \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input}{{\ttfamily Player\+Input}}{0} make use of this facility automatically. They set \href{../api/UnityEngine.InputSystem.InputActionMap.html\#UnityEngine_InputSystem_InputActionMap_devices}{\texttt{ {\ttfamily Input\+Action\+Map.\+devices}}} automatically based on the Devices that are paired to the user.
+
+By default, Actions resolve their Bindings against all Devices present in the Input \doxylink{namespace_system}{System} (that is, \href{../api/UnityEngine.InputSystem.InputSystem.html\#UnityEngine_InputSystem_InputSystem_devices}{\texttt{ {\ttfamily Input\+System.\+devices}}}). For example, if there are two gamepads present in the system, a Binding to {\ttfamily \texorpdfstring{$<$}{<}Gamepad\texorpdfstring{$>$}{>}/button\+South} picks up both gamepads and allows the Action to be used from either.
+
+You can override this behavior by restricting \href{../api/UnityEngine.InputSystem.InputActionAsset.html}{\texttt{ {\ttfamily Input\+Action\+Assets}}} or individual \href{../api/UnityEngine.InputSystem.InputActionMap.html}{\texttt{ {\ttfamily Input\+Action\+Maps}}} to a specific set of Devices. If you do this, Binding resolution only takes the Controls of the given Devices into account.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ actionMap\ =\ new\ InputActionMap();}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ Restrict\ the\ action\ map\ to\ just\ the\ first\ gamepad.}
+\DoxyCodeLine{actionMap.devices\ =\ new[]\ \{\ Gamepad.all[0]\ \};}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1261}{}\doxysubsection{\texorpdfstring{Conflicting inputs}{Conflicting inputs}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1261}
+There are two situations where a given input may lead to ambiguity\+:
+
+
+\begin{DoxyEnumerate}
+\item Several Controls are bound to the same Action and more than one is feeding input into the Action at the same time. Example\+: an Action that is bound to both the left and right trigger on a Gamepad and both triggers are pressed.
+\item The input is part of a sequence of inputs and there are several possible such sequences. Example\+: one Action is bound to the {\ttfamily B} key and another Action is bound to {\ttfamily Shift-\/B}.
+\end{DoxyEnumerate}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1262}{}\doxysubsubsection{\texorpdfstring{Multiple, concurrently used Controls}{Multiple, concurrently used Controls}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1262}
+\texorpdfstring{$>$}{>}{\bfseries{Note\+:}} This section does not apply to \href{Actions.md\#pass-through}{\texttt{ {\ttfamily Pass\+Through}}} Actions as they are by design meant to allow multiple concurrent inputs.
+
+For a \href{Actions.md\#button}{\texttt{ {\ttfamily Button}}} or \href{Actions.md\#value}{\texttt{ {\ttfamily Value}}} Action, there can only be one Control at any time that is "{}driving"{} the Action. This Control is considered the \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_activeControl}{\texttt{ {\ttfamily active\+Control}}}.
+
+When an Action is bound to multiple Controls, the \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_activeControl}{\texttt{ {\ttfamily active\+Control}}} at any point is the one with the greatest level of \href{Controls.md\#control-actuation}{\texttt{ "{}actuation"{}}}, that is, the largest value returned from \href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_EvaluateMagnitude_}{\texttt{ {\ttfamily Evaluate\+Magnitude}}}. If a Control exceeds the actuation level of the current \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_activeControl}{\texttt{ {\ttfamily active\+Control}}}, it will itself become the active Control.
+
+The following example demonstrates this mechanism with a \href{Actions.md\#button}{\texttt{ {\ttfamily Button}}} Action and also demonstrates the difference to a \href{Actions.md\#pass-through}{\texttt{ {\ttfamily Pass\+Through}}} Action.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ a\ button\ and\ a\ pass-\/through\ action\ and\ bind\ each\ of\ them}}
+\DoxyCodeLine{\textcolor{comment}{//\ to\ both\ triggers\ on\ the\ gamepad.}}
+\DoxyCodeLine{var\ buttonAction\ =\ \textcolor{keyword}{new}\ InputAction(type:\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94b}{InputActionType}}.\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}{Button}},}
+\DoxyCodeLine{\ \ \ \ binding:\ \textcolor{stringliteral}{"{}<Gamepad>/*Trigger"{}});}
+\DoxyCodeLine{var\ passThroughAction\ =\ \textcolor{keyword}{new}\ InputAction(type:\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94b}{InputActionType}}.\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94bae1ff6a7360e99cb46db6bb5d3ff8e2eb}{PassThrough}},}
+\DoxyCodeLine{\ \ \ \ binding:\ \textcolor{stringliteral}{"{}<Gamepad>/*Trigger"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{buttonAction.performed\ +=\ c\ =>\ Debug.Log(\textcolor{stringliteral}{"{}\$\{c.control.name\}\ pressed\ (Button)"{}});}
+\DoxyCodeLine{passThroughAction.performed\ +=\ c\ =>\ Debug.Log(\textcolor{stringliteral}{"{}\$\{c.control.name\}\ changed\ (Pass-\/Through)"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{buttonAction.Enable();}
+\DoxyCodeLine{passThroughAction.Enable();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Press\ the\ left\ trigger\ all\ the\ way\ down.}}
+\DoxyCodeLine{\textcolor{comment}{//\ This\ will\ trigger\ both\ buttonAction\ and\ passThroughAction.\ Both\ will}}
+\DoxyCodeLine{\textcolor{comment}{//\ see\ leftTrigger\ becoming\ the\ activeControl.}}
+\DoxyCodeLine{Set(gamepad.leftTrigger,\ 1f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Will\ log}}
+\DoxyCodeLine{\textcolor{comment}{//\ \ \ "{}leftTrigger\ pressed\ (Button)"{}\ and}}
+\DoxyCodeLine{\textcolor{comment}{//\ \ \ "{}leftTrigger\ changed\ (Pass-\/Through)"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Press\ the\ right\ trigger\ halfway\ down.}}
+\DoxyCodeLine{\textcolor{comment}{//\ This\ will\ *not*\ trigger\ or\ otherwise\ change\ buttonAction\ as\ the\ right\ trigger}}
+\DoxyCodeLine{\textcolor{comment}{//\ is\ actuated\ *less*\ than\ the\ left\ one\ that\ is\ already\ driving\ action.}}
+\DoxyCodeLine{\textcolor{comment}{//\ However,\ passThrough\ action\ is\ not\ performing\ such\ tracking\ and\ will\ thus\ respond}}
+\DoxyCodeLine{\textcolor{comment}{//\ directly\ to\ the\ value\ change.\ It\ will\ perform\ and\ make\ rightTrigger\ its\ activeControl.}}
+\DoxyCodeLine{Set(gamepad.rightTrigger,\ 0.5f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Will\ log}}
+\DoxyCodeLine{\textcolor{comment}{//\ \ \ "{}rightTrigger\ changed\ (Pass-\/Through)"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Release\ the\ left\ trigger.}}
+\DoxyCodeLine{\textcolor{comment}{//\ For\ buttonAction,\ this\ will\ mean\ that\ now\ all\ controls\ feeding\ into\ the\ action\ have}}
+\DoxyCodeLine{\textcolor{comment}{//\ been\ released\ and\ thus\ the\ button\ releases.\ activeControl\ will\ go\ back\ to\ null.}}
+\DoxyCodeLine{\textcolor{comment}{//\ For\ passThrough\ action,\ this\ is\ just\ another\ value\ change.\ So,\ the\ action\ performs}}
+\DoxyCodeLine{\textcolor{comment}{//\ and\ its\ active\ control\ changes\ to\ leftTrigger.}}
+\DoxyCodeLine{Set(gamepad.leftTrigger,\ \ 0f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Will\ log}}
+\DoxyCodeLine{\textcolor{comment}{//\ \ \ "{}leftTrigger\ changed\ (Pass-\/Through)"{}}}
+
+\end{DoxyCode}
+
+
+For composite bindings, magnitudes of the composite as a whole rather than for individual Controls are tracked. However, \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_activeControl}{\texttt{ {\ttfamily active\+Control}}} will stick track individual Controls from the composite.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1263}{}\doxysubsubsubsection{\texorpdfstring{Disabling Conflict Resolution}{Disabling Conflict Resolution}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1263}
+Conflict resolution is always applied to \href{Actions.md\#button}{\texttt{ Button}} and \href{Actions.md\#value}{\texttt{ Value}} type Actions. However, it can be undesirable in situations when an Action is simply used to gather any and all inputs from bound Controls. For example, the following Action would monitor the A button of all available gamepads\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ action\ =\ \textcolor{keyword}{new}\ InputAction(type:\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94b}{InputActionType}}.\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94bae1ff6a7360e99cb46db6bb5d3ff8e2eb}{PassThrough}},\ binding:\ \textcolor{stringliteral}{"{}<Gamepad>/buttonSouth"{}});}
+\DoxyCodeLine{action.Enable();}
+
+\end{DoxyCode}
+
+
+By using the \href{Actions.md\#pass-through}{\texttt{ Pass-\/\+Through}} Action type, conflict resolution is bypassed and thus, pressing the A button on one gamepad will not result in a press on a different gamepad being ignored.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1264}{}\doxysubsubsection{\texorpdfstring{Multiple input sequences (such as keyboard shortcuts)}{Multiple input sequences (such as keyboard shortcuts)}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1264}
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: The mechanism described here only applies to Actions that are part of the same \href{../api/UnityEngine.InputSystem.InputActionMap.html}{\texttt{ {\ttfamily Input\+Action\+Map}}} or \href{../api/UnityEngine.InputSystem.InputActionAsset.html}{\texttt{ {\ttfamily Input\+Action\+Asset}}}.
+
+Inputs that are used in combinations with other inputs may also lead to ambiguities. If, for example, the {\ttfamily b} key on the Keyboard is bound both on its own as well as in combination with the {\ttfamily shift} key, then if you first press {\ttfamily shift} and then {\ttfamily b}, the latter key press would be a valid input for either of the Actions.
+
+The way this is handled is that Bindings will be processed in the order of decreasing "{}complexity"{}. This metric is derived automatically from the Binding\+:
+
+
+\begin{DoxyItemize}
+\item A binding that is {\itshape not} part of a composite is assigned a complexity of 1.
+\item A binding that {\itshape is} part of a composite is assigned a complexity equal to the number of part bindings in the composite.
+\end{DoxyItemize}
+
+In our example, this means that a \`{}\+One\+Modifier\`{} composite Binding to {\ttfamily Shift+B} has a higher "{}complexity"{} than a Binding to {\ttfamily B} and thus is processed first.
+
+Additionally, the first Binding that results in the Action changing \href{Actions.md\#action-callbacks}{\texttt{ phase}} will "{}consume"{} the input. This consuming will result in other Bindings to the same input not being processed. So in our example, when {\ttfamily Shift+B} "{}consumes"{} the {\ttfamily B} input, the Binding to {\ttfamily B} will be skipped.
+
+The following example illustrates how this works at the API level.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ two\ actions\ in\ the\ same\ map.}}
+\DoxyCodeLine{var\ map\ =\ \textcolor{keyword}{new}\ InputActionMap();}
+\DoxyCodeLine{var\ bAction\ =\ map.AddAction(\textcolor{stringliteral}{"{}B"{}});}
+\DoxyCodeLine{var\ shiftbAction\ =\ map.AddAction(\textcolor{stringliteral}{"{}ShiftB"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Bind\ one\ of\ the\ actions\ to\ 'B'\ and\ the\ other\ to\ 'SHIFT+B'.}}
+\DoxyCodeLine{bAction.AddBinding(\textcolor{stringliteral}{"{}<Keyboard>/b"{}});}
+\DoxyCodeLine{shiftbAction.AddCompositeBinding(\textcolor{stringliteral}{"{}OneModifier"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Modifier"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/shift"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Binding"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/b"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Print\ something\ to\ the\ console\ when\ the\ actions\ are\ triggered.}}
+\DoxyCodeLine{bAction.performed\ +=\ \_\ =>\ Debug.Log(\textcolor{stringliteral}{"{}B\ action\ performed"{}});}
+\DoxyCodeLine{shiftbAction.performed\ +=\ \_\ =>\ Debug.Log(\textcolor{stringliteral}{"{}SHIFT+B\ action\ performed"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Start\ listening\ to\ input.}}
+\DoxyCodeLine{map.Enable();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Now,\ let's\ assume\ the\ left\ shift\ key\ on\ the\ keyboard\ is\ pressed\ (here,\ we\ manually}}
+\DoxyCodeLine{\textcolor{comment}{//\ press\ it\ with\ the\ InputTestFixture\ API).}}
+\DoxyCodeLine{Press(Keyboard.current.leftShiftKey);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ And\ then\ the\ B\ is\ pressed.\ This\ is\ a\ valid\ input\ for\ both}}
+\DoxyCodeLine{\textcolor{comment}{//\ bAction\ as\ well\ as\ shiftbAction.}}
+\DoxyCodeLine{\textcolor{comment}{//}}
+\DoxyCodeLine{\textcolor{comment}{//\ What\ will\ happen\ now\ is\ that\ shiftbAction\ will\ do\ its\ processing\ first.\ In\ response,}}
+\DoxyCodeLine{\textcolor{comment}{//\ it\ will\ *perform*\ the\ action\ (i.e.\ we\ see\ the\ \`{}performed`\ callback\ being\ invoked)\ and}}
+\DoxyCodeLine{\textcolor{comment}{//\ thus\ "{}consume"{}\ the\ input.\ bAction\ will\ stay\ silent\ as\ it\ will\ in\ turn\ be\ skipped\ over.}}
+\DoxyCodeLine{Press(keyboard.bKey);}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1265}{}\doxysubsection{\texorpdfstring{Initial state check}{Initial state check}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings_autotoc_md1265}
+After an Action is \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_enabled}{\texttt{ enabled}}, it will start reacting to input as it comes in. However, at the time the Action is enabled, one or more of the Controls that are \href{../api/UnityEngine.InputSystem.InputAction.html\#UnityEngine_InputSystem_InputAction_controls}{\texttt{ bound}} to an action may already have a non-\/default state at that point.
+
+Using what is referred to as an "{}initial state check"{}, an Action can be made to respond to such a non-\/default state as if the state change happened {\itshape after} the Action was enabled. The way this works is that in the first input \href{../api/UnityEngine.InputSystem.InputSystem.html\#UnityEngine_InputSystem_InputSystem_Update_}{\texttt{ update}} after the Action was enabled, all its bound controls are checked in turn. If any of them has a non-\/default state, the Action responds right away.
+
+This check is implicitly enabled for \href{Actions.md\#value}{\texttt{ Value}} actions. If, for example, you have a {\ttfamily Move} Action bound to the left stick on the gamepad and the stick is already pushed in a direction when {\ttfamily Move} is enabled, the character will immediately start walking.
+
+By default, \href{Actions.md\#button}{\texttt{ Button}} and \href{Actions.md\#pass-through}{\texttt{ Pass-\/\+Through}} type Actions, do not perform this check. A button that is pressed when its respective Action is enabled first needs to be released and then pressed again for it to trigger the Action.
+
+However, you can manually enable initial state checks on these types of Actions using the checkbox in the editor\+:
+
+ 

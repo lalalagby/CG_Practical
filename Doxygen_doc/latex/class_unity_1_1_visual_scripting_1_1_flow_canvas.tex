@@ -1,0 +1,311 @@
+\doxysection{Unity.\+Visual\+Scripting.\+Flow\+Canvas Class Reference}
+\hypertarget{class_unity_1_1_visual_scripting_1_1_flow_canvas}{}\label{class_unity_1_1_visual_scripting_1_1_flow_canvas}\index{Unity.VisualScripting.FlowCanvas@{Unity.VisualScripting.FlowCanvas}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Flow\+Canvas\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_1_1_visual_scripting_1_1_flow_canvas}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_canvas_a32a7a826121b959d83242bb57ec323b7}\label{class_unity_1_1_visual_scripting_1_1_flow_canvas_a32a7a826121b959d83242bb57ec323b7} 
+{\bfseries Flow\+Canvas} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow_graph}{Flow\+Graph}} graph)
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow_canvas_a8276b63d15f49ebe1634c03bd313d17e}{Shrink\+Copy\+Group}} (Hash\+Set$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element}{IGraph\+Element}} $>$ copy\+Group)
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow_canvas_a16e112892f529d4653e9f20eb154c589}{On\+Toolbar\+GUI}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow_canvas_a701533cec7fb286deafc238df9f37534}{Close}} ()
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_canvas_a30daf8b6be97c851753747e8f81f746f}\label{class_unity_1_1_visual_scripting_1_1_flow_canvas_a30daf8b6be97c851753747e8f81f746f} 
+void {\bfseries New\+Unit\+Contextual} ()
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_canvas_a8024af16fb368bca3e361cbb54a14418}\label{class_unity_1_1_visual_scripting_1_1_flow_canvas_a8024af16fb368bca3e361cbb54a14418} 
+void {\bfseries Add\+Unit} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit}{IUnit}} unit, Vector2 position)
+\item 
+override bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow_canvas_a979c9e1d02c34b1824f1c71b62578d5e}{Accepts\+Drag\+And\+Drop}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow_canvas_ac500842e67cf0bbedb577a7e34c38a32}{Perform\+Drag\+And\+Drop}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow_canvas_aa1f002a2b3613866f6a72dbca489c072}{Draw\+Drag\+And\+Drop\+Preview}} ()
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_canvas_a12a627eba52b428e13508089dfda490e}\label{class_unity_1_1_visual_scripting_1_1_flow_canvas_a12a627eba52b428e13508089dfda490e} 
+void {\bfseries Cancel\+Connection} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ Flow\+Graph $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Dispose} ()
+\item 
+void {\bfseries Cache} ()
+\item 
+void {\bfseries Cache\+Widget\+Items} ()
+\item 
+void {\bfseries Recollect} ()
+\item 
+void {\bfseries Cache\+Widget\+Collections} ()
+\item 
+virtual void {\bfseries Open} ()
+\item 
+void {\bfseries Register\+Controls} ()
+\item 
+void {\bfseries Update} ()
+\item 
+void {\bfseries Before\+Frame} ()
+\item 
+void {\bfseries On\+GUI} ()
+\item 
+void {\bfseries Update\+Viewport} ()
+\item 
+void {\bfseries Tween\+Viewport} (Vector2 pan, float zoom, float duration)
+\item 
+void {\bfseries Cache\+Widget\+Visibility} ()
+\item 
+void {\bfseries View\+Elements} (IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element}{IGraph\+Element}} $>$ elements)
+\item 
+bool {\bfseries Is\+Visible} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_widget}{IWidget}} widget)
+\item 
+void {\bfseries Cache\+Widget\+Positions} ()
+\item 
+void {\bfseries Begin\+Drag} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_wrapper}{Event\+Wrapper}} e)
+\item 
+void {\bfseries Drag} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_wrapper}{Event\+Wrapper}} e)
+\item 
+void {\bfseries End\+Drag} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_wrapper}{Event\+Wrapper}} e)
+\item 
+void {\bfseries Delete\+Selection} ()
+\item 
+void {\bfseries Align} (\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_ab81e060157d5864d06d9dcf3489a73c3}{Align\+Operation}} operation)
+\item 
+void {\bfseries Distribute} (\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_ae06faf6dfa51936e141de85d76d69864}{Distribute\+Operation}} operation)
+\item 
+virtual void {\bfseries Update\+Drag\+And\+Drop} ()
+\item 
+virtual void {\bfseries Exit\+Drag\+And\+Drop} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_canvas_a57bb4712c403de8d3174cc7733b07fea}\label{class_unity_1_1_visual_scripting_1_1_flow_canvas_a57bb4712c403de8d3174cc7733b07fea} 
+const float {\bfseries inspector\+Zoom\+Threshold} = 0.\+7f
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow_canvas_ab2ce16e2b0ee57eb1d30ea98ad046970}{Handle\+High\+Priority\+Input}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow_canvas_a6ec9995c4bc1a86107916050e3e79617}{On\+Context}} ()
+\item 
+override IEnumerable$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dropdown_option}{Dropdown\+Option}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow_canvas_ae4066c20f6d74769d0940bab1856a53d}{Get\+Context\+Options}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ Flow\+Graph $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Visual\+Scripting\+Canvas} (TGraph graph)
+\item 
+void {\bfseries Handle\+Event\+Capture} ()
+\item 
+void {\bfseries Handle\+Widget\+Input} ()
+\item 
+void {\bfseries Handle\+Event\+Release} ()
+\item 
+virtual void {\bfseries Handle\+Low\+Priority\+Input} ()
+\item 
+virtual void {\bfseries Handle\+Maximization} ()
+\item 
+void {\bfseries Toggle\+Maximized} ()
+\item 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dropdown_option}{Dropdown\+Option}} $>$ {\bfseries Get\+Extended\+Context\+Options} ()
+\item 
+virtual void {\bfseries Draw\+Background} ()
+\item 
+void {\bfseries Draw\+Widgets\+Background} ()
+\item 
+void {\bfseries Draw\+Widgets\+Foreground} ()
+\item 
+void {\bfseries Draw\+Widgets\+Overlay} ()
+\item 
+virtual void {\bfseries Draw\+Overlay} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_canvas_ac2172c7a55c24a7dc5f50421d7920d41}\label{class_unity_1_1_visual_scripting_1_1_flow_canvas_ac2172c7a55c24a7dc5f50421d7920d41} 
+override bool {\bfseries should\+Edge\+Pan}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_canvas_a71d864738700e099f3fd92e5d50180ff}\label{class_unity_1_1_visual_scripting_1_1_flow_canvas_a71d864738700e099f3fd92e5d50180ff} 
+bool {\bfseries show\+Relations}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_canvas_a64e289c16f00c0d99bb2a6a876a85fe1}\label{class_unity_1_1_visual_scripting_1_1_flow_canvas_a64e289c16f00c0d99bb2a6a876a85fe1} 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{IUnit\+Port}} {\bfseries connection\+Source}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_canvas_a0e330cd5247548914f2a540462de20c5}\label{class_unity_1_1_visual_scripting_1_1_flow_canvas_a0e330cd5247548914f2a540462de20c5} 
+Vector2 {\bfseries connection\+End}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_canvas_ac5d91753ac8bd428e1f96ea45513435b}\label{class_unity_1_1_visual_scripting_1_1_flow_canvas_ac5d91753ac8bd428e1f96ea45513435b} 
+bool {\bfseries is\+Creating\+Connection}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ Flow\+Graph $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_widget_provider}{Widget\+Provider}} {\bfseries widget\+Provider}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_selection}{Graph\+Selection}} {\bfseries selection}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_window}{ICanvas\+Window}} {\bfseries window}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_wrapper}{Event\+Wrapper}} {\bfseries e}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+TGraph {\bfseries graph}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_context}{IGraph\+Context}} {\bfseries context}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} {\bfseries reference}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+float {\bfseries zoom}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Vector2 {\bfseries pan}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Rect {\bfseries viewport}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Vector2 {\bfseries mouse\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries is\+Mouse\+Over}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries is\+Mouse\+Over\+Background}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+virtual bool {\bfseries should\+Edge\+Pan}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_widget}{IWidget}} {\bfseries hovered\+Widget}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries is\+Lassoing}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Rect {\bfseries lasso\+Area}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries is\+Selecting}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Rect {\bfseries selection\+Area}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries is\+Grouping}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Rect {\bfseries group\+Area}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries is\+Dragging}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_widget}{IGraph\+Element\+Widget}} $>$ {\bfseries alignable\+And\+Distributable}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+virtual Drag\+And\+Drop\+Visual\+Mode {\bfseries drag\+And\+Drop\+Visual\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+float {\bfseries frame\+Delta\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+float {\bfseries event\+Delta\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+float {\bfseries repaint\+Delta\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Queue$<$ Action $>$ {\bfseries delayed\+Calls}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Events inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ Flow\+Graph $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+Action {\bfseries delay\+Call}\hspace{0.3cm}{\ttfamily  \mbox{[}add, remove\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_canvas_a979c9e1d02c34b1824f1c71b62578d5e}\index{Unity.VisualScripting.FlowCanvas@{Unity.VisualScripting.FlowCanvas}!AcceptsDragAndDrop@{AcceptsDragAndDrop}}
+\index{AcceptsDragAndDrop@{AcceptsDragAndDrop}!Unity.VisualScripting.FlowCanvas@{Unity.VisualScripting.FlowCanvas}}
+\doxysubsubsection{\texorpdfstring{AcceptsDragAndDrop()}{AcceptsDragAndDrop()}}
+{\footnotesize\ttfamily \label{class_unity_1_1_visual_scripting_1_1_flow_canvas_a979c9e1d02c34b1824f1c71b62578d5e} 
+override bool Unity.\+Visual\+Scripting.\+Flow\+Canvas.\+Accepts\+Drag\+And\+Drop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ Flow\+Graph $>$}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_canvas_a701533cec7fb286deafc238df9f37534}\index{Unity.VisualScripting.FlowCanvas@{Unity.VisualScripting.FlowCanvas}!Close@{Close}}
+\index{Close@{Close}!Unity.VisualScripting.FlowCanvas@{Unity.VisualScripting.FlowCanvas}}
+\doxysubsubsection{\texorpdfstring{Close()}{Close()}}
+{\footnotesize\ttfamily \label{class_unity_1_1_visual_scripting_1_1_flow_canvas_a701533cec7fb286deafc238df9f37534} 
+override void Unity.\+Visual\+Scripting.\+Flow\+Canvas.\+Close (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ Flow\+Graph $>$}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_canvas_aa1f002a2b3613866f6a72dbca489c072}\index{Unity.VisualScripting.FlowCanvas@{Unity.VisualScripting.FlowCanvas}!DrawDragAndDropPreview@{DrawDragAndDropPreview}}
+\index{DrawDragAndDropPreview@{DrawDragAndDropPreview}!Unity.VisualScripting.FlowCanvas@{Unity.VisualScripting.FlowCanvas}}
+\doxysubsubsection{\texorpdfstring{DrawDragAndDropPreview()}{DrawDragAndDropPreview()}}
+{\footnotesize\ttfamily \label{class_unity_1_1_visual_scripting_1_1_flow_canvas_aa1f002a2b3613866f6a72dbca489c072} 
+override void Unity.\+Visual\+Scripting.\+Flow\+Canvas.\+Draw\+Drag\+And\+Drop\+Preview (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ Flow\+Graph $>$}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_canvas_ae4066c20f6d74769d0940bab1856a53d}\index{Unity.VisualScripting.FlowCanvas@{Unity.VisualScripting.FlowCanvas}!GetContextOptions@{GetContextOptions}}
+\index{GetContextOptions@{GetContextOptions}!Unity.VisualScripting.FlowCanvas@{Unity.VisualScripting.FlowCanvas}}
+\doxysubsubsection{\texorpdfstring{GetContextOptions()}{GetContextOptions()}}
+{\footnotesize\ttfamily \label{class_unity_1_1_visual_scripting_1_1_flow_canvas_ae4066c20f6d74769d0940bab1856a53d} 
+override IEnumerable$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dropdown_option}{Dropdown\+Option}} $>$ Unity.\+Visual\+Scripting.\+Flow\+Canvas.\+Get\+Context\+Options (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ Flow\+Graph $>$}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_canvas_ab2ce16e2b0ee57eb1d30ea98ad046970}\index{Unity.VisualScripting.FlowCanvas@{Unity.VisualScripting.FlowCanvas}!HandleHighPriorityInput@{HandleHighPriorityInput}}
+\index{HandleHighPriorityInput@{HandleHighPriorityInput}!Unity.VisualScripting.FlowCanvas@{Unity.VisualScripting.FlowCanvas}}
+\doxysubsubsection{\texorpdfstring{HandleHighPriorityInput()}{HandleHighPriorityInput()}}
+{\footnotesize\ttfamily \label{class_unity_1_1_visual_scripting_1_1_flow_canvas_ab2ce16e2b0ee57eb1d30ea98ad046970} 
+override void Unity.\+Visual\+Scripting.\+Flow\+Canvas.\+Handle\+High\+Priority\+Input (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ Flow\+Graph $>$}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_canvas_a6ec9995c4bc1a86107916050e3e79617}\index{Unity.VisualScripting.FlowCanvas@{Unity.VisualScripting.FlowCanvas}!OnContext@{OnContext}}
+\index{OnContext@{OnContext}!Unity.VisualScripting.FlowCanvas@{Unity.VisualScripting.FlowCanvas}}
+\doxysubsubsection{\texorpdfstring{OnContext()}{OnContext()}}
+{\footnotesize\ttfamily \label{class_unity_1_1_visual_scripting_1_1_flow_canvas_a6ec9995c4bc1a86107916050e3e79617} 
+override void Unity.\+Visual\+Scripting.\+Flow\+Canvas.\+On\+Context (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ Flow\+Graph $>$}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_canvas_a16e112892f529d4653e9f20eb154c589}\index{Unity.VisualScripting.FlowCanvas@{Unity.VisualScripting.FlowCanvas}!OnToolbarGUI@{OnToolbarGUI}}
+\index{OnToolbarGUI@{OnToolbarGUI}!Unity.VisualScripting.FlowCanvas@{Unity.VisualScripting.FlowCanvas}}
+\doxysubsubsection{\texorpdfstring{OnToolbarGUI()}{OnToolbarGUI()}}
+{\footnotesize\ttfamily \label{class_unity_1_1_visual_scripting_1_1_flow_canvas_a16e112892f529d4653e9f20eb154c589} 
+override void Unity.\+Visual\+Scripting.\+Flow\+Canvas.\+On\+Toolbar\+GUI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ Flow\+Graph $>$}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_canvas_ac500842e67cf0bbedb577a7e34c38a32}\index{Unity.VisualScripting.FlowCanvas@{Unity.VisualScripting.FlowCanvas}!PerformDragAndDrop@{PerformDragAndDrop}}
+\index{PerformDragAndDrop@{PerformDragAndDrop}!Unity.VisualScripting.FlowCanvas@{Unity.VisualScripting.FlowCanvas}}
+\doxysubsubsection{\texorpdfstring{PerformDragAndDrop()}{PerformDragAndDrop()}}
+{\footnotesize\ttfamily \label{class_unity_1_1_visual_scripting_1_1_flow_canvas_ac500842e67cf0bbedb577a7e34c38a32} 
+override void Unity.\+Visual\+Scripting.\+Flow\+Canvas.\+Perform\+Drag\+And\+Drop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ Flow\+Graph $>$}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_flow_canvas_a8276b63d15f49ebe1634c03bd313d17e}\index{Unity.VisualScripting.FlowCanvas@{Unity.VisualScripting.FlowCanvas}!ShrinkCopyGroup@{ShrinkCopyGroup}}
+\index{ShrinkCopyGroup@{ShrinkCopyGroup}!Unity.VisualScripting.FlowCanvas@{Unity.VisualScripting.FlowCanvas}}
+\doxysubsubsection{\texorpdfstring{ShrinkCopyGroup()}{ShrinkCopyGroup()}}
+{\footnotesize\ttfamily \label{class_unity_1_1_visual_scripting_1_1_flow_canvas_a8276b63d15f49ebe1634c03bd313d17e} 
+override void Unity.\+Visual\+Scripting.\+Flow\+Canvas.\+Shrink\+Copy\+Group (\begin{DoxyParamCaption}\item[{Hash\+Set$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element}{IGraph\+Element}} $>$}]{copy\+Group}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ Flow\+Graph $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+8.\+0/\+Editor/\+Visual\+Scripting.\+Flow/Flow\+Canvas.\+cs\end{DoxyCompactItemize}

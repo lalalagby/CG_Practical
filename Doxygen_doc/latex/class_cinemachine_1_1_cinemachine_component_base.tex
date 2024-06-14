@@ -1,0 +1,223 @@
+\doxysection{Cinemachine.\+Cinemachine\+Component\+Base Class Reference}
+\hypertarget{class_cinemachine_1_1_cinemachine_component_base}{}\label{class_cinemachine_1_1_cinemachine_component_base}\index{Cinemachine.CinemachineComponentBase@{Cinemachine.CinemachineComponentBase}}
+
+
+An abstract representation of a mutator acting on a \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera.  
+
+
+Inheritance diagram for Cinemachine.\+Cinemachine\+Component\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=10.909091cm]{class_cinemachine_1_1_cinemachine_component_base}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_aacf2cbdefb4d8fd09dabb01ec65f2fbd}{Pre\+Pipeline\+Mutate\+Camera\+State}} (ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} cur\+State, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Override this to do such things as offset the Referece\+Look\+At. Base class implementation does nothing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_a9dea4262821631006faf71feb3df050f}{Mutate\+Camera\+State}} (ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} cur\+State, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Mutates the camera state. This state will later be applied to the camera. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_ab61a5ef5a8ae5713705a46a4091fa3c2}{On\+Transition\+From\+Camera}} (\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} from\+Cam, Vector3 world\+Up, float delta\+Time, ref \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_virtual_camera_base_1_1_transition_params}{Cinemachine\+Virtual\+Camera\+Base.\+Transition\+Params}} transition\+Params)
+\begin{DoxyCompactList}\small\item\em Notification that this virtual camera is going live. Base class implementation does nothing. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_abfd9cdc5dfa5520f0553553b35e88fd5}{On\+Target\+Object\+Warped}} (Transform target, Vector3 position\+Delta)
+\begin{DoxyCompactList}\small\item\em This is called to notify the component that a target got warped, so that the component can update its internal state to make the camera also warp seamlessy. Base class implementation does nothing. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_a2c1673f15b1bd3ff4d05c3e763ee6ee4}{Force\+Camera\+Position}} (Vector3 pos, Quaternion rot)
+\begin{DoxyCompactList}\small\item\em Force the virtual camera to assume a given position and orientation. ~\newline
+ Procedural placement then takes over. Base class implementation does nothing. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_ab91f25cc642560ac98f89542be500153}{Get\+Max\+Damp\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Report maximum damping time needed for this component. Only used in editor for timeline scrubbing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_component_base_af839bba20996744d28a8497e041ea414}\label{class_cinemachine_1_1_cinemachine_component_base_af839bba20996744d28a8497e041ea414} 
+const float {\bfseries Epsilon} = Utility.\+Unity\+Vector\+Extensions.\+Epsilon
+\begin{DoxyCompactList}\small\item\em Useful constant for very small floats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_component_base_a7816ac9fb5166f8d361a3c02ef9b464e}\label{class_cinemachine_1_1_cinemachine_component_base_a7816ac9fb5166f8d361a3c02ef9b464e} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} {\bfseries Virtual\+Camera}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the associated \doxylink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_component_base_a6a24403fba16e8d1c4549bc74a316053}\label{class_cinemachine_1_1_cinemachine_component_base_a6a24403fba16e8d1c4549bc74a316053} 
+Transform {\bfseries Follow\+Target}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the owner vcam\textquotesingle{}s Follow target. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_component_base_aa5004739a0721ecb66abe38f7dfb8a83}\label{class_cinemachine_1_1_cinemachine_component_base_aa5004739a0721ecb66abe38f7dfb8a83} 
+Transform {\bfseries Look\+At\+Target}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the owner vcam\textquotesingle{}s Look\+At target. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_component_base_a5c4ddebabeeb65a1bccda60d2e5d1716}\label{class_cinemachine_1_1_cinemachine_component_base_a5c4ddebabeeb65a1bccda60d2e5d1716} 
+\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}} {\bfseries Abstract\+Follow\+Target\+Group}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get Follow target as \doxylink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}, or null if target is not a group. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_component_base_a6a561dbe8cae632aeb2975299ade27d6}\label{class_cinemachine_1_1_cinemachine_component_base_a6a561dbe8cae632aeb2975299ade27d6} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}} {\bfseries Follow\+Target\+Group}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get Follow target as \doxylink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}, or null if target is not a \doxylink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_component_base_a27ea2ca344014bf4392f17621dc0e800}\label{class_cinemachine_1_1_cinemachine_component_base_a27ea2ca344014bf4392f17621dc0e800} 
+Vector3 {\bfseries Follow\+Target\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the position of the Follow target. Special handling\+: If the Follow target is a Virtual\+Camera, returns the vcam State\textquotesingle{}s position, not the transform\textquotesingle{}s position. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_component_base_ae58d3315a430c314bccc0d6776134f0a}\label{class_cinemachine_1_1_cinemachine_component_base_ae58d3315a430c314bccc0d6776134f0a} 
+Quaternion {\bfseries Follow\+Target\+Rotation}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the rotation of the Follow target. Special handling\+: If the Follow target is a Virtual\+Camera, returns the vcam State\textquotesingle{}s rotation, not the transform\textquotesingle{}s rotation. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_component_base_a04144cc0043781c2aa4d0ff64e937af1}\label{class_cinemachine_1_1_cinemachine_component_base_a04144cc0043781c2aa4d0ff64e937af1} 
+\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}} {\bfseries Abstract\+Look\+At\+Target\+Group}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get Look\+At target as \doxylink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}, or null if target is not a group. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_component_base_a554b7070d679284816b8702166c4407f}\label{class_cinemachine_1_1_cinemachine_component_base_a554b7070d679284816b8702166c4407f} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}} {\bfseries Look\+At\+Target\+Group}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get Look\+At target as \doxylink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}, or null if target is not a \doxylink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_component_base_a12843d186e627b3d66d5698e3aba6e81}\label{class_cinemachine_1_1_cinemachine_component_base_a12843d186e627b3d66d5698e3aba6e81} 
+Vector3 {\bfseries Look\+At\+Target\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the position of the Look\+At target. Special handling\+: If the Look\+At target is a Virtual\+Camera, returns the vcam State\textquotesingle{}s position, not the transform\textquotesingle{}s position. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_component_base_a676b02a493a5794ad706755fe7a11fa2}\label{class_cinemachine_1_1_cinemachine_component_base_a676b02a493a5794ad706755fe7a11fa2} 
+Quaternion {\bfseries Look\+At\+Target\+Rotation}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the rotation of the Look\+At target. Special handling\+: If the Look\+At target is a Virtual\+Camera, returns the vcam State\textquotesingle{}s rotation, not the transform\textquotesingle{}s rotation. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_component_base_a4d64e90adb7ba8084e2c63d2aabb2c05}\label{class_cinemachine_1_1_cinemachine_component_base_a4d64e90adb7ba8084e2c63d2aabb2c05} 
+\mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} {\bfseries Vcam\+State}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the owner vcam\textquotesingle{}s \doxylink{struct_cinemachine_1_1_camera_state}{Camera\+State}. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_component_base_a791f844bd2cbde34d89cfdd95cd216a1}\label{class_cinemachine_1_1_cinemachine_component_base_a791f844bd2cbde34d89cfdd95cd216a1} 
+bool {\bfseries Is\+Valid}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if this object is enabled and set up to produce results. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_component_base_aed78d3ba965d7183b1e9fcf6c777ef67}\label{class_cinemachine_1_1_cinemachine_component_base_aed78d3ba965d7183b1e9fcf6c777ef67} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}} {\bfseries Stage}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em What part of the pipeline this fits into. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_component_base_afc5c226a50fd10bc90bd4ae11eba8faf}\label{class_cinemachine_1_1_cinemachine_component_base_afc5c226a50fd10bc90bd4ae11eba8faf} 
+virtual bool {\bfseries Body\+Applies\+After\+Aim}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Special for Body Stage compoments that want to be applied after Aim stage because they use the aim as inout for the procedural placement. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_component_base_a2932471ee2009a620fa7ad6110a28824}\label{class_cinemachine_1_1_cinemachine_component_base_a2932471ee2009a620fa7ad6110a28824} 
+virtual bool {\bfseries Requires\+User\+Input}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Components that require user input should implement this and return true. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An abstract representation of a mutator acting on a \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_component_base_a2c1673f15b1bd3ff4d05c3e763ee6ee4}\index{Cinemachine.CinemachineComponentBase@{Cinemachine.CinemachineComponentBase}!ForceCameraPosition@{ForceCameraPosition}}
+\index{ForceCameraPosition@{ForceCameraPosition}!Cinemachine.CinemachineComponentBase@{Cinemachine.CinemachineComponentBase}}
+\doxysubsubsection{\texorpdfstring{ForceCameraPosition()}{ForceCameraPosition()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_component_base_a2c1673f15b1bd3ff4d05c3e763ee6ee4} 
+virtual void Cinemachine.\+Cinemachine\+Component\+Base.\+Force\+Camera\+Position (\begin{DoxyParamCaption}\item[{Vector3}]{pos}{, }\item[{Quaternion}]{rot}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Force the virtual camera to assume a given position and orientation. ~\newline
+ Procedural placement then takes over. Base class implementation does nothing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Worldspace pposition to take\\
+\hline
+{\em rot} & Worldspace orientation to take\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_composer_abb1467dbddba317ddbc574dd2d32f6a7}{Cinemachine.\+Cinemachine\+Composer}}, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer_a33614f22f13d4303dbe7ec7c6170e6f4}{Cinemachine.\+Cinemachine\+Framing\+Transposer}}, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_orbital_transposer_aff4e432dd6ef054ecca4d423d349023b}{Cinemachine.\+Cinemachine\+Orbital\+Transposer}}, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_p_o_v_ae34e52c8638076c9dabc761a40da9570}{Cinemachine.\+Cinemachine\+POV}}, and \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_a6b52a364356a83fa90003185d8b834cd}{Cinemachine.\+Cinemachine\+Transposer}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_component_base_ab91f25cc642560ac98f89542be500153}\index{Cinemachine.CinemachineComponentBase@{Cinemachine.CinemachineComponentBase}!GetMaxDampTime@{GetMaxDampTime}}
+\index{GetMaxDampTime@{GetMaxDampTime}!Cinemachine.CinemachineComponentBase@{Cinemachine.CinemachineComponentBase}}
+\doxysubsubsection{\texorpdfstring{GetMaxDampTime()}{GetMaxDampTime()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_component_base_ab91f25cc642560ac98f89542be500153} 
+virtual float Cinemachine.\+Cinemachine\+Component\+Base.\+Get\+Max\+Damp\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Report maximum damping time needed for this component. Only used in editor for timeline scrubbing. 
+
+\begin{DoxyReturn}{Returns}
+Highest damping setting in this component
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_cinemachine_1_1_cinemachine3rd_person_follow_afb2aef3afa5304b900c2a12fb7e4bdc5}{Cinemachine.\+Cinemachine3rd\+Person\+Follow}}, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_composer_af8a2d9fb8847b9402d378bff5893fc91}{Cinemachine.\+Cinemachine\+Composer}}, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer_a7af7c4de49274f38ee1da86045a032dc}{Cinemachine.\+Cinemachine\+Framing\+Transposer}}, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_group_composer_a6c7d47dd8670f38f2f0d5ece781ab588}{Cinemachine.\+Cinemachine\+Group\+Composer}}, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_hard_lock_to_target_aabc37faade369a16e820d14d0f75584c}{Cinemachine.\+Cinemachine\+Hard\+Lock\+To\+Target}}, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_same_as_follow_target_a4d82207edb4027674a893e9d56121a21}{Cinemachine.\+Cinemachine\+Same\+As\+Follow\+Target}}, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_tracked_dolly_a85ad320923e0e77301a723e57b34198e}{Cinemachine.\+Cinemachine\+Tracked\+Dolly}}, and \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_ac86ae7e31203b6f41e0784d91a64ca05}{Cinemachine.\+Cinemachine\+Transposer}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_component_base_a9dea4262821631006faf71feb3df050f}\index{Cinemachine.CinemachineComponentBase@{Cinemachine.CinemachineComponentBase}!MutateCameraState@{MutateCameraState}}
+\index{MutateCameraState@{MutateCameraState}!Cinemachine.CinemachineComponentBase@{Cinemachine.CinemachineComponentBase}}
+\doxysubsubsection{\texorpdfstring{MutateCameraState()}{MutateCameraState()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_component_base_a9dea4262821631006faf71feb3df050f} 
+void Cinemachine.\+Cinemachine\+Component\+Base.\+Mutate\+Camera\+State (\begin{DoxyParamCaption}\item[{ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}}}]{cur\+State}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Mutates the camera state. This state will later be applied to the camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cur\+State} & Input state that must be mutated\\
+\hline
+{\em delta\+Time} & Delta time for time-\/based effects (ignore if less than 0)\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cinemachine_1_1_cinemachine_component_base_abfd9cdc5dfa5520f0553553b35e88fd5}\index{Cinemachine.CinemachineComponentBase@{Cinemachine.CinemachineComponentBase}!OnTargetObjectWarped@{OnTargetObjectWarped}}
+\index{OnTargetObjectWarped@{OnTargetObjectWarped}!Cinemachine.CinemachineComponentBase@{Cinemachine.CinemachineComponentBase}}
+\doxysubsubsection{\texorpdfstring{OnTargetObjectWarped()}{OnTargetObjectWarped()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_component_base_abfd9cdc5dfa5520f0553553b35e88fd5} 
+virtual void Cinemachine.\+Cinemachine\+Component\+Base.\+On\+Target\+Object\+Warped (\begin{DoxyParamCaption}\item[{Transform}]{target}{, }\item[{Vector3}]{position\+Delta}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+This is called to notify the component that a target got warped, so that the component can update its internal state to make the camera also warp seamlessy. Base class implementation does nothing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The object that was warped\\
+\hline
+{\em position\+Delta} & The amount the target\textquotesingle{}s position changed\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_cinemachine_1_1_cinemachine3rd_person_follow_a84a30b8cb5fef441370827d2f86f0f77}{Cinemachine.\+Cinemachine3rd\+Person\+Follow}}, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_composer_a9c2c9a760cdb336e6007e0bcaea2eaba}{Cinemachine.\+Cinemachine\+Composer}}, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer_a7cbe1750a99d47a8593d0ed3fb2028b0}{Cinemachine.\+Cinemachine\+Framing\+Transposer}}, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_orbital_transposer_a6192372bb2100a6c7ac98f28ab7613e4}{Cinemachine.\+Cinemachine\+Orbital\+Transposer}}, and \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_a86ff4df7f736deabe1a68956e4a36d36}{Cinemachine.\+Cinemachine\+Transposer}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_component_base_ab61a5ef5a8ae5713705a46a4091fa3c2}\index{Cinemachine.CinemachineComponentBase@{Cinemachine.CinemachineComponentBase}!OnTransitionFromCamera@{OnTransitionFromCamera}}
+\index{OnTransitionFromCamera@{OnTransitionFromCamera}!Cinemachine.CinemachineComponentBase@{Cinemachine.CinemachineComponentBase}}
+\doxysubsubsection{\texorpdfstring{OnTransitionFromCamera()}{OnTransitionFromCamera()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_component_base_ab61a5ef5a8ae5713705a46a4091fa3c2} 
+virtual bool Cinemachine.\+Cinemachine\+Component\+Base.\+On\+Transition\+From\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}}}]{from\+Cam}{, }\item[{Vector3}]{world\+Up}{, }\item[{float}]{delta\+Time}{, }\item[{ref \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_virtual_camera_base_1_1_transition_params}{Cinemachine\+Virtual\+Camera\+Base.\+Transition\+Params}}}]{transition\+Params}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Notification that this virtual camera is going live. Base class implementation does nothing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from\+Cam} & The camera being deactivated. May be null.\\
+\hline
+{\em world\+Up} & Default world Up, set by the \doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain}\\
+\hline
+{\em delta\+Time} & Delta time for time-\/based effects (ignore if less than or equal to 0)\\
+\hline
+{\em transition\+Params} & Transition settings for this vcam\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the vcam should do an internal update as a result of this call
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_framing_transposer_ab04c9f2c45c3af7d65bc169639f605e4}{Cinemachine.\+Cinemachine\+Framing\+Transposer}}, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_orbital_transposer_a96e89fd8e8f7b028fbdd209a974b70c1}{Cinemachine.\+Cinemachine\+Orbital\+Transposer}}, and \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_p_o_v_abafdb8e02c6fa46386f0c33309aec61a}{Cinemachine.\+Cinemachine\+POV}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_component_base_aacf2cbdefb4d8fd09dabb01ec65f2fbd}\index{Cinemachine.CinemachineComponentBase@{Cinemachine.CinemachineComponentBase}!PrePipelineMutateCameraState@{PrePipelineMutateCameraState}}
+\index{PrePipelineMutateCameraState@{PrePipelineMutateCameraState}!Cinemachine.CinemachineComponentBase@{Cinemachine.CinemachineComponentBase}}
+\doxysubsubsection{\texorpdfstring{PrePipelineMutateCameraState()}{PrePipelineMutateCameraState()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_component_base_aacf2cbdefb4d8fd09dabb01ec65f2fbd} 
+virtual void Cinemachine.\+Cinemachine\+Component\+Base.\+Pre\+Pipeline\+Mutate\+Camera\+State (\begin{DoxyParamCaption}\item[{ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}}}]{cur\+State}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Override this to do such things as offset the Referece\+Look\+At. Base class implementation does nothing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cur\+State} & Input state that must be mutated\\
+\hline
+{\em delta\+Time} & Current effective delta\+Time\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_composer_a5451ed365f7c71647e07845dbdc5685a}{Cinemachine.\+Cinemachine\+Composer}}, and \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_p_o_v_a0844d6d1c27df30ba4a2d4e8d79eb291}{Cinemachine.\+Cinemachine\+POV}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Core/Cinemachine\+Component\+Base.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,37 @@
+\chapter{Events API}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-events}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-events}\index{Events API@{Events API}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-events_autotoc_md5355}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-events_autotoc_md5355}%
+ \begin{DoxyNote}{Note}
+For versions 2019/2020 LTS, download the Visual Scripting package from the \href{https://assetstore.unity.com/packages/tools/visual-bolt-163802}{\texttt{ Unity Asset Store}}.
+\end{DoxyNote}
+Visual scripting provides a simple API to trigger custom events from C\# script.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-events_autotoc_md5356}{}\doxysection{\texorpdfstring{Usings}{Usings}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-events_autotoc_md5356}
+Add the following usings to your C\# script to access the API.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{using\ Unity.VisualScripting;}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-events_autotoc_md5357}{}\doxysection{\texorpdfstring{Triggering}{Triggering}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-events_autotoc_md5357}
+A single method call is needed to trigger a custom event. Pass as many arguments as required.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{CustomEvent.Trigger(targetGameObject,\ argument1,\ argument2,\ ...)}
+
+\end{DoxyCode}
+
+
+For example, this custom event node\+:
+
+
+
+Can be triggered with this line of code.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{CustomEvent.Trigger(enemy,\ "{}On\ Damage"{},\ 30);}
+
+\end{DoxyCode}
+ 

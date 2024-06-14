@@ -1,0 +1,69 @@
+\chapter{How to create a custom post-\/processing effect}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc681d90671284af84154c1fe99de36fa}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc681d90671284af84154c1fe99de36fa}\index{How to create a custom post-\/processing effect@{How to create a custom post-\/processing effect}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc681d90671284af84154c1fe99de36fa_autotoc_md2365}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc681d90671284af84154c1fe99de36fa_autotoc_md2365}%
+ The example on this page shows how to use a Full Screen Render Pass to create a grayscale custom post-\/processing effect.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc681d90671284af84154c1fe99de36fa_autotoc_md2366}{}\doxysection{\texorpdfstring{Prerequisites}{Prerequisites}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc681d90671284af84154c1fe99de36fa_autotoc_md2366}
+This example requires the following\+:
+
+
+\begin{DoxyItemize}
+\item A \doxylink{namespace_unity}{Unity} project with the URP package installed.
+\item The {\bfseries{Scriptable Render Pipeline Settings}} property refers to a URP asset ({\bfseries{Project Settings}} \texorpdfstring{$>$}{>} {\bfseries{\doxylink{namespace_graphics}{Graphics}}} \texorpdfstring{$>$}{>} {\bfseries{Scriptable Render Pipeline Settings}}).
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc681d90671284af84154c1fe99de36fa_autotoc_md2367}{}\doxysection{\texorpdfstring{Create a Fullscreen Shader Graph}{Create a Fullscreen Shader Graph}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc681d90671284af84154c1fe99de36fa_autotoc_md2367}
+You must create a Fullscreen Shader Graph to create a custom post-\/processing effect.
+
+
+\begin{DoxyEnumerate}
+\item Create a new Shader Graph in your Project. To do this right-\/click in the Project window and select {\bfseries{Create}} \texorpdfstring{$>$}{>} {\bfseries{Shader Graph}} \texorpdfstring{$>$}{>} {\bfseries{URP}} \texorpdfstring{$>$}{>} {\bfseries{Fullscreen Shader Graph}}.
+\item Add a {\bfseries{URP Sample Buffer}} node. To do this right-\/click in the Shader Graph window, and select {\bfseries{Create Node}}. Then locate and select {\bfseries{URP Sample Buffer}}.
+\item In the {\bfseries{URP Sample Buffer}} node\textquotesingle{}s {\bfseries{Source Buffer}} dropdown menu, select {\bfseries{Blit\+Source}}.
+\item Add a {\bfseries{Vector 3}} node.
+\item Assign the {\bfseries{Vector 3}} node the following values\+:
+\begin{DoxyItemize}
+\item {\bfseries{X}} = 0.\+2126
+\item {\bfseries{Y}} = 0.\+7152
+\item {\bfseries{Z}} = 0.\+0722
+\end{DoxyItemize}
+\item Add a {\bfseries{Dot Product}} node.
+\item Connect the nodes as shown below.
+
+
+\end{DoxyEnumerate}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Node   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Connection    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Node   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Connection    }\\\cline{1-2}
+\endhead
+{\bfseries{URP Sample Buffer}}   &{\bfseries{Output}} to {\bfseries{Dot Product A}}    \\\cline{1-2}
+{\bfseries{Vector 3}}   &{\bfseries{Out}} to {\bfseries{Dot Product B}}    \\\cline{1-2}
+{\bfseries{Dot Product}}   &{\bfseries{Out}} to {\bfseries{Fragment Base Color}}   \\\cline{1-2}
+\end{longtabu}
+
+
+
+\begin{DoxyEnumerate}
+\item Save your Shader Graph.
+\item Create a new Material in your Project. To do this right-\/click in the Project window and select {\bfseries{Create}} \texorpdfstring{$>$}{>} {\bfseries{Material}}.
+\item Apply the Shader Graph shader to the Material. To do this, open the Material in the Inspector and select {\bfseries{Shader}} \texorpdfstring{$>$}{>} {\bfseries{Shader Graphs}}, then select the Shader Graph you created in the previous steps.
+\end{DoxyEnumerate}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc681d90671284af84154c1fe99de36fa_autotoc_md2368}{}\doxysection{\texorpdfstring{Use the Material in a Full Screen Pass Renderer Feature}{Use the Material in a Full Screen Pass Renderer Feature}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc681d90671284af84154c1fe99de36fa_autotoc_md2368}
+Once you\textquotesingle{}ve created a compatible Shader Graph and Material, you can use the Material with a Full Screen Pass Renderer Feature to create a custom post-\/processing effect.
+
+
+\begin{DoxyEnumerate}
+\item In the Project window, select a URP Renderer.
+\item In the Inspector, click {\bfseries{Add Renderer Feature}} and select {\bfseries{Full Screen Pass Renderer Feature}}. For more information on adding Renderer Features see \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dobad63f519f0fde26755d12ecfe7020ca}{How to add a Renderer Feature to a Renderer}{0}.
+\item Set the {\bfseries{Post Process Material}} to the Material you created with the Fullscreen Shader Graph.
+\item Set {\bfseries{Injection Point}} to {\bfseries{After Rendering Post Processing}}.
+\item Set {\bfseries{Requirements}} to {\bfseries{Color}}.
+\end{DoxyEnumerate}
+
+You should now see the effect in both Scene view and Game view.
+
+ ~\newline
+{\itshape Example scene with a grayscale custom post-\/processing effect.} 

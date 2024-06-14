@@ -1,0 +1,104 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Lens\+Flare\+Component\+SRP Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p}{}\label{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p}\index{UnityEngine.Rendering.LensFlareComponentSRP@{UnityEngine.Rendering.LensFlareComponentSRP}}
+
+
+Data-\/\+Driven Lens Flare can be added on any gameobject.  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Lens\+Flare\+Component\+SRP\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_ad7c7de5885bfca3b20ece141b1a53ec5}{celestial\+Projected\+Occlusion\+Radius}} (Camera main\+Cam)
+\begin{DoxyCompactList}\small\item\em Retrieves the projected occlusion radius from a particular celestial in the infinity plane with an angular radius. This is used for directional lights which require to have consistent occlusion radius regardless of the near/farplane configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_ab16c39c6256b54fbea34d6fd99ecea40}\label{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_ab16c39c6256b54fbea34d6fd99ecea40} 
+float {\bfseries intensity} = 1.\+0f
+\begin{DoxyCompactList}\small\item\em Intensity. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a7e2cf62702d5f71e669c4b0a8b598568}\label{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a7e2cf62702d5f71e669c4b0a8b598568} 
+float {\bfseries max\+Attenuation\+Distance} = 100.\+0f
+\begin{DoxyCompactList}\small\item\em Distance used to scale the Distance Attenuation Curve. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a1a319875cd1b7b469899aed3fa58abd2}\label{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a1a319875cd1b7b469899aed3fa58abd2} 
+float {\bfseries max\+Attenuation\+Scale} = 100.\+0f
+\begin{DoxyCompactList}\small\item\em Distance used to scale the Scale Attenuation Curve. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a13e238b0674820a19ddb2d2c90313d30}\label{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a13e238b0674820a19ddb2d2c90313d30} 
+Animation\+Curve {\bfseries distance\+Attenuation\+Curve} = new Animation\+Curve(new Keyframe(0.\+0f, 1.\+0f), new Keyframe(1.\+0f, 0.\+0f))
+\begin{DoxyCompactList}\small\item\em Attenuation by distance. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a592acee6f641e96d72bf7bfcbd54951d}\label{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a592acee6f641e96d72bf7bfcbd54951d} 
+Animation\+Curve {\bfseries scale\+By\+Distance\+Curve} = new Animation\+Curve(new Keyframe(0.\+0f, 1.\+0f), new Keyframe(1.\+0f, 0.\+0f))
+\begin{DoxyCompactList}\small\item\em Scale by distance, use the same distance as distance\+Attenuation\+Curve. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a4ad4db425243e0aba362164f6ac19398}\label{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a4ad4db425243e0aba362164f6ac19398} 
+bool {\bfseries attenuation\+By\+Light\+Shape} = true
+\begin{DoxyCompactList}\small\item\em If component attached to a light, attenuation the lens flare per light type. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a736a3b8761ff30f0f56c336e5a7e9989}\label{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a736a3b8761ff30f0f56c336e5a7e9989} 
+Animation\+Curve {\bfseries radial\+Screen\+Attenuation\+Curve} = new Animation\+Curve(new Keyframe(0.\+0f, 1.\+0f), new Keyframe(1.\+0f, 1.\+0f))
+\begin{DoxyCompactList}\small\item\em Attenuation used radially, which allow for instance to enable flare only on the edge of the screen. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a8a27bfc49cd875e9d9c0985daf4657b3}\label{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a8a27bfc49cd875e9d9c0985daf4657b3} 
+bool {\bfseries use\+Occlusion} = false
+\begin{DoxyCompactList}\small\item\em Enable Occlusion feature. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_ab8f8b475d1167f9a5db908772546f8a0}\label{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_ab8f8b475d1167f9a5db908772546f8a0} 
+float {\bfseries occlusion\+Radius} = 0.\+1f
+\begin{DoxyCompactList}\small\item\em Radius around the light used to occlude the flare (value in world space) \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a5419b19a72c7f0d4a3c14e0deb624683}\label{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a5419b19a72c7f0d4a3c14e0deb624683} 
+bool {\bfseries use\+Background\+Cloud\+Occlusion} = false
+\begin{DoxyCompactList}\small\item\em Enable Occlusion using Background Cloud (for instance\+: Cloud\+Layer) \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a7485be59b5abb96a336f6bebc981aaf5}\label{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a7485be59b5abb96a336f6bebc981aaf5} 
+uint {\bfseries sample\+Count} = 32
+\begin{DoxyCompactList}\small\item\em Random \doxylink{namespace_samples}{Samples} Count used inside the disk with \textquotesingle{}occlusion\+Radius\textquotesingle{}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_ab16356013d1af31d2a1fd9a5287b06f6}\label{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_ab16356013d1af31d2a1fd9a5287b06f6} 
+float {\bfseries occlusion\+Offset} = 0.\+05f
+\begin{DoxyCompactList}\small\item\em Z Occlusion Offset allow us to offset the plane where the disc of occlusion is place (closer to camera), value on world space. Useful for instance to sample occlusion outside a light bulb if we place a flare inside the light bulb. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a86bdb9ddcbb2219bb9834f7b99d69443}\label{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a86bdb9ddcbb2219bb9834f7b99d69443} 
+float {\bfseries scale} = 1.\+0f
+\begin{DoxyCompactList}\small\item\em Global Scale. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a640593c327024c586cbca92098ddeaee}\label{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a640593c327024c586cbca92098ddeaee} 
+bool {\bfseries allow\+Off\+Screen} = false
+\begin{DoxyCompactList}\small\item\em If allow\+Off\+Screen is true then If the lens flare is outside the screen we still emit the flare on screen. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a6f568a0530523c86a78ebfb70f84ec99}\label{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a6f568a0530523c86a78ebfb70f84ec99} 
+bool {\bfseries volumetric\+Cloud\+Occlusion} = false
+\begin{DoxyCompactList}\small\item\em If volumetric\+Cloud\+Occlusion is true then use the volumetric cloud (on HDRP only) for the occlusion. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a01f569b72ad6ab727286c4efc3699155}\label{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a01f569b72ad6ab727286c4efc3699155} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_texture_curve}{Texture\+Curve}} {\bfseries occlusion\+Remap\+Curve} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_texture_curve}{Texture\+Curve}}(Animation\+Curve.\+Linear(0.\+0f, 0.\+0f, 1.\+0f, 1.\+0f), 1.\+0f, false, new Vector2(0.\+0f, 1.\+0f))
+\begin{DoxyCompactList}\small\item\em Occlusion\+Remap\+Curve allow the occlusion \mbox{[}from 0 to 1\mbox{]} to be remap with any desired shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a39b7bee44297bcf9fcd2d338de69d60c}\label{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_a39b7bee44297bcf9fcd2d338de69d60c} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_lens_flare_data_s_r_p}{Lens\+Flare\+Data\+SRP}} {\bfseries lens\+Flare\+Data}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Lens flare asset used on this component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Data-\/\+Driven Lens Flare can be added on any gameobject. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_ad7c7de5885bfca3b20ece141b1a53ec5}\index{UnityEngine.Rendering.LensFlareComponentSRP@{UnityEngine.Rendering.LensFlareComponentSRP}!celestialProjectedOcclusionRadius@{celestialProjectedOcclusionRadius}}
+\index{celestialProjectedOcclusionRadius@{celestialProjectedOcclusionRadius}!UnityEngine.Rendering.LensFlareComponentSRP@{UnityEngine.Rendering.LensFlareComponentSRP}}
+\doxysubsubsection{\texorpdfstring{celestialProjectedOcclusionRadius()}{celestialProjectedOcclusionRadius()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_lens_flare_component_s_r_p_ad7c7de5885bfca3b20ece141b1a53ec5} 
+float Unity\+Engine.\+Rendering.\+Lens\+Flare\+Component\+SRP.\+celestial\+Projected\+Occlusion\+Radius (\begin{DoxyParamCaption}\item[{Camera}]{main\+Cam}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the projected occlusion radius from a particular celestial in the infinity plane with an angular radius. This is used for directional lights which require to have consistent occlusion radius regardless of the near/farplane configuration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em main\+Cam} & The camera utilized to calculate the occlusion radius\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value, in world units, of the occlusion angular radius.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Post\+Processing/Lens\+Flare\+Component\+SRP.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,43 @@
+\chapter{Dither Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_dither-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_dither-_node}\index{Dither Node@{Dither Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_dither-_node_autotoc_md3170}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_dither-_node_autotoc_md3170}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_dither-_node_autotoc_md3171}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_dither-_node_autotoc_md3171}
+Dither is an intentional form of noise used to randomize quantization error. It is used to prevent large-\/scale patterns such as color banding in images. The {\bfseries{Dither}} node applies dithering in screen-\/space to ensure a uniform distribution of the pattern. This can be adjusted by connecting another node to input {\bfseries{Screen Position}}.
+
+This \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node}{Node}{0} is commonly used as an input to {\bfseries{Alpha Clip Threshold}} on the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_master-_stack}{Master Node}{0} to give the appearance of transparency to an opaque item. This is useful for creating geometry that appears to be transparent but has the advantages of rendering as opaque, such as writing depth or being rendered in deferred.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_dither-_node_autotoc_md3172}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_dither-_node_autotoc_md3172}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+In   &Input   &Dynamic Vector   &None   &Input value    \\\cline{1-5}
+Screen Position   &Input   &Vector 4   &Screen Position   &Coordinates used to apply dither pattern    \\\cline{1-5}
+Out   &Output   &Dynamic Vector   &None   &Output value   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_dither-_node_autotoc_md3173}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_dither-_node_autotoc_md3173}
+The following example code represents one possible outcome of this node.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Dither\_float4(float4\ In,\ float4\ ScreenPosition,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ float2\ uv\ =\ ScreenPosition.xy\ *\ \_ScreenParams.xy;}
+\DoxyCodeLine{\ \ \ \ float\ DITHER\_THRESHOLDS[16]\ =}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ 1.0\ /\ 17.0,\ \ 9.0\ /\ 17.0,\ \ 3.0\ /\ 17.0,\ 11.0\ /\ 17.0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ 13.0\ /\ 17.0,\ \ 5.0\ /\ 17.0,\ 15.0\ /\ 17.0,\ \ 7.0\ /\ 17.0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ 4.0\ /\ 17.0,\ 12.0\ /\ 17.0,\ \ 2.0\ /\ 17.0,\ 10.0\ /\ 17.0,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ 16.0\ /\ 17.0,\ \ 8.0\ /\ 17.0,\ 14.0\ /\ 17.0,\ \ 6.0\ /\ 17.0}
+\DoxyCodeLine{\ \ \ \ \};}
+\DoxyCodeLine{\ \ \ \ uint\ index\ =\ (uint(uv.x)\ \%\ 4)\ *\ 4\ +\ uint(uv.y)\ \%\ 4;}
+\DoxyCodeLine{\ \ \ \ Out\ =\ In\ -\/\ DITHER\_THRESHOLDS[index];}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

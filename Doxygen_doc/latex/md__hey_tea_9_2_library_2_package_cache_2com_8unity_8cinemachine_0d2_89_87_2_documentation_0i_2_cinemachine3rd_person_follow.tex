@@ -1,0 +1,85 @@
+\chapter{3rd Person Follow}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine3rd_person_follow}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine3rd_person_follow}\index{3rd Person Follow@{3rd Person Follow}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine3rd_person_follow_autotoc_md484}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine3rd_person_follow_autotoc_md484}%
+Use \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera’s {\bfseries{3rd Person Follow}} to keep the camera at a constant position and distance relative to a Follow target (subject to damping controls), tracking the target’s movement and rotation.
+
+The 3rd Person Follow’s mini-\/rig setup defines the camera position and distance relative to the target. With a suitable shoulder offset, this mini-\/rig can produce a 3rd-\/person camera, where the character is offset in the frame and the camera looks over the character’s shoulder. With different settings, it can produce a first-\/person camera.
+
+For example, a rig set up with these values\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Value\+:}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Value\+:}}    }\\\cline{1-2}
+\endhead
+Damping   &X= 0.\+1 Y= 0.\+5 Z= 0.\+3    \\\cline{1-2}
+Shoulder Offset   &X= 0.\+4 Y= 1 Z= -\/0.\+5    \\\cline{1-2}
+Vertical Arm Length   &0.\+27    \\\cline{1-2}
+Camera Side   &1    \\\cline{1-2}
+Camera Distance   &2    \\\cline{1-2}
+Camera Collision Filter   &Default    \\\cline{1-2}
+Camera Radius   &0.\+2   \\\cline{1-2}
+\end{longtabu}
+
+
+Produces this virtual rig in the Scene view\+:
+
+
+
+Which results in this Game view\+:
+
+
+
+The rig and the camera position are defined by three pivot points (the origin, the shoulder, and the hand) as well as by a camera that is positioned behind the hand.
+
+
+\begin{DoxyItemize}
+\item The {\bfseries{origin (A)}}\+: The origin is the Follow target\textquotesingle{}s position. When the target pivots horizontally, the rig rotates with it around this point.
+\item The {\bfseries{shoulder (B)}}\+: By default, it is offset to one side, to create an over-\/the-\/shoulder follow position. Vertical rotations of the Follow target are transferred here, so the rig rotates horizontally about the origin, and vertically about the shoulder.
+\item The {\bfseries{hand (C)}}\+: Vertically offset in relation to the shoulder. The arm length affects the follow target\textquotesingle{}s screen position when the camera rotates vertically. By default, it is offset from the shoulder, so that vertical rotations will keep the character nicely positioned on the screen. For 1st-\/person cameras, this can be set to 0.
+\item The {\bfseries{camera (D)}}\+: The camera\textquotesingle{}s rotation will always be parallel to the Follow target\textquotesingle{}s rotation, but positioned at Camera Distance behind the hand. The camera always looks directly at the hand.
+\end{DoxyItemize}
+
+Note the rotations on the rig;
+
+
+\begin{DoxyItemize}
+\item {\bfseries{B rotates horizontally around A}}. Using A as the origin, B\textquotesingle{}s position is calculated from the Shoulder Offset\textquotesingle{}s X, Y, and Z values .
+\end{DoxyItemize}
+
+
+\begin{DoxyItemize}
+\item {\bfseries{C rotates vertically around B}}. C\textquotesingle{}s position is calculated from the Vertical Arm Length from B. Positive values result with C above B, negative values result with C below B.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine3rd_person_follow_autotoc_md485}{}\doxysection{\texorpdfstring{Controlling the Camera}{Controlling the Camera}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine3rd_person_follow_autotoc_md485}
+There is no direct input control for the camera. You must have a controller script that moves and rotates the Follow target; the camera will position and orient itself relative to that. When the Follow target is the character itself, the camera’s rotation always matches the character’s rotation. When the Follow target is an invisible Game\+Object that can rotate independently of the character, the camera will then be able to rotate around the character.
+
+For an example, see the {\bfseries{Aiming\+Rig}} sample scene.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine3rd_person_follow_autotoc_md486}{}\doxysection{\texorpdfstring{Built-\/in Collision Resolution}{Built-\/in Collision Resolution}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine3rd_person_follow_autotoc_md486}
+The 3rd-\/person Follow component has a built-\/in collision resolution system, so when the target moves close to an obstacle, the camera position is adjusted so that it will never be inside an obstacle; the built-\/in collision resolution means the camera always keeps the target in sight, despite intervening obstacles. When the target moves too close to an obstacle, the rig bends and stretches to keep the camera outside the obstacle but always with the target in view.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine3rd_person_follow_autotoc_md487}{}\doxysection{\texorpdfstring{Shaky Movement, Steady Aim}{Shaky Movement, Steady Aim}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine3rd_person_follow_autotoc_md487}
+When combined with the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine3rd_person_aim}{Cinemachine3rd\+Person\+Aim}{0} extension, the result is a powerful rig that can maintain steady aim for a shooter-\/type game, even when the camera movement is shaky or noisy. Cinemachine3rd\+Person\+Aim re-\/adjusts the camera orientation to maintain a fixed point at the center of the screen, correcting for variations due to hand-\/held camera noise or shaking target motion.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine3rd_person_follow_autotoc_md488}{}\doxysection{\texorpdfstring{Properties\+:}{Properties\+:}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine3rd_person_follow_autotoc_md488}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-2}
+\endhead
+Damping   &The responsiveness of the camera in tracking the target. Each axis can have its own setting. The value is the approximate time it takes the camera to catch up to the target\textquotesingle{}s new position. Small numbers make the camera more responsive. Larger numbers make the camera respond more slowly.    \\\cline{1-2}
+Shoulder Offset   &Position of the shoulder pivot relative to the follow target origin. This offset is in target-\/local space.    \\\cline{1-2}
+Vertical Arm Length   &Vertical offset of the hand in relation to the shoulder. Arm length affects the follow target\textquotesingle{}s screen position when the camera rotates vertically.    \\\cline{1-2}
+Camera Side   &Specifies which shoulder the camera is on (left, right, or somewhere in-\/between).    \\\cline{1-2}
+Camera Distance   &Specifies the distance from the hand to the camera.    \\\cline{1-2}
+Camera Collision Filter   &Specifies which layers will be included or excluded from collision resolution.    \\\cline{1-2}
+Ignore Tag   &Obstacles with this tag will be ignored by collision resolution. It is recommended to set this field to the target\textquotesingle{}s tag.    \\\cline{1-2}
+Camera Radius   &Specifies how close the camera can get to collidable obstacles without adjusting its position.    \\\cline{1-2}
+Damping Into Collision   &Specifies how gradually the camera moves to correct for an occlusion. Higher numbers move the camera more gradually.    \\\cline{1-2}
+Damping From Collision   &Specifies how gradually the camera returns to its normal position after having been corrected by the built-\/in collision resolution system. Higher numbers move the camera more gradually back to normal.   \\\cline{1-2}
+\end{longtabu}

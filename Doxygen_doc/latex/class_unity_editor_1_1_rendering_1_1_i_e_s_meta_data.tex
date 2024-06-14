@@ -1,0 +1,87 @@
+\doxysection{Unity\+Editor.\+Rendering.\+IESMeta\+Data Class Reference}
+\hypertarget{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data}{}\label{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data}\index{UnityEditor.Rendering.IESMetaData@{UnityEditor.Rendering.IESMetaData}}
+
+
+Common class to store metadata of an IES file.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override int \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a4961200b60799b23eb175005de87d9d0}{Get\+Hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Get Hash describing an unique IES. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a2f7c7054fc3e2c758f1aecfb20502c3c}\label{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a2f7c7054fc3e2c758f1aecfb20502c3c} 
+string {\bfseries File\+Format\+Version}
+\begin{DoxyCompactList}\small\item\em Version of the IES File. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a333d5a5f7f97f4c81822d4f21d4deb68}\label{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a333d5a5f7f97f4c81822d4f21d4deb68} 
+string {\bfseries IESPhotometric\+Type}
+\begin{DoxyCompactList}\small\item\em Total light intensity (in Lumens) stored on the file, usage of it is optional (through the prefab subasset inside the \doxylink{class_unity_editor_1_1_rendering_1_1_i_e_s_object}{IESObject}) \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a682c1671d3436462b6611d0ff7e7427f}\label{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a682c1671d3436462b6611d0ff7e7427f} 
+float {\bfseries IESMaximum\+Intensity}
+\begin{DoxyCompactList}\small\item\em IES Max Intensity depends on the various information stored on the IES file. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_ac71b610eca27d03a3830c7cdc753c203}\label{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_ac71b610eca27d03a3830c7cdc753c203} 
+string {\bfseries IESMaximum\+Intensity\+Unit}
+\begin{DoxyCompactList}\small\item\em Unit used to measure the IESMaximum\+Intensity. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a3998318d4022e6ca80110065cd084b59}\label{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a3998318d4022e6ca80110065cd084b59} 
+string {\bfseries Manufacturer}
+\begin{DoxyCompactList}\small\item\em Manufacturer of the current IES file. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a6741f015b31fb6cce8117db45a78cd0c}\label{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a6741f015b31fb6cce8117db45a78cd0c} 
+string {\bfseries Luminaire\+Catalog\+Number}
+\begin{DoxyCompactList}\small\item\em Luninaire Catalog Number. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a5c3cf4e8c71ef30ca4f2893206a65321}\label{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a5c3cf4e8c71ef30ca4f2893206a65321} 
+string {\bfseries Luminaire\+Description}
+\begin{DoxyCompactList}\small\item\em Luminaire Description. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a94fcac561ad15625f421d12092ef070a}\label{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a94fcac561ad15625f421d12092ef070a} 
+string {\bfseries Lamp\+Catalog\+Number}
+\begin{DoxyCompactList}\small\item\em Lamp Catalog Number. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a2ca5c00d0b7c7ace9d214f821142eb7c}\label{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a2ca5c00d0b7c7ace9d214f821142eb7c} 
+string {\bfseries Lamp\+Description}
+\begin{DoxyCompactList}\small\item\em Lamp Description. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a54fd81e3adbea165450f62b812a08d64}\label{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a54fd81e3adbea165450f62b812a08d64} 
+\mbox{\hyperlink{namespace_unity_editor_1_1_rendering_a0f5f25afd35fd398cf181a78f60185e7}{IESLight\+Type}} {\bfseries Prefab\+Light\+Type} = \mbox{\hyperlink{namespace_unity_editor_1_1_rendering_a0f5f25afd35fd398cf181a78f60185e7a2a3cd5946cfd317eb99c3d32e35e2d4c}{IESLight\+Type.\+Point}}
+\begin{DoxyCompactList}\small\item\em Prefab Light Type (optional to generate the texture used by the renderer) \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_af6d5b1c1c6d70b05dcd4e1b6ad38b981}\label{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_af6d5b1c1c6d70b05dcd4e1b6ad38b981} 
+float {\bfseries Spot\+Angle} = 120f
+\begin{DoxyCompactList}\small\item\em Spot angle used for the Gnomonic projection of the IES. This parameter will be responsible of the pixel footprint in the 2D Texture \href{https://en.wikipedia.org/wiki/Gnomonic_projection}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Gnomonic\+\_\+projection}}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_ae2df37f46a23f624e08c4e381c37fa6a}\label{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_ae2df37f46a23f624e08c4e381c37fa6a} 
+\mbox{\hyperlink{namespace_unity_editor_1_1_rendering_ac5b1b533ff4ed0727a5b56976b750520}{IESResolution}} {\bfseries ies\+Size} = \mbox{\hyperlink{namespace_unity_editor_1_1_rendering_ac5b1b533ff4ed0727a5b56976b750520ac9dc7287e6accbe804c1e2816165215b}{IESResolution.\+IESResolution128}}
+\begin{DoxyCompactList}\small\item\em IES Size of the texture used (same parameter for Point and Spot) \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a8b020f66a2828d9d78cc35582d2743d0}\label{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a8b020f66a2828d9d78cc35582d2743d0} 
+bool {\bfseries Apply\+Light\+Attenuation} = true
+\begin{DoxyCompactList}\small\item\em Enable attenuation used for Spot recommanded to be true, particulary with large angle of "{}\+Spot\+Angle"{} (cf. Gnomonic Projection) \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a7abef2747aa08e3775e38132be640249}\label{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a7abef2747aa08e3775e38132be640249} 
+bool {\bfseries Use\+IESMaximum\+Intensity} = true
+\begin{DoxyCompactList}\small\item\em Enable max intensity for the texture generation. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a8bca2e8518cb6dac4c305face82f16c8}\label{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a8bca2e8518cb6dac4c305face82f16c8} 
+Texture\+Importer\+Compression {\bfseries Cookie\+Compression} = Texture\+Importer\+Compression.\+Compressed\+HQ
+\begin{DoxyCompactList}\small\item\em Compression used to generate the texture (Compressed\+HQ by default (BC7)) \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a929bf5eb891f567cfdf75e654151aebb}\label{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a929bf5eb891f567cfdf75e654151aebb} 
+float {\bfseries Light\+Aim\+Axis\+Rotation} = -\/90f
+\begin{DoxyCompactList}\small\item\em Internally we use 2D projection, we have to choose one axis to project the IES propertly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Common class to store metadata of an IES file. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a4961200b60799b23eb175005de87d9d0}\index{UnityEditor.Rendering.IESMetaData@{UnityEditor.Rendering.IESMetaData}!GetHashCode@{GetHashCode}}
+\index{GetHashCode@{GetHashCode}!UnityEditor.Rendering.IESMetaData@{UnityEditor.Rendering.IESMetaData}}
+\doxysubsubsection{\texorpdfstring{GetHashCode()}{GetHashCode()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_i_e_s_meta_data_a4961200b60799b23eb175005de87d9d0} 
+override int Unity\+Editor.\+Rendering.\+IESMeta\+Data.\+Get\+Hash\+Code (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get Hash describing an unique IES. 
+
+\begin{DoxyReturn}{Returns}
+The Hash of the IES Object
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Editor/\+Lighting/IESObject.\+cs\end{DoxyCompactItemize}

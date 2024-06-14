@@ -1,0 +1,151 @@
+\chapter{Rendering Layers}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doa16a973ec50f62e886de4560e38cbeea}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doa16a973ec50f62e886de4560e38cbeea}\index{Rendering Layers@{Rendering Layers}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doa16a973ec50f62e886de4560e38cbeea_autotoc_md2146}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doa16a973ec50f62e886de4560e38cbeea_autotoc_md2146}%
+ The Rendering Layers feature lets you configure certain Lights to affect only specific Game\+Objects.
+
+For example, in the following illustration, Light {\ttfamily A} affects Sphere {\ttfamily D}, but not Sphere {\ttfamily C}. Light {\ttfamily B} affects Sphere {\ttfamily C}, but not Sphere {\ttfamily D}.
+
+
+
+To read how to implement this example, see section How to use Rendering Layers.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doa16a973ec50f62e886de4560e38cbeea_autotoc_md2147}{}\doxysection{\texorpdfstring{\label{_enable}%
+Enable Rendering Layers for Lights}{\label{_enable}%
+Enable Rendering Layers for Lights}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doa16a973ec50f62e886de4560e38cbeea_autotoc_md2147}
+To enable Rendering Layers for Lights in your project\+:
+
+
+\begin{DoxyEnumerate}
+\item In the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do6a4fd81cefe986341b093c28ca9c1f30}{URP Asset}{0}, in the {\bfseries{Lighting}} section, click the vertical ellipsis icon (\&vellip;) and select {\bfseries{Show Additional Properties}}
+
+
+\item In the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do6a4fd81cefe986341b093c28ca9c1f30}{URP Asset}{0}, in the {\bfseries{Lighting}} section, select {\bfseries{Use Rendering Layers}}.
+
+~\newline
+{\itshape URP Asset \texorpdfstring{$>$}{>} Lighting \texorpdfstring{$>$}{>} Use Rendering Layers}
+\end{DoxyEnumerate}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doa16a973ec50f62e886de4560e38cbeea_autotoc_md2148}{}\doxysection{\texorpdfstring{\label{_enable-decals}%
+Enable Rendering Layers for Decals}{\label{_enable-decals}%
+Enable Rendering Layers for Decals}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doa16a973ec50f62e886de4560e38cbeea_autotoc_md2148}
+To enable Rendering Layers for decals in your project\+:
+
+
+\begin{DoxyEnumerate}
+\item In the \href{../renderer-feature-decal.md\#decal-renderer-feature-properties}{\texttt{ Decal Renderer Feature}}, enable {\bfseries{Use Rendering Layers}}.
+
+~\newline
+{\itshape Decal Renderer Feature, Inspector view.}
+\end{DoxyEnumerate}
+
+When you enable Rendering Layers for Decals, \doxylink{namespace_unity}{Unity} shows the {\bfseries{Rendering Layers}} property on each Decal Projector\+:
+
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doa16a973ec50f62e886de4560e38cbeea_autotoc_md2149}{}\doxysection{\texorpdfstring{How to edit Rendering Layer names}{How to edit Rendering Layer names}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doa16a973ec50f62e886de4560e38cbeea_autotoc_md2149}
+To edit the names of Rendering Layers\+:
+
+
+\begin{DoxyEnumerate}
+\item Go to {\bfseries{Project Settings}} \texorpdfstring{$>$}{>} {\bfseries{\doxylink{namespace_graphics}{Graphics}}} \texorpdfstring{$>$}{>} {\bfseries{URP Global Settings}}.
+\item Edit the Rendering Layer names in the {\bfseries{Rendering Layers (3D)}} section.
+
+~\newline
+{\itshape \doxylink{namespace_graphics}{Graphics} \texorpdfstring{$>$}{>} URP Global Settings \texorpdfstring{$>$}{>} Rendering Layers (3D)}
+\end{DoxyEnumerate}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doa16a973ec50f62e886de4560e38cbeea_autotoc_md2150}{}\doxysection{\texorpdfstring{\label{_how-to-rendering-layers}%
+How to use Rendering Layers with Lights}{\label{_how-to-rendering-layers}%
+How to use Rendering Layers with Lights}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doa16a973ec50f62e886de4560e38cbeea_autotoc_md2150}
+This section describes how to configure the following application example\+:
+
+
+\begin{DoxyItemize}
+\item The Scene contains two Point Lights (marked {\ttfamily A} and {\ttfamily B} in the illustration) and two Sphere Game\+Objects ({\ttfamily C} and {\ttfamily D} in the illustration).
+\item Light {\ttfamily A} affects Sphere {\ttfamily D}, but not Sphere {\ttfamily C}. Light {\ttfamily B} affects Sphere {\ttfamily C}, but not Sphere {\ttfamily D}.
+\end{DoxyItemize}
+
+The following illustration shows the example\+:
+
+~\newline
+{\itshape Light {\ttfamily A} affects Sphere {\ttfamily D}, but not Sphere {\ttfamily C}. Light {\ttfamily B} affects Sphere {\ttfamily C}, but not Sphere {\ttfamily D}.}
+
+To implement the example\+:
+
+
+\begin{DoxyEnumerate}
+\item Enable Rendering Layers in your project.
+\item Create two Point Lights (call them {\ttfamily A}, and {\ttfamily B}) and two Spheres (call them {\ttfamily C}, and {\ttfamily D}). Position the objects so that both Spheres are within the emission range of Lights.
+\item Go to {\bfseries{Project Settings \texorpdfstring{$>$}{>} \doxylink{namespace_graphics}{Graphics} \texorpdfstring{$>$}{>} URP Global Settings}}. Rename Rendering Layer 1 to {\ttfamily Red}, and Layer 2 to {\ttfamily Green}.
+
+
+\item Select Light {\ttfamily A}, change its color to green. Select Light {\ttfamily B}, change its color to red. With this setup, both Lights affect both Spheres.
+
+
+\item Make the following settings on Lights and Spheres\+:
+
+Light {\ttfamily A}\+: in the property {\bfseries{Light \texorpdfstring{$>$}{>} General \texorpdfstring{$>$}{>} Rendering Layers}}, clear all options, and select {\ttfamily Green}.
+
+Light {\ttfamily B}\+: in the property {\bfseries{Light \texorpdfstring{$>$}{>} General \texorpdfstring{$>$}{>} Rendering Layers}}, clear all options, and select {\ttfamily Red}.
+
+Sphere {\ttfamily C}\+: in the property {\bfseries{Mesh Renderer \texorpdfstring{$>$}{>} Additional Settings \texorpdfstring{$>$}{>} Rendering Layer Mask}}, select all options, clear {\ttfamily Green}.
+
+Sphere {\ttfamily D}\+: in the property {\bfseries{Mesh Renderer \texorpdfstring{$>$}{>} Additional Settings \texorpdfstring{$>$}{>} Rendering Layer Mask}}, select all options, clear {\ttfamily Red}.
+
+Now Point Light {\ttfamily A} affects Sphere {\ttfamily D}, but not Sphere {\ttfamily C}. Point Light {\ttfamily B} affects Sphere {\ttfamily C}, but not Sphere {\ttfamily D}.
+
+
+\end{DoxyEnumerate}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doa16a973ec50f62e886de4560e38cbeea_autotoc_md2151}{}\doxysection{\texorpdfstring{\label{_shadow-layers}%
+How to use Custom Shadow Layers}{\label{_shadow-layers}%
+How to use Custom Shadow Layers}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doa16a973ec50f62e886de4560e38cbeea_autotoc_md2151}
+In the illustration above, Light {\ttfamily A} does not affect Sphere {\ttfamily C}, and the Sphere does not cast shadow from Light {\ttfamily A}.
+
+The {\bfseries{Custom Shadow Layers}} property lets you configure the Scene so that Sphere {\ttfamily C} casts the shadow from Light {\ttfamily A}.
+
+
+\begin{DoxyEnumerate}
+\item Select Light {\ttfamily A}.
+\item In {\bfseries{Light \texorpdfstring{$>$}{>} Shadows}}, select the {\bfseries{Custom Shadow Layers}} property. \doxylink{namespace_unity}{Unity} shows the {\bfseries{Layer}} property.
+\item In the {\bfseries{Layer}} property, select the Rendering Layer that Sphere C belongs to.
+\end{DoxyEnumerate}
+
+Now Light {\ttfamily A} does not affect Sphere {\ttfamily C}, but Sphere {\ttfamily C} casts shadow from Light {\ttfamily A}.
+
+The following illustrations show the Scene with the {\bfseries{Custom Shadow Layers}} property off and on.
+
+
+
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doa16a973ec50f62e886de4560e38cbeea_autotoc_md2152}{}\doxysection{\texorpdfstring{\label{_how-to-rendering-layers-decals}%
+How to use Rendering Layers with Decals}{\label{_how-to-rendering-layers-decals}%
+How to use Rendering Layers with Decals}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doa16a973ec50f62e886de4560e38cbeea_autotoc_md2152}
+This section describes how to configure the following application example\+:
+
+
+\begin{DoxyItemize}
+\item The Scene contains a Decal Projector.
+\item The Decal Projector projects a decal on the wall and the ground, but not on the paint bucket.
+\end{DoxyItemize}
+
+The following illustration shows the example\+:
+
+~\newline
+{\itshape In image {\ttfamily 1}, the paint bucket has the {\ttfamily Receive decals} layer selected. In image {\ttfamily 2} it does not, so the Decal Projector does not project on the bucket.}
+
+To implement the example\+:
+
+
+\begin{DoxyEnumerate}
+\item Enable Rendering Layers for Decals in your project.
+\item \href{../renderer-feature-decal.md\#how-to-use-the-feature}{\texttt{ Create a Decal Projector}} in the Scene.
+\item Go to {\bfseries{Project Settings \texorpdfstring{$>$}{>} \doxylink{namespace_graphics}{Graphics} \texorpdfstring{$>$}{>} URP Global Settings}}. Add a Rendering Layer called {\ttfamily Receive decals}.
+
+
+\item Select the Decal Projector. In the Rendering Layers property, select {\ttfamily Receive decals}.
+
+
+\item Select the paint bucket Game\+Object. In the {\bfseries{Rendering Layer Mask}} field, clear the {\ttfamily Receive decals} layer. Now the Decal Projector does not affect this Game\+Object.
+\end{DoxyEnumerate}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doa16a973ec50f62e886de4560e38cbeea_autotoc_md2153}{}\doxysection{\texorpdfstring{\label{_performance}%
+Performance}{\label{_performance}%
+Performance}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doa16a973ec50f62e886de4560e38cbeea_autotoc_md2153}
+This section contains information related to the impact of Rendering Layers on performance.
+
+
+\begin{DoxyItemize}
+\item Keep the Rendering Layer count as small as possible. Avoid creating Rendering Layers that you don\textquotesingle{}t use in the project.
+\item When using Rendering Layers for decals, increasing the layer count increases the required memory bandwidth and decreases the performance.
+\item When using Rendering Layers only for Lights in the Forward Rendering Path, the performance impact is insignificant.
+\item Performance impact grows more significantly when the Rendering Layer count exceeds a multiple of 8. For example\+: increasing the layer count from 8 to 9 layers has a bigger relative impact than increasing the layer count from 9 to 10 layers. 
+\end{DoxyItemize}

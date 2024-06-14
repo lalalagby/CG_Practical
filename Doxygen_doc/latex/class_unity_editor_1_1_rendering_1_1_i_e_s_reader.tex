@@ -1,0 +1,56 @@
+\doxysection{Unity\+Editor.\+Rendering.\+IESReader Class Reference}
+\hypertarget{class_unity_editor_1_1_rendering_1_1_i_e_s_reader}{}\label{class_unity_editor_1_1_rendering_1_1_i_e_s_reader}\index{UnityEditor.Rendering.IESReader@{UnityEditor.Rendering.IESReader}}
+
+
+Class to Parse IES File.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_i_e_s_reader_a45df9b846fc7471cff4ab2deb3c3fed0}{Read\+File}} (string ies\+File\+Path)
+\begin{DoxyCompactList}\small\item\em Main function to read the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_i_e_s_reader_ad9838ed7bfaefad57afc9a578237c128}\label{class_unity_editor_1_1_rendering_1_1_i_e_s_reader_ad9838ed7bfaefad57afc9a578237c128} 
+string {\bfseries File\+Format\+Version}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Version of the IES File. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_i_e_s_reader_a5780399eb46f2bde6b19f001f7997576}\label{class_unity_editor_1_1_rendering_1_1_i_e_s_reader_a5780399eb46f2bde6b19f001f7997576} 
+float {\bfseries Total\+Lumens}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Total light intensity (in Lumens) stored on the file, usage of it is optional (through the prefab subasset inside the \doxylink{class_unity_editor_1_1_rendering_1_1_i_e_s_object}{IESObject}) \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_i_e_s_reader_af8e663110e22bd5281b5d135312a8696}\label{class_unity_editor_1_1_rendering_1_1_i_e_s_reader_af8e663110e22bd5281b5d135312a8696} 
+float {\bfseries Max\+Candelas}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Maximum of Candela in the IES File. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_i_e_s_reader_a351f87d61c2812735e601e3ca125a168}\label{class_unity_editor_1_1_rendering_1_1_i_e_s_reader_a351f87d61c2812735e601e3ca125a168} 
+int {\bfseries Photometric\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of Photometric light in the IES file, varying per IES-\/\+Type and version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class to Parse IES File. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_i_e_s_reader_a45df9b846fc7471cff4ab2deb3c3fed0}\index{UnityEditor.Rendering.IESReader@{UnityEditor.Rendering.IESReader}!ReadFile@{ReadFile}}
+\index{ReadFile@{ReadFile}!UnityEditor.Rendering.IESReader@{UnityEditor.Rendering.IESReader}}
+\doxysubsubsection{\texorpdfstring{ReadFile()}{ReadFile()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_i_e_s_reader_a45df9b846fc7471cff4ab2deb3c3fed0} 
+string Unity\+Editor.\+Rendering.\+IESReader.\+Read\+File (\begin{DoxyParamCaption}\item[{string}]{ies\+File\+Path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Main function to read the file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ies\+File\+Path} & The path to the IES File on disk.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return the error during the import otherwise null if no error
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Editor/\+Lighting/IESReader.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,125 @@
+\doxysection{Cinemachine.\+Clipper\+Lib.\+Clipper Class Reference}
+\hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper}{}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper}\index{Cinemachine.ClipperLib.Clipper@{Cinemachine.ClipperLib.Clipper}}
+Inheritance diagram for Cinemachine.\+Clipper\+Lib.\+Clipper\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cinemachine_1_1_clipper_lib_1_1_clipper}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper_a904d4ff4a3daefc6ce31892b06ed8ba3}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper_a904d4ff4a3daefc6ce31892b06ed8ba3} 
+{\bfseries Clipper} (int Init\+Options=0)
+\item 
+\Hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper_a7eac4a2d2a5213ccfb827504c90a8e97}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper_a7eac4a2d2a5213ccfb827504c90a8e97} 
+bool {\bfseries Execute} (Clip\+Type clip\+Type, Paths solution, Poly\+Fill\+Type Fill\+Type=Poly\+Fill\+Type.\+pft\+Even\+Odd)
+\item 
+\Hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper_a9c5ecdd750858496bb868c961365b82a}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper_a9c5ecdd750858496bb868c961365b82a} 
+bool {\bfseries Execute} (Clip\+Type clip\+Type, \mbox{\hyperlink{class_cinemachine_1_1_clipper_lib_1_1_poly_tree}{Poly\+Tree}} polytree, Poly\+Fill\+Type Fill\+Type=Poly\+Fill\+Type.\+pft\+Even\+Odd)
+\item 
+\Hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper_a2baec92d22ba44985ebdf1d8ebb31a92}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper_a2baec92d22ba44985ebdf1d8ebb31a92} 
+bool {\bfseries Execute} (Clip\+Type clip\+Type, Paths solution, Poly\+Fill\+Type subj\+Fill\+Type, Poly\+Fill\+Type clip\+Fill\+Type)
+\item 
+\Hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper_a52d74eee20666f7e47c1bd368ab81455}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper_a52d74eee20666f7e47c1bd368ab81455} 
+bool {\bfseries Execute} (Clip\+Type clip\+Type, \mbox{\hyperlink{class_cinemachine_1_1_clipper_lib_1_1_poly_tree}{Poly\+Tree}} polytree, Poly\+Fill\+Type subj\+Fill\+Type, Poly\+Fill\+Type clip\+Fill\+Type)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_cinemachine_1_1_clipper_lib_1_1_clipper_base}{Cinemachine.\+Clipper\+Lib.\+Clipper\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Swap} (ref c\+Int val1, ref c\+Int val2)
+\item 
+virtual void {\bfseries Clear} ()
+\item 
+bool {\bfseries Add\+Path} (Path pg, Poly\+Type poly\+Type, bool Closed)
+\item 
+bool {\bfseries Add\+Paths} (Paths ppg, Poly\+Type poly\+Type, bool closed)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper_a6042dd6533f50efe4a5673aa16076746}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper_a6042dd6533f50efe4a5673aa16076746} 
+static void {\bfseries Reverse\+Paths} (Paths polys)
+\item 
+\Hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper_a07122e8e7de4794a027fb3c850ec2e1e}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper_a07122e8e7de4794a027fb3c850ec2e1e} 
+static bool {\bfseries Orientation} (Path poly)
+\item 
+\Hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper_a7fd0a0fe5221a732212f086129ef5598}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper_a7fd0a0fe5221a732212f086129ef5598} 
+static int {\bfseries Point\+In\+Polygon} (\mbox{\hyperlink{struct_cinemachine_1_1_clipper_lib_1_1_int_point}{Int\+Point}} pt, Path path)
+\item 
+\Hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper_a2c543cc784fe117a4a5a737f3b7ea449}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper_a2c543cc784fe117a4a5a737f3b7ea449} 
+static double {\bfseries Area} (Path poly)
+\item 
+\Hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper_a697e2cde8ac6de3ca1cc7695e4576ba2}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper_a697e2cde8ac6de3ca1cc7695e4576ba2} 
+static Paths {\bfseries Simplify\+Polygon} (Path poly, Poly\+Fill\+Type fill\+Type=Poly\+Fill\+Type.\+pft\+Even\+Odd)
+\item 
+\Hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper_a37c025f7544ac1702bba18894ef996d8}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper_a37c025f7544ac1702bba18894ef996d8} 
+static Paths {\bfseries Simplify\+Polygons} (Paths polys, Poly\+Fill\+Type fill\+Type=Poly\+Fill\+Type.\+pft\+Even\+Odd)
+\item 
+\Hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper_a28592fd7a01bca7f1cc5037a49d9214b}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper_a28592fd7a01bca7f1cc5037a49d9214b} 
+static Path {\bfseries Clean\+Polygon} (Path path, double distance=1.\+415)
+\item 
+\Hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper_a21a5ebdd9eec08fc2f2447c1135412cd}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper_a21a5ebdd9eec08fc2f2447c1135412cd} 
+static Paths {\bfseries Clean\+Polygons} (Paths polys, double distance=1.\+415)
+\item 
+\Hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper_a77424068bee9062dbd912810178fc564}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper_a77424068bee9062dbd912810178fc564} 
+static Paths {\bfseries Minkowski\+Sum} (Path pattern, Path path, bool path\+Is\+Closed)
+\item 
+\Hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper_ab45ea4c8f81ec13c269ddfce5c3da7bc}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper_ab45ea4c8f81ec13c269ddfce5c3da7bc} 
+static Paths {\bfseries Minkowski\+Sum} (Path pattern, Paths paths, bool path\+Is\+Closed)
+\item 
+\Hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper_afe40449e3d800b7111ab9f2b3b9f9abb}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper_afe40449e3d800b7111ab9f2b3b9f9abb} 
+static Paths {\bfseries Minkowski\+Diff} (Path poly1, Path poly2)
+\item 
+\Hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper_a35e7378f8245f16455a9d0b335096cc7}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper_a35e7378f8245f16455a9d0b335096cc7} 
+static Paths {\bfseries Poly\+Tree\+To\+Paths} (\mbox{\hyperlink{class_cinemachine_1_1_clipper_lib_1_1_poly_tree}{Poly\+Tree}} polytree)
+\item 
+\Hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper_a2cbf0a40d9c214a22eafd3fbff137a84}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper_a2cbf0a40d9c214a22eafd3fbff137a84} 
+static Paths {\bfseries Open\+Paths\+From\+Poly\+Tree} (\mbox{\hyperlink{class_cinemachine_1_1_clipper_lib_1_1_poly_tree}{Poly\+Tree}} polytree)
+\item 
+\Hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper_ae9852e67d1a093317a30382f07d9bc4d}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper_ae9852e67d1a093317a30382f07d9bc4d} 
+static Paths {\bfseries Closed\+Paths\+From\+Poly\+Tree} (\mbox{\hyperlink{class_cinemachine_1_1_clipper_lib_1_1_poly_tree}{Poly\+Tree}} polytree)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_cinemachine_1_1_clipper_lib_1_1_clipper_base}{Cinemachine.\+Clipper\+Lib.\+Clipper\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_cinemachine_1_1_clipper_lib_1_1_int_rect}{Int\+Rect}} {\bfseries Get\+Bounds} (Paths paths)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper_ad5275b7f9d3fbbf5d4712a1f484531b6}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper_ad5275b7f9d3fbbf5d4712a1f484531b6} 
+const int {\bfseries io\+Reverse\+Solution} = 1
+\item 
+\Hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper_a93788ebc55f867f8ecb4d5702fd9fbc9}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper_a93788ebc55f867f8ecb4d5702fd9fbc9} 
+const int {\bfseries io\+Strictly\+Simple} = 2
+\item 
+\Hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper_a10b2be61f6e0a258d320a811f58db566}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper_a10b2be61f6e0a258d320a811f58db566} 
+const int {\bfseries io\+Preserve\+Collinear} = 4
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_cinemachine_1_1_clipper_lib_1_1_clipper_base}{Cinemachine.\+Clipper\+Lib.\+Clipper\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+const c\+Int {\bfseries lo\+Range} = 0x3\+FFFFFFF
+\item 
+const c\+Int {\bfseries hi\+Range} = 0x3\+FFFFFFFFFFFFFFFL
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper_a514c58d56d35322fc7c8e4896836786f}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper_a514c58d56d35322fc7c8e4896836786f} 
+bool {\bfseries Reverse\+Solution}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_cinemachine_1_1_clipper_lib_1_1_clipper_ad21af70882b9ae7585e3a33795b04006}\label{class_cinemachine_1_1_clipper_lib_1_1_clipper_ad21af70882b9ae7585e3a33795b04006} 
+bool {\bfseries Strictly\+Simple}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_cinemachine_1_1_clipper_lib_1_1_clipper_base}{Cinemachine.\+Clipper\+Lib.\+Clipper\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries Preserve\+Collinear}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Third\+Party/clipper.\+cs\end{DoxyCompactItemize}

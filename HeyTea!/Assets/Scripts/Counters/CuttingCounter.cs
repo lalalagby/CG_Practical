@@ -30,6 +30,7 @@ public class CuttingCounter : BaseCounter,IHasProgress
     public override void Interact(Player player) {
         if (!HasHeyTeaObject()) {
             //no object here
+            Debug.Log("counter has no object");
             if (player.HasHeyTeaObject()) {
                 //player carry something that can be cut
                 if (HasRecipeWithInput(player.GetHeyTeaObject().GetHeyTeaObjectSO())) {
@@ -40,7 +41,12 @@ public class CuttingCounter : BaseCounter,IHasProgress
                     OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { isProcessing = false, progressNormalized = (float)cuttingProgress / GetCuttingRecipeSOWithInput(GetHeyTeaObject().GetHeyTeaObjectSO()).cuttingProgressMax }); ;
                 }
             }
-        } else {
+            else
+            {
+                Debug.Log("player has no object.");
+            }
+        }
+        else {
             //has object here
             if (!player.HasHeyTeaObject()) {
                 //player not carry something;
@@ -49,6 +55,7 @@ public class CuttingCounter : BaseCounter,IHasProgress
                 if (player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct cupObject)) {
                     if (cupObject.TryAddIngredient(GetHeyTeaObject().GetHeyTeaObjectSO(), (IKichenwareObejct.MilkTeaMaterialType)GetHeyTeaObject().GetHeyTeaObjectSO().materialType)) {
                         GetHeyTeaObject().DestroySelf();
+                        return;
                     }
                 }
             }

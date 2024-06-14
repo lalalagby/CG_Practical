@@ -1,0 +1,1153 @@
+\doxysection{Unity.\+Mathematics.\+Random Struct Reference}
+\hypertarget{struct_unity_1_1_mathematics_1_1_random}{}\label{struct_unity_1_1_mathematics_1_1_random}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+
+
+\doxylink{struct_unity_1_1_mathematics_1_1_random}{Random} Number Generator based on xorshift. Designed for minimal state (32bits) to be easily embeddable into components. \doxylink{namespace_core}{Core} functionality is integer multiplication free to improve vectorization on less capable SIMD instruction sets.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_ac6c0a467743030a228ecbd4744768482}{Random}} (uint seed)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{struct_unity_1_1_mathematics_1_1_random}{Random} instance with a given seed value. The seed must be non-\/zero. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_acb1cf974445498cb73c9606b174cd72c}{Init\+State}} (uint seed=0x6\+E624\+EB7u)
+\begin{DoxyCompactList}\small\item\em Initialized the state of the \doxylink{struct_unity_1_1_mathematics_1_1_random}{Random} instance with a given seed value. The seed must be non-\/zero. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a93286ab53d7c9180c0fefb78e33fd06f}{Next\+Bool}} ()
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random bool value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1bool2}{bool2}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a29e5a926fd44a3ba4707930d18b1dd0c}{Next\+Bool2}} ()
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1bool2}{bool2} value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1bool3}{bool3}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_ae338376f88c0d014db005c22ebe6fa2a}{Next\+Bool3}} ()
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1bool3}{bool3} value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1bool4}{bool4}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a977294e544f9ade0497b2641c9162297}{Next\+Bool4}} ()
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1bool4}{bool4} value. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a00783b4889ca22f8c1dbce7ec71e4671}{Next\+Int}} ()
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random int value in the interval \mbox{[}-\/2147483647, 2147483647\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int2}{int2}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a2b3207ffdc1c05ea5c7050f8b07a4245}{Next\+Int2}} ()
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int2}{int2} value with all components in the interval \mbox{[}-\/2147483647, 2147483647\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int3}{int3}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_ab03bd1c3b77305a21e2576515e81d7e1}{Next\+Int3}} ()
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int3}{int3} value with all components in the interval \mbox{[}-\/2147483647, 2147483647\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int4}{int4}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a4d5a6eac154eeb9e7fd302187e8d7832}{Next\+Int4}} ()
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int4}{int4} value with all components in the interval \mbox{[}-\/2147483647, 2147483647\mbox{]}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_adb97fe73a331c4d826d78940b86cb44f}{Next\+Int}} (int max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random int value in the interval \mbox{[}0, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int2}{int2}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a59b1a22c81c201bb927e9a1c01015227}{Next\+Int2}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int2}{int2}} max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int2}{int2} value with all components in the interval \mbox{[}0, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int3}{int3}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a8e9afd4879424f3478786e37cc7c5ae0}{Next\+Int3}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int3}{int3}} max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int3}{int3} value with all components in the interval \mbox{[}0, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int4}{int4}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a6774a1415c67be5978a0289dfa2b61fa}{Next\+Int4}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int4}{int4}} max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int4}{int4} value with all components in the interval \mbox{[}0, max). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a242ad6826750d3b8ef13133da4abed99}{Next\+Int}} (int min, int max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random int value in the interval \mbox{[}min, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int2}{int2}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a5951c7f62da79371c7110ef0d5cbc6b7}{Next\+Int2}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int2}{int2}} min, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int2}{int2}} max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int2}{int2} value with all components in the interval \mbox{[}min, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int3}{int3}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_ad77f37ee662b5abcf888a3ae399782d9}{Next\+Int3}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int3}{int3}} min, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int3}{int3}} max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int3}{int3} value with all components in the interval \mbox{[}min, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int4}{int4}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a0ee91f2d5af75fedbe96f13389dba926}{Next\+Int4}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int4}{int4}} min, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int4}{int4}} max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int4}{int4} value with all components in the interval \mbox{[}min, max). \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a3ee7ea5117dff0f1ac7b65c845852a63}{Next\+UInt}} ()
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random uint value in the interval \mbox{[}0, 4294967294\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint2}{uint2}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_afd4304ca6a539c474a4c4ac4d2f68898}{Next\+UInt2}} ()
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint2}{uint2} value with all components in the interval \mbox{[}0, 4294967294\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint3}{uint3}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_ab993abd81f4d7eb02404181dea1db146}{Next\+UInt3}} ()
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint3}{uint3} value with all components in the interval \mbox{[}0, 4294967294\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint4}{uint4}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a01f3b865367d5b844e97ce8c2c05c448}{Next\+UInt4}} ()
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint4}{uint4} value with all components in the interval \mbox{[}0, 4294967294\mbox{]}. \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_aa381e51b468223b31669b38834e7c8e5}{Next\+UInt}} (uint max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random uint value in the interval \mbox{[}0, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint2}{uint2}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a78cce2628cf90e21eec666bbbcfc323b}{Next\+UInt2}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint2}{uint2}} max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint2}{uint2} value with all components in the interval \mbox{[}0, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint3}{uint3}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a9e35fa7fe38197d7f44d8d7f73e83e06}{Next\+UInt3}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint3}{uint3}} max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint3}{uint3} value with all components in the interval \mbox{[}0, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint4}{uint4}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a48fd4af05d6589bf07c3a781a8f6cdde}{Next\+UInt4}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint4}{uint4}} max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint4}{uint4} value with all components in the interval \mbox{[}0, max). \end{DoxyCompactList}\item 
+uint \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_af0f0ffc4b0497af9824006f6014151d2}{Next\+UInt}} (uint min, uint max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random uint value in the interval \mbox{[}min, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint2}{uint2}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a17d485292b518f5ec0cf673a56bad9d0}{Next\+UInt2}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint2}{uint2}} min, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint2}{uint2}} max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint2}{uint2} value with all components in the interval \mbox{[}min, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint3}{uint3}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a12788d04d2bf8494fe901097306d9eba}{Next\+UInt3}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint3}{uint3}} min, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint3}{uint3}} max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint3}{uint3} value with all components in the interval \mbox{[}min, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint4}{uint4}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a6840a05a2ebb2e699df19ea631b08246}{Next\+UInt4}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint4}{uint4}} min, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint4}{uint4}} max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint4}{uint4} value with all components in the interval \mbox{[}min, max). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a2d7d1fa3307e842679dd03728657d74c}{Next\+Float}} ()
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random float value in the interval \mbox{[}0, 1). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_ac86823cd810bbfd7185852db66c393dd}{Next\+Float2}} ()
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float2}{float2} value with all components in the interval \mbox{[}0, 1). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_aac0e3818a684aa972974d6bd936312da}{Next\+Float3}} ()
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float3}{float3} value with all components in the interval \mbox{[}0, 1). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float4}{float4}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a34d62b02431d5838274e35dc9f9aaa42}{Next\+Float4}} ()
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float4}{float4} value with all components in the interval \mbox{[}0, 1). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_ad7c55885e4828a211a9d9f9a40596241}{Next\+Float}} (float max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random float value in the interval \mbox{[}0, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_ab4ba4396ee14f9ac05c3197448a57ffd}{Next\+Float2}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float2}{float2} value with all components in the interval \mbox{[}0, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a49b0d1c4d8af336518587fffbe50e51d}{Next\+Float3}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float3}{float3} value with all components in the interval \mbox{[}0, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float4}{float4}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a5923dab2aace81fb6651b798c4e6e442}{Next\+Float4}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float4}{float4}} max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float4}{float4} value with all components in the interval \mbox{[}0, max). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a6f7918c5425e6c08a313d71240741d8c}{Next\+Float}} (float min, float max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random float value in the interval \mbox{[}min, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_ab717acf84ee93002b337b2c57aad3364}{Next\+Float2}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} min, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float2}{float2} value with all components in the interval \mbox{[}min, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_ad6bd5b7056868d4b15bc71b6f6825a25}{Next\+Float3}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} min, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float3}{float3} value with all components in the interval \mbox{[}min, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float4}{float4}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_af7e15133c61887118bf273370b1622ff}{Next\+Float4}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float4}{float4}} min, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float4}{float4}} max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float4}{float4} value with all components in the interval \mbox{[}min, max). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_ac2487409133b6bbe0384a6f45f9c6ad5}{Next\+Double}} ()
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random double value in the interval \mbox{[}0, 1). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double2}{double2}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_afa8bdc2d8b5e648a5b467aa7bc8aefb7}{Next\+Double2}} ()
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double2}{double2} value with all components in the interval \mbox{[}0, 1). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double3}{double3}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a6100e807ab75d63f1f95133c2878b6df}{Next\+Double3}} ()
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double3}{double3} value with all components in the interval \mbox{[}0, 1). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double4}{double4}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_ab7816ba973edc17bc7efeabb505e12fd}{Next\+Double4}} ()
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double4}{double4} value with all components in the interval \mbox{[}0, 1). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a6ddafd698e8b50bf99c0b38f7195d268}{Next\+Double}} (double max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random double value in the interval \mbox{[}0, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double2}{double2}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a8b25186a346071055fa513735130a7bb}{Next\+Double2}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double2}{double2}} max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double2}{double2} value with all components in the interval \mbox{[}0, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double3}{double3}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a41b6c9f8ce43c79322df151dd18dc3c2}{Next\+Double3}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double3}{double3}} max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double3}{double3} value with all components in the interval \mbox{[}0, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double4}{double4}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a4f7fa1162dc1b5956f2b4ede705fcb0f}{Next\+Double4}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double4}{double4}} max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double4}{double4} value with all components in the interval \mbox{[}0, max). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a89a568c4494545888302349ee8d6713e}{Next\+Double}} (double min, double max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random double value in the interval \mbox{[}min, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double2}{double2}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_ad068e24aab760007f73fac3b2ae6833e}{Next\+Double2}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double2}{double2}} min, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double2}{double2}} max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double2}{double2} value with all components in the interval \mbox{[}min, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double3}{double3}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_aa5fdae6b70313e7531e980e75444e777}{Next\+Double3}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double3}{double3}} min, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double3}{double3}} max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double3}{double3} value with all components in the interval \mbox{[}min, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double4}{double4}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a3c8333f48f2693778a02bb6cac507086}{Next\+Double4}} (\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double4}{double4}} min, \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double4}{double4}} max)
+\begin{DoxyCompactList}\small\item\em Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double4}{double4} value with all components in the interval \mbox{[}min, max). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a8c511a155d4bbeb9403279e866d1bbb0}{Next\+Float2\+Direction}} ()
+\begin{DoxyCompactList}\small\item\em Returns a unit length \doxylink{struct_unity_1_1_mathematics_1_1float2}{float2} vector representing a uniformly random 2D direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double2}{double2}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a9cfabc4ca28338cbb3af40b0c1902b4e}{Next\+Double2\+Direction}} ()
+\begin{DoxyCompactList}\small\item\em Returns a unit length \doxylink{struct_unity_1_1_mathematics_1_1double2}{double2} vector representing a uniformly random 2D direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_ab79e3c0f1490e174195e458290c5e54c}{Next\+Float3\+Direction}} ()
+\begin{DoxyCompactList}\small\item\em Returns a unit length \doxylink{struct_unity_1_1_mathematics_1_1float3}{float3} vector representing a uniformly random 3D direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double3}{double3}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a83739a3bd48b7d82dd28584c1e01938a}{Next\+Double3\+Direction}} ()
+\begin{DoxyCompactList}\small\item\em Returns a unit length \doxylink{struct_unity_1_1_mathematics_1_1double3}{double3} vector representing a uniformly random 3D direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a0495274d58cb5ac6a6b2dd311a04ed7e}{Next\+Quaternion\+Rotation}} ()
+\begin{DoxyCompactList}\small\item\em Returns a unit length quaternion representing a uniformly 3D rotation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random}{Random}} \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random_a5e7851329784d6036ad6ff5cc4ee2571}{Create\+From\+Index}} (uint index)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{struct_unity_1_1_mathematics_1_1_random}{Random} instance with an index that gets hashed. The index must not be uint.\+Max\+Value. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a8b335f9dedbbdf9dd9acb9acc2b3c2aa}\label{struct_unity_1_1_mathematics_1_1_random_a8b335f9dedbbdf9dd9acb9acc2b3c2aa} 
+static void {\bfseries Check\+Index\+For\+Hash} (uint index)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_ae7eb93e05acb615c95b5ab1fa5481bfb}\label{struct_unity_1_1_mathematics_1_1_random_ae7eb93e05acb615c95b5ab1fa5481bfb} 
+uint {\bfseries state}
+\begin{DoxyCompactList}\small\item\em The random number generator state. It should not be zero. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{struct_unity_1_1_mathematics_1_1_random}{Random} Number Generator based on xorshift. Designed for minimal state (32bits) to be easily embeddable into components. \doxylink{namespace_core}{Core} functionality is integer multiplication free to improve vectorization on less capable SIMD instruction sets. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_ac6c0a467743030a228ecbd4744768482}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!Random@{Random}}
+\index{Random@{Random}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{Random()}{Random()}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_ac6c0a467743030a228ecbd4744768482} 
+Unity.\+Mathematics.\+Random.\+Random (\begin{DoxyParamCaption}\item[{uint}]{seed}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \doxylink{struct_unity_1_1_mathematics_1_1_random}{Random} instance with a given seed value. The seed must be non-\/zero. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & The seed to initialize with.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a5e7851329784d6036ad6ff5cc4ee2571}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!CreateFromIndex@{CreateFromIndex}}
+\index{CreateFromIndex@{CreateFromIndex}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{CreateFromIndex()}{CreateFromIndex()}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a5e7851329784d6036ad6ff5cc4ee2571} 
+static \mbox{\hyperlink{struct_unity_1_1_mathematics_1_1_random}{Random}} Unity.\+Mathematics.\+Random.\+Create\+From\+Index (\begin{DoxyParamCaption}\item[{uint}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Constructs a \doxylink{struct_unity_1_1_mathematics_1_1_random}{Random} instance with an index that gets hashed. The index must not be uint.\+Max\+Value. 
+
+Use this function when you expect to create several \doxylink{struct_unity_1_1_mathematics_1_1_random}{Random} instances in a loop. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{for}\ (uint\ i\ =\ 0;\ i\ <\ 4096;\ ++i)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Random\ rand\ =\ Random.CreateFromIndex(i);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Random\ numbers\ drawn\ from\ loop\ iteration\ j\ will\ be\ very\ different}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ from\ every\ other\ loop\ iteration\ k.}}
+\DoxyCodeLine{\ \ \ \ rand.NextUInt();}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & An index that will be hashed for \doxylink{struct_unity_1_1_mathematics_1_1_random}{Random} creation. Must not be uint.\+Max\+Value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{struct_unity_1_1_mathematics_1_1_random}{Random} created from an index.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_acb1cf974445498cb73c9606b174cd72c}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!InitState@{InitState}}
+\index{InitState@{InitState}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{InitState()}{InitState()}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_acb1cf974445498cb73c9606b174cd72c} 
+void Unity.\+Mathematics.\+Random.\+Init\+State (\begin{DoxyParamCaption}\item[{uint}]{seed}{ = {\ttfamily 0x6E624EB7u}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialized the state of the \doxylink{struct_unity_1_1_mathematics_1_1_random}{Random} instance with a given seed value. The seed must be non-\/zero. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & The seed to initialize with.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a93286ab53d7c9180c0fefb78e33fd06f}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextBool@{NextBool}}
+\index{NextBool@{NextBool}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextBool()}{NextBool()}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a93286ab53d7c9180c0fefb78e33fd06f} 
+bool Unity.\+Mathematics.\+Random.\+Next\+Bool (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random bool value. 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random boolean value.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a29e5a926fd44a3ba4707930d18b1dd0c}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextBool2@{NextBool2}}
+\index{NextBool2@{NextBool2}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextBool2()}{NextBool2()}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a29e5a926fd44a3ba4707930d18b1dd0c} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1bool2}{bool2}} Unity.\+Mathematics.\+Random.\+Next\+Bool2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1bool2}{bool2} value. 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1bool2}{bool2} value.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_ae338376f88c0d014db005c22ebe6fa2a}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextBool3@{NextBool3}}
+\index{NextBool3@{NextBool3}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextBool3()}{NextBool3()}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_ae338376f88c0d014db005c22ebe6fa2a} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1bool3}{bool3}} Unity.\+Mathematics.\+Random.\+Next\+Bool3 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1bool3}{bool3} value. 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1bool3}{bool3} value.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a977294e544f9ade0497b2641c9162297}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextBool4@{NextBool4}}
+\index{NextBool4@{NextBool4}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextBool4()}{NextBool4()}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a977294e544f9ade0497b2641c9162297} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1bool4}{bool4}} Unity.\+Mathematics.\+Random.\+Next\+Bool4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1bool4}{bool4} value. 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1bool4}{bool4} value.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_ac2487409133b6bbe0384a6f45f9c6ad5}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextDouble@{NextDouble}}
+\index{NextDouble@{NextDouble}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextDouble()}{NextDouble()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_ac2487409133b6bbe0384a6f45f9c6ad5} 
+double Unity.\+Mathematics.\+Random.\+Next\+Double (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random double value in the interval \mbox{[}0, 1). 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random double value in the range \mbox{[}0, 1).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a6ddafd698e8b50bf99c0b38f7195d268}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextDouble@{NextDouble}}
+\index{NextDouble@{NextDouble}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextDouble()}{NextDouble()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a6ddafd698e8b50bf99c0b38f7195d268} 
+double Unity.\+Mathematics.\+Random.\+Next\+Double (\begin{DoxyParamCaption}\item[{double}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random double value in the interval \mbox{[}0, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max} & The maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random double value in the range \mbox{[}0, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a89a568c4494545888302349ee8d6713e}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextDouble@{NextDouble}}
+\index{NextDouble@{NextDouble}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextDouble()}{NextDouble()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a89a568c4494545888302349ee8d6713e} 
+double Unity.\+Mathematics.\+Random.\+Next\+Double (\begin{DoxyParamCaption}\item[{double}]{min}{, }\item[{double}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random double value in the interval \mbox{[}min, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & The minimum value to generate, inclusive.\\
+\hline
+{\em max} & The maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random double value in the range \mbox{[}min, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_afa8bdc2d8b5e648a5b467aa7bc8aefb7}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextDouble2@{NextDouble2}}
+\index{NextDouble2@{NextDouble2}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextDouble2()}{NextDouble2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_afa8bdc2d8b5e648a5b467aa7bc8aefb7} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double2}{double2}} Unity.\+Mathematics.\+Random.\+Next\+Double2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double2}{double2} value with all components in the interval \mbox{[}0, 1). 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double2}{double2} value in the range \mbox{[}0, 1).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a8b25186a346071055fa513735130a7bb}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextDouble2@{NextDouble2}}
+\index{NextDouble2@{NextDouble2}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextDouble2()}{NextDouble2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a8b25186a346071055fa513735130a7bb} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double2}{double2}} Unity.\+Mathematics.\+Random.\+Next\+Double2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double2}{double2}}}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double2}{double2} value with all components in the interval \mbox{[}0, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max} & The componentwise maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double2}{double2} value in the range \mbox{[}0, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_ad068e24aab760007f73fac3b2ae6833e}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextDouble2@{NextDouble2}}
+\index{NextDouble2@{NextDouble2}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextDouble2()}{NextDouble2()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_ad068e24aab760007f73fac3b2ae6833e} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double2}{double2}} Unity.\+Mathematics.\+Random.\+Next\+Double2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double2}{double2}}}]{min}{, }\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double2}{double2}}}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double2}{double2} value with all components in the interval \mbox{[}min, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & The componentwise minimum value to generate, inclusive.\\
+\hline
+{\em max} & The componentwise maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double2}{double2} value in the range \mbox{[}min, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a9cfabc4ca28338cbb3af40b0c1902b4e}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextDouble2Direction@{NextDouble2Direction}}
+\index{NextDouble2Direction@{NextDouble2Direction}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextDouble2Direction()}{NextDouble2Direction()}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a9cfabc4ca28338cbb3af40b0c1902b4e} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double2}{double2}} Unity.\+Mathematics.\+Random.\+Next\+Double2\+Direction (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a unit length \doxylink{struct_unity_1_1_mathematics_1_1double2}{double2} vector representing a uniformly random 2D direction. 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random unit length \doxylink{struct_unity_1_1_mathematics_1_1double2}{double2} vector.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a6100e807ab75d63f1f95133c2878b6df}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextDouble3@{NextDouble3}}
+\index{NextDouble3@{NextDouble3}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextDouble3()}{NextDouble3()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a6100e807ab75d63f1f95133c2878b6df} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double3}{double3}} Unity.\+Mathematics.\+Random.\+Next\+Double3 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double3}{double3} value with all components in the interval \mbox{[}0, 1). 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double3}{double3} value in the range \mbox{[}0, 1).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a41b6c9f8ce43c79322df151dd18dc3c2}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextDouble3@{NextDouble3}}
+\index{NextDouble3@{NextDouble3}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextDouble3()}{NextDouble3()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a41b6c9f8ce43c79322df151dd18dc3c2} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double3}{double3}} Unity.\+Mathematics.\+Random.\+Next\+Double3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double3}{double3}}}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double3}{double3} value with all components in the interval \mbox{[}0, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max} & The componentwise maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double3}{double3} value in the range \mbox{[}0, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_aa5fdae6b70313e7531e980e75444e777}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextDouble3@{NextDouble3}}
+\index{NextDouble3@{NextDouble3}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextDouble3()}{NextDouble3()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_aa5fdae6b70313e7531e980e75444e777} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double3}{double3}} Unity.\+Mathematics.\+Random.\+Next\+Double3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double3}{double3}}}]{min}{, }\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double3}{double3}}}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double3}{double3} value with all components in the interval \mbox{[}min, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & The componentwise minimum value to generate, inclusive.\\
+\hline
+{\em max} & The componentwise maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double3}{double3} value in the range \mbox{[}min, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a83739a3bd48b7d82dd28584c1e01938a}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextDouble3Direction@{NextDouble3Direction}}
+\index{NextDouble3Direction@{NextDouble3Direction}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextDouble3Direction()}{NextDouble3Direction()}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a83739a3bd48b7d82dd28584c1e01938a} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double3}{double3}} Unity.\+Mathematics.\+Random.\+Next\+Double3\+Direction (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a unit length \doxylink{struct_unity_1_1_mathematics_1_1double3}{double3} vector representing a uniformly random 3D direction. 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random unit length \doxylink{struct_unity_1_1_mathematics_1_1double3}{double3} vector.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_ab7816ba973edc17bc7efeabb505e12fd}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextDouble4@{NextDouble4}}
+\index{NextDouble4@{NextDouble4}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextDouble4()}{NextDouble4()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_ab7816ba973edc17bc7efeabb505e12fd} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double4}{double4}} Unity.\+Mathematics.\+Random.\+Next\+Double4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double4}{double4} value with all components in the interval \mbox{[}0, 1). 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double4}{double4} value in the range \mbox{[}0, 1).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a4f7fa1162dc1b5956f2b4ede705fcb0f}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextDouble4@{NextDouble4}}
+\index{NextDouble4@{NextDouble4}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextDouble4()}{NextDouble4()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a4f7fa1162dc1b5956f2b4ede705fcb0f} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double4}{double4}} Unity.\+Mathematics.\+Random.\+Next\+Double4 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double4}{double4}}}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double4}{double4} value with all components in the interval \mbox{[}0, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max} & The componentwise maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double4}{double4} value in the range \mbox{[}0, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a3c8333f48f2693778a02bb6cac507086}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextDouble4@{NextDouble4}}
+\index{NextDouble4@{NextDouble4}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextDouble4()}{NextDouble4()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a3c8333f48f2693778a02bb6cac507086} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double4}{double4}} Unity.\+Mathematics.\+Random.\+Next\+Double4 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double4}{double4}}}]{min}{, }\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1double4}{double4}}}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double4}{double4} value with all components in the interval \mbox{[}min, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & The componentwise minimum value to generate, inclusive.\\
+\hline
+{\em max} & The componentwise maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1double4}{double4} value in the range \mbox{[}min, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a2d7d1fa3307e842679dd03728657d74c}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextFloat@{NextFloat}}
+\index{NextFloat@{NextFloat}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextFloat()}{NextFloat()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a2d7d1fa3307e842679dd03728657d74c} 
+float Unity.\+Mathematics.\+Random.\+Next\+Float (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random float value in the interval \mbox{[}0, 1). 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random float value in the range \mbox{[}0, 1).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_ad7c55885e4828a211a9d9f9a40596241}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextFloat@{NextFloat}}
+\index{NextFloat@{NextFloat}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextFloat()}{NextFloat()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_ad7c55885e4828a211a9d9f9a40596241} 
+float Unity.\+Mathematics.\+Random.\+Next\+Float (\begin{DoxyParamCaption}\item[{float}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random float value in the interval \mbox{[}0, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max} & The maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random float value in the range \mbox{[}0, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a6f7918c5425e6c08a313d71240741d8c}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextFloat@{NextFloat}}
+\index{NextFloat@{NextFloat}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextFloat()}{NextFloat()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a6f7918c5425e6c08a313d71240741d8c} 
+float Unity.\+Mathematics.\+Random.\+Next\+Float (\begin{DoxyParamCaption}\item[{float}]{min}{, }\item[{float}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random float value in the interval \mbox{[}min, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & The minimum value to generate, inclusive.\\
+\hline
+{\em max} & The maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random float value in the range \mbox{[}min, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_ac86823cd810bbfd7185852db66c393dd}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextFloat2@{NextFloat2}}
+\index{NextFloat2@{NextFloat2}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextFloat2()}{NextFloat2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_ac86823cd810bbfd7185852db66c393dd} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} Unity.\+Mathematics.\+Random.\+Next\+Float2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float2}{float2} value with all components in the interval \mbox{[}0, 1). 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float2}{float2} value in the range \mbox{[}0, 1).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_ab4ba4396ee14f9ac05c3197448a57ffd}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextFloat2@{NextFloat2}}
+\index{NextFloat2@{NextFloat2}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextFloat2()}{NextFloat2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_ab4ba4396ee14f9ac05c3197448a57ffd} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} Unity.\+Mathematics.\+Random.\+Next\+Float2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}}}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float2}{float2} value with all components in the interval \mbox{[}0, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max} & The componentwise maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float2}{float2} value in the range \mbox{[}0, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_ab717acf84ee93002b337b2c57aad3364}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextFloat2@{NextFloat2}}
+\index{NextFloat2@{NextFloat2}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextFloat2()}{NextFloat2()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_ab717acf84ee93002b337b2c57aad3364} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} Unity.\+Mathematics.\+Random.\+Next\+Float2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}}}]{min}{, }\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}}}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float2}{float2} value with all components in the interval \mbox{[}min, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & The componentwise minimum value to generate, inclusive.\\
+\hline
+{\em max} & The componentwise maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float2}{float2} value in the range \mbox{[}min, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a8c511a155d4bbeb9403279e866d1bbb0}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextFloat2Direction@{NextFloat2Direction}}
+\index{NextFloat2Direction@{NextFloat2Direction}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextFloat2Direction()}{NextFloat2Direction()}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a8c511a155d4bbeb9403279e866d1bbb0} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float2}{float2}} Unity.\+Mathematics.\+Random.\+Next\+Float2\+Direction (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a unit length \doxylink{struct_unity_1_1_mathematics_1_1float2}{float2} vector representing a uniformly random 2D direction. 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random unit length \doxylink{struct_unity_1_1_mathematics_1_1float2}{float2} vector.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_aac0e3818a684aa972974d6bd936312da}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextFloat3@{NextFloat3}}
+\index{NextFloat3@{NextFloat3}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextFloat3()}{NextFloat3()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_aac0e3818a684aa972974d6bd936312da} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} Unity.\+Mathematics.\+Random.\+Next\+Float3 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float3}{float3} value with all components in the interval \mbox{[}0, 1). 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float3}{float3} value in the range \mbox{[}0, 1).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a49b0d1c4d8af336518587fffbe50e51d}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextFloat3@{NextFloat3}}
+\index{NextFloat3@{NextFloat3}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextFloat3()}{NextFloat3()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a49b0d1c4d8af336518587fffbe50e51d} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} Unity.\+Mathematics.\+Random.\+Next\+Float3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}}}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float3}{float3} value with all components in the interval \mbox{[}0, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max} & The componentwise maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float3}{float3} value in the range \mbox{[}0, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_ad6bd5b7056868d4b15bc71b6f6825a25}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextFloat3@{NextFloat3}}
+\index{NextFloat3@{NextFloat3}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextFloat3()}{NextFloat3()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_ad6bd5b7056868d4b15bc71b6f6825a25} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} Unity.\+Mathematics.\+Random.\+Next\+Float3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}}}]{min}{, }\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}}}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float3}{float3} value with all components in the interval \mbox{[}min, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & The componentwise minimum value to generate, inclusive.\\
+\hline
+{\em max} & The componentwise maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float3}{float3} value in the range \mbox{[}min, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_ab79e3c0f1490e174195e458290c5e54c}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextFloat3Direction@{NextFloat3Direction}}
+\index{NextFloat3Direction@{NextFloat3Direction}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextFloat3Direction()}{NextFloat3Direction()}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_ab79e3c0f1490e174195e458290c5e54c} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float3}{float3}} Unity.\+Mathematics.\+Random.\+Next\+Float3\+Direction (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a unit length \doxylink{struct_unity_1_1_mathematics_1_1float3}{float3} vector representing a uniformly random 3D direction. 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random unit length \doxylink{struct_unity_1_1_mathematics_1_1float3}{float3} vector.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a34d62b02431d5838274e35dc9f9aaa42}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextFloat4@{NextFloat4}}
+\index{NextFloat4@{NextFloat4}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextFloat4()}{NextFloat4()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a34d62b02431d5838274e35dc9f9aaa42} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float4}{float4}} Unity.\+Mathematics.\+Random.\+Next\+Float4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float4}{float4} value with all components in the interval \mbox{[}0, 1). 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float4}{float4} value in the range \mbox{[}0, 1).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a5923dab2aace81fb6651b798c4e6e442}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextFloat4@{NextFloat4}}
+\index{NextFloat4@{NextFloat4}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextFloat4()}{NextFloat4()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a5923dab2aace81fb6651b798c4e6e442} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float4}{float4}} Unity.\+Mathematics.\+Random.\+Next\+Float4 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float4}{float4}}}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float4}{float4} value with all components in the interval \mbox{[}0, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max} & The componentwise maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float4}{float4} value in the range \mbox{[}0, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_af7e15133c61887118bf273370b1622ff}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextFloat4@{NextFloat4}}
+\index{NextFloat4@{NextFloat4}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextFloat4()}{NextFloat4()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_af7e15133c61887118bf273370b1622ff} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float4}{float4}} Unity.\+Mathematics.\+Random.\+Next\+Float4 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float4}{float4}}}]{min}{, }\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1float4}{float4}}}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float4}{float4} value with all components in the interval \mbox{[}min, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & The componentwise minimum value to generate, inclusive.\\
+\hline
+{\em max} & The componentwise maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1float4}{float4} value in the range \mbox{[}min, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a00783b4889ca22f8c1dbce7ec71e4671}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextInt@{NextInt}}
+\index{NextInt@{NextInt}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextInt()}{NextInt()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a00783b4889ca22f8c1dbce7ec71e4671} 
+int Unity.\+Mathematics.\+Random.\+Next\+Int (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random int value in the interval \mbox{[}-\/2147483647, 2147483647\mbox{]}. 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random integer value.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_adb97fe73a331c4d826d78940b86cb44f}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextInt@{NextInt}}
+\index{NextInt@{NextInt}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextInt()}{NextInt()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_adb97fe73a331c4d826d78940b86cb44f} 
+int Unity.\+Mathematics.\+Random.\+Next\+Int (\begin{DoxyParamCaption}\item[{int}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random int value in the interval \mbox{[}0, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max} & The maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random int value in the range \mbox{[}0, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a242ad6826750d3b8ef13133da4abed99}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextInt@{NextInt}}
+\index{NextInt@{NextInt}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextInt()}{NextInt()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a242ad6826750d3b8ef13133da4abed99} 
+int Unity.\+Mathematics.\+Random.\+Next\+Int (\begin{DoxyParamCaption}\item[{int}]{min}{, }\item[{int}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random int value in the interval \mbox{[}min, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & The minimum value to generate, inclusive.\\
+\hline
+{\em max} & The maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random integer between \mbox{[}min, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a2b3207ffdc1c05ea5c7050f8b07a4245}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextInt2@{NextInt2}}
+\index{NextInt2@{NextInt2}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextInt2()}{NextInt2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a2b3207ffdc1c05ea5c7050f8b07a4245} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int2}{int2}} Unity.\+Mathematics.\+Random.\+Next\+Int2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int2}{int2} value with all components in the interval \mbox{[}-\/2147483647, 2147483647\mbox{]}. 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int2}{int2} value.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a59b1a22c81c201bb927e9a1c01015227}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextInt2@{NextInt2}}
+\index{NextInt2@{NextInt2}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextInt2()}{NextInt2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a59b1a22c81c201bb927e9a1c01015227} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int2}{int2}} Unity.\+Mathematics.\+Random.\+Next\+Int2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int2}{int2}}}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int2}{int2} value with all components in the interval \mbox{[}0, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max} & The componentwise maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int2}{int2} value with all components in the range \mbox{[}0, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a5951c7f62da79371c7110ef0d5cbc6b7}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextInt2@{NextInt2}}
+\index{NextInt2@{NextInt2}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextInt2()}{NextInt2()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a5951c7f62da79371c7110ef0d5cbc6b7} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int2}{int2}} Unity.\+Mathematics.\+Random.\+Next\+Int2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int2}{int2}}}]{min}{, }\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int2}{int2}}}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int2}{int2} value with all components in the interval \mbox{[}min, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & The componentwise minimum value to generate, inclusive.\\
+\hline
+{\em max} & The componentwise maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int2}{int2} between \mbox{[}min, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_ab03bd1c3b77305a21e2576515e81d7e1}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextInt3@{NextInt3}}
+\index{NextInt3@{NextInt3}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextInt3()}{NextInt3()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_ab03bd1c3b77305a21e2576515e81d7e1} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int3}{int3}} Unity.\+Mathematics.\+Random.\+Next\+Int3 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int3}{int3} value with all components in the interval \mbox{[}-\/2147483647, 2147483647\mbox{]}. 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int3}{int3} value.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a8e9afd4879424f3478786e37cc7c5ae0}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextInt3@{NextInt3}}
+\index{NextInt3@{NextInt3}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextInt3()}{NextInt3()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a8e9afd4879424f3478786e37cc7c5ae0} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int3}{int3}} Unity.\+Mathematics.\+Random.\+Next\+Int3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int3}{int3}}}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int3}{int3} value with all components in the interval \mbox{[}0, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max} & The componentwise maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int3}{int3} value with all components in the range \mbox{[}0, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_ad77f37ee662b5abcf888a3ae399782d9}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextInt3@{NextInt3}}
+\index{NextInt3@{NextInt3}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextInt3()}{NextInt3()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_ad77f37ee662b5abcf888a3ae399782d9} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int3}{int3}} Unity.\+Mathematics.\+Random.\+Next\+Int3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int3}{int3}}}]{min}{, }\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int3}{int3}}}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int3}{int3} value with all components in the interval \mbox{[}min, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & The componentwise minimum value to generate, inclusive.\\
+\hline
+{\em max} & The componentwise maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int3}{int3} between \mbox{[}min, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a4d5a6eac154eeb9e7fd302187e8d7832}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextInt4@{NextInt4}}
+\index{NextInt4@{NextInt4}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextInt4()}{NextInt4()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a4d5a6eac154eeb9e7fd302187e8d7832} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int4}{int4}} Unity.\+Mathematics.\+Random.\+Next\+Int4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int4}{int4} value with all components in the interval \mbox{[}-\/2147483647, 2147483647\mbox{]}. 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int4}{int4} value.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a6774a1415c67be5978a0289dfa2b61fa}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextInt4@{NextInt4}}
+\index{NextInt4@{NextInt4}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextInt4()}{NextInt4()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a6774a1415c67be5978a0289dfa2b61fa} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int4}{int4}} Unity.\+Mathematics.\+Random.\+Next\+Int4 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int4}{int4}}}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int4}{int4} value with all components in the interval \mbox{[}0, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max} & The componentwise maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int4}{int4} value with all components in the range \mbox{[}0, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a0ee91f2d5af75fedbe96f13389dba926}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextInt4@{NextInt4}}
+\index{NextInt4@{NextInt4}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextInt4()}{NextInt4()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a0ee91f2d5af75fedbe96f13389dba926} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int4}{int4}} Unity.\+Mathematics.\+Random.\+Next\+Int4 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int4}{int4}}}]{min}{, }\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1int4}{int4}}}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int4}{int4} value with all components in the interval \mbox{[}min, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & The componentwise minimum value to generate, inclusive.\\
+\hline
+{\em max} & The componentwise maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1int4}{int4} between \mbox{[}min, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a0495274d58cb5ac6a6b2dd311a04ed7e}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextQuaternionRotation@{NextQuaternionRotation}}
+\index{NextQuaternionRotation@{NextQuaternionRotation}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextQuaternionRotation()}{NextQuaternionRotation()}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a0495274d58cb5ac6a6b2dd311a04ed7e} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1quaternion}{quaternion}} Unity.\+Mathematics.\+Random.\+Next\+Quaternion\+Rotation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a unit length quaternion representing a uniformly 3D rotation. 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random unit length quaternion.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a3ee7ea5117dff0f1ac7b65c845852a63}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextUInt@{NextUInt}}
+\index{NextUInt@{NextUInt}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextUInt()}{NextUInt()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a3ee7ea5117dff0f1ac7b65c845852a63} 
+uint Unity.\+Mathematics.\+Random.\+Next\+UInt (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random uint value in the interval \mbox{[}0, 4294967294\mbox{]}. 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random unsigned integer.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_aa381e51b468223b31669b38834e7c8e5}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextUInt@{NextUInt}}
+\index{NextUInt@{NextUInt}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextUInt()}{NextUInt()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_aa381e51b468223b31669b38834e7c8e5} 
+uint Unity.\+Mathematics.\+Random.\+Next\+UInt (\begin{DoxyParamCaption}\item[{uint}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random uint value in the interval \mbox{[}0, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max} & The maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random unsigned integer in the range \mbox{[}0, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_af0f0ffc4b0497af9824006f6014151d2}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextUInt@{NextUInt}}
+\index{NextUInt@{NextUInt}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextUInt()}{NextUInt()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_af0f0ffc4b0497af9824006f6014151d2} 
+uint Unity.\+Mathematics.\+Random.\+Next\+UInt (\begin{DoxyParamCaption}\item[{uint}]{min}{, }\item[{uint}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random uint value in the interval \mbox{[}min, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & The minimum value to generate, inclusive.\\
+\hline
+{\em max} & The maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random unsigned integer in the range \mbox{[}min, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_afd4304ca6a539c474a4c4ac4d2f68898}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextUInt2@{NextUInt2}}
+\index{NextUInt2@{NextUInt2}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextUInt2()}{NextUInt2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_afd4304ca6a539c474a4c4ac4d2f68898} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint2}{uint2}} Unity.\+Mathematics.\+Random.\+Next\+UInt2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint2}{uint2} value with all components in the interval \mbox{[}0, 4294967294\mbox{]}. 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint2}{uint2}.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a78cce2628cf90e21eec666bbbcfc323b}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextUInt2@{NextUInt2}}
+\index{NextUInt2@{NextUInt2}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextUInt2()}{NextUInt2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a78cce2628cf90e21eec666bbbcfc323b} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint2}{uint2}} Unity.\+Mathematics.\+Random.\+Next\+UInt2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint2}{uint2}}}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint2}{uint2} value with all components in the interval \mbox{[}0, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max} & The componentwise maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint2}{uint2} in the range \mbox{[}0, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a17d485292b518f5ec0cf673a56bad9d0}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextUInt2@{NextUInt2}}
+\index{NextUInt2@{NextUInt2}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextUInt2()}{NextUInt2()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a17d485292b518f5ec0cf673a56bad9d0} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint2}{uint2}} Unity.\+Mathematics.\+Random.\+Next\+UInt2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint2}{uint2}}}]{min}{, }\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint2}{uint2}}}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint2}{uint2} value with all components in the interval \mbox{[}min, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & The componentwise minimum value to generate, inclusive.\\
+\hline
+{\em max} & The componentwise maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint2}{uint2} in the range \mbox{[}min, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_ab993abd81f4d7eb02404181dea1db146}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextUInt3@{NextUInt3}}
+\index{NextUInt3@{NextUInt3}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextUInt3()}{NextUInt3()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_ab993abd81f4d7eb02404181dea1db146} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint3}{uint3}} Unity.\+Mathematics.\+Random.\+Next\+UInt3 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint3}{uint3} value with all components in the interval \mbox{[}0, 4294967294\mbox{]}. 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint3}{uint3}.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a9e35fa7fe38197d7f44d8d7f73e83e06}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextUInt3@{NextUInt3}}
+\index{NextUInt3@{NextUInt3}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextUInt3()}{NextUInt3()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a9e35fa7fe38197d7f44d8d7f73e83e06} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint3}{uint3}} Unity.\+Mathematics.\+Random.\+Next\+UInt3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint3}{uint3}}}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint3}{uint3} value with all components in the interval \mbox{[}0, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max} & The componentwise maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint3}{uint3} in the range \mbox{[}0, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a12788d04d2bf8494fe901097306d9eba}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextUInt3@{NextUInt3}}
+\index{NextUInt3@{NextUInt3}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextUInt3()}{NextUInt3()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a12788d04d2bf8494fe901097306d9eba} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint3}{uint3}} Unity.\+Mathematics.\+Random.\+Next\+UInt3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint3}{uint3}}}]{min}{, }\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint3}{uint3}}}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint3}{uint3} value with all components in the interval \mbox{[}min, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & The componentwise minimum value to generate, inclusive.\\
+\hline
+{\em max} & The componentwise maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint3}{uint3} in the range \mbox{[}min, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a01f3b865367d5b844e97ce8c2c05c448}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextUInt4@{NextUInt4}}
+\index{NextUInt4@{NextUInt4}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextUInt4()}{NextUInt4()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a01f3b865367d5b844e97ce8c2c05c448} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint4}{uint4}} Unity.\+Mathematics.\+Random.\+Next\+UInt4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint4}{uint4} value with all components in the interval \mbox{[}0, 4294967294\mbox{]}. 
+
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint4}{uint4}.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a48fd4af05d6589bf07c3a781a8f6cdde}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextUInt4@{NextUInt4}}
+\index{NextUInt4@{NextUInt4}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextUInt4()}{NextUInt4()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a48fd4af05d6589bf07c3a781a8f6cdde} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint4}{uint4}} Unity.\+Mathematics.\+Random.\+Next\+UInt4 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint4}{uint4}}}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint4}{uint4} value with all components in the interval \mbox{[}0, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max} & The componentwise maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint4}{uint4} in the range \mbox{[}0, max).
+\end{DoxyReturn}
+\Hypertarget{struct_unity_1_1_mathematics_1_1_random_a6840a05a2ebb2e699df19ea631b08246}\index{Unity.Mathematics.Random@{Unity.Mathematics.Random}!NextUInt4@{NextUInt4}}
+\index{NextUInt4@{NextUInt4}!Unity.Mathematics.Random@{Unity.Mathematics.Random}}
+\doxysubsubsection{\texorpdfstring{NextUInt4()}{NextUInt4()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_mathematics_1_1_random_a6840a05a2ebb2e699df19ea631b08246} 
+\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint4}{uint4}} Unity.\+Mathematics.\+Random.\+Next\+UInt4 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint4}{uint4}}}]{min}{, }\item[{\mbox{\hyperlink{struct_unity_1_1_mathematics_1_1uint4}{uint4}}}]{max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint4}{uint4} value with all components in the interval \mbox{[}min, max). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & The componentwise minimum value to generate, inclusive.\\
+\hline
+{\em max} & The componentwise maximum value to generate, exclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A uniformly random \doxylink{struct_unity_1_1_mathematics_1_1uint4}{uint4} in the range \mbox{[}min, max).
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+mathematics@1.\+2.\+6/\+Unity.\+Mathematics/random.\+cs\end{DoxyCompactItemize}

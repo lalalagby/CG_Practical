@@ -1,0 +1,92 @@
+\doxysection{Unity\+Editor.\+Searcher.\+Searcher\+Database Class Reference}
+\hypertarget{class_unity_editor_1_1_searcher_1_1_searcher_database}{}\label{class_unity_editor_1_1_searcher_1_1_searcher_database}\index{UnityEditor.Searcher.SearcherDatabase@{UnityEditor.Searcher.SearcherDatabase}}
+Inheritance diagram for Unity\+Editor.\+Searcher.\+Searcher\+Database\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_searcher_1_1_searcher_database}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_searcher_1_1_searcher_database_a4f5813666981dc1a47686743039a3e76}\label{class_unity_editor_1_1_searcher_1_1_searcher_database_a4f5813666981dc1a47686743039a3e76} 
+{\bfseries Searcher\+Database} (IRead\+Only\+Collection$<$ \mbox{\hyperlink{class_unity_editor_1_1_searcher_1_1_searcher_item}{Searcher\+Item}} $>$ db)
+\item 
+\Hypertarget{class_unity_editor_1_1_searcher_1_1_searcher_database_aa2e1aaf28b0bc990f0632e31d2118ded}\label{class_unity_editor_1_1_searcher_1_1_searcher_database_aa2e1aaf28b0bc990f0632e31d2118ded} 
+override List$<$ \mbox{\hyperlink{class_unity_editor_1_1_searcher_1_1_searcher_item}{Searcher\+Item}} $>$ {\bfseries Search} (string query, out float local\+Max\+Score)
+\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_searcher_1_1_searcher_database_a4ff02723fcd071fa09905cf182e3a92a}{Build\+Index}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_editor_1_1_searcher_1_1_searcher_database_base}{Unity\+Editor.\+Searcher.\+Searcher\+Database\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_unity_editor_1_1_searcher_1_1_searcher_item}{Searcher\+Item}} $>$ {\bfseries Search} (string query, out float local\+Max\+Score)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_searcher_1_1_searcher_database_afd2abb93fba2a7b9056b114cb12b0e87}\label{class_unity_editor_1_1_searcher_1_1_searcher_database_afd2abb93fba2a7b9056b114cb12b0e87} 
+static \mbox{\hyperlink{class_unity_editor_1_1_searcher_1_1_searcher_database}{Searcher\+Database}} {\bfseries Create} (List$<$ \mbox{\hyperlink{class_unity_editor_1_1_searcher_1_1_searcher_item}{Searcher\+Item}} $>$ items, string database\+Directory, bool serialize\+To\+File=true)
+\item 
+\Hypertarget{class_unity_editor_1_1_searcher_1_1_searcher_database_a2af3ae17eee6670c567d54c6a52946f8}\label{class_unity_editor_1_1_searcher_1_1_searcher_database_a2af3ae17eee6670c567d54c6a52946f8} 
+static \mbox{\hyperlink{class_unity_editor_1_1_searcher_1_1_searcher_database}{Searcher\+Database}} {\bfseries Load} (string database\+Directory)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_searcher_1_1_searcher_database_ac80788e84dc6a19e1bbf7acf5650f55b}\label{class_unity_editor_1_1_searcher_1_1_searcher_database_ac80788e84dc6a19e1bbf7acf5650f55b} 
+virtual bool {\bfseries Match} (string query, IRead\+Only\+List$<$ string $>$ tokenized\+Query, \mbox{\hyperlink{class_unity_editor_1_1_searcher_1_1_searcher_item}{Searcher\+Item}} item, out float score)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_editor_1_1_searcher_1_1_searcher_database_base}{Unity\+Editor.\+Searcher.\+Searcher\+Database\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Searcher\+Database\+Base} (string database\+Directory)
+\item 
+void {\bfseries Load\+From\+File} ()
+\item 
+void {\bfseries Serialize\+To\+File} ()
+\item 
+void {\bfseries Add\+Item\+To\+Index} (\mbox{\hyperlink{class_unity_editor_1_1_searcher_1_1_searcher_item}{Searcher\+Item}} item, ref int last\+Id, Action$<$ \mbox{\hyperlink{class_unity_editor_1_1_searcher_1_1_searcher_item}{Searcher\+Item}} $>$ action)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_searcher_1_1_searcher_database_a2bd8f556be156df4e7ea54e745ca30b8}\label{class_unity_editor_1_1_searcher_1_1_searcher_database_a2bd8f556be156df4e7ea54e745ca30b8} 
+Func$<$ string, \mbox{\hyperlink{class_unity_editor_1_1_searcher_1_1_searcher_item}{Searcher\+Item}}, bool $>$ {\bfseries Match\+Filter}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_editor_1_1_searcher_1_1_searcher_database_base}{Unity\+Editor.\+Searcher.\+Searcher\+Database\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries Database\+Directory}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+IList$<$ \mbox{\hyperlink{class_unity_editor_1_1_searcher_1_1_searcher_item}{Searcher\+Item}} $>$ {\bfseries Item\+List}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_unity_editor_1_1_searcher_1_1_searcher_database_base}{Unity\+Editor.\+Searcher.\+Searcher\+Database\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_unity_editor_1_1_searcher_1_1_searcher_item}{Searcher\+Item}} $>$ {\bfseries m\+\_\+\+Item\+List}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_unity_editor_1_1_searcher_1_1_searcher_database_base}{Unity\+Editor.\+Searcher.\+Searcher\+Database\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+const string {\bfseries k\+\_\+\+Serialized\+Json\+File} = "{}/Serialized\+Database.\+json"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_searcher_1_1_searcher_database_a4ff02723fcd071fa09905cf182e3a92a}\index{UnityEditor.Searcher.SearcherDatabase@{UnityEditor.Searcher.SearcherDatabase}!BuildIndex@{BuildIndex}}
+\index{BuildIndex@{BuildIndex}!UnityEditor.Searcher.SearcherDatabase@{UnityEditor.Searcher.SearcherDatabase}}
+\doxysubsubsection{\texorpdfstring{BuildIndex()}{BuildIndex()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_searcher_1_1_searcher_database_a4ff02723fcd071fa09905cf182e3a92a} 
+override void Unity\+Editor.\+Searcher.\+Searcher\+Database.\+Build\+Index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_searcher_1_1_searcher_database_base}{Unity\+Editor.\+Searcher.\+Searcher\+Database\+Base}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+searcher@4.\+9.\+2/\+Editor/\+Searcher/Searcher\+Database.\+cs\end{DoxyCompactItemize}

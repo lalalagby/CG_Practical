@@ -1,0 +1,538 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Layouts.\+Input\+Device\+Matcher Struct Reference}
+\hypertarget{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{}\label{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}\index{UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}}
+
+
+Specification that can be matched against an \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description}{Input\+Device\+Description}. This is used to find which \doxylink{class_unity_engine_1_1_input_system_1_1_layouts_1_1_input_control_layout}{Input\+Control\+Layout} to create for a device when it is discovered.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Layouts.\+Input\+Device\+Matcher\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries Matcher\+Json}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{Input\+Device\+Matcher}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a5a1bfe691a99a357ba7e255f31fc97c3}{With\+Interface}} (string pattern, bool support\+Regex=true)
+\begin{DoxyCompactList}\small\item\em Add a pattern to \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a0d662d9029da106a566f873d6c09f894}{patterns} to match an \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description_a4658c543407dcb1df8aaa037f3a7a8cd}{Input\+Device\+Description.\+interface\+Name}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{Input\+Device\+Matcher}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a546eaeb1555627efffb3e5c2804be078}{With\+Device\+Class}} (string pattern, bool support\+Regex=true)
+\begin{DoxyCompactList}\small\item\em Add a pattern to \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a0d662d9029da106a566f873d6c09f894}{patterns} to match a \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description_a3f520f70f0a42b21e62ee89576afb692}{Input\+Device\+Description.\+device\+Class}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{Input\+Device\+Matcher}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a700ce11913b2b8d049d0ab331b9ff36a}{With\+Manufacturer}} (string pattern, bool support\+Regex=true)
+\begin{DoxyCompactList}\small\item\em Add a pattern to \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a0d662d9029da106a566f873d6c09f894}{patterns} to match a \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description_aabe946947fa0af55989d77fb39cb852e}{Input\+Device\+Description.\+manufacturer}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{Input\+Device\+Matcher}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a1e6796ed1a5a756002bf87dfab9e6b29}{With\+Product}} (string pattern, bool support\+Regex=true)
+\begin{DoxyCompactList}\small\item\em Add a pattern to \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a0d662d9029da106a566f873d6c09f894}{patterns} to match a \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description_a326ea0e3dd66f65aaadb6bb2b8267655}{Input\+Device\+Description.\+product}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{Input\+Device\+Matcher}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a66b52099de260cbfd1c2d84e603e6946}{With\+Version}} (string pattern, bool support\+Regex=true)
+\begin{DoxyCompactList}\small\item\em Add a pattern to \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a0d662d9029da106a566f873d6c09f894}{patterns} to match a \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description_a7d1814b6f7354f513633bcdb9890f103}{Input\+Device\+Description.\+version}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{Input\+Device\+Matcher}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a888eb3272d49c57567881bad869f3d85}{With\+Capability$<$ TValue $>$}} (string path, TValue value)
+\begin{DoxyCompactList}\small\item\em Add a pattern to \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a0d662d9029da106a566f873d6c09f894}{patterns} to match an individual capability in \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description_a6f70b95dcd1e56d25852864abd6d6071}{Input\+Device\+Description.\+capabilities}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a5e15ff278278cda90188af18f2ec4475}{Match\+Percentage}} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description}{Input\+Device\+Description}} device\+Description)
+\begin{DoxyCompactList}\small\item\em Return the level of matching to the given {\itshape device\+Description} . \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a05b97c4fc75e02e765a409dbaaf3043e}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Return a string representation useful for debugging. Lists the \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a0d662d9029da106a566f873d6c09f894}{patterns} contained in the matcher. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_ab46012e6aad95ebd20232a3ff54d1d63}{Equals}} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{Input\+Device\+Matcher}} other)
+\begin{DoxyCompactList}\small\item\em Test whether this matcher is equivalent to the {\itshape other}  matcher. \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a6e40faf34e4861ad6d46741b1555e4ce}{Equals}} (object obj)
+\begin{DoxyCompactList}\small\item\em Compare this matcher to another. \end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_afe981baa9bf488bd5d58a0f23c585630}{Get\+Hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Compute a hash code for the device matcher. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{Input\+Device\+Matcher}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a2259cbbab0984c8a8da2212208facdad}{From\+Device\+Description}} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description}{Input\+Device\+Description}} device\+Description)
+\begin{DoxyCompactList}\small\item\em Produce a matcher that matches the given device description verbatim. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a8a27a6b0b1b56e53eacfe3fbdee51d75}{operator==}} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{Input\+Device\+Matcher}} left, \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{Input\+Device\+Matcher}} right)
+\begin{DoxyCompactList}\small\item\em Compare two matchers for equivalence. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a09c0e7687ed1ca6153dbe8731e5ac620}{operator!=}} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{Input\+Device\+Matcher}} left, \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{Input\+Device\+Matcher}} right)
+\begin{DoxyCompactList}\small\item\em Compare two matchers for non-\/equivalence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_aefd5828553bea4165e443ea5fd472e05}{empty}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If true, the matcher has been default-\/initialized and contains no matching \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a0d662d9029da106a566f873d6c09f894}{patterns}. \end{DoxyCompactList}\item 
+IEnumerable$<$ Key\+Value\+Pair$<$ string, object $>$ $>$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a0d662d9029da106a566f873d6c09f894}{patterns}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of patterns to match. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Specification that can be matched against an \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description}{Input\+Device\+Description}. This is used to find which \doxylink{class_unity_engine_1_1_input_system_1_1_layouts_1_1_input_control_layout}{Input\+Control\+Layout} to create for a device when it is discovered. 
+
+Each matcher is basically a set of key/value pairs where each value may either be a regular expression or a plain value object. The central method for testing a given matcher against an \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description}{Input\+Device\+Description} is \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a5e15ff278278cda90188af18f2ec4475}{Match\+Percentage}.
+
+Various helper methods such as \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a5a1bfe691a99a357ba7e255f31fc97c3}{With\+Interface} or \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a888eb3272d49c57567881bad869f3d85}{With\+Capability$<$\+TValue$>$} assist with creating matchers.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ A\ matcher\ that\ matches\ a\ PS4\ controller\ by\ name.}}
+\DoxyCodeLine{\textcolor{keyword}{new}\ InputDeviceMatcher()}
+\DoxyCodeLine{\ \ \ \ .WithInterface(\textcolor{stringliteral}{"{}HID"{}})}
+\DoxyCodeLine{\ \ \ \ .WithManufacturer(\textcolor{stringliteral}{"{}Sony.+Entertainment"{}})\ \textcolor{comment}{//\ Regular\ expression}}
+\DoxyCodeLine{\ \ \ \ .WithProduct(\textcolor{stringliteral}{"{}Wireless\ Controller"{}}));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ A\ matcher\ that\ matches\ the\ same\ controller\ by\ PID\ and\ VID.}}
+\DoxyCodeLine{\textcolor{keyword}{new}\ InputDeviceMatcher()}
+\DoxyCodeLine{\ \ \ \ .WithInterface(\textcolor{stringliteral}{"{}HID"{}})}
+\DoxyCodeLine{\ \ \ \ .WithCapability(\textcolor{stringliteral}{"{}vendorId"{}},\ 0x54C)\ \textcolor{comment}{//\ Sony\ Entertainment.}}
+\DoxyCodeLine{\ \ \ \ .WithCapability(\textcolor{stringliteral}{"{}productId"{}},\ 0x9CC));\ \textcolor{comment}{//\ Wireless\ controller.}}
+
+\end{DoxyCode}
+ 
+
+For each registered \doxylink{class_unity_engine_1_1_input_system_1_1_layouts_1_1_input_control_layout}{Input\+Control\+Layout} in the system that represents a device, arbitrary many matchers can be added. A matcher can be supplied either at registration time or at any point after using Input\+System.\+Register\+Layout\+Matcher.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Supply\ a\ matcher\ at\ registration\ time.}}
+\DoxyCodeLine{InputSystem.RegisterLayout<DualShock4GamepadHID>(}
+\DoxyCodeLine{\ \ \ \ matches:\ \textcolor{keyword}{new}\ InputDeviceMatcher()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .WithInterface(\textcolor{stringliteral}{"{}HID"{}})}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .WithCapability(\textcolor{stringliteral}{"{}vendorId"{}},\ 0x54C)\ \textcolor{comment}{//\ Sony\ Entertainment.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .WithCapability(\textcolor{stringliteral}{"{}productId"{}},\ 0x9CC));\ \textcolor{comment}{//\ Wireless\ controller.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Supply\ a\ matcher\ for\ an\ already\ registered\ layout.}}
+\DoxyCodeLine{\textcolor{comment}{//\ This\ can\ be\ called\ repeatedly\ and\ will\ add\ another\ matcher}}
+\DoxyCodeLine{\textcolor{comment}{//\ each\ time.}}
+\DoxyCodeLine{InputSystem.RegisterLayoutMatcher<DualShock4GamepadHID>(}
+\DoxyCodeLine{\ \ \ \ matches:\ \textcolor{keyword}{new}\ InputDeviceMatcher()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .WithInterface(\textcolor{stringliteral}{"{}HID"{}})}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .WithManufacturer(\textcolor{stringliteral}{"{}Sony.+Entertainment"{}})}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .WithProduct(\textcolor{stringliteral}{"{}Wireless\ Controller"{}}));}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description}{Input\+Device\+Description}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_device_a84bd0036ee4b386967b855c4707cd4b1}{Input\+Device.\+description}, Input\+System.\+Register\+Layout\+Matcher
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_ab46012e6aad95ebd20232a3ff54d1d63}\index{UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}!Equals@{Equals}}
+\index{Equals@{Equals}!UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_ab46012e6aad95ebd20232a3ff54d1d63} 
+bool Unity\+Engine.\+Input\+System.\+Layouts.\+Input\+Device\+Matcher.\+Equals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{Input\+Device\+Matcher}}}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Test whether this matcher is equivalent to the {\itshape other}  matcher. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another device matcher.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the two matchers are equivalent.
+\end{DoxyReturn}
+
+
+Two matchers are equivalent if they contain the same number of patterns and the same pattern occurs in each of the matchers. Order of the patterns does not matter. \Hypertarget{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a6e40faf34e4861ad6d46741b1555e4ce}\index{UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}!Equals@{Equals}}
+\index{Equals@{Equals}!UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a6e40faf34e4861ad6d46741b1555e4ce} 
+override bool Unity\+Engine.\+Input\+System.\+Layouts.\+Input\+Device\+Matcher.\+Equals (\begin{DoxyParamCaption}\item[{object}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compare this matcher to another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & A matcher object or {\ttfamily null}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the matcher is equivalent.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_ab46012e6aad95ebd20232a3ff54d1d63}{Equals(\+Input\+Device\+Matcher)}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a2259cbbab0984c8a8da2212208facdad}\index{UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}!FromDeviceDescription@{FromDeviceDescription}}
+\index{FromDeviceDescription@{FromDeviceDescription}!UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}}
+\doxysubsubsection{\texorpdfstring{FromDeviceDescription()}{FromDeviceDescription()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a2259cbbab0984c8a8da2212208facdad} 
+static \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{Input\+Device\+Matcher}} Unity\+Engine.\+Input\+System.\+Layouts.\+Input\+Device\+Matcher.\+From\+Device\+Description (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description}{Input\+Device\+Description}}}]{device\+Description}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Produce a matcher that matches the given device description verbatim. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+Description} & A device description.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A matcher that matches {\itshape device\+Description}  exactly.
+\end{DoxyReturn}
+
+
+This method can be used to produce a matcher for an existing device description, e.\+g. when writing a layout \doxylink{class_unity_engine_1_1_input_system_1_1_layouts_1_1_input_control_layout_1_1_builder}{Input\+Control\+Layout.\+Builder} that produces layouts for devices on the fly. \Hypertarget{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_afe981baa9bf488bd5d58a0f23c585630}\index{UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}!GetHashCode@{GetHashCode}}
+\index{GetHashCode@{GetHashCode}!UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}}
+\doxysubsubsection{\texorpdfstring{GetHashCode()}{GetHashCode()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_afe981baa9bf488bd5d58a0f23c585630} 
+override int Unity\+Engine.\+Input\+System.\+Layouts.\+Input\+Device\+Matcher.\+Get\+Hash\+Code (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compute a hash code for the device matcher. 
+
+\begin{DoxyReturn}{Returns}
+A hash code for the matcher.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a5e15ff278278cda90188af18f2ec4475}\index{UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}!MatchPercentage@{MatchPercentage}}
+\index{MatchPercentage@{MatchPercentage}!UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}}
+\doxysubsubsection{\texorpdfstring{MatchPercentage()}{MatchPercentage()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a5e15ff278278cda90188af18f2ec4475} 
+float Unity\+Engine.\+Input\+System.\+Layouts.\+Input\+Device\+Matcher.\+Match\+Percentage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description}{Input\+Device\+Description}}}]{device\+Description}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the level of matching to the given {\itshape device\+Description} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+Description} & A device description.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A score usually in the range between 0 and 1.
+\end{DoxyReturn}
+
+
+The algorithm computes a score of how well the matcher matches the given description. Essentially, a matcher that matches every single property that is present (as in not {\ttfamily null} and not an empty string) in {\itshape device\+Description}  receives a score of 1, a matcher that matches none a score of 0. Matches that match only a subset receive a score in-\/between.
+
+An exception to this are capabilities. Every single match of a capability is counted as one property match and added to the score. This means that matchers that match on multiple capabilities may actually achieve a score \texorpdfstring{$>$}{>}1.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ description\ =\ \textcolor{keyword}{new}\ InputDeviceDescription}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ interfaceName\ =\ \textcolor{stringliteral}{"{}HID"{}},}
+\DoxyCodeLine{\ \ \ \ product\ =\ \textcolor{stringliteral}{"{}MadeUpDevice"{}},}
+\DoxyCodeLine{\ \ \ \ capabilities\ =\ \textcolor{keyword}{new}\ HID.HIDDeviceDescriptor}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ vendorId\ =\ 0xABC,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ productId\ =\ 0xDEF}
+\DoxyCodeLine{\ \ \ \ \}.ToJson()}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ This\ matcher\ will\ achieve\ a\ score\ of\ 0.666\ (2/3)\ as\ it}}
+\DoxyCodeLine{\textcolor{comment}{//\ matches\ two\ out\ of\ three\ available\ properties.}}
+\DoxyCodeLine{\textcolor{keyword}{new}\ InputDeviceMatcher()}
+\DoxyCodeLine{\ \ \ \ .WithInterface(\textcolor{stringliteral}{"{}HID"{}})}
+\DoxyCodeLine{\ \ \ \ .WithProduct(\textcolor{stringliteral}{"{}MadeUpDevice"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ This\ matcher\ will\ achieve\ a\ score\ of\ 1\ despite\ not\ matching}}
+\DoxyCodeLine{\textcolor{comment}{//\ 'product'.\ The\ reason\ is\ that\ it\ matches\ two\ keys\ in}}
+\DoxyCodeLine{\textcolor{comment}{//\ 'capabilities'.}}
+\DoxyCodeLine{\textcolor{keyword}{new}\ InputDeviceMatcher()}
+\DoxyCodeLine{\ \ \ \ .WithInterface(\textcolor{stringliteral}{"{}HID"{}})}
+\DoxyCodeLine{\ \ \ \ .WithCapability(\textcolor{stringliteral}{"{}vendorId"{}},\ 0xABC)}
+\DoxyCodeLine{\ \ \ \ .WithCapability(\textcolor{stringliteral}{"{}productId"{}},\ 0xDEF);}
+
+\end{DoxyCode}
+ \Hypertarget{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a09c0e7687ed1ca6153dbe8731e5ac620}\index{UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a09c0e7687ed1ca6153dbe8731e5ac620} 
+static bool Unity\+Engine.\+Input\+System.\+Layouts.\+Input\+Device\+Matcher.\+operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{Input\+Device\+Matcher}}}]{left}{, }\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{Input\+Device\+Matcher}}}]{right}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Compare two matchers for non-\/equivalence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & First device matcher.\\
+\hline
+{\em right} & Second device matcher.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the two matchers are not equivalent.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_ab46012e6aad95ebd20232a3ff54d1d63}{Equals(\+Input\+Device\+Matcher)}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a8a27a6b0b1b56e53eacfe3fbdee51d75}\index{UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}!operator==@{operator==}}
+\index{operator==@{operator==}!UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a8a27a6b0b1b56e53eacfe3fbdee51d75} 
+static bool Unity\+Engine.\+Input\+System.\+Layouts.\+Input\+Device\+Matcher.\+operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{Input\+Device\+Matcher}}}]{left}{, }\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{Input\+Device\+Matcher}}}]{right}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Compare two matchers for equivalence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & First device matcher.\\
+\hline
+{\em right} & Second device matcher.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the two matchers are equivalent.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_ab46012e6aad95ebd20232a3ff54d1d63}{Equals(\+Input\+Device\+Matcher)}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a05b97c4fc75e02e765a409dbaaf3043e}\index{UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}!ToString@{ToString}}
+\index{ToString@{ToString}!UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a05b97c4fc75e02e765a409dbaaf3043e} 
+override string Unity\+Engine.\+Input\+System.\+Layouts.\+Input\+Device\+Matcher.\+To\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return a string representation useful for debugging. Lists the \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a0d662d9029da106a566f873d6c09f894}{patterns} contained in the matcher. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the matcher.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a888eb3272d49c57567881bad869f3d85}\index{UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}!WithCapability$<$ TValue $>$@{WithCapability$<$ TValue $>$}}
+\index{WithCapability$<$ TValue $>$@{WithCapability$<$ TValue $>$}!UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}}
+\doxysubsubsection{\texorpdfstring{WithCapability$<$ TValue $>$()}{WithCapability< TValue >()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a888eb3272d49c57567881bad869f3d85} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{Input\+Device\+Matcher}} Unity\+Engine.\+Input\+System.\+Layouts.\+Input\+Device\+Matcher.\+With\+Capability$<$ TValue $>$ (\begin{DoxyParamCaption}\item[{string}]{path}{, }\item[{TValue}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a pattern to \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a0d662d9029da106a566f873d6c09f894}{patterns} to match an individual capability in \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description_a6f70b95dcd1e56d25852864abd6d6071}{Input\+Device\+Description.\+capabilities}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to the JSON property using \textquotesingle{}/\textquotesingle{} as a separator, e.\+g. {\ttfamily "{}elements/count"{}}.\\
+\hline
+{\em value} & Value to match. This can be a string, a regular expression, a boolean, an integer, or a float. Floating-\/point numbers are matched with respect for {\ttfamily Mathf.\+Epsilon}. Values are converted between types automatically as needed (meaning that a bool can be compared to a string, for example).\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TValue} & Type of value to match.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The modified device matcher with the added pattern.
+\end{DoxyReturn}
+
+
+Capabilities are stored as JSON strings in \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description_a6f70b95dcd1e56d25852864abd6d6071}{Input\+Device\+Description.\+capabilities}. A matcher has the ability to match specific properties from the JSON object contained in the capabilities string.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ The\ description\ for\ a\ HID\ will\ usually\ have\ a\ HIDDeviceDescriptor\ in}}
+\DoxyCodeLine{\textcolor{comment}{//\ JSON\ format\ found\ on\ its\ InputDeviceDescription.capabilities.\ So,\ a}}
+\DoxyCodeLine{\textcolor{comment}{//\ real-\/world\ device\ description\ could\ look\ the\ equivalent\ of\ this:}}
+\DoxyCodeLine{var\ description\ =\ \textcolor{keyword}{new}\ InputDeviceDescription}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ interfaceName\ =\ \textcolor{stringliteral}{"{}HID"{}},}
+\DoxyCodeLine{\ \ \ \ capabilities\ =\ \textcolor{keyword}{new}\ HID.HIDDeviceDescriptor}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ vendorId\ =\ 0x54C,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ productId\ =\ 0x9CC}
+\DoxyCodeLine{\ \ \ \ \}.ToJson()}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ We\ can\ create\ a\ device\ matcher\ that\ looks\ for\ those\ to\ properties}}
+\DoxyCodeLine{\textcolor{comment}{//\ directly\ in\ the\ JSON\ object.}}
+\DoxyCodeLine{\textcolor{keyword}{new}\ InputDeviceMatcher()}
+\DoxyCodeLine{\ \ \ \ .WithCapability(\textcolor{stringliteral}{"{}vendorId"{}},\ 0x54C)}
+\DoxyCodeLine{\ \ \ \ .WithCapability(\textcolor{stringliteral}{"{}productId"{}},\ 0x9CC);}
+
+\end{DoxyCode}
+ 
+
+Properties in nested objects can be referenced by separating properties with {\ttfamily /} and properties in arrays can be indexed with {\ttfamily \mbox{[}..\mbox{]}}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description_a6f70b95dcd1e56d25852864abd6d6071}{Input\+Device\+Description.\+capabilities}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a546eaeb1555627efffb3e5c2804be078}\index{UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}!WithDeviceClass@{WithDeviceClass}}
+\index{WithDeviceClass@{WithDeviceClass}!UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}}
+\doxysubsubsection{\texorpdfstring{WithDeviceClass()}{WithDeviceClass()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a546eaeb1555627efffb3e5c2804be078} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{Input\+Device\+Matcher}} Unity\+Engine.\+Input\+System.\+Layouts.\+Input\+Device\+Matcher.\+With\+Device\+Class (\begin{DoxyParamCaption}\item[{string}]{pattern}{, }\item[{bool}]{support\+Regex}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a pattern to \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a0d662d9029da106a566f873d6c09f894}{patterns} to match a \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description_a3f520f70f0a42b21e62ee89576afb692}{Input\+Device\+Description.\+device\+Class}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pattern} & String to match.\\
+\hline
+{\em support\+Regex} & If true (default), {\itshape pattern}  can be a regular expression.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The modified device matcher with the added pattern.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description_a3f520f70f0a42b21e62ee89576afb692}{Input\+Device\+Description.\+device\+Class}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a5a1bfe691a99a357ba7e255f31fc97c3}\index{UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}!WithInterface@{WithInterface}}
+\index{WithInterface@{WithInterface}!UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}}
+\doxysubsubsection{\texorpdfstring{WithInterface()}{WithInterface()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a5a1bfe691a99a357ba7e255f31fc97c3} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{Input\+Device\+Matcher}} Unity\+Engine.\+Input\+System.\+Layouts.\+Input\+Device\+Matcher.\+With\+Interface (\begin{DoxyParamCaption}\item[{string}]{pattern}{, }\item[{bool}]{support\+Regex}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a pattern to \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a0d662d9029da106a566f873d6c09f894}{patterns} to match an \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description_a4658c543407dcb1df8aaa037f3a7a8cd}{Input\+Device\+Description.\+interface\+Name}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pattern} & String to match.\\
+\hline
+{\em support\+Regex} & If true (default), {\itshape pattern}  can be a regular expression.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The modified device matcher with the added pattern.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description_a4658c543407dcb1df8aaa037f3a7a8cd}{Input\+Device\+Description.\+interface\+Name}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a700ce11913b2b8d049d0ab331b9ff36a}\index{UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}!WithManufacturer@{WithManufacturer}}
+\index{WithManufacturer@{WithManufacturer}!UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}}
+\doxysubsubsection{\texorpdfstring{WithManufacturer()}{WithManufacturer()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a700ce11913b2b8d049d0ab331b9ff36a} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{Input\+Device\+Matcher}} Unity\+Engine.\+Input\+System.\+Layouts.\+Input\+Device\+Matcher.\+With\+Manufacturer (\begin{DoxyParamCaption}\item[{string}]{pattern}{, }\item[{bool}]{support\+Regex}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a pattern to \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a0d662d9029da106a566f873d6c09f894}{patterns} to match a \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description_aabe946947fa0af55989d77fb39cb852e}{Input\+Device\+Description.\+manufacturer}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pattern} & String to match.\\
+\hline
+{\em support\+Regex} & If true (default), {\itshape pattern}  can be a regular expression.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The modified device matcher with the added pattern.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description_aabe946947fa0af55989d77fb39cb852e}{Input\+Device\+Description.\+manufacturer}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a1e6796ed1a5a756002bf87dfab9e6b29}\index{UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}!WithProduct@{WithProduct}}
+\index{WithProduct@{WithProduct}!UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}}
+\doxysubsubsection{\texorpdfstring{WithProduct()}{WithProduct()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a1e6796ed1a5a756002bf87dfab9e6b29} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{Input\+Device\+Matcher}} Unity\+Engine.\+Input\+System.\+Layouts.\+Input\+Device\+Matcher.\+With\+Product (\begin{DoxyParamCaption}\item[{string}]{pattern}{, }\item[{bool}]{support\+Regex}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a pattern to \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a0d662d9029da106a566f873d6c09f894}{patterns} to match a \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description_a326ea0e3dd66f65aaadb6bb2b8267655}{Input\+Device\+Description.\+product}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pattern} & String to match.\\
+\hline
+{\em support\+Regex} & If true (default), {\itshape pattern}  can be a regular expression.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The modified device matcher with the added pattern.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description_a326ea0e3dd66f65aaadb6bb2b8267655}{Input\+Device\+Description.\+product}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a66b52099de260cbfd1c2d84e603e6946}\index{UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}!WithVersion@{WithVersion}}
+\index{WithVersion@{WithVersion}!UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}}
+\doxysubsubsection{\texorpdfstring{WithVersion()}{WithVersion()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a66b52099de260cbfd1c2d84e603e6946} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher}{Input\+Device\+Matcher}} Unity\+Engine.\+Input\+System.\+Layouts.\+Input\+Device\+Matcher.\+With\+Version (\begin{DoxyParamCaption}\item[{string}]{pattern}{, }\item[{bool}]{support\+Regex}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a pattern to \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a0d662d9029da106a566f873d6c09f894}{patterns} to match a \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description_a7d1814b6f7354f513633bcdb9890f103}{Input\+Device\+Description.\+version}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pattern} & String to match.\\
+\hline
+{\em support\+Regex} & If true (default), {\itshape pattern}  can be a regular expression.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The modified device matcher with the added pattern.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description_a7d1814b6f7354f513633bcdb9890f103}{Input\+Device\+Description.\+version}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_aefd5828553bea4165e443ea5fd472e05}\index{UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}!empty@{empty}}
+\index{empty@{empty}!UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}}
+\doxysubsubsection{\texorpdfstring{empty}{empty}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_aefd5828553bea4165e443ea5fd472e05} 
+bool Unity\+Engine.\+Input\+System.\+Layouts.\+Input\+Device\+Matcher.\+empty\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+If true, the matcher has been default-\/initialized and contains no matching \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a0d662d9029da106a566f873d6c09f894}{patterns}. 
+
+Whether the matcher contains any matching patterns.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a0d662d9029da106a566f873d6c09f894}{patterns}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a0d662d9029da106a566f873d6c09f894}\index{UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}!patterns@{patterns}}
+\index{patterns@{patterns}!UnityEngine.InputSystem.Layouts.InputDeviceMatcher@{UnityEngine.InputSystem.Layouts.InputDeviceMatcher}}
+\doxysubsubsection{\texorpdfstring{patterns}{patterns}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a0d662d9029da106a566f873d6c09f894} 
+IEnumerable$<$Key\+Value\+Pair$<$string, object$>$ $>$ Unity\+Engine.\+Input\+System.\+Layouts.\+Input\+Device\+Matcher.\+patterns\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The list of patterns to match. 
+
+List of matching patterns.
+
+Each pattern is comprised of a key and a value. The key determines which part of an \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description}{Input\+Device\+Description} to match.
+
+The value represents the expected value. This can be either a plain string (matched case-\/insensitive) or a regular expression. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a5a1bfe691a99a357ba7e255f31fc97c3}{With\+Interface}, \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a888eb3272d49c57567881bad869f3d85}{With\+Capability$<$\+TValue$>$}, \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a1e6796ed1a5a756002bf87dfab9e6b29}{With\+Product}, \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a700ce11913b2b8d049d0ab331b9ff36a}{With\+Manufacturer}, \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a66b52099de260cbfd1c2d84e603e6946}{With\+Version}, \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_matcher_a546eaeb1555627efffb3e5c2804be078}{With\+Device\+Class}
+
+
+\end{DoxySeeAlso}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Devices/Input\+Device\+Matcher.\+cs\end{DoxyCompactItemize}

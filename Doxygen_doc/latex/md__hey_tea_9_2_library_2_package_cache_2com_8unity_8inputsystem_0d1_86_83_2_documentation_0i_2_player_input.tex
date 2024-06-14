@@ -1,0 +1,178 @@
+\chapter{The Player\+Input component}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input}\index{The PlayerInput component@{The PlayerInput component}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input_autotoc_md1508}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input_autotoc_md1508}%
+ The Input \doxylink{namespace_system}{System} provides two related components that simplify how you set up and work with input\+: the {\bfseries{\doxylink{class_player}{Player} Input}} component and the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input_manager}{{\bfseries{Player Input Manager}}}{0} component.
+
+The {\bfseries{\doxylink{class_player}{Player} Input}} component represents a single player, and that player\textquotesingle{}s associated \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions}{Input Actions}{0}, whereas the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input_manager}{{\bfseries{Player Input Manager}}}{0} component handles setups that allow for several concurrent users (for example, player lobbies and split-\/screen gameplay in a game).\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input_autotoc_md1509}{}\doxysection{\texorpdfstring{The Player Input component}{The Player Input component}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input_autotoc_md1509}
+
+
+{\itshape Above, the \doxylink{class_player}{Player} Input component as visible in the inspector, with an Actions Asset called "{}\+Example\+Actions"{} assigned.}
+
+Each \href{../api/UnityEngine.InputSystem.PlayerInput.html}{\texttt{ {\ttfamily Player\+Input}}} instance represents a separate player or user. You can use multiple {\ttfamily Player\+Input} instances at the same time (although not on the same {\ttfamily Game\+Object}) to represent local multiplayer setups. The Input \doxylink{namespace_system}{System} pairs each player to a unique set of Devices that the player uses exclusively, but you can also manually pair Devices in a way that enables two or more players to share a Device (for example, left/right keyboard splits or hot seat use).
+
+Each {\ttfamily Player\+Input} corresponds to one \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_user_management}{{\ttfamily Input\+User}}{0}. You can use \href{../api/UnityEngine.InputSystem.PlayerInput.html\#UnityEngine_InputSystem_PlayerInput_user}{\texttt{ {\ttfamily Player\+Input.\+user}}} to query the {\ttfamily Input\+User} from the component.
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: These components are built on top of the public Input \doxylink{namespace_system}{System} API. As such, they don\textquotesingle{}t do anything that you can\textquotesingle{}t program yourself. They are meant primarily as an easy, out-\/of-\/the-\/box setup that eliminates much of the need for custom scripting.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input_autotoc_md1510}{}\doxysection{\texorpdfstring{Getting started}{Getting started}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input_autotoc_md1510}
+To get started using the \doxylink{class_player}{Player} Input component, use the following steps\+:
+
+
+\begin{DoxyEnumerate}
+\item \href{https://docs.unity3d.com/Manual/UsingComponents.html}{\texttt{ Add}} a {\bfseries{\doxylink{class_player}{Player} Input}} component to a Game\+Object. This would usually be the Game\+Object that represents the player in your game.~\newline
+~\newline
+
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_assets}{Create an Input Actions asset}{0}. You can do this by clicking the "{}\+Create Actions..."{} button which is visible in the \doxylink{class_player}{Player} Input component inspector if you have not yet assigned actions to it (shown below).~\newline
+~\newline
+~\newline
+~\newline
+
+\item When creating the actions asset, \doxylink{namespace_unity}{Unity} asks you where to create the new Asset. Choose a name and folder inside the {\bfseries{Assets}} folder of your Project (or just accept the defaults) and select Okay. This creates a new {\ttfamily .inputactions} Asset in your Project, connects it to the \doxylink{class_player}{Player} Input component, and brings up the editor window for the Input Action asset.~\newline
+~\newline
+
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_assets}{Configure the Actions Asset}{0} so that it contains the actions you want your users to be able to perform, bound to the controls they should use to perform them.~\newline
+~\newline
+~\newline
+~\newline
+
+\item Set up Action responses, by selecting a {\bfseries{Behaviour}} type from the Behaviour menu. The Behaviour type you select affects how you should implement the methods that handle your Action responses. See the notification behaviors section further down for details.~\newline
+~\newline
+~\newline
+~\newline
+
+\end{DoxyEnumerate}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input_autotoc_md1511}{}\doxysection{\texorpdfstring{Configuring the Player Input component}{Configuring the Player Input component}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input_autotoc_md1511}
+You can use the following properties to configure {\ttfamily Player\+Input}\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+\href{../api/UnityEngine.InputSystem.PlayerInput.html\#UnityEngine_InputSystem_PlayerInput_actions}{\texttt{ {\ttfamily Actions}}}   &The set of \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions}{Input Actions}{0} associated with the player. To receive input, each player must have an associated set of Actions. See documentation on Actions for details.    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.PlayerInput.html\#UnityEngine_InputSystem_PlayerInput_defaultControlScheme}{\texttt{ {\ttfamily Default Control Scheme}}}   &Which \href{ActionBindings.md\#control-schemes}{\texttt{ Control Scheme}} (from what is defined in \href{../api/UnityEngine.InputSystem.PlayerInput.html\#UnityEngine_InputSystem_PlayerInput_actions}{\texttt{ {\ttfamily Actions}}}) to enable by default.    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.PlayerInput.html\#UnityEngine_InputSystem_PlayerInput_defaultActionMap}{\texttt{ {\ttfamily Default Action Map}}}   &Which \href{Actions.md\#overview}{\texttt{ Action Map}} in \href{../api/UnityEngine.InputSystem.PlayerInput.html\#UnityEngine_InputSystem_PlayerInput_actions}{\texttt{ {\ttfamily Actions}}} to enable by default. If set to {\ttfamily None}, then the player starts with no Actions being enabled.    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.PlayerInput.html\#UnityEngine_InputSystem_PlayerInput_camera}{\texttt{ {\ttfamily Camera}}}   &The individual camera associated with the player. This is only required when employing \href{PlayerInputManager.md\#split-screen}{\texttt{ split-\/screen}} setups and has no effect otherwise.    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.PlayerInput.html\#UnityEngine_InputSystem_PlayerInput_notificationBehavior}{\texttt{ {\ttfamily Behavior}}}   &How the {\ttfamily Player\+Input} component notifies game code about things that happen with the player. See documentation on notification behaviors.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input_autotoc_md1512}{}\doxysubsection{\texorpdfstring{Actions}{Actions}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input_autotoc_md1512}
+To receive input, each player must have an associated set of Input Actions. When you create these via the \doxylink{class_player}{Player} Input inspector\textquotesingle{}s {\bfseries{Create Actions}} button, the Input \doxylink{namespace_system}{System} creates a default set of Actions. However, the \doxylink{class_player}{Player} Input component places no restrictions on the arrangement of Actions.
+
+The \doxylink{class_player}{Player} Input component automatically handles \href{Actions.md\#using-actions}{\texttt{ enabling and disabling}} Actions, and also handles installing \href{Actions.md\#responding-to-actions}{\texttt{ callbacks}} on the Actions. When multiple \doxylink{class_player}{Player} Input components use the same Actions, the components automatically create \href{Actions.md\#using-actions-with-multiple-players}{\texttt{ private copies of the Actions}}.
+
+When first enabled, the \doxylink{class_player}{Player} Input component enables all Actions from the the \href{../api/UnityEngine.InputSystem.PlayerInput.html\#UnityEngine_InputSystem_PlayerInput_defaultActionMap}{\texttt{ {\ttfamily Default Action Map}}}. If no default Action Map exists, the \doxylink{class_player}{Player} Input component does not enable any Actions. To manually enable Actions, you can call \href{../api/UnityEngine.InputSystem.InputActionMap.html\#UnityEngine_InputSystem_InputActionMap_Enable}{\texttt{ {\ttfamily Enable}}} and \href{../api/UnityEngine.InputSystem.InputActionMap.html\#UnityEngine_InputSystem_InputActionMap_Disable}{\texttt{ {\ttfamily Disable}}} on the Action Maps or Actions, like you would do \href{Actions.md\#using-actions}{\texttt{ without {\ttfamily Player\+Input}}}. To check which Action Map is currently enabled, or to switch to a different one, use the \href{../api/UnityEngine.InputSystem.PlayerInput.html\#UnityEngine_InputSystem_PlayerInput_currentActionMap}{\texttt{ {\ttfamily Player\+Input.\+current\+Action\+Map}}} property. To switch Action Maps with an Action Map name, you can also call \href{../api/UnityEngine.InputSystem.PlayerInput.html\#UnityEngine_InputSystem_PlayerInput_SwitchCurrentActionMap_System_String_}{\texttt{ {\ttfamily Player\+Input.\+Switch\+Current\+Action\+Map}}}.
+
+To disable a player\textquotesingle{}s input, call \href{../api/UnityEngine.InputSystem.PlayerInput.html\#UnityEngine_InputSystem_PlayerInput_DeactivateInput}{\texttt{ {\ttfamily Player\+Input.\+Deactivate\+Input}}}. To re-\/enable it, call \href{../api/UnityEngine.InputSystem.PlayerInput.html\#UnityEngine_InputSystem_PlayerInput_ActivateInput}{\texttt{ {\ttfamily Player\+Input.\+Activate\+Input}}}. The latter enables the default Action Map, if it exists.
+
+When {\ttfamily Player\+Input} is disabled, it automatically disables the currently active Action Map (\href{../api/UnityEngine.InputSystem.PlayerInput.html\#UnityEngine_InputSystem_PlayerInput_currentActionMap}{\texttt{ {\ttfamily Player\+Input.\+current\+Action\+Map}}}) and disassociate any Devices paired to the player.
+
+See the notification behaviors section below for how to be notified when player triggers an Action.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input_autotoc_md1513}{}\doxysubsection{\texorpdfstring{When using {\bfseries{Send Messages}} or {\bfseries{Broadcast Messages}}}{When using {\bfseries{Send Messages}} or {\bfseries{Broadcast Messages}}}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input_autotoc_md1513}
+When the notification behavior of {\ttfamily Player\+Input} is set to {\bfseries{Send Messages}} or {\bfseries{Broadcast Messages}}, you can set your app to respond to Actions by defining methods in components like so\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyPlayerScript\ :\ MonoBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ "{}jump"{}\ action\ becomes\ "{}OnJump"{}\ method.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ If\ you're\ not\ interested\ in\ the\ value\ from\ the\ control\ that\ triggers\ the\ action,\ use\ a\ method\ without\ arguments.}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ OnJump()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ your\ Jump\ code\ here}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ If\ you\ are\ interested\ in\ the\ value\ from\ the\ control\ that\ triggers\ an\ action,\ you\ can\ declare\ a\ parameter\ of\ type\ InputValue.}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ OnMove(InputValue\ value)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Read\ value\ from\ control.\ The\ type\ depends\ on\ what\ type\ of\ controls.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ action\ is\ bound\ to.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ v\ =\ value.Get<Vector2>();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ IMPORTANT:}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ given\ InputValue\ is\ only\ valid\ for\ the\ duration\ of\ the\ callback.\ Storing\ the\ InputValue\ references\ somewhere\ and\ calling\ Get<T>()\ later\ does\ not\ work\ correctly.}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+The component must be on the same {\ttfamily Game\+Object} if you are using {\ttfamily Send Messages}, or on the same or any child {\ttfamily Game\+Object} if you are using {\ttfamily Broadcast Messages}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input_autotoc_md1514}{}\doxysubsection{\texorpdfstring{When using {\bfseries{Invoke Unity Events}}}{When using {\bfseries{Invoke Unity Events}}}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input_autotoc_md1514}
+When the notification behavior of {\ttfamily Player\+Input} is set to {\ttfamily Invoke \doxylink{namespace_unity}{Unity} Events}, each Action has to be routed to a target method. The methods have the same format as the \href{Actions.md\#action-callbacks}{\texttt{ {\ttfamily started}, {\ttfamily performed}, and {\ttfamily canceled} callbacks}} on \href{../api/UnityEngine.InputSystem.InputAction.html}{\texttt{ {\ttfamily Input\+Action}}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyPlayerScript\ :\ MonoBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ OnFire(InputAction.CallbackContext\ context)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ OnMove(InputAction.CallbackContext\ context)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ value\ =\ context.ReadValue<Vector2>();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input_autotoc_md1515}{}\doxysubsection{\texorpdfstring{Notification behaviors}{Notification behaviors}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input_autotoc_md1515}
+You can use the \href{../api/UnityEngine.InputSystem.PlayerInput.html\#UnityEngine_InputSystem_PlayerInput_notificationBehavior}{\texttt{ {\ttfamily Behavior}}} property in the Inspector to determine how a {\ttfamily Player\+Input} component notifies game code when something related to the player has occurred.
+
+The following options are available\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Behavior   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Behavior   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+\href{../api/UnityEngine.InputSystem.PlayerNotifications.html}{\texttt{ {\ttfamily Send Messages}}}   &Uses \href{https://docs.unity3d.com/ScriptReference/GameObject.SendMessage.html}{\texttt{ {\ttfamily Game\+Object.\+Send\+Message}}} on the {\ttfamily Game\+Object} that the {\ttfamily Player\+Input} component belongs to.    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.PlayerNotifications.html}{\texttt{ {\ttfamily Broadcast Messages}}}   &Uses \href{https://docs.unity3d.com/ScriptReference/GameObject.BroadcastMessage.html}{\texttt{ {\ttfamily Game\+Object.\+Broadcast\+Message}}} on the {\ttfamily Game\+Object} that the {\ttfamily Player\+Input} component belongs to. This broadcasts the message down the {\ttfamily Game\+Object} hierarchy.    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.PlayerNotifications.html}{\texttt{ {\ttfamily Invoke Unity Events}}}   &Uses a separate \href{https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html}{\texttt{ {\ttfamily Unity\+Event}}} for each individual type of message. When this is selected, the events available on the {\ttfamily Player\+Input} are accessible from the {\bfseries{Events}} foldout. The argument received by events triggered for Actions is the same as the one received by \href{Actions.md\#action-callbacks}{\texttt{ {\ttfamily started}, {\ttfamily performed}, and {\ttfamily canceled} callbacks}}.~\newline
+~\newline
+    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.PlayerNotifications.html}{\texttt{ {\ttfamily Invoke CSharp Events}}}   &Similar to {\ttfamily Invoke \doxylink{namespace_unity}{Unity} Events}, except that the events are plain C\# events available on the {\ttfamily Player\+Input} API. You cannot configure these from the Inspector. Instead, you have to register callbacks for the events in your scripts.~\newline
+~\newline
+The following events are available\+:~\newline
+~\newline
+
+\begin{DoxyItemize}
+\item \href{../api/UnityEngine.InputSystem.PlayerInput.html\#UnityEngine_InputSystem_PlayerInput_onActionTriggered}{\texttt{ {\ttfamily on\+Action\+Triggered}}} (collective event for all actions on the player)
+\item \href{../api/UnityEngine.InputSystem.PlayerInput.html\#UnityEngine_InputSystem_PlayerInput_onDeviceLost}{\texttt{ {\ttfamily on\+Device\+Lost}}}
+\item \href{../api/UnityEngine.InputSystem.PlayerInput.html\#UnityEngine_InputSystem_PlayerInput_onDeviceRegained}{\texttt{ {\ttfamily on\+Device\+Regained}}}
+\end{DoxyItemize}\\\cline{1-2}
+\end{longtabu}
+
+
+In addition to per-\/action notifications, {\ttfamily Player\+Input} sends the following general notifications\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Notification   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Notification   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+\href{../api/UnityEngine.InputSystem.PlayerInput.html\#UnityEngine_InputSystem_PlayerInput_DeviceLostMessage}{\texttt{ {\ttfamily Device\+Lost\+Message}}}   &The player has lost one of the Devices assigned to it. This can happen, for example, if a wireless device runs out of battery.    \\\cline{1-2}
+\href{../api/UnityEngine.InputSystem.PlayerInput.html\#UnityEngine_InputSystem_PlayerInput_DeviceRegainedMessage}{\texttt{ {\ttfamily Device\+Regained\+Message}}}   &Notification that triggers when the player recovers from Device loss and is good to go again.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input_autotoc_md1516}{}\doxysubsection{\texorpdfstring{Device assignments}{Device assignments}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input_autotoc_md1516}
+Each {\ttfamily Player\+Input} can have one or more Devices assigned to it. By default, no two {\ttfamily Player\+Input} components are assigned the same Devices, but you can force this; to do so, manually assign Devices to a player when calling \href{../api/UnityEngine.InputSystem.PlayerInput.html\#UnityEngine_InputSystem_PlayerInput_Instantiate_UnityEngine_GameObject_System_Int32_System_String_System_Int32_UnityEngine_InputSystem_InputDevice_}{\texttt{ {\ttfamily Player\+Input.\+Instantiate}}}, or call \href{../api/UnityEngine.InputSystem.Users.InputUser.html\#UnityEngine_InputSystem_Users_InputUser_PerformPairingWithDevice_UnityEngine_InputSystem_InputDevice_UnityEngine_InputSystem_Users_InputUser_UnityEngine_InputSystem_Users_InputUserPairingOptions_}{\texttt{ {\ttfamily Input\+User.\+Perform\+Pairing\+With\+Device}}} on the {\ttfamily Input\+User} of a {\ttfamily Player\+Input}.
+
+If the {\ttfamily Player\+Input} component has any Devices assigned, it matches these to the \href{ActionBindings.md\#control-schemes}{\texttt{ Control Schemes}} in the associated Action Asset, and only enables Control Schemes which match its Input Devices.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input_autotoc_md1517}{}\doxysubsection{\texorpdfstring{UI input}{UI input}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_player_input_autotoc_md1517}
+The {\ttfamily Player\+Input} component can work together with an \href{UISupport.md\#setting-up-ui-input}{\texttt{ {\ttfamily Input\+System\+UIInput\+Module}}} to drive the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_u_i_support}{UI system}{0}.
+
+To set this up, assign a reference to a {\ttfamily Input\+System\+UIInput\+Module} component in the \href{../api/UnityEngine.InputSystem.PlayerInput.html\#UnityEngine_InputSystem_PlayerInput_uiInputModule}{\texttt{ {\ttfamily UI Input Module}}} field of the {\ttfamily Player\+Input} component. The {\ttfamily Player\+Input} and {\ttfamily Input\+System\+UIInput\+Module} components should be configured to work with the same \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_actions}{{\ttfamily Input\+Action\+Asset}}{0} for this to work.
+
+Once you\textquotesingle{}ve completed this setup, when the {\ttfamily Player\+Input} component configures the Actions for a specific player, it assigns the same Action configuration to the {\ttfamily Input\+System\+UIInput\+Module}. In other words, the same Action and Device configuration that controls the player now also controls the UI.
+
+If you use \href{UISupport.md\#multiplayer-uis}{\texttt{ {\ttfamily Multiplayer\+Event\+System}}} components to dispatch UI events, you can also use this setup to simultaneously have multiple UI instances on the screen, each controlled by a separate player. 

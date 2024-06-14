@@ -1,0 +1,280 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Samples.\+In\+Game\+Hints.\+In\+Game\+Hints\+Actions Class Reference}
+\hypertarget{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions}{}\label{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions}\index{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions@{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions}}
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Samples.\+In\+Game\+Hints.\+In\+Game\+Hints\+Actions\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.807017cm]{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_1_1_gameplay_actions}{Gameplay\+Actions}}
+\item 
+interface \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_1_1_i_gameplay_actions}{IGameplay\+Actions}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_aebe0b5b35d2afa93d90226f7a0961f50}\label{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_aebe0b5b35d2afa93d90226f7a0961f50} 
+void {\bfseries Dispose} ()
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_a90fb662f512bcaba4045899c8783ebe5}{Contains}} (\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} action)
+\begin{DoxyCompactList}\small\item\em Check whether the given action is contained in this collection. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_a8219cc2ade9d0c690f144375a53ada6e}\label{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_a8219cc2ade9d0c690f144375a53ada6e} 
+IEnumerator$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} $>$ {\bfseries Get\+Enumerator} ()
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_aa524aa06348f93778712c3c1b958698c}{Enable}} ()
+\begin{DoxyCompactList}\small\item\em Enable all actions in the collection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_acdc019614fa56f7c9f22fa59948a0080}{Disable}} ()
+\begin{DoxyCompactList}\small\item\em Disable all actions in the collection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_a4df29d2c4b78d831bd9bcebe69e6733a}{Find\+Action}} (string action\+Name\+Or\+Id, bool throw\+If\+Not\+Found=false)
+\begin{DoxyCompactList}\small\item\em Find an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action} in the collection by its \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a18e68eda84c66e46fc7908fe67b8ffce}{Input\+Action.\+name} or by its \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a20c55a69282fe033ba0ca4ce706e4a68}{Input\+Action.\+id} (in string form). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_a223b0357ee8ff17768fc7cb8c3e662d7}{Find\+Binding}} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_ae90ad4f003c0301054974040f72101ef}{binding\+Mask}}, out \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} action)
+\begin{DoxyCompactList}\small\item\em Find the index of the first binding that matches the given mask. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_abb9bf6c39606b7394e889a2602d2c469}\label{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_abb9bf6c39606b7394e889a2602d2c469} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset}} {\bfseries asset}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}}? \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_ae90ad4f003c0301054974040f72101ef}{binding\+Mask}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Optional mask applied to all bindings in the collection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}} $>$? \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_afeee8a383a99149c131bc5aa6715c532}{devices}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Devices to use with the actions in this collection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_a4321da04d626e81ce71a7e2e352c5ca3}{control\+Schemes}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of control schemes defined for the set of actions. \end{DoxyCompactList}\item 
+IEnumerable$<$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_ae01fc07ec2733c86a6e9696967ecb6fd}{bindings}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Iterate over all bindings in the collection of actions. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_a194fbfeca720147b05db26e8a894a414}\label{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_a194fbfeca720147b05db26e8a894a414} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_1_1_gameplay_actions}{Gameplay\+Actions}} {\bfseries Gameplay}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_a7063fe5331acc689241aa04c92d91120}\label{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_a7063fe5331acc689241aa04c92d91120} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme}} {\bfseries Gamepad\+Scheme}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_a947a721dc6099e15b8244d34ef52780e}\label{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_a947a721dc6099e15b8244d34ef52780e} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme}} {\bfseries Keyboard\+Mouse\+Scheme}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection2}{Unity\+Engine.\+Input\+System.\+IInput\+Action\+Collection2}}}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection}{Unity\+Engine.\+Input\+System.\+IInput\+Action\+Collection}}}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_a90fb662f512bcaba4045899c8783ebe5}\index{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions@{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions}!Contains@{Contains}}
+\index{Contains@{Contains}!UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions@{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions}}
+\doxysubsubsection{\texorpdfstring{Contains()}{Contains()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_a90fb662f512bcaba4045899c8783ebe5} 
+bool Unity\+Engine.\+Input\+System.\+Samples.\+In\+Game\+Hints.\+In\+Game\+Hints\+Actions.\+Contains (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}}}]{action}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check whether the given action is contained in this collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & An arbitrary input action.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the given action is contained in the collection, false if not.
+\end{DoxyReturn}
+
+
+Calling this method will not allocate GC memory (unlike when iterating generically over the collection). Also, a collection may have a faster containment check rather than having to search through all its actions. 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection_aa038480af169867a065be1fe05019375}{Unity\+Engine.\+Input\+System.\+IInput\+Action\+Collection}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_acdc019614fa56f7c9f22fa59948a0080}\index{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions@{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions}!Disable@{Disable}}
+\index{Disable@{Disable}!UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions@{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions}}
+\doxysubsubsection{\texorpdfstring{Disable()}{Disable()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_acdc019614fa56f7c9f22fa59948a0080} 
+void Unity\+Engine.\+Input\+System.\+Samples.\+In\+Game\+Hints.\+In\+Game\+Hints\+Actions.\+Disable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Disable all actions in the collection. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a301a6f1f456e71eee25363f62861ff93}{Input\+Action.\+Disable}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a10b7ab479ef1419726f2d05927fd1b70}{Input\+Action.\+enabled}
+
+
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection_aeaad86d3df3da4e4b94ef2ad974c140d}{Unity\+Engine.\+Input\+System.\+IInput\+Action\+Collection}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_aa524aa06348f93778712c3c1b958698c}\index{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions@{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions}!Enable@{Enable}}
+\index{Enable@{Enable}!UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions@{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions}}
+\doxysubsubsection{\texorpdfstring{Enable()}{Enable()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_aa524aa06348f93778712c3c1b958698c} 
+void Unity\+Engine.\+Input\+System.\+Samples.\+In\+Game\+Hints.\+In\+Game\+Hints\+Actions.\+Enable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enable all actions in the collection. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_abc6ff7728cbf947406b3c426cf82437f}{Input\+Action.\+Enable}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a10b7ab479ef1419726f2d05927fd1b70}{Input\+Action.\+enabled}
+
+
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection_af6d1e3249a79440f298f58d76fa29874}{Unity\+Engine.\+Input\+System.\+IInput\+Action\+Collection}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_a4df29d2c4b78d831bd9bcebe69e6733a}\index{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions@{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions}!FindAction@{FindAction}}
+\index{FindAction@{FindAction}!UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions@{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions}}
+\doxysubsubsection{\texorpdfstring{FindAction()}{FindAction()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_a4df29d2c4b78d831bd9bcebe69e6733a} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} Unity\+Engine.\+Input\+System.\+Samples.\+In\+Game\+Hints.\+In\+Game\+Hints\+Actions.\+Find\+Action (\begin{DoxyParamCaption}\item[{string}]{action\+Name\+Or\+Id}{, }\item[{bool}]{throw\+If\+Not\+Found}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Find an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action} in the collection by its \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a18e68eda84c66e46fc7908fe67b8ffce}{Input\+Action.\+name} or by its \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a20c55a69282fe033ba0ca4ce706e4a68}{Input\+Action.\+id} (in string form). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em action\+Name\+Or\+Id} & Name of the action as either a "{}map/action"{} combination (e.\+g. "{}gameplay/fire"{}) or a simple name. In the former case, the name is split at the \textquotesingle{}/\textquotesingle{} slash and the first part is used to find a map with that name and the second part is used to find an action with that name inside the map. In the latter case, all maps are searched in order and the first action that has the given name in any of the maps is returned. Note that name comparisons are case-\/insensitive.\\
+\hline
+\end{DoxyParams}
+Alternatively, the given string can be a GUID as given by \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a20c55a69282fe033ba0ca4ce706e4a68}{Input\+Action.\+id}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em throw\+If\+Not\+Found} & If {\ttfamily true}, instead of returning {\ttfamily null} when the action cannot be found, throw {\ttfamily Argument\+Exception}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The action with the corresponding name or {\ttfamily null} if no matching action could be found.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & {\itshape action\+Name\+Or\+Id}  is {\ttfamily null}.\\
+\hline
+{\em Argument\+Exception} & Thrown if {\itshape throw\+If\+Not\+Found}  is true and the action could not be found. -\/Or-\/ If {\itshape action\+Name\+Or\+Id}  contains a slash but is missing either the action or the map name.\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection2_a0f6e41199ba25af25636d27cd93257f0}{Unity\+Engine.\+Input\+System.\+IInput\+Action\+Collection2}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_a223b0357ee8ff17768fc7cb8c3e662d7}\index{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions@{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions}!FindBinding@{FindBinding}}
+\index{FindBinding@{FindBinding}!UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions@{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions}}
+\doxysubsubsection{\texorpdfstring{FindBinding()}{FindBinding()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_a223b0357ee8ff17768fc7cb8c3e662d7} 
+int Unity\+Engine.\+Input\+System.\+Samples.\+In\+Game\+Hints.\+In\+Game\+Hints\+Actions.\+Find\+Binding (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}}}]{mask}{, }\item[{out \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}}}]{action}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Find the index of the first binding that matches the given mask. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mask} & A binding. See \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_aa69fd73f446257c84723c95ad8fbcbe8}{Input\+Binding.\+Matches} for details.\\
+\hline
+{\em action} & Receives the action on which the binding was found. If none was found, will be set to {\ttfamily null}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index into \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a44fdaf3ff9ffc22609a9df942372d9bb}{Input\+Action.\+bindings} of {\itshape action}  of the binding that matches {\itshape mask} . If no binding matches, will return -\/1.
+\end{DoxyReturn}
+
+
+For details about matching bindings by a mask, see \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_aa69fd73f446257c84723c95ad8fbcbe8}{Input\+Binding.\+Matches}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ index\ =\ playerInput.actions.FindBinding(}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{new}\ InputBinding\ \{\ path\ =\ \textcolor{stringliteral}{"{}<Gamepad>/buttonSouth"{}}\ \},}
+\DoxyCodeLine{\ \ \ \ out\ var\ action);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (index\ !=\ -\/1)}
+\DoxyCodeLine{\ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}The\ A\ button\ is\ bound\ to\ \{action\}"{}});}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_aa69fd73f446257c84723c95ad8fbcbe8}{Input\+Binding.\+Matches}, \doxylink{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_ae01fc07ec2733c86a6e9696967ecb6fd}{bindings}
+
+
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection2_ac2b4ad61416ee0b940f870f7bad530d8}{Unity\+Engine.\+Input\+System.\+IInput\+Action\+Collection2}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_ae90ad4f003c0301054974040f72101ef}\index{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions@{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions}!bindingMask@{bindingMask}}
+\index{bindingMask@{bindingMask}!UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions@{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions}}
+\doxysubsubsection{\texorpdfstring{bindingMask}{bindingMask}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_ae90ad4f003c0301054974040f72101ef} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}}? Unity\+Engine.\+Input\+System.\+Samples.\+In\+Game\+Hints.\+In\+Game\+Hints\+Actions.\+binding\+Mask\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Optional mask applied to all bindings in the collection. 
+
+If this is not null, only bindings that match the mask will be used.
+
+Modifying this property while any of the actions in the collection are enabled will lead to the actions getting disabled temporarily and then re-\/enabled. 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection_a99d15983a157b1da3f30a0144e4f2791}{Unity\+Engine.\+Input\+System.\+IInput\+Action\+Collection}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_ae01fc07ec2733c86a6e9696967ecb6fd}\index{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions@{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions}!bindings@{bindings}}
+\index{bindings@{bindings}!UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions@{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions}}
+\doxysubsubsection{\texorpdfstring{bindings}{bindings}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_ae01fc07ec2733c86a6e9696967ecb6fd} 
+IEnumerable$<$\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}}$>$ Unity\+Engine.\+Input\+System.\+Samples.\+In\+Game\+Hints.\+In\+Game\+Hints\+Actions.\+bindings\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Iterate over all bindings in the collection of actions. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map_ae98277c3697a798a28f8b16e187217ff}{Input\+Action\+Map.\+bindings}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a44fdaf3ff9ffc22609a9df942372d9bb}{Input\+Action.\+bindings}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset_a10871f70d955c9b150ca98fafb316b91}{Input\+Action\+Asset.\+bindings}
+
+
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection2_aa6dea8737f0c1b457bb15ceaebe5751c}{Unity\+Engine.\+Input\+System.\+IInput\+Action\+Collection2}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_a4321da04d626e81ce71a7e2e352c5ca3}\index{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions@{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions}!controlSchemes@{controlSchemes}}
+\index{controlSchemes@{controlSchemes}!UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions@{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions}}
+\doxysubsubsection{\texorpdfstring{controlSchemes}{controlSchemes}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_a4321da04d626e81ce71a7e2e352c5ca3} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme}}$>$ Unity\+Engine.\+Input\+System.\+Samples.\+In\+Game\+Hints.\+In\+Game\+Hints\+Actions.\+control\+Schemes\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+List of control schemes defined for the set of actions. 
+
+Control schemes are optional and the list may be empty. 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection_a9587d4d4c077a53a6ce17c8deed9a1c4}{Unity\+Engine.\+Input\+System.\+IInput\+Action\+Collection}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_afeee8a383a99149c131bc5aa6715c532}\index{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions@{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions}!devices@{devices}}
+\index{devices@{devices}!UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions@{UnityEngine.InputSystem.Samples.InGameHints.InGameHintsActions}}
+\doxysubsubsection{\texorpdfstring{devices}{devices}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_samples_1_1_in_game_hints_1_1_in_game_hints_actions_afeee8a383a99149c131bc5aa6715c532} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}}$>$? Unity\+Engine.\+Input\+System.\+Samples.\+In\+Game\+Hints.\+In\+Game\+Hints\+Actions.\+devices\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Devices to use with the actions in this collection. 
+
+REVIEW\+: should this allow restricting to a set of controls instead of confining it to just devices?
+
+If this is set, actions in the collection will exclusively bind to devices in the given list. For example, if two gamepads are present in the system yet only one gamepad is listed here, then a "{}<\+Gamepad>/left\+Stick"{} binding will only bind to the gamepad in the list and not to the one that is only available globally.
+
+Modifying this property after bindings in the collection have already been resolved, will lead to \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a8e3f5d3329be13ca8474314137045af4}{Input\+Action.\+controls} getting refreshed. If any of the actions in the collection are currently in progress (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a86bd545c9dfe1fb0200e296c44389e57}{Input\+Action.\+phase}), the actions will remain unaffected and in progress except if the controls currently driving them (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a472cf9d7e67051b780bca5df73c7bb84}{Input\+Action.\+active\+Control}) are no longer part of any of the selected devices. In that case, the action is \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a905374d6d7af6dc57a54acfa22018976}{Input\+Action.\+canceled}. 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection_a1f8810f3a53393cc9af59f2a88bc2c99}{Unity\+Engine.\+Input\+System.\+IInput\+Action\+Collection}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Samples\texorpdfstring{$\sim$}{\string~}/\+In\+Game\+Hints/In\+Game\+Hints\+Actions.\+cs\end{DoxyCompactItemize}

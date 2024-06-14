@@ -1,0 +1,281 @@
+\doxysection{Example\+Actions Class Reference}
+\hypertarget{class_example_actions}{}\label{class_example_actions}\index{ExampleActions@{ExampleActions}}
+Inheritance diagram for Example\+Actions\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.848797cm]{class_example_actions}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_example_actions_1_1_gameplay_actions}{Gameplay\+Actions}}
+\item 
+interface \mbox{\hyperlink{interface_example_actions_1_1_i_gameplay_actions}{IGameplay\+Actions}}
+\item 
+interface \mbox{\hyperlink{interface_example_actions_1_1_i_menus_actions}{IMenus\+Actions}}
+\item 
+struct \mbox{\hyperlink{struct_example_actions_1_1_menus_actions}{Menus\+Actions}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_example_actions_a74e5c99e69d604455cd95550540dd516}\label{class_example_actions_a74e5c99e69d604455cd95550540dd516} 
+void {\bfseries Dispose} ()
+\item 
+bool \mbox{\hyperlink{class_example_actions_a916398ab62cc25724c4e7e5520d7eece}{Contains}} (\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} action)
+\begin{DoxyCompactList}\small\item\em Check whether the given action is contained in this collection. \end{DoxyCompactList}\item 
+\Hypertarget{class_example_actions_a5555817963c75e70d2368fee54c69a91}\label{class_example_actions_a5555817963c75e70d2368fee54c69a91} 
+IEnumerator$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} $>$ {\bfseries Get\+Enumerator} ()
+\item 
+void \mbox{\hyperlink{class_example_actions_a740eaf15a9dc57134901112abc569247}{Enable}} ()
+\begin{DoxyCompactList}\small\item\em Enable all actions in the collection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_example_actions_a4ebcbecfdb2b7638a774a538cea2befd}{Disable}} ()
+\begin{DoxyCompactList}\small\item\em Disable all actions in the collection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} \mbox{\hyperlink{class_example_actions_a3144bf15d83d039cae53338dcf1eaff6}{Find\+Action}} (string action\+Name\+Or\+Id, bool throw\+If\+Not\+Found=false)
+\begin{DoxyCompactList}\small\item\em Find an Input\+Action in the collection by its Input\+Action.\+name or by its Input\+Action.\+id (in string form). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_example_actions_acc16522e68aec2abcb7b66dfa004ac0a}{Find\+Binding}} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}} \mbox{\hyperlink{class_example_actions_a7f066304589bd32f4f14824b225a398c}{binding\+Mask}}, out \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} action)
+\begin{DoxyCompactList}\small\item\em Find the index of the first binding that matches the given mask. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_example_actions_aaa4943812f2cac6cab1588c5346854e2}\label{class_example_actions_aaa4943812f2cac6cab1588c5346854e2} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset}} {\bfseries asset}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}}? \mbox{\hyperlink{class_example_actions_a7f066304589bd32f4f14824b225a398c}{binding\+Mask}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Optional mask applied to all bindings in the collection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}} $>$? \mbox{\hyperlink{class_example_actions_a3f8486e07a06d31bde0ee9166885a8e0}{devices}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Devices to use with the actions in this collection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme}} $>$ \mbox{\hyperlink{class_example_actions_ae8b8b3cb4a47aa49b722733b3eebc735}{control\+Schemes}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of control schemes defined for the set of actions. \end{DoxyCompactList}\item 
+IEnumerable$<$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}} $>$ \mbox{\hyperlink{class_example_actions_aea30e59ba6d57ff6504c53980a1eebcb}{bindings}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Iterate over all bindings in the collection of actions. \end{DoxyCompactList}\item 
+\Hypertarget{class_example_actions_a5aa6e41289490bd7c8aaed8ede0163cf}\label{class_example_actions_a5aa6e41289490bd7c8aaed8ede0163cf} 
+\mbox{\hyperlink{struct_example_actions_1_1_gameplay_actions}{Gameplay\+Actions}} {\bfseries gameplay}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_example_actions_a0b414b0672b7a11436a6bd8b4bca76c6}\label{class_example_actions_a0b414b0672b7a11436a6bd8b4bca76c6} 
+\mbox{\hyperlink{struct_example_actions_1_1_menus_actions}{Menus\+Actions}} {\bfseries menus}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection2}{Unity\+Engine.\+Input\+System.\+IInput\+Action\+Collection2}}}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection}{Unity\+Engine.\+Input\+System.\+IInput\+Action\+Collection}}}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_example_actions_a916398ab62cc25724c4e7e5520d7eece}\index{ExampleActions@{ExampleActions}!Contains@{Contains}}
+\index{Contains@{Contains}!ExampleActions@{ExampleActions}}
+\doxysubsubsection{\texorpdfstring{Contains()}{Contains()}}
+{\footnotesize\ttfamily \label{class_example_actions_a916398ab62cc25724c4e7e5520d7eece} 
+bool Example\+Actions.\+Contains (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}}}]{action}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check whether the given action is contained in this collection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & An arbitrary input action.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the given action is contained in the collection, false if not.
+\end{DoxyReturn}
+
+
+Calling this method will not allocate GC memory (unlike when iterating generically over the collection). Also, a collection may have a faster containment check rather than having to search through all its actions. 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection_aa038480af169867a065be1fe05019375}{Unity\+Engine.\+Input\+System.\+IInput\+Action\+Collection}}.
+
+\Hypertarget{class_example_actions_a4ebcbecfdb2b7638a774a538cea2befd}\index{ExampleActions@{ExampleActions}!Disable@{Disable}}
+\index{Disable@{Disable}!ExampleActions@{ExampleActions}}
+\doxysubsubsection{\texorpdfstring{Disable()}{Disable()}}
+{\footnotesize\ttfamily \label{class_example_actions_a4ebcbecfdb2b7638a774a538cea2befd} 
+void Example\+Actions.\+Disable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Disable all actions in the collection. 
+
+\begin{DoxySeeAlso}{See also}
+Input\+Action.\+Disable, Input\+Action.\+enabled
+
+
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection_aeaad86d3df3da4e4b94ef2ad974c140d}{Unity\+Engine.\+Input\+System.\+IInput\+Action\+Collection}}.
+
+\Hypertarget{class_example_actions_a740eaf15a9dc57134901112abc569247}\index{ExampleActions@{ExampleActions}!Enable@{Enable}}
+\index{Enable@{Enable}!ExampleActions@{ExampleActions}}
+\doxysubsubsection{\texorpdfstring{Enable()}{Enable()}}
+{\footnotesize\ttfamily \label{class_example_actions_a740eaf15a9dc57134901112abc569247} 
+void Example\+Actions.\+Enable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enable all actions in the collection. 
+
+\begin{DoxySeeAlso}{See also}
+Input\+Action.\+Enable, Input\+Action.\+enabled
+
+
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection_af6d1e3249a79440f298f58d76fa29874}{Unity\+Engine.\+Input\+System.\+IInput\+Action\+Collection}}.
+
+\Hypertarget{class_example_actions_a3144bf15d83d039cae53338dcf1eaff6}\index{ExampleActions@{ExampleActions}!FindAction@{FindAction}}
+\index{FindAction@{FindAction}!ExampleActions@{ExampleActions}}
+\doxysubsubsection{\texorpdfstring{FindAction()}{FindAction()}}
+{\footnotesize\ttfamily \label{class_example_actions_a3144bf15d83d039cae53338dcf1eaff6} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} Example\+Actions.\+Find\+Action (\begin{DoxyParamCaption}\item[{string}]{action\+Name\+Or\+Id}{, }\item[{bool}]{throw\+If\+Not\+Found}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Find an Input\+Action in the collection by its Input\+Action.\+name or by its Input\+Action.\+id (in string form). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em action\+Name\+Or\+Id} & Name of the action as either a "{}map/action"{} combination (e.\+g. "{}gameplay/fire"{}) or a simple name. In the former case, the name is split at the \textquotesingle{}/\textquotesingle{} slash and the first part is used to find a map with that name and the second part is used to find an action with that name inside the map. In the latter case, all maps are searched in order and the first action that has the given name in any of the maps is returned. Note that name comparisons are case-\/insensitive.\\
+\hline
+\end{DoxyParams}
+Alternatively, the given string can be a GUID as given by Input\+Action.\+id.
+
+
+\begin{DoxyParams}{Parameters}
+{\em throw\+If\+Not\+Found} & If {\ttfamily true}, instead of returning {\ttfamily null} when the action cannot be found, throw {\ttfamily Argument\+Exception}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The action with the corresponding name or {\ttfamily null} if no matching action could be found.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & {\itshape action\+Name\+Or\+Id}  is {\ttfamily null}.\\
+\hline
+{\em Argument\+Exception} & Thrown if {\itshape throw\+If\+Not\+Found}  is true and the action could not be found. -\/Or-\/ If {\itshape action\+Name\+Or\+Id}  contains a slash but is missing either the action or the map name.\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection2_a0f6e41199ba25af25636d27cd93257f0}{Unity\+Engine.\+Input\+System.\+IInput\+Action\+Collection2}}.
+
+\Hypertarget{class_example_actions_acc16522e68aec2abcb7b66dfa004ac0a}\index{ExampleActions@{ExampleActions}!FindBinding@{FindBinding}}
+\index{FindBinding@{FindBinding}!ExampleActions@{ExampleActions}}
+\doxysubsubsection{\texorpdfstring{FindBinding()}{FindBinding()}}
+{\footnotesize\ttfamily \label{class_example_actions_acc16522e68aec2abcb7b66dfa004ac0a} 
+int Example\+Actions.\+Find\+Binding (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}}}]{mask}{, }\item[{out \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}}}]{action}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Find the index of the first binding that matches the given mask. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mask} & A binding. See Input\+Binding.\+Matches for details.\\
+\hline
+{\em action} & Receives the action on which the binding was found. If none was found, will be set to {\ttfamily null}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index into Input\+Action.\+bindings of {\itshape action}  of the binding that matches {\itshape mask} . If no binding matches, will return -\/1.
+\end{DoxyReturn}
+
+
+For details about matching bindings by a mask, see Input\+Binding.\+Matches.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ index\ =\ playerInput.actions.FindBinding(}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{new}\ InputBinding\ \{\ path\ =\ \textcolor{stringliteral}{"{}<Gamepad>/buttonSouth"{}}\ \},}
+\DoxyCodeLine{\ \ \ \ out\ var\ action);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (index\ !=\ -\/1)}
+\DoxyCodeLine{\ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}The\ A\ button\ is\ bound\ to\ \{action\}"{}});}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+Input\+Binding.\+Matches, \doxylink{class_example_actions_aea30e59ba6d57ff6504c53980a1eebcb}{bindings}
+
+
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection2_ac2b4ad61416ee0b940f870f7bad530d8}{Unity\+Engine.\+Input\+System.\+IInput\+Action\+Collection2}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_example_actions_a7f066304589bd32f4f14824b225a398c}\index{ExampleActions@{ExampleActions}!bindingMask@{bindingMask}}
+\index{bindingMask@{bindingMask}!ExampleActions@{ExampleActions}}
+\doxysubsubsection{\texorpdfstring{bindingMask}{bindingMask}}
+{\footnotesize\ttfamily \label{class_example_actions_a7f066304589bd32f4f14824b225a398c} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}}? Example\+Actions.\+binding\+Mask\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Optional mask applied to all bindings in the collection. 
+
+If this is not null, only bindings that match the mask will be used.
+
+Modifying this property while any of the actions in the collection are enabled will lead to the actions getting disabled temporarily and then re-\/enabled. 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection_a99d15983a157b1da3f30a0144e4f2791}{Unity\+Engine.\+Input\+System.\+IInput\+Action\+Collection}}.
+
+\Hypertarget{class_example_actions_aea30e59ba6d57ff6504c53980a1eebcb}\index{ExampleActions@{ExampleActions}!bindings@{bindings}}
+\index{bindings@{bindings}!ExampleActions@{ExampleActions}}
+\doxysubsubsection{\texorpdfstring{bindings}{bindings}}
+{\footnotesize\ttfamily \label{class_example_actions_aea30e59ba6d57ff6504c53980a1eebcb} 
+IEnumerable$<$\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}}$>$ Example\+Actions.\+bindings\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Iterate over all bindings in the collection of actions. 
+
+\begin{DoxySeeAlso}{See also}
+Input\+Action\+Map.\+bindings, Input\+Action.\+bindings, Input\+Action\+Asset.\+bindings
+
+
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection2_aa6dea8737f0c1b457bb15ceaebe5751c}{Unity\+Engine.\+Input\+System.\+IInput\+Action\+Collection2}}.
+
+\Hypertarget{class_example_actions_ae8b8b3cb4a47aa49b722733b3eebc735}\index{ExampleActions@{ExampleActions}!controlSchemes@{controlSchemes}}
+\index{controlSchemes@{controlSchemes}!ExampleActions@{ExampleActions}}
+\doxysubsubsection{\texorpdfstring{controlSchemes}{controlSchemes}}
+{\footnotesize\ttfamily \label{class_example_actions_ae8b8b3cb4a47aa49b722733b3eebc735} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme}}$>$ Example\+Actions.\+control\+Schemes\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+List of control schemes defined for the set of actions. 
+
+Control schemes are optional and the list may be empty. 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection_a9587d4d4c077a53a6ce17c8deed9a1c4}{Unity\+Engine.\+Input\+System.\+IInput\+Action\+Collection}}.
+
+\Hypertarget{class_example_actions_a3f8486e07a06d31bde0ee9166885a8e0}\index{ExampleActions@{ExampleActions}!devices@{devices}}
+\index{devices@{devices}!ExampleActions@{ExampleActions}}
+\doxysubsubsection{\texorpdfstring{devices}{devices}}
+{\footnotesize\ttfamily \label{class_example_actions_a3f8486e07a06d31bde0ee9166885a8e0} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}}$>$? Example\+Actions.\+devices\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Devices to use with the actions in this collection. 
+
+REVIEW\+: should this allow restricting to a set of controls instead of confining it to just devices?
+
+If this is set, actions in the collection will exclusively bind to devices in the given list. For example, if two gamepads are present in the system yet only one gamepad is listed here, then a "{}<\+Gamepad>/left\+Stick"{} binding will only bind to the gamepad in the list and not to the one that is only available globally.
+
+Modifying this property after bindings in the collection have already been resolved, will lead to Input\+Action.\+controls getting refreshed. If any of the actions in the collection are currently in progress (see Input\+Action.\+phase), the actions will remain unaffected and in progress except if the controls currently driving them (see Input\+Action.\+active\+Control) are no longer part of any of the selected devices. In that case, the action is Input\+Action.\+canceled. 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection_a1f8810f3a53393cc9af59f2a88bc2c99}{Unity\+Engine.\+Input\+System.\+IInput\+Action\+Collection}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Samples\texorpdfstring{$\sim$}{\string~}/\+Docs\+Examples/\+Actions/Example\+Actions.\+cs\end{DoxyCompactItemize}

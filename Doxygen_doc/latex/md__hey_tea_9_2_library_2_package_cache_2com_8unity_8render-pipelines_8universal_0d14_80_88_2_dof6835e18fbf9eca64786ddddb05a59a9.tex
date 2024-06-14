@@ -1,0 +1,48 @@
+\chapter{How to inject a custom render pass into the URP frame rendering via scripting}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dof6835e18fbf9eca64786ddddb05a59a9}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dof6835e18fbf9eca64786ddddb05a59a9}\index{How to inject a custom render pass into the URP frame rendering via scripting@{How to inject a custom render pass into the URP frame rendering via scripting}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dof6835e18fbf9eca64786ddddb05a59a9_autotoc_md2106}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dof6835e18fbf9eca64786ddddb05a59a9_autotoc_md2106}%
+ This page describes how to inject a custom render pass into the URP frame rendering via scripting, without implementing a custom renderer feature.
+
+
+\begin{DoxyEnumerate}
+\item Subscribe a method to one of the events in the \href{https://docs.unity3d.com/ScriptReference/Rendering.RenderPipelineManager.html}{\texttt{ Render\+Pipeline\+Manager}} class.
+\item In the subscribed method, use the {\ttfamily Enqueue\+Pass} method of a {\ttfamily Scriptable\+Renderer} instance to inject a custom render pass into the URP frame rendering.
+\end{DoxyEnumerate}
+
+Example code\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }EnqueuePass\ :\ MonoBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ BlurSettings\ settings;\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{private}\ BlurRenderPass\ blurRenderPass;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnEnable()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ...}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ blurRenderPass\ =\ \textcolor{keyword}{new}\ BlurRenderPass(settings);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Subscribe\ the\ OnBeginCamera\ method\ to\ the\ beginCameraRendering\ event.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ RenderPipelineManager.beginCameraRendering\ +=\ OnBeginCamera;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDisable()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ RenderPipelineManager.beginCameraRendering\ -\/=\ OnBeginCamera;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ blurRenderPass.Dispose();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ...}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnBeginCamera(ScriptableRenderContext\ context,\ Camera\ cam)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ...}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Use\ the\ EnqueuePass\ method\ to\ inject\ a\ custom\ render\ pass}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ cam.GetUniversalAdditionalCameraData()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ .scriptableRenderer.EnqueuePass(blurRenderPass);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

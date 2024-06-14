@@ -1,0 +1,96 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Processors.\+Clamp\+Processor Class Reference}
+\hypertarget{class_unity_engine_1_1_input_system_1_1_processors_1_1_clamp_processor}{}\label{class_unity_engine_1_1_input_system_1_1_processors_1_1_clamp_processor}\index{UnityEngine.InputSystem.Processors.ClampProcessor@{UnityEngine.InputSystem.Processors.ClampProcessor}}
+
+
+Clamp a floating-\/point input to between \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_clamp_processor_ab66841ff542bb80b9602e3a71fa80582}{min} and \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_clamp_processor_a5422b6fe7cea61651f31243bd7d36aa7}{max}. This is equivalent to {\ttfamily Mathf.\+Clamp(value, min, max)}.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Processors.\+Clamp\+Processor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_input_system_1_1_processors_1_1_clamp_processor}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_processors_1_1_clamp_processor_a809bd5c641f69e5264d07bc46ac1f8ff}{Process}} (float value, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\begin{DoxyCompactList}\small\item\em Clamp {\itshape value}  to the range of \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_clamp_processor_ab66841ff542bb80b9602e3a71fa80582}{min} and \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_clamp_processor_a5422b6fe7cea61651f31243bd7d36aa7}{max}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_processors_1_1_clamp_processor_a958f28950095e28f1bfea65ff732491c}\label{class_unity_engine_1_1_input_system_1_1_processors_1_1_clamp_processor_a958f28950095e28f1bfea65ff732491c} 
+override string {\bfseries To\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor}{Unity\+Engine.\+Input\+System.\+Input\+Processor$<$ float $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+object \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_a7762d91b35f73fc86ac113d932c63d9d}{Process\+As\+Object}} (object value, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\begin{DoxyCompactList}\small\item\em Process an input value, given as an object, and return the processed value as an object. \end{DoxyCompactList}\item 
+override object {\bfseries Process\+As\+Object} (object value, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\item 
+unsafe void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_aad6626f4dc89adb27730b40b03a6e6a7}{Process}} (void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\begin{DoxyCompactList}\small\item\em Process an input value stored in the given memory buffer. \end{DoxyCompactList}\item 
+TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_a2601fec536ab556a5cdc97cb90ee9751}{Process}} (TValue value, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\begin{DoxyCompactList}\small\item\em Process the given value and return the result. \end{DoxyCompactList}\item 
+override unsafe void {\bfseries Process} (void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_processors_1_1_clamp_processor_ab66841ff542bb80b9602e3a71fa80582}\label{class_unity_engine_1_1_input_system_1_1_processors_1_1_clamp_processor_ab66841ff542bb80b9602e3a71fa80582} 
+float {\bfseries min}
+\begin{DoxyCompactList}\small\item\em Minimum value (inclusive!) of the accepted value range. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_processors_1_1_clamp_processor_a5422b6fe7cea61651f31243bd7d36aa7}\label{class_unity_engine_1_1_input_system_1_1_processors_1_1_clamp_processor_a5422b6fe7cea61651f31243bd7d36aa7} 
+float {\bfseries max}
+\begin{DoxyCompactList}\small\item\em Maximum value (inclusive!) of the accepted value range. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor}{Unity\+Engine.\+Input\+System.\+Input\+Processor$<$ float $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4}\label{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4} 
+enum \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4}{Caching\+Policy}} 
+\begin{DoxyCompactList}\small\item\em Caching policy regarding usage of return value from processors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor}{Unity\+Engine.\+Input\+System.\+Input\+Processor$<$ float $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4}{Caching\+Policy}} {\bfseries caching\+Policy}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Caching policy of the processor. Override this property to provide a different value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clamp a floating-\/point input to between \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_clamp_processor_ab66841ff542bb80b9602e3a71fa80582}{min} and \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_clamp_processor_a5422b6fe7cea61651f31243bd7d36aa7}{max}. This is equivalent to {\ttfamily Mathf.\+Clamp(value, min, max)}. 
+
+This processor is registered (see Input\+System.\+Register\+Processor$<$\+T$>$) under the name "{}clamp"{} by default.
+
+Note that no normalization is performed. If you want to re-\/normalize the input value after clamping, add a \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_normalize_processor}{Normalize\+Processor}. Alternatively, add a \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor}{Axis\+Deadzone\+Processor} which both clamps and normalizes.
+
+
+\begin{DoxyCode}{0}
+
+\end{DoxyCode}
+ // Bind to right trigger on gamepad such that the value never drops below 0.\+3 and never goes // above 0.\+7. new \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}(binding\+: "{}<\+Gamepad>/right\+Trigger"{}, processors\+: "{}clamp(min=0.\+3,max=0.\+7)"{}); 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_processors_1_1_clamp_processor_a809bd5c641f69e5264d07bc46ac1f8ff}\index{UnityEngine.InputSystem.Processors.ClampProcessor@{UnityEngine.InputSystem.Processors.ClampProcessor}!Process@{Process}}
+\index{Process@{Process}!UnityEngine.InputSystem.Processors.ClampProcessor@{UnityEngine.InputSystem.Processors.ClampProcessor}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_processors_1_1_clamp_processor_a809bd5c641f69e5264d07bc46ac1f8ff} 
+override float Unity\+Engine.\+Input\+System.\+Processors.\+Clamp\+Processor.\+Process (\begin{DoxyParamCaption}\item[{float}]{value}{, }\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}}]{control}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clamp {\itshape value}  to the range of \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_clamp_processor_ab66841ff542bb80b9602e3a71fa80582}{min} and \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_clamp_processor_a5422b6fe7cea61651f31243bd7d36aa7}{max}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Input value.\\
+\hline
+{\em control} & Ignored.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Clamped value.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Controls/\+Processors/Clamp\+Processor.\+cs\end{DoxyCompactItemize}

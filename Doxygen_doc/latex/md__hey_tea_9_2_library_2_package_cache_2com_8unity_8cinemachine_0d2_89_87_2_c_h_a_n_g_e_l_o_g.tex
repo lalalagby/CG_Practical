@@ -1,0 +1,509 @@
+\chapter{Changelog}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g}\index{Changelog@{Changelog}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md435}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md435}%
+All notable changes to this package will be documented in this file.
+
+The format is based on \href{http://keepachangelog.com/en/1.0.0/}{\texttt{ Keep a Changelog}} and this project adheres to \href{http://semver.org/spec/v2.0.0.html}{\texttt{ Semantic Versioning}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md436}{}\doxysection{\texorpdfstring{\mbox{[}2.\+9.\+7\mbox{]} -\/ 2023-\/05-\/06}{\mbox{[}2.\+9.\+7\mbox{]} -\/ 2023-\/05-\/06}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md436}
+
+\begin{DoxyItemize}
+\item Bugfix\+: Axis\+State was not respecting timescale == 0.
+\item Bugfix\+: Very occasional axis drift in Simple\+Follow when viewing angle is +-\/90 degrees.
+\item URP\+: add temporal effects reset on camera cut for URP 14.\+0.\+4 and up.
+\item Bugfix\+: Mixing\+Camera calls On\+Transition\+From\+Camera correctly for all its children.
+\item Bugfix\+: Passive vcams with noise were not respecting transform\textquotesingle{}s z rotation during blends.
+\item Regression fix\+: Cinemachine\+Smooth\+Path.\+Get\+Local\+Orientation was returning global orientations.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md437}{}\doxysection{\texorpdfstring{\mbox{[}2.\+9.\+5\mbox{]} -\/ 2023-\/01-\/16}{\mbox{[}2.\+9.\+5\mbox{]} -\/ 2023-\/01-\/16}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md437}
+
+\begin{DoxyItemize}
+\item \doxylink{namespace_unity}{Unity} 2022.\+2 and up\+: Focus\+Distance added to lens settings and is pushed to the camera.
+\item Optimized path gizmo drawing. Now 3-\/5 times faster.
+\item Target\+Group now ignores members whose game\+Objects are inactive.
+\item Bugfix\+: Cinemachine\+Path\+Base search radius fixed for not looped paths.
+\item Regression fix\+: POV was not handling Reference\+Up correctly
+\item Bugfix\+: priority ordering was wrong when the difference between any priority values were smaller than integer min or bigger than integer max values.
+\item Bugfix\+: Extensions were not respecting execution order on domain reload.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md438}{}\doxysection{\texorpdfstring{\mbox{[}2.\+9.\+4\mbox{]} -\/ 2022-\/11-\/18}{\mbox{[}2.\+9.\+4\mbox{]} -\/ 2022-\/11-\/18}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md438}
+
+\begin{DoxyItemize}
+\item Bugfix\+: Virtual\+Cameras did not set the focal length property of physical cameras.
+\item Bugfix\+: could not set main camera to physical mode while a vcam with Mode\+Override = None was active
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md439}{}\doxysection{\texorpdfstring{\mbox{[}2.\+9.\+2\mbox{]} -\/ 2022-\/10-\/21}{\mbox{[}2.\+9.\+2\mbox{]} -\/ 2022-\/10-\/21}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md439}
+
+\begin{DoxyItemize}
+\item Bugfix\+: State\+Driven\+Camera/\+Clearshot\+: Transition glitch when backing out of a transition in progress
+\item Bugfix\+: Occasional 1-\/frame glitch when transitioning between some freelooks
+\item Bugfix\+: Transposer with Lock\+To\+Target binding sometimes had gimbal lock.
+\item Bugfix\+: Collider damping is more robust with extreme Free\+Look configurations
+\item Add support for HDRP 14 (\doxylink{namespace_unity}{Unity} 2022.\+2)
+\item Bugfix\+: Input\+Value\+Gain mode of axis input was not framerate-\/independent
+\item Bugfix\+: When recording with an accumulation buffer, camera lens was not always set correctly
+\item Bugfix\+: POV starts up in its centered position, if recentering is enabled
+\item Freelook Force\+Position is more precise now.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md440}{}\doxysection{\texorpdfstring{\mbox{[}2.\+9.\+1\mbox{]} -\/ 2022-\/08-\/24}{\mbox{[}2.\+9.\+1\mbox{]} -\/ 2022-\/08-\/24}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md440}
+
+\begin{DoxyItemize}
+\item Bugfix\+: Cinemachine\+Confiner was not confining correctly when Confine Screen Edges was enabled and the camera was rotated.
+\item Aiming\+Rig sample is only optionally dependent on \doxylink{namespace_unity_engine_1_1_u_i}{Unity\+Engine.\+UI}.
+\item Bugfix\+: A memory leak no longer occurs with Post\+Processing if no PP layer is present on the camera.
+\item Bugfix\+: Confiner2D confines to midpoint when the camera window is bigger than the axis-\/aligned bounding box of the input confiner.
+\item Bugfix\+: The Fade\+Out sample scene shader was culling some objects incorrectly.
+\item Bugfix\+: Freelook had the wrong heading at the first frame, which could cause a slight jitter.
+\item Bugfix\+: Framing\+Transposer and Composer had a slight rounding error in their Bias fields when the Screen X and Y fields were modified.
+\item Bugfix\+: Fixed spurious Z rotations during blend.
+\item Regression fix\+: POV is relative to its parent transform.
+\item Bugfix\+: Blending speed was not set correctly when blending back and forth between the same cameras.
+\item Bugfix\+: Axis\+State.\+Recentering.\+Recenter\+Now() did not work reliably.
+\item Bugfix\+: Sensor\+Size is not saved when not using physical camera.
+\item Bugfix\+: No redundant Repaint\+All\+Views calls.
+\item Clipper library dependency is no longer conflicting with users.
+\item Bugfix\+: Standalone profiler no longer crashes with CM.
+\item Bugfix\+: \doxylink{namespace_cinemachine}{Cinemachine} does not produce compiler error in unity editor versions older than 2020, when Input \doxylink{namespace_system}{System} package is installed.
+\item Bugfix\+: Embedded\+Asset\+Properties were not displayed correctly in the editor.
+\item Bugfix\+: \doxylink{namespace_save_during_play}{Save\+During\+Play} works with ILists now.
+\item Bugfix\+: Paste Virtual\+Camera and Free\+Look components onto prefab works for subcomponents
+\item Bugfix\+: Cinemachine\+Input\+Provider now correctly tracks enabled state of input action
+\item Bugfix\+: POV orientation was incorrect with World Up override
+\item Added Auto\+Enable option to Cinemachine\+Input\+Handler
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md441}{}\doxysection{\texorpdfstring{\mbox{[}2.\+9.\+0-\/pre.\+6\mbox{]} -\/ 2022-\/01-\/12}{\mbox{[}2.\+9.\+0-\/pre.\+6\mbox{]} -\/ 2022-\/01-\/12}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md441}
+
+\begin{DoxyItemize}
+\item Bugfix\+: Negative Near Clip Plane value is kept when camera is orthographic.
+\item Regression fix\+: could not change the projection of the main camera if a CM virtual camera is active.
+\item Regression fix\+: Axis input was ignoring CM\textquotesingle{}s Ignore\+Time\+Scale setting.
+\item New feature\+: Cinemachine\+Brain may control other Game\+Object instead of the one it is attached to.
+\item Bugfix\+: \doxylink{namespace_cinemachine}{Cinemachine} assigns a default input controller delegate that returns 0 when the legacy input system is disabled.
+\item \doxylink{namespace_cinemachine}{Cinemachine} example scenes show informative text when used with Input \doxylink{namespace_system}{System} instead of throwing error messages.
+\item Regression fix\+: compilation errors when physics module is not present.
+\item Regression fix\+: virtual cameras no longer forget that they are targeting groups on domain reload.
+\item Bugfix\+: 3rd\+Person\+Follow logged console messages when looking straight up or down.
+\item Bug\+Fix\+: Input\+Provider no longer causes a tiny gc alloc every frame.
+\item Regression fix\+: Cinemachine\+Collider smoothing time did not reset correctly, so it was working once only.
+\item Bugfix\+: Confiner2D now displays the calculated confining area when its vcam is selected.
+\item \doxylink{namespace_samples}{Samples} no longer throw errors with HDRP and URP. 3rd\+Person\+With\+Aim\+Mode and \doxylink{namespace_timeline}{Timeline} samples no longer have invalid references.
+\item Bugfix\+: 3rd\+Person\+Follow shows a warning message when no follow target is assigned like the rest of the body components.
+\item Added ability to directly set the active blend in Cinemachine\+Brain.
+\item Bugfix\+: On\+Target\+Object\+Warped() did not work properly for 3rd\+Person\+Follow.
+\item Bugfix\+: POV did not properly handle overridden up.
+\item Regression fix\+: removed GC allocs in Update\+Target\+Cache.
+\item Bugfix\+: async scene load/unload could cause jitter.
+\item Bugfix\+: Input system should be read only once per render frame.
+\item Bugfix\+: Blends were sometimes incorrect when src or dst camera is looking along world up axis.
+\item Bugfix\+: Improve accuracy of Group Framing.
+\item New feature\+: Added scene view overlay tools for \doxylink{namespace_cinemachine}{Cinemachine} components.
+\item Cinemachine3rd\+Person\+Aim exposes Aim\+Target, which is the position of where the player would hit.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md442}{}\doxysection{\texorpdfstring{\mbox{[}2.\+8.\+0\mbox{]} -\/ 2021-\/07-\/13}{\mbox{[}2.\+8.\+0\mbox{]} -\/ 2021-\/07-\/13}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md442}
+
+\begin{DoxyItemize}
+\item Bugfix\+: Freelook prefabs won\textquotesingle{}t get corrupted after editing the Prefab via its instances.
+\item Bugfix\+: 3rd\+Person\+Follow works with Aim components now.
+\item Bugfix\+: Blends between vcams, that are rotated so that their up vector is different from World up, are correct now.
+\item Bugfix\+: POV recentering did not always recenter correctly, when an axis range was limited.
+\item Bugfix\+: Collider sometimes bounced a little when the camera radius was large.
+\item Bugfix\+: Cinemachine\+Volume\+Settings inspector was making the game view flicker.
+\item Bugfix\+: Cinemachine\+Volume\+Settings inspector displayed a misleading warning message with URP when focus tracking was enabled.
+\item Bugfix\+: Rapidly toggling active cameras before the blends were finished did not use the correct blend time.
+\item Aiming\+Rig sample scene updated with a better reactive crosshair design.
+\item Added API accessor for Active Blend in Clearshot and State\+Driven\+Camera.
+\item Bugfix\+: Virtual Cameras were not updating in Edit mode when Brain\textquotesingle{}s Blend\+Update\+Mode was Fixed\+Update.
+\item Bugfix\+: Lens mode override was not working correctly in all cases.
+\item Collider2D inspector\+: added warning when collider is of the wrong type.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md443}{}\doxysection{\texorpdfstring{\mbox{[}2.\+8.\+0-\/pre.\+1\mbox{]} -\/ 2021-\/04-\/21}{\mbox{[}2.\+8.\+0-\/pre.\+1\mbox{]} -\/ 2021-\/04-\/21}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md443}
+
+\begin{DoxyItemize}
+\item Switching targets (Follow, Look\+At) is smooth by default. For the old behaviour, set Previous\+State\+Is\+Valid to false after changing the targets.
+\item Bugfix\+: Reversing a blend in progress respects asymmetric blend times.
+\item Regression fix\+: Cm\+Post\+Processing and Cm\+Volume\+Settings components setting Depth of Field now works correctly with Framing Transposer.
+\item Regression fix\+: 3rd\+Person\+Follow kept player in view when Z damping was high.
+\item Regression fix\+: Physical camera properties were overwritten by vcams when "{}override mode\+: physical"{} was not selected.
+\item New sample scene\+: Boss cam demonstrates how to setup a camera that follows the player and looks at the player and the boss. Boss cam also shows examples of custom extensions.
+\item Added simplified modes to Impulse Source.
+\item Added secondary reaction settings to Impulse Listener.
+\item Added Storyboard support for Screen\+Space\+Overlay and Screen\+Space\+Camera camera render modes.
+\item Added Damping\+Into\+Collision and Damping\+From\+Collision properties to Cinemachine3rd\+Person\+Follow to control how gradually the camera moves to correct for occlusions.
+\item Added Cinemachine\+Core.\+On\+Target\+Object\+Warped() to warp all vcams targeting an object.
+\item Added ability for vcam to have a negative near clip plane.
+\item Added Draggable Game Window Guides toggle in \doxylink{namespace_cinemachine}{Cinemachine} preferences. When disabled, Game Window guides are only for visualization.
+\item Added button to virtual camera inspectors to auto-\/generate the Cinemachine\+Input\+Provider component if it is missing.
+\item Default Post\+Processing profile priority is now configurable and defaults to 1000.
+\item Cinemachine3rd\+Person\+Follow now operates without the physics module and without collision resolution.
+\item Bugfix\+: 3rd\+Person\+Follow collision resolution failed when the camera radius was large.
+\item Bugfix\+: 3rd\+Person\+Follow damping occured in world space instead of camera space.
+\item Bugfix\+: 3rd\+Person\+Follow stuttered when Z damping was high.
+\item Regression fix\+: Cinemachine\+Input\+Provider stopped providing input.
+\item Bugfix\+: Lens aspect and sensor\+Size were updated when lens Override\+Mode != None.
+\item Bugfix\+: Changing targets on a live vcam misbehaved.
+\item Bugfix\+: Framing transposer did not handle empty groups.
+\item Bugfix\+: Interrupting a transition with Inherit\+Position enabled did not work.
+\item Bugfix\+: Cinemachine3rd\+Person\+Follow handled collisions by default, now it is disabled by default.
+\item Bugfix\+: \doxylink{namespace_save_during_play}{Save\+During\+Play} saved some components that did not have the \doxylink{namespace_save_during_play}{Save\+During\+Play} attribute.
+\item Regression fix\+: Entries in the custom blends editor in CM Brain inspector were not selectable.
+\item Game\+View guides are drawn only if appropriate inspector subsection is expanded.
+\item Free\+Look rigs are now organized in tabs in the inspector.
+\item New sample scene\+: {\bfseries{Boss cam}} sample scene demonstrates a camera setup to follow the player and to look at the player and the boss. The scene provides examples of custom extensions.
+\item New Sample scene\+: {\bfseries{2D zoom}}, showing how to zoom an orthographic camera with mouse scroll.
+\item New Sample scene\+: {\bfseries{2D fighters}}, showing how to add/remove targets gradually to/from a Target\+Group based on some conditions (here, it is the y coord of the players).
+\item Bugfix\+: Cinemachine\+Collider\textquotesingle{}s displacement damping was being calculated in world space instead of camera space.
+\item Bugfix\+: Tracked\+Dolly sometimes introduced spurious rotations if Default Up and no Aim behaviour.
+\item Bugfix\+: 3rd\+Person\+Follow\textquotesingle{}s shoulder now changes smoothly with respect to world-\/up vector changes.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md444}{}\doxysection{\texorpdfstring{\mbox{[}2.\+7.\+2\mbox{]} -\/ 2021-\/02-\/15}{\mbox{[}2.\+7.\+2\mbox{]} -\/ 2021-\/02-\/15}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md444}
+
+\begin{DoxyItemize}
+\item Cinemachine\+Confiner2D now handles cases where camera window is oversized
+\item New sample scene (Fade\+Out\+Nearby\+Objects) demonstrating fade out effect for objects between camera and target using shaders. The example includes a cinemachine extension giving convenient control over the shader parameters
+\item Bugfix (1293429) -\/ Brain could choose vcam with not the highest priority in some cases
+\item Bugfix\+: \doxylink{namespace_save_during_play}{Save\+During\+Play} also works on prefab instances
+\item Bugfix (1272146) -\/ Adding vcam to a prefab asset no longer causes errors in console
+\item Bugfix (1290171) -\/ Impulse manager was not cleared at playmode start
+\item Nested Scrub Bubble sample removed (filenames too long), available now as embedded package
+\item Compilation guards for physics, animation, and imgui. \doxylink{namespace_cinemachine}{Cinemachine} does not hard depend on anything now
+\item Bugfix\+: CM Story\+Board had a 1 pixel border
+\item Bugfix\+: CM Story\+Board lost viewport reference after hot reload
+\item Bugfix\+: Framing\+Transposer\textquotesingle{}s Target\+Movement\+Only damping caused a flick.
+\item Bugfix\+: Free\+Look small drift when no user input if Simple\+Follow\+With\+World\+Up
+\item Bugfix\+: Inherit\+Position did not work with Simple\+Follow binding mode
+\item Bugfix\+: cleanup straggling post processing profiles when no active vcams
+\item Bugfix\+: Checking whether the Input Action passed to Cinemachine\+Input\+Handler is enabled before using it.
+\item Bugfix\+: 3rd\+Person\+Follow FOV was blended incorrectly when Reference\+Look\+At was set to a faraway target
+\item Bugfix\+: Position predictor not properly reset
+\item Bugfix\+: Create via menu doesn\textquotesingle{}t create as child of selected object
+\item Bugfix\+: Post-\/processing profiles not cleaned up when no active vcams
+\item Bugfix\+: Install Cinemachine\+Examples Asset Package menu item was failing on 2018.\+4 / mac\+OS
+\item New sample scene (2DConfiner\+Complex) demonstrating new Cinemachine\+Confiner2D extension.
+\item Updated Character\+Movement2D script in 2D sample scenes (2DConfined\+Target\+Group, 2DConfiner, 2DConfiner\+Undersized, 2DTarget\+Group) to make jumping responsive.
+\item Updated 2DConfined\+Target\+Group and 2DConfiner scenes to use new Cinemachine\+Confiner2D extension.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md445}{}\doxysection{\texorpdfstring{\mbox{[}2.\+7.\+1\mbox{]} -\/ 2020-\/11-\/14}{\mbox{[}2.\+7.\+1\mbox{]} -\/ 2020-\/11-\/14}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md445}
+
+\begin{DoxyItemize}
+\item New feature\+: Cinemachine\+Confiner2D -\/ Improved 2D confiner.
+\item Added Apply\+After option to Impulse\+Listener, to add control over the ordering of extensions
+\item UI update -\/ Moved \doxylink{namespace_cinemachine}{Cinemachine} menu to Game\+Object Create menu and Right Click context menu for Hierarchy.
+\item Virtual Camera Lens inspector supports display of Horizontal FOV
+\item Virtual Camera Lens can override orthographic and physical camera settings
+\item Bugfix (1060230) -\/ lens inspector sometimes displayed ortho vs perspective incorrectly for a brief time
+\item Bugfix (1283984) -\/ Error message when loading new scene with Dont\+Destroy\+On\+Load
+\item bugfix (1284701) -\/ Edge-\/case exception when vcam is deleted
+\item Storyboard Global Mute moved from \doxylink{namespace_cinemachine}{Cinemachine} menu to \doxylink{namespace_cinemachine}{Cinemachine} preferences.
+\item Bugfix -\/ long-\/idle vcams when reawakened sometimes had a single frame with a huge delta\+Time
+\item Bugfix -\/ Post\+Processing temporarily stopped being applied after exiting play mode
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md446}{}\doxysection{\texorpdfstring{\mbox{[}2.\+6.\+3\mbox{]} -\/ 2020-\/09-\/16}{\mbox{[}2.\+6.\+3\mbox{]} -\/ 2020-\/09-\/16}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md446}
+
+\begin{DoxyItemize}
+\item Regression fix (1274989) -\/ On\+Target\+Object\+Warped broken for Orbital\+Transposer
+\item Bugfix (1276391) -\/ CM Brain Reset did not reset Custom Blends asset in inspector
+\item Bugfix (1276343) -\/ CM Brain inspector custom blends misaligned dropdown arrow
+\item Bugfix (1256530) -\/ disallow multiple components where appropriate
+\item Bugfix\+: Blend\+List camera was incorrectly holding 0-\/length camera cuts
+\item Bugfix (1174993) -\/ CM Brain logo was not added to Hierarchy next to Main Camera after adding vcam for the first time after importing CM.
+\item Bugfix (1100131) -\/ Confiner is aware of 2D collider\textquotesingle{}s offset attribute.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md447}{}\doxysection{\texorpdfstring{\mbox{[}2.\+6.\+2\mbox{]} -\/ 2020-\/09-\/02}{\mbox{[}2.\+6.\+2\mbox{]} -\/ 2020-\/09-\/02}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md447}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md448}{}\doxysubsection{\texorpdfstring{Bugfixes}{Bugfixes}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md448}
+
+\begin{DoxyItemize}
+\item Regression fix\+: On\+Camera\+Cut Memory leak when using \doxylink{namespace_cinemachine}{Cinemachine} with Post\+Processing package
+\item Bugfix (1272146)\+: Checking for null pipeline, before drawing gizmos.
+\item Add support for disabling Physics module
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md449}{}\doxysection{\texorpdfstring{\mbox{[}2.\+6.\+1\mbox{]} -\/ 2020-\/08-\/13}{\mbox{[}2.\+6.\+1\mbox{]} -\/ 2020-\/08-\/13}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md449}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md450}{}\doxysubsection{\texorpdfstring{Bugfixes}{Bugfixes}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md450}
+
+\begin{DoxyItemize}
+\item Regression Fix\+: Post\+Processing/\+Volume\+Settings Focus\+Tracks\+Target was not accounting for look\+At target offset
+\item Regression fix\+: Confiner no longer confines noise and impulse
+\item Bugfix\+: State\+Driven\+Camera was choosing parent state if only 1 clip in blendstate, even though there was a vcam assigned to that clip
+\item Bugfix\+: vertical group composition was not composing properly
+\item Bugfix\+: Cinemachine\+New\+Virtual\+Camera.\+Add\+Component() now works properly
+\item Bugfix\+: removed compile errors when Physics2D module is disabled
+\item Bugfix\+: brain updates on scene loaded or unloaded
+\item Bugfix (1252431)\+: Fixed unnecessary GC Memory allocation every frame when using timeline ~\newline
+
+\item Bugfix (1260385)\+: check for prefab instances correctly
+\item Bugfix (1266191) Clicking on foldout labels in preferences panel toggles their expanded state
+\item Bugfix (1266196) Composer target Size label in preferences panel was too big
+\item Bugfix\+: Scrubbing Cache was locking virtual camera transforms beyond the cache range
+\item Improved performance of path gizmo drawing
+\item \doxylink{namespace_timeline}{Timeline} Scrubbing Cache supports nested timelines, with some known limitations to be addressed with a future \doxylink{namespace_timeline}{Timeline} package release
+\item Added support for deterministic noise in the context of controlled rendering (via Cinemachine\+Core.\+Current\+Time\+Override)
+\item Added Target Offset field to Framing Transposer
+\item Added Multi-\/object edit capabilities to virtual cameras and extensions
+\item Added inspector button to clear the Scrubbing Cache
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md451}{}\doxysection{\texorpdfstring{\mbox{[}2.\+6.\+0\mbox{]} -\/ 2020-\/06-\/04}{\mbox{[}2.\+6.\+0\mbox{]} -\/ 2020-\/06-\/04}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md451}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md452}{}\doxysubsection{\texorpdfstring{New Features and Bugfixes}{New Features and Bugfixes}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md452}
+
+\begin{DoxyItemize}
+\item Added Axis\+State.\+IInput\+Provider API to better support custom input systems
+\item Added Cinemachine\+Inpiut\+Provider behaviour to support \doxylink{namespace_unity}{Unity}\textquotesingle{}s new input system
+\item Added \doxylink{namespace_timeline}{Timeline} Scrubbing cache\+: when enabled, simulates damping and noise when scrubbing in timeline
+\item Added Manual\+Update mode to the Brain, to allow for custom game loop logic
+\item Volume\+Settings/\+Post\+Processing\+: added ability to choose custom target for focus tracking
+\item Added \doxylink{class_cinemachine_recomposer}{Cinemachine\+Recomposer} for timeline-\/tweaking of procedural or recorded vcam Aim output
+\item Added Group\+Weight\+Manipulator for animating group member weights
+\item Impulse\+: Added Propagation\+Speed, to allow the impulse to travel outward in a wave
+\item Impulse\+: added support for continuous impulses
+\item Added Cinemachine\+Independent\+Impulse\+Listener, to give Impulse\+Listener ability to any game object
+\item Added 3rd\+Person\+Follow and 3rd\+Person\+Aim for dead-\/accurate 3rd-\/person aiming camera
+\item Added Force\+Camera\+Position API of virtual cameras, to manually initialize a camera\textquotesingle{}s position and rotation
+\item Added example scenes\+: Aiming Rig and Dual Target to show different 3rd person cmera styles
+\item Framing\+Transposer does its work after Aim, so it plays better with Aim components.
+\item Framing Transposer\+: add Damped Rotations option. If unchecked, changes to the vcam\textquotesingle{}s rotation will bypass Damping, and only target motion will be damped.
+\item Refactored Lookahead -\/ better stability. New behaviour may require some parameter adjustment in existing content
+\item Composer and Framing Transposer\+: improved handling at edge of hard zone (no juddering)
+\item Orbital Transposer / Free\+Look\+: improved damping when target is moving
+\item Custom\+Blends editor UX improvements\+: allow direct editing of vcam names, as well as dropdown
+\item Add Convert to Target\+Group option on Look\+At and Follow target fields
+\item Confiner\+: improved stability when Confine\+Screen\+Edges is selected and confing shape is too small
+\item Extensions now have Pre\+Pipeline\+Mutate\+State callback
+\item Cinemachine\+Core.\+Uniform\+Delta\+Time\+Override works in Edit mode
+\item Added Target\+Attachment property to vcams. Normally 1, this can be used to relax attention to targets -\/ effectively a damping override
+\item Bugfix\+: Blend Update Method handling was incorrect and caused judder in some circumstances
+\item Bugfix\+: Volume\+Settings blending was popping when weight was epsilon if volume altered a non-\/lerpable value
+\item Bugfix (1234813) -\/ Check for deleted freelooks
+\item Bugfix (1219867) -\/ vcam popping on disable if blending
+\item Bugfix (1214301, 1213836) -\/ disallow structural change when editing vcam prefabs
+\item Bugfix (1213471, 1213434)\+: add null check in editor
+\item Bugfix (1213488)\+: no solo for prefab vcams
+\item Bugfix (1213819)\+: repaint\+Game\+View on editor change
+\item Bugfix (1217306)\+: target group position drifting when empty or when members are descendants of the group
+\item Bugfix (1218695)\+: Fully qualify Unity\+Editor.\+Menu to avoid compile errors in some circumstances
+\item Bugfix (1222740)\+: Binding Modes, that don\textquotesingle{}t have control over axis value range, are not affected by it.
+\item Bugfix (1227606)\+: \doxylink{namespace_timeline}{Timeline} preview and playmode not the same for composer with hand-\/animated rotations
+\item Bugfix\+: Confiner\textquotesingle{}s cache is reset, when bounding shape/volume is changed.
+\item Bugfix (1232146)\+: Vcam no longer jerks at edge of confiner bound box.
+\item Bugfix (1234966)\+: Composite\+Collider scale was applied twice.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md453}{}\doxysection{\texorpdfstring{\mbox{[}2.\+5.\+0\mbox{]} -\/ 2020-\/01-\/15}{\mbox{[}2.\+5.\+0\mbox{]} -\/ 2020-\/01-\/15}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md453}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md454}{}\doxysubsection{\texorpdfstring{Support HDRP 7 and URP simultaneously}{Support HDRP 7 and URP simultaneously}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md454}
+
+\begin{DoxyItemize}
+\item Accommodate simultaneous precesnce of HDRP and URP
+\item Regression fix\+: Axis was always recentered in Edit mode, even if recentering is off
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md455}{}\doxysection{\texorpdfstring{\mbox{[}2.\+4.\+0\mbox{]} -\/ 2020-\/01-\/10}{\mbox{[}2.\+4.\+0\mbox{]} -\/ 2020-\/01-\/10}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md455}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md456}{}\doxysubsection{\texorpdfstring{HDRP 7 support and bugfixes}{HDRP 7 support and bugfixes}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md456}
+
+\begin{DoxyItemize}
+\item Storyboard\+: added global mute function
+\item New vcams are by default created matching the scene view camera
+\item Added Apply\+Before\+Body option to POV component, to support working with Framing\+Transposer
+\item Added Rectenter\+Target to POV component
+\item Added On\+Transition\+From\+Camera callback to extensions
+\item Added Damping to Same\+As\+Follow\+Target and Hard\+Lock\+To\+Target components
+\item URP 7.\+1.\+3\+: added Cinemachine\+Pixel\+Perfect extension
+\item Added Speed Mode to Axis\+State, to support direct axis control without max speed
+\item New example scene\+: Over\+The\+Shoulder\+Aim illustrating how to do over-\/the-\/shoulder TPS cam, with Normal and Aim modes
+\item Impulse Manager\+: added option to ignore timescale
+\item Framing Transposer\+: added On\+Transition handling for camera rotation if Inherit\+Position
+\item Upgrade to support HDRP and Universal RP 7.\+0.\+0 API
+\item Upgrade to support HDRP and Universal RP 7.\+1.\+0 API
+\item Removed Resources diretories
+\item Sample scenes now available via package manager
+\item Added optional "{}\+Display Name"{} field to \doxylink{namespace_cinemachine}{Cinemachine} Shot in \doxylink{namespace_timeline}{Timeline}
+\item Added "{}\+Adopt Current Camera Settings"{} item to vcam inspector context menu
+\item Composer and Framing\+Transposer\+: allow the dead zone to extend to 2, and the Screen x,Y can range from -\/0.\+5 to 1.\+5
+\item HDRP\+: lens presets include physical settings if physical camera
+\item Regression Fix\+: Framing Transposer\+: ignore Look\+At target. Use Follow exclusively
+\item Bugfix\+: Framing Transposer was not handling dynamic changes to FOV properly
+\item Bugfix\+: Post\+Processing extension was not handling standby update correctly when on Manager Vcams
+\item Bugfix\+: Post\+Processing extension was leaking a smallamounts of memory when scenes were unloaded
+\item Bugfixes\+: (fogbugz 1193311, 1193307, 1192423, 1192414)\+: disallow presets for vcams
+\item Bugfix\+: In some heading modes, Free\+Look was improperly modifying the axes when activated
+\item Bugfix\+: Orbital transposer was improperly filtering the heading in Target\+Forward heading mode
+\item Bugfix\+: added Embedded\+Asset\+Helper null check
+\item Bugfix\+: composer screen guides drawn in correct place for physical camera
+\item Bugfix\+: Free\+Look was not respecting wait time for X axis recentering
+\item Bugfix\+: Free\+Look X axis was not always perfectly synched between rigs
+\item Bugfix (fogbugz 1176866)\+: Collider\+: clean up static Rigid\+Body on exit
+\item Bugfix (fogbugz 1174180)\+: framing transposer wrong ortho size calculation
+\item Bugfix (fogbugz 1158509)\+: Split brain.\+Update\+Method into Vcam\+Update\+Method and Brain\+Update\+Method, to make blending work correctly
+\item Bugfix (fogbugz 1162074)\+: Framing transposer and group transposer only reached half maximum ortho size
+\item Bugfix (fogbugz 1165599)\+: Transposer\+: fix gimbal lock issue in Lock\+To\+Target\+With\+World\+Up
+\item Bugfix\+: Volume\+Settings\+: handle layermask in HDAdditional\+Camera\+Data
+\item Bugfix\+: use vcam\textquotesingle{}s up when drawing gizmos (orbital transposer and free look)
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md457}{}\doxysection{\texorpdfstring{\mbox{[}2.\+3.\+4\mbox{]} -\/ 2019-\/05-\/22}{\mbox{[}2.\+3.\+4\mbox{]} -\/ 2019-\/05-\/22}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md457}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md458}{}\doxysubsection{\texorpdfstring{Post\+Processing V3 and bugfixes}{Post\+Processing V3 and bugfixes}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md458}
+
+\begin{DoxyItemize}
+\item Added support for Post\+Processing V3 -\/ now called Cinemachine\+Volume\+Sttings
+\item Added Cinemachine\+Core.\+Get\+Blend\+Override delegate to allow applications to override any vcam blend when it happens
+\item When a blend is cancelled by the opposite blend, reduce the blend time
+\item Orthographic cameras allow a Near Clip of 0
+\item \doxylink{namespace_timeline}{Timeline} won\textquotesingle{}t auto-\/create CM brains when something dragged onto it
+\item Confiner\+: Improvement in automatic path invalidation when number of path points path changes
+\item Added Cinemachine\+Inpuit\+Axis\+Driver utility for overriding the default Axis\+State behaviour
+\item \doxylink{class_cinemachine_camera_offset}{Cinemachine\+Camera\+Offset}\+: added customizable stage for when to apply the offset
+\item Added Loop option to Blend\+List Camera
+\item Improved Lookahead\+: does not automatically recenter
+\item Brain no longer applies time scaling to fixed delta
+\item Added dependency on Unity.\+ugui (2019.\+2 and up)
+\item Bugfix\+: potential endless loop when using Ignore tag in Collider
+\item Bugfix\+: Allow externally-\/driven Fee\+Look XAxis to work properly with Simple\+Follow
+\item Bugfix\+: vcams with noise would sometimes show one noiseless frame when they were activated and standby update was not Always
+\item Bugfix\+: Generate a cut event if cutting to a blend-\/in-\/progess (fogbugz 1150847)
+\item Bugfix\+: reset lens shift if not physical camera
+\item Bugfix\+: Collider must consider actual target position, not lookahead position
+\item Bugfix\+: Free\+Look heading Recenter\+Now was not working
+\item Bugfix\+: lookahead now takes the overridden Up into account
+\item Bugfix\+: screen composer guides drawn in wrong place for picture-\/in-\/picture
+\item Bugfix\+: Free\+Look now draws only 1 active composer guide at a time (fogbugz 1138263)
+\item Bugfix\+: cameras sometimes snapped when interrupting blends
+\item Bugfix\+: Path handles no longer scale with the path object
+\item Bugfix\+: Framing Transposer Center on Activate was not working properly (fogbugz 1129824)
+\item Bugfix\+: Free\+Look inherit position
+\item Bugfix\+: collider was pushing camera too far if there were multiple overlapping obstacles
+\item Bugfix\+: use Is\+Assignable\+From instead of Is\+Subclass in several places
+\item Bugfix\+: when interrupting a blend in progress, Cut was not respected
+\item Bugfix\+: collider minimum occlusion time and smoothing time interaction
+\item Bugfix\+: Target\+Group.\+Remove\+Member error (fogbugz 1119028)
+\item Bugfix\+: Target\+Group member lerping jerk when member weight near 0
+\item Bugfix\+: Transposer angular damping should be 0 only if binding mode not Lock\+To\+Target
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md459}{}\doxysection{\texorpdfstring{\mbox{[}2.\+3.\+3\mbox{]} -\/ 2019-\/01-\/08}{\mbox{[}2.\+3.\+3\mbox{]} -\/ 2019-\/01-\/08}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md459}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md460}{}\doxysubsection{\texorpdfstring{Temporary patch to get around a Unity bug in conditional dependencies}{Temporary patch to get around a Unity bug in conditional dependencies}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md460}
+
+\begin{DoxyItemize}
+\item Removed Cinemachine.\+Timeline namespace, as a workaround for fogbugz 1115321
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md461}{}\doxysection{\texorpdfstring{\mbox{[}2.\+3.\+1\mbox{]} -\/ 2019-\/01-\/07}{\mbox{[}2.\+3.\+1\mbox{]} -\/ 2019-\/01-\/07}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md461}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md462}{}\doxysubsection{\texorpdfstring{Bugfixes}{Bugfixes}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md462}
+
+\begin{DoxyItemize}
+\item Added timeline dependency
+\item On\+Target\+Object\+Warped no longer generates garbage
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md463}{}\doxysection{\texorpdfstring{\mbox{[}2.\+3.\+0\mbox{]} -\/ 2018-\/12-\/20}{\mbox{[}2.\+3.\+0\mbox{]} -\/ 2018-\/12-\/20}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md463}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md464}{}\doxysubsection{\texorpdfstring{Support for Unity 2019.\+1}{Support for Unity 2019.\+1}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md464}
+
+\begin{DoxyItemize}
+\item Added dependency on new unity.\+timeline
+\item Added conditional dependence on Post\+Processing\+V2
+\item No copying CM gizmo into assets folder
+\item Free\+Look\+: if inherit position from similar Free\+Looks, bypass damping
+\item \doxylink{namespace_timeline}{Timeline}\+: improve handling when vcam values are tweaked inside shot inspector (fogbugz 1109024)
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md465}{}\doxysection{\texorpdfstring{\mbox{[}2.\+2.\+8\mbox{]} -\/ 2018-\/12-\/10}{\mbox{[}2.\+2.\+8\mbox{]} -\/ 2018-\/12-\/10}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md465}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md466}{}\doxysubsection{\texorpdfstring{Bugfixes, optimizations, and some experimental stuff}{Bugfixes, optimizations, and some experimental stuff}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md466}
+
+\begin{DoxyItemize}
+\item Transposer\+: added Angular Damping Mode, to support quaternion calculations in gimbal-\/lock situations
+\item Framing Transposer and Group Transposer\+: group composing bugfixes, respect min/max limits
+\item Added Conemachine\+Camera\+Offset extension, to offset the camera a fixed distance at the end of the pipeline
+\item Dolly Cart\+: added support for Late\+Update
+\item State-\/driven-\/camera\+: added \mbox{[}No\+Save\+During\+Play\mbox{]} to Animated Target and Layer Index
+\item Added Axis\+State.\+Recentering.\+Recenter\+Now() API call to skip wait time and start recentering now (if enabled)
+\item Added No\+Lens blend hint, to leave camera Lens settings alone
+\item Updated documentation (corrections, and relocation to prevent importing)
+\item Upgrade\+: added support for nested prefabs in \doxylink{namespace_unity}{Unity} 2018.\+3 (fogbugz 1077395)
+\item Optimization\+: position predictor is more efficient
+\item Optimization\+: Composer caches some calculations
+\item Optimization\+: Fix editor slowdown when Lens Presets asset is missing
+\item Experimental\+: Optional new damping algorithm\+: attempt to reduce sensitivity to variable framerate
+\item Experimental\+: Optional new extra-\/efficient versions of vcam and Free\+Look (not back-\/compatible)
+\item \doxylink{namespace_timeline}{Timeline}\+: play/pause doesn\textquotesingle{}t kick out the timeline vcam
+\item Path editor\+: make sure game view gets updated when a path waypoint is dragged in the scene view
+\item Composer guides are shown even if Camera is attached to a render\+Texture
+\item Bugfix\+: allow impulse definition to be a non-\/public field (property drawer was complaining)
+\item Bugfix\+: added null check for when there is no active virtual camera
+\item Bugfix\+: Collision\+Impulse\+Source typo in detection of 2D collider
+\item Bugfix\+: Paste\+Component\+Values to prefab vcams and Free\+Looks were corrupting scene and prefabs
+\item Bugfix\+: \doxylink{namespace_timeline}{Timeline} mixer was glitching for single frames at the end of blends
+\item Bugfix\+: Added On\+Transition\+From\+Camera() to POV and Orbital\+Transposer, to transition axes intelligently
+\item Regression fix\+: if no active vcam, don\textquotesingle{}t set the Camera\textquotesingle{}s transform
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md467}{}\doxysection{\texorpdfstring{\mbox{[}2.\+2.\+7\mbox{]} -\/ 2018-\/07-\/24}{\mbox{[}2.\+2.\+7\mbox{]} -\/ 2018-\/07-\/24}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md467}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md468}{}\doxysubsection{\texorpdfstring{Mostly bugfixes}{Mostly bugfixes}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md468}
+
+\begin{DoxyItemize}
+\item Bugfix\+: fogbugz case 1053595\+: \doxylink{namespace_cinemachine}{Cinemachine} Collider leaves hidden collider at origin that interferes with scene objects
+\item Bugfix\+: fogbugz case 1063754\+: empty target group produces console messages
+\item Bugfix\+: Free\+Look Paste Component Values now pastes the CM subcomponents as well
+\item Bugfix\+: added extra null checks to support cases where current vcam is dynamically deleted
+\item Bugfix\+: reset Blend\+List when enabled
+\item Regression fix\+: Free\+Look axis values get transferred when similar vcams transition
+\item Bugfix\+: cutting to Blend\+List vcam sometimes produced a few bad frames
+\item Bugfix\+: smart update tracks the targets more efficiently and correctly, and supports Rigid\+Body interpolation (2018.\+2 and up)
+\item Enhancement\+: POV component interprets POV as relative to parent transform if there is one
+\item API change\+: On\+Camera\+Live and Camera\+Activated events take outgoing vcam also as parameter (may be null)
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md469}{}\doxysection{\texorpdfstring{\mbox{[}2.\+2.\+0\mbox{]} -\/ 2018-\/06-\/18}{\mbox{[}2.\+2.\+0\mbox{]} -\/ 2018-\/06-\/18}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md469}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md470}{}\doxysubsection{\texorpdfstring{Impulse Module and More}{Impulse Module and More}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md470}
+
+\begin{DoxyItemize}
+\item New \doxylink{namespace_cinemachine}{Cinemachine} Impulse module for event-\/driven camera shakes
+\item New Event Helper script Cinemachine\+Trigger\+Action takes action on Collider and Collider2D enter/exit events, and exposes them as Unity\+Events
+\item New performance-\/tuning feature\+: Standby Update. Controls how often to update the vcam when it\textquotesingle{}s in Standby. ~\newline
+
+\item New Noise\+Settings editor with signal preview
+\item Added Focal Length or Named FOV presets for Camera Lens
+\item Added support for Physical Camera\+: focal length and Lens Offset
+\item New improved Group framing algorithm\+: tighter group framing in Group\+Composer and Framing\+Transposer
+\item Collider\+: now returns Target\+Is\+Obscured if the target is offscreen (great for cameras with fixed aim)
+\item Collider\+: added Minimum Occlusion Time setting, to ignore fleeting obstructions
+\item Collider\+: added Transparent Layers mask, to specify solid objects that don\textquotesingle{}t obstruct view
+\item Collider\+: damping will no longer take the camera through obstacles
+\item Collider\+: Added separate damping setting for when target is being occluded vs when camera is being returned to its normal position
+\item Collider\+: added Smoothing setting, to reduce camera jumpiness in environements with lots of obstacles
+\item Noise\+Settings\+: added checkbox for pure sine-\/wave instead of Perlin wave
+\item If no Look\+At target, Post\+Processing Focus\+Tracks\+Target offset is relative to camera
+\item Tracked\+Dolly\+: Default up mode sets Up to World Up
+\item Virtual Camera\+: New Transitions section in inspector that gives more control over blending\+:
+\begin{DoxyItemize}
+\item Blend Hint provides some control over how the position and rotation are interpolated
+\item Inherit Position checkbox to ensure smooth positional handoff from outgoing camera
+\item On\+Camera\+Live event gets fired when the camera activates. Useful for custom handlers.
+\end{DoxyItemize}
+\item Added Screen\+Space\+Aim\+When\+Targets\+Differ as a vcam blend hint. This influences what happens when blending between vcams with different Look\+At targets
+\item Increased stability of vcams with very small FOVs
+\item Framing Transposer no longer requires Look\+At to be null
+\item Lens\+Settings Aspect, Orthographic, Is\+Physical\+Camera, Sensor\+Size properties no longer internal
+\item Noise Profiles\+: don\textquotesingle{}t magically create assets. Prompt user for filename and location of new or cloned profiles
+\item Refactored interaction between timeline and CM brain, to improve handling of edge cases (fogbugz case 1048497)
+\item Bugfix\+: State\+Driven\+Camera Editor was not finding states if target was Override\+Controller
+\item Bugfix when dragging orbital transposer transform\+: take bias into account
+\item Bugfix\+: \doxylink{namespace_save_during_play}{Save\+During\+Play} was not handling asset fields correctly -\/ was sometimes crushing assets
+\item Bugfix\+: Simple\+Follow transposers were not initilizing their position correctly at game start
+\item Bugfix\+: \doxylink{namespace_timeline}{Timeline} with CM shot was causing jitter in some Fixed\+Update situations
+\item Bugfix\+: Multiple brains with heterogeneous update methods were not behaving correctly. CM will now support this, but you must make sure that the brains have different layer masks.
+\item Example scenes now include use of Cinemachine\+Trigger\+Action script. ~\newline
+
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md471}{}\doxysection{\texorpdfstring{\mbox{[}2.\+1.\+13\mbox{]} -\/ 2018-\/05-\/09}{\mbox{[}2.\+1.\+13\mbox{]} -\/ 2018-\/05-\/09}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md471}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md472}{}\doxysubsection{\texorpdfstring{Removed dependency on nonexistant Timeline package, minor bugfixes}{Removed dependency on nonexistant Timeline package, minor bugfixes}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md472}
+
+\begin{DoxyItemize}
+\item Bugfix\+: Custom Blends "{}\+Any to Any"{} was not working (regression)
+\item Bugfix\+: Composer was sometimes getting wrong aspect if multiple brains with different aspect ratios
+\item Bugfix\+: could not drag vcam transforms if multiple inspectors and one is hidden
+\item Bugfix\+: Framing Transposer initializes in the wrong place -\/ noticeable if dead zone
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md473}{}\doxysection{\texorpdfstring{\mbox{[}2.\+1.\+12\mbox{]} -\/ 2018-\/02-\/26}{\mbox{[}2.\+1.\+12\mbox{]} -\/ 2018-\/02-\/26}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md473}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md474}{}\doxysubsection{\texorpdfstring{Storyboard, Bugfixes and other enhancements. Also some restructuring for Package Manager}{Storyboard, Bugfixes and other enhancements. Also some restructuring for Package Manager}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md474}
+
+\begin{DoxyItemize}
+\item Project restructure\+: Removed Base, \doxylink{namespace_timeline}{Timeline}, and Post\+FX folders from project root. Post\+Processing code must now be manually imported from \doxylink{namespace_cinemachine}{Cinemachine} menu. No more dependencies on scripting defines.
+\item New Storyboard extension, to display images over the vcams. Comes with a Waveform monitor window for color grading
+\item New option to specify vcam position blend style\+: linear, spherical, or cylindrical, based on Look\+At target
+\item Added API to support seamless position warping of target objects\+: On\+Target\+Object\+Warped().
+\item Added support for custom blend curves
+\item Lookahead\+: added Ignore Y Axis Movement option
+\item Added support for cascading blends (i.\+e. blending from mid-\/blend looks better)
+\item POV/\+Orbital/\+Free\+Look axis\+: exposed Min, Max, and Wrap in the UI, for customized axis range
+\item Free\+Look\+: added Y Axis recentering
+\item POV\+: Added recentering feature to both axes
+\item Path\+: Added Normalized Path units option\+: 0 is start of path, 1 is end.
+\item Path\+: added length display in inspector
+\item \doxylink{namespace_timeline}{Timeline} Clip Editor\+: vcam sections are now collapsible
+\item API enhancement\+: added Finalize to Pipeline stages, called even for manager-\/style vcams
+\item Bugfix\+: Post\+Processing V2 DoF blending works better
+\item Bugfix\+: Orbital\+Transposer works better with World\+Up overrides
+\item Bugfix\+: Remove State\+Driven\+Camera "{}not playing a controller"{} warning
+\item Bugfix\+: Handle exceptions thrown by assemblies that don\textquotesingle{}t want to be introspected
+\item Bugfix\+: vcams following physics objects incorrectly snapped to origin after exiting play mode
+\item Bugfix\+: predictor now supports time pause
+\item Bugfix\+: Moved Start\+Coroutine in Brain to On\+Enable()
+\item Bugfix\+: Collider was causing problems in Physics on Android platforms
+\item Bugfix\+: dragging a vcam\textquotesingle{}s position updtaes prefabs properly
+\item Bugfix\+: All extension now respect the "{}enabled"{} checkbox
+\item Bugfix\+: Undo for Extasion add will no longer generate null references
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md475}{}\doxysection{\texorpdfstring{\mbox{[}2.\+1.\+10\mbox{]} -\/ 2017-\/11-\/28}{\mbox{[}2.\+1.\+10\mbox{]} -\/ 2017-\/11-\/28}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md475}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md476}{}\doxysubsection{\texorpdfstring{This is the first UPM release of {\itshape Unity Package Cinemachine}.}{This is the first UPM release of {\itshape Unity Package Cinemachine}.}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md476}
+
+\begin{DoxyItemize}
+\item New Aim component\+: Same As Follow Target simply uses the same orientation as the Follow target
+\item Perlin Noise component\+: added inspector UI to clone or locate existing Noise profiles, and to create new ones
+\item Noise Presets were moved outside of the Examples folder
+\item Example Assets are now included as embedded package, not imported by default
+\item Bugfix\+: Free\+Look with Position\+Delta was not properly updating the heading
+\item Bugfix\+: Transitioning between Free\+Looks simetimes caused a short camera freeze
+\item Bugfix\+: Added some null checks to Free\+Look, to prevent error messages at build time
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md477}{}\doxysection{\texorpdfstring{\mbox{[}2.\+1.\+9\mbox{]} -\/ 2017-\/11-\/17}{\mbox{[}2.\+1.\+9\mbox{]} -\/ 2017-\/11-\/17}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md477}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md478}{}\doxysubsection{\texorpdfstring{Initial version.}{Initial version.}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_c_h_a_n_g_e_l_o_g_autotoc_md478}
+{\itshape Version 2.\+1.\+9 cloned from private development repository, corresponding to package released on the asset store} 

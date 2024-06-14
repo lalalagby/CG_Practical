@@ -1,0 +1,33 @@
+\doxysection{Save\+During\+Play.\+Object\+State\+Saver Class Reference}
+\hypertarget{class_save_during_play_1_1_object_state_saver}{}\label{class_save_during_play_1_1_object_state_saver}\index{SaveDuringPlay.ObjectStateSaver@{SaveDuringPlay.ObjectStateSaver}}
+
+
+Using reflection, this class scans a Game\+Object (and optionally its children) and records all the field settings. This only works for "{}nice"{} field settings within Mono\+Behaviours. Changes to the behaviour stack made between saving and restoring will fool this class.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_save_during_play_1_1_object_state_saver_a5054b020fffb81ed4e47188440770ae1}\label{class_save_during_play_1_1_object_state_saver_a5054b020fffb81ed4e47188440770ae1} 
+void {\bfseries Collect\+Field\+Values} (Game\+Object go)
+\begin{DoxyCompactList}\small\item\em Recursively collect all the field values in the Mono\+Behaviours owned by this object and its descendants. The values are stored in an internal dictionary. \end{DoxyCompactList}\item 
+\Hypertarget{class_save_during_play_1_1_object_state_saver_a79dcbc2e337dae6d3e1062db9c099594}\label{class_save_during_play_1_1_object_state_saver_a79dcbc2e337dae6d3e1062db9c099594} 
+Game\+Object {\bfseries Find\+Saved\+Game\+Object} (Game\+Object\mbox{[}$\,$\mbox{]} roots)
+\item 
+\Hypertarget{class_save_during_play_1_1_object_state_saver_a441104e125fb0c7ceb8b317aa5b55019}\label{class_save_during_play_1_1_object_state_saver_a441104e125fb0c7ceb8b317aa5b55019} 
+bool {\bfseries Put\+Field\+Values} (Game\+Object go, Game\+Object\mbox{[}$\,$\mbox{]} roots)
+\begin{DoxyCompactList}\small\item\em Recursively scan the Mono\+Behaviours of a Game\+Object and its children. For each field found, look up its value in the internal dictionary. If it\textquotesingle{}s present and its value in the dictionary differs from the actual value in the game object, Set the Game\+Object\textquotesingle{}s value using the value recorded in the dictionary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_save_during_play_1_1_object_state_saver_ac3be0b54c7e606b68aeff4d399125eed}\label{class_save_during_play_1_1_object_state_saver_ac3be0b54c7e606b68aeff4d399125eed} 
+static bool {\bfseries Has\+Save\+During\+Play} (Mono\+Behaviour b)
+\begin{DoxyCompactList}\small\item\em Only process components with the \mbox{[}\doxylink{class_save_during_play_1_1_save_during_play}{Save\+During\+Play}\mbox{]} attribute. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Using reflection, this class scans a Game\+Object (and optionally its children) and records all the field settings. This only works for "{}nice"{} field settings within Mono\+Behaviours. Changes to the behaviour stack made between saving and restoring will fool this class. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Editor/\+Utility/Save\+During\+Play.\+cs\end{DoxyCompactItemize}

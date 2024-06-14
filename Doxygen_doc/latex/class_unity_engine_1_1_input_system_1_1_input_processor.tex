@@ -1,0 +1,215 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Input\+Processor\texorpdfstring{$<$}{<} TValue \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_unity_engine_1_1_input_system_1_1_input_processor}{}\label{class_unity_engine_1_1_input_system_1_1_input_processor}\index{UnityEngine.InputSystem.InputProcessor$<$ TValue $>$@{UnityEngine.InputSystem.InputProcessor$<$ TValue $>$}}
+
+
+A processor that conditions/transforms input values.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Input\+Processor\texorpdfstring{$<$}{<} TValue \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_input_system_1_1_input_processor}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4}{Caching\+Policy}} \{ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4a825ad6fa8d13dcc46a8ce49a9d2e4d40}{Cache\+Result}} = 0
+, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4a4be46f7df52f374eba4b58a7cddf070c}{Evaluate\+On\+Every\+Read}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Caching policy regarding usage of return value from processors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+object \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_a7762d91b35f73fc86ac113d932c63d9d}{Process\+As\+Object}} (object value, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\begin{DoxyCompactList}\small\item\em Process an input value, given as an object, and return the processed value as an object. \end{DoxyCompactList}\item 
+unsafe void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_aad6626f4dc89adb27730b40b03a6e6a7}{Process}} (void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\begin{DoxyCompactList}\small\item\em Process an input value stored in the given memory buffer. \end{DoxyCompactList}\item 
+TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_a2601fec536ab556a5cdc97cb90ee9751}{Process}} (TValue value, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\begin{DoxyCompactList}\small\item\em Process the given value and return the result. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_processor_aec9f958a9ef70cd4bb77cb57e8f7dd3e}\label{class_unity_engine_1_1_input_system_1_1_input_processor_aec9f958a9ef70cd4bb77cb57e8f7dd3e} 
+override object {\bfseries Process\+As\+Object} (object value, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_processor_adcd5bf1099095d51c64afdaffa2385a2}\label{class_unity_engine_1_1_input_system_1_1_input_processor_adcd5bf1099095d51c64afdaffa2385a2} 
+override unsafe void {\bfseries Process} (void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_processor_a7ebb134435afbd127a8cdc6b0a58ab89}\label{class_unity_engine_1_1_input_system_1_1_input_processor_a7ebb134435afbd127a8cdc6b0a58ab89} 
+virtual \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4}{Caching\+Policy}} {\bfseries caching\+Policy}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Caching policy of the processor. Override this property to provide a different value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A processor that conditions/transforms input values. 
+
+To define a custom processor, it is usable best to derive from Input\+Processor$<$\+TValue$>$ instead of from this class. Doing so will avoid having to deal with things such as the raw memory buffers of \doxylink{class_unity_engine_1_1_input_system_1_1_input_processor_aad6626f4dc89adb27730b40b03a6e6a7}{Process}.
+
+Note, however, that if you do want to define a processor that can process more than one type of value, you can derive directly from this class. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab152467c6dd260ea1195ccbc9789a76b}{Input\+Binding.\+processors}, Input\+Control\+Layout.\+Control\+Item.\+processors, Input\+System.\+Register\+Processor$<$\+T$>$, Input\+Action\+Rebinding\+Extensions.\+Get\+Parameter\+Value(\+Input\+Action,string,\+Input\+Binding), Input\+Action\+Rebinding\+Extensions.\+Apply\+Parameter\+Override(\+Input\+Action\+Map,string,\+Primitive\+Value,\+Input\+Binding)
+
+
+\end{DoxySeeAlso}
+
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TValue} & Type of value to be processed. Only Input\+Controls that use the same value type will be compatible with the processor.\\
+\hline
+\end{DoxyTemplParams}
+
+
+Each \doxylink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control} can have a stack of processors assigned to it.
+
+Note that processors CANNOT be stateful. If you need processing that requires keeping mutating state over time, use Input\+Actions. All mutable state needs to be kept in the central state buffers.
+
+However, processors can have configurable parameters. Every public field on a processor object can be set using "{}parameters"{} in JSON or by supplying parameters through the \doxylink{class_unity_engine_1_1_input_system_1_1_layouts_1_1_input_control_attribute_a5e61667ca4c886a2215d40fde0050363}{Input\+Control\+Attribute.\+processors} field.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ To\ register\ the\ processor,\ call}}
+\DoxyCodeLine{\textcolor{comment}{//}}
+\DoxyCodeLine{\textcolor{comment}{//\ \ \ \ InputSystem.RegisterProcessor<ScalingProcessor>("{}scale"{});}}
+\DoxyCodeLine{\textcolor{comment}{//}}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ScalingProcessor\ :\ InputProcessor<float>}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ This\ field\ can\ be\ set\ as\ a\ parameter.\ See\ examples\ below.}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ If\ not\ explicitly\ configured,\ will\ have\ its\ default\ value.}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ factor\ =\ 2.0f;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ Process(\textcolor{keywordtype}{float}\ value,\ InputControl\ control)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value\ *\ factor;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Use\ processor\ in\ JSON:}}
+\DoxyCodeLine{\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ json\ =\ \textcolor{stringliteral}{@"{}}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \{}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ "{}"{}name"{}"{}\ :\ "{}"{}MyDevice"{}"{},}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ "{}"{}controls"{}"{}\ :\ [}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \{\ "{}"{}name"{}"{}\ :\ "{}"{}axis"{}"{},\ "{}"{}layout"{}"{}\ :\ "{}"{}Axis"{}"{},\ "{}"{}processors"{}"{}\ :\ "{}"{}scale(factor=4)"{}"{}\ \}}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ ]}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \}}}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Use\ processor\ on\ C\#\ state\ struct:}}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{struct\ }MyDeviceState\ :\ IInputStateTypeInfo}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ [InputControl(layout\ =\ \textcolor{stringliteral}{"{}Axis"{}},\ processors\ =\ \textcolor{stringliteral}{"{}scale(factor=4)"{}}]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ axis;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+See Editor.\+Input\+Parameter\+Editor$<$\+T$>$ for how to define custom parameter editing UIs for processors. 
+
+\begin{DoxySeeAlso}{See also}
+Input\+System.\+Register\+Processor
+
+
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TValue} : {\em struct}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4}\index{UnityEngine.InputSystem.InputProcessor$<$ TValue $>$@{UnityEngine.InputSystem.InputProcessor$<$ TValue $>$}!CachingPolicy@{CachingPolicy}}
+\index{CachingPolicy@{CachingPolicy}!UnityEngine.InputSystem.InputProcessor$<$ TValue $>$@{UnityEngine.InputSystem.InputProcessor$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{CachingPolicy}{CachingPolicy}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4} 
+enum \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4}{Unity\+Engine.\+Input\+System.\+Input\+Processor.\+Caching\+Policy}}}
+
+
+
+Caching policy regarding usage of return value from processors. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CacheResult@{CacheResult}!UnityEngine.InputSystem.InputProcessor$<$ TValue $>$@{UnityEngine.InputSystem.InputProcessor$<$ TValue $>$}}\index{UnityEngine.InputSystem.InputProcessor$<$ TValue $>$@{UnityEngine.InputSystem.InputProcessor$<$ TValue $>$}!CacheResult@{CacheResult}}}\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4a825ad6fa8d13dcc46a8ce49a9d2e4d40}\label{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4} 
+Cache\+Result&Cache result value if unprocessed value has not been changed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EvaluateOnEveryRead@{EvaluateOnEveryRead}!UnityEngine.InputSystem.InputProcessor$<$ TValue $>$@{UnityEngine.InputSystem.InputProcessor$<$ TValue $>$}}\index{UnityEngine.InputSystem.InputProcessor$<$ TValue $>$@{UnityEngine.InputSystem.InputProcessor$<$ TValue $>$}!EvaluateOnEveryRead@{EvaluateOnEveryRead}}}\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4a4be46f7df52f374eba4b58a7cddf070c}\label{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4} 
+Evaluate\+On\+Every\+Read&Process value every call to \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a2130e1c517844e5ae729eba1cd798c94}{Input\+Control$<$\+TValue$>$.\+Read\+Value()} even if unprocessed value has not been changed. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_processor_a2601fec536ab556a5cdc97cb90ee9751}\index{UnityEngine.InputSystem.InputProcessor$<$ TValue $>$@{UnityEngine.InputSystem.InputProcessor$<$ TValue $>$}!Process@{Process}}
+\index{Process@{Process}!UnityEngine.InputSystem.InputProcessor$<$ TValue $>$@{UnityEngine.InputSystem.InputProcessor$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_processor_a2601fec536ab556a5cdc97cb90ee9751} 
+TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor}{Unity\+Engine.\+Input\+System.\+Input\+Processor}}$<$ TValue $>$.Process (\begin{DoxyParamCaption}\item[{TValue}]{value}{, }\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}}]{control}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Process the given value and return the result. 
+
+The implementation of this method must not be stateful. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Input value to process.\\
+\hline
+{\em control} & Control that the value originally came from. This can be null if the value did not originate from a control. This can be the case, for example, if the processor sits on a composite binding (\doxylink{class_unity_engine_1_1_input_system_1_1_input_binding_composite}{Input\+Binding\+Composite}) as composites are not directly associated with controls but rather source their values through their child bindings.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Processed input value.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_processor_aad6626f4dc89adb27730b40b03a6e6a7}\index{UnityEngine.InputSystem.InputProcessor$<$ TValue $>$@{UnityEngine.InputSystem.InputProcessor$<$ TValue $>$}!Process@{Process}}
+\index{Process@{Process}!UnityEngine.InputSystem.InputProcessor$<$ TValue $>$@{UnityEngine.InputSystem.InputProcessor$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_processor_aad6626f4dc89adb27730b40b03a6e6a7} 
+unsafe void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor}{Unity\+Engine.\+Input\+System.\+Input\+Processor}}$<$ TValue $>$.Process (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{int}]{buffer\+Size}{, }\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}}]{control}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Process an input value stored in the given memory buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Memory buffer containing the input value. Must be at least large enough to hold one full value as indicated by {\itshape buffer\+Size} .\\
+\hline
+{\em buffer\+Size} & Size (in bytes) of the value inside {\itshape buffer} .\\
+\hline
+{\em control} & Optional control that the value originated from. Must have the same value type that the processor has.\\
+\hline
+\end{DoxyParams}
+
+
+This method allows processing values of arbitrary size without allocating memory on the GC heap. \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_processor_a7762d91b35f73fc86ac113d932c63d9d}\index{UnityEngine.InputSystem.InputProcessor$<$ TValue $>$@{UnityEngine.InputSystem.InputProcessor$<$ TValue $>$}!ProcessAsObject@{ProcessAsObject}}
+\index{ProcessAsObject@{ProcessAsObject}!UnityEngine.InputSystem.InputProcessor$<$ TValue $>$@{UnityEngine.InputSystem.InputProcessor$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{ProcessAsObject()}{ProcessAsObject()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_processor_a7762d91b35f73fc86ac113d932c63d9d} 
+object \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor}{Unity\+Engine.\+Input\+System.\+Input\+Processor}}$<$ TValue $>$.Process\+As\+Object (\begin{DoxyParamCaption}\item[{object}]{value}{, }\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}}]{control}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Process an input value, given as an object, and return the processed value as an object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & A value matching the processor\textquotesingle{}s value type.\\
+\hline
+{\em control} & Optional control that the value originated from. Must have the same value type that the processor has.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A processed value based on {\itshape value} .
+\end{DoxyReturn}
+
+
+This method allocates GC heap memory. To process values without allocating GC memory, it is necessary to either know the value type of a processor at compile time and call \doxylink{class_unity_engine_1_1_input_system_1_1_input_processor_a2601fec536ab556a5cdc97cb90ee9751}{Input\+Processor$<$\+TValue$>$.\+Process(\+TValue,\+Unity\+Engine.\+Input\+System.\+Input\+Control)} directly or to use \doxylink{class_unity_engine_1_1_input_system_1_1_input_processor_aad6626f4dc89adb27730b40b03a6e6a7}{Process} instead and process values in raw memory buffers. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Controls/Input\+Processor.\+cs\end{DoxyCompactItemize}

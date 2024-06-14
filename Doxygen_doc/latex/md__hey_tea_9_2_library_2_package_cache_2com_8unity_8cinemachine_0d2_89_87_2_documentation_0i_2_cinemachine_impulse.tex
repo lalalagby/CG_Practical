@@ -1,0 +1,22 @@
+\chapter{Impulse}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse}\index{Impulse@{Impulse}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_autotoc_md686}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_autotoc_md686}%
+ \doxylink{namespace_cinemachine}{Cinemachine} Impulse generates and manages camera shake in response to game events. For example, you can use Impulse to make a \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera shake when one Game\+Object collides with another, or when something in your Scene explodes.
+
+Impulse has two parts\+:
+
+{\bfseries{1. \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_75fc99995925f3533366f51e02dd367f}{Impulse Source}{0}}}\+: a component that emits a signal that originates at a point in space and propagates outwards, much like a sound wave or a shock wave. This emission is triggered by events in the game.
+
+The signal consists of a direction, and a curve specifying the strength of the signal as a function of time. Together, these effectively define a shake along a specified axis, lasting a specified amount of time. This shake travels outward from the point of origin, and when it reaches the location of an Impulse Listener, that listener can respond to it.
+
+{\bfseries{2. \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_listener}{Impulse Listener}{0}}}\+: a \doxylink{namespace_cinemachine}{Cinemachine} extension that allows a Virtual Camera to “hear” an impulse, and react to it by shaking.
+
+It’s useful to think about this in terms of individual “impulses.\+” An impulse is a single occurrence of an Impulse Source emitting a signal. Collisions and events in your Scenes {\itshape trigger} impulses, Impulse Sources {\itshape generate} impulses, and Impulse Listeners {\itshape react} to impulses.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_autotoc_md687}{}\doxysection{\texorpdfstring{Getting started with Impulse}{Getting started with Impulse}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_autotoc_md687}
+To set up and use Impulse in a Scene, do the following\+:
+
+
+\begin{DoxyItemize}
+\item Add {\bfseries{\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_source}{Cinemachine Impulse Source}{0}}} or {\bfseries{\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_18be0cd77d67e52cc6eac7de939a1374}{Cinemachine Collision Impulse Source}{0}}} components to one or more Game\+Objects that you want to trigger camera shake.
+\item Add a {\bfseries{\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_listener}{Cinemachine Impulse Listener}{0}}} extension to one or more \doxylink{namespace_cinemachine}{Cinemachine} virtual cameras so they can detect and react to impulses. 
+\end{DoxyItemize}

@@ -1,0 +1,127 @@
+\doxysection{Unity\+Editor.\+Shader\+Graph.\+Copy\+Paste\+Graph Class Reference}
+\hypertarget{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph}{}\label{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph}\index{UnityEditor.ShaderGraph.CopyPasteGraph@{UnityEditor.ShaderGraph.CopyPasteGraph}}
+Inheritance diagram for Unity\+Editor.\+Shader\+Graph.\+Copy\+Paste\+Graph\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_a972417c1d4c7b9405f506720ea351825}\label{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_a972417c1d4c7b9405f506720ea351825} 
+{\bfseries Copy\+Paste\+Graph} (IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_group_data}{Group\+Data}} $>$ groups, IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_abstract_material_node}{Abstract\+Material\+Node}} $>$ nodes, IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_graphing_1_1_edge}{Edge}} $>$ edges, IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_shader_input}{Shader\+Input}} $>$ inputs, IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_category_data}{Category\+Data}} $>$ categories, IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_abstract_shader_property}{Abstract\+Shader\+Property}} $>$ meta\+Properties, IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_shader_keyword}{Shader\+Keyword}} $>$ meta\+Keywords, IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_shader_dropdown}{Shader\+Dropdown}} $>$ meta\+Dropdowns, IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_sticky_note_data}{Sticky\+Note\+Data}} $>$ notes, bool keep\+Output\+Edges=false, bool remove\+Orphan\+Edges=true, Copy\+Paste\+Graph\+Source copy\+Paste\+Graph\+Source=Copy\+Paste\+Graph\+Source.\+Default)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_ad31d27e3583ee5ccc86f37d2ee3a90e1}\label{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_ad31d27e3583ee5ccc86f37d2ee3a90e1} 
+bool {\bfseries Is\+Input\+Categorized} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_shader_input}{Shader\+Input}} shader\+Input)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_af8fbf925e416d6d747f74e3b0a310d59}\label{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_af8fbf925e416d6d747f74e3b0a310d59} 
+bool {\bfseries Is\+Input\+Duplicated\+From\+Category} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_shader_input}{Shader\+Input}} shader\+Input, \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_category_data}{Category\+Data}} input\+Category, \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_graph_data}{Graph\+Data}} target\+Graph\+Data)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_a88e95e3da2c1573869a434a085cac935}\label{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_a88e95e3da2c1573869a434a085cac935} 
+IEnumerable$<$ T $>$ {\bfseries Get\+Nodes$<$ T $>$} ()
+\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_acce3ebb9f0c466f8e524719e6724aed0}{On\+After\+Multi\+Deserialize}} (string json)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_serialization_1_1_json_object}{Unity\+Editor.\+Shader\+Graph.\+Serialization.\+Json\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual T \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_serialization_1_1_json_object_aceabedb8d1a7019e2955dbf26835e4f3}{Cast\+To$<$ T $>$}} ()
+\item 
+virtual string {\bfseries Serialize} ()
+\item 
+virtual void {\bfseries Deserailize} (string type\+Info, string json\+Data)
+\item 
+virtual void {\bfseries On\+Before\+Serialize} ()
+\item 
+virtual void {\bfseries On\+Before\+Deserialize} ()
+\item 
+virtual void {\bfseries On\+After\+Deserialize} ()
+\item 
+virtual void {\bfseries On\+After\+Deserialize} (string json)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_afe6353d4b611a38a67436492650bdcb1}\label{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_afe6353d4b611a38a67436492650bdcb1} 
+\mbox{\hyperlink{struct_unity_editor_1_1_shader_graph_1_1_serialization_1_1_data_value_enumerable}{Data\+Value\+Enumerable}}$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_group_data}{Group\+Data}} $>$ {\bfseries groups}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_a879330e5b62ae52145faa83c769fc923}\label{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_a879330e5b62ae52145faa83c769fc923} 
+\mbox{\hyperlink{struct_unity_editor_1_1_shader_graph_1_1_serialization_1_1_data_value_enumerable}{Data\+Value\+Enumerable}}$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_sticky_note_data}{Sticky\+Note\+Data}} $>$ {\bfseries sticky\+Notes}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_ad2553bb0f40d2943e1ff8081ac6b8f7d}\label{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_ad2553bb0f40d2943e1ff8081ac6b8f7d} 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_graphing_1_1_edge}{Edge}} $>$ {\bfseries edges}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_abe21da9d69bb35cc54528de08655daec}\label{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_abe21da9d69bb35cc54528de08655daec} 
+\mbox{\hyperlink{struct_unity_editor_1_1_shader_graph_1_1_serialization_1_1_ref_value_enumerable}{Ref\+Value\+Enumerable}}$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_shader_input}{Shader\+Input}} $>$ {\bfseries inputs}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_ab740dae449a33124f1cdf08af20fddf8}\label{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_ab740dae449a33124f1cdf08af20fddf8} 
+\mbox{\hyperlink{struct_unity_editor_1_1_shader_graph_1_1_serialization_1_1_data_value_enumerable}{Data\+Value\+Enumerable}}$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_category_data}{Category\+Data}} $>$ {\bfseries categories}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_a7d5345afbb73d0abf900b32de5fdae67}\label{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_a7d5345afbb73d0abf900b32de5fdae67} 
+\mbox{\hyperlink{struct_unity_editor_1_1_shader_graph_1_1_serialization_1_1_data_value_enumerable}{Data\+Value\+Enumerable}}$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_internal_1_1_abstract_shader_property}{Abstract\+Shader\+Property}} $>$ {\bfseries meta\+Properties}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_ae8792ed36e58c8d99ee994e0ce1bffb7}\label{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_ae8792ed36e58c8d99ee994e0ce1bffb7} 
+\mbox{\hyperlink{struct_unity_editor_1_1_shader_graph_1_1_serialization_1_1_data_value_enumerable}{Data\+Value\+Enumerable}}$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_shader_keyword}{Shader\+Keyword}} $>$ {\bfseries meta\+Keywords}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_a8725ce038dc7459f1f5588191cb6dc9b}\label{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_a8725ce038dc7459f1f5588191cb6dc9b} 
+\mbox{\hyperlink{struct_unity_editor_1_1_shader_graph_1_1_serialization_1_1_data_value_enumerable}{Data\+Value\+Enumerable}}$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_shader_dropdown}{Shader\+Dropdown}} $>$ {\bfseries meta\+Dropdowns}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_a451dccd1ea73e1e1c1dad8b0ba67a56d}\label{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_a451dccd1ea73e1e1c1dad8b0ba67a56d} 
+IEnumerable$<$ string $>$ {\bfseries meta\+Property\+Ids}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_ab656a926a5d706619bd6e3de89dc828e}\label{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_ab656a926a5d706619bd6e3de89dc828e} 
+IEnumerable$<$ string $>$ {\bfseries meta\+Keyword\+Ids}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_a03f40ef965e44e61b59e8e9175434a1f}\label{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_a03f40ef965e44e61b59e8e9175434a1f} 
+Copy\+Paste\+Graph\+Source {\bfseries copy\+Paste\+Graph\+Source}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_serialization_1_1_json_object}{Unity\+Editor.\+Shader\+Graph.\+Serialization.\+Json\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual int {\bfseries latest\+Version} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+virtual int {\bfseries sg\+Version}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+string {\bfseries object\+Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries object\+Id\+Is\+Empty}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_serialization_1_1_json_object}{Unity\+Editor.\+Shader\+Graph.\+Serialization.\+Json\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static readonly string {\bfseries empty\+Object\+Id} = Guid.\+Empty.\+To\+String("{}N"{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_serialization_1_1_json_object}{Unity\+Editor.\+Shader\+Graph.\+Serialization.\+Json\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+delegate void {\bfseries Version\+Change} (int new\+Version)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_serialization_1_1_json_object}{Unity\+Editor.\+Shader\+Graph.\+Serialization.\+Json\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries m\+\_\+\+SGVersion} = 0
+\item 
+Version\+Change {\bfseries on\+Before\+Version\+Change}
+\item 
+Action {\bfseries on\+After\+Version\+Change}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_acce3ebb9f0c466f8e524719e6724aed0}\index{UnityEditor.ShaderGraph.CopyPasteGraph@{UnityEditor.ShaderGraph.CopyPasteGraph}!OnAfterMultiDeserialize@{OnAfterMultiDeserialize}}
+\index{OnAfterMultiDeserialize@{OnAfterMultiDeserialize}!UnityEditor.ShaderGraph.CopyPasteGraph@{UnityEditor.ShaderGraph.CopyPasteGraph}}
+\doxysubsubsection{\texorpdfstring{OnAfterMultiDeserialize()}{OnAfterMultiDeserialize()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_shader_graph_1_1_copy_paste_graph_acce3ebb9f0c466f8e524719e6724aed0} 
+override void Unity\+Editor.\+Shader\+Graph.\+Copy\+Paste\+Graph.\+On\+After\+Multi\+Deserialize (\begin{DoxyParamCaption}\item[{string}]{json}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_serialization_1_1_json_object}{Unity\+Editor.\+Shader\+Graph.\+Serialization.\+Json\+Object}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+shadergraph@14.\+0.\+8/\+Editor/\+Util/Copy\+Paste\+Graph.\+cs\end{DoxyCompactItemize}

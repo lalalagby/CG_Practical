@@ -1,0 +1,62 @@
+\chapter{Calling Burst-\/compiled code}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-calling-burst-code}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-calling-burst-code}\index{Calling Burst-\/compiled code@{Calling Burst-\/compiled code}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-calling-burst-code_autotoc_md340}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-calling-burst-code_autotoc_md340}%
+ You can call Burst-\/compiled methods direct from managed code. Calling generic methods or methods whose declaring type is generic isn\textquotesingle{}t supported, otherwise the rules as for \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-function-pointers}{function pointers}{0} apply. However, you don\textquotesingle{}t need to worry about the extra boiler plate needed for function pointers.
+
+The following example shows a Burst-\/compiled utility class. Because it uses structs, it passes by reference per the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-function-pointers}{function pointer}{0} rules.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{[BurstCompile]}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }MyBurstUtilityClass}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ [BurstCompile]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ BurstCompiled\_MultiplyAdd(in\ float4\ mula,\ in\ float4\ mulb,\ in\ float4\ add,\ out\ float4\ result)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ result\ =\ mula\ *\ mulb\ +\ add;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ Use this method from managed code like so\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyMonoBehaviour\ :\ MonoBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36aa6122a65eaa676f700ae68d393054a37}{Start}}()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ mula\ =\ \textcolor{keyword}{new}\ float4(1,\ 2,\ 3,\ 4);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ mulb\ =\ \textcolor{keyword}{new}\ float4(-\/1,1,-\/1,1);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ add\ =\ \textcolor{keyword}{new}\ float4(99,0,0,0);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ MyBurstUtilityClass.BurstCompiled\_MultiplyAdd(mula,\ mulb,\ add,\ out\ var\ result);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Debug.Log(result);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+If you attach this script to an object and run it, {\ttfamily float4(98f, 2f, -\/3f, 4f)} is printed to the log.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-calling-burst-code_autotoc_md341}{}\doxysection{\texorpdfstring{Code transformation}{Code transformation}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-calling-burst-code_autotoc_md341}
+\doxylink{namespace_burst}{Burst} uses IL Post Processing to automatically transform the code into a function pointer and call. For more information, see the documentation on \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-function-pointers}{Function pointers}{0}.
+
+To disable the direct call transformation, add{\ttfamily Disable\+Direct\+Call = true} to the Burst\+Compile options. This prevents the Post Processor from running on the code\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{[BurstCompile]}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }MyBurstUtilityClass}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ [BurstCompile(DisableDirectCall\ =\ \textcolor{keyword}{true})]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ BurstCompiled\_MultiplyAdd(in\ float4\ mula,\ in\ float4\ mulb,\ in\ float4\ add,\ out\ float4\ result)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ result\ =\ mula\ *\ mulb\ +\ add;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

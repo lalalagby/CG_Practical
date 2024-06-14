@@ -1,0 +1,51 @@
+\chapter{Synchronizing shader code and C}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documen4c9c8696748a5f68116c4163e1b794a1}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documen4c9c8696748a5f68116c4163e1b794a1}\index{Synchronizing shader code and C@{Synchronizing shader code and C}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documen4c9c8696748a5f68116c4163e1b794a1_autotoc_md1791}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documen4c9c8696748a5f68116c4163e1b794a1_autotoc_md1791}%
+ \doxylink{namespace_unity}{Unity} can generate HLSL code based on C\# structs to synchronize data and constants between shaders and C\#. In \doxylink{namespace_unity}{Unity}, the process of generating the HLSL code from C\# code is called generating shader includes. When \doxylink{namespace_unity}{Unity} generates shader includes, it parses all the C\# files in the project and, for every file that contains a struct with a Generate\+HLSL attribute, generates corresponding HLSL code. It places this HLSL code in a file with the same name as the origin, but uses the {\ttfamily .cs.\+hlsl} file extension.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documen4c9c8696748a5f68116c4163e1b794a1_autotoc_md1792}{}\doxysection{\texorpdfstring{Generating shader includes}{Generating shader includes}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_documen4c9c8696748a5f68116c4163e1b794a1_autotoc_md1792}
+To generate an HLSL equivalent for a C\# struct\+:
+
+
+\begin{DoxyEnumerate}
+\item Add the Generate\+HLSL attribute to the struct. To do this, above the line that declares the struct, add {\ttfamily \mbox{[}Generate\+HLSL(Packing\+Rules.\+Exact, false)\mbox{]}}. For an example on how to do this, see the sample code below. For more information about the Generate\+HLSL attribute, see the \href{../api/UnityEngine.Rendering.GenerateHLSL.html}{\texttt{ API documentation}}.
+\item In the \doxylink{namespace_unity}{Unity} Editor, go to {\bfseries{Edit}} \texorpdfstring{$>$}{>} {\bfseries{Render Pipeline}} \texorpdfstring{$>$}{>} {\bfseries{Generate Shader Includes}}.
+\end{DoxyEnumerate}
+
+The following code example is from the High Definition Render Pipeline (HDRP). It shows an extract of the C\# representation of a directional light. The original file is {\ttfamily Light\+Definition.\+cs}. When \doxylink{namespace_unity}{Unity} generates the HLSL shader code, it places it in a new file called {\ttfamily Light\+Definition.\+cs.\+hlsl}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{//\ LightDefinition.cs}
+\DoxyCodeLine{}
+\DoxyCodeLine{[GenerateHLSL(PackingRules.Exact,\ false)]}
+\DoxyCodeLine{struct\ DirectionalLightData}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ public\ Vector3\ positionRWS;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ public\ uint\ lightLayers;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ public\ float\ lightDimmer;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ public\ float\ volumetricLightDimmer;\ \ \ //\ Replaces\ 'lightDimer'}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ public\ Vector3\ forward;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ public\ Vector4\ surfaceTextureScaleOffset;}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{//\ LightDefinition.cs.hlsl}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ Generated\ from\ UnityEngine.Rendering.HighDefinition.DirectionalLightData}
+\DoxyCodeLine{//\ PackingRules\ =\ Exact}
+\DoxyCodeLine{struct\ DirectionalLightData}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ float3\ positionRWS;}
+\DoxyCodeLine{\ \ \ \ uint\ lightLayers;}
+\DoxyCodeLine{\ \ \ \ float\ lightDimmer;}
+\DoxyCodeLine{\ \ \ \ float\ volumetricLightDimmer;}
+\DoxyCodeLine{\ \ \ \ float3\ forward;}
+\DoxyCodeLine{\ \ \ \ float4\ surfaceTextureScaleOffset;}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+ 

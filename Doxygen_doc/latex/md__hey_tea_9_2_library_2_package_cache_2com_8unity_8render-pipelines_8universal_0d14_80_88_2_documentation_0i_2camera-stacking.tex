@@ -1,0 +1,92 @@
+\chapter{Camera Stacking}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2camera-stacking}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2camera-stacking}\index{Camera Stacking@{Camera Stacking}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2camera-stacking_autotoc_md2080}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2camera-stacking_autotoc_md2080}%
+In the Universal Render Pipeline (URP), you use Camera Stacking to layer the output of multiple Cameras and create a single combined output. Camera Stacking allows you to create effects such as a 3D model in a 2D UI, or the cockpit of a vehicle.
+
+
+
+A Camera Stack consists of a \href{camera-types-and-render-type.md\#base-camera}{\texttt{ Base Camera}} and one or more \href{camera-types-and-render-type.md\#overlay-camera}{\texttt{ Overlay Cameras}}. A Camera Stack overrides the output of the Base Camera with the combined output of all the Cameras in the Camera Stack. As such, anything that you can do with the output of a Base Camera, you can do with the output of a Camera Stack. For example, you can render a Camera Stack to a given render target, apply post-\/process effects, and so on.
+
+URP performs several optimizations within a Camera, including rendering order optimizations to reduce overdraw. However, when you use a Camera Stack, you effectively define the order in which those Cameras are rendered. You must therefore be careful not to order the Cameras in a way that causes excessive overdraw. For more information on overdraw in URP, see \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f}{Advanced information}{0}.
+
+For examples of how to use Camera Stacking, see the \href{package-sample-urp-package-samples.md\#camera-stacking}{\texttt{ Camera Stacking samples in URP Package Samples}}.
+
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2camera-stacking_adding-a-camera-to-a-camera-stack}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2camera-stacking_adding-a-camera-to-a-camera-stack}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2camera-stacking_autotoc_md2081}{}\doxysection{\texorpdfstring{Adding a Camera to a Camera Stack}{Adding a Camera to a Camera Stack}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2camera-stacking_autotoc_md2081}
+
+
+
+\begin{DoxyEnumerate}
+\item Create a Camera in your Scene. Its {\bfseries{Render Type}} defaults to {\bfseries{Base}}, making it a Base Camera.
+\item Create another Camera in your Scene, and select it.
+\item In the Camera Inspector, change the Camera’s {\bfseries{Render Type}} to {\bfseries{Overlay}}.
+\item Select the Base Camera again. In the Camera Inspector, scroll to the Stack section, click the {\bfseries{plus (+)}} button, and click the name of the Overlay Camera.
+\end{DoxyEnumerate}
+
+The Overlay Camera is now part of the Base Camera\textquotesingle{}s Camera Stack. \doxylink{namespace_unity}{Unity} renders the Overlay Camera\textquotesingle{}s output on top of the Base Camera\textquotesingle{}s output.
+
+You can add a Camera to a Camera Stack in a script by directly manipulating the {\ttfamily camera\+Stack} property of the Base Camera\textquotesingle{}s \href{xref:UnityEngine.Rendering.Universal.UniversalAdditionalCameraData}{\texttt{ Universal Additional Camera Data}} component, like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ cameraData\ =\ camera.GetUniversalAdditionalCameraData();}
+\DoxyCodeLine{cameraData.cameraStack.Add(myOverlayCamera);}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2camera-stacking_autotoc_md2082}{}\doxysection{\texorpdfstring{Removing a Camera from a Camera Stack}{Removing a Camera from a Camera Stack}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2camera-stacking_autotoc_md2082}
+
+
+
+\begin{DoxyEnumerate}
+\item Create a Camera Stack that contains at least one Overlay Camera. For instructions, see \doxylink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2camera-stacking_adding-a-camera-to-a-camera-stack}{Adding a Camera to a Camera Stack}.
+\item Select the Camera Stack\textquotesingle{}s Base Camera.
+\item In the Camera Inspector, scroll to the Stack section, click the name of the Overlay Camera you want to remove, and then click the {\bfseries{minus (-\/)}} button.
+\end{DoxyEnumerate}
+
+The Overlay Camera remains in the Scene, but is no longer part of the Camera Stack.
+
+You can remove a Camera from a Camera Stack in a script by directly manipulating the {\ttfamily camera\+Stack} property of the Base Camera\textquotesingle{}s \href{xref:UnityEngine.Rendering.Universal.UniversalAdditionalCameraData}{\texttt{ Universal Additional Camera Data}} component, like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ cameraData\ =\ camera.GetUniversalAdditionalCameraData();}
+\DoxyCodeLine{cameraData.cameraStack.Remove(myOverlayCamera);}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2camera-stacking_autotoc_md2083}{}\doxysection{\texorpdfstring{Changing the order of Cameras in a Camera Stack}{Changing the order of Cameras in a Camera Stack}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2camera-stacking_autotoc_md2083}
+
+
+
+\begin{DoxyEnumerate}
+\item Create a Camera Stack that contains more than one Overlay Camera. For instructions, see \doxylink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2camera-stacking_adding-a-camera-to-a-camera-stack}{Adding a Camera to a Camera Stack}.
+\item Select the Base Camera in the Camera Stack.
+\item In the Camera Inspector, scroll to the Stack section.
+\item Use the handles next to the names of the Overlay Cameras to reorder the list of Overlay Cameras.
+\end{DoxyEnumerate}
+
+The Base Camera renders the base layer of the Camera Stack, and the Overlay Cameras in the stack render on top of this in the order that they are listed, from top to bottom.
+
+You can reorder a Camera Stack in a script by directly manipulating the {\ttfamily camera\+Stack} property of the Base Camera\textquotesingle{}s \href{xref:UnityEngine.Rendering.Universal.UniversalAdditionalCameraData}{\texttt{ Universal Additional Camera Data}} component.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2camera-stacking_autotoc_md2084}{}\doxysection{\texorpdfstring{Adding the same Overlay Camera to multiple stacks}{Adding the same Overlay Camera to multiple stacks}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2camera-stacking_autotoc_md2084}
+To add an Overlay Camera to multiple Camera Stacks\+:
+
+
+\begin{DoxyEnumerate}
+\item Create a Camera Stack that contains at least one Overlay Camera. For instructions, see \doxylink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2camera-stacking_adding-a-camera-to-a-camera-stack}{Adding a Camera to a Camera Stack}.
+\item Create a Camera in your Scene. Its {\bfseries{Render Type}} defaults to {\bfseries{Base}}, making it a Base Camera.
+\item Select the new Base Camera.
+\item In the Camera Inspector, scroll to the Stack section, click the {\itshape plus (+)} button, and click the name of the Overlay Camera that you want to use in both Camera Stacks.
+\end{DoxyEnumerate}
+
+The Overlay Camera is now rendering in both Camera Stacks.
+
+You can also add a Camera to a Camera Stack in a script by directly manipulating the {\ttfamily camera\+Stack} property of the Base Camera\textquotesingle{}s \href{xref:UnityEngine.Rendering.Universal.UniversalAdditionalCameraData}{\texttt{ Universal Additional Camera Data}} component, like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ cameraData\ =\ camera.GetUniversalAdditionalCameraData();}
+\DoxyCodeLine{cameraData.cameraStack.Add(myOverlayCamera);}
+
+\end{DoxyCode}
+ 

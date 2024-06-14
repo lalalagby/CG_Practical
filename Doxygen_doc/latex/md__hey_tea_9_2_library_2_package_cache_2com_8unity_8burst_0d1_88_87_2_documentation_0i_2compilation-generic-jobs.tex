@@ -1,0 +1,127 @@
+\chapter{Generic jobs}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2compilation-generic-jobs}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2compilation-generic-jobs}\index{Generic jobs@{Generic jobs}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2compilation-generic-jobs_autotoc_md301}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2compilation-generic-jobs_autotoc_md301}%
+ \doxylink{namespace_burst}{Burst} compiles a job in two ways\+:
+
+
+\begin{DoxyItemize}
+\item In the Editor, it compiles the job when it\textquotesingle{}s scheduled, known as just-\/in-\/time (JIT) compilation.
+\item In a player build, it compiles the job as part of the built player, known as ahead-\/of-\/time (AOT) compilation.
+\end{DoxyItemize}
+
+For more information, see the documentation on \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2compilation-overview}{Compilation}{0}.
+
+If the job is a concrete type (doesn\textquotesingle{}t use generics), \doxylink{namespace_burst}{Burst} compiles it in both modes (AOT and JIT). However, a generic job might behave in an unexpected way.
+
+While \doxylink{namespace_burst}{Burst} supports generics, it has limited support for generic jobs or function pointers. If you notice that a job scheduled in the Editor is running at full speed, but not in a built player, it\textquotesingle{}s might be a problem related to generic jobs.
+
+The following example defines a generic job\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{comment}{//\ Direct\ generic\ job}}
+\DoxyCodeLine{[BurstCompile]}
+\DoxyCodeLine{\textcolor{keyword}{struct\ }MyGenericJob<TData>\ :\ IJob\ where\ TData\ :\ struct\ \{\ }
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Execute()\ \{\ ...\ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+You can also nest generic jobs\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{comment}{//\ Nested\ generic\ job}}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyGenericSystem<TData>\ where\ TData\ :\ struct\ \{}
+\DoxyCodeLine{\ \ \ \ [BurstCompile]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{struct\ }MyGenericJob\ \ :\ IJob\ \{\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Execute()\ \{\ ...\ \}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Run()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ myJob\ =\ \textcolor{keyword}{new}\ MyGenericJob();\ \textcolor{comment}{//\ implicitly\ MyGenericSystem<TData>.MyGenericJob}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ myJob.Schedule();\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Jobs that aren\textquotesingle{}t \doxylink{namespace_burst}{Burst} compiled look like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{comment}{//\ Direct\ Generic\ Job}}
+\DoxyCodeLine{var\ myJob\ =\ \textcolor{keyword}{new}\ MyGenericJob<int>();}
+\DoxyCodeLine{myJob.Schedule();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Nested\ Generic\ Job}}
+\DoxyCodeLine{var\ myJobSystem\ =\ \textcolor{keyword}{new}\ MyGenericSystem<float>();}
+\DoxyCodeLine{myJobSystem.Run();}
+
+\end{DoxyCode}
+
+
+In both cases, in a player build, the \doxylink{namespace_burst}{Burst} compiler detects that it has to compile {\ttfamily My\+Generic\+Job\texorpdfstring{$<$}{<}int\texorpdfstring{$>$}{>}} and {\ttfamily My\+Generic\+Job\texorpdfstring{$<$}{<}float\texorpdfstring{$>$}{>}}. This is because the generic jobs (or the type surrounding it for the nested job) are used with fully resolved generic arguments ({\ttfamily int} and {\ttfamily float}).
+
+However, if these jobs are used indirectly through a generic parameter, the \doxylink{namespace_burst}{Burst} compiler can\textquotesingle{}t detect the jobs it has to compile at player build time\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ GenericJobSchedule<TData>()\ where\ TData:\ struct\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Generic\ argument:\ Generic\ Parameter\ TData}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ This\ Job\ won't\ be\ detected\ by\ the\ Burst\ Compiler\ at\ standalone-\/player\ build\ time.}}
+\DoxyCodeLine{\ \ \ \ var\ job\ =\ \textcolor{keyword}{new}\ MyGenericJob<TData>();}
+\DoxyCodeLine{\ \ \ \ job.Schedule();}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ The\ implicit\ MyGenericJob<int>\ will\ run\ at\ Editor\ time\ in\ full\ Burst\ speed}}
+\DoxyCodeLine{\textcolor{comment}{//\ but\ won't\ be\ detected\ at\ standalone-\/player\ build\ time.}}
+\DoxyCodeLine{GenericJobSchedule<int>();}
+
+\end{DoxyCode}
+
+
+The same restriction applies if you declare the job in the context of generic parameter that comes from a type\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{comment}{//\ Generic\ Parameter\ TData}}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }SuperJobSystem<TData>}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Generic\ argument:\ Generic\ Parameter\ TData}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ This\ Job\ won't\ be\ detected\ by\ the\ Burst\ Compiler\ at\ standalone-\/player\ build\ time.}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ MyGenericJob<TData>\ MyJob;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+If you want to use generic jobs, you must use them directly with fully resolved generic arguments (for example, {\ttfamily int}, {\ttfamily My\+Other\+Struct}). You can\textquotesingle{}t use them with a generic parameter indirection (for example, {\ttfamily My\+Generic\+Job\texorpdfstring{$<$}{<}TContext\texorpdfstring{$>$}{>}}).
+
+\texorpdfstring{$>$}{>}\mbox{[}!\+IMPORTANT\mbox{]} \texorpdfstring{$>$}{>}\doxylink{namespace_burst}{Burst} doesn\textquotesingle{}t support scheduling generic Jobs through generic methods. While this works in the Editor, it doesn\textquotesingle{}t work in the standalone player.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2compilation-generic-jobs_autotoc_md302}{}\doxysection{\texorpdfstring{Function pointers}{Function pointers}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2compilation-generic-jobs_autotoc_md302}
+Function pointers are restricted because you can\textquotesingle{}t use a generic delegate through a function pointer with \doxylink{namespace_burst}{Burst}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keyword}{public}\ delegate\ \textcolor{keywordtype}{void}\ MyGenericDelegate<T>(ref\ TData\ data)\ where\ TData:\ \textcolor{keyword}{struct};}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ myGenericDelegate\ =\ \textcolor{keyword}{new}\ MyGenericDelegate<int>(MyIntDelegateImpl);}
+\DoxyCodeLine{\textcolor{comment}{//\ Will\ fail\ to\ compile\ this\ function\ pointer.}}
+\DoxyCodeLine{var\ myGenericFunctionPointer\ =\ \mbox{\hyperlink{class_burst_compiler}{BurstCompiler}}.CompileFunctionPointer<MyGenericDelegate<int>>(myGenericDelegate);}
+
+\end{DoxyCode}
+
+
+This limitation is because of a limitation of the .NET runtime to interop with such delegates.
+
+For more information, see the documentation on \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-function-pointers}{Function pointers}{0}. 

@@ -1,0 +1,134 @@
+\chapter{High Dynamic Range (HDR) Output}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b}\index{High Dynamic Range (HDR) Output@{High Dynamic Range (HDR) Output}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2346}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2346}%
+ \href{https://docs.unity3d.com/Manual/HDR.html}{\texttt{ High Dynamic Range}} content has a wider color gamut and greater luminosity range than standard definition content.
+
+URP can output HDR content for displays which support that functionality.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2347}{}\doxysection{\texorpdfstring{How to enable HDR Output}{How to enable HDR Output}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2347}
+To activate HDR output, follow these steps.
+
+
+\begin{DoxyEnumerate}
+\item Locate the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do6a4fd81cefe986341b093c28ca9c1f30}{URP Asset}{0} in the Project window under {\bfseries{Assets}} \texorpdfstring{$>$}{>} {\bfseries{Settings}}.
+\item Navigate to {\bfseries{Quality}} \texorpdfstring{$>$}{>} {\bfseries{HDR}} and enable the checkbox to enable {\bfseries{HDR}}.
+\item Next, navigate to {\bfseries{Edit}} \texorpdfstring{$>$}{>} {\bfseries{Project Settings}} \texorpdfstring{$>$}{>} {\bfseries{\doxylink{class_player}{Player}}} \texorpdfstring{$>$}{>} {\bfseries{Other Settings}} and enable {\bfseries{Allow HDR Display Output}}.
+\end{DoxyEnumerate}
+
+However, if you switch to a URP Asset that does not have HDR enabled, URP disables HDR Output until you change to a URP Asset with HDR enabled.
+
+{\bfseries{Note}}\+: If HDR Output is active, the grading mode falls back to HDR, even if there is a different Color Grading Mode active in the URP Asset.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2348}{}\doxysection{\texorpdfstring{HDR tone mapping in URP}{HDR tone mapping in URP}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2348}
+After you enable {\bfseries{Allow HDR Display Output}}, you must configure \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do8b33578e617f892d2d6e5a8ea0aeda08}{Tonemapping}{0} settings for your HDR input.
+
+In order to configure these settings effectively, you need to understand how certain values related to tone mapping determine the visual characteristics of your HDR output.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2349}{}\doxysubsection{\texorpdfstring{Important tone mapping values}{Important tone mapping values}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2349}
+To properly make use of the capabilities of HDR displays, your {\bfseries{Tonemapping}} configuration must take into account the capabilities of the target display, specifically these three values (in nits)\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Minimum supported brightness}}.
+\item {\bfseries{Maximum supported brightness}}.
+\item {\bfseries{Paper White value}}\+: This value represents the brightness of a paper-\/white surface represented on the display, which determines the display\textquotesingle{}s brightness overall.
+\end{DoxyItemize}
+
+{\bfseries{Note}}\+: Low Dynamic Range (LDR) and High Dynamic Range (HDR) content do not appear equally bright on displays with the same Paper White value. This is because displays apply extra processing to low dynamic range content that bumps its brightness levels up. For this reason, it is best practice to implement a calibration menu for your application.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2350}{}\doxysubsection{\texorpdfstring{Usable user interfaces depend on accurate Paper White values}{Usable user interfaces depend on accurate Paper White values}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2350}
+\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2unlit-shader}{Unlit}{0} materials do not respond to lighting changes, so it is standard practice to use an Unlit material for user interfaces. Calculations for Unlit material rendering define brightness with values between 0 and 1 when you are not specifically targeting HDR displays. In this context, a value of 1 corresponds to white, and a value of 0 corresponds to black.
+
+However, in HDR mode, URP uses Paper White values to determine the brightness of Unlit materials. This is because HDR values can exceed the 0 to 1 range.
+
+As a result, Paper White values determine the brightness of UI elements in HDR mode, especially white elements, whose brightness matches Paper White values.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2351}{}\doxysection{\texorpdfstring{Configure HDR Tone Mapping settings}{Configure HDR Tone Mapping settings}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2351}
+You can select and adjust Tonemapping modes in the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_volumes}{Volume}{0} component settings. You can also adjust some aspects of your HDR Tonemapping configuration with a script (see the HDROutput\+Settings API).
+
+After you enable {\bfseries{Allow HDR Display Output}}, HDR Tonemapping options become visible in the Volume component.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2352}{}\doxysubsection{\texorpdfstring{Tone mapping modes}{Tone mapping modes}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2352}
+URP provides two {\bfseries{Tonemapping}} modes\+: {\bfseries{Neutral}} and {\bfseries{ACES}}. Each Tonemapping mode has some unique properties.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Neutral}} mode is especially suitable for situations where you do not want the tone mapper to color grade your content.
+\item {\bfseries{ACES}} mode uses the ACES reference color space for feature films. It produces a cinematic, contrasty result.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2353}{}\doxysubsection{\texorpdfstring{Neutral}{Neutral}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2353}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\bfseries{Neutral HDR Range Reduction Mode}}   &The curve that the \doxylink{class_player}{Player} uses for tone mapping. The options are\+:
+\begin{DoxyItemize}
+\item BT2390\+: The default. Defined by the \href{https://www.itu.int/pub/R-REP-BT.2390}{\texttt{ BT.\+2390}} broadcasting recommendations.
+\item Reinhard\+: A simple Tone Mapping operator.
+\end{DoxyItemize}This option is only available when you enable {\bfseries{Show Additional Properties}}.    \\\cline{1-2}
+{\bfseries{Hue Shift Amount}}   &The value determines the extent to which your content retains its original hue after you apply HDR settings. When this value is 0, the tonemapper attempts to preserve the hue of your content as much as possible by only tonemapping luminance.    \\\cline{1-2}
+{\bfseries{Detect Paper White}}   &Enable this property if you want URP to use the Paper White value that the display communicates to the \doxylink{namespace_unity}{Unity} Engine. In some cases, the value the display communicates may not be accurate. Implement a calibration menu for your application so that users can display your content correctly on displays that communicate inaccurate values.    \\\cline{1-2}
+{\bfseries{Paper White}}   &The Paper White value of the display. If you do not enable {\bfseries{Detect Paper White}}, you must specify a value here.    \\\cline{1-2}
+{\bfseries{Detect Brightness Limits}}   &Enable this property if you want URP to use the minimum and maximum nit values that the display communicates. In some cases, the value the display communicates may not be accurate. It is best practice to implement a calibration menu for your application to allow for these situations.    \\\cline{1-2}
+{\bfseries{Min Nits}}   &The minimum brightness value of the display. If you do not enable {\bfseries{Detect Brightness Limits}}, you must specify a value here and in {\bfseries{Max Nits}}.    \\\cline{1-2}
+{\bfseries{Max Nits}}   &The maximum brightness value of the display. If you do not enable {\bfseries{Detect Brightness Limits}}, you must specify a value here and in {\bfseries{Min Nits}}.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2354}{}\doxysubsection{\texorpdfstring{Misuse of Hue Shift Amount}{Misuse of Hue Shift Amount}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2354}
+Creators might author some content with the intention to use {\bfseries{Hue Shift Amount}} to produce special effects. In the illustration below, the {\bfseries{Hue Shift Amount}} is 0 for Image A and 1 for Image B. The flames image B appear more intense because of the hue shift effect. It is preferable not to author content in this way, because settings optimized for special effects can have undesirable effects on other content in the Scene.
+
+{\itshape Image A\+: Output when Hue Shift Amount is 0.}{\itshape Image B\+: Output when Hue Shift Amount is 1.}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2355}{}\doxysubsection{\texorpdfstring{ACES}{ACES}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2355}
+This mode has fixed presets to target 1000, 2000, and 4000 nit displays. It is best practice to implement a calibration menu for your application to ensure that the user can select the right preset.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\bfseries{ACES Preset}}   &The tone mapper preset to use. The options are\+:
+\begin{DoxyItemize}
+\item {\bfseries{ACES 1000 Nits}}\+: The default. This curve targets 1000 nits displays.
+\item {\bfseries{ACES 2000 Nits}}\+: Curve that targets 2000 nits displays.
+\item {\bfseries{ACES 4000 Nits}}\+: Curve that targets 4000 nits displays.
+\end{DoxyItemize}\\\cline{1-2}
+{\bfseries{Detect Paper White}}   &Enable this property if you want URP to use the Paper White value that the display communicates to the \doxylink{namespace_unity}{Unity} Engine. In some cases, the value the display communicates may not be accurate. Implement a calibration menu for your application so that users can display your content correctly on displays that communicate inaccurate values.    \\\cline{1-2}
+{\bfseries{Paper White}}   &The Paper White value of the display. If you do not enable {\bfseries{Detect Paper White}}, you must specify a value here.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2356}{}\doxysubsection{\texorpdfstring{The HDROutput\+Settings API}{The HDROutput\+Settings API}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2356}
+The \href{https://docs.unity3d.com/ScriptReference/HDROutputSettings.html}{\texttt{ HDROutput\+Settings}} API makes it possible to enable and disable HDR mode, as well as query certain values (such as Paper White).\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2357}{}\doxysection{\texorpdfstring{Offscreen Rendering}{Offscreen Rendering}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2357}
+When using offscreen rendering techniques, not all cameras in a scene output directly to the display. For example, when \doxylink{namespace_unity}{Unity} is rendering the output to a Render Texture. In these situations, you use the output of the camera before rendering post-\/processing.
+
+\doxylink{namespace_unity}{Unity} does not apply HDR Output processing to the output of cameras which use offscreen rendering techniques. This prevents HDR Output processing being applied twice to the camera\textquotesingle{}s output.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2358}{}\doxysection{\texorpdfstring{SDR Rendering}{SDR Rendering}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2358}
+HDR Output relies on HDR Rendering to provide pixel values in the correct format for tone mapping and color encoding. The values after HDR tone mapping are in nits and exceed 1. This differs from SDR Rendering where the pixel values are between 0 and 1. As a result of this, the use of SDR Rendering with HDR Output can cause the rendered image to look underexposed or oversaturated.
+
+You can use SDR Rendering on a per-\/camera basis when you have HDR Output enabled, this can be useful for cameras that only render unlit materials, for example, for mini-\/map rendering. However, the use of SDR Rendering with HDR Output imposes some limitations.
+
+To ensure correct rendering when you use SDR Rendering with HDR Output, you must avoid any render passes that occur after post-\/processing. This includes URP\textquotesingle{}s built-\/in effects which insert render passes after post-\/processing. As a result, SDR Rendering with HDR Output is incompatible with the following features\+:
+
+
+\begin{DoxyItemize}
+\item \href{../universalrp-asset.md\#quality}{\texttt{ Upscaling}}
+\item \href{../anti-aliasing.md\#fast-approximate-anti-aliasing-fxaa}{\texttt{ FXAA}}
+\item HDR Debug Views
+\item Custom passes which occur after post-\/processing
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2359}{}\doxysubsection{\texorpdfstring{2D Renderer}{2D Renderer}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2359}
+To use SDR Rendering with HDR Output on the 2D Renderer, you must ensure post-\/processing is turned off.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2360}{}\doxysection{\texorpdfstring{HDR Debug Views}{HDR Debug Views}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2360}
+URP offers three debug views for HDR rendering. To access them, navigate to {\bfseries{Window}} \texorpdfstring{$>$}{>} {\bfseries{Analysis}} \texorpdfstring{$>$}{>} {\bfseries{Render Pipeline Debugger}} \texorpdfstring{$>$}{>} {\bfseries{Lighting}} \texorpdfstring{$>$}{>} {\bfseries{HDR Debug Mode}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2361}{}\doxysubsection{\texorpdfstring{Gamut View}{Gamut View}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2361}
+
+
+The triangles in this debug view indicate which parts of two specific color gamuts this Scene covers. The small triangle displays the \href{https://en.wikipedia.org/wiki/Rec._709}{\texttt{ Rec709}} gamut values, and the large triangle displays the \href{https://en.wikipedia.org/wiki/Rec._2020}{\texttt{ Rec2020}} gamut values. This enables you to check color plot changes while color grading. It can also help you ensure that you benefit from the wider color gamut available in HDR.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2362}{}\doxysubsection{\texorpdfstring{Gamut Clip}{Gamut Clip}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2362}
+
+
+This debug view indicates the relationship between scene values and specific color gamuts. Areas of the screen outside of the Rec709 color gamut are red, and areas with values within the Rec709 gamut are green.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2363}{}\doxysubsection{\texorpdfstring{Values exceeding Paper White}{Values exceeding Paper White}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2363}
+
+
+This debug view uses a color coded gradient to indicate parts of the Scene that exceed the Paper White value. The gradient ranges from yellow to red. Yellow corresponds to {\bfseries{Paper White}} +1, and red corresponds to {\bfseries{Max Nits}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2364}{}\doxysection{\texorpdfstring{Platform Compatibility}{Platform Compatibility}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5dd52958af624ccebf5a05fcca415a1b_autotoc_md2364}
+URP only supports HDR Output on the following platforms\+:
+
+
+\begin{DoxyItemize}
+\item Windows with DirectX 11, DirectX 12 or Vulkan
+\item Mac\+OS with Metal
+\item Consoles
+\end{DoxyItemize}
+
+\begin{quote}
+{\bfseries{Note}}\+: DirectX 11 only supports HDR Output in the \doxylink{class_player}{Player}, it does not support HDR Output in the Editor. \end{quote}

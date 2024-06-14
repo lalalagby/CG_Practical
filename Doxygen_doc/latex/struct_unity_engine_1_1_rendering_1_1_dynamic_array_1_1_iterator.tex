@@ -1,0 +1,84 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Dynamic\+Array\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}.Iterator Struct Reference}
+\hypertarget{struct_unity_engine_1_1_rendering_1_1_dynamic_array_1_1_iterator}{}\label{struct_unity_engine_1_1_rendering_1_1_dynamic_array_1_1_iterator}\index{UnityEngine.Rendering.DynamicArray$<$ T $>$.Iterator@{UnityEngine.Rendering.DynamicArray$<$ T $>$.Iterator}}
+
+
+IEnumerator-\/like struct used to loop over this entire array. See the IEnumerator docs for more info\+: {\ttfamily IEnumerator}  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_dynamic_array_1_1_iterator_a3982e9fecfa29b4db55e04d74641465c}{Iterator}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}}$<$ T $>$ set\+Owner)
+\begin{DoxyCompactList}\small\item\em Creates an iterator to iterate over an array. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_dynamic_array_1_1_iterator_a9d759a31dff6ddb93b1b0d4da58f000a}{Move\+Next}} ()
+\begin{DoxyCompactList}\small\item\em Advances the iterator to the next element of the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_dynamic_array_1_1_iterator_a6989c22bed152338ba38615e6d03cbae}\label{struct_unity_engine_1_1_rendering_1_1_dynamic_array_1_1_iterator_a6989c22bed152338ba38615e6d03cbae} 
+void {\bfseries Reset} ()
+\begin{DoxyCompactList}\small\item\em Sets the iterator to its initial position, which is before the first element in the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_dynamic_array_1_1_iterator_ae24fb456b196dad7b8b6bce773b29387}\label{struct_unity_engine_1_1_rendering_1_1_dynamic_array_1_1_iterator_ae24fb456b196dad7b8b6bce773b29387} 
+ref T {\bfseries Current}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the element in the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array} at the current position of the iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+IEnumerator-\/like struct used to loop over this entire array. See the IEnumerator docs for more info\+: {\ttfamily IEnumerator} 
+
+This struct intentionally does not explicitly implement the IEnumarable/\+IEnumerator interfaces it just follows the same function signatures. This means the duck typing used by {\ttfamily foreach} on the compiler level will pick it up as IEnumerable but at the same time avoids generating Garbage. For more info, see the C\# language specification of the {\ttfamily foreach} statement. 
+
+\begin{DoxySeeAlso}{See also}
+Range\+Iterator
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_dynamic_array_1_1_iterator_a3982e9fecfa29b4db55e04d74641465c}\index{UnityEngine.Rendering.DynamicArray$<$ T $>$.Iterator@{UnityEngine.Rendering.DynamicArray$<$ T $>$.Iterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!UnityEngine.Rendering.DynamicArray$<$ T $>$.Iterator@{UnityEngine.Rendering.DynamicArray$<$ T $>$.Iterator}}
+\doxysubsubsection{\texorpdfstring{Iterator()}{Iterator()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_rendering_1_1_dynamic_array_1_1_iterator_a3982e9fecfa29b4db55e04d74641465c} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Unity\+Engine.\+Rendering.\+Dynamic\+Array}}$<$ T $>$.Iterator.\+Iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}}$<$ T $>$}]{set\+Owner}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates an iterator to iterate over an array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em set\+Owner} & The array to iterate over.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown if the array is null.\\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_dynamic_array_1_1_iterator_a9d759a31dff6ddb93b1b0d4da58f000a}\index{UnityEngine.Rendering.DynamicArray$<$ T $>$.Iterator@{UnityEngine.Rendering.DynamicArray$<$ T $>$.Iterator}!MoveNext@{MoveNext}}
+\index{MoveNext@{MoveNext}!UnityEngine.Rendering.DynamicArray$<$ T $>$.Iterator@{UnityEngine.Rendering.DynamicArray$<$ T $>$.Iterator}}
+\doxysubsubsection{\texorpdfstring{MoveNext()}{MoveNext()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_rendering_1_1_dynamic_array_1_1_iterator_a9d759a31dff6ddb93b1b0d4da58f000a} 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Unity\+Engine.\+Rendering.\+Dynamic\+Array}}$<$ T $>$.Iterator.\+Move\+Next (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Advances the iterator to the next element of the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}. 
+
+\begin{DoxyReturn}{Returns}
+Returns {\ttfamily true} if the iterator has successfully advanced to the next element; {\ttfamily false} if the iterator has passed the end of the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & An operation changed the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array} after the creation of this iterator.\\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Common/Dynamic\+Array.\+cs\end{DoxyCompactItemize}

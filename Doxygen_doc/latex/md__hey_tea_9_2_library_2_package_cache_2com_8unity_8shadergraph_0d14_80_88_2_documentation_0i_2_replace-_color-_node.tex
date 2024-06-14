@@ -1,0 +1,36 @@
+\chapter{Replace Color Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_replace-_color-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_replace-_color-_node}\index{Replace Color Node@{Replace Color Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_replace-_color-_node_autotoc_md3713}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_replace-_color-_node_autotoc_md3713}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_replace-_color-_node_autotoc_md3714}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_replace-_color-_node_autotoc_md3714}
+Replaces values in input {\bfseries{In}} equal to input {\bfseries{From}} to the value of input {\bfseries{To}}. Input {\bfseries{Range}} can be used to define a wider range of values around input {\bfseries{From}} to replace. Input {\bfseries{Fuzziness}} can be used to soften the edges around the selection similar to anti-\/aliasing.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_replace-_color-_node_autotoc_md3715}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_replace-_color-_node_autotoc_md3715}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+In   &Input   &Vector 3   &None   &Input value    \\\cline{1-5}
+From   &Input   &Vector 3   &Color   &Color to replace    \\\cline{1-5}
+To   &Input   &Vector 3   &Color   &Color to replace with    \\\cline{1-5}
+Range   &Input   &Float   &None   &Replace colors within this range from input {\bfseries{From}}    \\\cline{1-5}
+Fuzziness   &Input   &Float   &None   &Soften edges around selection    \\\cline{1-5}
+Out   &Output   &Vector 3   &None   &Output value   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_replace-_color-_node_autotoc_md3716}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_replace-_color-_node_autotoc_md3716}
+The following example code represents one possible outcome of this node.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_ReplaceColor\_float(float3\ In,\ float3\ From,\ float3\ To,\ float\ Range,\ float\ Fuzziness,\ out\ float3\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ float\ Distance\ =\ distance(From,\ In);}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(To,\ In,\ saturate((Distance\ -\/\ Range)\ /\ max(Fuzziness,\ 1e-\/5f)));}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

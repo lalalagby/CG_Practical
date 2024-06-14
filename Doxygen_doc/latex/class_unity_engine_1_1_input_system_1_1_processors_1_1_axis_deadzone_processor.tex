@@ -1,0 +1,124 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Processors.\+Axis\+Deadzone\+Processor Class Reference}
+\hypertarget{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor}{}\label{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor}\index{UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor@{UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor}}
+
+
+Clamps values to the range given by \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_a2de9a092dc4d3d808207e4cc14bb6637}{min} and \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_aabd1df6081e38695f80bcbfd72ef43a4}{max} and re-\/normalizes the resulting value to \mbox{[}0..1\mbox{]}.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Processors.\+Axis\+Deadzone\+Processor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_a382c3b57c66e9a8a52bbcb95b5153d34}{Process}} (float value, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control=null)
+\begin{DoxyCompactList}\small\item\em Normalize {\itshape value}  according to \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_a2de9a092dc4d3d808207e4cc14bb6637}{min} and \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_aabd1df6081e38695f80bcbfd72ef43a4}{max}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_a2f4803612840eeacc0da9279815dd6ea}\label{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_a2f4803612840eeacc0da9279815dd6ea} 
+override string {\bfseries To\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor}{Unity\+Engine.\+Input\+System.\+Input\+Processor$<$ float $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+object \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_a7762d91b35f73fc86ac113d932c63d9d}{Process\+As\+Object}} (object value, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\begin{DoxyCompactList}\small\item\em Process an input value, given as an object, and return the processed value as an object. \end{DoxyCompactList}\item 
+override object {\bfseries Process\+As\+Object} (object value, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\item 
+unsafe void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_aad6626f4dc89adb27730b40b03a6e6a7}{Process}} (void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\begin{DoxyCompactList}\small\item\em Process an input value stored in the given memory buffer. \end{DoxyCompactList}\item 
+TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_a2601fec536ab556a5cdc97cb90ee9751}{Process}} (TValue value, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\begin{DoxyCompactList}\small\item\em Process the given value and return the result. \end{DoxyCompactList}\item 
+override unsafe void {\bfseries Process} (void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_a2de9a092dc4d3d808207e4cc14bb6637}{min}}
+\begin{DoxyCompactList}\small\item\em Lower bound (inclusive) below which input values get clamped. Corresponds to 0 in the normalized range. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_aabd1df6081e38695f80bcbfd72ef43a4}{max}}
+\begin{DoxyCompactList}\small\item\em Upper bound (inclusive) beyond which input values get clamped. Corresponds to 1 in the normalized range. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor}{Unity\+Engine.\+Input\+System.\+Input\+Processor$<$ float $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4}\label{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4} 
+enum \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4}{Caching\+Policy}} 
+\begin{DoxyCompactList}\small\item\em Caching policy regarding usage of return value from processors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor}{Unity\+Engine.\+Input\+System.\+Input\+Processor$<$ float $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4}{Caching\+Policy}} {\bfseries caching\+Policy}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Caching policy of the processor. Override this property to provide a different value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clamps values to the range given by \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_a2de9a092dc4d3d808207e4cc14bb6637}{min} and \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_aabd1df6081e38695f80bcbfd72ef43a4}{max} and re-\/normalizes the resulting value to \mbox{[}0..1\mbox{]}. 
+
+This processor is registered (see Input\+System.\+Register\+Processor$<$\+T$>$) under the name "{}\+Axis\+Deadzone"{}.
+
+It acts like a combination of \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_clamp_processor}{Clamp\+Processor} and \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_normalize_processor}{Normalize\+Processor}.
+
+
+\begin{DoxyCode}{0}
+
+\end{DoxyCode}
+ // Bind to right trigger on gamepad such that the value is clamped and normalized between // 0.\+3 and 0.\+7. new \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}(binding\+: "{}<\+Gamepad>/right\+Trigger"{}, processors\+: "{}axis\+Deadzone(min=0.\+3,max=0.\+7)"{}); 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_stick_deadzone_processor}{Stick\+Deadzone\+Processor}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_a382c3b57c66e9a8a52bbcb95b5153d34}\index{UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor@{UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor}!Process@{Process}}
+\index{Process@{Process}!UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor@{UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_a382c3b57c66e9a8a52bbcb95b5153d34} 
+override float Unity\+Engine.\+Input\+System.\+Processors.\+Axis\+Deadzone\+Processor.\+Process (\begin{DoxyParamCaption}\item[{float}]{value}{, }\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}}]{control}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Normalize {\itshape value}  according to \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_a2de9a092dc4d3d808207e4cc14bb6637}{min} and \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_aabd1df6081e38695f80bcbfd72ef43a4}{max}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Input value.\\
+\hline
+{\em control} & Ignored.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Normalized value.
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_aabd1df6081e38695f80bcbfd72ef43a4}\index{UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor@{UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor}!max@{max}}
+\index{max@{max}!UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor@{UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor}}
+\doxysubsubsection{\texorpdfstring{max}{max}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_aabd1df6081e38695f80bcbfd72ef43a4} 
+float Unity\+Engine.\+Input\+System.\+Processors.\+Axis\+Deadzone\+Processor.\+max}
+
+
+
+Upper bound (inclusive) beyond which input values get clamped. Corresponds to 1 in the normalized range. 
+
+If this is equal to 0 (the default), \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a6f0ab44f1678705a772178d2959d847e}{Input\+Settings.\+default\+Deadzone\+Max} is used instead. \Hypertarget{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_a2de9a092dc4d3d808207e4cc14bb6637}\index{UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor@{UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor}!min@{min}}
+\index{min@{min}!UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor@{UnityEngine.InputSystem.Processors.AxisDeadzoneProcessor}}
+\doxysubsubsection{\texorpdfstring{min}{min}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_a2de9a092dc4d3d808207e4cc14bb6637} 
+float Unity\+Engine.\+Input\+System.\+Processors.\+Axis\+Deadzone\+Processor.\+min}
+
+
+
+Lower bound (inclusive) below which input values get clamped. Corresponds to 0 in the normalized range. 
+
+If this is equal to 0 (the default), \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_accd284544ee5bf7f2adb6e753282a423}{Input\+Settings.\+default\+Deadzone\+Min} is used instead. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Controls/\+Processors/Axis\+Deadzone\+Processor.\+cs\end{DoxyCompactItemize}

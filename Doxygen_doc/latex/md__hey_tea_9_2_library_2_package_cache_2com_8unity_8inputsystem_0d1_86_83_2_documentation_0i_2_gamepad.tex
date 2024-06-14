@@ -1,0 +1,203 @@
+\chapter{Gamepad Support}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_gamepad}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_gamepad}\index{Gamepad Support@{Gamepad Support}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_gamepad_autotoc_md1375}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_gamepad_autotoc_md1375}%
+
+\begin{DoxyItemize}
+\item Gamepad Support
+\begin{DoxyItemize}
+\item Controls
+\begin{DoxyItemize}
+\item Deadzones
+\end{DoxyItemize}
+\item Polling
+\item Rumble
+\begin{DoxyItemize}
+\item Pausing, resuming, and stopping haptics
+\end{DoxyItemize}
+\item Play\+Station controllers
+\item Xbox controllers
+\item Switch controllers
+\item Cursor Control
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+A \href{../api/UnityEngine.InputSystem.Gamepad.html}{\texttt{ {\ttfamily Gamepad}}} is narrowly defined as a Device with two thumbsticks, a D-\/pad, and four face buttons. Additionally, gamepads usually have two shoulder and two trigger buttons. Most gamepads also have two buttons in the middle.
+
+A gamepad can have additional Controls, such as a gyro, which the Device can expose. However, all gamepads are guaranteed to have at least the minimum set of Controls described above.
+
+Gamepad support guarantees the correct location and functioning of Controls across platforms and hardware. For example, a PS4 Dual\+Shock controller layout should look identical regardless of which platform it is supported on. A gamepad\textquotesingle{}s south face button should always be the lowermost face button.
+
+\texorpdfstring{$>$}{>}NOTE\+: Generic \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_h_i_d}{HID}{0} gamepads will {\bfseries{not}} be surfaced as \href{../api/UnityEngine.InputSystem.Gamepad.html}{\texttt{ {\ttfamily Gamepad}}} devices but rather be created as generic \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_joystick}{joysticks}{0}. This is because the Input \doxylink{namespace_system}{System} cannot guarantee correct mapping of buttons and axes on the controller (the information is simply not available at the HID level). Only HID gamepads that are explicitly supported by the Input \doxylink{namespace_system}{System} (like the PS4 controller) will come out as gamepads. Note that you can set up the same kind of support for specific HID gamepads yourself (see \href{./HID.md\#creating-a-custom-device-layout}{\texttt{ "{}\+Overriding the HID Fallback"{}}}).
+
+\texorpdfstring{$>$}{>}NOTE\+: In case you want to use the gamepad for driving mouse input, there is a sample called {\ttfamily Gamepad Mouse Cursor} you can install from the package manager UI when selecting the Input \doxylink{namespace_system}{System} package. The sample demonstrates how to set up gamepad input to drive a virtual mouse cursor.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_gamepad_autotoc_md1376}{}\doxysection{\texorpdfstring{Controls}{Controls}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_gamepad_autotoc_md1376}
+Every gamepad has the following Controls\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Control   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Control   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+\href{../api/UnityEngine.InputSystem.Gamepad.html\#UnityEngine_InputSystem_Gamepad_leftStick}{\texttt{ {\ttfamily left\+Stick}}}   &\href{../api/UnityEngine.InputSystem.Controls.StickControl.html}{\texttt{ {\ttfamily Stick\+Control}}}   &Thumbstick on the left side of the gamepad. Deadzoned. Provides a normalized 2D motion vector. X is \mbox{[}-\/1..1\mbox{]} from left to right, Y is \mbox{[}-\/1..1\mbox{]} from bottom to top. Has up/down/left/right buttons for use like a D-\/pad.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Gamepad.html\#UnityEngine_InputSystem_Gamepad_rightStick}{\texttt{ {\ttfamily right\+Stick}}}   &\href{../api/UnityEngine.InputSystem.Controls.StickControl.html}{\texttt{ {\ttfamily Stick\+Control}}}   &Thumbstick on the right side of the gamepad. Deadzoned. Provides a normalized 2D motion vector. X is \mbox{[}-\/1..1\mbox{]} from left to right, Y is \mbox{[}-\/1..1\mbox{]} from bottom to top. Has up/down/left/right buttons for use like a D-\/pad.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Gamepad.html\#UnityEngine_InputSystem_Gamepad_dpad}{\texttt{ {\ttfamily dpad}}}   &\href{../api/UnityEngine.InputSystem.Controls.DpadControl.html}{\texttt{ {\ttfamily Dpad\+Control}}}   &The D-\/pad on the gamepad.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Gamepad.html\#UnityEngine_InputSystem_Gamepad_buttonNorth}{\texttt{ {\ttfamily button\+North}}}   &\href{../api/UnityEngine.InputSystem.Controls.ButtonControl.html}{\texttt{ {\ttfamily Button\+Control}}}   &The upper button of the four action buttons, which are usually located on the right side of the gamepad. Labelled "{}\+Y"{} on Xbox controllers and "{}\+Triangle"{} on Play\+Station controllers.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Gamepad.html\#UnityEngine_InputSystem_Gamepad_buttonSouth}{\texttt{ {\ttfamily button\+South}}}   &\href{../api/UnityEngine.InputSystem.Controls.ButtonControl.html}{\texttt{ {\ttfamily Button\+Control}}}   &The lower button of the four action buttons, which are usually located on the right side of the gamepad. Labelled "{}\+A"{} on Xbox controllers and "{}\+Cross"{} on Play\+Station controllers.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Gamepad.html\#UnityEngine_InputSystem_Gamepad_buttonWest}{\texttt{ {\ttfamily button\+West}}}   &\href{../api/UnityEngine.InputSystem.Controls.ButtonControl.html}{\texttt{ {\ttfamily Button\+Control}}}   &The left button of the four action buttons, which are usually located on the right side of the gamepad. Labelled "{}\+X"{} on Xbox controllers and "{}\+Square"{} on Play\+Station controllers.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Gamepad.html\#UnityEngine_InputSystem_Gamepad_buttonEast}{\texttt{ {\ttfamily button\+East}}}   &\href{../api/UnityEngine.InputSystem.Controls.ButtonControl.html}{\texttt{ {\ttfamily Button\+Control}}}   &The right button of the four action buttons, which are usually located on the right side of the gamepad. Labelled "{}\+B"{} on Xbox controllers and "{}\+Circle"{} on Play\+Station controllers.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Gamepad.html\#UnityEngine_InputSystem_Gamepad_leftShoulder}{\texttt{ {\ttfamily left\+Shoulder}}}   &\href{../api/UnityEngine.InputSystem.Controls.ButtonControl.html}{\texttt{ {\ttfamily Button\+Control}}}   &The left shoulder button.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Gamepad.html\#UnityEngine_InputSystem_Gamepad_rightShoulder}{\texttt{ {\ttfamily right\+Shoulder}}}   &\href{../api/UnityEngine.InputSystem.Controls.ButtonControl.html}{\texttt{ {\ttfamily Button\+Control}}}   &The right shoulder button.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Gamepad.html\#UnityEngine_InputSystem_Gamepad_leftTrigger}{\texttt{ {\ttfamily left\+Trigger}}}   &\href{../api/UnityEngine.InputSystem.Controls.ButtonControl.html}{\texttt{ {\ttfamily Button\+Control}}}   &The left trigger button.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Gamepad.html\#UnityEngine_InputSystem_Gamepad_rightTrigger}{\texttt{ {\ttfamily right\+Trigger}}}   &\href{../api/UnityEngine.InputSystem.Controls.ButtonControl.html}{\texttt{ {\ttfamily Button\+Control}}}   &The right trigger button.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Gamepad.html\#UnityEngine_InputSystem_Gamepad_startButton}{\texttt{ {\ttfamily start\+Button}}}   &\href{../api/UnityEngine.InputSystem.Controls.ButtonControl.html}{\texttt{ {\ttfamily Button\+Control}}}   &The start button.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Gamepad.html\#UnityEngine_InputSystem_Gamepad_selectButton}{\texttt{ {\ttfamily select\+Button}}}   &\href{../api/UnityEngine.InputSystem.Controls.ButtonControl.html}{\texttt{ {\ttfamily Button\+Control}}}   &The select button.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Gamepad.html\#UnityEngine_InputSystem_Gamepad_leftStickButton}{\texttt{ {\ttfamily left\+Stick\+Button}}}   &\href{../api/UnityEngine.InputSystem.Controls.ButtonControl.html}{\texttt{ {\ttfamily Button\+Control}}}   &The button pressed when the user presses down the left stick.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Gamepad.html\#UnityEngine_InputSystem_Gamepad_rightStickButton}{\texttt{ {\ttfamily right\+Stick\+Button}}}   &\href{../api/UnityEngine.InputSystem.Controls.ButtonControl.html}{\texttt{ {\ttfamily Button\+Control}}}   &The button pressed when the user presses down the right stick.   \\\cline{1-3}
+\end{longtabu}
+
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: Buttons are also full floating-\/point axes. For example, the left and right triggers can function as buttons as well as full floating-\/point axes.
+
+You can also access gamepad buttons using the indexer property on \href{../api/UnityEngine.InputSystem.Gamepad.html\#UnityEngine_InputSystem_Gamepad_Item_UnityEngine_InputSystem_LowLevel_GamepadButton_}{\texttt{ {\ttfamily Gamepad}}} and the \href{../api/UnityEngine.InputSystem.LowLevel.GamepadButton.html}{\texttt{ {\ttfamily Gamepad\+Button}}} enumeration\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Gamepad.current[\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36}{GamepadButton}}.LeftShoulder];}
+
+\end{DoxyCode}
+
+
+Gamepads have both both Xbox-\/style and PS4-\/style aliases on buttons. For example, the following four accessors all retrieve the same "{}north"{} face button\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Gamepad.current[\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36}{GamepadButton}}.Y]}
+\DoxyCodeLine{Gamepad.current[\textcolor{stringliteral}{"{}Y"{}}]}
+\DoxyCodeLine{Gamepad.current[\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36}{GamepadButton}}.Triangle]}
+\DoxyCodeLine{Gamepad.current[\textcolor{stringliteral}{"{}Triangle"{}}]}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_gamepad_autotoc_md1377}{}\doxysubsection{\texorpdfstring{Deadzones}{Deadzones}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_gamepad_autotoc_md1377}
+Deadzones prevent accidental input due to slight variations in where gamepad sticks come to rest at their centre point. They allow a certain small inner area where the input is considered to be zero even if it is slightly off from the zero position.
+
+To add a deadzone to gamepad stick, put a \href{Processors.md\#stick-deadzone}{\texttt{ stick deadzone Processor}} on the sticks, like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \{}
+\DoxyCodeLine{\ \ \ \ "{}name"{}\ :\ "{}MyGamepad"{},}
+\DoxyCodeLine{\ \ \ \ "{}extend"{}\ :\ "{}Gamepad"{},}
+\DoxyCodeLine{\ \ \ \ "{}controls"{}\ :\ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}name"{}\ :\ "{}leftStick"{},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}processors"{}\ :\ "{}stickDeadzone(min=0.125,max=0.925)"{}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}name"{}\ :\ "{}rightStick"{},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ "{}processors"{}\ :\ "{}stickDeadzone(min=0.125,max=0.925)"{}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ ]}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+You can do the same in your C\# state structs.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#}}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{struct\ }MyDeviceState}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ [InputControl(processors\ =\ \textcolor{stringliteral}{"{}stickDeadzone(min=0.125,max=0.925)"{}}]}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keyword}{public}\ StickControl\ leftStick;}
+\DoxyCodeLine{\ \ \ \ \ \ \ [InputControl(processors\ =\ \textcolor{stringliteral}{"{}stickDeadzone(min=0.125,max=0.925)"{}}]}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keyword}{public}\ StickControl\ rightStick;}
+\DoxyCodeLine{\ \ \ \}}
+
+\end{DoxyCode}
+
+
+The gamepad layout already adds stick deadzone processors which take their min and max values from \href{../api/UnityEngine.InputSystem.InputSettings.html\#UnityEngine_InputSystem_InputSettings_defaultDeadzoneMin}{\texttt{ {\ttfamily Input\+Settings.\+default\+Deadzone\+Min}}} and \href{../api/UnityEngine.InputSystem.InputSettings.html\#UnityEngine_InputSystem_InputSettings_defaultDeadzoneMax}{\texttt{ {\ttfamily Input\+Settings.\+default\+Deadzone\+Max}}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_gamepad_autotoc_md1378}{}\doxysection{\texorpdfstring{Polling}{Polling}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_gamepad_autotoc_md1378}
+On Windows (XInput controllers only), Universal Windows Platform (UWP), and Switch, \doxylink{namespace_unity}{Unity} polls gamepads explicitly rather than deliver updates as events.
+
+You can control polling frequency manually. The default polling frequency is 60 Hz. Use \href{../api/UnityEngine.InputSystem.InputSystem.html\#UnityEngine_InputSystem_InputSystem_pollingFrequency}{\texttt{ {\ttfamily Input\+System.\+polling\+Frequency}}} to get or set the frequency.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Poll\ gamepads\ at\ 120\ Hz.}}
+\DoxyCodeLine{InputSystem.pollingFrequency\ =\ 120;}
+
+\end{DoxyCode}
+
+
+Increased frequency should lead to an increased number of events on the respective Devices. The timestamps provided on the events should roughly follow the spacing dictated by the polling frequency. Note, however, that the asynchronous background polling depends on OS thread scheduling and can vary.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_gamepad_autotoc_md1379}{}\doxysection{\texorpdfstring{Rumble}{Rumble}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_gamepad_autotoc_md1379}
+The \href{../api/UnityEngine.InputSystem.Gamepad.html}{\texttt{ {\ttfamily Gamepad}}} class implements the \href{../api/UnityEngine.InputSystem.Haptics.IDualMotorRumble.html}{\texttt{ {\ttfamily IDual\+Motor\+Rumble}}} interface that allows you to control the left and right motor speeds. In most common gamepads, the left motor emits a low-\/frequency rumble, and the right motor emits a high-\/frequency rumble.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Rumble\ the\ \ low-\/frequency\ (left)\ motor\ at\ 1/4\ speed\ and\ the\ high-\/frequency}}
+\DoxyCodeLine{\textcolor{comment}{//\ (right)\ motor\ at\ 3/4\ speed.}}
+\DoxyCodeLine{Gamepad.current.SetMotorSpeeds(0.25f,\ 0.75f);}
+
+\end{DoxyCode}
+
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: Only the following combinations of Devices/\+OSes currently support rumble\+: \texorpdfstring{$>$}{>}\texorpdfstring{$\ast$}{*} PS4, Xbox, and Switch controllers, when connected to their respective consoles. Only supported if you install console-\/specific input packages in your Project. \texorpdfstring{$>$}{>}\texorpdfstring{$\ast$}{*} PS4 controllers, when connected to Mac or Windows/\+UWP computers. \texorpdfstring{$>$}{>}\texorpdfstring{$\ast$}{*} Xbox controllers on Windows.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_gamepad_autotoc_md1380}{}\doxysubsection{\texorpdfstring{Pausing, resuming, and stopping haptics}{Pausing, resuming, and stopping haptics}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_gamepad_autotoc_md1380}
+\href{../api/UnityEngine.InputSystem.Haptics.IDualMotorRumble.html}{\texttt{ {\ttfamily IDual\+Motor\+Rumble}}} is based on \href{../api/UnityEngine.InputSystem.Haptics.IHaptics.html}{\texttt{ {\ttfamily IHaptics}}}, which is the base interface for any haptics support on any Device. You can pause, resume, and reset haptic feedback using the \href{../api/UnityEngine.InputSystem.Haptics.IHaptics.html\#UnityEngine_InputSystem_Haptics_IHaptics_PauseHaptics}{\texttt{ {\ttfamily Pause\+Haptics}}}, \href{../api/UnityEngine.InputSystem.Haptics.IHaptics.html\#UnityEngine_InputSystem_Haptics_IHaptics_ResumeHaptics}{\texttt{ {\ttfamily Resume\+Haptics}}}, and \href{../api/UnityEngine.InputSystem.Haptics.IHaptics.html\#UnityEngine_InputSystem_Haptics_IHaptics_ResetHaptics}{\texttt{ {\ttfamily Reset\+Haptics}}} methods respectively.
+
+In certain situations, you might want to globally pause or stop haptics for all Devices. For example, if the player enters an in-\/game menu, you can pause haptics while the player is in the menu, and then resume haptics once the player resumes the game. You can use the corresponding methods on \href{../api/UnityEngine.InputSystem.InputSystem.html}{\texttt{ {\ttfamily Input\+System}}} to achieve this result. These methods work the same way as Device-\/specific methods, but affect all Devices\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Pause\ haptics\ globally.}}
+\DoxyCodeLine{InputSystem.PauseHaptics();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Resume\ haptics\ globally.}}
+\DoxyCodeLine{InputSystem.ResumeHaptics();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Stop\ haptics\ globally.}}
+\DoxyCodeLine{InputSystem.ResetHaptics();}
+
+\end{DoxyCode}
+
+
+The difference between \href{../api/UnityEngine.InputSystem.InputSystem.html\#UnityEngine_InputSystem_InputSystem_PauseHaptics}{\texttt{ {\ttfamily Pause\+Haptics}}} and \href{../api/UnityEngine.InputSystem.InputSystem.html\#UnityEngine_InputSystem_InputSystem_ResetHaptics}{\texttt{ {\ttfamily Reset\+Haptics}}} is that the latter resets haptics playback state on each Device to its initial state, whereas \href{../api/UnityEngine.InputSystem.InputSystem.html\#UnityEngine_InputSystem_InputSystem_PauseHaptics}{\texttt{ {\ttfamily Pause\+Haptics}}} preserves playback state in memory and only stops playback on the hardware.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_gamepad_autotoc_md1381}{}\doxysection{\texorpdfstring{Play\+Station controllers}{Play\+Station controllers}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_gamepad_autotoc_md1381}
+Play\+Station controllers are well supported on different Devices. The Input \doxylink{namespace_system}{System} implements these as different derived types of the \href{../api/UnityEngine.InputSystem.DualShock.DualShockGamepad.html}{\texttt{ {\ttfamily Dual\+Shock\+Gamepad}}} base class, which derives from \href{../api/UnityEngine.InputSystem.Gamepad.html}{\texttt{ {\ttfamily Gamepad}}})\+:
+
+
+\begin{DoxyItemize}
+\item \href{../api/UnityEngine.InputSystem.DualShock.DualShock3GamepadHID.html}{\texttt{ {\ttfamily Dual\+Shock3\+Gamepad\+HID}}}\+: A Dual\+Shock 3 controller connected to a desktop computer using the HID interface. Currently only supported on mac\+OS. Doesn\textquotesingle{}t support rumble.
+\item \href{../api/UnityEngine.InputSystem.DualShock.DualShock4GamepadHID.html}{\texttt{ {\ttfamily Dual\+Shock4\+Gamepad\+HID}}}\+: A Dual\+Shock 4 controller connected to a desktop computer using the HID interface. Supported on mac\+OS, Windows, UWP, and Linux.
+\item 
+\item \href{../api/UnityEngine.InputSystem.DualShock.DualSenseGamepadHID.html}{\texttt{ {\ttfamily Dual\+Sense\+Gamepad\+HID}}}\+: A Dual\+Sense controller connected to a desktop computer using the HID interface. Supported on mac\+OS, Windows.
+\item \href{../api/UnityEngine.InputSystem.iOS.DualShock4GampadiOS.html}{\texttt{ {\ttfamily Dual\+Shock4\+Gampadi\+OS}}}\+: A Dual\+Shock 4 controller connected to an i\+OS Device via Bluetooth. Requires i\+OS 13 or higher.
+\item \href{../api/UnityEngine.InputSystem.DualShock.DualShockGamepad.html\#UnityEngine_InputSystem_DualShock_DualShockGamepad_SetLightBarColor_UnityEngine_Color_}{\texttt{ {\ttfamily Set\+Light\+Bar\+Color(\+Color)}}}\+: Used to set the color of the light bar on the controller.
+\end{DoxyItemize}
+
+Note that, due to limitations in the USB driver and/or the hardware, only one IOCTL (input/output control) command can be serviced at a time. \href{../api/UnityEngine.InputSystem.DualShock.DualShockGamepad.html\#UnityEngine_InputSystem_DualShock_DualShockGamepad_SetLightBarColor_UnityEngine_Color_}{\texttt{ {\ttfamily Set\+Light\+Bar\+Color(\+Color)}}} and \href{../api/UnityEngine.InputSystem.Gamepad.html\#UnityEngine_InputSystem_Gamepad_SetMotorSpeeds_System_Single_System_Single_}{\texttt{ {\ttfamily Set\+Motor\+Speeds(\+Single, Single)}}} functionality on Dualshock 4 is implemented using IOCTL commands, and so if either method is called in quick succession, it is likely that only the first command will successfully complete. The other commands will be dropped. If there is a need to set both lightbar color and rumble motor speeds at the same time, use the \href{../api/UnityEngine.InputSystem.DualShock.DualShock4GamepadHID.html\#UnityEngine_InputSystem_DualShock_DualShock4GamepadHID_SetMotorSpeedsAndLightBarColor_System_Single_System_Single_UnityEngine_Color_}{\texttt{ {\ttfamily Set\+Motor\+Speeds\+And\+Light\+Bar\+Color(\+Single, Single, Color)}}} method.
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: \texorpdfstring{$>$}{>}\texorpdfstring{$\ast$}{*} \doxylink{namespace_unity}{Unity} supports Play\+Station controllers on Web\+GL in some browser and OS configurations, but treats them as basic \href{../api/UnityEngine.InputSystem.Gamepad.html}{\texttt{ {\ttfamily Gamepad}}} or \href{../api/UnityEngine.InputSystem.Joystick.html}{\texttt{ {\ttfamily Joystick}}} Devices, and doesn\textquotesingle{}t support rumble or any other Dual\+Shock-\/specific functionality. \texorpdfstring{$>$}{>}\texorpdfstring{$\ast$}{*} \doxylink{namespace_unity}{Unity} doesn\textquotesingle{}t support connecting a Play\+Station controller to a desktop machine using the Dual\+Shock 4 USB Wireless Adaptor. Use USB or Bluetooth to connect it.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_gamepad_autotoc_md1382}{}\doxysection{\texorpdfstring{Xbox controllers}{Xbox controllers}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_gamepad_autotoc_md1382}
+Xbox controllers are well supported on different Devices. The Input \doxylink{namespace_system}{System} implements these using the \href{../api/UnityEngine.InputSystem.XInput.XInputController.html}{\texttt{ {\ttfamily XInput\+Controller}}} class, which derives from \href{../api/UnityEngine.InputSystem.Gamepad.html}{\texttt{ {\ttfamily Gamepad}}}. On Windows and UWP, \doxylink{namespace_unity}{Unity} uses the XInput API to connect to any type of supported XInput controller, including all Xbox One or Xbox 360-\/compatible controllers. These controllers are represented as an \href{../api/UnityEngine.InputSystem.XInput.XInputController.html}{\texttt{ {\ttfamily XInput\+Controller}}} instance. You can query the \href{../api/UnityEngine.InputSystem.XInput.XInputController.html\#UnityEngine_InputSystem_XInput_XInputController_subType}{\texttt{ {\ttfamily XInput\+Controller.\+sub\+Type}}} property to get information about the type of controller (for example, a wheel or a gamepad).
+
+On other platforms \doxylink{namespace_unity}{Unity}, uses derived classes to represent Xbox controllers\+:
+
+
+\begin{DoxyItemize}
+\item \href{../api/UnityEngine.InputSystem.XInput.XboxGamepadMacOS.html}{\texttt{ {\ttfamily Xbox\+Gamepad\+Mac\+OS}}}\+: Any Xbox or compatible gamepad connected to a Mac via USB using the \href{https://github.com/360Controller/360Controller}{\texttt{ Xbox Controller Driver for mac\+OS}}.
+\item \href{../api/UnityEngine.InputSystem.XInput.XboxOneGampadMacOSWireless.html}{\texttt{ {\ttfamily Xbox\+One\+Gampad\+Mac\+OSWireless}}}\+: An Xbox One controller connected to a Mac via Bluetooth. Only the latest generation of Xbox One controllers supports Bluetooth. These controllers don\textquotesingle{}t require any additional drivers in this scenario.
+\item \href{../api/UnityEngine.InputSystem.iOS.XboxOneGampadiOS.html}{\texttt{ {\ttfamily Xbox\+One\+Gampadi\+OS}}}\+: An Xbox One controller connected to an i\+OS Device via Bluetooth. Requires i\+OS 13 or higher.
+\end{DoxyItemize}
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: \texorpdfstring{$>$}{>}\texorpdfstring{$\ast$}{*} XInput controllers on Mac currently require the installation of the \href{https://github.com/360Controller/360Controller}{\texttt{ Xbox Controller Driver for mac\+OS}}. This driver only supports USB connections, and doesn\textquotesingle{}t support wireless dongles. However, the latest generation of Xbox One controllers natively support Bluetooth. Macs natively support these controllers as HIDs without any additional drivers when connected via Bluetooth. \texorpdfstring{$>$}{>}\texorpdfstring{$\ast$}{*} \doxylink{namespace_unity}{Unity} supports Xbox controllers on Web\+GL in some browser and OS configurations, but treats them as basic \href{../api/UnityEngine.InputSystem.Gamepad.html}{\texttt{ {\ttfamily Gamepad}}} or \href{../api/UnityEngine.InputSystem.Joystick.html}{\texttt{ {\ttfamily Joystick}}} Devices, and doesn\textquotesingle{}t support rumble or any other Xbox-\/specific functionality.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_gamepad_autotoc_md1383}{}\doxysection{\texorpdfstring{Switch controllers}{Switch controllers}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_gamepad_autotoc_md1383}
+The Input \doxylink{namespace_system}{System} support Switch Pro controllers on desktop computers via the \href{../api/UnityEngine.InputSystem.Switch.SwitchProControllerHID.html}{\texttt{ {\ttfamily Switch\+Pro\+Controller\+HID}}} class, which implements basic gamepad functionality.
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: This support does not currently work for Switch Pro controllers connected via wired USB. Instead, the Switch Pro controller {\itshape must} be connected via Bluetooth. This is due to the controller using a prioprietary communication protocol on top of HID which does not allow treating the controller like any other HID.
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: Switch Joy-\/\+Cons are not currently supported on desktop.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_gamepad_autotoc_md1384}{}\doxysection{\texorpdfstring{Cursor Control}{Cursor Control}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_gamepad_autotoc_md1384}
+To give gamepads and joysticks control over a hardware or software cursor, you can use the \href{../api/UnityEngine.InputSystem.UI.VirtualMouseInput.html}{\texttt{ {\ttfamily Virtual\+Mouse\+Input}}} component. See \href{UISupport.md\#virtual-mouse-cursor-control}{\texttt{ {\ttfamily Virtual\+Mouse\+Input} component}} in the UI section of the manual. 

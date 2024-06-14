@@ -1,0 +1,31 @@
+\chapter{Cinemachine Blend List Camera}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_blend_list_camera}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_blend_list_camera}\index{Cinemachine Blend List Camera@{Cinemachine Blend List Camera}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_blend_list_camera_autotoc_md646}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_blend_list_camera_autotoc_md646}%
+ The {\bfseries{\doxylink{namespace_cinemachine}{Cinemachine} Blend List Camera}} component executes a sequence of blends or cuts among its child Virtual Cameras.
+
+When the Blend List camera is activated, it executes its list of instructions, activating the first child Virtual Camera in the list, holding for a designated time, then cutting or blending to the next child, and so on. The Blend List camera holds the last Virtual Camera until \doxylink{namespace_cinemachine}{Cinemachine} Brain or \doxylink{namespace_timeline}{Timeline} deactivates the Blend List camera.
+
+{\bfseries{Tip}}\+: Use a Blend List Camera instead of \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_timeline}{Timeline}{0} for simpler, automatic sequences.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_blend_list_camera_autotoc_md647}{}\doxysection{\texorpdfstring{Properties\+:}{Properties\+:}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_blend_list_camera_autotoc_md647}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Solo}}   &Toggles whether or not the Blend List camera is temporarily live. Use this property to get immediate visual feedback in the \href{https://docs.unity3d.com/Manual/GameView.html}{\texttt{ Game view}} to adjust the Virtual Camera.    \\\cline{1-2}
+{\bfseries{Game Window Guides}}   &Toggles the visibility of compositional guides in the Game view. This property applies to all Virtual Cameras.    \\\cline{1-2}
+{\bfseries{Save During Play}}   &Check to \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_saving_during_play}{apply the changes while in Play mode}{0}. Use this feature to fine-\/tune a Virtual Camera without having to remember which properties to copy and paste. This property applies to all Virtual Cameras.    \\\cline{1-2}
+{\bfseries{Priority}}   &The importance of this Blend List camera for choosing the next shot. A higher value indicates a higher priority. \doxylink{namespace_cinemachine}{Cinemachine} Brain chooses the next live Virtual Camera from all Virtual Cameras that are activated and have the same or higher priority as the current live Virtual Camera. This property has no effect when using a Virtual Camera with \doxylink{namespace_timeline}{Timeline}.    \\\cline{1-2}
+{\bfseries{Standby Update}}   &Controls how often the virtual camera is updated when the virtual camera is not live.    \\\cline{1-2}
+{\bfseries{Loop}}   &When enabled, the child virtual cameras will cycle indefintely instead of stopping on the last virtual camera in the list.    \\\cline{1-2}
+{\bfseries{Look At}}   &The default target Game\+Object that the children Virtual Camera move with. The Blend List camera uses this target when the child does not specify this target. May be empty if all of the children define targets of their own.    \\\cline{1-2}
+{\bfseries{Follow}}   &The default target Game\+Object to aim the \doxylink{namespace_unity}{Unity} camera at. The Blend List camera uses this target when the child does not specify this target. May be empty if all of the children define targets of their own.    \\\cline{1-2}
+{\bfseries{Show Debug Text}}   &Check to display a textual summary of the live Virtual Camera and blend in the view.    \\\cline{1-2}
+{\bfseries{Enable All Child Cameras}}   &Check to activate all child cameras. This is useful if animating them in \doxylink{namespace_timeline}{Timeline}, but consumes extra resources.    \\\cline{1-2}
+{\bfseries{Instructions}}   &The set of instructions for enabling child cameras.   \\\cline{1-2}
+\end{longtabu}

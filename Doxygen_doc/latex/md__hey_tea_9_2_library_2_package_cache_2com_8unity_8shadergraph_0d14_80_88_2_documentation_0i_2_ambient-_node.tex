@@ -1,0 +1,43 @@
+\chapter{Ambient Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_ambient-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_ambient-_node}\index{Ambient Node@{Ambient Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_ambient-_node_autotoc_md2903}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_ambient-_node_autotoc_md2903}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_ambient-_node_autotoc_md2904}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_ambient-_node_autotoc_md2904}
+Provides access to the Scene\textquotesingle{}s {\bfseries{Ambient}} color values. When Environment Lighting Source is set to {\bfseries{Gradient}} \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_port}{Port}{0} {\bfseries{Color/\+Sky}} returns the value {\bfseries{Sky Color}}. When Environment Lighting Source is set to {\bfseries{Color}} \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_port}{Port}{0} {\bfseries{Color/\+Sky}} returns the value {\bfseries{Ambient Color}}. \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_port}{Ports}{0} {\bfseries{Equator}} and {\bfseries{Ground}} always return the values {\bfseries{Equator Color}} and {\bfseries{Ground Color}} regardless of the current Environment Lighting Source.
+
+Note\+: Values of this \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node}{Node}{0} are only updated when entering Play mode or saving the current Scene/\+Project.
+
+Note\+: The behavior of this \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node}{Node}{0} is undefined globally. Shader Graph does not define the function of the node. Instead, each Render Pipeline defines what HLSL code to execute for this \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node}{Node}{0}.
+
+Different Render Pipelines may produce different results. If you\textquotesingle{}re building a shader in one Render Pipeline that you want to use in both, try checking it in both pipelines before production. A \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node}{Node}{0} might be defined in one Render Pipeline and undefined in the other. If this \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node}{Node}{0} is undefined, it returns 0 (black).\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_ambient-_node_autotoc_md2905}{}\doxysubsubsection{\texorpdfstring{Unity Render Pipelines Support}{Unity Render Pipelines Support}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_ambient-_node_autotoc_md2905}
+
+\begin{DoxyItemize}
+\item Universal Render Pipeline
+\end{DoxyItemize}
+
+The High Definition Render Pipeline does {\bfseries{not}} support this Node.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_ambient-_node_autotoc_md2906}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_ambient-_node_autotoc_md2906}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+Color/\+Sky   &Output   &Vector 3   &None   &Color (Color) or Sky (Gradient) color value    \\\cline{1-5}
+Equator   &Output   &Vector 3   &None   &Equator (Gradient) color value    \\\cline{1-5}
+Ground   &Output   &Vector 3   &None   &Ground (Gradient) color value   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_ambient-_node_autotoc_md2907}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_ambient-_node_autotoc_md2907}
+The following example code represents one possible outcome of this node.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3\ \_Ambient\_ColorSky\ =\ SHADERGRAPH\_AMBIENT\_SKY;}
+\DoxyCodeLine{float3\ \_Ambient\_Equator\ =\ SHADERGRAPH\_AMBIENT\_EQUATOR;}
+\DoxyCodeLine{float3\ \_Ambient\_Ground\ =\ SHADERGRAPH\_AMBIENT\_GROUND;}
+
+\end{DoxyCode}
+ 

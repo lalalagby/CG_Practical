@@ -1,0 +1,92 @@
+\chapter{Workflow Overview -\/ Using Embedded Actions}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_workflow-_embedded}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_workflow-_embedded}\index{Workflow Overview -\/ Using Embedded Actions@{Workflow Overview -\/ Using Embedded Actions}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_workflow-_embedded_autotoc_md1610}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_workflow-_embedded_autotoc_md1610}%
+ 
+
+You can use the {\bfseries{Input\+Action class}} in your script to define actions in your script. This adds a layer of abstraction between your actual action code or methods, and the \href{ActionBindings.html}{\texttt{ bindings}} to specific device controls.
+
+This means that instead of directly reading device states, you do not specify explicitly which controls (such as a gamepad trigger or stick) should do what in your code. Instead you create \href{Actions.html}{\texttt{ Actions}}, \href{ActionBindings.html}{\texttt{ bind}} them to \href{Controls.html}{\texttt{ controls}}, and respond to the states or values from your Actions in your code.
+
+When you make a public \href{../api/UnityEngine.InputSystem.InputAction.html}{\texttt{ Input\+Action}} field in a Mono\+Behaviour script, it displays in the inspector as a configurable field. The configurable field UI allows you to create a binding for the action. For example, here are two Actions defined using the Input\+Action class in a script\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{using\ UnityEngine;}
+\DoxyCodeLine{using\ UnityEngine.InputSystem;}
+\DoxyCodeLine{}
+\DoxyCodeLine{public\ class\ ExampleScript\ :\ MonoBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ public\ InputAction\ move;}
+\DoxyCodeLine{\ \ \ \ public\ InputAction\ jump;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+In the image below, you can see the actions displayed in the inspector. In this example they have been configured so they are bound to Gamepad controls.
+
+
+
+The Input\+Action class provides a way to bind interactions from a device’s controls to named actions in the inspector. When you bind actions to controls from a device in the inspector, you can then design your script to respond when the actions are performed without hard-\/coding references to specific devices in your script. This layer of abstraction provides you with the flexibility to modify or add multiple bindings without needing to change your code.
+
+To read values from your Actions, you must first {\bfseries{enable}} the action, and then either repeatedly poll the action in your game loop, or add event handlers to the action. You must also {\bfseries{disable}} the action when you no longer want the input to trigger event handlers.
+
+So, use actions such as those shown above in the small code sample, you would use a script like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{using\ UnityEngine;}
+\DoxyCodeLine{using\ UnityEngine.InputSystem;}
+\DoxyCodeLine{}
+\DoxyCodeLine{//\ Using\ embedded\ actions\ with\ callbacks\ or\ reading\ values\ each\ frame.}
+\DoxyCodeLine{}
+\DoxyCodeLine{public\ class\ ExampleScript\ :\ MonoBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ //\ these\ embedded\ actions\ are\ configurable\ in\ the\ inspector:}
+\DoxyCodeLine{\ \ \ \ public\ InputAction\ moveAction;}
+\DoxyCodeLine{\ \ \ \ public\ InputAction\ jumpAction;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ public\ void\ Awake()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ assign\ a\ callback\ for\ the\ "{}jump"{}\ action.}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ jumpAction.performed\ +=\ ctx\ =>\ \{\ OnJump(ctx);\ \};}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ public\ void\ Update()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ read\ the\ value\ for\ the\ "{}move"{}\ action\ each\ frame.}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Vector2\ moveAmount\ =\ moveAction.ReadValue<Vector2>();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ public\ void\ OnJump(InputAction.CallbackContext\ context)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ jump\ code\ goes\ here.}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //\ the\ actions\ must\ be\ enabled\ and\ disabled}
+\DoxyCodeLine{\ \ \ \ //\ when\ the\ GameObject\ is\ enabled\ or\ disabled}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ public\ void\ OnEnable()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ moveAction.Enable();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ jumpAction.Enable();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ public\ void\ OnDisable()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ moveAction.Disable();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ jumpAction.Disable();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+See \href{Actions.html}{\texttt{ Actions}} for more information about both these techniques.
+
+You can find an example of this workflow in the sample projects included with the input system package. To find it, in the Project window, look in {\bfseries{Assets \texorpdfstring{$>$}{>} \doxylink{namespace_samples}{Samples} \texorpdfstring{$>$}{>} Simple\+Demo}} and open the scene\+: {\bfseries{Simple\+Demo\+\_\+\+Using\+Actions}}.
+
+Using Input\+Actions also makes it easier to implement a system to allow the user to remap their own controls at run time.
+
+Using embedded actions like this is more flexible than \href{Workflow-Direct.html}{\texttt{ directly reading device states}}, but less flexible than using an \href{Workflow-ActionsAsset.html}{\texttt{ actions asset}}. 

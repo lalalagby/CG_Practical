@@ -1,0 +1,92 @@
+\doxysection{Unity\+Engine.\+Experimental.\+Rendering.\+Universal.\+Render\+Objects.\+Render\+Objects\+Settings Class Reference}
+\hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings}{}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings}\index{UnityEngine.Experimental.Rendering.Universal.RenderObjects.RenderObjectsSettings@{UnityEngine.Experimental.Rendering.Universal.RenderObjects.RenderObjectsSettings}}
+
+
+Settings class used for the render objects renderer feature.  
+
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_aa8eef35a38ccb232ed31d56ffa242833}{Override\+Material\+Mode}} \{ \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_aa8eef35a38ccb232ed31d56ffa242833a6adf97f83acf6453d4a6a4b1070f3754}{None}}
+, \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_aa8eef35a38ccb232ed31d56ffa242833ad92a8333dd3ccb895cc65f7455b71206}{Material}}
+, \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_aa8eef35a38ccb232ed31d56ffa242833aa88a92f4a0e793589f2341851a15c660}{Shader}}
+ \}
+\begin{DoxyCompactList}\small\item\em Options to select which type of override mode should be used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_a1c732fd83d3a909fbd0aaced2ea94bd3}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_a1c732fd83d3a909fbd0aaced2ea94bd3} 
+string {\bfseries pass\+Tag} = "{}Render\+Objects\+Feature"{}
+\begin{DoxyCompactList}\small\item\em The profiler tag used with the pass. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_a7695ed76a69438d0c5252351edac8ca9}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_a7695ed76a69438d0c5252351edac8ca9} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_abcf86de95108d2ec392bc873e92392d5}{Render\+Pass\+Event}} {\bfseries Event} = Render\+Pass\+Event.\+After\+Rendering\+Opaques
+\begin{DoxyCompactList}\small\item\em Controls when the render pass executes. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_a902bbf449d732d453744073f19010107}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_a902bbf449d732d453744073f19010107} 
+\mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_filter_settings}{Filter\+Settings}} {\bfseries filter\+Settings} = new \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_filter_settings}{Filter\+Settings}}()
+\begin{DoxyCompactList}\small\item\em The filter settings for the pass. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_a71ac71e8f79a07f50be272a2359d46db}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_a71ac71e8f79a07f50be272a2359d46db} 
+\mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_aa8eef35a38ccb232ed31d56ffa242833ad92a8333dd3ccb895cc65f7455b71206}{Material}} {\bfseries override\+Material} = null
+\begin{DoxyCompactList}\small\item\em The override material to use. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_aed41dec62ad2041afa3f289703cbdc9b}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_aed41dec62ad2041afa3f289703cbdc9b} 
+int {\bfseries override\+Material\+Pass\+Index} = 0
+\begin{DoxyCompactList}\small\item\em The pass index to use with the override material. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_a02ba8e79841be55e9261a72f4ae3ac0b}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_a02ba8e79841be55e9261a72f4ae3ac0b} 
+\mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_aa8eef35a38ccb232ed31d56ffa242833aa88a92f4a0e793589f2341851a15c660}{Shader}} {\bfseries override\+Shader} = null
+\begin{DoxyCompactList}\small\item\em The override shader to use. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_a6a08f12ffef777c5de3f4143c334ca6c}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_a6a08f12ffef777c5de3f4143c334ca6c} 
+int {\bfseries override\+Shader\+Pass\+Index} = 0
+\begin{DoxyCompactList}\small\item\em The pass index to use with the override shader. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_af39ddcf4fd097ab0ca1cfd05e7b30993}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_af39ddcf4fd097ab0ca1cfd05e7b30993} 
+\mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_aa8eef35a38ccb232ed31d56ffa242833}{Override\+Material\+Mode}} {\bfseries override\+Mode} = \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_aa8eef35a38ccb232ed31d56ffa242833ad92a8333dd3ccb895cc65f7455b71206}{Override\+Material\+Mode.\+Material}}
+\begin{DoxyCompactList}\small\item\em The selected override mode. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_abe6c88d2ed1d75ba8e5b4e5b1a161e80}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_abe6c88d2ed1d75ba8e5b4e5b1a161e80} 
+bool {\bfseries override\+Depth\+State} = false
+\begin{DoxyCompactList}\small\item\em Sets whether it should override depth or not. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_ab6e218e8808698ab2b1d04f2fa130fc5}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_ab6e218e8808698ab2b1d04f2fa130fc5} 
+Compare\+Function {\bfseries depth\+Compare\+Function} = Compare\+Function.\+Less\+Equal
+\begin{DoxyCompactList}\small\item\em The depth comparison function to use. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_a93926c84c75dcb6979c17432098d4b5c}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_a93926c84c75dcb6979c17432098d4b5c} 
+bool {\bfseries enable\+Write} = true
+\begin{DoxyCompactList}\small\item\em Sets whether it should write to depth or not. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_adf50b9898531a229b91138a20dc922c1}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_adf50b9898531a229b91138a20dc922c1} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_stencil_state_data}{Stencil\+State\+Data}} {\bfseries stencil\+Settings} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_stencil_state_data}{Stencil\+State\+Data}}()
+\begin{DoxyCompactList}\small\item\em The stencil settings to use. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_adeef645bdcb7d925998ef6e97f1177fb}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_adeef645bdcb7d925998ef6e97f1177fb} 
+\mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_custom_camera_settings}{Custom\+Camera\+Settings}} {\bfseries camera\+Settings} = new \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_custom_camera_settings}{Custom\+Camera\+Settings}}()
+\begin{DoxyCompactList}\small\item\em The camera settings to use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Settings class used for the render objects renderer feature. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_aa8eef35a38ccb232ed31d56ffa242833}\index{UnityEngine.Experimental.Rendering.Universal.RenderObjects.RenderObjectsSettings@{UnityEngine.Experimental.Rendering.Universal.RenderObjects.RenderObjectsSettings}!OverrideMaterialMode@{OverrideMaterialMode}}
+\index{OverrideMaterialMode@{OverrideMaterialMode}!UnityEngine.Experimental.Rendering.Universal.RenderObjects.RenderObjectsSettings@{UnityEngine.Experimental.Rendering.Universal.RenderObjects.RenderObjectsSettings}}
+\doxysubsubsection{\texorpdfstring{OverrideMaterialMode}{OverrideMaterialMode}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_aa8eef35a38ccb232ed31d56ffa242833} 
+enum \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_aa8eef35a38ccb232ed31d56ffa242833}{Unity\+Engine.\+Experimental.\+Rendering.\+Universal.\+Render\+Objects.\+Render\+Objects\+Settings.\+Override\+Material\+Mode}}}
+
+
+
+Options to select which type of override mode should be used. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!UnityEngine.Experimental.Rendering.Universal.RenderObjects.RenderObjectsSettings@{UnityEngine.Experimental.Rendering.Universal.RenderObjects.RenderObjectsSettings}}\index{UnityEngine.Experimental.Rendering.Universal.RenderObjects.RenderObjectsSettings@{UnityEngine.Experimental.Rendering.Universal.RenderObjects.RenderObjectsSettings}!None@{None}}}\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_aa8eef35a38ccb232ed31d56ffa242833a6adf97f83acf6453d4a6a4b1070f3754}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_aa8eef35a38ccb232ed31d56ffa242833} 
+None&Use this to not override. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Material@{Material}!UnityEngine.Experimental.Rendering.Universal.RenderObjects.RenderObjectsSettings@{UnityEngine.Experimental.Rendering.Universal.RenderObjects.RenderObjectsSettings}}\index{UnityEngine.Experimental.Rendering.Universal.RenderObjects.RenderObjectsSettings@{UnityEngine.Experimental.Rendering.Universal.RenderObjects.RenderObjectsSettings}!Material@{Material}}}\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_aa8eef35a38ccb232ed31d56ffa242833ad92a8333dd3ccb895cc65f7455b71206}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_aa8eef35a38ccb232ed31d56ffa242833} 
+Material&Use this to use an override material. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Shader@{Shader}!UnityEngine.Experimental.Rendering.Universal.RenderObjects.RenderObjectsSettings@{UnityEngine.Experimental.Rendering.Universal.RenderObjects.RenderObjectsSettings}}\index{UnityEngine.Experimental.Rendering.Universal.RenderObjects.RenderObjectsSettings@{UnityEngine.Experimental.Rendering.Universal.RenderObjects.RenderObjectsSettings}!Shader@{Shader}}}\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_aa8eef35a38ccb232ed31d56ffa242833aa88a92f4a0e793589f2341851a15c660}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_render_objects_1_1_render_objects_settings_aa8eef35a38ccb232ed31d56ffa242833} 
+Shader&Use this to use an override shader. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/\+Renderer\+Features/Render\+Objects.\+cs\end{DoxyCompactItemize}

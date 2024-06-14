@@ -1,0 +1,123 @@
+\doxysection{Cinemachine.\+Utility.\+Position\+Predictor Class Reference}
+\hypertarget{class_cinemachine_1_1_utility_1_1_position_predictor}{}\label{class_cinemachine_1_1_utility_1_1_position_predictor}\index{Cinemachine.Utility.PositionPredictor@{Cinemachine.Utility.PositionPredictor}}
+
+
+This is a utility class to implement position predicting.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_cinemachine_1_1_utility_1_1_position_predictor_a99f9dea17b1ae358861b7fa16d65b4c2}{Is\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em Have any positions been logged for smoothing? \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_utility_1_1_position_predictor_a9e58bc6b8782bc549adf026fdcc2073b}{Apply\+Transform\+Delta}} (Vector3 position\+Delta)
+\begin{DoxyCompactList}\small\item\em Apply a delta to the target\textquotesingle{}s position, which will be ignored for smoothing purposes. Use this whent he target\textquotesingle{}s position gets warped. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_utility_1_1_position_predictor_a70c7177df9bc940dd4b7dad3d5c963c2}\label{class_cinemachine_1_1_utility_1_1_position_predictor_a70c7177df9bc940dd4b7dad3d5c963c2} 
+void {\bfseries Reset} ()
+\begin{DoxyCompactList}\small\item\em Reset the lookahead data, clear all the buffers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_utility_1_1_position_predictor_a2cb04230662bf60aad9f8c7ddd494647}{Add\+Position}} (Vector3 pos, float delta\+Time, float lookahead\+Time)
+\begin{DoxyCompactList}\small\item\em Add a new target position to the history buffer. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_cinemachine_1_1_utility_1_1_position_predictor_a8b06a425862ab0fc868899d93dbfafec}{Predict\+Position\+Delta}} (float lookahead\+Time)
+\begin{DoxyCompactList}\small\item\em Predict the target\textquotesingle{}s position change over a given time from now. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_cinemachine_1_1_utility_1_1_position_predictor_ad84a5307c83689275eb11233907f13b7}{Predict\+Position}} (float lookahead\+Time)
+\begin{DoxyCompactList}\small\item\em Predict the target\textquotesingle{}s position a given time from now. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_utility_1_1_position_predictor_a02e44e9b4c5a0b49ac0ab5c626aba5e9}\label{class_cinemachine_1_1_utility_1_1_position_predictor_a02e44e9b4c5a0b49ac0ab5c626aba5e9} 
+float {\bfseries Smoothing}
+\begin{DoxyCompactList}\small\item\em How much to smooth the predicted result. Must be \texorpdfstring{$>$}{>}= 0, roughly coresponds to smoothing time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is a utility class to implement position predicting. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cinemachine_1_1_utility_1_1_position_predictor_a2cb04230662bf60aad9f8c7ddd494647}\index{Cinemachine.Utility.PositionPredictor@{Cinemachine.Utility.PositionPredictor}!AddPosition@{AddPosition}}
+\index{AddPosition@{AddPosition}!Cinemachine.Utility.PositionPredictor@{Cinemachine.Utility.PositionPredictor}}
+\doxysubsubsection{\texorpdfstring{AddPosition()}{AddPosition()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_utility_1_1_position_predictor_a2cb04230662bf60aad9f8c7ddd494647} 
+void Cinemachine.\+Utility.\+Position\+Predictor.\+Add\+Position (\begin{DoxyParamCaption}\item[{Vector3}]{pos}{, }\item[{float}]{delta\+Time}{, }\item[{float}]{lookahead\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a new target position to the history buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The new target position\\
+\hline
+{\em delta\+Time} & delta\+Time since the last target position was added\\
+\hline
+{\em lookahead\+Time} & Current lookahead time setting (unused)\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cinemachine_1_1_utility_1_1_position_predictor_a9e58bc6b8782bc549adf026fdcc2073b}\index{Cinemachine.Utility.PositionPredictor@{Cinemachine.Utility.PositionPredictor}!ApplyTransformDelta@{ApplyTransformDelta}}
+\index{ApplyTransformDelta@{ApplyTransformDelta}!Cinemachine.Utility.PositionPredictor@{Cinemachine.Utility.PositionPredictor}}
+\doxysubsubsection{\texorpdfstring{ApplyTransformDelta()}{ApplyTransformDelta()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_utility_1_1_position_predictor_a9e58bc6b8782bc549adf026fdcc2073b} 
+void Cinemachine.\+Utility.\+Position\+Predictor.\+Apply\+Transform\+Delta (\begin{DoxyParamCaption}\item[{Vector3}]{position\+Delta}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Apply a delta to the target\textquotesingle{}s position, which will be ignored for smoothing purposes. Use this whent he target\textquotesingle{}s position gets warped. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position\+Delta} & The position change of the target object\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cinemachine_1_1_utility_1_1_position_predictor_a99f9dea17b1ae358861b7fa16d65b4c2}\index{Cinemachine.Utility.PositionPredictor@{Cinemachine.Utility.PositionPredictor}!IsEmpty@{IsEmpty}}
+\index{IsEmpty@{IsEmpty}!Cinemachine.Utility.PositionPredictor@{Cinemachine.Utility.PositionPredictor}}
+\doxysubsubsection{\texorpdfstring{IsEmpty()}{IsEmpty()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_utility_1_1_position_predictor_a99f9dea17b1ae358861b7fa16d65b4c2} 
+bool Cinemachine.\+Utility.\+Position\+Predictor.\+Is\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Have any positions been logged for smoothing? 
+
+\begin{DoxyReturn}{Returns}
+True if no positions have yet been logged, in which case smoothing is impossible
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_utility_1_1_position_predictor_ad84a5307c83689275eb11233907f13b7}\index{Cinemachine.Utility.PositionPredictor@{Cinemachine.Utility.PositionPredictor}!PredictPosition@{PredictPosition}}
+\index{PredictPosition@{PredictPosition}!Cinemachine.Utility.PositionPredictor@{Cinemachine.Utility.PositionPredictor}}
+\doxysubsubsection{\texorpdfstring{PredictPosition()}{PredictPosition()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_utility_1_1_position_predictor_ad84a5307c83689275eb11233907f13b7} 
+Vector3 Cinemachine.\+Utility.\+Position\+Predictor.\+Predict\+Position (\begin{DoxyParamCaption}\item[{float}]{lookahead\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Predict the target\textquotesingle{}s position a given time from now. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lookahead\+Time} & How far ahead in time to predict\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The predicted position
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_utility_1_1_position_predictor_a8b06a425862ab0fc868899d93dbfafec}\index{Cinemachine.Utility.PositionPredictor@{Cinemachine.Utility.PositionPredictor}!PredictPositionDelta@{PredictPositionDelta}}
+\index{PredictPositionDelta@{PredictPositionDelta}!Cinemachine.Utility.PositionPredictor@{Cinemachine.Utility.PositionPredictor}}
+\doxysubsubsection{\texorpdfstring{PredictPositionDelta()}{PredictPositionDelta()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_utility_1_1_position_predictor_a8b06a425862ab0fc868899d93dbfafec} 
+Vector3 Cinemachine.\+Utility.\+Position\+Predictor.\+Predict\+Position\+Delta (\begin{DoxyParamCaption}\item[{float}]{lookahead\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Predict the target\textquotesingle{}s position change over a given time from now. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lookahead\+Time} & How far ahead in time to predict\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The predicted position change (current velocity \texorpdfstring{$\ast$}{*} lokahead time)
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Core/Predictor.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,90 @@
+\chapter{Thread\+Map\+Detail node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_thread_map_detail-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_thread_map_detail-_node}\index{ThreadMapDetail node@{ThreadMapDetail node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_thread_map_detail-_node_autotoc_md4034}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_thread_map_detail-_node_autotoc_md4034}%
+ The Thread\+Map\+Detail node adds tileable thread map detail information to a fabric material. The node outputs a thread map that you can apply to a fabric material.
+
+
+
+\mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2snippets_2nodes-subgraph-node}{nodes-\/subgraph-\/node}{0}\mbox{]}
+
+A thread map is a Texture with 4 channels. Like a detail map, a thread map contains information about ambient occlusion, the normal x-\/axis and normal y-\/axis, and smoothness.
+
+For more information on Detail maps, see \href{https://docs.unity3d.com/Manual/StandardShaderMaterialParameterDetail.html}{\texttt{ Secondary Maps (Detail Maps) \& Detail Mask}} in the \doxylink{namespace_unity}{Unity} User Manual.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_thread_map_detail-_node_autotoc_md4035}{}\doxysection{\texorpdfstring{Create Node menu category}{Create Node menu category}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_thread_map_detail-_node_autotoc_md4035}
+The Thread\+Map\+Detail node is under the {\bfseries{Utility}} \texorpdfstring{$>$}{>} {\bfseries{High Definition Render Pipeline}} \texorpdfstring{$>$}{>} {\bfseries{Fabric}} category in the Create Node menu.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_thread_map_detail-_node_autotoc_md4036}{}\doxysection{\texorpdfstring{Compatibility}{Compatibility}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_thread_map_detail-_node_autotoc_md4036}
+\mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2aaa07aff0f7a5b69c80d06592813cdaf}{nodes-\/compatibility-\/hdrp}{0}\mbox{]}
+
+\mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2snippets_2hdrp-latest-link}{hdrp-\/latest-\/link}{0}\mbox{]}
+
+\mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2snippets_2nodes-all-contexts}{nodes-\/all-\/contexts}{0}\mbox{]}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_thread_map_detail-_node_autotoc_md4037}{}\doxysection{\texorpdfstring{Inputs}{Inputs}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_thread_map_detail-_node_autotoc_md4037}
+\mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2snippets_2nodes-inputs}{nodes-\/inputs}{0}\mbox{]}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}} }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}} }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Binding}} }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}} }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}} }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Binding}} }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-4}
+\endhead
+{\bfseries{Use Thread Map}} &Boolean &None &Use the port\textquotesingle{}s default input to enable or disable the Thread\+Map\+Detail node. You can also connect a node that outputs a Boolean to choose when to enable or disable the thread map.  \\\cline{1-4}
+{\bfseries{Thread\+Map}} &Texture 2D &None &The texture that contains the detailed information of a fabric\textquotesingle{}s thread pattern. The texture should contain 4 channels\+: 
+\begin{DoxyItemize}
+\item R -\/ The ambient occlusion 
+\item G -\/ The normal Y-\/axis 
+\item B -\/ The smoothness 
+\item A -\/ The normal X-\/axis 
+\end{DoxyItemize}\\\cline{1-4}
+{\bfseries{UV}} &Vector 2 &UV &The UV coordinates the Thread\+Map\+Detail node should use to map the Thread\+Map texture on the geometry.  \\\cline{1-4}
+{\bfseries{Normals}} &Vector 3 &None &The base normal map that you want your Shader Graph to apply to the geometry before it applies the thread map.  \\\cline{1-4}
+{\bfseries{Smoothness}} &Float &None &The base smoothness value that you want your Shader Graph to apply to the geometry before it applies the thread map.  \\\cline{1-4}
+{\bfseries{Alpha}} &Float &None &The base alpha value that you want your Shader Graph to apply to the geometry before it applies the thread map.  \\\cline{1-4}
+{\bfseries{Ambient Occlusion}} &Float &None &The base ambient occlusion value that you want your Shader Graph to apply to the geometry before it applies the thread map.  \\\cline{1-4}
+{\bfseries{Thread AO Strength}} &Float &None &Specify a value of {\ttfamily 0} or {\ttfamily 1} to determine how the {\bfseries{Thread\+Map}}\textquotesingle{}s ambient occlusion should impact the final shader result\+: 
+\begin{DoxyItemize}
+\item If you provide a value of {\ttfamily 0}, the {\bfseries{Thread\+Map}}\textquotesingle{}s ambient occlusion has no effect on the final output of the shader. 
+\item If you provide a value of {\ttfamily 1}, Shader Graph multiplies your base {\bfseries{Ambient Occlusion}} value by the ambient occlusion value specified in your {\bfseries{Thread\+Map}} to determine the final output of the shader.
+\end{DoxyItemize}\\\cline{1-4}
+{\bfseries{Thread Normal Strength}} &Float &None &Specify a value of {\ttfamily 0} or {\ttfamily 1} to determine how the {\bfseries{Thread\+Map}}\textquotesingle{}s normal should impact the final shader result\+: 
+\begin{DoxyItemize}
+\item If you provide a value of {\ttfamily 0}, the {\bfseries{Thread\+Map}}\textquotesingle{}s normal has no effect on the final output of the shader. 
+\item If you provide a value of {\ttfamily 1}, Shader Graph blends the values from your base {\bfseries{Normals}} with the normal specified in your {\bfseries{Thread\+Map}} to determine the final output of the shader.
+\end{DoxyItemize}\\\cline{1-4}
+{\bfseries{Thread Smoothness Strength}} &Float &None &Specify a value of {\ttfamily 0} or {\ttfamily 1} to determine how the {\bfseries{Thread\+Map}}\textquotesingle{}s smoothness should impact the final shader result\+: 
+\begin{DoxyItemize}
+\item If you provide a value of {\ttfamily 0}, the {\bfseries{Thread\+Map}}\textquotesingle{}s smoothness value has no effect on the final output of the shader. 
+\item If you provide a value of {\ttfamily 1}, Shader Graph adds the smoothness value specified in your {\bfseries{Thread\+Map}} to your base {\bfseries{Smoothness}} value to determine the final output of the shader. For this calculation, Shader Graph remaps the value of your {\bfseries{Thread\+Map}}\textquotesingle{}s smoothness from (0,1) to (-\/1, 1).
+\end{DoxyItemize}\\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_thread_map_detail-_node_autotoc_md4038}{}\doxysection{\texorpdfstring{Outputs}{Outputs}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_thread_map_detail-_node_autotoc_md4038}
+\mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2snippets_2nodes-outputs}{nodes-\/outputs}{0}\mbox{]}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}} }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}} }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}} }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}} }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-3}
+\endhead
+{\bfseries{Normal}} &Vector 3 &The final normal output of the thread map.  \\\cline{1-3}
+{\bfseries{Smoothness}} &Float &The final smoothness output of the thread map.  \\\cline{1-3}
+{\bfseries{Ambient Occlusion}} &Float &The final ambient occlusion output of the thread map.  \\\cline{1-3}
+{\bfseries{Alpha}} &Float &The final alpha output of the thread map. Shader Graph calculates this alpha value by multiplying the input {\bfseries{Alpha}} value by the {\bfseries{Thread AO Strength}} value.   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_thread_map_detail-_node_autotoc_md4039}{}\doxysection{\texorpdfstring{Example graph usage}{Example graph usage}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_thread_map_detail-_node_autotoc_md4039}
+For an example use of the Thread\+Map\+Detail node, see either of the HDRP\textquotesingle{}s Fabric shaders.
+
+To view these Shader Graphs\+:
+
+
+\begin{DoxyEnumerate}
+\item Create a new material and assign it the {\bfseries{HDRP}} \texorpdfstring{$>$}{>} {\bfseries{Fabric}} \texorpdfstring{$>$}{>} {\bfseries{Silk}} or {\bfseries{HDRP}} \texorpdfstring{$>$}{>} {\bfseries{Fabric}} \texorpdfstring{$>$}{>} {\bfseries{Cotton\+Wool}} shader, as described in the \doxylink{namespace_unity}{Unity} User Manual section \href{https://docs.unity3d.com/Documentation/Manual/materials-introduction.html}{\texttt{ Creating a material asset, and assigning a shader to it}}.
+\item Next to the {\bfseries{Shader}} dropdown, select {\bfseries{Edit}}.
+\end{DoxyEnumerate}
+
+Your chosen Fabric\textquotesingle{}s Shader Graph opens. You can view the Thread\+Map\+Detail node, its Subgraph, and the other nodes that create HDRP\textquotesingle{}s Fabric shaders. 

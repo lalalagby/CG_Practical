@@ -1,0 +1,114 @@
+\chapter{Create a Custom Scripting Event Sender node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_039a0e2aa5464bc68d38ebd92d57ec4fc}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_039a0e2aa5464bc68d38ebd92d57ec4fc}\index{Create a Custom Scripting Event Sender node@{Create a Custom Scripting Event Sender node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_039a0e2aa5464bc68d38ebd92d57ec4fc_autotoc_md5286}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_039a0e2aa5464bc68d38ebd92d57ec4fc_autotoc_md5286}%
+ \begin{DoxyNote}{Note}
+Before you create a Custom Scripting Event Sender node, you must create a Custom Scripting Event node. \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_033a8ef149dfa2b3576e594bdca14540a}{tasks-\/note-\/end}{0}\mbox{]}.
+\end{DoxyNote}
+After you create a Custom Scripting Event node, you can create a Custom Scripting Event Sender node to trigger the Event from any other Script Graph in the same scene, or the same Script Graph.
+
+You can also choose to create a separate script to trigger the Event from code. For more information, see \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0368ddcbea1327dec736ce355f1d76c90}{Trigger a Custom Scripting Event from a C\# script}{0}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_039a0e2aa5464bc68d38ebd92d57ec4fc_autotoc_md5287}{}\doxysection{\texorpdfstring{Create a node and add it to the fuzzy finder}{Create a node and add it to the fuzzy finder}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_039a0e2aa5464bc68d38ebd92d57ec4fc_autotoc_md5287}
+To create a Custom Scripting Event Sender node and add it to the fuzzy finder\+:
+
+
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_02d03661124e0bd86dfb18db85fc8ceba}{open-\/project-\/window}{0}\mbox{]}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_08e34a592cc0e8541615db3733ae88b57}{right-\/click-\/project}{0}\mbox{]}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_059d97be577f9030fa0ef5eb469c8b969}{create-\/c-\/script-\/project}{0}\mbox{]}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Enter a name, such as {\ttfamily Send\+My\+Event\+Node}, for the new script file.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Press Enter.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_09d38870b1cab13c8e6231c5db868b782}{open-\/new-\/external-\/code}{0}\mbox{]}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item In your external editor, copy and paste the following code into the C\# script\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_1_1_visual_scripting}{Unity.VisualScripting}};}
+\DoxyCodeLine{\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{\ }
+\DoxyCodeLine{\ \textcolor{comment}{//Custom\ node\ to\ send\ the\ Event}}
+\DoxyCodeLine{[UnitTitle(\textcolor{stringliteral}{"{}Send\ My\ Custom\ Event"{}})]}
+\DoxyCodeLine{[\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_category}{UnitCategory}}(\textcolor{stringliteral}{"{}Events\(\backslash\)\(\backslash\)MyEvents"{}})]\textcolor{comment}{//Setting\ the\ path\ to\ find\ the\ node\ in\ the\ fuzzy\ finder\ as\ Events\ >\ My\ Events.}}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }SendMyEvent\ :\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit}{Unit}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]\textcolor{comment}{//\ Mandatory\ attribute,\ to\ make\ sure\ we\ don’t\ serialize\ data\ that\ should\ never\ be\ serialized.}}
+\DoxyCodeLine{\ \ \ [PortLabelHidden]\textcolor{comment}{//\ Hide\ the\ port\ label,\ as\ we\ normally\ hide\ the\ label\ for\ default\ Input\ and\ Output\ triggers.}}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_input}{ControlInput}}\ inputTrigger\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{ValueInput}}\ myValue;}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]}
+\DoxyCodeLine{\ \ \ [PortLabelHidden]\textcolor{comment}{//\ Hide\ the\ port\ label,\ as\ we\ normally\ hide\ the\ label\ for\ default\ Input\ and\ Output\ triggers.}}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_output}{ControlOutput}}\ outputTrigger\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Definition()}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ inputTrigger\ =\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_input}{ControlInput}}(nameof(inputTrigger),\ Trigger);}
+\DoxyCodeLine{\ \ \ \ \ \ \ myValue\ =\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{ValueInput<int>}}(nameof(myValue),1);}
+\DoxyCodeLine{\ \ \ \ \ \ \ outputTrigger\ =\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_output}{ControlOutput}}(nameof(outputTrigger));}
+\DoxyCodeLine{\ \ \ \ \ \ \ Succession(inputTrigger,\ outputTrigger);}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{comment}{//Send\ the\ Event\ MyCustomEvent\ with\ the\ integer\ value\ from\ the\ ValueInput\ port\ myValueA.}}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_output}{ControlOutput}}\ Trigger(\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow}{Flow}}\ flow)}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ EventBus.Trigger(EventNames.MyCustomEvent,\ flow.GetValue<\textcolor{keywordtype}{int}>(myValue));}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ outputTrigger;}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2snippets_2vs-save-script}{save-\/script}{0}\mbox{]}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2snippets_2vs-return-unity}{return-\/unity}{0}\mbox{]}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_025c361676c0bf0aee90afedf32d5b844}{regen-\/node-\/library}{0}\mbox{]}
+\end{DoxyEnumerate}
+
+After you regenerate your Node Library, the Custom Scripting Event Sender node appears in the fuzzy finder. If you didn\textquotesingle{}t change the {\ttfamily \mbox{[}Unit\+Category\mbox{]}} or {\ttfamily \mbox{[}Unit\+Title\mbox{]}} from the sample code, then the fuzzy finder displays the node under {\bfseries{Events}} \texorpdfstring{$>$}{>} {\bfseries{My\+Events}}, as the {\bfseries{Send My Custom Event}} node. For more information on the fuzzy finder, see \href{vs-interface-overview.md\#the-fuzzy-finder}{\texttt{ The interface}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_039a0e2aa5464bc68d38ebd92d57ec4fc_autotoc_md5288}{}\doxysection{\texorpdfstring{Trigger your Custom Scripting Event node}{Trigger your Custom Scripting Event node}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_039a0e2aa5464bc68d38ebd92d57ec4fc_autotoc_md5288}
+You might use your {\bfseries{Send My Custom Event}} node to trigger your Event based on keyboard input\+:
+
+
+\begin{DoxyEnumerate}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-open-graph-edit}{Open a Script Graph}{0} where you want to add the new node. This can be the same or a different Script Graph from the one that contains your Custom Scripting Event node.
+\item \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0e129af79c68762283d74b648822ac987}{open-\/fuzzy-\/finder}{0}\mbox{]}.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Go to {\bfseries{Events}} \texorpdfstring{$>$}{>} {\bfseries{Input}}.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Select the {\bfseries{On Keyboard Input}} node to add it to the graph.
+\item Right-\/click again in the Graph Editor to open the fuzzy finder.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Go to {\bfseries{Events}} \texorpdfstring{$>$}{>} {\bfseries{My Events}}.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Select your {\bfseries{Send My Custom Event}} node to add it to the graph.
+\item Connect the {\bfseries{On Keyboard Input}} node\textquotesingle{}s Trigger output port to the {\bfseries{Send My Custom Event}} node\textquotesingle{}s Input Trigger input port, as shown in the following image.
+
+
+\item Select {\bfseries{Play}} from \href{https://docs.unity3d.com/Manual/Toolbar.html}{\texttt{ the Unity Editor\textquotesingle{}s Toolbar}} to enter Play mode.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Press and release the Spacebar in the \href{https://docs.unity3d.com/Manual/GameView.html}{\texttt{ Game view}}.
+\end{DoxyEnumerate}
+
+The Custom Scripting Event Sender node triggers the Custom Scripting Event in your graph and sends the Event the value from {\bfseries{My Value A}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_039a0e2aa5464bc68d38ebd92d57ec4fc_autotoc_md5289}{}\doxysection{\texorpdfstring{Next steps}{Next steps}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_039a0e2aa5464bc68d38ebd92d57ec4fc_autotoc_md5289}
+After you create a Custom Scripting Event Sender node, you can \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0368ddcbea1327dec736ce355f1d76c90}{create a script to trigger your Event from code}{0} or \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_05ae8897d6ebd57729a6428a0e93cf56a}{create a script to listen to your Event}{0}. 

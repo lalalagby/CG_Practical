@@ -1,0 +1,58 @@
+\chapter{Flipbook Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_flipbook-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_flipbook-_node}\index{Flipbook Node@{Flipbook Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_flipbook-_node_autotoc_md3249}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_flipbook-_node_autotoc_md3249}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_flipbook-_node_autotoc_md3250}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_flipbook-_node_autotoc_md3250}
+Creates a flipbook, or texture sheet animation, of the UVs supplied to input {\bfseries{UV}}. The amount of tiles on the sheet are defined by the values of the inputs {\bfseries{Width}} and {\bfseries{Height}}. The index of the current tile is defined by the value of the input {\bfseries{Tile}}.
+
+This node can be used to create a texture animation functionality, commonly used for particle effects and sprites, by supplying \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_time-_node}{Time}{0} to the input {\bfseries{Tile}} and outputting to the UV input slot of a \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_sample-_texture-2_d-_node}{Texture Sampler}{0}.
+
+UV data is typically in the range of 0 to 1 starting from the bottom left of UV space. This can be seen by the black value at the bottom left corner of a UV preview. As flipbooks typically start from top left the parameter {\bfseries{Invert Y}} is enabled by default, however you can change the direction of the Flipbook by switching the {\bfseries{Invert X}} and {\bfseries{Invert Y}} parameters.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_flipbook-_node_autotoc_md3251}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_flipbook-_node_autotoc_md3251}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+UV   &Input   &Vector 2   &UV   &Input UV value    \\\cline{1-5}
+Width   &Input   &Float   &None   &Amount of horizontal tiles    \\\cline{1-5}
+Height   &Input   &Float   &None   &Amount of vertical tiles    \\\cline{1-5}
+Tile   &Input   &Float   &None   &Current tile index    \\\cline{1-5}
+Out   &Output   &Vector 2   &None   &Output UV value   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_flipbook-_node_autotoc_md3252}{}\doxysection{\texorpdfstring{Controls}{Controls}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_flipbook-_node_autotoc_md3252}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endhead
+Invert X   &Toggle   &True, False   &If enabled tiles are iterated from right to left    \\\cline{1-4}
+Invert Y   &Toggle   &True, False   &If enabled tiles are iterated from top to bottom   \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_flipbook-_node_autotoc_md3253}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_flipbook-_node_autotoc_md3253}
+The following example code represents one possible outcome of this node.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float2\ \_Flipbook\_Invert\ =\ float2(FlipX,\ FlipY);}
+\DoxyCodeLine{}
+\DoxyCodeLine{void\ Unity\_Flipbook\_float(float2\ UV,\ float\ Width,\ float\ Height,\ float\ Tile,\ float2\ Invert,\ out\ float2\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Tile\ =\ fmod(Tile,\ Width\ *\ Height);}
+\DoxyCodeLine{\ \ \ \ float2\ tileCount\ =\ float2(1.0,\ 1.0)\ /\ float2(Width,\ Height);}
+\DoxyCodeLine{\ \ \ \ float\ tileY\ =\ abs(Invert.y\ *\ Height\ -\/\ (floor(Tile\ *\ tileCount.x)\ +\ Invert.y\ *\ 1));}
+\DoxyCodeLine{\ \ \ \ float\ tileX\ =\ abs(Invert.x\ *\ Width\ -\/\ ((Tile\ -\/\ Width\ *\ floor(Tile\ *\ tileCount.x))\ +\ Invert.x\ *\ 1));}
+\DoxyCodeLine{\ \ \ \ Out\ =\ (UV\ +\ float2(tileX,\ tileY))\ *\ tileCount;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

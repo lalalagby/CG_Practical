@@ -1,0 +1,230 @@
+\doxysection{Unity\+Editor.\+Shader\+Graph.\+Vector1\+Material\+Slot Class Reference}
+\hypertarget{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot}{}\label{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot}\index{UnityEditor.ShaderGraph.Vector1MaterialSlot@{UnityEditor.ShaderGraph.Vector1MaterialSlot}}
+Inheritance diagram for Unity\+Editor.\+Shader\+Graph.\+Vector1\+Material\+Slot\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.209073cm]{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_aeede72c7b5cefcb67d28ab95663e5d72}\label{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_aeede72c7b5cefcb67d28ab95663e5d72} 
+{\bfseries Vector1\+Material\+Slot} (int slot\+Id, string display\+Name, string shader\+Output\+Name, Slot\+Type slot\+Type, float value, Shader\+Stage\+Capability stage\+Capability=Shader\+Stage\+Capability.\+All, string label1=null, bool hidden=false)
+\item 
+override Visual\+Element \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_a77fe44435fcf2c22bd180885e0eaff84}{Instantiate\+Control}} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_ae126295d4365d3f14c4b5ca4f6fc93bb}\label{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_ae126295d4365d3f14c4b5ca4f6fc93bb} 
+override void {\bfseries Add\+Default\+Property} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_property_collector}{Property\+Collector}} properties, Generation\+Mode generation\+Mode)
+\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_a7f7cdbb7012f62fd79f1b5ed8f46949d}{Get\+Preview\+Properties}} (List$<$ \mbox{\hyperlink{struct_unity_editor_1_1_shader_graph_1_1_preview_property}{Preview\+Property}} $>$ properties, string name)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_aebb28d27ce05a8c769eaf14308c5479a}\label{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_aebb28d27ce05a8c769eaf14308c5479a} 
+override void {\bfseries Copy\+Values\+From} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_material_slot}{Material\+Slot}} found\+Slot)
+\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_a7ca1eb4c6da67b764122ea263fab983f}{Copy\+Default\+Value}} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_material_slot}{Material\+Slot}} other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_material_slot}{Unity\+Editor.\+Shader\+Graph.\+Material\+Slot}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries Is\+Connection\+Testable} ()
+\item 
+Visual\+Element {\bfseries Instantiate\+Custom\+Control} ()
+\item 
+string {\bfseries Raw\+Display\+Name} ()
+\item 
+bool {\bfseries Is\+Using\+Default\+Value} ()
+\item 
+bool {\bfseries Is\+Compatible\+With} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_material_slot}{Material\+Slot}} other\+Slot)
+\item 
+bool {\bfseries Is\+Compatible\+Stage\+With} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_material_slot}{Material\+Slot}} other\+Slot)
+\item 
+string {\bfseries Get\+Default\+Value} (Generation\+Mode generation\+Mode, Concrete\+Precision concrete\+Precision)
+\item 
+virtual string {\bfseries Get\+Default\+Value} (Generation\+Mode generation\+Mode)
+\item 
+void {\bfseries Add\+Default\+Property} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_property_collector}{Property\+Collector}} properties, Generation\+Mode generation\+Mode)
+\item 
+virtual void {\bfseries Append\+HLSLParameter\+Declaration} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_shader_string_builder}{Shader\+String\+Builder}} sb, string param\+Name)
+\item 
+void {\bfseries Copy\+Values\+From} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_material_slot}{Material\+Slot}} found\+Slot)
+\item 
+bool {\bfseries Equals} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_material_slot}{Material\+Slot}} other)
+\item 
+override bool {\bfseries Equals} (object obj)
+\item 
+override int {\bfseries Get\+Hash\+Code} ()
+\item 
+void {\bfseries Dispose} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_serialization_1_1_json_object}{Unity\+Editor.\+Shader\+Graph.\+Serialization.\+Json\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual T \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_serialization_1_1_json_object_aceabedb8d1a7019e2955dbf26835e4f3}{Cast\+To$<$ T $>$}} ()
+\item 
+virtual string {\bfseries Serialize} ()
+\item 
+virtual void {\bfseries Deserailize} (string type\+Info, string json\+Data)
+\item 
+virtual void {\bfseries On\+Before\+Serialize} ()
+\item 
+virtual void {\bfseries On\+Before\+Deserialize} ()
+\item 
+virtual void {\bfseries On\+After\+Deserialize} ()
+\item 
+virtual void {\bfseries On\+After\+Deserialize} (string json)
+\item 
+virtual void {\bfseries On\+After\+Multi\+Deserialize} (string json)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override string \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_a3b31fcaaaa5a754958eb6d31eb20a769}{Concrete\+Slot\+Value\+As\+Variable}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_material_slot}{Unity\+Editor.\+Shader\+Graph.\+Material\+Slot}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Material\+Slot} (int slot\+Id, string display\+Name, string shader\+Output\+Name, Slot\+Type slot\+Type, Shader\+Stage\+Capability stage\+Capability=Shader\+Stage\+Capability.\+All, bool hidden=false)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_serialization_1_1_json_object}{Unity\+Editor.\+Shader\+Graph.\+Serialization.\+Json\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+delegate void {\bfseries Version\+Change} (int new\+Version)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_aeacd4421ad5fcd985e0eed9ddde6c37a}\label{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_aeacd4421ad5fcd985e0eed9ddde6c37a} 
+float {\bfseries default\+Value}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_a7f74b649e27db7eaea9ccc7c5291d8b3}\label{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_a7f74b649e27db7eaea9ccc7c5291d8b3} 
+float {\bfseries value}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_a2193412ad919db5ac678e92af1dd1886}\label{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_a2193412ad919db5ac678e92af1dd1886} 
+override bool {\bfseries is\+Default\+Value}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_a6579ecd539f700100955a69df4aa2043}\label{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_a6579ecd539f700100955a69df4aa2043} 
+override Slot\+Value\+Type {\bfseries value\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_a5e799ac249877376bc205b56c47edfd9}\label{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_a5e799ac249877376bc205b56c47edfd9} 
+override Concrete\+Slot\+Value\+Type {\bfseries concrete\+Value\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_material_slot}{Unity\+Editor.\+Shader\+Graph.\+Material\+Slot}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string {\bfseries display\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{struct_unity_editor_1_1_graphing_1_1_slot_reference}{Slot\+Reference}} {\bfseries slot\+Reference}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_abstract_material_node}{Abstract\+Material\+Node}} {\bfseries owner}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool {\bfseries hidden}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int {\bfseries id}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries is\+Input\+Slot}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries is\+Output\+Slot}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Slot\+Type {\bfseries slot\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries is\+Connected}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries is\+Default\+Value}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Slot\+Value\+Type {\bfseries value\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Concrete\+Slot\+Value\+Type {\bfseries concrete\+Value\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+string {\bfseries shader\+Output\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Shader\+Stage\+Capability {\bfseries stage\+Capability}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool {\bfseries has\+Error}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_serialization_1_1_json_object}{Unity\+Editor.\+Shader\+Graph.\+Serialization.\+Json\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual int {\bfseries latest\+Version} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+virtual int {\bfseries sg\+Version}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+string {\bfseries object\+Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries object\+Id\+Is\+Empty}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_i_material_slot_has_value}{Unity\+Editor.\+Shader\+Graph.\+IMaterial\+Slot\+Has\+Value$<$ float $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+T {\bfseries default\+Value}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+T {\bfseries value}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_material_slot}{Unity\+Editor.\+Shader\+Graph.\+Material\+Slot}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_material_slot}{Material\+Slot}} {\bfseries Create\+Material\+Slot} (Slot\+Value\+Type type, int slot\+Id, string display\+Name, string shader\+Output\+Name, Slot\+Type slot\+Type, Vector4 default\+Value, Shader\+Stage\+Capability shader\+Stage\+Capability=Shader\+Stage\+Capability.\+All, bool hidden=false)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_serialization_1_1_json_object}{Unity\+Editor.\+Shader\+Graph.\+Serialization.\+Json\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+static readonly string {\bfseries empty\+Object\+Id} = Guid.\+Empty.\+To\+String("{}N"{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_serialization_1_1_json_object}{Unity\+Editor.\+Shader\+Graph.\+Serialization.\+Json\+Object}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries m\+\_\+\+SGVersion} = 0
+\item 
+Version\+Change {\bfseries on\+Before\+Version\+Change}
+\item 
+Action {\bfseries on\+After\+Version\+Change}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_a3b31fcaaaa5a754958eb6d31eb20a769}\index{UnityEditor.ShaderGraph.Vector1MaterialSlot@{UnityEditor.ShaderGraph.Vector1MaterialSlot}!ConcreteSlotValueAsVariable@{ConcreteSlotValueAsVariable}}
+\index{ConcreteSlotValueAsVariable@{ConcreteSlotValueAsVariable}!UnityEditor.ShaderGraph.Vector1MaterialSlot@{UnityEditor.ShaderGraph.Vector1MaterialSlot}}
+\doxysubsubsection{\texorpdfstring{ConcreteSlotValueAsVariable()}{ConcreteSlotValueAsVariable()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_a3b31fcaaaa5a754958eb6d31eb20a769} 
+override string Unity\+Editor.\+Shader\+Graph.\+Vector1\+Material\+Slot.\+Concrete\+Slot\+Value\+As\+Variable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_material_slot}{Unity\+Editor.\+Shader\+Graph.\+Material\+Slot}}.
+
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_a7ca1eb4c6da67b764122ea263fab983f}\index{UnityEditor.ShaderGraph.Vector1MaterialSlot@{UnityEditor.ShaderGraph.Vector1MaterialSlot}!CopyDefaultValue@{CopyDefaultValue}}
+\index{CopyDefaultValue@{CopyDefaultValue}!UnityEditor.ShaderGraph.Vector1MaterialSlot@{UnityEditor.ShaderGraph.Vector1MaterialSlot}}
+\doxysubsubsection{\texorpdfstring{CopyDefaultValue()}{CopyDefaultValue()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_a7ca1eb4c6da67b764122ea263fab983f} 
+override void Unity\+Editor.\+Shader\+Graph.\+Vector1\+Material\+Slot.\+Copy\+Default\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_material_slot}{Material\+Slot}}}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_material_slot}{Unity\+Editor.\+Shader\+Graph.\+Material\+Slot}}.
+
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_a7f7cdbb7012f62fd79f1b5ed8f46949d}\index{UnityEditor.ShaderGraph.Vector1MaterialSlot@{UnityEditor.ShaderGraph.Vector1MaterialSlot}!GetPreviewProperties@{GetPreviewProperties}}
+\index{GetPreviewProperties@{GetPreviewProperties}!UnityEditor.ShaderGraph.Vector1MaterialSlot@{UnityEditor.ShaderGraph.Vector1MaterialSlot}}
+\doxysubsubsection{\texorpdfstring{GetPreviewProperties()}{GetPreviewProperties()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_a7f7cdbb7012f62fd79f1b5ed8f46949d} 
+override void Unity\+Editor.\+Shader\+Graph.\+Vector1\+Material\+Slot.\+Get\+Preview\+Properties (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{struct_unity_editor_1_1_shader_graph_1_1_preview_property}{Preview\+Property}} $>$}]{properties}{, }\item[{string}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_material_slot}{Unity\+Editor.\+Shader\+Graph.\+Material\+Slot}}.
+
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_a77fe44435fcf2c22bd180885e0eaff84}\index{UnityEditor.ShaderGraph.Vector1MaterialSlot@{UnityEditor.ShaderGraph.Vector1MaterialSlot}!InstantiateControl@{InstantiateControl}}
+\index{InstantiateControl@{InstantiateControl}!UnityEditor.ShaderGraph.Vector1MaterialSlot@{UnityEditor.ShaderGraph.Vector1MaterialSlot}}
+\doxysubsubsection{\texorpdfstring{InstantiateControl()}{InstantiateControl()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_shader_graph_1_1_vector1_material_slot_a77fe44435fcf2c22bd180885e0eaff84} 
+override Visual\+Element Unity\+Editor.\+Shader\+Graph.\+Vector1\+Material\+Slot.\+Instantiate\+Control (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_material_slot}{Unity\+Editor.\+Shader\+Graph.\+Material\+Slot}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+shadergraph@14.\+0.\+8/\+Editor/\+Data/\+Graphs/Vector1\+Material\+Slot.\+cs\end{DoxyCompactItemize}

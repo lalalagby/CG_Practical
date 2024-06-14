@@ -1,0 +1,105 @@
+\doxysection{Unity\+Editor.\+U2\+D.\+Sprites.\+ISprite\+Physics\+Outline\+Data\+Provider Interface Reference}
+\hypertarget{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_physics_outline_data_provider}{}\label{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_physics_outline_data_provider}\index{UnityEditor.U2D.Sprites.ISpritePhysicsOutlineDataProvider@{UnityEditor.U2D.Sprites.ISpritePhysicsOutlineDataProvider}}
+
+
+Data provider that provides the Physics outline data for \doxylink{class_unity_editor_1_1_sprite_rect}{Sprite\+Rect}.  
+
+
+
+
+Inherited by Unity\+Editor.\+U2\+D.\+Sprites.\+Sprite\+Physics\+Outline\+Data\+Transfer.
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ Vector2\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_physics_outline_data_provider_af53bb4d2ed291ca06359fcbdd20c59f9}{Get\+Outlines}} (GUID guid)
+\begin{DoxyCompactList}\small\item\em Given a GUID, returns the Physics outline data used for the \doxylink{class_unity_editor_1_1_sprite_rect}{Sprite\+Rect}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_physics_outline_data_provider_a1fbae6a955ee16a0e737ab462fe6196a}{Set\+Outlines}} (GUID guid, List$<$ Vector2\mbox{[}$\,$\mbox{]}$>$ data)
+\begin{DoxyCompactList}\small\item\em Given a GUID, sets the Physics outline data used for the \doxylink{class_unity_editor_1_1_sprite_rect}{Sprite\+Rect}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_physics_outline_data_provider_abffe8bb0b01ffcb8797ace28874286ad}{Get\+Tessellation\+Detail}} (GUID guid)
+\begin{DoxyCompactList}\small\item\em Given a GUID, returns the tessellation detail.\+Tessellation value should be between 0 to 1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_physics_outline_data_provider_a0035317d55576b83e63531d4e76f5537}{Set\+Tessellation\+Detail}} (GUID guid, float value)
+\begin{DoxyCompactList}\small\item\em Given a GUID, sets the tessellation detail.\+Tessellation value should be between 0 to 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Data provider that provides the Physics outline data for \doxylink{class_unity_editor_1_1_sprite_rect}{Sprite\+Rect}. 
+
+Uses the outline data to generate the Sprite\textquotesingle{}s Physics shape for Polygon Collider 2D.
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_physics_outline_data_provider_af53bb4d2ed291ca06359fcbdd20c59f9}\index{UnityEditor.U2D.Sprites.ISpritePhysicsOutlineDataProvider@{UnityEditor.U2D.Sprites.ISpritePhysicsOutlineDataProvider}!GetOutlines@{GetOutlines}}
+\index{GetOutlines@{GetOutlines}!UnityEditor.U2D.Sprites.ISpritePhysicsOutlineDataProvider@{UnityEditor.U2D.Sprites.ISpritePhysicsOutlineDataProvider}}
+\doxysubsubsection{\texorpdfstring{GetOutlines()}{GetOutlines()}}
+{\footnotesize\ttfamily \label{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_physics_outline_data_provider_af53bb4d2ed291ca06359fcbdd20c59f9} 
+List$<$ Vector2\mbox{[}$\,$\mbox{]}$>$ Unity\+Editor.\+U2\+D.\+Sprites.\+ISprite\+Physics\+Outline\+Data\+Provider.\+Get\+Outlines (\begin{DoxyParamCaption}\item[{GUID}]{guid}{}\end{DoxyParamCaption})}
+
+
+
+Given a GUID, returns the Physics outline data used for the \doxylink{class_unity_editor_1_1_sprite_rect}{Sprite\+Rect}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em guid} & GUID of the \doxylink{class_unity_editor_1_1_sprite_rect}{Sprite\+Rect}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Physics outline data for the \doxylink{class_unity_editor_1_1_sprite_rect}{Sprite\+Rect}.
+\end{DoxyReturn}
+\Hypertarget{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_physics_outline_data_provider_abffe8bb0b01ffcb8797ace28874286ad}\index{UnityEditor.U2D.Sprites.ISpritePhysicsOutlineDataProvider@{UnityEditor.U2D.Sprites.ISpritePhysicsOutlineDataProvider}!GetTessellationDetail@{GetTessellationDetail}}
+\index{GetTessellationDetail@{GetTessellationDetail}!UnityEditor.U2D.Sprites.ISpritePhysicsOutlineDataProvider@{UnityEditor.U2D.Sprites.ISpritePhysicsOutlineDataProvider}}
+\doxysubsubsection{\texorpdfstring{GetTessellationDetail()}{GetTessellationDetail()}}
+{\footnotesize\ttfamily \label{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_physics_outline_data_provider_abffe8bb0b01ffcb8797ace28874286ad} 
+float Unity\+Editor.\+U2\+D.\+Sprites.\+ISprite\+Physics\+Outline\+Data\+Provider.\+Get\+Tessellation\+Detail (\begin{DoxyParamCaption}\item[{GUID}]{guid}{}\end{DoxyParamCaption})}
+
+
+
+Given a GUID, returns the tessellation detail.\+Tessellation value should be between 0 to 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em guid} & GUID of the \doxylink{class_unity_editor_1_1_sprite_rect}{Sprite\+Rect}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The tessellation value.
+\end{DoxyReturn}
+\Hypertarget{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_physics_outline_data_provider_a1fbae6a955ee16a0e737ab462fe6196a}\index{UnityEditor.U2D.Sprites.ISpritePhysicsOutlineDataProvider@{UnityEditor.U2D.Sprites.ISpritePhysicsOutlineDataProvider}!SetOutlines@{SetOutlines}}
+\index{SetOutlines@{SetOutlines}!UnityEditor.U2D.Sprites.ISpritePhysicsOutlineDataProvider@{UnityEditor.U2D.Sprites.ISpritePhysicsOutlineDataProvider}}
+\doxysubsubsection{\texorpdfstring{SetOutlines()}{SetOutlines()}}
+{\footnotesize\ttfamily \label{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_physics_outline_data_provider_a1fbae6a955ee16a0e737ab462fe6196a} 
+void Unity\+Editor.\+U2\+D.\+Sprites.\+ISprite\+Physics\+Outline\+Data\+Provider.\+Set\+Outlines (\begin{DoxyParamCaption}\item[{GUID}]{guid}{, }\item[{List$<$ Vector2\mbox{[}$\,$\mbox{]}$>$}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Given a GUID, sets the Physics outline data used for the \doxylink{class_unity_editor_1_1_sprite_rect}{Sprite\+Rect}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em guid} & GUID of the \doxylink{class_unity_editor_1_1_sprite_rect}{Sprite\+Rect}.\\
+\hline
+{\em data} & Physics outline data for the \doxylink{class_unity_editor_1_1_sprite_rect}{Sprite\+Rect}.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_physics_outline_data_provider_a0035317d55576b83e63531d4e76f5537}\index{UnityEditor.U2D.Sprites.ISpritePhysicsOutlineDataProvider@{UnityEditor.U2D.Sprites.ISpritePhysicsOutlineDataProvider}!SetTessellationDetail@{SetTessellationDetail}}
+\index{SetTessellationDetail@{SetTessellationDetail}!UnityEditor.U2D.Sprites.ISpritePhysicsOutlineDataProvider@{UnityEditor.U2D.Sprites.ISpritePhysicsOutlineDataProvider}}
+\doxysubsubsection{\texorpdfstring{SetTessellationDetail()}{SetTessellationDetail()}}
+{\footnotesize\ttfamily \label{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_physics_outline_data_provider_a0035317d55576b83e63531d4e76f5537} 
+void Unity\+Editor.\+U2\+D.\+Sprites.\+ISprite\+Physics\+Outline\+Data\+Provider.\+Set\+Tessellation\+Detail (\begin{DoxyParamCaption}\item[{GUID}]{guid}{, }\item[{float}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Given a GUID, sets the tessellation detail.\+Tessellation value should be between 0 to 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em guid} & GUID of the \doxylink{class_unity_editor_1_1_sprite_rect}{Sprite\+Rect}.\\
+\hline
+{\em value} & The tessellation value.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+2d.\+sprite@1.\+0.\+0/\+Editor/\+Interface/ISprite\+Editor\+Data\+Provider.\+cs\end{DoxyCompactItemize}

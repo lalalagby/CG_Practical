@@ -1,0 +1,355 @@
+\chapter{Transform Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_transform-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_transform-_node}\index{Transform Node@{Transform Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_transform-_node_autotoc_md4048}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_transform-_node_autotoc_md4048}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_transform-_node_autotoc_md4049}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_transform-_node_autotoc_md4049}
+Returns the result of transforming the input value ({\bfseries{In}}) from one coordinate space to another. Select drop-\/down options on the node to define which spaces to transform from and to.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_transform-_node_autotoc_md4050}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_transform-_node_autotoc_md4050}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endhead
+In   &Input   &Vector 3   &Input value    \\\cline{1-4}
+Out   &Output   &Vector 3   &Output value   \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_transform-_node_autotoc_md4051}{}\doxysection{\texorpdfstring{Controls}{Controls}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_transform-_node_autotoc_md4051}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endhead
+From   &Dropdown   &Object, View, World, Tangent, Absolute World, Screen   &Selects the space to convert from    \\\cline{1-4}
+To   &Dropdown   &Object, View, World, Tangent, Absolute World, Screen   &Selects the space to convert to   \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_transform-_node_autotoc_md4052}{}\doxysection{\texorpdfstring{World and Absolute World}{World and Absolute World}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_transform-_node_autotoc_md4052}
+Use the {\bfseries{World}} and {\bfseries{Absolute World}} space options to transform the coordinate space of \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_position-_node}{position}{0} values. The {\bfseries{World}} space option uses the Scriptable Render Pipeline default world space to convert position values. The {\bfseries{Absolute World}} space option uses absolute world space to convert position values in all Scriptable Render Pipelines.
+
+If you use the {\bfseries{Transform Node}} to convert coordinate spaces that are not for position values, \doxylink{namespace_unity}{Unity} recommends that you use the {\bfseries{World}} space option. Using {\bfseries{Absolute World}} on values that do not represent position might result in unexpected behavior.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_transform-_node_autotoc_md4053}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_transform-_node_autotoc_md4053}
+The following example code represents one possible outcome of this node per {\bfseries{Base}} mode.
+
+{\bfseries{World \texorpdfstring{$>$}{>} World}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ In;}
+
+\end{DoxyCode}
+
+
+{\bfseries{World \texorpdfstring{$>$}{>} Object}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ TransformWorldToObject(In);}
+
+\end{DoxyCode}
+
+
+{\bfseries{World \texorpdfstring{$>$}{>} Tangent}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3x3\ tangentTransform\_World\ =\ float3x3(IN.WorldSpaceTangent,\ IN.WorldSpaceBiTangent,\ IN.WorldSpaceNormal);}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ TransformWorldToTangent(In,\ tangentTransform\_World);}
+
+\end{DoxyCode}
+
+
+{\bfseries{World \texorpdfstring{$>$}{>} View}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ TransformWorldToView(In);}
+
+\end{DoxyCode}
+ {\bfseries{World \texorpdfstring{$>$}{>} Absolute World}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ GetAbsolutePositionWS(In);}
+
+\end{DoxyCode}
+
+
+{\bfseries{World \texorpdfstring{$>$}{>} Screen}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float4\ hclipPosition\ =\ TransformWorldToHClipDir(In);}
+\DoxyCodeLine{float3\ screenPos\ =\ hclipPosition.xyz\ /\ hclipPosition.w;}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ float3(screenPos.xy\ *\ 0.5\ +\ 0.5,\ screenPos.z);}
+
+\end{DoxyCode}
+
+
+{\bfseries{Object \texorpdfstring{$>$}{>} World}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ TransformObjectToWorld(In);}
+
+\end{DoxyCode}
+
+
+{\bfseries{Object \texorpdfstring{$>$}{>} Object}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ In;}
+
+\end{DoxyCode}
+
+
+{\bfseries{Object \texorpdfstring{$>$}{>} Tangent}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3x3\ tangentTransform\_World\ =\ float3x3(IN.WorldSpaceTangent,\ IN.WorldSpaceBiTangent,\ IN.WorldSpaceNormal);}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ TransformWorldToTangent(TransformObjectToWorld(In),\ tangentTransform\_World);}
+
+\end{DoxyCode}
+
+
+{\bfseries{Object \texorpdfstring{$>$}{>} View}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ TransformWorldToView(TransformObjectToWorld(In));}
+
+\end{DoxyCode}
+ {\bfseries{Object \texorpdfstring{$>$}{>} Absolute World}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ GetAbsolutePositionWS(TransformObjectToWorld(In));}
+
+\end{DoxyCode}
+ {\bfseries{Object \texorpdfstring{$>$}{>} Screen}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float4\ hclipPosition\ =\ TransformObjectToHClip(In);}
+\DoxyCodeLine{float3\ screenPos\ =\ hclipPosition.xyz\ /\ hclipPosition.w;}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ float3(screenPos.xy\ *\ 0.5\ +\ 0.5,\ screenPos.z);}
+
+\end{DoxyCode}
+ {\bfseries{Tangent \texorpdfstring{$>$}{>} World}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3x3\ transposeTangent\ =\ transpose(float3x3(IN.WorldSpaceTangent,\ IN.WorldSpaceBiTangent,\ IN.WorldSpaceNormal));}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ mul(In,\ transposeTangent).xyz;}
+
+\end{DoxyCode}
+
+
+{\bfseries{Tangent \texorpdfstring{$>$}{>} Object}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3x3\ transposeTangent\ =\ transpose(float3x3(IN.WorldSpaceTangent,\ IN.WorldSpaceBiTangent,\ IN.WorldSpaceNormal));}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ TransformWorldToObject(mul(In,\ transposeTangent).xyz);}
+
+\end{DoxyCode}
+
+
+{\bfseries{Tangent \texorpdfstring{$>$}{>} Tangent}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ In;}
+
+\end{DoxyCode}
+
+
+{\bfseries{Tangent \texorpdfstring{$>$}{>} View}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3x3\ transposeTangent\ =\ transpose(float3x3(IN.WorldSpaceTangent,\ IN.WorldSpaceBiTangent,\ IN.WorldSpaceNormal));}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ TransformWorldToView(mul(In,\ transposeTangent).xyz);}
+
+\end{DoxyCode}
+ {\bfseries{Tangent \texorpdfstring{$>$}{>} Absolute World}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3x3\ transposeTangent\ =\ transpose(float3x3(IN.WorldSpaceTangent,\ IN.WorldSpaceBiTangent,\ IN.WorldSpaceNormal));}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ GetAbsolutePositionWS(mul(In,\ transposeTangent)).xyz;}
+
+\end{DoxyCode}
+
+
+{\bfseries{Tangent \texorpdfstring{$>$}{>} Screen}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3x3\ transposeTangent\ =\ transpose(float3x3(IN.WorldSpaceTangent,\ IN.WorldSpaceBiTangent,\ IN.WorldSpaceNormal));}
+\DoxyCodeLine{float4\ hclipPosition\ =\ TransformWorldToHClipDir(mul(In,\ transposeTangent).xyz);}
+\DoxyCodeLine{float3\ screenPos\ =\ hclipPosition.xyz\ /\ hclipPosition.w;}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ float3(screenPos.xy\ *\ 0.5\ +\ 0.5,\ screenPos.z);}
+
+\end{DoxyCode}
+
+
+{\bfseries{View \texorpdfstring{$>$}{>} World}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ mul(UNITY\_MATRIX\_I\_V,\ float4(In,\ 1)).xyz;}
+
+\end{DoxyCode}
+
+
+{\bfseries{View \texorpdfstring{$>$}{>} Object}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ TransformWorldToObject(mul(UNITY\_MATRIX\_I\_V,\ float4(In,\ 1)\ ).xyz);}
+
+\end{DoxyCode}
+
+
+{\bfseries{View \texorpdfstring{$>$}{>} Tangent}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3x3\ tangentTransform\_World\ =\ float3x3(IN.WorldSpaceTangent,\ IN.WorldSpaceBiTangent,\ IN.WorldSpaceNormal);}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ TransformWorldToTangent(mul(UNITY\_MATRIX\_I\_V,\ float4(In,\ 1)\ ).xyz,\ tangentTransform\_World);}
+
+\end{DoxyCode}
+
+
+{\bfseries{View \texorpdfstring{$>$}{>} View}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ In;}
+
+\end{DoxyCode}
+ {\bfseries{View \texorpdfstring{$>$}{>} Absolute World}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ GetAbsolutePositionWS(mul(UNITY\_MATRIX\_I\_V,\ float4(In,\ 1))).xyz;}
+
+\end{DoxyCode}
+
+
+{\bfseries{View \texorpdfstring{$>$}{>} Screen}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float4\ hclipPosition\ =\ TransformWViewToHClip(In);}
+\DoxyCodeLine{float3\ screenPos\ =\ hclipPosition.xyz\ /\ hclipPosition.w;}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ float3(screenPos.xy\ *\ 0.5\ +\ 0.5,\ screenPos.z);}
+
+\end{DoxyCode}
+
+
+{\bfseries{Absolute World \texorpdfstring{$>$}{>} World}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ GetCameraRelativePositionWS(In);}
+
+\end{DoxyCode}
+
+
+{\bfseries{Absolute World \texorpdfstring{$>$}{>} Object}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ TransformWorldToObject(In);}
+
+\end{DoxyCode}
+
+
+{\bfseries{Absolute World \texorpdfstring{$>$}{>} Tangent}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3x3\ tangentTransform\_World\ =\ float3x3(IN.WorldSpaceTangent,\ IN.WorldSpaceBiTangent,\ IN.WorldSpaceNormal);}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ TransformWorldToTangent(In,\ tangentTransform\_World);}
+
+\end{DoxyCode}
+
+
+{\bfseries{Absolute World \texorpdfstring{$>$}{>} View}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ GetCameraRelativePositionWS(In)}
+
+\end{DoxyCode}
+ {\bfseries{Absolute World \texorpdfstring{$>$}{>} Absolute World}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ In;}
+
+\end{DoxyCode}
+
+
+{\bfseries{Absolute World \texorpdfstring{$>$}{>} Screen}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float4\ hclipPosition\ =\ TransformWorldToHClip(GetCameraRelativePositionWS(In));}
+\DoxyCodeLine{float3\ screenPos\ =\ hclipPosition.xyz\ /\ hclipPosition.w;}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ float3(screenPos.xy\ *\ 0.5\ +\ 0.5,\ screenPos.z);}
+
+\end{DoxyCode}
+ {\bfseries{Screen \texorpdfstring{$>$}{>} World}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ ComputeWorldSpacePosition(In.xy,\ In.z,\ UNITY\_MATRIX\_I\_VP);}
+
+\end{DoxyCode}
+
+
+{\bfseries{Screen \texorpdfstring{$>$}{>} Object}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3\ worldPos\ =\ ComputeWorldSpacePosition(In.xy,\ In.z,\ UNITY\_MATRIX\_I\_VP);}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ TransformWorldToObject(worldPos);}
+
+\end{DoxyCode}
+
+
+{\bfseries{Screen \texorpdfstring{$>$}{>} Tangent}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3\ worldPos\ =\ ComputeWorldSpacePosition(In.xy,\ In.z,\ UNITY\_MATRIX\_I\_VP);}
+\DoxyCodeLine{float3x3\ tangentTransform\_World\ =\ float3x3(IN.WorldSpaceTangent,\ IN.WorldSpaceBiTangent,\ IN.WorldSpaceNormal);}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ TransformWorldToTangent(worldPos,\ tangentTransform\_World);}
+
+\end{DoxyCode}
+
+
+{\bfseries{Screen \texorpdfstring{$>$}{>} View}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float4\ positionCS\ \ =\ ComputeClipSpacePosition(In.xy,\ In.z);}
+\DoxyCodeLine{float4\ result\ =\ mul(UNITY\_MATRIX\_I\_V,\ positionCS);}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ result.xyz\ /\ result.w;}
+
+\end{DoxyCode}
+
+
+{\bfseries{Screen \texorpdfstring{$>$}{>} Absolute World}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3\ \_Transform\_Out\ =\ GetAbsolutePositionWS(ComputeWorldSpacePosition(In.xy,\ In.z,\ UNITY\_MATRIX\_I\_VP));}
+
+\end{DoxyCode}
+ 

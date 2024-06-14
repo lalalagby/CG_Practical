@@ -1,0 +1,67 @@
+\chapter{Converting your shaders}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do95ff25160875704a67e3dc7190307069}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do95ff25160875704a67e3dc7190307069}\index{Converting your shaders@{Converting your shaders}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do95ff25160875704a67e3dc7190307069_autotoc_md2636}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do95ff25160875704a67e3dc7190307069_autotoc_md2636}%
+ Shaders written for the Built-\/in Render Pipeline are not compatible with the URP shaders.
+
+For an overview of the mapping between built-\/in shaders and URP shaders, see Shader mappings.
+
+Use the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do54fb4e3619bda36fb863b138677b0598}{Render Pipeline Converter}{0} to apply the shader mappings automatically.
+
+{\bfseries{Note}}\+: The Render Pipeline Converter makes irreversible changes to the project. Back up your project before the conversion.
+
+{\bfseries{Tip}}\+: If the preview thumbnails in the Project view are not shown correctly after the conversion, try right-\/clicking anywhere in the Project view and selecting {\bfseries{Reimport All}}.
+
+For \href{https://docs.unity3d.com/Manual/SpeedTree.html}{\texttt{ Speed\+Tree}} Shaders, \doxylink{namespace_unity}{Unity} does not re-\/generate Materials when you re-\/import them, unless you click the {\bfseries{Generate Materials}} or {\bfseries{Apply \& Generate Materials}} button.
+
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do95ff25160875704a67e3dc7190307069_custom-shaders}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do95ff25160875704a67e3dc7190307069_custom-shaders}%
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do95ff25160875704a67e3dc7190307069_autotoc_md2637}{}\doxysection{\texorpdfstring{Custom shaders}{Custom shaders}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do95ff25160875704a67e3dc7190307069_autotoc_md2637}
+You cannot upgrade Custom \doxylink{namespace_unity}{Unity} shaders written for the Built-\/in Render Pipeline. Instead, custom shaders must be rewritten to work with URP or recreated in \href{https://docs.unity3d.com/Packages/com.unity.shadergraph@14.0/manual/index.html}{\texttt{ Shader\+Graph}}.
+
+Any Materials in a Scene that use a custom shader when you upgrade a project to use URP turn pink to indicate the Material no longer works. To fix this, upgrade or change the Material\textquotesingle{}s shader to one that is compatible with URP.
+
+{\bfseries{Note}}\+: URP does not support \href{https://docs.unity3d.com/Manual/SL-SurfaceShaders.html}{\texttt{ Surface Shaders}}.
+
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do95ff25160875704a67e3dc7190307069_built-in-to-urp-shader-mappings}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do95ff25160875704a67e3dc7190307069_built-in-to-urp-shader-mappings}%
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do95ff25160875704a67e3dc7190307069_autotoc_md2638}{}\doxysection{\texorpdfstring{Shader mappings}{Shader mappings}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do95ff25160875704a67e3dc7190307069_autotoc_md2638}
+The following table shows which URP shaders the Built-\/in Render Pipeline shaders convert to when you use the Render Pipeline Converter.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \doxylink{namespace_unity}{Unity} built-\/in shader   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Universal Render Pipeline shader    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ \doxylink{namespace_unity}{Unity} built-\/in shader   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Universal Render Pipeline shader    }\\\cline{1-2}
+\endhead
+Standard   &Universal Render Pipeline/\+Lit    \\\cline{1-2}
+Standard (Specular Setup)   &Universal Render Pipeline/\+Lit    \\\cline{1-2}
+Standard Terrain   &Universal Render Pipeline/\+Terrain/\+Lit    \\\cline{1-2}
+Particles/\+Standard Surface   &Universal Render Pipeline/\+Particles/\+Lit    \\\cline{1-2}
+Particles/\+Standard Unlit   &Universal Render Pipeline/\+Particles/\+Unlit    \\\cline{1-2}
+Mobile/\+Diffuse   &Universal Render Pipeline/\+Simple Lit    \\\cline{1-2}
+Mobile/\+Bumped Specular   &Universal Render Pipeline/\+Simple Lit    \\\cline{1-2}
+Mobile/\+Bumped Specular(1 Directional Light)   &Universal Render Pipeline/\+Simple Lit    \\\cline{1-2}
+Mobile/\+Unlit (Supports Lightmap)   &Universal Render Pipeline/\+Simple Lit    \\\cline{1-2}
+Mobile/\+Vertex\+Lit   &Universal Render Pipeline/\+Simple Lit    \\\cline{1-2}
+Legacy Shaders/\+Diffuse   &Universal Render Pipeline/\+Simple Lit    \\\cline{1-2}
+Legacy Shaders/\+Specular   &Universal Render Pipeline/\+Simple Lit    \\\cline{1-2}
+Legacy Shaders/\+Bumped Diffuse   &Universal Render Pipeline/\+Simple Lit    \\\cline{1-2}
+Legacy Shaders/\+Bumped Specular   &Universal Render Pipeline/\+Simple Lit    \\\cline{1-2}
+Legacy Shaders/\+Self-\/\+Illumin/\+Diffuse   &Universal Render Pipeline/\+Simple Lit    \\\cline{1-2}
+Legacy Shaders/\+Self-\/\+Illumin/\+Bumped Diffuse   &Universal Render Pipeline/\+Simple Lit    \\\cline{1-2}
+Legacy Shaders/\+Self-\/\+Illumin/\+Specular   &Universal Render Pipeline/\+Simple Lit    \\\cline{1-2}
+Legacy Shaders/\+Self-\/\+Illumin/\+Bumped Specular   &Universal Render Pipeline/\+Simple Lit    \\\cline{1-2}
+Legacy Shaders/\+Transparent/\+Diffuse   &Universal Render Pipeline/\+Simple Lit    \\\cline{1-2}
+Legacy Shaders/\+Transparent/\+Specular   &Universal Render Pipeline/\+Simple Lit    \\\cline{1-2}
+Legacy Shaders/\+Transparent/\+Bumped Diffuse   &Universal Render Pipeline/\+Simple Lit    \\\cline{1-2}
+Legacy Shaders/\+Transparent/\+Bumped Specular   &Universal Render Pipeline/\+Simple Lit    \\\cline{1-2}
+Legacy Shaders/\+Transparent/\+Cutout/\+Diffuse   &Universal Render Pipeline/\+Simple Lit    \\\cline{1-2}
+Legacy Shaders/\+Transparent/\+Cutout/\+Specular   &Universal Render Pipeline/\+Simple Lit    \\\cline{1-2}
+Legacy Shaders/\+Transparent/\+Cutout/\+Bumped Diffuse   &Universal Render Pipeline/\+Simple Lit    \\\cline{1-2}
+Legacy Shaders/\+Transparent/\+Cutout/\+Bumped Specular   &Universal Render Pipeline/\+Simple Lit   \\\cline{1-2}
+\end{longtabu}

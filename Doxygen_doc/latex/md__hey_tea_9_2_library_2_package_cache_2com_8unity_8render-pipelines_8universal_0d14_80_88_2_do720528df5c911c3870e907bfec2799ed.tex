@@ -1,0 +1,83 @@
+\chapter{Light Blend Styles}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do720528df5c911c3870e907bfec2799ed}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do720528df5c911c3870e907bfec2799ed}\index{Light Blend Styles@{Light Blend Styles}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do720528df5c911c3870e907bfec2799ed_autotoc_md2195}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do720528df5c911c3870e907bfec2799ed_autotoc_md2195}%
+ 
+
+{\bfseries{Blend Styles}} determine the way a particular Light interacts with Sprites in the Scene. All Lights in the Scene must pick from one of the available Blend Styles. The Universal Render Pipeline (URP) 2D Asset can currently contain a total of four different Light Blend Styles, starting with the \textquotesingle{}Default\textquotesingle{} Blend Style being available.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Name}}   &The name that appears when choosing a Blend Style for a Light2D.    \\\cline{1-2}
+{\bfseries{Mask Texture Channel}}   &Which mask channel to use when applying this Blend Style to a Sprite.    \\\cline{1-2}
+{\bfseries{Render Texture Scale}}   &Scale for the internal render texture created for this Blend Style.    \\\cline{1-2}
+{\bfseries{Blend Mode}}   &What blending mode the Light2D uses when this Blend Style is selected.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do720528df5c911c3870e907bfec2799ed_autotoc_md2196}{}\doxysection{\texorpdfstring{Blend Mode}{Blend Mode}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do720528df5c911c3870e907bfec2799ed_autotoc_md2196}
+
+
+Blend Modes controls the way a Sprite is lit by light. The following examples show the four predefined Blend Modes\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{    }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{     }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{    }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{     }\\\cline{1-2}
+\endhead
+Original Sprite   &Multiply    \\\cline{1-2}
+   &    \\\cline{1-2}
+Additive   &Subtractive   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do720528df5c911c3870e907bfec2799ed_autotoc_md2197}{}\doxysection{\texorpdfstring{Custom Blend Modes}{Custom Blend Modes}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do720528df5c911c3870e907bfec2799ed_autotoc_md2197}
+
+
+All of the Blend Modes available can be expressed with Custom Blend Factors. The factors for the existing Blend Modes are as follows\+:
+
+
+\begin{DoxyItemize}
+\item Multiplicative
+\item -\/ Modulate = 1
+\begin{DoxyItemize}
+\item Additive = 0
+\end{DoxyItemize}
+\item Additive
+\item -\/ Modulate = 0
+\begin{DoxyItemize}
+\item Additive = 1
+\end{DoxyItemize}
+\item Subtractive
+\item -\/ Modulate = 0
+\begin{DoxyItemize}
+\item Additive = -\/1
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do720528df5c911c3870e907bfec2799ed_autotoc_md2198}{}\doxysection{\texorpdfstring{Mask Texture Channel}{Mask Texture Channel}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do720528df5c911c3870e907bfec2799ed_autotoc_md2198}
+Masks control where Lights can affect a Sprite. There are 4 channels to select from as the mask channel -\/ Red, Blue, Green, and Alpha. In a mask max value means full light, min value means no light.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{    }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{     }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{    }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{     }\\\cline{1-2}
+\endhead
+Original Rock Color   &Rock with a mask    \\\cline{1-2}
+   &    \\\cline{1-2}
+Additive Light Blending   &Additive Light Blending with a mask   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do720528df5c911c3870e907bfec2799ed_autotoc_md2199}{}\doxysection{\texorpdfstring{Render Texture Scale}{Render Texture Scale}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do720528df5c911c3870e907bfec2799ed_autotoc_md2199}
+Render Texture Scale adjusts the size of the internal render Texture used for a given Blend Mode. Lowering the Render Texture Scale can increase performance and decrease memory usage for Scenes that contain large Lights. Lowering the Texture Scale to too low a value may cause visual artefacts or a shimmering effect when there is motion in the Scene. 

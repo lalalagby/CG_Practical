@@ -1,0 +1,276 @@
+\chapter{Reconstruct the world space positions of pixels from the depth texture}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe117d95cb18dbda45a9d91ec4d13c0f0}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe117d95cb18dbda45a9d91ec4d13c0f0}\index{Reconstruct the world space positions of pixels from the depth texture@{Reconstruct the world space positions of pixels from the depth texture}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe117d95cb18dbda45a9d91ec4d13c0f0_autotoc_md2705}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe117d95cb18dbda45a9d91ec4d13c0f0_autotoc_md2705}%
+ The \doxylink{namespace_unity}{Unity} shader in this example reconstructs the world space positions for pixels using a depth texture and screen space UV coordinates. The shader draws a checkerboard pattern on a mesh to visualize the positions.
+
+The following illustration shows the end result\+:
+
+
+
+This page contains the following sections\+:
+
+
+\begin{DoxyItemize}
+\item Create the sample scene
+\item Edit the Shader\+Lab code
+\item The complete Shader\+Lab code
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe117d95cb18dbda45a9d91ec4d13c0f0_autotoc_md2706}{}\doxysection{\texorpdfstring{Create the sample scene}{Create the sample scene}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe117d95cb18dbda45a9d91ec4d13c0f0_autotoc_md2706}
+Create the sample scene to follow the steps in this section\+:
+
+
+\begin{DoxyEnumerate}
+\item Install URP into an existing \doxylink{namespace_unity}{Unity} project, or create a new project using the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do0e54e280482c9e2055dcf6e7a3ab1ea3}{{\bfseries{Universal Project Template}}}{0}.
+\item In the sample Scene, create a plane Game\+Object and place it so that it occludes some of the Game\+Objects.
+
+
+\item Create a new Material and assign it to the plane.
+\item Create a new shader and assign it to the material. Copy and paste the \doxylink{namespace_unity}{Unity} shader source code from the page \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doede214fd129bc83b060cf416b47c1ca5}{URP unlit basic shader}{0}.
+\item Select the URP Asset. If you created the project using the Universal Render Pipeline template, the URP Asset path is {\ttfamily Assets/\+Settings/\+Universal\+RP-\/\+High\+Quality}.
+\item In the URP Asset, in the General section, enable {\ttfamily Depth Texture}.
+
+
+\item Open the shader you created on step 4.
+\end{DoxyEnumerate}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe117d95cb18dbda45a9d91ec4d13c0f0_autotoc_md2707}{}\doxysection{\texorpdfstring{Edit the Shader\+Lab code}{Edit the Shader\+Lab code}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe117d95cb18dbda45a9d91ec4d13c0f0_autotoc_md2707}
+This section assumes that you copied the source code from the page \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doede214fd129bc83b060cf416b47c1ca5}{URP unlit basic shader}{0}.
+
+Make the following changes to the Shader\+Lab code\+:
+
+
+\begin{DoxyEnumerate}
+\item In the {\ttfamily HLSLPROGRAM} block, add the include declaration for the depth texture shader header. For example, place it under the existing include declaration for {\ttfamily Core.\+hlsl}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{++}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \#include\ "{}Packages/com.unity.render-\/pipelines.universal/ShaderLibrary/Core.hlsl"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{comment}{//\ The\ DeclareDepthTexture.hlsl\ file\ contains\ utilities\ for\ sampling\ the\ Camera}}
+\DoxyCodeLine{\ \ \ \textcolor{comment}{//\ depth\ texture.}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \#include\ "{}Packages/com.unity.render-\/pipelines.universal/ShaderLibrary/DeclareDepthTexture.hlsl"{}}}
+
+\end{DoxyCode}
+ The {\ttfamily Declare\+Depth\+Texture.\+hlsl} file contains functions for sampling the Camera depth texture. This example uses the {\ttfamily Sample\+Scene\+Depth} function for sampling the Z coordinate for pixels.
+\item In the fragment shader definition, add {\ttfamily Varyings IN} as input.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{++}
+\DoxyCodeLine{\ \ \ half4\ frag(Varyings\ IN)\ :\ SV\_Target}
+
+\end{DoxyCode}
+
+
+In this example, the fragment shader uses the {\ttfamily position\+HCS} property from the {\ttfamily Varyings} struct to get locations of pixels.
+\item In the fragment shader, to calculate the UV coordinates for sampling the depth buffer, divide the pixel location by the render target resolution {\ttfamily \+\_\+\+Scaled\+Screen\+Params}. The property {\ttfamily \+\_\+\+Scaled\+Screen\+Params.\+xy} takes into account any scaling of the render target, such as Dynamic Resolution.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{++}
+\DoxyCodeLine{\ \ \ float2\ UV\ =\ IN.positionHCS.xy\ /\ \_ScaledScreenParams.xy;}
+
+\end{DoxyCode}
+
+\item In the fragment shader, use the {\ttfamily Sample\+Scene\+Depth} functions to sample the depth buffer.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{++}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \#if\ UNITY\_REVERSED\_Z}}
+\DoxyCodeLine{\ \ \ \ \ \ \ real\ depth\ =\ SampleSceneDepth(UV);}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \#else}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{comment}{//\ Adjust\ z\ to\ match\ NDC\ for\ OpenGL}}
+\DoxyCodeLine{\ \ \ \ \ \ \ real\ depth\ =\ lerp(UNITY\_NEAR\_CLIP\_VALUE,\ 1,\ SampleSceneDepth(UV));}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \#endif}}
+
+\end{DoxyCode}
+
+
+The {\ttfamily Sample\+Scene\+Depth} function comes from the {\ttfamily Declare\+Depth\+Texture.\+hlsl} file. It returns the Z value in the range {\ttfamily \mbox{[}0, 1\mbox{]}}.
+
+For the reconstruction function ({\ttfamily Compute\+World\+Space\+Position}) to work, the depth value must be in the normalized device coordinate (NDC) space. In D3D, Z is in range {\ttfamily \mbox{[}0,1\mbox{]}}, in Open\+GL, Z is in range {\ttfamily \mbox{[}-\/1, 1\mbox{]}}.
+
+This example uses the {\ttfamily UNITY\+\_\+\+REVERSED\+\_\+Z} constant to determine the platform and adjust the Z value range. See step 6 in this example for more explanations.
+
+The {\ttfamily UNITY\+\_\+\+NEAR\+\_\+\+CLIP\+\_\+\+VALUE} variable is a platform independent near clipping plane value for the clip space.
+
+For more information, see \href{https://docs.unity3d.com/Manual/SL-PlatformDifferences.html}{\texttt{ Platform-\/specific rendering differences}}.
+\item Reconstruct world space positions from the UV and Z coordinates of pixels.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{++}
+\DoxyCodeLine{\ \ \ float3\ worldPos\ =\ ComputeWorldSpacePosition(UV,\ depth,\ UNITY\_MATRIX\_I\_VP);}
+
+\end{DoxyCode}
+
+
+{\ttfamily Compute\+World\+Space\+Position} is a utility function that calculates the world space position from the UV and the depth (Z) values. This function is defined in the {\ttfamily Common.\+hlsl} file of the SRP \doxylink{namespace_core}{Core} package.
+
+{\ttfamily UNITY\+\_\+\+MATRIX\+\_\+\+I\+\_\+\+VP} is an inverse view projection matrix which transforms points from the clip space to the world space.
+\item To visualize the world space positions of pixels, create the checkboard effect.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{++}
+\DoxyCodeLine{\ \ \ uint\ scale\ =\ 10;}
+\DoxyCodeLine{\ \ \ uint3\ worldIntPos\ =\ uint3(abs(worldPos.xyz\ *\ scale));}
+\DoxyCodeLine{\ \ \ \textcolor{keywordtype}{bool}\ white\ =\ (worldIntPos.x\ \&\ 1)\ \string^\ (worldIntPos.y\ \&\ 1)\ \string^\ (worldIntPos.z\ \&\ 1);}
+\DoxyCodeLine{\ \ \ half4\ color\ =\ white\ ?\ half4(1,1,1,1)\ :\ half4(0,0,0,1);}
+
+\end{DoxyCode}
+
+
+The {\ttfamily scale} is the inverse scale of the checkboard pattern size.
+
+The {\ttfamily abs} function mirrors the pattern to the negative coordinate side.
+
+The {\ttfamily uint3} declaration for the {\ttfamily world\+Int\+Pos} variable snaps the coordinate positions to integers.
+
+The {\ttfamily AND} operator in the expresion {\ttfamily \texorpdfstring{$<$}{<}integer value\texorpdfstring{$>$}{>} \& 1} checks if the value is even (0) or odd (1). The expression lets the code divide the surface into squares.
+
+The {\ttfamily XOR} operator in the expresion {\ttfamily \texorpdfstring{$<$}{<}integer value\texorpdfstring{$>$}{>} \texorpdfstring{$^\wedge$}{\string^} \texorpdfstring{$<$}{<}integer value\texorpdfstring{$>$}{>}} flips the square color.
+
+The depth buffer might not have valid values for areas where no geometry is rendered. The following code draws black color in such areas.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{++}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \#if\ UNITY\_REVERSED\_Z}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(depth\ <\ 0.0001)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ half4(0,0,0,1);}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \#else}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(depth\ >\ 0.9999)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ half4(0,0,0,1);}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \#endif}}
+
+\end{DoxyCode}
+
+
+Different platforms use different Z values for far clipping planes (0 == far, or 1 == far). The {\ttfamily UNITY\+\_\+\+REVERSED\+\_\+Z} constant lets the code handle all platforms correctly.
+
+Save the shader code, the example is ready.
+\end{DoxyEnumerate}
+
+The following illustration shows the end result\+:
+
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe117d95cb18dbda45a9d91ec4d13c0f0_autotoc_md2708}{}\doxysection{\texorpdfstring{The complete Shader\+Lab code}{The complete Shader\+Lab code}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe117d95cb18dbda45a9d91ec4d13c0f0_autotoc_md2708}
+Below is the complete Shader\+Lab code for this example.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{\textcolor{comment}{//\ This\ Unity\ shader\ reconstructs\ the\ world\ space\ positions\ for\ pixels\ using\ a\ depth}}
+\DoxyCodeLine{\textcolor{comment}{//\ texture\ and\ screen\ space\ UV\ coordinates.\ The\ shader\ draws\ a\ checkerboard\ pattern}}
+\DoxyCodeLine{\textcolor{comment}{//\ on\ a\ mesh\ to\ visualize\ the\ positions.}}
+\DoxyCodeLine{Shader\ \textcolor{stringliteral}{"{}Example/URPReconstructWorldPos"{}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Properties}
+\DoxyCodeLine{\ \ \ \ \{\ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ The\ SubShader\ block\ containing\ the\ Shader\ code.}}
+\DoxyCodeLine{\ \ \ \ SubShader}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ SubShader\ Tags\ define\ when\ and\ under\ which\ conditions\ a\ SubShader\ block\ or}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ a\ pass\ is\ executed.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Tags\ \{\ \textcolor{stringliteral}{"{}RenderType"{}}\ =\ \textcolor{stringliteral}{"{}Opaque"{}}\ \textcolor{stringliteral}{"{}RenderPipeline"{}}\ =\ \textcolor{stringliteral}{"{}UniversalPipeline"{}}\ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Pass}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ HLSLPROGRAM}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ This\ line\ defines\ the\ name\ of\ the\ vertex\ shader.}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#pragma\ vertex\ vert}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ This\ line\ defines\ the\ name\ of\ the\ fragment\ shader.}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#pragma\ fragment\ frag}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ Core.hlsl\ file\ contains\ definitions\ of\ frequently\ used\ HLSL}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ macros\ and\ functions,\ and\ also\ contains\ \#include\ references\ to\ other}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ HLSL\ files\ (for\ example,\ Common.hlsl,\ SpaceTransforms.hlsl,\ etc.).}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#include\ "{}Packages/com.unity.render-\/pipelines.universal/ShaderLibrary/Core.hlsl"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ DeclareDepthTexture.hlsl\ file\ contains\ utilities\ for\ sampling\ the}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Camera\ depth\ texture.}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#include\ "{}Packages/com.unity.render-\/pipelines.universal/ShaderLibrary/DeclareDepthTexture.hlsl"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ This\ example\ uses\ the\ Attributes\ structure\ as\ an\ input\ structure\ in}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ vertex\ shader.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }Attributes}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ positionOS\ variable\ contains\ the\ vertex\ positions\ in\ object}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ space.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ float4\ positionOS\ \ \ :\ POSITION;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }Varyings}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ positions\ in\ this\ struct\ must\ have\ the\ SV\_POSITION\ semantic.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ float4\ positionHCS\ \ :\ SV\_POSITION;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ vertex\ shader\ definition\ with\ properties\ defined\ in\ the\ Varyings}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ structure.\ The\ type\ of\ the\ vert\ function\ must\ match\ the\ type\ (struct)}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ that\ it\ returns.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ Varyings\ vert(Attributes\ IN)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Declaring\ the\ output\ object\ (OUT)\ with\ the\ Varyings\ struct.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Varyings\ OUT;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ TransformObjectToHClip\ function\ transforms\ vertex\ positions}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ from\ object\ space\ to\ homogenous\ clip\ space.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OUT.positionHCS\ =\ TransformObjectToHClip(IN.positionOS.xyz);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Returning\ the\ output.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ OUT;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ fragment\ shader\ definition.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ Varyings\ input\ structure\ contains\ interpolated\ values\ from\ the}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ vertex\ shader.\ The\ fragment\ shader\ uses\ the\ \`{}positionHCS`\ property}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ from\ the\ \`{}Varyings`\ struct\ to\ get\ locations\ of\ pixels.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ half4\ frag(Varyings\ IN)\ :\ SV\_Target}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ To\ calculate\ the\ UV\ coordinates\ for\ sampling\ the\ depth\ buffer,}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ divide\ the\ pixel\ location\ by\ the\ render\ target\ resolution}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \_ScaledScreenParams.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ float2\ UV\ =\ IN.positionHCS.xy\ /\ \_ScaledScreenParams.xy;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sample\ the\ depth\ from\ the\ Camera\ depth\ texture.}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#if\ UNITY\_REVERSED\_Z}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ real\ depth\ =\ SampleSceneDepth(UV);}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#else}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Adjust\ Z\ to\ match\ NDC\ for\ OpenGL\ ([-\/1,\ 1])}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ real\ depth\ =\ lerp(UNITY\_NEAR\_CLIP\_VALUE,\ 1,\ SampleSceneDepth(UV));}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Reconstruct\ the\ world\ space\ positions.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ float3\ worldPos\ =\ ComputeWorldSpacePosition(UV,\ depth,\ UNITY\_MATRIX\_I\_VP);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ following\ part\ creates\ the\ checkerboard\ effect.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Scale\ is\ the\ inverse\ size\ of\ the\ squares.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint\ scale\ =\ 10;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Scale,\ mirror\ and\ snap\ the\ coordinates.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint3\ worldIntPos\ =\ uint3(abs(worldPos.xyz\ *\ scale));}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Divide\ the\ surface\ into\ squares.\ Calculate\ the\ color\ ID\ value.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ white\ =\ ((worldIntPos.x)\ \&\ 1)\ \string^\ (worldIntPos.y\ \&\ 1)\ \string^\ (worldIntPos.z\ \&\ 1);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Color\ the\ square\ based\ on\ the\ ID\ value\ (black\ or\ white).}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ half4\ color\ =\ white\ ?\ half4(1,1,1,1)\ :\ half4(0,0,0,1);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ the\ color\ to\ black\ in\ the\ proximity\ to\ the\ far\ clipping}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ plane.}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#if\ UNITY\_REVERSED\_Z}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Case\ for\ platforms\ with\ REVERSED\_Z,\ such\ as\ D3D.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(depth\ <\ 0.0001)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ half4(0,0,0,1);}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#else}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Case\ for\ platforms\ without\ REVERSED\_Z,\ such\ as\ OpenGL.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(depth\ >\ 0.9999)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ half4(0,0,0,1);}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ color;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ENDHLSL}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

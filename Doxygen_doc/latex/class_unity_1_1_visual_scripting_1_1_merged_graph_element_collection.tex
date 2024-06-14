@@ -1,0 +1,95 @@
+\doxysection{Unity.\+Visual\+Scripting.\+Merged\+Graph\+Element\+Collection Class Reference}
+\hypertarget{class_unity_1_1_visual_scripting_1_1_merged_graph_element_collection}{}\label{class_unity_1_1_visual_scripting_1_1_merged_graph_element_collection}\index{Unity.VisualScripting.MergedGraphElementCollection@{Unity.VisualScripting.MergedGraphElementCollection}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Merged\+Graph\+Element\+Collection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.339713cm]{class_unity_1_1_visual_scripting_1_1_merged_graph_element_collection}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_merged_graph_element_collection_a3fba9eea868b22a4b7358dd3007c1a51}\label{class_unity_1_1_visual_scripting_1_1_merged_graph_element_collection_a3fba9eea868b22a4b7358dd3007c1a51} 
+override void {\bfseries Include$<$ TSub\+Item $>$} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_keyed_collection}{IKeyed\+Collection}}$<$ Guid, TSub\+Item $>$ collection)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_merged_keyed_collection}{Unity.\+Visual\+Scripting.\+Merged\+Keyed\+Collection$<$ Guid, IGraph\+Element $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries Includes$<$ TSub\+Item $>$} ()
+\item 
+bool {\bfseries Includes} (Type element\+Type)
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_keyed_collection}{IKeyed\+Collection}}$<$ TKey, TSub\+Item $>$ {\bfseries For\+Type$<$ TSub\+Item $>$} ()
+\item 
+virtual void {\bfseries Include$<$ TSub\+Item $>$} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_keyed_collection}{IKeyed\+Collection}}$<$ TKey, TSub\+Item $>$ collection)
+\item 
+bool {\bfseries Try\+Get\+Value} (TKey key, out TItem value)
+\item 
+virtual void {\bfseries Add} (TItem item)
+\item 
+void {\bfseries Clear} ()
+\item 
+bool {\bfseries Contains} (TItem item)
+\item 
+bool {\bfseries Contains} (TKey key)
+\item 
+bool {\bfseries Remove} (TItem item)
+\item 
+bool {\bfseries Remove} (TKey key)
+\item 
+void {\bfseries Copy\+To} (TItem\mbox{[}$\,$\mbox{]} array, int array\+Index)
+\item 
+Enumerator {\bfseries Get\+Enumerator} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_merged_graph_element_collection_a945aa71ebe22f1639ad18bd723fe919a}\label{class_unity_1_1_visual_scripting_1_1_merged_graph_element_collection_a945aa71ebe22f1639ad18bd723fe919a} 
+Action$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element}{IGraph\+Element}} $>$ {\bfseries Item\+Added}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_merged_graph_element_collection_a80347d79460c5cba23b0203f14fac04b}\label{class_unity_1_1_visual_scripting_1_1_merged_graph_element_collection_a80347d79460c5cba23b0203f14fac04b} 
+Action$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element}{IGraph\+Element}} $>$ {\bfseries Item\+Removed}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_merged_graph_element_collection_a028b3a147324caed5a9d364f08b11fbc}\label{class_unity_1_1_visual_scripting_1_1_merged_graph_element_collection_a028b3a147324caed5a9d364f08b11fbc} 
+Action {\bfseries Collection\+Changed}
+\end{DoxyCompactItemize}
+\doxysubsection*{Events inherited from \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_notify_collection_changed}{Unity.\+Visual\+Scripting.\+INotify\+Collection\+Changed$<$ IGraph\+Element $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+Action$<$ T $>$ {\bfseries Item\+Added}
+\item 
+Action$<$ T $>$ {\bfseries Item\+Removed}
+\item 
+Action {\bfseries Collection\+Changed}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_merged_keyed_collection}{Unity.\+Visual\+Scripting.\+Merged\+Keyed\+Collection$<$ Guid, IGraph\+Element $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_keyed_collection}{IKeyed\+Collection}}$<$ TKey, TItem $>$ {\bfseries Get\+Collection\+For\+Item} (TItem item)
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_keyed_collection}{IKeyed\+Collection}}$<$ TKey, TItem $>$ {\bfseries Get\+Collection\+For\+Type} (Type type, bool throw\+On\+Fail=true)
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_keyed_collection}{IKeyed\+Collection}}$<$ TKey, TItem $>$ {\bfseries Get\+Collection\+For\+Key} (TKey key, bool throw\+On\+Fail=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_merged_keyed_collection}{Unity.\+Visual\+Scripting.\+Merged\+Keyed\+Collection$<$ Guid, IGraph\+Element $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+readonly Dictionary$<$ Type, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_keyed_collection}{IKeyed\+Collection}}$<$ TKey, TItem $>$ $>$ {\bfseries collections}
+\item 
+readonly Dictionary$<$ Type, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_keyed_collection}{IKeyed\+Collection}}$<$ TKey, TItem $>$ $>$ {\bfseries collections\+Lookup}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_merged_keyed_collection}{Unity.\+Visual\+Scripting.\+Merged\+Keyed\+Collection$<$ Guid, IGraph\+Element $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+TItem {\bfseries this\mbox{[}\+TKey key\mbox{]}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+int {\bfseries Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries Is\+Read\+Only}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+8.\+0/\+Runtime/\+Visual\+Scripting.\+Core/\+Graphs/Merged\+Graph\+Element\+Collection.\+cs\end{DoxyCompactItemize}

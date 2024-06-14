@@ -1,0 +1,1182 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Input\+Action Class Reference}
+\hypertarget{class_unity_engine_1_1_input_system_1_1_input_action}{}\label{class_unity_engine_1_1_input_system_1_1_input_action}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+
+
+A named input signal that can flexibly decide which input data to tap.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Input\+Action\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_input_system_1_1_input_action}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context}{Callback\+Context}}
+\begin{DoxyCompactList}\small\item\em Information provided to action callbacks about what triggered an action. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_ae837b4878d72f5557c81534ce5a50497}{Input\+Action}} ()
+\begin{DoxyCompactList}\small\item\em Construct an unnamed, free-\/standing action that is not part of any map or asset and has no bindings. Bindings can be added with Input\+Action\+Setup\+Extensions.\+Add\+Binding(\+Input\+Action,string,string,string,string). The action type defaults to \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Input\+Action\+Type.\+Value}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a76d5a10b601f0956619cda9a5af9f51e}{Input\+Action}} (string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a18e68eda84c66e46fc7908fe67b8ffce}{name}}=null, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94b}{Input\+Action\+Type}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a4034bbebc91379913a9da5600a8a3491}{type}}=default, string binding=null, string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a625a03ad3baab2c78b68cc782ca25458}{interactions}}=null, string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a02b761c2f6c76c80c3c4b1cd396df3c4}{processors}}=null, string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_ab0330ac2a9ede3454cb0c092ac0a7bcb}{expected\+Control\+Type}}=null)
+\begin{DoxyCompactList}\small\item\em Construct a free-\/standing action that is not part of an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a5c45bb13be7dafd32a3cfd23ba85a80e}{Dispose}} ()
+\begin{DoxyCompactList}\small\item\em Release internal state held on to by the action. \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a30a705ae3957bdb7d38380b7528b44c9}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Return a string version of the action. Mainly useful for debugging. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_abc6ff7728cbf947406b3c426cf82437f}{Enable}} ()
+\begin{DoxyCompactList}\small\item\em Enable the action such that it actively listens for input and runs callbacks in response. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a301a6f1f456e71eee25363f62861ff93}{Disable}} ()
+\begin{DoxyCompactList}\small\item\em Disable the action such that is stop listening/responding to input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_ab89e9c5f63ab9f09fe169fd082e40c35}{Clone}} ()
+\begin{DoxyCompactList}\small\item\em Return an identical instance of the action. \end{DoxyCompactList}\item 
+unsafe TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a49b189fd9d09cc28efd17c08a17eeb0c}{Read\+Value$<$ TValue $>$}} ()
+\begin{DoxyCompactList}\small\item\em Read the current value of the control that is driving this action. If no bound control is actuated, returns default(\+TValue), but note that binding processors are always applied. \end{DoxyCompactList}\item 
+unsafe object \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a46b48d7c58238d51f0ff1c708aa360da}{Read\+Value\+As\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Same as \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a49b189fd9d09cc28efd17c08a17eeb0c}{Read\+Value$<$\+TValue$>$} but read the value without having to know the value type of the action. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a734e734be5da00df41bb4a0c02ffe7a5}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset the action state to default. \end{DoxyCompactList}\item 
+unsafe bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a4ba2a7836129d30d4996714c3e3f871d}{Is\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em Check whether the current actuation of the action has crossed the button press threshold (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}{Input\+Settings.\+default\+Button\+Press\+Point}) and has not yet fallen back below the release threshold (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_af3a44c9e9f7da82060f87892168e73bd}{Input\+Settings.\+button\+Release\+Threshold}). \end{DoxyCompactList}\item 
+unsafe bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a39e3c5225e7a6da527e07aeea65b6800}{Is\+In\+Progress}} ()
+\begin{DoxyCompactList}\small\item\em Whether the action has been \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Input\+Action\+Phase.\+Started} or \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Input\+Action\+Phase.\+Performed}. \end{DoxyCompactList}\item 
+unsafe bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a7776c9dbaab7db1f49493c6e7e8c4fbb}{Was\+Pressed\+This\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the action\textquotesingle{}s value crossed the press threshold (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}{Input\+Settings.\+default\+Button\+Press\+Point}) at any point in the frame. \end{DoxyCompactList}\item 
+unsafe bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_aa0aa02b5124108b0fd9ecc74e919ee9b}{Was\+Released\+This\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the action\textquotesingle{}s value crossed the release threshold (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_af3a44c9e9f7da82060f87892168e73bd}{Input\+Settings.\+button\+Release\+Threshold}) at any point in the frame after being in pressed state. \end{DoxyCompactList}\item 
+unsafe bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a1968a212ee4e88950b4f1f15043a9d42}{Was\+Performed\+This\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Check whether \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a86bd545c9dfe1fb0200e296c44389e57}{phase} was \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Input\+Action\+Phase.\+Performed} at any point in the current frame. \end{DoxyCompactList}\item 
+unsafe float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a5d2970b93407d558ab7de5806599dce7}{Get\+Timeout\+Completion\+Percentage}} ()
+\begin{DoxyCompactList}\small\item\em Return the completion percentage of the timeout (if any) running on the current interaction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a18e68eda84c66e46fc7908fe67b8ffce}{name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Name of the action. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94b}{Input\+Action\+Type}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a4034bbebc91379913a9da5600a8a3491}{type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Behavior type of the action. \end{DoxyCompactList}\item 
+Guid \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a20c55a69282fe033ba0ca4ce706e4a68}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A stable, unique identifier for the action. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_ab0330ac2a9ede3454cb0c092ac0a7bcb}{expected\+Control\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Name of control layout expected for controls bound to this action. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a02b761c2f6c76c80c3c4b1cd396df3c4}{processors}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity_engine_1_1_input_system_1_1_processors}{Processors} applied to every binding on the action. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a625a03ad3baab2c78b68cc782ca25458}{interactions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity_engine_1_1_input_system_1_1_interactions}{Interactions} applied to every binding on the action. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_ae6817835d32520aa1433e7119c6e30e8}{action\+Map}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The map the action belongs to. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}}? \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a41caa3a44bc876781c5b1bcb04622cd2}{binding\+Mask}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An optional mask that determines which bindings of the action to enable and which to ignore. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a44fdaf3ff9ffc22609a9df942372d9bb}{bindings}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of bindings associated with the action. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a8e3f5d3329be13ca8474314137045af4}{controls}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The set of controls to which the action\textquotesingle{}s \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a44fdaf3ff9ffc22609a9df942372d9bb}{bindings} resolve. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182}{Input\+Action\+Phase}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a86bd545c9dfe1fb0200e296c44389e57}{phase}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The current phase of the action. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_ad3f170acb40585d0ce4f6c2243b5b213}{in\+Progress}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the action is currently in \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Input\+Action\+Phase.\+Started} or \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Input\+Action\+Phase.\+Performed} phase. False in all other cases. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a10b7ab479ef1419726f2d05927fd1b70}{enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the action is currently enabled, i.\+e. responds to input, or not. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_ae559389a3ace0bdfc463ac56bf57632b}{triggered}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Equivalent to \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a1968a212ee4e88950b4f1f15043a9d42}{Was\+Performed\+This\+Frame}. \end{DoxyCompactList}\item 
+unsafe \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a472cf9d7e67051b780bca5df73c7bb84}{active\+Control}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The currently active control that is driving the action. Null while the action is in waiting (\doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a5706de961fb376d701be6e7762d8b09c}{Input\+Action\+Phase.\+Waiting}) or canceled (\doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a0e22fe7d45f8e5632a4abf369b24e29c}{Input\+Action\+Phase.\+Canceled}) state. Otherwise the control that last had activity on it which wasn\textquotesingle{}t ignored. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a2978b2fcba4145ce4213df097c298a98}{wants\+Initial\+State\+Check}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the action wants a state check on its bound controls as soon as it is enabled. This is always true for \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Input\+Action\+Type.\+Value} actions but can optionally be enabled for \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}{Input\+Action\+Type.\+Button} or \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94bae1ff6a7360e99cb46db6bb5d3ff8e2eb}{Input\+Action\+Type.\+Pass\+Through} actions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Action$<$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context}{Callback\+Context}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a5fecf2acd129fa0922452ecf32527cdd}{started}}\hspace{0.3cm}{\ttfamily  \mbox{[}add, remove\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Event that is triggered when the action has been started. \end{DoxyCompactList}\item 
+Action$<$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context}{Callback\+Context}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a905374d6d7af6dc57a54acfa22018976}{canceled}}\hspace{0.3cm}{\ttfamily  \mbox{[}add, remove\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Event that is triggered when the action has been \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a5fecf2acd129fa0922452ecf32527cdd}{started} but then canceled before being fully \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a11c046d8fb911d300e30e67827222c1f}{performed}. \end{DoxyCompactList}\item 
+Action$<$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context}{Callback\+Context}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a11c046d8fb911d300e30e67827222c1f}{performed}}\hspace{0.3cm}{\ttfamily  \mbox{[}add, remove\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Event that is triggered when the action has been fully performed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A named input signal that can flexibly decide which input data to tap. 
+
+An input action is an abstraction over the source of input(s) it receives. They are most useful for representing input as "{}logical"{} concepts (e.\+g. "{}jump"{}) rather than as "{}physical"{} inputs (e.\+g. "{}space bar on keyboard pressed"{}).
+
+In its most basic form, an action is simply an object along with a collection of bindings that trigger the action.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ A\ simple\ action\ can\ be\ created\ directly\ using\ <tt>new</tt>.\ If\ desired,\ a\ binding}}
+\DoxyCodeLine{\textcolor{comment}{//\ can\ be\ specified\ directly\ as\ part\ of\ construction.}}
+\DoxyCodeLine{var\ action\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_ae837b4878d72f5557c81534ce5a50497}{InputAction}}(binding:\ \textcolor{stringliteral}{"{}<Gamepad>/buttonSouth"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Additional\ bindings\ can\ be\ added\ using\ <tt>AddBinding</tt>.}}
+\DoxyCodeLine{action.AddBinding(\textcolor{stringliteral}{"{}<Mouse>/leftButton"{}});}
+
+\end{DoxyCode}
+ 
+
+Bindings use control path expressions to reference controls. See \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding} for more details. There may be arbitrary many bindings targeting a single action. The list of bindings targeting an action can be obtained through \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a44fdaf3ff9ffc22609a9df942372d9bb}{bindings}.
+
+By itself an action does not do anything until it is enabled\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{action.Enable();}
+
+\end{DoxyCode}
+ 
+
+Once enabled, the action will actively monitor all controls on devices present in the system (see Input\+System.\+devices) that match any of the binding paths associated with the action. If you want to restrict the set of bindings used at runtime or restrict the set of devices which controls are chosen from, you can do so using \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a41caa3a44bc876781c5b1bcb04622cd2}{binding\+Mask} or, if the action is part of an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map}, by setting the \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map_ab32ae5eb39f8c39dcebccb5cc1bb99e9}{Input\+Action\+Map.\+devices} property of the action map. The controls that an action uses can be queried using the \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a8e3f5d3329be13ca8474314137045af4}{controls} property.
+
+When input is received on controls bound to an action, the action will trigger callbacks in response. These callbacks are \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a5fecf2acd129fa0922452ecf32527cdd}{started}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a11c046d8fb911d300e30e67827222c1f}{performed}, and \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a905374d6d7af6dc57a54acfa22018976}{canceled}. The callbacks are triggered as part of input system updates (see Input\+System.\+Update), i.\+e. they happen before the respective {\ttfamily Mono\+Behaviour.\+Update} or {\ttfamily Mono\+Behaviour.\+Fixed\+Update} methods get executed (depending on which \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_ab7d15182096158aaf407f0b7e9aed8ae}{Input\+Settings.\+update\+Mode} the system is set to).
+
+In what order and how those callbacks get triggered depends on both the \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a4034bbebc91379913a9da5600a8a3491}{type} of the action as well as on the interactions (see \doxylink{interface_unity_engine_1_1_input_system_1_1_i_input_interaction}{IInput\+Interaction}) present on the bindings of the action. The default behavior is that when a control is actuated (that is, moving away from its resting position), \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a5fecf2acd129fa0922452ecf32527cdd}{started} is called and then \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a11c046d8fb911d300e30e67827222c1f}{performed}. Subsequently, whenever the a control further changes value to anything other than its default value, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a11c046d8fb911d300e30e67827222c1f}{performed} will be called again. Finally, when the control moves back to its default value (i.\+e. resting position), \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a905374d6d7af6dc57a54acfa22018976}{canceled} is called.
+
+To hook into the callbacks, there are several options available to you. The most obvious one is to hook directly into \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a5fecf2acd129fa0922452ecf32527cdd}{started}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a11c046d8fb911d300e30e67827222c1f}{performed}, and/or \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a905374d6d7af6dc57a54acfa22018976}{canceled}. In these callbacks, you will receive a \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context}{Callback\+Context} with information about how the action got triggered. For example, you can use \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context_a01b6e7dd0b74d505ac04599db8981266}{Callback\+Context.\+Read\+Value$<$\+TValue$>$} to read the value from the binding that triggered or use \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context_ac90a9c237a3159396f38f20a8d676a67}{Callback\+Context.\+interaction} to find the interaction that is in progress.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{action.started\ +=\ context\ =>\ Debug.Log(\$\textcolor{stringliteral}{"{}\{context.action\}\ started"{}});}
+\DoxyCodeLine{action.performed\ +=\ context\ =>\ Debug.Log(\$\textcolor{stringliteral}{"{}\{context.action\}\ performed"{}});}
+\DoxyCodeLine{action.canceled\ +=\ context\ =>\ Debug.Log(\$\textcolor{stringliteral}{"{}\{context.action\}\ canceled"{}});}
+
+\end{DoxyCode}
+ 
+
+Alternatively, you can use the \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map_a8a954270ce4ffddfaec47a8e8841e543}{Input\+Action\+Map.\+action\+Triggered} callback for actions that are part of an action map or the global Input\+System.\+on\+Action\+Change callback to globally listen for action activity. To simply record action activity instead of responding to it directly, you can use Input\+Action\+Trace.
+
+If you prefer to poll an action directly as part of your {\ttfamily Mono\+Behaviour.\+Update} or {\ttfamily Mono\+Behaviour.\+Fixed\+Update} logic, you can do so using the \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_ae559389a3ace0bdfc463ac56bf57632b}{triggered} and \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a49b189fd9d09cc28efd17c08a17eeb0c}{Read\+Value$<$\+TValue$>$} methods.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ Update()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ For\ a\ button\ type\ action.}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (action.triggered)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{/*\ ...\ *\&zwj;/;}}
+\DoxyCodeLine{\textcolor{comment}{}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \ \ //\ For\ a\ value\ type\ action.}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \ \ //\ (Vector2\ is\ just\ an\ example;\ pick\ the\ value\ type\ that\ is\ the\ right}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \ \ //\ one\ according\ to\ the\ bindings\ you\ have)}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \ \ var\ v\ =\ action.ReadValue<Vector2>();}}
+\DoxyCodeLine{\textcolor{comment}{\}}}
+
+\end{DoxyCode}
+ 
+
+Note that actions are not generally frame-\/based. What this means is that an action will observe any value change on its connected controls, even if the control changes value multiple times in the same frame. In practice, this means that, for example, no button press will get missed.
+
+Actions can be grouped into maps (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map}) which can in turn be grouped into assets (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset}).
+
+Please note that actions are a player-\/only feature. They are not supported in edit mode.
+
+For more in-\/depth reading on actions, see the \href{../manual/Actions.html}{\texttt{ manual}}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_ae837b4878d72f5557c81534ce5a50497}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!InputAction@{InputAction}}
+\index{InputAction@{InputAction}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{InputAction()}{InputAction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_ae837b4878d72f5557c81534ce5a50497} 
+Unity\+Engine.\+Input\+System.\+Input\+Action.\+Input\+Action (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct an unnamed, free-\/standing action that is not part of any map or asset and has no bindings. Bindings can be added with Input\+Action\+Setup\+Extensions.\+Add\+Binding(\+Input\+Action,string,string,string,string). The action type defaults to \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Input\+Action\+Type.\+Value}. 
+
+The action will not have an associated \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map} and \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_ae6817835d32520aa1433e7119c6e30e8}{action\+Map} will thus be {\ttfamily null}. Use Input\+Action\+Setup\+Extensions.\+Add\+Action instead if you want to add a new action to an action map.
+
+The action will remain disabled after construction and thus not listen/react to input yet. Use \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_abc6ff7728cbf947406b3c426cf82437f}{Enable} to enable the action.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ an\ action\ with\ two\ bindings.}}
+\DoxyCodeLine{var\ action\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_ae837b4878d72f5557c81534ce5a50497}{InputAction}}();}
+\DoxyCodeLine{action.AddBinding(\textcolor{stringliteral}{"{}<Gamepad>/leftStick"{}});}
+\DoxyCodeLine{action.AddBinding(\textcolor{stringliteral}{"{}<Mouse>/delta"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{action.performed\ +=\ ctx\ =>\ Debug.Log(\textcolor{stringliteral}{"{}Value:\ "{}}\ +\ ctx.ReadValue<Vector2>());}
+\DoxyCodeLine{}
+\DoxyCodeLine{action.Enable();}
+
+\end{DoxyCode}
+ \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a76d5a10b601f0956619cda9a5af9f51e}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!InputAction@{InputAction}}
+\index{InputAction@{InputAction}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{InputAction()}{InputAction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a76d5a10b601f0956619cda9a5af9f51e} 
+Unity\+Engine.\+Input\+System.\+Input\+Action.\+Input\+Action (\begin{DoxyParamCaption}\item[{string}]{name}{ = {\ttfamily null}, }\item[{\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94b}{Input\+Action\+Type}}}]{type}{ = {\ttfamily default}, }\item[{string}]{binding}{ = {\ttfamily null}, }\item[{string}]{interactions}{ = {\ttfamily null}, }\item[{string}]{processors}{ = {\ttfamily null}, }\item[{string}]{expected\+Control\+Type}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a free-\/standing action that is not part of an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the action. If null or empty, the action will be unnamed.\\
+\hline
+{\em type} & Type of action to create. Defaults to \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Input\+Action\+Type.\+Value}, i.\+e. an action that provides continuous values.\\
+\hline
+{\em binding} & If not null or empty, a binding with the given path will be added to the action right away. The format of the string is the as for \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{Input\+Binding.\+path}.\\
+\hline
+{\em interactions} & If {\itshape binding}  is not null or empty, this parameter represents the interaction to apply to the newly created binding (i.\+e. \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a402931846d56ed2e96ed129e43c687aa}{Input\+Binding.\+interactions}). If {\itshape binding}  is not supplied, this parameter represents the interactions to apply to the action (i.\+e. the value of \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a625a03ad3baab2c78b68cc782ca25458}{interactions}).\\
+\hline
+{\em processors} & If {\itshape binding}  is not null or empty, this parameter represents the processors to apply to the newly created binding (i.\+e. \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab152467c6dd260ea1195ccbc9789a76b}{Input\+Binding.\+processors}). If {\itshape binding}  is not supplied, this parameter represents the processors to apply to the action (i.\+e. the value of \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a02b761c2f6c76c80c3c4b1cd396df3c4}{processors}).\\
+\hline
+{\em expected\+Control\+Type} & The optional expected control type for the action (i.\+e. \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_ab0330ac2a9ede3454cb0c092ac0a7bcb}{expected\+Control\+Type}).\\
+\hline
+\end{DoxyParams}
+
+
+The action will not have an associated \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map} and \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_ae6817835d32520aa1433e7119c6e30e8}{action\+Map} will thus be {\ttfamily null}. Use Input\+Action\+Setup\+Extensions.\+Add\+Action instead if you want to add a new action to an action map.
+
+The action will remain disabled after construction and thus not listen/react to input yet. Use \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_abc6ff7728cbf947406b3c426cf82437f}{Enable} to enable the action.
+
+Additional bindings can be added with Input\+Action\+Setup\+Extensions.\+Add\+Binding(\+Input\+Action,string,string,string,string).
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ a\ button\ action\ responding\ to\ the\ gamepad\ A\ button.}}
+\DoxyCodeLine{var\ action\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_ae837b4878d72f5557c81534ce5a50497}{InputAction}}(\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a4034bbebc91379913a9da5600a8a3491}{type}}:\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94b}{InputActionType}}.\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}{Button}},\ binding:\ \textcolor{stringliteral}{"{}<Gamepad>/buttonSouth"{}});}
+\DoxyCodeLine{action.performed\ +=\ ctx\ =>\ Debug.Log(\textcolor{stringliteral}{"{}Pressed"{}});}
+\DoxyCodeLine{action.Enable();}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_ab89e9c5f63ab9f09fe169fd082e40c35}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!Clone@{Clone}}
+\index{Clone@{Clone}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_ab89e9c5f63ab9f09fe169fd082e40c35} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} Unity\+Engine.\+Input\+System.\+Input\+Action.\+Clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return an identical instance of the action. 
+
+REVIEW\+: is {\itshape not} cloning IDs here really the right thing to do?
+
+\begin{DoxyReturn}{Returns}
+An identical clone of the action
+\end{DoxyReturn}
+
+
+Note that if you clone an action that is part of an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map}, you will not get a new action that is part of the same map. Instead, you will get a free-\/standing action not associated with any action map.
+
+Also, note that the \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a20c55a69282fe033ba0ca4ce706e4a68}{id} of the action is not cloned. Instead, the clone will receive a new unique ID. Also, callbacks install on events such as \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a5fecf2acd129fa0922452ecf32527cdd}{started} will not be copied over to the clone. \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a301a6f1f456e71eee25363f62861ff93}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!Disable@{Disable}}
+\index{Disable@{Disable}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{Disable()}{Disable()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a301a6f1f456e71eee25363f62861ff93} 
+void Unity\+Engine.\+Input\+System.\+Input\+Action.\+Disable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Disable the action such that is stop listening/responding to input. 
+
+If the action is already disabled, this method does nothing.
+
+If the action is currently in progress, i.\+e. if \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a86bd545c9dfe1fb0200e296c44389e57}{phase} is \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Input\+Action\+Phase.\+Started}, the action will be canceled as part of being disabled. This means that you will see a call on \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a905374d6d7af6dc57a54acfa22018976}{canceled} from within the call to {\ttfamily \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a301a6f1f456e71eee25363f62861ff93}{Disable()}}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a10b7ab479ef1419726f2d05927fd1b70}{enabled}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_abc6ff7728cbf947406b3c426cf82437f}{Enable}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a5c45bb13be7dafd32a3cfd23ba85a80e}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a5c45bb13be7dafd32a3cfd23ba85a80e} 
+void Unity\+Engine.\+Input\+System.\+Input\+Action.\+Dispose (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Release internal state held on to by the action. 
+
+Once enabled, actions will allocate a block of state internally that they will hold on to until disposed of. For free-\/standing actions, that state is private to just the action. For actions that are part of \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map}s, the state is shared by all actions in the map and, if the map itself is part of an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset}, also by all the maps that are part of the asset.
+
+Note that the internal state holds on to GC heap memory as well as memory from the unmanaged, C++ heap. \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_abc6ff7728cbf947406b3c426cf82437f}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!Enable@{Enable}}
+\index{Enable@{Enable}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{Enable()}{Enable()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_abc6ff7728cbf947406b3c426cf82437f} 
+void Unity\+Engine.\+Input\+System.\+Input\+Action.\+Enable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enable the action such that it actively listens for input and runs callbacks in response. 
+
+If the action is already enabled, this method does nothing.
+
+By default, actions start out disabled, i.\+e. with \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a10b7ab479ef1419726f2d05927fd1b70}{enabled} being false. When enabled, two things happen.
+
+First, if it hasn\textquotesingle{}t already happened, an action will resolve all of its bindings to \doxylink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}s. This also happens if, since the action was last enabled, the setup of devices in the system has changed such that it may impact the action.
+
+Second, for all the \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a8e3f5d3329be13ca8474314137045af4}{controls} bound to an action, change monitors (see IInput\+State\+Change\+Monitor) will be added to the system. If any of the controls changes state in the future, the action will get notified and respond.
+
+\doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Input\+Action\+Type.\+Value} type actions will also perform an initial state check in the input system update following the call to Enable. This means that if any of the bound controls are already actuated and produce a non-\/{\ttfamily default} value, the action will immediately trigger in response.
+
+Note that this method only enables a single action. This is also allowed for action that are part of an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map}. To enable all actions in a map, call \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map_a1070fcb5a4631ca6c0212fb28a19644f}{Input\+Action\+Map.\+Enable}.
+
+The \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map} associated with an action (if any), will immediately toggle to being enabled (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map_a178f645fe8f329485cff4cdb3e69086c}{Input\+Action\+Map.\+enabled}) as soon as the first action in the map is enabled and for as long as any action in the map is still enabled.
+
+The first time an action is enabled, it will allocate a block of state internally that it will hold on to until disposed of. For free-\/standing actions, that state is private to just the action. For actions that are part of \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map}s, the state is shared by all actions in the map and, if the map itself is part of an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset}, also by all the maps that are part of the asset.
+
+To dispose of the state, call \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a5c45bb13be7dafd32a3cfd23ba85a80e}{Dispose}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ gamepad\ =\ InputSystem.AddDevice<Gamepad>();}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ action\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_ae837b4878d72f5557c81534ce5a50497}{InputAction}}(\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a4034bbebc91379913a9da5600a8a3491}{type}}:\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94b}{InputActionType}}.\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Value}},\ binding:\ \textcolor{stringliteral}{"{}<Gamepad>/leftTrigger"{}});}
+\DoxyCodeLine{action.performed\ =\ ctx\ =>\ Debug.Log(\textcolor{stringliteral}{"{}Action\ triggered!"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Perform\ some\ fake\ input\ on\ the\ gamepad.\ Note\ that\ the\ action}}
+\DoxyCodeLine{\textcolor{comment}{//\ will\ <em>NOT</em>\ get\ triggered\ as\ it\ is\ not\ enabled.}}
+\DoxyCodeLine{\textcolor{comment}{//\ NOTE:\ We\ use\ Update()\ here\ only\ for\ demonstration\ purposes.\ In\ most\ cases,}}
+\DoxyCodeLine{\textcolor{comment}{//\ \ \ \ \ \ \ it's\ not\ a\ good\ method\ to\ call\ directly\ as\ it\ basically\ injects\ artificial}}
+\DoxyCodeLine{\textcolor{comment}{//\ \ \ \ \ \ \ input\ frames\ into\ the\ player\ loop.\ Usually\ a\ recipe\ for\ breakage.}}
+\DoxyCodeLine{InputSystem.QueueStateEvent(gamepad,\ \textcolor{keyword}{new}\ GamepadState\ \{\ leftTrigger\ =\ 0.5f\ \});}
+\DoxyCodeLine{InputSystem.Update();}
+\DoxyCodeLine{}
+\DoxyCodeLine{action.Enable();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Now,\ with\ the\ left\ trigger\ already\ being\ down\ and\ the\ action\ enabled,\ it\ will}}
+\DoxyCodeLine{\textcolor{comment}{//\ trigger\ in\ the\ next\ frame.}}
+\DoxyCodeLine{InputSystem.Update();}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a301a6f1f456e71eee25363f62861ff93}{Disable}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a10b7ab479ef1419726f2d05927fd1b70}{enabled}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a5d2970b93407d558ab7de5806599dce7}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!GetTimeoutCompletionPercentage@{GetTimeoutCompletionPercentage}}
+\index{GetTimeoutCompletionPercentage@{GetTimeoutCompletionPercentage}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{GetTimeoutCompletionPercentage()}{GetTimeoutCompletionPercentage()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a5d2970b93407d558ab7de5806599dce7} 
+unsafe float Unity\+Engine.\+Input\+System.\+Input\+Action.\+Get\+Timeout\+Completion\+Percentage (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the completion percentage of the timeout (if any) running on the current interaction. 
+
+\begin{DoxyReturn}{Returns}
+A value \texorpdfstring{$>$}{>}= 0 (no progress) and \texorpdfstring{$<$}{<}= 1 (finished) indicating the level of completion of the currently running timeout.
+\end{DoxyReturn}
+
+
+This method is useful, for example, when providing \doxylink{namespace_unity_engine_1_1_u_i}{UI} feedback for an ongoing action. If, say, you have a \doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_hold_interaction}{Interactions.\+Hold\+Interaction} on a binding, you might want to show a progress indicator in the \doxylink{namespace_unity_engine_1_1_u_i}{UI} and need to know how far into the hold the action current is. Once the hold has been started, this method will return how far into the hold the action currently is.
+
+Note that if an interaction performs and stays performed (see Input\+Interaction\+Context.\+Performed\+And\+Stay\+Performed), the completion percentage will remain at 1 until the interaction is canceled.
+
+Also note that completion is based on the progression of time and not dependent on input updates. This means that if, for example, the timeout for a \doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_hold_interaction}{Interactions.\+Hold\+Interaction} has expired according the current time but the expiration has not yet been processed by an input update (thus causing the hold to perform), the returned completion percentage will still be 1. In other words, there isn\textquotesingle{}t always a correlation between the current completion percentage and \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a86bd545c9dfe1fb0200e296c44389e57}{phase}.
+
+The meaning of the timeout is dependent on the interaction in play. For a \doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_hold_interaction}{Interactions.\+Hold\+Interaction}, the timeout represents "{}completion"{} (that is, the time until a "{}hold"{} is considered to be performed), whereas for a \doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_tap_interaction}{Interactions.\+Tap\+Interaction} it represents "{}time to failure"{} (that is, the remaining time window that the interaction can be completed within).
+
+Note that an interaction might run multiple timeouts in succession. One such example is \doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_multi_tap_interaction}{Interactions.\+Multi\+Tap\+Interaction}. In this case, progression towards a single timeout does not necessarily mean progression towards completion of the whole interaction. An interaction can call \doxylink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a5284a68e9a6129992bc31890d5d173cc}{Input\+Interaction\+Context.\+Set\+Total\+Timeout\+Completion\+Time} to inform the Input \doxylink{namespace_system}{System} of the total length of timeouts to run. If this is done, the result of the {\ttfamily Get\+Timeout\+Completion\+Percentage} method will return a value reflecting the progression with respect to total time.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Scale\ a\ UI\ element\ in\ response\ to\ the\ completion\ of\ a\ hold\ on\ the\ gamepad's\ A\ button.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{Transform\ uiObjectToScale;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_ae837b4878d72f5557c81534ce5a50497}{InputAction}}\ holdAction;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ OnEnable()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (holdAction\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ hold\ action\ with\ a\ 2\ second\ timeout.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ NOTE:\ Here\ we\ create\ the\ action\ in\ code.\ You\ can,\ of\ course,\ grab\ the\ action\ from\ an\ .inputactions}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ asset\ created\ in\ the\ editor\ instead.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ holdAction\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_ae837b4878d72f5557c81534ce5a50497}{InputAction}}(\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a4034bbebc91379913a9da5600a8a3491}{type}}:\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94b}{InputActionType}}.\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}{Button}},\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a625a03ad3baab2c78b68cc782ca25458}{interactions}}:\ \textcolor{stringliteral}{"{}hold(duration=2)"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Show\ the\ UI\ object\ when\ the\ hold\ starts\ and\ hide\ it\ when\ it\ ends.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ holdAction.started\ +=\ \_\ =>\ uiObjectToScale.SetActive(\textcolor{keyword}{true});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ holdAction.canceled\ +=\ \_\ =>\ uiObjectToScale.SetActive(\textcolor{keyword}{false});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ you\ want\ to\ play\ a\ visual\ effect\ when\ the\ action\ performs,\ you\ can\ initiate\ from}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ performed\ callback.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ holdAction.performed\ +=\ \_\ =>\ \textcolor{comment}{/*\ InitiateVisualEffectWhenHoldIsComplete()\ *\&zwj;/;}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{\textcolor{comment}{}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \ \ holdAction.Enable();}}
+\DoxyCodeLine{\textcolor{comment}{}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \ \ //\ Hide\ the\ UI\ object\ until\ the\ action\ is\ started.}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \ \ uiObjectToScale.gameObject.SetActive(false);}}
+\DoxyCodeLine{\textcolor{comment}{\}}}
+\DoxyCodeLine{\textcolor{comment}{}}
+\DoxyCodeLine{\textcolor{comment}{void\ OnDisable()}}
+\DoxyCodeLine{\textcolor{comment}{\{}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \ \ holdAction.Disable();}}
+\DoxyCodeLine{\textcolor{comment}{\}}}
+\DoxyCodeLine{\textcolor{comment}{}}
+\DoxyCodeLine{\textcolor{comment}{void\ Update()}}
+\DoxyCodeLine{\textcolor{comment}{\{}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \ \ var\ completion\ =\ holdAction.GetTimeoutCompletionPercentage();}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \ \ uiObjectToScale.localScale\ =\ new\ Vector3(1,\ completion,\ 1);}}
+\DoxyCodeLine{\textcolor{comment}{\}}}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{interface_unity_engine_1_1_input_system_1_1_i_input_interaction}{IInput\+Interaction}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a8a8595a9420e215d62d8b2c6606cf955}{Input\+Interaction\+Context.\+Set\+Timeout}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a5284a68e9a6129992bc31890d5d173cc}{Input\+Interaction\+Context.\+Set\+Total\+Timeout\+Completion\+Time}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a39e3c5225e7a6da527e07aeea65b6800}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!IsInProgress@{IsInProgress}}
+\index{IsInProgress@{IsInProgress}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{IsInProgress()}{IsInProgress()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a39e3c5225e7a6da527e07aeea65b6800} 
+unsafe bool Unity\+Engine.\+Input\+System.\+Input\+Action.\+Is\+In\+Progress (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Whether the action has been \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Input\+Action\+Phase.\+Started} or \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Input\+Action\+Phase.\+Performed}. 
+
+\begin{DoxyReturn}{Returns}
+True if the action is currently triggering.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a86bd545c9dfe1fb0200e296c44389e57}{phase}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a4ba2a7836129d30d4996714c3e3f871d}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!IsPressed@{IsPressed}}
+\index{IsPressed@{IsPressed}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{IsPressed()}{IsPressed()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a4ba2a7836129d30d4996714c3e3f871d} 
+unsafe bool Unity\+Engine.\+Input\+System.\+Input\+Action.\+Is\+Pressed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check whether the current actuation of the action has crossed the button press threshold (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}{Input\+Settings.\+default\+Button\+Press\+Point}) and has not yet fallen back below the release threshold (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_af3a44c9e9f7da82060f87892168e73bd}{Input\+Settings.\+button\+Release\+Threshold}). 
+
+\begin{DoxyReturn}{Returns}
+True if the action is considered to be in "{}pressed"{} state, false otherwise.
+\end{DoxyReturn}
+
+
+This method is different from simply reading the action\textquotesingle{}s current {\ttfamily float} value and comparing it to the press threshold and is also different from comparing the current actuation of \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a472cf9d7e67051b780bca5df73c7bb84}{active\+Control} to it. This is because the current level of actuation might have already fallen below the press threshold but might not yet have reached the release threshold.
+
+This method works with any \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a4034bbebc91379913a9da5600a8a3491}{type} of action, not just buttons.
+
+Also note that because this operates on the results of \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Input\+Control.\+Evaluate\+Magnitude()}, it works with many kind of controls, not just buttons. For example, if an action is bound to a Stick\+Control, the control will be considered "{}pressed"{} once the magnitude of the Vector2 of the control has crossed the press threshold.
+
+Finally, note that custom button press points of controls (see \doxylink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control_aee05d5892d3fdf8a59888815420c29b6}{Button\+Control.\+press\+Point}) are respected and will take precedence over \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}{Input\+Settings.\+default\+Button\+Press\+Point}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ up\ =\ playerInput.actions[\textcolor{stringliteral}{"{}up"{}}];}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (up.IsPressed())}
+\DoxyCodeLine{\ \ \ transform.Translate(0,\ 10\ *\ Time.deltaTime,\ 0);}
+
+\end{DoxyCode}
+ 
+
+Disabled actions will always return false from this method, even if a control bound to the action is currently pressed. Also, re-\/enabling an action will not restore the state to when the action was disabled even if the control is still actuated. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}{Input\+Settings.\+default\+Button\+Press\+Point}, \doxylink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control_aee05d5892d3fdf8a59888815420c29b6}{Button\+Control.\+press\+Point}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context_a716f1c4750a935c789b470a526187185}{Callback\+Context.\+Read\+Value\+As\+Button}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a7776c9dbaab7db1f49493c6e7e8c4fbb}{Was\+Pressed\+This\+Frame}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_aa0aa02b5124108b0fd9ecc74e919ee9b}{Was\+Released\+This\+Frame}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a49b189fd9d09cc28efd17c08a17eeb0c}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!ReadValue$<$ TValue $>$@{ReadValue$<$ TValue $>$}}
+\index{ReadValue$<$ TValue $>$@{ReadValue$<$ TValue $>$}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{ReadValue$<$ TValue $>$()}{ReadValue< TValue >()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a49b189fd9d09cc28efd17c08a17eeb0c} 
+unsafe TValue Unity\+Engine.\+Input\+System.\+Input\+Action.\+Read\+Value$<$ TValue $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Read the current value of the control that is driving this action. If no bound control is actuated, returns default(\+TValue), but note that binding processors are always applied. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TValue} & Value type to read. Must match the value type of the binding/control that triggered.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The current value of the control/binding that is driving this action with all binding processors applied.
+\end{DoxyReturn}
+
+
+This method can be used as an alternative to hooking into \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a5fecf2acd129fa0922452ecf32527cdd}{started}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a11c046d8fb911d300e30e67827222c1f}{performed}, and/or \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a905374d6d7af6dc57a54acfa22018976}{canceled} and reading out the value using \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context_a01b6e7dd0b74d505ac04599db8981266}{Callback\+Context.\+Read\+Value$<$\+TValue$>$} there. Instead, this API acts more like a polling API that can be called, for example, as part of {\ttfamily Mono\+Behaviour.\+Update}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Let's\ say\ you\ have\ a\ MyControls.inputactions\ file\ with\ "{}Generate\ C\#\ Class"{}\ enabled}}
+\DoxyCodeLine{\textcolor{comment}{//\ and\ it\ has\ an\ action\ map\ called\ "{}gameplay"{}\ with\ a\ "{}move"{}\ action\ of\ type\ Vector2.}}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyBehavior\ :\ MonoBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ MyControls\ controls;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ moveSpeed\ =\ 4;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ Awake()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ controls\ =\ \textcolor{keyword}{new}\ MyControls();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ OnEnable()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ controls.gameplay.Enable();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ OnDisable()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ controls.gameplay.Disable();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{void}\ Update()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ moveVector\ =\ controls.gameplay.move.ReadValue<Vector2>()\ *\ (moveSpeed\ *\ Time.deltaTime);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//...}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+If the action has button-\/like behavior, then \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_ae559389a3ace0bdfc463ac56bf57632b}{triggered} is usually a better alternative to reading out a float and checking if it is above the button press point. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & The given {\itshape TValue}  type does not match the value type of the control or composite currently driving the action.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_ae559389a3ace0bdfc463ac56bf57632b}{triggered}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a46b48d7c58238d51f0ff1c708aa360da}{Read\+Value\+As\+Object}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context_a01b6e7dd0b74d505ac04599db8981266}{Callback\+Context.\+Read\+Value$<$\+TValue$>$}
+
+
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TValue} : {\em struct}]\end{description}
+\end{Desc}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a46b48d7c58238d51f0ff1c708aa360da}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!ReadValueAsObject@{ReadValueAsObject}}
+\index{ReadValueAsObject@{ReadValueAsObject}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{ReadValueAsObject()}{ReadValueAsObject()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a46b48d7c58238d51f0ff1c708aa360da} 
+unsafe object Unity\+Engine.\+Input\+System.\+Input\+Action.\+Read\+Value\+As\+Object (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Same as \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a49b189fd9d09cc28efd17c08a17eeb0c}{Read\+Value$<$\+TValue$>$} but read the value without having to know the value type of the action. 
+
+\begin{DoxyReturn}{Returns}
+The current value of the action or {\ttfamily null} if the action is not currently in \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Input\+Action\+Phase.\+Started} or \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Input\+Action\+Phase.\+Performed} phase.
+\end{DoxyReturn}
+
+
+This method allocates GC memory and is thus not a good choice for getting called as part of gameplay logic. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a49b189fd9d09cc28efd17c08a17eeb0c}{Read\+Value$<$\+TValue$>$}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context_ae2f23e05304a7675f7ddf246a92a2dcc}{Input\+Action.\+Callback\+Context.\+Read\+Value\+As\+Object}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a734e734be5da00df41bb4a0c02ffe7a5}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!Reset@{Reset}}
+\index{Reset@{Reset}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a734e734be5da00df41bb4a0c02ffe7a5} 
+void Unity\+Engine.\+Input\+System.\+Input\+Action.\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reset the action state to default. 
+
+This method can be used to forcibly cancel an action even while it is in progress. Note that unlike disabling an action, for example, this also effects APIs such as \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a7776c9dbaab7db1f49493c6e7e8c4fbb}{Was\+Pressed\+This\+Frame}.
+
+Note that invoking this method will not modify enabled state. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_ad3f170acb40585d0ce4f6c2243b5b213}{in\+Progress}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a86bd545c9dfe1fb0200e296c44389e57}{phase}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_abc6ff7728cbf947406b3c426cf82437f}{Enable}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a301a6f1f456e71eee25363f62861ff93}{Disable}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a30a705ae3957bdb7d38380b7528b44c9}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!ToString@{ToString}}
+\index{ToString@{ToString}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a30a705ae3957bdb7d38380b7528b44c9} 
+override string Unity\+Engine.\+Input\+System.\+Input\+Action.\+To\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return a string version of the action. Mainly useful for debugging. 
+
+\begin{DoxyReturn}{Returns}
+A string version of the action.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a1968a212ee4e88950b4f1f15043a9d42}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!WasPerformedThisFrame@{WasPerformedThisFrame}}
+\index{WasPerformedThisFrame@{WasPerformedThisFrame}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{WasPerformedThisFrame()}{WasPerformedThisFrame()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a1968a212ee4e88950b4f1f15043a9d42} 
+unsafe bool Unity\+Engine.\+Input\+System.\+Input\+Action.\+Was\+Performed\+This\+Frame (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check whether \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a86bd545c9dfe1fb0200e296c44389e57}{phase} was \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Input\+Action\+Phase.\+Performed} at any point in the current frame. 
+
+\begin{DoxyReturn}{Returns}
+True if the action performed this frame.
+\end{DoxyReturn}
+
+
+This method is different from \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a7776c9dbaab7db1f49493c6e7e8c4fbb}{Was\+Pressed\+This\+Frame} in that it depends directly on the interaction(s) driving the action (including the default interaction if no specific interaction has been added to the action or binding).
+
+For example, let\textquotesingle{}s say the action is bound to the space bar and that the binding has a \doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_hold_interaction}{Interactions.\+Hold\+Interaction} assigned to it. In the frame where the space bar is pressed, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a7776c9dbaab7db1f49493c6e7e8c4fbb}{Was\+Pressed\+This\+Frame} will be true (because the button/key is now pressed) but {\ttfamily Was\+Performed\+This\+Frame} will still be false (because the hold has not been performed yet). Only after the hold time has expired will {\ttfamily Was\+Performed\+This\+Frame} be true and only in the frame where the hold performed.
+
+This is different from checking \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a86bd545c9dfe1fb0200e296c44389e57}{phase} directly as the action might have already progressed to a different phase after performing. In other words, even if an action performed in a frame, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a86bd545c9dfe1fb0200e296c44389e57}{phase} might no longer be \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Input\+Action\+Phase.\+Performed}, whereas {\ttfamily Was\+Performed\+This\+Frame} will remain true for the entirety of the frame regardless of what else the action does.
+
+Unlike \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a49b189fd9d09cc28efd17c08a17eeb0c}{Read\+Value$<$\+TValue$>$}, which will reset when the action goes back to waiting state, this property will stay true for the duration of the current frame (that is, until the next Input\+System.\+Update runs) as long as the action was triggered at least once.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ warp\ =\ playerInput.actions[\textcolor{stringliteral}{"{}Warp"{}}];}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (warp.WasPerformedThisFrame())}
+\DoxyCodeLine{\ \ \ \ InitiateWarp();}
+
+\end{DoxyCode}
+ 
+
+This method will disregard whether the action is currently enabled or disabled. It will keep returning true for the duration of the frame even if the action was subsequently disabled in the frame.
+
+The meaning of "{}frame"{} is either the current "{}dynamic"{} update ({\ttfamily Mono\+Behaviour.\+Update}) or the current fixed update ({\ttfamily Mono\+Behaviour.\+Fixed\+Update}) depending on the value of the \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_ab7d15182096158aaf407f0b7e9aed8ae}{Input\+Settings.\+update\+Mode} setting. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a7776c9dbaab7db1f49493c6e7e8c4fbb}{Was\+Pressed\+This\+Frame}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a86bd545c9dfe1fb0200e296c44389e57}{phase}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a7776c9dbaab7db1f49493c6e7e8c4fbb}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!WasPressedThisFrame@{WasPressedThisFrame}}
+\index{WasPressedThisFrame@{WasPressedThisFrame}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{WasPressedThisFrame()}{WasPressedThisFrame()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a7776c9dbaab7db1f49493c6e7e8c4fbb} 
+unsafe bool Unity\+Engine.\+Input\+System.\+Input\+Action.\+Was\+Pressed\+This\+Frame (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true if the action\textquotesingle{}s value crossed the press threshold (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}{Input\+Settings.\+default\+Button\+Press\+Point}) at any point in the frame. 
+
+\begin{DoxyReturn}{Returns}
+True if the action was pressed this frame.
+\end{DoxyReturn}
+
+
+This method is different from \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a1968a212ee4e88950b4f1f15043a9d42}{Was\+Performed\+This\+Frame} in that it is not bound to \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a86bd545c9dfe1fb0200e296c44389e57}{phase}. Instead, if the action\textquotesingle{}s level of actuation (that is, the level of magnitude -- see \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Input\+Control.\+Evaluate\+Magnitude()} -- of the control(s) bound to the action) crossed the press threshold (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}{Input\+Settings.\+default\+Button\+Press\+Point}) at any point in the frame, this method will return true. It will do so even if there is an interaction on the action that has not yet performed the action in response to the press.
+
+This method works with any \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a4034bbebc91379913a9da5600a8a3491}{type} of action, not just buttons.
+
+Also note that because this operates on the results of \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Input\+Control.\+Evaluate\+Magnitude()}, it works with many kind of controls, not just buttons. For example, if an action is bound to a Stick\+Control, the control will be considered "{}pressed"{} once the magnitude of the Vector2 of the control has crossed the press threshold.
+
+Finally, note that custom button press points of controls (see \doxylink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control_aee05d5892d3fdf8a59888815420c29b6}{Button\+Control.\+press\+Point}) are respected and will take precedence over \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}{Input\+Settings.\+default\+Button\+Press\+Point}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ fire\ =\ playerInput.actions[\textcolor{stringliteral}{"{}fire"{}}];}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (fire.WasPressedThisFrame()\ \&amp;\&amp;\ fire.IsPressed())}
+\DoxyCodeLine{\ \ \ \ StartFiring();}
+\DoxyCodeLine{\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (fire.WasReleasedThisFrame())}
+\DoxyCodeLine{\ \ \ \ StopFiring();}
+
+\end{DoxyCode}
+ 
+
+This method will disregard whether the action is currently enabled or disabled. It will keep returning true for the duration of the frame even if the action was subsequently disabled in the frame.
+
+The meaning of "{}frame"{} is either the current "{}dynamic"{} update ({\ttfamily Mono\+Behaviour.\+Update}) or the current fixed update ({\ttfamily Mono\+Behaviour.\+Fixed\+Update}) depending on the value of the \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_ab7d15182096158aaf407f0b7e9aed8ae}{Input\+Settings.\+update\+Mode} setting. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a4ba2a7836129d30d4996714c3e3f871d}{Is\+Pressed}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_aa0aa02b5124108b0fd9ecc74e919ee9b}{Was\+Released\+This\+Frame}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context_a716f1c4750a935c789b470a526187185}{Callback\+Context.\+Read\+Value\+As\+Button}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a1968a212ee4e88950b4f1f15043a9d42}{Was\+Performed\+This\+Frame}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_aa0aa02b5124108b0fd9ecc74e919ee9b}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!WasReleasedThisFrame@{WasReleasedThisFrame}}
+\index{WasReleasedThisFrame@{WasReleasedThisFrame}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{WasReleasedThisFrame()}{WasReleasedThisFrame()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_aa0aa02b5124108b0fd9ecc74e919ee9b} 
+unsafe bool Unity\+Engine.\+Input\+System.\+Input\+Action.\+Was\+Released\+This\+Frame (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true if the action\textquotesingle{}s value crossed the release threshold (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_af3a44c9e9f7da82060f87892168e73bd}{Input\+Settings.\+button\+Release\+Threshold}) at any point in the frame after being in pressed state. 
+
+\begin{DoxyReturn}{Returns}
+True if the action was released this frame.
+\end{DoxyReturn}
+
+
+This method works with any \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a4034bbebc91379913a9da5600a8a3491}{type} of action, not just buttons.
+
+Also note that because this operates on the results of \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Input\+Control.\+Evaluate\+Magnitude()}, it works with many kind of controls, not just buttons. For example, if an action is bound to a Stick\+Control, the control will be considered "{}pressed"{} once the magnitude of the Vector2 of the control has crossed the press threshold.
+
+Finally, note that custom button press points of controls (see \doxylink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control_aee05d5892d3fdf8a59888815420c29b6}{Button\+Control.\+press\+Point}) are respected and will take precedence over \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}{Input\+Settings.\+default\+Button\+Press\+Point}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ fire\ =\ playerInput.actions[\textcolor{stringliteral}{"{}fire"{}}];}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (fire.WasPressedThisFrame()\ \&amp;\&amp;\ fire.IsPressed())}
+\DoxyCodeLine{\ \ \ \ StartFiring();}
+\DoxyCodeLine{\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (fire.WasReleasedThisFrame())}
+\DoxyCodeLine{\ \ \ \ StopFiring();}
+
+\end{DoxyCode}
+ 
+
+This method will disregard whether the action is currently enabled or disabled. It will keep returning true for the duration of the frame even if the action was subsequently disabled in the frame.
+
+The meaning of "{}frame"{} is either the current "{}dynamic"{} update ({\ttfamily Mono\+Behaviour.\+Update}) or the current fixed update ({\ttfamily Mono\+Behaviour.\+Fixed\+Update}) depending on the value of the \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_ab7d15182096158aaf407f0b7e9aed8ae}{Input\+Settings.\+update\+Mode} setting. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a4ba2a7836129d30d4996714c3e3f871d}{Is\+Pressed}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a7776c9dbaab7db1f49493c6e7e8c4fbb}{Was\+Pressed\+This\+Frame}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context_a716f1c4750a935c789b470a526187185}{Callback\+Context.\+Read\+Value\+As\+Button}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a1968a212ee4e88950b4f1f15043a9d42}{Was\+Performed\+This\+Frame}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_ae6817835d32520aa1433e7119c6e30e8}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!actionMap@{actionMap}}
+\index{actionMap@{actionMap}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{actionMap}{actionMap}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_ae6817835d32520aa1433e7119c6e30e8} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map}} Unity\+Engine.\+Input\+System.\+Input\+Action.\+action\+Map\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The map the action belongs to. 
+
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map} that the action belongs to or null.
+
+If the action is a loose action created in code, this will be {\ttfamily null}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ action1\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_ae837b4878d72f5557c81534ce5a50497}{InputAction}}();\ \textcolor{comment}{//\ action1.actionMap\ will\ be\ null}}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_ae6817835d32520aa1433e7119c6e30e8}{actionMap}}\ =\ \textcolor{keyword}{new}\ InputActionMap();}
+\DoxyCodeLine{var\ action2\ =\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_ae6817835d32520aa1433e7119c6e30e8}{actionMap}}.AddAction(\textcolor{stringliteral}{"{}action"{}});\ \textcolor{comment}{//\ action2.actionMap\ will\ point\ to\ actionMap}}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+Input\+Action\+Setup\+Extensions.\+Add\+Action
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a472cf9d7e67051b780bca5df73c7bb84}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!activeControl@{activeControl}}
+\index{activeControl@{activeControl}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{activeControl}{activeControl}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a472cf9d7e67051b780bca5df73c7bb84} 
+unsafe \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} Unity\+Engine.\+Input\+System.\+Input\+Action.\+active\+Control\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The currently active control that is driving the action. Null while the action is in waiting (\doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a5706de961fb376d701be6e7762d8b09c}{Input\+Action\+Phase.\+Waiting}) or canceled (\doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a0e22fe7d45f8e5632a4abf369b24e29c}{Input\+Action\+Phase.\+Canceled}) state. Otherwise the control that last had activity on it which wasn\textquotesingle{}t ignored. 
+
+Note that the control\textquotesingle{}s value does not necessarily correspond to the value of the action (\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a49b189fd9d09cc28efd17c08a17eeb0c}{Read\+Value$<$\+TValue$>$}) as the control may be part of a composite. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context_a9abc32bc61f1db0cd1ba4eb5b07202ca}{Callback\+Context.\+control}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a41caa3a44bc876781c5b1bcb04622cd2}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!bindingMask@{bindingMask}}
+\index{bindingMask@{bindingMask}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{bindingMask}{bindingMask}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a41caa3a44bc876781c5b1bcb04622cd2} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}}? Unity\+Engine.\+Input\+System.\+Input\+Action.\+binding\+Mask\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+An optional mask that determines which bindings of the action to enable and which to ignore. 
+
+Optional mask that determines which bindings on the action to enable.
+
+Binding masks can be applied at three different levels\+: for an entire asset through \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset_a7cf65e9b19155bd044d9d06250e61225}{Input\+Action\+Asset.\+binding\+Mask}, for a specific map through \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map_af68ee392460d425649d96935d8f7345d}{Input\+Action\+Map.\+binding\+Mask}, and for single actions through this property. By default, none of the masks will be set (i.\+e. they will be {\ttfamily null}).
+
+When an action is enabled, all the binding masks that apply to it are taken into account. Specifically, this means that any given binding on the action will be enabled only if it matches the mask applied to the asset, the mask applied to the map that contains the action, and the mask applied to the action itself. All the masks are individually optional.
+
+Masks are matched against bindings using \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_aa69fd73f446257c84723c95ad8fbcbe8}{Input\+Binding.\+Matches}.
+
+Note that if you modify the masks applicable to an action while it is enabled, the action\textquotesingle{}s \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a8e3f5d3329be13ca8474314137045af4}{controls} will get updated immediately to respect the mask. To avoid repeated binding resolution, it is most efficient to apply binding masks before enabling actions.
+
+Binding masks are non-\/destructive. All the bindings on the action are left in place. Setting a mask will not affect the value of the \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a44fdaf3ff9ffc22609a9df942372d9bb}{bindings} property.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ a\ free-\/standing\ action\ with\ two\ bindings,\ one\ in\ the}}
+\DoxyCodeLine{\textcolor{comment}{//\ "{}Keyboard"{}\ group\ and\ one\ in\ the\ "{}Gamepad"{}\ group.}}
+\DoxyCodeLine{var\ action\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_ae837b4878d72f5557c81534ce5a50497}{InputAction}}();}
+\DoxyCodeLine{action.AddBinding(\textcolor{stringliteral}{"{}<Gamepad>/buttonSouth"{}},\ groups:\ \textcolor{stringliteral}{"{}Gamepad"{}});}
+\DoxyCodeLine{action.AddBinding(\textcolor{stringliteral}{"{}<Keyboard>/space"{}},\ groups:\ \textcolor{stringliteral}{"{}Keyboard"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ By\ default,\ all\ bindings\ will\ be\ enabled.\ This\ means\ if\ both}}
+\DoxyCodeLine{\textcolor{comment}{//\ a\ keyboard\ and\ gamepad\ (or\ several\ of\ them)\ is\ present,\ the\ action}}
+\DoxyCodeLine{\textcolor{comment}{//\ will\ respond\ to\ input\ from\ all\ of\ them.}}
+\DoxyCodeLine{action.Enable();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ With\ a\ binding\ mask\ we\ can\ restrict\ the\ action\ to\ just\ specific}}
+\DoxyCodeLine{\textcolor{comment}{//\ bindings.\ For\ example,\ to\ only\ enable\ the\ gamepad\ binding:}}
+\DoxyCodeLine{action.bindingMask\ =\ InputBinding.MaskByGroup(\textcolor{stringliteral}{"{}Gamepad"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Note\ that\ we\ can\ mask\ by\ more\ than\ just\ by\ group.\ Masking\ by\ path}}
+\DoxyCodeLine{\textcolor{comment}{//\ or\ by\ action\ as\ well\ as\ a\ combination\ of\ these\ is\ also\ possible.}}
+\DoxyCodeLine{\textcolor{comment}{//\ We\ could,\ for\ example,\ mask\ for\ just\ a\ specific\ binding\ path:}}
+\DoxyCodeLine{action.bindingMask\ =\ \textcolor{keyword}{new}\ InputBinding()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Select\ the\ keyboard\ binding\ based\ on\ its\ specific\ path.}}
+\DoxyCodeLine{\ \ \ \ path\ =\ \textcolor{stringliteral}{"{}<Keyboard>/space"{}}}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+Input\+Binding.\+Mask\+By\+Group, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map_af68ee392460d425649d96935d8f7345d}{Input\+Action\+Map.\+binding\+Mask}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset_a7cf65e9b19155bd044d9d06250e61225}{Input\+Action\+Asset.\+binding\+Mask}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a44fdaf3ff9ffc22609a9df942372d9bb}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!bindings@{bindings}}
+\index{bindings@{bindings}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{bindings}{bindings}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a44fdaf3ff9ffc22609a9df942372d9bb} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}}$>$ Unity\+Engine.\+Input\+System.\+Input\+Action.\+bindings\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The list of bindings associated with the action. 
+
+List of bindings for the action.
+
+This list contains all bindings from \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map_ae98277c3697a798a28f8b16e187217ff}{Input\+Action\+Map.\+bindings} of the action\textquotesingle{}s \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_ae6817835d32520aa1433e7119c6e30e8}{action\+Map} that reference the action through their \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a83005305665b72fa6dadd5a105613495}{Input\+Binding.\+action} property.
+
+Note that on the first call, the list may have to be extracted from the action map first which may require allocating GC memory. However, once initialized, no further GC allocation hits should occur. If the binding setup on the map is changed, re-\/initialization may be required. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map_ae98277c3697a798a28f8b16e187217ff}{Input\+Action\+Map.\+bindings}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a8e3f5d3329be13ca8474314137045af4}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!controls@{controls}}
+\index{controls@{controls}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{controls}{controls}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a8e3f5d3329be13ca8474314137045af4} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}$>$ Unity\+Engine.\+Input\+System.\+Input\+Action.\+controls\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The set of controls to which the action\textquotesingle{}s \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a44fdaf3ff9ffc22609a9df942372d9bb}{bindings} resolve. 
+
+\doxylink{namespace_unity_engine_1_1_input_system_1_1_controls}{Controls} resolved from the action\textquotesingle{}s \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a44fdaf3ff9ffc22609a9df942372d9bb}{bindings}.
+
+This property can be queried whether the action is enabled or not and will return the set of controls that match the action\textquotesingle{}s bindings according to the current setup of binding masks (\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a41caa3a44bc876781c5b1bcb04622cd2}{binding\+Mask}) and device restrictions (\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map_ab32ae5eb39f8c39dcebccb5cc1bb99e9}{Input\+Action\+Map.\+devices}).
+
+Note that internally, controls are not stored on a per-\/action basis. This means that on the first read of this property, the list of controls for just the action may have to be extracted which in turn may allocate GC memory. After the first read, no further GC allocations should occur except if the set of controls is changed (e.\+g. by changing the binding mask or by adding/removing devices to/from the system).
+
+If the property is queried when the action has not been enabled yet, the system will first resolve controls on the action (and for all actions in the map and/or the asset). See \href{../manual/ActionBindings.html\#binding-resolution}{\texttt{ Binding Resolution}} in the manual for details.
+
+To map a control in this array to an index into \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a44fdaf3ff9ffc22609a9df942372d9bb}{bindings}, use Input\+Action\+Rebinding\+Extensions.\+Get\+Binding\+Index\+For\+Control.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Map\ control\ list\ to\ binding\ indices.}}
+\DoxyCodeLine{var\ bindingIndices\ =\ myAction.controls.Select(c\ =>\ myAction.GetBindingIndexForControl(c));}
+
+\end{DoxyCode}
+ 
+
+Note that this array will not contain the same control multiple times even if more than one binding on an action references the same control.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ action1\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_ae837b4878d72f5557c81534ce5a50497}{InputAction}}();}
+\DoxyCodeLine{action1.AddBinding(\textcolor{stringliteral}{"{}<Gamepad>/buttonSouth"{}});}
+\DoxyCodeLine{action1.AddBinding(\textcolor{stringliteral}{"{}<Gamepad>/buttonSouth"{}});\ \textcolor{comment}{//\ This\ binding\ will\ be\ ignored.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Contains\ only\ one\ instance\ of\ buttonSouth\ which\ is\ associated}}
+\DoxyCodeLine{\textcolor{comment}{//\ with\ the\ first\ binding\ (at\ index\ \#0).}}
+\DoxyCodeLine{var\ action1Controls\ =\ action1.controls;}
+\DoxyCodeLine{}
+\DoxyCodeLine{var\ action2\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_ae837b4878d72f5557c81534ce5a50497}{InputAction}}();}
+\DoxyCodeLine{action2.AddBinding(\textcolor{stringliteral}{"{}<Gamepad>/buttonSouth"{}});}
+\DoxyCodeLine{\textcolor{comment}{//\ Add\ a\ binding\ that\ implicitly\ matches\ the\ first\ binding,\ too.\ When\ binding\ resolution}}
+\DoxyCodeLine{\textcolor{comment}{//\ happens,\ this\ binding\ will\ only\ receive\ buttonNorth,\ buttonWest,\ and\ buttonEast,\ but\ not}}
+\DoxyCodeLine{\textcolor{comment}{//\ buttonSouth\ as\ the\ first\ binding\ already\ received\ that\ control.}}
+\DoxyCodeLine{action2.AddBinding(\textcolor{stringliteral}{"{}<Gamepad>/button*"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Contains\ only\ all\ four\ face\ buttons\ (buttonSouth,\ buttonNorth,\ buttonEast,\ buttonWest)}}
+\DoxyCodeLine{\textcolor{comment}{//\ but\ buttonSouth\ is\ associated\ with\ the\ first\ button\ and\ only\ buttonNorth,\ buttonEast,}}
+\DoxyCodeLine{\textcolor{comment}{//\ and\ buttonWest\ are\ associated\ with\ the\ second\ binding.}}
+\DoxyCodeLine{var\ action2Controls\ =\ action2.controls;}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+Input\+Action\+Rebinding\+Extensions.\+Get\+Binding\+Index\+For\+Control, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a44fdaf3ff9ffc22609a9df942372d9bb}{bindings}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a10b7ab479ef1419726f2d05927fd1b70}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!enabled@{enabled}}
+\index{enabled@{enabled}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{enabled}{enabled}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a10b7ab479ef1419726f2d05927fd1b70} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Action.\+enabled\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Whether the action is currently enabled, i.\+e. responds to input, or not. 
+
+True if the action is currently enabled.
+
+An action is enabled by either calling \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_abc6ff7728cbf947406b3c426cf82437f}{Enable} on it directly or by calling \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map_a1070fcb5a4631ca6c0212fb28a19644f}{Input\+Action\+Map.\+Enable} on the \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map} containing the action. When enabled, an action will listen for changes on the controls it is bound to and trigger callbacks such as \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a5fecf2acd129fa0922452ecf32527cdd}{started}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a11c046d8fb911d300e30e67827222c1f}{performed}, and \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a905374d6d7af6dc57a54acfa22018976}{canceled} in response. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_abc6ff7728cbf947406b3c426cf82437f}{Enable}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a301a6f1f456e71eee25363f62861ff93}{Disable}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map_a1070fcb5a4631ca6c0212fb28a19644f}{Input\+Action\+Map.\+Enable}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map_a215d9741eaf7205b3ad4ac865efae047}{Input\+Action\+Map.\+Disable}, Input\+System.\+List\+Enabled\+Actions()
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_ab0330ac2a9ede3454cb0c092ac0a7bcb}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!expectedControlType@{expectedControlType}}
+\index{expectedControlType@{expectedControlType}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{expectedControlType}{expectedControlType}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_ab0330ac2a9ede3454cb0c092ac0a7bcb} 
+string Unity\+Engine.\+Input\+System.\+Input\+Action.\+expected\+Control\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Name of control layout expected for controls bound to this action. 
+
+This is optional and is null by default.
+
+Constraining an action to a particular control layout allows determine the value type and expected input behavior of an action without being reliant on any particular binding. \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a20c55a69282fe033ba0ca4ce706e4a68}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!id@{id}}
+\index{id@{id}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a20c55a69282fe033ba0ca4ce706e4a68} 
+Guid Unity\+Engine.\+Input\+System.\+Input\+Action.\+id\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+A stable, unique identifier for the action. 
+
+Unique ID of the action.
+
+This can be used instead of the name to refer to the action. Doing so allows referring to the action such that renaming the action does not break references. \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_ad3f170acb40585d0ce4f6c2243b5b213}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!inProgress@{inProgress}}
+\index{inProgress@{inProgress}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{inProgress}{inProgress}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_ad3f170acb40585d0ce4f6c2243b5b213} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Action.\+in\+Progress\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+True if the action is currently in \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Input\+Action\+Phase.\+Started} or \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Input\+Action\+Phase.\+Performed} phase. False in all other cases. 
+
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a86bd545c9dfe1fb0200e296c44389e57}{phase} \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a625a03ad3baab2c78b68cc782ca25458}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!interactions@{interactions}}
+\index{interactions@{interactions}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{interactions}{interactions}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a625a03ad3baab2c78b68cc782ca25458} 
+string Unity\+Engine.\+Input\+System.\+Input\+Action.\+interactions\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+\doxylink{namespace_unity_engine_1_1_input_system_1_1_interactions}{Interactions} applied to every binding on the action. 
+
+\doxylink{namespace_unity_engine_1_1_input_system_1_1_interactions}{Interactions} added to all bindings on the action.
+
+This property is equivalent to appending the same string to the \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a402931846d56ed2e96ed129e43c687aa}{Input\+Binding.\+interactions} field of every binding that targets the action. It is thus simply a means of avoiding the need configure the same interaction the same way on every binding in case it uniformly applies to all of them.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ action\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_ae837b4878d72f5557c81534ce5a50497}{InputAction}}(\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a625a03ad3baab2c78b68cc782ca25458}{interactions}}:\ \textcolor{stringliteral}{"{}press"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Both\ of\ the\ following\ bindings\ will\ implicitly\ have\ a}}
+\DoxyCodeLine{\textcolor{comment}{//\ Press\ interaction\ applied\ to\ them.}}
+\DoxyCodeLine{action.AddBinding(\textcolor{stringliteral}{"{}<Gamepad>/buttonSouth"{}});}
+\DoxyCodeLine{action.AddBinding(\textcolor{stringliteral}{"{}<Joystick>/trigger"{}});}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a402931846d56ed2e96ed129e43c687aa}{Input\+Binding.\+interactions}, \doxylink{interface_unity_engine_1_1_input_system_1_1_i_input_interaction}{IInput\+Interaction}, Input\+System.\+Register\+Interaction$<$\+T$>$
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a18e68eda84c66e46fc7908fe67b8ffce}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!name@{name}}
+\index{name@{name}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a18e68eda84c66e46fc7908fe67b8ffce} 
+string Unity\+Engine.\+Input\+System.\+Input\+Action.\+name\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Name of the action. 
+
+Plain-\/text name of the action.
+
+Can be null for anonymous actions created in code.
+
+If the action is part of an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map}, it will have a name and the name will be unique in the map. The name is just the name of the action alone, not a "{}map\+Name/action\+Name"{} combination.
+
+The name should not contain slashes or dots but can contain spaces and other punctuation.
+
+An action can be renamed after creation using Input\+Action\+Setup\+Extensions.\+Rename.. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map_af63d7ef83f7b7841fe6456da0e4e89f2}{Input\+Action\+Map.\+Find\+Action(string,bool)}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a86bd545c9dfe1fb0200e296c44389e57}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!phase@{phase}}
+\index{phase@{phase}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{phase}{phase}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a86bd545c9dfe1fb0200e296c44389e57} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182}{Input\+Action\+Phase}} Unity\+Engine.\+Input\+System.\+Input\+Action.\+phase\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The current phase of the action. 
+
+When listening for control input and when responding to control value changes, actions will go through several possible phases.
+
+In general, when an action starts receiving input, it will go to \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Input\+Action\+Phase.\+Started} and when it stops receiving input, it will go to \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a0e22fe7d45f8e5632a4abf369b24e29c}{Input\+Action\+Phase.\+Canceled}. When \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Input\+Action\+Phase.\+Performed} is used depends primarily on the type of action. \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Input\+Action\+Type.\+Value} will trigger \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Input\+Action\+Phase.\+Performed} whenever the value of the control changes (including the first time; i.\+e. it will first trigger \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Input\+Action\+Phase.\+Started} and then \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Input\+Action\+Phase.\+Performed} right after) whereas \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}{Input\+Action\+Type.\+Button} will trigger \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Input\+Action\+Phase.\+Performed} as soon as the button press threshold (\doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}{Input\+Settings.\+default\+Button\+Press\+Point}) has been crossed.
+
+Note that both interactions and the action \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a4034bbebc91379913a9da5600a8a3491}{type} can affect the phases that an action goes through. \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94bae1ff6a7360e99cb46db6bb5d3ff8e2eb}{Input\+Action\+Type.\+Pass\+Through} actions will only ever use \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Input\+Action\+Phase.\+Performed} and not go to \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Input\+Action\+Phase.\+Started} or \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a0e22fe7d45f8e5632a4abf369b24e29c}{Input\+Action\+Phase.\+Canceled} (as pass-\/through actions do not follow the start-\/performed-\/canceled model in general). Also, interactions can choose their
+
+While an action is disabled, its phase is \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182ab9f5c797ebbf55adccdd8539a65a0241}{Input\+Action\+Phase.\+Disabled}. \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a02b761c2f6c76c80c3c4b1cd396df3c4}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!processors@{processors}}
+\index{processors@{processors}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{processors}{processors}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a02b761c2f6c76c80c3c4b1cd396df3c4} 
+string Unity\+Engine.\+Input\+System.\+Input\+Action.\+processors\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+\doxylink{namespace_unity_engine_1_1_input_system_1_1_processors}{Processors} applied to every binding on the action. 
+
+\doxylink{namespace_unity_engine_1_1_input_system_1_1_processors}{Processors} added to all bindings on the action.
+
+This property is equivalent to appending the same string to the \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab152467c6dd260ea1195ccbc9789a76b}{Input\+Binding.\+processors} field of every binding that targets the action. It is thus simply a means of avoiding the need configure the same processor the same way on every binding in case it uniformly applies to all of them.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ action\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_ae837b4878d72f5557c81534ce5a50497}{InputAction}}(\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_a02b761c2f6c76c80c3c4b1cd396df3c4}{processors}}:\ \textcolor{stringliteral}{"{}scaleVector2(x=2,\ y=2)"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Both\ of\ the\ following\ bindings\ will\ implicitly\ have\ a}}
+\DoxyCodeLine{\textcolor{comment}{//\ ScaleVector2Processor\ applied\ to\ them.}}
+\DoxyCodeLine{action.AddBinding(\textcolor{stringliteral}{"{}<Gamepad>/leftStick"{}});}
+\DoxyCodeLine{action.AddBinding(\textcolor{stringliteral}{"{}<Joystick>/stick"{}});}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab152467c6dd260ea1195ccbc9789a76b}{Input\+Binding.\+processors}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_processor}{Input\+Processor}, Input\+System.\+Register\+Processor$<$\+T$>$
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_ae559389a3ace0bdfc463ac56bf57632b}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!triggered@{triggered}}
+\index{triggered@{triggered}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{triggered}{triggered}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_ae559389a3ace0bdfc463ac56bf57632b} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Action.\+triggered\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Equivalent to \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a1968a212ee4e88950b4f1f15043a9d42}{Was\+Performed\+This\+Frame}. 
+
+TODO\+: Obsolete and drop this when we can break API
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a1968a212ee4e88950b4f1f15043a9d42}{Was\+Performed\+This\+Frame}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a4034bbebc91379913a9da5600a8a3491}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!type@{type}}
+\index{type@{type}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a4034bbebc91379913a9da5600a8a3491} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94b}{Input\+Action\+Type}} Unity\+Engine.\+Input\+System.\+Input\+Action.\+type\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Behavior type of the action. 
+
+General behavior type of the action.
+
+Determines how the action gets triggered in response to control value changes.
+
+For details about how the action type affects an action, see \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94b}{Input\+Action\+Type}. \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a2978b2fcba4145ce4213df097c298a98}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!wantsInitialStateCheck@{wantsInitialStateCheck}}
+\index{wantsInitialStateCheck@{wantsInitialStateCheck}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{wantsInitialStateCheck}{wantsInitialStateCheck}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a2978b2fcba4145ce4213df097c298a98} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Action.\+wants\+Initial\+State\+Check\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether the action wants a state check on its bound controls as soon as it is enabled. This is always true for \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Input\+Action\+Type.\+Value} actions but can optionally be enabled for \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}{Input\+Action\+Type.\+Button} or \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94bae1ff6a7360e99cb46db6bb5d3ff8e2eb}{Input\+Action\+Type.\+Pass\+Through} actions. 
+
+Usually, when an action is \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a10b7ab479ef1419726f2d05927fd1b70}{enabled} (e.\+g. via \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_abc6ff7728cbf947406b3c426cf82437f}{Enable}), it will start listening for input and then trigger once the first input arrives. However, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a8e3f5d3329be13ca8474314137045af4}{controls} bound to an action may already be actuated when an action is enabled. For example, if a "{}jump"{} action is bound to \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a29e179bc8d284cf71be6847ca6ae77f3}{Keyboard.\+space\+Key}, the space bar may already be pressed when the jump action is enabled.
+
+\doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Input\+Action\+Type.\+Value} actions handle this differently by immediately performing an "{}initial state check"{} in the next input update (see Input\+System.\+Update) after being enabled. If any of the bound controls is already actuated, the action will trigger right away -- even with no change in state on the controls.
+
+This same behavior can be enabled explicitly for \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}{Input\+Action\+Type.\+Button} and \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94bae1ff6a7360e99cb46db6bb5d3ff8e2eb}{Input\+Action\+Type.\+Pass\+Through} actions using this property. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_abc6ff7728cbf947406b3c426cf82437f}{Enable}, \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Input\+Action\+Type.\+Value}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Event Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a905374d6d7af6dc57a54acfa22018976}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!canceled@{canceled}}
+\index{canceled@{canceled}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{canceled}{canceled}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a905374d6d7af6dc57a54acfa22018976} 
+Action$<$\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context}{Callback\+Context}}$>$ Unity\+Engine.\+Input\+System.\+Input\+Action.\+canceled\hspace{0.3cm}{\ttfamily [add]}, {\ttfamily [remove]}}
+
+
+
+Event that is triggered when the action has been \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a5fecf2acd129fa0922452ecf32527cdd}{started} but then canceled before being fully \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a11c046d8fb911d300e30e67827222c1f}{performed}. 
+
+See \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a86bd545c9dfe1fb0200e296c44389e57}{phase} for details of how an action progresses through phases and triggers this callback. 
+
+\doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a0e22fe7d45f8e5632a4abf369b24e29c}{Input\+Action\+Phase.\+Canceled} \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a11c046d8fb911d300e30e67827222c1f}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!performed@{performed}}
+\index{performed@{performed}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{performed}{performed}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a11c046d8fb911d300e30e67827222c1f} 
+Action$<$\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context}{Callback\+Context}}$>$ Unity\+Engine.\+Input\+System.\+Input\+Action.\+performed\hspace{0.3cm}{\ttfamily [add]}, {\ttfamily [remove]}}
+
+
+
+Event that is triggered when the action has been fully performed. 
+
+See \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a86bd545c9dfe1fb0200e296c44389e57}{phase} for details of how an action progresses through phases and triggers this callback. 
+
+\doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Input\+Action\+Phase.\+Performed} \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_action_a5fecf2acd129fa0922452ecf32527cdd}\index{UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}!started@{started}}
+\index{started@{started}!UnityEngine.InputSystem.InputAction@{UnityEngine.InputSystem.InputAction}}
+\doxysubsubsection{\texorpdfstring{started}{started}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_action_a5fecf2acd129fa0922452ecf32527cdd} 
+Action$<$\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context}{Callback\+Context}}$>$ Unity\+Engine.\+Input\+System.\+Input\+Action.\+started\hspace{0.3cm}{\ttfamily [add]}, {\ttfamily [remove]}}
+
+
+
+Event that is triggered when the action has been started. 
+
+See \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a86bd545c9dfe1fb0200e296c44389e57}{phase} for details of how an action progresses through phases and triggers this callback. 
+
+\doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Input\+Action\+Phase.\+Started} 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Actions/Input\+Action.\+cs\end{DoxyCompactItemize}

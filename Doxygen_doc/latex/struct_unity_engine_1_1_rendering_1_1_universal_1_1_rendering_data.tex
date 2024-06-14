@@ -1,0 +1,47 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Universal.\+Rendering\+Data Struct Reference}
+\hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}\index{UnityEngine.Rendering.Universal.RenderingData@{UnityEngine.Rendering.Universal.RenderingData}}
+
+
+Struct that flattens several rendering settings used to render a camera stack. URP builds the {\ttfamily \doxylink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}} settings from several places, including the pipeline asset, camera and light settings. The settings also might vary on different platforms and depending on if Adaptive Performance is used.  
+
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data_aeb5eeeeb7c7fbb42f9ff630f7c412d14}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data_aeb5eeeeb7c7fbb42f9ff630f7c412d14} 
+Culling\+Results {\bfseries cull\+Results}
+\begin{DoxyCompactList}\small\item\em Returns culling results that exposes handles to visible objects, lights and probes. You can use this to draw objects with {\ttfamily Scriptable\+Render\+Context.\+Draw\+Renderers} Culling\+Results \begin{DoxySeeAlso}{See also}
+Scriptable\+Render\+Context
+
+
+\end{DoxySeeAlso}
+\end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data_add930342e9045a6c013c0f7b4622f6f5}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data_add930342e9045a6c013c0f7b4622f6f5} 
+\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_camera_data}{Camera\+Data}} {\bfseries camera\+Data}
+\begin{DoxyCompactList}\small\item\em Holds several rendering settings related to camera. \doxylink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_camera_data}{Camera\+Data} \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data_ae61f27b2dc6021fe5b577b3c01621799}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data_ae61f27b2dc6021fe5b577b3c01621799} 
+\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_light_data}{Light\+Data}} {\bfseries light\+Data}
+\begin{DoxyCompactList}\small\item\em Holds several rendering settings related to lights. \doxylink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_light_data}{Light\+Data} \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data_ac1946ceee4c92918bd70804e1fa756c1}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data_ac1946ceee4c92918bd70804e1fa756c1} 
+\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data}{Shadow\+Data}} {\bfseries shadow\+Data}
+\begin{DoxyCompactList}\small\item\em Holds several rendering settings related to shadows. \doxylink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data}{Shadow\+Data} \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data_a9985df88d4f5c497da9db454bfdfefee}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data_a9985df88d4f5c497da9db454bfdfefee} 
+\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_post_processing_data}{Post\+Processing\+Data}} {\bfseries post\+Processing\+Data}
+\begin{DoxyCompactList}\small\item\em Holds several rendering settings and resources related to the integrated post-\/processing stack. \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_post_process_data}{Post\+Process\+Data} \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data_af987d2feef029f86d4fe0f95155cf254}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data_af987d2feef029f86d4fe0f95155cf254} 
+bool {\bfseries supports\+Dynamic\+Batching}
+\begin{DoxyCompactList}\small\item\em True if the pipeline supports dynamic batching. This settings doesn\textquotesingle{}t apply when drawing shadow casters. Dynamic batching is always disabled when drawing shadow casters. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data_a5b9689eaddd355e088306295ab6dc37a}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data_a5b9689eaddd355e088306295ab6dc37a} 
+Per\+Object\+Data {\bfseries per\+Object\+Data}
+\begin{DoxyCompactList}\small\item\em Holds per-\/object data that are requested when drawing Per\+Object\+Data \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data_a640b8082caa9950037f5816583d70753}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data_a640b8082caa9950037f5816583d70753} 
+bool {\bfseries post\+Processing\+Enabled}
+\begin{DoxyCompactList}\small\item\em True if post-\/processing effect is enabled while rendering the camera stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct that flattens several rendering settings used to render a camera stack. URP builds the {\ttfamily \doxylink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}} settings from several places, including the pipeline asset, camera and light settings. The settings also might vary on different platforms and depending on if Adaptive Performance is used. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/Universal\+Render\+Pipeline\+Core.\+cs\end{DoxyCompactItemize}

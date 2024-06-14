@@ -1,0 +1,818 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Input\+Binding Struct Reference}
+\hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding}{}\label{struct_unity_engine_1_1_input_system_1_1_input_binding}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+
+
+A mapping of controls to an action.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Input\+Binding\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_unity_engine_1_1_input_system_1_1_input_binding}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ae3f338f77162ea7c99ad3b530013a00a}{Display\+String\+Options}} \{ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ae3f338f77162ea7c99ad3b530013a00aa109839afec99463adc55babd39bba590}{Dont\+Use\+Short\+Display\+Names}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0
+, \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ae3f338f77162ea7c99ad3b530013a00aad536fee98a6c24ee33fa51866d8e19fc}{Dont\+Omit\+Device}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 1
+, \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ae3f338f77162ea7c99ad3b530013a00aa6c972d4885443d24132693066c7f6d35}{Dont\+Include\+Interactions}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 2
+, \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ae3f338f77162ea7c99ad3b530013a00aa69b3c9a714eaf66b862a6bb9eadb5e18}{Ignore\+Binding\+Overrides}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 3
+ \}
+\begin{DoxyCompactList}\small\item\em A set of flags to turn individual default behaviors of \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_af5ac875c9c063f707befae95c37b3288}{Input\+Binding.\+To\+Display\+String(\+Display\+String\+Options,\+Input\+Control)} off. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab170b15dcc8fb449ddcd79b40284d2b9}{Input\+Binding}} (string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{path}}, string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a83005305665b72fa6dadd5a105613495}{action}}=null, string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89}{groups}}=null, string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab152467c6dd260ea1195ccbc9789a76b}{processors}}=null, string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a402931846d56ed2e96ed129e43c687aa}{interactions}}=null, string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a8f6d03fcaf41d8fc925928fcf5599291}{name}}=null)
+\begin{DoxyCompactList}\small\item\em Initialize a new binding. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_adfa53ef30be5bade683c6654e6624a8c}\label{struct_unity_engine_1_1_input_system_1_1_input_binding_adfa53ef30be5bade683c6654e6624a8c} 
+string {\bfseries Get\+Name\+Of\+Composite} ()
+\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_aafa796dfe0a459d76e84c51ea7a086b6}{Equals}} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}} other)
+\begin{DoxyCompactList}\small\item\em Check whether the binding is equivalent to the given binding. \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_abebee2e7aec3dbf6fd33fc24165b05ad}{Equals}} (object obj)
+\begin{DoxyCompactList}\small\item\em Compare the binding to the given object. \end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a5147d2771097a5c1989c5ceed51cb39c}{Get\+Hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Compute a hash code for the binding. \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_abb1e3ac12d0fd5cf4e143e2bb702a212}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Return a string representation of the binding useful for debugging. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_af5ac875c9c063f707befae95c37b3288}{To\+Display\+String}} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ae3f338f77162ea7c99ad3b530013a00a}{Display\+String\+Options}} options=default, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control=default)
+\begin{DoxyCompactList}\small\item\em Turn the binding into a string suitable for display in a \doxylink{namespace_unity_engine_1_1_u_i}{UI}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a52635778f41426c3434f1fe5e871bb4d}{To\+Display\+String}} (out string device\+Layout\+Name, out string control\+Path, \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ae3f338f77162ea7c99ad3b530013a00a}{Display\+String\+Options}} options=default, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control=default)
+\begin{DoxyCompactList}\small\item\em Turn the binding into a string suitable for display in a \doxylink{namespace_unity_engine_1_1_u_i}{UI}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_aa69fd73f446257c84723c95ad8fbcbe8}{Matches}} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}} binding)
+\begin{DoxyCompactList}\small\item\em Check whether {\itshape binding}  matches the mask represented by the current binding. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_a712433a9e850de8eb377f6803a7e724f}\label{struct_unity_engine_1_1_input_system_1_1_input_binding_a712433a9e850de8eb377f6803a7e724f} 
+static \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}} {\bfseries Mask\+By\+Group} (string group)
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_a6f40d90a798dc0c8a46599d7d8460721}\label{struct_unity_engine_1_1_input_system_1_1_input_binding_a6f40d90a798dc0c8a46599d7d8460721} 
+static \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}} {\bfseries Mask\+By\+Groups} (params string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89}{groups}})
+\item 
+static bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_acc74c1b7a0590d8f9b66d3cfdca44792}{operator==}} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}} left, \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}} right)
+\begin{DoxyCompactList}\small\item\em Compare the two bindings for equality. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a46de017e77272665a591b991c2e10da0}{operator!=}} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}} left, \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}} right)
+\begin{DoxyCompactList}\small\item\em Compare the two bindings for inequality. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const char \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a33e4f6dbf1be8f943137ffacc0438bed}{Separator}} = \textquotesingle{};\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Character that is used to separate elements in places such as \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89}{groups}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a402931846d56ed2e96ed129e43c687aa}{interactions}, and \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab152467c6dd260ea1195ccbc9789a76b}{processors}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a8f6d03fcaf41d8fc925928fcf5599291}{name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Optional name for the binding. \end{DoxyCompactList}\item 
+Guid \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ad9fec71b200f1f482f716d3b91afa93d}{id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Unique ID of the binding. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{path}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Control path being bound to. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a7e7675a5787c212984494451948f2a20}{override\+Path}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If the binding is overridden, this is the overriding path. Otherwise it is {\ttfamily null}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a402931846d56ed2e96ed129e43c687aa}{interactions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Optional list of interactions and their parameters. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a920a35e3ba70513dc23d6661193db961}{override\+Interactions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Interaction settings to override \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a402931846d56ed2e96ed129e43c687aa}{interactions} with. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab152467c6dd260ea1195ccbc9789a76b}{processors}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Optional list of processors to apply to control values. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_aad5f48ca482cae5254279391de1638e3}{override\+Processors}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Processor settings to override \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab152467c6dd260ea1195ccbc9789a76b}{processors} with. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89}{groups}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Optional list of binding groups that the binding belongs to. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a83005305665b72fa6dadd5a105613495}{action}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Name or ID of the action triggered by the binding. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_abef15eac2b9964f179061af2d1dec18d}{is\+Composite}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the binding is a composite. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a9ee5ad4271b040400541e1fb6f94bcbe}{is\+Part\+Of\+Composite}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the binding is a "{}part binding"{} of a composite. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_a7a17301d5ed7727d5f9027dd8ff8729f}\label{struct_unity_engine_1_1_input_system_1_1_input_binding_a7a17301d5ed7727d5f9027dd8ff8729f} 
+bool {\bfseries has\+Overrides}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if any of the override properties, that is, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a7e7675a5787c212984494451948f2a20}{override\+Path}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_aad5f48ca482cae5254279391de1638e3}{override\+Processors}, and/or \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a920a35e3ba70513dc23d6661193db961}{override\+Interactions}, are set (not {\ttfamily null}). \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a768efe0c55ec243c8d7b08449e44065c}{effective\+Path}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This is the bindings path which is effectively being used. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ad7af89963f90f5faa3dd9f0a3b6946f9}{effective\+Interactions}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This is the interaction config which is effectively being used. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a3072d3c2cbd8b1a547cd1713459473bf}{effective\+Processors}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This is the processor config which is effectively being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A mapping of controls to an action. 
+
+Each binding represents a value received from controls (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}). There are two main types of bindings\+: "{}normal"{} bindings and "{}composite"{} bindings.
+
+Normal bindings directly bind to control(s) by means of \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{path} which is a "{}control path"{} (see Input\+Control\+Path for details about how to form paths). At runtime, the path of such a binding may match none, one, or multiple controls. Each control matched by the path will feed input into the binding.
+
+Composite bindings do not bind to controls themselves. Instead, they receive their input from their "{}part"{} bindings and then return a value representing a "{}composition"{} of those inputs. What composition specifically is performed depends on the type of the composite. \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_axis_composite}{Composites.\+Axis\+Composite}, for example, will return a floating-\/point axis value computed from the state of two buttons.
+
+The action that is triggered by a binding is determined by its \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a83005305665b72fa6dadd5a105613495}{action} property. The resolution to an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action} depends on where the binding is used. For example, bindings that are part of \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map_ae98277c3697a798a28f8b16e187217ff}{Input\+Action\+Map.\+bindings} will resolve action names to actions in the same \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map}.
+
+A binding can also be used as a form of search mask or filter. In this use, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{path}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a83005305665b72fa6dadd5a105613495}{action}, and \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89}{groups} become search criteria that are matched against other bindings. See \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_aa69fd73f446257c84723c95ad8fbcbe8}{Matches(\+Input\+Binding)} for details. This use is employed in places such as Input\+Action\+Rebinding\+Extensions as well as in binding masks on actions (\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a41caa3a44bc876781c5b1bcb04622cd2}{Input\+Action.\+binding\+Mask}), action maps (\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map_af68ee392460d425649d96935d8f7345d}{Input\+Action\+Map.\+binding\+Mask}), and assets (\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset_a7cf65e9b19155bd044d9d06250e61225}{Input\+Action\+Asset.\+binding\+Mask}). 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_ae3f338f77162ea7c99ad3b530013a00a}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!DisplayStringOptions@{DisplayStringOptions}}
+\index{DisplayStringOptions@{DisplayStringOptions}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{DisplayStringOptions}{DisplayStringOptions}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_ae3f338f77162ea7c99ad3b530013a00a} 
+enum \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ae3f338f77162ea7c99ad3b530013a00a}{Unity\+Engine.\+Input\+System.\+Input\+Binding.\+Display\+String\+Options}}}
+
+
+
+A set of flags to turn individual default behaviors of \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_af5ac875c9c063f707befae95c37b3288}{Input\+Binding.\+To\+Display\+String(\+Display\+String\+Options,\+Input\+Control)} off. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DontUseShortDisplayNames@{DontUseShortDisplayNames}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!DontUseShortDisplayNames@{DontUseShortDisplayNames}}}\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_ae3f338f77162ea7c99ad3b530013a00aa109839afec99463adc55babd39bba590}\label{struct_unity_engine_1_1_input_system_1_1_input_binding_ae3f338f77162ea7c99ad3b530013a00a} 
+Dont\+Use\+Short\+Display\+Names&Do not use short names of controls as set up by \doxylink{class_unity_engine_1_1_input_system_1_1_layouts_1_1_input_control_attribute_aabae759ed7e8983b3fe297c389f4ca02}{Input\+Control\+Attribute.\+short\+Display\+Name} and the {\ttfamily "{}short\+Display\+Name"{}} property in JSON. This will, for example, not use LMB instead of "{}left Button"{} on \doxylink{class_unity_engine_1_1_input_system_1_1_mouse_a595f9a73e9c41d4565d0d0742448b09c}{Mouse.\+left\+Button}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DontOmitDevice@{DontOmitDevice}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!DontOmitDevice@{DontOmitDevice}}}\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_ae3f338f77162ea7c99ad3b530013a00aad536fee98a6c24ee33fa51866d8e19fc}\label{struct_unity_engine_1_1_input_system_1_1_input_binding_ae3f338f77162ea7c99ad3b530013a00a} 
+Dont\+Omit\+Device&By default device names are omitted from display strings. With this option, they are included instead. For example, {\ttfamily "{}\+A"{}} will be {\ttfamily "{}\+A \mbox{[}\+Gamepad\mbox{]}"{}} instead. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DontIncludeInteractions@{DontIncludeInteractions}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!DontIncludeInteractions@{DontIncludeInteractions}}}\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_ae3f338f77162ea7c99ad3b530013a00aa6c972d4885443d24132693066c7f6d35}\label{struct_unity_engine_1_1_input_system_1_1_input_binding_ae3f338f77162ea7c99ad3b530013a00a} 
+Dont\+Include\+Interactions&By default, interactions on bindings are included in the resulting display string. For example, a binding to the gamepad\textquotesingle{}s A button that has a "{}\+Hold"{} interaction on it, would come out as "{}\+Hold A"{}. This can be suppressed with this option in which case the same setup would come out as just "{}\+A"{}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IgnoreBindingOverrides@{IgnoreBindingOverrides}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!IgnoreBindingOverrides@{IgnoreBindingOverrides}}}\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_ae3f338f77162ea7c99ad3b530013a00aa69b3c9a714eaf66b862a6bb9eadb5e18}\label{struct_unity_engine_1_1_input_system_1_1_input_binding_ae3f338f77162ea7c99ad3b530013a00a} 
+Ignore\+Binding\+Overrides&By default, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a768efe0c55ec243c8d7b08449e44065c}{effective\+Path} is used for generating a display name. Using this option, the display string can be forced to \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{path} instead. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_ab170b15dcc8fb449ddcd79b40284d2b9}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!InputBinding@{InputBinding}}
+\index{InputBinding@{InputBinding}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{InputBinding()}{InputBinding()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_ab170b15dcc8fb449ddcd79b40284d2b9} 
+Unity\+Engine.\+Input\+System.\+Input\+Binding.\+Input\+Binding (\begin{DoxyParamCaption}\item[{string}]{path}{, }\item[{string}]{action}{ = {\ttfamily null}, }\item[{string}]{groups}{ = {\ttfamily null}, }\item[{string}]{processors}{ = {\ttfamily null}, }\item[{string}]{interactions}{ = {\ttfamily null}, }\item[{string}]{name}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialize a new binding. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path for the binding.\\
+\hline
+{\em action} & Action to trigger from the binding.\\
+\hline
+{\em groups} & Semicolon-\/separated list of binding \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89}{Input\+Binding.\+groups} the binding is associated with.\\
+\hline
+{\em processors} & Comma-\/separated list of \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab152467c6dd260ea1195ccbc9789a76b}{Input\+Binding.\+processors} to apply to the binding.\\
+\hline
+{\em interactions} & Comma-\/separated list of \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a402931846d56ed2e96ed129e43c687aa}{Input\+Binding.\+interactions} to apply to the binding.\\
+\hline
+{\em name} & Optional name for the binding.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_aafa796dfe0a459d76e84c51ea7a086b6}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!Equals@{Equals}}
+\index{Equals@{Equals}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_aafa796dfe0a459d76e84c51ea7a086b6} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Binding.\+Equals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}}}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check whether the binding is equivalent to the given binding. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another binding.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the two bindings are equivalent.
+\end{DoxyReturn}
+
+
+Bindings are equivalent if their \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a768efe0c55ec243c8d7b08449e44065c}{effective\+Path}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_ad7af89963f90f5faa3dd9f0a3b6946f9}{effective\+Interactions}, and \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a3072d3c2cbd8b1a547cd1713459473bf}{effective\+Processors}, plus their \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a83005305665b72fa6dadd5a105613495}{action} and \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89}{groups} properties are the same. Note that the string comparisons ignore both case and culture. \Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_abebee2e7aec3dbf6fd33fc24165b05ad}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!Equals@{Equals}}
+\index{Equals@{Equals}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_abebee2e7aec3dbf6fd33fc24165b05ad} 
+override bool Unity\+Engine.\+Input\+System.\+Input\+Binding.\+Equals (\begin{DoxyParamCaption}\item[{object}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compare the binding to the given object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & An object. May be {\ttfamily null}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the given object is an {\ttfamily \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}} that equals this one.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_aafa796dfe0a459d76e84c51ea7a086b6}{Equals(\+Input\+Binding)}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_a5147d2771097a5c1989c5ceed51cb39c}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!GetHashCode@{GetHashCode}}
+\index{GetHashCode@{GetHashCode}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{GetHashCode()}{GetHashCode()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_a5147d2771097a5c1989c5ceed51cb39c} 
+override int Unity\+Engine.\+Input\+System.\+Input\+Binding.\+Get\+Hash\+Code (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compute a hash code for the binding. 
+
+\begin{DoxyReturn}{Returns}
+A hash code.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_aa69fd73f446257c84723c95ad8fbcbe8}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!Matches@{Matches}}
+\index{Matches@{Matches}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{Matches()}{Matches()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_aa69fd73f446257c84723c95ad8fbcbe8} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Binding.\+Matches (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}}}]{binding}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check whether {\itshape binding}  matches the mask represented by the current binding. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em binding} & An input binding.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if {\itshape binding}  is matched by the mask represented by {\ttfamily this}.
+\end{DoxyReturn}
+
+
+In this method, the current binding acts as a "{}mask"{}. When used this way, only three properties of the binding are taken into account\+: \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{path}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89}{groups}, and \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a83005305665b72fa6dadd5a105613495}{action}.
+
+For each of these properties, the method checks whether they are set on the current binding and, if so, matches them against the respective property in {\itshape binding} .
+
+The way this matching works is that the value of the property in the current binding is allowed to be a semicolon-\/separated list where each element specifies one possible value that will produce a match.
+
+Note that all comparisons are case-\/insensitive.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ a\ couple\ bindings\ which\ we\ can\ test\ against.}}
+\DoxyCodeLine{var\ keyboardBinding\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab170b15dcc8fb449ddcd79b40284d2b9}{InputBinding}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{path}}\ =\ \textcolor{stringliteral}{"{}<Keyboard>/space"{}},}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89}{groups}}\ =\ \textcolor{stringliteral}{"{}Keyboard"{}},}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a83005305665b72fa6dadd5a105613495}{action}}\ =\ \textcolor{stringliteral}{"{}Fire"{}}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{var\ gamepadBinding\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab170b15dcc8fb449ddcd79b40284d2b9}{InputBinding}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{path}}\ =\ \textcolor{stringliteral}{"{}<Gamepad>/buttonSouth"{}},}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89}{groups}}\ =\ \textcolor{stringliteral}{"{}Gamepad"{}},}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a83005305665b72fa6dadd5a105613495}{action}}\ =\ \textcolor{stringliteral}{"{}Jump"{}}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{var\ touchBinding\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab170b15dcc8fb449ddcd79b40284d2b9}{InputBinding}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{path}}\ =\ \textcolor{stringliteral}{"{}<Touchscreen>/*\&zwj;/tap"{}},}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89}{groups}}\ =\ \textcolor{stringliteral}{"{}Touch"{}},}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a83005305665b72fa6dadd5a105613495}{action}}\ =\ \textcolor{stringliteral}{"{}Jump"{}}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Example\ 1:\ Match\ any\ binding\ in\ the\ "{}Keyboard"{}\ or\ "{}Gamepad"{}\ group.}}
+\DoxyCodeLine{var\ mask1\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab170b15dcc8fb449ddcd79b40284d2b9}{InputBinding}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ We\ put\ two\ elements\ in\ the\ list\ here\ and\ separate\ them\ with\ a\ semicolon.}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89}{groups}}\ =\ \textcolor{stringliteral}{"{}Keyboard;Gamepad"{}}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{mask1.Matches(keyboardBinding);\ \textcolor{comment}{//\ True}}
+\DoxyCodeLine{mask1.Matches(gamepadBinding);\ \textcolor{comment}{//\ True}}
+\DoxyCodeLine{mask1.Matches(touchBinding);\ \textcolor{comment}{//\ False}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Example\ 2:\ Match\ any\ binding\ to\ the\ "{}Jump"{}\ or\ the\ "{}Roll"{}\ action}}
+\DoxyCodeLine{\textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ (the\ latter\ we\ don't\ actually\ have\ a\ binding\ for)}}
+\DoxyCodeLine{var\ mask2\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab170b15dcc8fb449ddcd79b40284d2b9}{InputBinding}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a83005305665b72fa6dadd5a105613495}{action}}\ =\ \textcolor{stringliteral}{"{}Jump;Roll"{}}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{mask2.Matches(keyboardBinding);\ \textcolor{comment}{//\ False}}
+\DoxyCodeLine{mask2.Matches(gamepadBinding);\ \textcolor{comment}{//\ True}}
+\DoxyCodeLine{mask2.Matches(touchBinding);\ \textcolor{comment}{//\ True}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Example:\ Match\ any\ binding\ to\ the\ space\ or\ enter\ key\ in\ the}}
+\DoxyCodeLine{\textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ "{}Keyboard"{}\ group.}}
+\DoxyCodeLine{var\ mask3\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab170b15dcc8fb449ddcd79b40284d2b9}{InputBinding}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{path}}\ =\ \textcolor{stringliteral}{"{}<Keyboard>/space;<Keyboard>/enter"{}},}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89}{groups}}\ =\ \textcolor{stringliteral}{"{}Keyboard"{}}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{mask3.Matches(keyboardBinding);\ \textcolor{comment}{//\ True}}
+\DoxyCodeLine{mask3.Matches(gamepadBinding);\ \textcolor{comment}{//\ False}}
+\DoxyCodeLine{mask3.Matches(touchBinding);\ \textcolor{comment}{//\ False}}
+
+\end{DoxyCode}
+ \Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_a46de017e77272665a591b991c2e10da0}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_a46de017e77272665a591b991c2e10da0} 
+static bool Unity\+Engine.\+Input\+System.\+Input\+Binding.\+operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}}}]{left}{, }\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}}}]{right}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Compare the two bindings for inequality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & The first binding.\\
+\hline
+{\em right} & The second binding.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the two bindings are not equal.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_aafa796dfe0a459d76e84c51ea7a086b6}{Equals(\+Input\+Binding)}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_acc74c1b7a0590d8f9b66d3cfdca44792}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!operator==@{operator==}}
+\index{operator==@{operator==}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_acc74c1b7a0590d8f9b66d3cfdca44792} 
+static bool Unity\+Engine.\+Input\+System.\+Input\+Binding.\+operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}}}]{left}{, }\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}}}]{right}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Compare the two bindings for equality. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & The first binding.\\
+\hline
+{\em right} & The second binding.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the two bindings are equal.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_aafa796dfe0a459d76e84c51ea7a086b6}{Equals(\+Input\+Binding)}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_af5ac875c9c063f707befae95c37b3288}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!ToDisplayString@{ToDisplayString}}
+\index{ToDisplayString@{ToDisplayString}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{ToDisplayString()}{ToDisplayString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_af5ac875c9c063f707befae95c37b3288} 
+string Unity\+Engine.\+Input\+System.\+Input\+Binding.\+To\+Display\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ae3f338f77162ea7c99ad3b530013a00a}{Display\+String\+Options}}}]{options}{ = {\ttfamily default}, }\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}}]{control}{ = {\ttfamily default}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Turn the binding into a string suitable for display in a \doxylink{namespace_unity_engine_1_1_u_i}{UI}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em options} & Optional set of formatting options.\\
+\hline
+{\em control} & Optional control to which the binding has been resolved. If this is supplied, the resulting string can reflect things such as the current keyboard layout or hardware/platform-\/specific naming of controls (e.\+g. Xbox vs PS4 controllers as opposed to naming things generically based on the \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad}{Gamepad} layout).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string representation of the binding suitable for display in a \doxylink{namespace_unity_engine_1_1_u_i}{UI}.
+\end{DoxyReturn}
+
+
+This method works only for bindings that are not composites. If the method is called on a binding that is a composite (\doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_abef15eac2b9964f179061af2d1dec18d}{is\+Composite} is true), an empty string will be returned. To automatically handle composites, use Input\+Action\+Rebinding\+Extensions.\+Get\+Binding\+Display\+String(\+Input\+Action,\+Display\+String\+Options,string) instead.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ gamepadBinding\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab170b15dcc8fb449ddcd79b40284d2b9}{InputBinding}}(\textcolor{stringliteral}{"{}<Gamepad>/buttonSouth"{}});}
+\DoxyCodeLine{var\ mouseBinding\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab170b15dcc8fb449ddcd79b40284d2b9}{InputBinding}}(\textcolor{stringliteral}{"{}<Mouse>/leftButton"{}});}
+\DoxyCodeLine{var\ keyboardBinding\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab170b15dcc8fb449ddcd79b40284d2b9}{InputBinding}}(\textcolor{stringliteral}{"{}<Keyboard>/a"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Prints\ "{}A"{}\ except\ on\ PS4\ where\ it\ prints\ "{}Cross"{}.}}
+\DoxyCodeLine{Debug.Log(gamepadBinding.ToDisplayString());}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Prints\ "{}LMB"{}.}}
+\DoxyCodeLine{Debug.Log(mouseBinding.ToDisplayString());}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Print\ "{}Left\ Button"{}.}}
+\DoxyCodeLine{Debug.Log(mouseBinding.ToDisplayString(\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ae3f338f77162ea7c99ad3b530013a00a}{DisplayStringOptions}}.DontUseShortDisplayNames));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Prints\ the\ character\ associated\ with\ the\ "{}A"{}\ key\ on\ the\ current\ keyboard\ layout.}}
+\DoxyCodeLine{Debug.Log(keyboardBinding,\ control:\ Keyboard.current);}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+Input\+Control\+Path.\+To\+Human\+Readable\+String(string,\+Input\+Control\+Path.\+Human\+Readable\+String\+Options,\+Input\+Control), Input\+Action\+Rebinding\+Extensions.\+Get\+Binding\+Display\+String(\+Input\+Action,int,\+Input\+Binding.\+Display\+String\+Options)
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_a52635778f41426c3434f1fe5e871bb4d}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!ToDisplayString@{ToDisplayString}}
+\index{ToDisplayString@{ToDisplayString}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{ToDisplayString()}{ToDisplayString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_a52635778f41426c3434f1fe5e871bb4d} 
+string Unity\+Engine.\+Input\+System.\+Input\+Binding.\+To\+Display\+String (\begin{DoxyParamCaption}\item[{out string}]{device\+Layout\+Name}{, }\item[{out string}]{control\+Path}{, }\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ae3f338f77162ea7c99ad3b530013a00a}{Display\+String\+Options}}}]{options}{ = {\ttfamily default}, }\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}}]{control}{ = {\ttfamily default}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Turn the binding into a string suitable for display in a \doxylink{namespace_unity_engine_1_1_u_i}{UI}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em options} & Optional set of formatting options.\\
+\hline
+{\em control} & Optional control to which the binding has been resolved. If this is supplied, the resulting string can reflect things such as the current keyboard layout or hardware/platform-\/specific naming of controls (e.\+g. Xbox vs PS4 controllers as opposed to naming things generically based on the \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad}{Gamepad} layout).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string representation of the binding suitable for display in a \doxylink{namespace_unity_engine_1_1_u_i}{UI}.
+\end{DoxyReturn}
+
+
+This method is the same as \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_af5ac875c9c063f707befae95c37b3288}{To\+Display\+String(\+Display\+String\+Options,\+Input\+Control)} except that it will also return the name of the device layout and path of the control, if applicable to the binding. This is useful when needing more context on the resulting display string, for example to decide on an icon to display instead of the textual display string.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ displayString\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab170b15dcc8fb449ddcd79b40284d2b9}{InputBinding}}(\textcolor{stringliteral}{"{}<Gamepad>/dpad/up"{}})}
+\DoxyCodeLine{\ \ \ \ .ToDisplayString(out\ deviceLayout,\ out\ controlPath);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Will\ print\ "{}D-\/Pad\ Up"{}.}}
+\DoxyCodeLine{Debug.Log(displayString);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Will\ print\ "{}Gamepad"{}.}}
+\DoxyCodeLine{Debug.Log(deviceLayout);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Will\ print\ "{}dpad/up"{}.}}
+\DoxyCodeLine{Debug.Log(controlPath);}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+Input\+Control\+Path.\+To\+Human\+Readable\+String(string,out string,out string,\+Input\+Control\+Path.\+Human\+Readable\+String\+Options,\+Input\+Control), Input\+Action\+Rebinding\+Extensions.\+Get\+Binding\+Display\+String(\+Input\+Action,int,out string,out string,\+Input\+Binding.\+Display\+String\+Options)
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_abb1e3ac12d0fd5cf4e143e2bb702a212}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!ToString@{ToString}}
+\index{ToString@{ToString}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_abb1e3ac12d0fd5cf4e143e2bb702a212} 
+override string Unity\+Engine.\+Input\+System.\+Input\+Binding.\+To\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return a string representation of the binding useful for debugging. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the binding.
+\end{DoxyReturn}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ binding\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab170b15dcc8fb449ddcd79b40284d2b9}{InputBinding}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a83005305665b72fa6dadd5a105613495}{action}}\ =\ \textcolor{stringliteral}{"{}fire"{}},}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{path}}\ =\ \textcolor{stringliteral}{"{}<Gamepad>/buttonSouth"{}},}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89}{groups}}\ =\ \textcolor{stringliteral}{"{}Gamepad"{}}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Returns\ "{}fire:\ <Gamepad>/buttonSouth\ [Gamepad]"{}.}}
+\DoxyCodeLine{binding.ToString();}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_a33e4f6dbf1be8f943137ffacc0438bed}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!Separator@{Separator}}
+\index{Separator@{Separator}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{Separator}{Separator}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_a33e4f6dbf1be8f943137ffacc0438bed} 
+const char Unity\+Engine.\+Input\+System.\+Input\+Binding.\+Separator = \textquotesingle{};\textquotesingle{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Character that is used to separate elements in places such as \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89}{groups}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a402931846d56ed2e96ed129e43c687aa}{interactions}, and \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab152467c6dd260ea1195ccbc9789a76b}{processors}. 
+
+Some strings on bindings represent lists of elements. An example is \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89}{groups} which may associate a binding with several binding groups, each one delimited by the separator.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ A\ binding\ that\ belongs\ to\ the\ "{}Keyboard\&amp;Mouse"{}\ and\ "{}Gamepad"{}\ group.}}
+\DoxyCodeLine{\textcolor{keyword}{new}\ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab170b15dcc8fb449ddcd79b40284d2b9}{InputBinding}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{path}}\ =\ \textcolor{stringliteral}{"{}*\&zwj;/\{PrimaryAction\},}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ groups\ =\ "{}}Keyboard\&amp;Mouse;Gamepad\textcolor{stringliteral}{"{}}}
+\DoxyCodeLine{\textcolor{stringliteral}{\};}}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Property Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_a83005305665b72fa6dadd5a105613495}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!action@{action}}
+\index{action@{action}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{action}{action}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_a83005305665b72fa6dadd5a105613495} 
+string Unity\+Engine.\+Input\+System.\+Input\+Binding.\+action\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Name or ID of the action triggered by the binding. 
+
+This is null if the binding does not trigger an action.
+
+For Input\+Bindings that are used as masks, this can be a "{}map\+Name/action\+Name"{} combination or "{}map\+Name/\texorpdfstring{$\ast$}{*}"{} to match all actions in the given map. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a18e68eda84c66e46fc7908fe67b8ffce}{Input\+Action.\+name}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a20c55a69282fe033ba0ca4ce706e4a68}{Input\+Action.\+id}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_ad7af89963f90f5faa3dd9f0a3b6946f9}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!effectiveInteractions@{effectiveInteractions}}
+\index{effectiveInteractions@{effectiveInteractions}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{effectiveInteractions}{effectiveInteractions}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_ad7af89963f90f5faa3dd9f0a3b6946f9} 
+string Unity\+Engine.\+Input\+System.\+Input\+Binding.\+effective\+Interactions\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+This is the interaction config which is effectively being used. 
+
+This is either \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a920a35e3ba70513dc23d6661193db961}{override\+Interactions} if that is set, or \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a402931846d56ed2e96ed129e43c687aa}{interactions} otherwise. \Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_a768efe0c55ec243c8d7b08449e44065c}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!effectivePath@{effectivePath}}
+\index{effectivePath@{effectivePath}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{effectivePath}{effectivePath}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_a768efe0c55ec243c8d7b08449e44065c} 
+string Unity\+Engine.\+Input\+System.\+Input\+Binding.\+effective\+Path\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+This is the bindings path which is effectively being used. 
+
+This is either \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a7e7675a5787c212984494451948f2a20}{override\+Path} if that is set, or \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{path} otherwise. \Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_a3072d3c2cbd8b1a547cd1713459473bf}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!effectiveProcessors@{effectiveProcessors}}
+\index{effectiveProcessors@{effectiveProcessors}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{effectiveProcessors}{effectiveProcessors}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_a3072d3c2cbd8b1a547cd1713459473bf} 
+string Unity\+Engine.\+Input\+System.\+Input\+Binding.\+effective\+Processors\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+This is the processor config which is effectively being used. 
+
+This is either \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_aad5f48ca482cae5254279391de1638e3}{override\+Processors} if that is set, or \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab152467c6dd260ea1195ccbc9789a76b}{processors} otherwise. \Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!groups@{groups}}
+\index{groups@{groups}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{groups}{groups}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89} 
+string Unity\+Engine.\+Input\+System.\+Input\+Binding.\+groups\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Optional list of binding groups that the binding belongs to. 
+
+List of binding groups or {\ttfamily null}.
+
+This is used, for example, to divide bindings into \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme}s. Each control scheme is associated with a unique binding group through \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a5711a16a90d917c90ea23119b8327cf6}{Input\+Control\+Scheme.\+binding\+Group}.
+
+A binding may be associated with multiple groups by listing each group name separate by a semicolon (\doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a33e4f6dbf1be8f943137ffacc0438bed}{Separator}).
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{new}\ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab170b15dcc8fb449ddcd79b40284d2b9}{InputBinding}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{path}}\ =\ \textcolor{stringliteral}{"{}*\&zwj;/\{PrimaryAction\},}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ //\ Associate\ the\ binding\ both\ with\ the\ "{}}KeyboardMouse\textcolor{stringliteral}{"{}\ and}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ //\ the\ "{}}Gamepad\textcolor{stringliteral}{"{}\ group.}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ groups\ =\ "{}}KeyboardMouse;Gamepad\textcolor{stringliteral}{"{},}}
+\DoxyCodeLine{\textcolor{stringliteral}{\}}}
+
+\end{DoxyCode}
+ 
+
+Note that the system places no restriction on what binding groups are used for in practice. Their use by \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme} is only one possible one, but which groups to apply and how to use them is ultimately up to you. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a5711a16a90d917c90ea23119b8327cf6}{Input\+Control\+Scheme.\+binding\+Group}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_ad9fec71b200f1f482f716d3b91afa93d}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!id@{id}}
+\index{id@{id}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_ad9fec71b200f1f482f716d3b91afa93d} 
+Guid Unity\+Engine.\+Input\+System.\+Input\+Binding.\+id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Unique ID of the binding. 
+
+Unique ID of the binding.
+
+This can be used, for example, when storing binding overrides in local user configurations. Using the binding ID, an override can remain associated with one specific binding. \Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_a402931846d56ed2e96ed129e43c687aa}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!interactions@{interactions}}
+\index{interactions@{interactions}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{interactions}{interactions}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_a402931846d56ed2e96ed129e43c687aa} 
+string Unity\+Engine.\+Input\+System.\+Input\+Binding.\+interactions\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Optional list of interactions and their parameters. 
+
+\doxylink{namespace_unity_engine_1_1_input_system_1_1_interactions}{Interactions} to put on the binding.
+
+Each element in the list is a name of an interaction (as registered with Input\+System.\+Register\+Interaction$<$\+T$>$) followed by an optional list of parameters.
+
+For example, {\ttfamily "{}slow\+Tap(duration=1.\+2,press\+Point=0.\+123)"{}} is one element that puts a \doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_slow_tap_interaction}{Interactions.\+Slow\+Tap\+Interaction} on the binding and sets \doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_slow_tap_interaction_a0b2ff71a1802b8c2a41a8748f0443353}{Interactions.\+Slow\+Tap\+Interaction.\+duration} to 1.\+2 and \doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_slow_tap_interaction_ad077637d95085cdeaf40bbeb69161368}{Interactions.\+Slow\+Tap\+Interaction.\+press\+Point} to 0.\+123.
+
+Multiple interactions can be put on a binding by separating them with a comma. For example, {\ttfamily "{}tap,slow\+Tap(duration=1.\+2)"{}} puts both a \doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_tap_interaction}{Interactions.\+Tap\+Interaction} and \doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_slow_tap_interaction}{Interactions.\+Slow\+Tap\+Interaction} on the binding. See \doxylink{interface_unity_engine_1_1_input_system_1_1_i_input_interaction}{IInput\+Interaction} for why the order matters. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{interface_unity_engine_1_1_input_system_1_1_i_input_interaction}{IInput\+Interaction}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a920a35e3ba70513dc23d6661193db961}{override\+Interactions}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a7a17301d5ed7727d5f9027dd8ff8729f}{has\+Overrides}, Input\+Action\+Rebinding\+Extensions.\+Save\+Binding\+Overrides\+As\+Json(\+IInput\+Action\+Collection2), Input\+Action\+Rebinding\+Extensions.\+Load\+Binding\+Overrides\+From\+Json(\+IInput\+Action\+Collection2,string,bool), Input\+Action\+Rebinding\+Extensions.\+Apply\+Binding\+Override(\+Input\+Action,int,\+Input\+Binding)
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_abef15eac2b9964f179061af2d1dec18d}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!isComposite@{isComposite}}
+\index{isComposite@{isComposite}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{isComposite}{isComposite}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_abef15eac2b9964f179061af2d1dec18d} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Binding.\+is\+Composite\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether the binding is a composite. 
+
+True if the binding is a composite.
+
+Composite bindings to not bind to controls to themselves but rather source their input from one or more "{}part binding"{} (see \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a9ee5ad4271b040400541e1fb6f94bcbe}{is\+Part\+Of\+Composite}).
+
+See Input\+Binding\+Composite$<$\+TValue$>$ for more details. 
+
+\begin{DoxySeeAlso}{See also}
+Input\+Binding\+Composite$<$\+TValue$>$
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_a9ee5ad4271b040400541e1fb6f94bcbe}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!isPartOfComposite@{isPartOfComposite}}
+\index{isPartOfComposite@{isPartOfComposite}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{isPartOfComposite}{isPartOfComposite}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_a9ee5ad4271b040400541e1fb6f94bcbe} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Binding.\+is\+Part\+Of\+Composite\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether the binding is a "{}part binding"{} of a composite. 
+
+True if the binding is part of a composite.
+
+The bindings that make up a composite are laid out sequentially in \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map_ae98277c3697a798a28f8b16e187217ff}{Input\+Action\+Map.\+bindings}. First comes the composite itself which is flagged with \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_abef15eac2b9964f179061af2d1dec18d}{is\+Composite}. It mentions the composite and its parameters in its \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{path} property. After the composite itself come the part bindings. All subsequent bindings marked as {\ttfamily is\+Part\+Of\+Composite} will be associated with the composite. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_abef15eac2b9964f179061af2d1dec18d}{is\+Composite}, Input\+Binding\+Composite$<$\+TValue$>$
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_a8f6d03fcaf41d8fc925928fcf5599291}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!name@{name}}
+\index{name@{name}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_a8f6d03fcaf41d8fc925928fcf5599291} 
+string Unity\+Engine.\+Input\+System.\+Input\+Binding.\+name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Optional name for the binding. 
+
+Name of the binding.
+
+For bindings that are part of composites (see \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a9ee5ad4271b040400541e1fb6f94bcbe}{is\+Part\+Of\+Composite}), this is the name of the field on the binding composite object that should be initialized with the control target of the binding. \Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_a920a35e3ba70513dc23d6661193db961}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!overrideInteractions@{overrideInteractions}}
+\index{overrideInteractions@{overrideInteractions}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{overrideInteractions}{overrideInteractions}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_a920a35e3ba70513dc23d6661193db961} 
+string Unity\+Engine.\+Input\+System.\+Input\+Binding.\+override\+Interactions\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Interaction settings to override \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a402931846d56ed2e96ed129e43c687aa}{interactions} with. 
+
+Override string for \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a402931846d56ed2e96ed129e43c687aa}{interactions} or {\ttfamily null}.
+
+If this is not {\ttfamily null}, it replaces the value of \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a402931846d56ed2e96ed129e43c687aa}{interactions}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_ad7af89963f90f5faa3dd9f0a3b6946f9}{effective\+Interactions}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a402931846d56ed2e96ed129e43c687aa}{interactions}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a7e7675a5787c212984494451948f2a20}{override\+Path}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_aad5f48ca482cae5254279391de1638e3}{override\+Processors}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a7a17301d5ed7727d5f9027dd8ff8729f}{has\+Overrides}, Input\+Action\+Rebinding\+Extensions.\+Save\+Binding\+Overrides\+As\+Json(\+IInput\+Action\+Collection2), Input\+Action\+Rebinding\+Extensions.\+Load\+Binding\+Overrides\+From\+Json(\+IInput\+Action\+Collection2,string,bool), Input\+Action\+Rebinding\+Extensions.\+Apply\+Binding\+Override(\+Input\+Action,int,\+Input\+Binding)
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_a7e7675a5787c212984494451948f2a20}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!overridePath@{overridePath}}
+\index{overridePath@{overridePath}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{overridePath}{overridePath}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_a7e7675a5787c212984494451948f2a20} 
+string Unity\+Engine.\+Input\+System.\+Input\+Binding.\+override\+Path\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+If the binding is overridden, this is the overriding path. Otherwise it is {\ttfamily null}. 
+
+Path to override the \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{path} property with.
+
+Unlike the \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{path} property, the value of the override path is not serialized. If set, it will take precedence and determine the result of \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a768efe0c55ec243c8d7b08449e44065c}{effective\+Path}.
+
+This property can be set to an empty string to disable the binding. During resolution, bindings with an empty \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a768efe0c55ec243c8d7b08449e44065c}{effective\+Path} will get skipped.
+
+To set the override on an existing binding, use the methods supplied by Input\+Action\+Rebinding\+Extensions such as Input\+Action\+Rebinding\+Extensions.\+Apply\+Binding\+Override(\+Input\+Action,string,string,string).
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Override\ the\ binding\ to\ <Gamepad>/buttonSouth\ on}}
+\DoxyCodeLine{\textcolor{comment}{//\ myAction\ with\ a\ binding\ to\ <Gamepad>/buttonNorth.}}
+\DoxyCodeLine{myAction.ApplyBindingOverride(}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab170b15dcc8fb449ddcd79b40284d2b9}{InputBinding}}}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{path}}\ =\ \textcolor{stringliteral}{"{}<Gamepad>/buttonSouth"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a7e7675a5787c212984494451948f2a20}{overridePath}}\ =\ \textcolor{stringliteral}{"{}<Gamepad>/buttonNorth"{}}}
+\DoxyCodeLine{\ \ \ \ \});}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{path}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a920a35e3ba70513dc23d6661193db961}{override\+Interactions}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_aad5f48ca482cae5254279391de1638e3}{override\+Processors}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a7a17301d5ed7727d5f9027dd8ff8729f}{has\+Overrides}, Input\+Action\+Rebinding\+Extensions.\+Save\+Binding\+Overrides\+As\+Json(\+IInput\+Action\+Collection2), Input\+Action\+Rebinding\+Extensions.\+Load\+Binding\+Overrides\+From\+Json(\+IInput\+Action\+Collection2,string,bool), Input\+Action\+Rebinding\+Extensions.\+Apply\+Binding\+Override(\+Input\+Action,int,\+Input\+Binding)
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_aad5f48ca482cae5254279391de1638e3}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!overrideProcessors@{overrideProcessors}}
+\index{overrideProcessors@{overrideProcessors}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{overrideProcessors}{overrideProcessors}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_aad5f48ca482cae5254279391de1638e3} 
+string Unity\+Engine.\+Input\+System.\+Input\+Binding.\+override\+Processors\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Processor settings to override \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab152467c6dd260ea1195ccbc9789a76b}{processors} with. 
+
+Override string for \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab152467c6dd260ea1195ccbc9789a76b}{processors} or {\ttfamily null}.
+
+If this is not {\ttfamily null}, it replaces the value of \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab152467c6dd260ea1195ccbc9789a76b}{processors}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a3072d3c2cbd8b1a547cd1713459473bf}{effective\+Processors}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab152467c6dd260ea1195ccbc9789a76b}{processors}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a7e7675a5787c212984494451948f2a20}{override\+Path}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a920a35e3ba70513dc23d6661193db961}{override\+Interactions}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a7a17301d5ed7727d5f9027dd8ff8729f}{has\+Overrides}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!path@{path}}
+\index{path@{path}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d} 
+string Unity\+Engine.\+Input\+System.\+Input\+Binding.\+path\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Control path being bound to. 
+
+Path of control(s) to source input from.
+
+Bindings reference \doxylink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}s using a regular expression-\/like language. See Input\+Control\+Path for details.
+
+If the binding is a composite (\doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_abef15eac2b9964f179061af2d1dec18d}{is\+Composite}), the path is the composite string instead. For example, for a \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_vector2_composite}{Composites.\+Vector2\+Composite}, the path could be something like {\ttfamily "{}\+Vector2(normalize=false)"{}}.
+
+The path of a binding may be non-\/destructively override at runtime using \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a7e7675a5787c212984494451948f2a20}{override\+Path} which unlike this property is not serialized. \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a768efe0c55ec243c8d7b08449e44065c}{effective\+Path} represents the final, effective path. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ A\ binding\ that\ references\ the\ left\ mouse\ button.}}
+\DoxyCodeLine{\textcolor{keyword}{new}\ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_ab170b15dcc8fb449ddcd79b40284d2b9}{InputBinding}}\ \{\ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{path}}\ =\ \textcolor{stringliteral}{"{}<Mouse>/leftButton"{}}\ \}}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a7e7675a5787c212984494451948f2a20}{override\+Path}, Input\+Control\+Path, Input\+Control\+Path.\+Parse, \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a60d8e17e65b94f2cf7a0ce7f10af0075}{Input\+Control.\+path}, Input\+System.\+Find\+Control
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_ab152467c6dd260ea1195ccbc9789a76b}\index{UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}!processors@{processors}}
+\index{processors@{processors}!UnityEngine.InputSystem.InputBinding@{UnityEngine.InputSystem.InputBinding}}
+\doxysubsubsection{\texorpdfstring{processors}{processors}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_ab152467c6dd260ea1195ccbc9789a76b} 
+string Unity\+Engine.\+Input\+System.\+Input\+Binding.\+processors\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Optional list of processors to apply to control values. 
+
+Value processors to apply to the binding.
+
+This string has the same format as \doxylink{class_unity_engine_1_1_input_system_1_1_layouts_1_1_input_control_attribute_a5e61667ca4c886a2215d40fde0050363}{Input\+Control\+Attribute.\+processors}. 
+
+\begin{DoxySeeAlso}{See also}
+Input\+Processor$<$\+TValue$>$, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_aad5f48ca482cae5254279391de1638e3}{override\+Processors}
+
+
+\end{DoxySeeAlso}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Actions/Input\+Binding.\+cs\end{DoxyCompactItemize}

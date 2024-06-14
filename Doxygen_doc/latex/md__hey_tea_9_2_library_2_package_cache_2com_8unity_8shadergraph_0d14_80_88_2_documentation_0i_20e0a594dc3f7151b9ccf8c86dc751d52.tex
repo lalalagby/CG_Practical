@@ -1,0 +1,44 @@
+\chapter{Evaluate Simulation Caustics}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_20e0a594dc3f7151b9ccf8c86dc751d52}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_20e0a594dc3f7151b9ccf8c86dc751d52}\index{Evaluate Simulation Caustics@{Evaluate Simulation Caustics}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_20e0a594dc3f7151b9ccf8c86dc751d52_autotoc_md3206}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_20e0a594dc3f7151b9ccf8c86dc751d52_autotoc_md3206}%
+ This node calculates \href{https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@14.0/manual/WaterSystem-caustics.html}{\texttt{ water caustics}}.
+
+This node outputs caustics as monochrome in the red channel. If you connect the output of this node to a {\bfseries{Base Color}} block, all the channels are red. To prevent this, split the output and use only the red channel. You can\textquotesingle{}t apply a tint to caustics.
+
+Caustics don\textquotesingle{}t have an effect above the water unless you script this behavior. For example\+:
+
+
+\begin{DoxyItemize}
+\item If your scene contains a boat that sits in water, HDRP doesn\textquotesingle{}t project caustics on the part of the boat\textquotesingle{}s hull that\textquotesingle{}s above water.
+\item A swimming pool inside a room doesn\textquotesingle{}t bounce caustics off the walls or ceiling.
+\end{DoxyItemize}
+
+The High Definition Render Pipeline (HDRP) uses this node in the default water shader graph. See the HDRP documentation for more information about \href{https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@14.0/manual/WaterSystem.html}{\texttt{ the Water System}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_20e0a594dc3f7151b9ccf8c86dc751d52_autotoc_md3207}{}\doxysection{\texorpdfstring{Render pipeline compatibility}{Render pipeline compatibility}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_20e0a594dc3f7151b9ccf8c86dc751d52_autotoc_md3207}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Node}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Universal Render Pipeline (URP)}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{High Definition Render Pipeline (HDRP)}}    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Node}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Universal Render Pipeline (URP)}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{High Definition Render Pipeline (HDRP)}}    }\\\cline{1-3}
+\endhead
+{\bfseries{Evaluate Simulation Caustics}}   &No   &Yes   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_20e0a594dc3f7151b9ccf8c86dc751d52_autotoc_md3208}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_20e0a594dc3f7151b9ccf8c86dc751d52_autotoc_md3208}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Direction}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Direction}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-4}
+\endhead
+{\bfseries{Refracted\+Position\+WS}}   &Input   &Vector3   &The refracted position of the water bed you observe through the water, in world space.    \\\cline{1-4}
+{\bfseries{Distorted\+Water\+NDC}}   &Input   &Vector2   &The screen space position of the refracted point.    \\\cline{1-4}
+{\bfseries{Caustics}}   &Output   &Float   &The intensity of the caustics.   \\\cline{1-4}
+\end{longtabu}

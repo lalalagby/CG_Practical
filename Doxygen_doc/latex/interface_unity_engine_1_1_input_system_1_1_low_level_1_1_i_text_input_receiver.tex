@@ -1,0 +1,89 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Low\+Level.\+IText\+Input\+Receiver Interface Reference}
+\hypertarget{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_text_input_receiver}{}\label{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_text_input_receiver}\index{UnityEngine.InputSystem.LowLevel.ITextInputReceiver@{UnityEngine.InputSystem.LowLevel.ITextInputReceiver}}
+
+
+Interface for \doxylink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device} classes that can receive text input events.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Low\+Level.\+IText\+Input\+Receiver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_text_input_receiver}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_text_input_receiver_ae7aeaec3bc317f26c40804c5c6d2613d}{On\+Text\+Input}} (char character)
+\begin{DoxyCompactList}\small\item\em A single, fully-\/formed Unicode character has been typed on the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_text_input_receiver_a5575e11fb96e3f294a22ffb42d66c3b5}{On\+IMEComposition\+Changed}} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_i_m_e_composition_string}{IMEComposition\+String}} composition\+String)
+\begin{DoxyCompactList}\small\item\em Called when an IME composition is in-\/progress or finished. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for \doxylink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device} classes that can receive text input events. 
+
+This interface should be implemented by devices that are meant to receive text input through \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event}{Text\+Event}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event}{Text\+Event}, \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_i_m_e_composition_event}{IMEComposition\+Event}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_text_input_receiver_a5575e11fb96e3f294a22ffb42d66c3b5}\index{UnityEngine.InputSystem.LowLevel.ITextInputReceiver@{UnityEngine.InputSystem.LowLevel.ITextInputReceiver}!OnIMECompositionChanged@{OnIMECompositionChanged}}
+\index{OnIMECompositionChanged@{OnIMECompositionChanged}!UnityEngine.InputSystem.LowLevel.ITextInputReceiver@{UnityEngine.InputSystem.LowLevel.ITextInputReceiver}}
+\doxysubsubsection{\texorpdfstring{OnIMECompositionChanged()}{OnIMECompositionChanged()}}
+{\footnotesize\ttfamily \label{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_text_input_receiver_a5575e11fb96e3f294a22ffb42d66c3b5} 
+void Unity\+Engine.\+Input\+System.\+Low\+Level.\+IText\+Input\+Receiver.\+On\+IMEComposition\+Changed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_i_m_e_composition_string}{IMEComposition\+String}}}]{composition\+String}{}\end{DoxyParamCaption})}
+
+
+
+Called when an IME composition is in-\/progress or finished. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em composition\+String} & The current composition.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_i_m_e_composition_event}{IMEComposition\+Event}, \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a1a682b61eb2809067a3c6cd5278892a5}{Keyboard.\+on\+IMEComposition\+Change}
+
+
+\end{DoxySeeAlso}
+
+
+The method will be repeatedly called with the current string while composition is in progress. Once composition finishes, the method will be called one more time with a blank composition string. 
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_keyboard_a949170c16dac0e4da0cc3d8c9903ad47}{Unity\+Engine.\+Input\+System.\+Keyboard}}.
+
+\Hypertarget{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_text_input_receiver_ae7aeaec3bc317f26c40804c5c6d2613d}\index{UnityEngine.InputSystem.LowLevel.ITextInputReceiver@{UnityEngine.InputSystem.LowLevel.ITextInputReceiver}!OnTextInput@{OnTextInput}}
+\index{OnTextInput@{OnTextInput}!UnityEngine.InputSystem.LowLevel.ITextInputReceiver@{UnityEngine.InputSystem.LowLevel.ITextInputReceiver}}
+\doxysubsubsection{\texorpdfstring{OnTextInput()}{OnTextInput()}}
+{\footnotesize\ttfamily \label{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_text_input_receiver_ae7aeaec3bc317f26c40804c5c6d2613d} 
+void Unity\+Engine.\+Input\+System.\+Low\+Level.\+IText\+Input\+Receiver.\+On\+Text\+Input (\begin{DoxyParamCaption}\item[{char}]{character}{}\end{DoxyParamCaption})}
+
+
+
+A single, fully-\/formed Unicode character has been typed on the device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & Character that was typed. Note that in case the character is part of a surrogate pair, this method is called first with the high surrogate and then with the low surrogate character.\\
+\hline
+\end{DoxyParams}
+
+
+This method is called on a device when a \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event}{Text\+Event} is received for the device. {\itshape character}  is the \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event_a345ffba87df93f61c16a85c244669063}{Text\+Event.\+character} from the event.
+
+Note that this method will be called {\itshape twice} for a single \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event}{Text\+Event} in case the given UTF-\/32 (encoding in the event) needs to be represented as UTF-\/16 (encoding of {\ttfamily char} in C\#) surrogate. 
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_keyboard_a0521616b2b6ea1813731b5395f57ed50}{Unity\+Engine.\+Input\+System.\+Keyboard}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Devices/IText\+Input\+Receiver.\+cs\end{DoxyCompactItemize}

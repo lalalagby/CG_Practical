@@ -1,0 +1,144 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Universal.\+Channel\+Mixer Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer}{}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer}\index{UnityEngine.Rendering.Universal.ChannelMixer@{UnityEngine.Rendering.Universal.ChannelMixer}}
+
+
+A volume component that holds settings for the Channel Mixer effect.  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Universal.\+Channel\+Mixer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.427746cm]{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_aa17cf7b5f6224e47075949f933b72782}{Is\+Active}} ()
+\begin{DoxyCompactList}\small\item\em Tells if the post process needs to be rendered or not.
+
+\begin{DoxyReturn}{Returns}
+True if the component is active, otherwise false.
+\end{DoxyReturn}
+ \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_a66855572d8dc5718ac4f3c24c8ce7bfd}{Is\+Tile\+Compatible}} ()
+\begin{DoxyCompactList}\small\item\em Tells if the post process can run the effect on-\/tile or if it needs a full pass.
+
+\begin{DoxyReturn}{Returns}
+True if it can run on-\/tile, otherwise false.
+\end{DoxyReturn}
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Unity\+Engine.\+Rendering.\+Volume\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_a9d4f76f7cb2a843be7e947ee7cd9fd86}{Override}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component}} state, float interp\+Factor)
+\begin{DoxyCompactList}\small\item\em Interpolates a \doxylink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component} with this component by an interpolation factor and puts the result back into the given \doxylink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_a28e604e4bea241b469d10eaf0d7aca05}{Set\+All\+Overrides\+To}} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets the state of all the overrides on this component to a given value. \end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_ae2bbeaecf77f5806e9a2b6407037356c}{Get\+Hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em A custom hashing function that \doxylink{namespace_unity}{Unity} uses to compare the state of parameters. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_a54586fce4a8f74cea39827af82cd873c}{Any\+Properties\+Is\+Overridden}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if any of the volume properites has been overridden. \end{DoxyCompactList}\item 
+void {\bfseries Release} ()
+\begin{DoxyCompactList}\small\item\em Releases all the allocated resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_a2a3456ee8e2518934ffc020a254510e4}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_a2a3456ee8e2518934ffc020a254510e4} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}} {\bfseries red\+Out\+Red\+In} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}}(100f, -\/200f, 200f)
+\begin{DoxyCompactList}\small\item\em Modify influence of the red channel in the overall mix. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_a9d0548899a050e8c5f68a62a8aed057f}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_a9d0548899a050e8c5f68a62a8aed057f} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}} {\bfseries red\+Out\+Green\+In} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}}(0f, -\/200f, 200f)
+\begin{DoxyCompactList}\small\item\em Modify influence of the green channel in the overall mix. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_a18838692d587fb832d7732018d1de3b8}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_a18838692d587fb832d7732018d1de3b8} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}} {\bfseries red\+Out\+Blue\+In} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}}(0f, -\/200f, 200f)
+\begin{DoxyCompactList}\small\item\em Modify influence of the blue channel in the overall mix. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_a5b61aae0c78a1a460888160690c085f3}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_a5b61aae0c78a1a460888160690c085f3} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}} {\bfseries green\+Out\+Red\+In} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}}(0f, -\/200f, 200f)
+\begin{DoxyCompactList}\small\item\em Modify influence of the red channel in the overall mix. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_a8edaba74a2b51d317a9e904f7de073d4}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_a8edaba74a2b51d317a9e904f7de073d4} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}} {\bfseries green\+Out\+Green\+In} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}}(100f, -\/200f, 200f)
+\begin{DoxyCompactList}\small\item\em Modify influence of the green channel in the overall mix. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_a4331c0cf2c5f195ee04738ff595126b9}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_a4331c0cf2c5f195ee04738ff595126b9} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}} {\bfseries green\+Out\+Blue\+In} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}}(0f, -\/200f, 200f)
+\begin{DoxyCompactList}\small\item\em Modify influence of the blue channel in the overall mix. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_a7146c4c29404258935d1f1faffd1be3d}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_a7146c4c29404258935d1f1faffd1be3d} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}} {\bfseries blue\+Out\+Red\+In} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}}(0f, -\/200f, 200f)
+\begin{DoxyCompactList}\small\item\em Modify influence of the red channel in the overall mix. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_a33352855cff12a650f676ab109b499c1}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_a33352855cff12a650f676ab109b499c1} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}} {\bfseries blue\+Out\+Green\+In} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}}(0f, -\/200f, 200f)
+\begin{DoxyCompactList}\small\item\em Modify influence of the green channel in the overall mix. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_a1cb6c01b0ab7a1d48aa4de78a8276abe}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_a1cb6c01b0ab7a1d48aa4de78a8276abe} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}} {\bfseries blue\+Out\+Blue\+In} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}}(100f, -\/200f, 200f)
+\begin{DoxyCompactList}\small\item\em Modify influence of the blue channel in the overall mix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Unity\+Engine.\+Rendering.\+Volume\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries active} = true
+\begin{DoxyCompactList}\small\item\em The active state of the set of parameters defined in this class. You can use this to quickly turn on or off all the overrides at once. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Unity\+Engine.\+Rendering.\+Volume\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_ab69d6656bb7f4922fb99724f562e6215}{On\+Enable}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity}{Unity} calls this method when it loads the class. \end{DoxyCompactList}\item 
+virtual void {\bfseries On\+Disable} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity}{Unity} calls this method when the object goes out of scope. \end{DoxyCompactList}\item 
+virtual void {\bfseries On\+Destroy} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity}{Unity} calls this method before the object is destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Unity\+Engine.\+Rendering.\+Volume\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries display\+Name} = "{}"{}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The name displayed in the component header. If you do not set a name, \doxylink{namespace_unity}{Unity} generates one from the class name automatically. \end{DoxyCompactList}\item 
+Read\+Only\+Collection$<$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}} $>$ {\bfseries parameters}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A read-\/only collection of all the \doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}s defined in this class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A volume component that holds settings for the Channel Mixer effect. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_aa17cf7b5f6224e47075949f933b72782}\index{UnityEngine.Rendering.Universal.ChannelMixer@{UnityEngine.Rendering.Universal.ChannelMixer}!IsActive@{IsActive}}
+\index{IsActive@{IsActive}!UnityEngine.Rendering.Universal.ChannelMixer@{UnityEngine.Rendering.Universal.ChannelMixer}}
+\doxysubsubsection{\texorpdfstring{IsActive()}{IsActive()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_aa17cf7b5f6224e47075949f933b72782} 
+bool Unity\+Engine.\+Rendering.\+Universal.\+Channel\+Mixer.\+Is\+Active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tells if the post process needs to be rendered or not.
+
+\begin{DoxyReturn}{Returns}
+True if the component is active, otherwise false.
+\end{DoxyReturn}
+ 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_universal_1_1_i_post_process_component_a8723bf5375b789d8c1c43ad9a6fd2acf}{Unity\+Engine.\+Rendering.\+Universal.\+IPost\+Process\+Component}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_a66855572d8dc5718ac4f3c24c8ce7bfd}\index{UnityEngine.Rendering.Universal.ChannelMixer@{UnityEngine.Rendering.Universal.ChannelMixer}!IsTileCompatible@{IsTileCompatible}}
+\index{IsTileCompatible@{IsTileCompatible}!UnityEngine.Rendering.Universal.ChannelMixer@{UnityEngine.Rendering.Universal.ChannelMixer}}
+\doxysubsubsection{\texorpdfstring{IsTileCompatible()}{IsTileCompatible()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_a66855572d8dc5718ac4f3c24c8ce7bfd} 
+bool Unity\+Engine.\+Rendering.\+Universal.\+Channel\+Mixer.\+Is\+Tile\+Compatible (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Tells if the post process can run the effect on-\/tile or if it needs a full pass.
+
+\begin{DoxyReturn}{Returns}
+True if it can run on-\/tile, otherwise false.
+\end{DoxyReturn}
+ 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_universal_1_1_i_post_process_component_a60383c6e1861a6ae97c3df772b711dbb}{Unity\+Engine.\+Rendering.\+Universal.\+IPost\+Process\+Component}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/\+Overrides/Channel\+Mixer.\+cs\end{DoxyCompactItemize}

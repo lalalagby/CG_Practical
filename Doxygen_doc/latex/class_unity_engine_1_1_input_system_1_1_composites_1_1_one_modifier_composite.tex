@@ -1,0 +1,246 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Composites.\+One\+Modifier\+Composite Class Reference}
+\hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite}{}\label{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite}\index{UnityEngine.InputSystem.Composites.OneModifierComposite@{UnityEngine.InputSystem.Composites.OneModifierComposite}}
+
+
+A binding with an additional modifier. The bound controls only trigger when the modifier is pressed.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Composites.\+One\+Modifier\+Composite\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_a1da3584f2123add5989ae2d3fb795b3b}{Evaluate\+Magnitude}} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context)
+\begin{DoxyCompactList}\small\item\em Determine the current level of actuation of the composite. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_af32196813a6cba8dc0645dea7cb91238}\label{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_af32196813a6cba8dc0645dea7cb91238} 
+override unsafe void {\bfseries Read\+Value} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context, void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size)
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_a9292cd38a746211251f82eb11540b338}\label{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_a9292cd38a746211251f82eb11540b338} 
+override object {\bfseries Read\+Value\+As\+Object} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite}{Unity\+Engine.\+Input\+System.\+Input\+Binding\+Composite$<$ TValue $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+unsafe void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a6618d178c73466acd78057ffef7a6cf8}{Read\+Value}} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context, void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size)
+\begin{DoxyCompactList}\small\item\em Read a value from the composite without having to know the value type (unlike \doxylink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a2c23901dcc819e76109feadf9171fad0}{Input\+Binding\+Composite$<$\+TValue$>$.\+Read\+Value(ref Input\+Binding\+Composite\+Context)} and without allocating GC heap memory (unlike \doxylink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a379755bf07c780ac75f8452456ec92d6}{Read\+Value\+As\+Object}). \end{DoxyCompactList}\item 
+object \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a379755bf07c780ac75f8452456ec92d6}{Read\+Value\+As\+Object}} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context)
+\begin{DoxyCompactList}\small\item\em Read the value of the composite as a boxed object. This allows reading the value without having to know the value type and without having to deal with raw byte buffers. \end{DoxyCompactList}\item 
+TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a2c23901dcc819e76109feadf9171fad0}{Read\+Value}} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context)
+\begin{DoxyCompactList}\small\item\em Read a value for the composite given the supplied context. \end{DoxyCompactList}\item 
+override unsafe void {\bfseries Read\+Value} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context, void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size)
+\item 
+override unsafe object {\bfseries Read\+Value\+As\+Object} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_adcff2867c05082270c023d7a80a29c78}{modifier}}
+\begin{DoxyCompactList}\small\item\em Binding for the button that acts as a modifier, e.\+g. {\ttfamily \texorpdfstring{$<$}{<}Keyboard/ctrl}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_a8b879c56640440fe929e844e17068273}{binding}}
+\begin{DoxyCompactList}\small\item\em Binding for the control that is gated by the modifier. The composite will assume the value of this control while the modifier is considered pressed (that is, has a magnitude equal to or greater than the button press point). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_a5f38c55aa0ea5efbcbac799a7fa92e7e}{override\+Modifiers\+Need\+To\+Be\+Pressed\+First}}
+\begin{DoxyCompactList}\small\item\em If set to {\ttfamily true}, the built-\/in logic to determine if modifiers need to be pressed first is overridden. Default value is {\ttfamily false}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_aa9bee71de5c4c9f2ffdbeac41bfc4e54}{Finish\+Setup}} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}} context)
+\begin{DoxyCompactList}\small\item\em Called after binding resolution for an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map} is complete.
+
+Some composites do not have predetermine value types. Two examples of this are \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite}{Composites.\+One\+Modifier\+Composite} and \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_two_modifiers_composite}{Composites.\+Two\+Modifiers\+Composite}, which both have a {\ttfamily "{}binding"{}} part that can be bound to arbitrary controls. This means that the value type of these bindings can only be determined at runtime.
+
+Overriding this method allows accessing the actual controls bound to each part at runtime.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[InputControl]\ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ binding;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a55e91ef05e6821b154f4d89bcede5adf}{FinishSetup}}(ref\ InputBindingContext\ context)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Get\ all\ controls\ bound\ to\ the\ 'binding'\ part.}}
+\DoxyCodeLine{\ \ \ \ var\ controls\ =\ context.controls}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .Where(x\ =>\ x.part\ ==\ binding)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .Select(x\ =>\ x.control);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_ae0f526533e32a70662425d2d5809a7c6}\label{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_ae0f526533e32a70662425d2d5809a7c6} 
+override Type {\bfseries value\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of values read from controls bound to \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_a8b879c56640440fe929e844e17068273}{binding}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_aa194615bfa4a722aff7155be12974af2}\label{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_aa194615bfa4a722aff7155be12974af2} 
+override int {\bfseries value\+Size\+In\+Bytes}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Size of the largest value that may be read from the controls bound to \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_a8b879c56640440fe929e844e17068273}{binding}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite}{Unity\+Engine.\+Input\+System.\+Input\+Binding\+Composite$<$ TValue $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+Type \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a3b812de2f195f2ddd939a0056a6c1b28}{value\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The type of value returned by the composite. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_ab6494b91f1cec7c426761191e9d09771}{value\+Size\+In\+Bytes}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Size of a value read by \doxylink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a6618d178c73466acd78057ffef7a6cf8}{Read\+Value}. \end{DoxyCompactList}\item 
+override Type \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_ac097708dd5d15f524c344185817355ed}{value\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The type of value returned by the composite, i.\+e. {\ttfamily typeof(\+TValue)}. \end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_afc790d6ffc72aeb4d7b7b67084d08371}{value\+Size\+In\+Bytes}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The size of values returned by the composite, i.\+e. {\ttfamily sizeof(\+TValue)}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite}{Unity\+Engine.\+Input\+System.\+Input\+Binding\+Composite$<$ TValue $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a31e178f5b15d877ea1870e068aed093f}{Get\+Expected\+Control\+Layout\+Name}} (string composite, string part)
+\begin{DoxyCompactList}\small\item\em Return the name of the control layout that is expected for the given part (e.\+g. "{}\+Up"{}) on the given composite (e.\+g. "{}\+Dpad"{}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A binding with an additional modifier. The bound controls only trigger when the modifier is pressed. 
+
+This composite can be used to require a button to be held in order to "{}activate"{} another binding. This is most commonly used on keyboards to require one of the modifier keys (shift, ctrl, or alt) to be held in combination with another control, e.\+g. "{}\+CTRL+1"{}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ a\ button\ action\ that\ triggers\ when\ CTRL+1}}
+\DoxyCodeLine{\textcolor{comment}{//\ is\ pressed\ on\ the\ keyboard.}}
+\DoxyCodeLine{var\ action\ =\ \textcolor{keyword}{new}\ InputAction(type:\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94b}{InputActionType}}.\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}{Button}});}
+\DoxyCodeLine{action.AddCompositeBinding(\textcolor{stringliteral}{"{}OneModifier"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Modifier"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/ctrl"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Binding"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/1"{}})}
+
+\end{DoxyCode}
+ 
+
+However, this can also be used to "{}gate"{} other types of controls. For example, a "{}look"{} action could be bound to mouse \doxylink{class_unity_engine_1_1_input_system_1_1_pointer_a9bc9a66dcf6b4d35ee95d09870c73c4b}{Pointer.\+delta} such that the \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a6da8ffc0697b280a75816393308f59f1}{Keyboard.\+alt\+Key} on the keyboard has to be pressed in order for the player to be able to look around.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{lookAction.AddCompositeBinding(\textcolor{stringliteral}{"{}OneModifier"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Modifier"{}},\ \textcolor{stringliteral}{"{}<Keyboard>/alt"{}})}
+\DoxyCodeLine{\ \ \ \ .With(\textcolor{stringliteral}{"{}Binding"{}},\ \textcolor{stringliteral}{"{}<Mouse>/delta"{}})}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_two_modifiers_composite}{Two\+Modifiers\+Composite}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_a1da3584f2123add5989ae2d3fb795b3b}\index{UnityEngine.InputSystem.Composites.OneModifierComposite@{UnityEngine.InputSystem.Composites.OneModifierComposite}!EvaluateMagnitude@{EvaluateMagnitude}}
+\index{EvaluateMagnitude@{EvaluateMagnitude}!UnityEngine.InputSystem.Composites.OneModifierComposite@{UnityEngine.InputSystem.Composites.OneModifierComposite}}
+\doxysubsubsection{\texorpdfstring{EvaluateMagnitude()}{EvaluateMagnitude()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_a1da3584f2123add5989ae2d3fb795b3b} 
+override float Unity\+Engine.\+Input\+System.\+Composites.\+One\+Modifier\+Composite.\+Evaluate\+Magnitude (\begin{DoxyParamCaption}\item[{ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}}}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Determine the current level of actuation of the composite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Callback context for the binding composite. Use this to access the values supplied by part bindings.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+This method by default returns -\/1, meaning that the composite does not support magnitudes. You can override the method to add support for magnitudes.
+
+See \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Input\+Control.\+Evaluate\+Magnitude()} for details of how magnitudes work. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Input\+Control.\+Evaluate\+Magnitude()}
+
+
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a91ab7a703dfa5219da6d37b060b801f3}{Unity\+Engine.\+Input\+System.\+Input\+Binding\+Composite$<$ TValue $>$}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_aa9bee71de5c4c9f2ffdbeac41bfc4e54}\index{UnityEngine.InputSystem.Composites.OneModifierComposite@{UnityEngine.InputSystem.Composites.OneModifierComposite}!FinishSetup@{FinishSetup}}
+\index{FinishSetup@{FinishSetup}!UnityEngine.InputSystem.Composites.OneModifierComposite@{UnityEngine.InputSystem.Composites.OneModifierComposite}}
+\doxysubsubsection{\texorpdfstring{FinishSetup()}{FinishSetup()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_aa9bee71de5c4c9f2ffdbeac41bfc4e54} 
+override void Unity\+Engine.\+Input\+System.\+Composites.\+One\+Modifier\+Composite.\+Finish\+Setup (\begin{DoxyParamCaption}\item[{ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}}}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called after binding resolution for an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map} is complete.
+
+Some composites do not have predetermine value types. Two examples of this are \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite}{Composites.\+One\+Modifier\+Composite} and \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_two_modifiers_composite}{Composites.\+Two\+Modifiers\+Composite}, which both have a {\ttfamily "{}binding"{}} part that can be bound to arbitrary controls. This means that the value type of these bindings can only be determined at runtime.
+
+Overriding this method allows accessing the actual controls bound to each part at runtime.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[InputControl]\ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ binding;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a55e91ef05e6821b154f4d89bcede5adf}{FinishSetup}}(ref\ InputBindingContext\ context)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Get\ all\ controls\ bound\ to\ the\ 'binding'\ part.}}
+\DoxyCodeLine{\ \ \ \ var\ controls\ =\ context.controls}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .Where(x\ =>\ x.part\ ==\ binding)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .Select(x\ =>\ x.control);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+  
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a55e91ef05e6821b154f4d89bcede5adf}{Unity\+Engine.\+Input\+System.\+Input\+Binding\+Composite$<$ TValue $>$}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_a8b879c56640440fe929e844e17068273}\index{UnityEngine.InputSystem.Composites.OneModifierComposite@{UnityEngine.InputSystem.Composites.OneModifierComposite}!binding@{binding}}
+\index{binding@{binding}!UnityEngine.InputSystem.Composites.OneModifierComposite@{UnityEngine.InputSystem.Composites.OneModifierComposite}}
+\doxysubsubsection{\texorpdfstring{binding}{binding}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_a8b879c56640440fe929e844e17068273} 
+int Unity\+Engine.\+Input\+System.\+Composites.\+One\+Modifier\+Composite.\+binding}
+
+
+
+Binding for the control that is gated by the modifier. The composite will assume the value of this control while the modifier is considered pressed (that is, has a magnitude equal to or greater than the button press point). 
+
+Part index to use with Input\+Binding\+Composite\+Context.\+Read\+Value$<$\+T$>$(int).
+
+This property is automatically assigned by the input system. \Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_adcff2867c05082270c023d7a80a29c78}\index{UnityEngine.InputSystem.Composites.OneModifierComposite@{UnityEngine.InputSystem.Composites.OneModifierComposite}!modifier@{modifier}}
+\index{modifier@{modifier}!UnityEngine.InputSystem.Composites.OneModifierComposite@{UnityEngine.InputSystem.Composites.OneModifierComposite}}
+\doxysubsubsection{\texorpdfstring{modifier}{modifier}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_adcff2867c05082270c023d7a80a29c78} 
+int Unity\+Engine.\+Input\+System.\+Composites.\+One\+Modifier\+Composite.\+modifier}
+
+
+
+Binding for the button that acts as a modifier, e.\+g. {\ttfamily \texorpdfstring{$<$}{<}Keyboard/ctrl}. 
+
+Part index to use with Input\+Binding\+Composite\+Context.\+Read\+Value$<$\+T$>$(int).
+
+This property is automatically assigned by the input system. \Hypertarget{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_a5f38c55aa0ea5efbcbac799a7fa92e7e}\index{UnityEngine.InputSystem.Composites.OneModifierComposite@{UnityEngine.InputSystem.Composites.OneModifierComposite}!overrideModifiersNeedToBePressedFirst@{overrideModifiersNeedToBePressedFirst}}
+\index{overrideModifiersNeedToBePressedFirst@{overrideModifiersNeedToBePressedFirst}!UnityEngine.InputSystem.Composites.OneModifierComposite@{UnityEngine.InputSystem.Composites.OneModifierComposite}}
+\doxysubsubsection{\texorpdfstring{overrideModifiersNeedToBePressedFirst}{overrideModifiersNeedToBePressedFirst}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_a5f38c55aa0ea5efbcbac799a7fa92e7e} 
+bool Unity\+Engine.\+Input\+System.\+Composites.\+One\+Modifier\+Composite.\+override\+Modifiers\+Need\+To\+Be\+Pressed\+First}
+
+
+
+If set to {\ttfamily true}, the built-\/in logic to determine if modifiers need to be pressed first is overridden. Default value is {\ttfamily false}. 
+
+By default, if \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_a8b879c56640440fe929e844e17068273}{binding} is bound to only \doxylink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Controls.\+Button\+Control}s, then the composite requires \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_adcff2867c05082270c023d7a80a29c78}{modifier} to be pressed {\itshape before} pressing \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_a8b879c56640440fe929e844e17068273}{binding}. This means that binding to, for example, {\ttfamily Ctrl+B}, the {\ttfamily ctrl} keys have to be pressed before pressing the {\ttfamily B} key. This is the behavior usually expected with keyboard shortcuts.
+
+However, when binding, for example, {\ttfamily Ctrl+\+Mouse\+Delta}, it should be possible to press {\ttfamily ctrl} at any time. The default logic will automatically detect the difference between this binding and the button binding in the example above and behave accordingly.
+
+This field allows you to explicitly override this default inference and make it so that regardless of what \doxylink{class_unity_engine_1_1_input_system_1_1_composites_1_1_one_modifier_composite_a8b879c56640440fe929e844e17068273}{binding} is bound to, any press sequence is acceptable. For the example binding to {\ttfamily Ctrl+B}, it would mean that pressing {\ttfamily B} and only then pressing {\ttfamily Ctrl} will still trigger the binding. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Actions/\+Composites/One\+Modifier\+Composite.\+cs\end{DoxyCompactItemize}

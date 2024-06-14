@@ -1,0 +1,98 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Widget Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}\index{UnityEngine.Rendering.DebugUI.Widget@{UnityEngine.Rendering.DebugUI.Widget}}
+
+
+Base class for all debug \doxylink{namespace_unity_engine_1_1_rendering_1_1_u_i}{UI} widgets.  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Debug\+UI.\+Widget\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.643678cm]{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_1_1_name_and_tooltip}{Name\+And\+Tooltip}}
+\begin{DoxyCompactList}\small\item\em Helper struct to allow more compact initialization of widgets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_a38fb7031b499496ecec8143573276a77}{Get\+Hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Returns the hash code of the widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_adf0c8caaccfd67c981baf81aa469dd5b}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_adf0c8caaccfd67c981baf81aa469dd5b} 
+Func$<$ bool $>$ {\bfseries is\+Hidden\+Callback}
+\begin{DoxyCompactList}\small\item\em Optional delegate that can be used to conditionally hide widgets at runtime (e.\+g. due to state of other widgets). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_af5eb1e970663f7788b4b8467b837f9f6}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_af5eb1e970663f7788b4b8467b837f9f6} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_panel}{Panel}} {\bfseries m\+\_\+\+Panel}
+\begin{DoxyCompactList}\small\item\em Panels containing the widget. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_acf696cc8a31545b083ed6e20b3c1838b}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_acf696cc8a31545b083ed6e20b3c1838b} 
+\mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_i_container}{IContainer}} {\bfseries m\+\_\+\+Parent}
+\begin{DoxyCompactList}\small\item\em Parent container. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_af7f1fe5d79607226511261fe7dd31814}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_af7f1fe5d79607226511261fe7dd31814} 
+virtual \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_panel}{Panel}} {\bfseries panel}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Panels containing the widget. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_aba290a35da725262e964a95417571b1a}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_aba290a35da725262e964a95417571b1a} 
+virtual \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_i_container}{IContainer}} {\bfseries parent}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Parent container. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_a1adecf00311990a96961a3c76849b885}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_a1adecf00311990a96961a3c76849b885} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_a53965df570fd5fa92e5ac8820bd20063}{Flags}} {\bfseries flags}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Flags for the widget. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_aec34c7feace4bc665f6bb7ce0fa2035a}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_aec34c7feace4bc665f6bb7ce0fa2035a} 
+string {\bfseries display\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Display name. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_a92346829fbcdf7293553ef3463f95df9}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_a92346829fbcdf7293553ef3463f95df9} 
+string {\bfseries tooltip}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Tooltip. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_a7da653dbdacfda6bc31111e988e2faa5}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_a7da653dbdacfda6bc31111e988e2faa5} 
+string {\bfseries query\+Path}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Path of the widget. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_ad9ce79284330eb4fb45cc6da88ec2923}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_ad9ce79284330eb4fb45cc6da88ec2923} 
+bool {\bfseries is\+Editor\+Only}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the widget is Editor only. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_af5ce4ebbe5c3817af56cba29d2452adb}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_af5ce4ebbe5c3817af56cba29d2452adb} 
+bool {\bfseries is\+Runtime\+Only}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the widget is Runtime only. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_ad3e4c6d82bf40b03495469ff5507a647}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_ad3e4c6d82bf40b03495469ff5507a647} 
+bool {\bfseries is\+Inactive\+In\+Editor}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the widget is inactive in the editor (i.\+e. widget is runtime only and the application is not \textquotesingle{}Playing\textquotesingle{}). \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_ac40d4fb7040c56f863f4d3a359982404}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_ac40d4fb7040c56f863f4d3a359982404} 
+bool {\bfseries is\+Hidden}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If \doxylink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_adf0c8caaccfd67c981baf81aa469dd5b}{should\+Hide\+Delegate} has been set and returns true, the widget is hidden from the \doxylink{namespace_unity_engine_1_1_rendering_1_1_u_i}{UI}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_a21fd9de447c55378e8d4fee2eed63aec}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_a21fd9de447c55378e8d4fee2eed63aec} 
+\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_1_1_name_and_tooltip}{Name\+And\+Tooltip}} {\bfseries name\+And\+Tooltip}\hspace{0.3cm}{\ttfamily  \mbox{[}set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Helper setter to allow more compact initialization of widgets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for all debug \doxylink{namespace_unity_engine_1_1_rendering_1_1_u_i}{UI} widgets. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_a38fb7031b499496ecec8143573276a77}\index{UnityEngine.Rendering.DebugUI.Widget@{UnityEngine.Rendering.DebugUI.Widget}!GetHashCode@{GetHashCode}}
+\index{GetHashCode@{GetHashCode}!UnityEngine.Rendering.DebugUI.Widget@{UnityEngine.Rendering.DebugUI.Widget}}
+\doxysubsubsection{\texorpdfstring{GetHashCode()}{GetHashCode()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_a38fb7031b499496ecec8143573276a77} 
+override int Unity\+Engine.\+Rendering.\+Debug\+UI.\+Widget.\+Get\+Hash\+Code (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the hash code of the widget. 
+
+\begin{DoxyReturn}{Returns}
+The hash code of the widget.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Debugging/Debug\+UI.\+cs\end{DoxyCompactItemize}

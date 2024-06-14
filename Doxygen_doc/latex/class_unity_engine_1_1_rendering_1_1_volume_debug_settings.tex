@@ -1,0 +1,363 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Volume\+Debug\+Settings\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_volume_debug_settings}{}\label{class_unity_engine_1_1_rendering_1_1_volume_debug_settings}\index{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}}
+
+
+The volume settings.  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Volume\+Debug\+Settings\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_engine_1_1_rendering_1_1_volume_debug_settings}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume}{Volume}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a6697168c6053e08b72f1adaf59103a72}{Get\+Volumes}} ()
+\begin{DoxyCompactList}\small\item\em Get an array of volumes on the \doxylink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_acecb1ce5b28f344891c06b46d134445c}{selected\+Camera\+Layer\+Mask} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_ad0e4f30fff5d4ca28ed5fc6867290824}{Refresh\+Volumes}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume}{Volume}}\mbox{[}$\,$\mbox{]} new\+Volumes)
+\begin{DoxyCompactList}\small\item\em Refreshes the volumes, fetches the stored volumes on the panel. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a4155dcfd127bf6383c9459fa71593f0f}{Get\+Volume\+Weight}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume}{Volume}} volume)
+\begin{DoxyCompactList}\small\item\em Obtains the volume weight. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a7ff5a84c38202b6637bc82bd45e658e2}{Volume\+Has\+Influence}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume}{Volume}} volume)
+\begin{DoxyCompactList}\small\item\em Return if the \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} has influence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_aa56b86c8c5876e767eef423fe93e9da5}{Component\+Display\+Name}} (Type component)
+\begin{DoxyCompactList}\small\item\em Returns the name of a component from its \doxylink{class_unity_engine_1_1_rendering_1_1_volume_component_menu_for_render_pipeline}{Volume\+Component\+Menu\+For\+Render\+Pipeline}. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_ad7ddff153239c99fa2e56d4fde0f7595}{Register\+Camera}} (T additional\+Camera)
+\begin{DoxyCompactList}\small\item\em Register the camera for the \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} Debug. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a256bad70c1b1a672db9b3e0698170dfd}{Un\+Register\+Camera}} (T additional\+Camera)
+\begin{DoxyCompactList}\small\item\em Unregister the camera for the \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} Debug. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a6b8d5669e9fedd358a755bd09fc75905}\label{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a6b8d5669e9fedd358a755bd09fc75905} 
+int {\bfseries m\+\_\+\+Selected\+Camera\+Index} = -\/1
+\begin{DoxyCompactList}\small\item\em The selected camera index, use the property for better handling. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a11c003f88043158ee1748557cc65714d}{selected\+Component}} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current volume component to debug. \end{DoxyCompactList}\item 
+Camera \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a7f683cdd51b80d278ab99d666f18a82f}{selected\+Camera}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current camera to debug. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a5ec70a3244b6d2252cef43ad7ecedf96}{selected\+Camera\+Index}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Selected camera index. \end{DoxyCompactList}\item 
+IEnumerable$<$ Camera $>$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a1ef52dd8be4364eeb069471eb7276dc0}{cameras}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the collection of registered cameras. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_stack}{Volume\+Stack}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a77908d8f75d88833493176ba8b0e42be}{selected\+Camera\+Volume\+Stack}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Selected camera volume stack. \end{DoxyCompactList}\item 
+Layer\+Mask \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_acecb1ce5b28f344891c06b46d134445c}{selected\+Camera\+Layer\+Mask}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Selected camera volume layer mask. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a8965b2087638cc524d4c2ac7cbfb3ac6}{selected\+Camera\+Position}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Selected camera volume position. \end{DoxyCompactList}\item 
+Type \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a7ce62f1a1770fce8c91004a3ca955135}{selected\+Component\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of the current component to debug. \end{DoxyCompactList}\item 
+List$<$(string, Type)$>$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_ae1388175413790b71403b03a2cc42ef7}{volume\+Components\+Path\+And\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} component types. \end{DoxyCompactList}\item 
+Type \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_ae3a1d4151aca6924014efb9493563e4d}{target\+Render\+Pipeline}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies the render pipeline for this volume settings. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_adfdc2341f72372713c422e9f69f8f7e3}\label{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_adfdc2341f72372713c422e9f69f8f7e3} 
+static List$<$ Type $>$ {\bfseries component\+Types}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} component types. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_af2efe562ff2d9d6e9dc87223296e39ae}\label{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_af2efe562ff2d9d6e9dc87223296e39ae} 
+static List$<$ T $>$ {\bfseries additional\+Camera\+Datas} = new List$<$T$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of the additional camera datas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings2}{Unity\+Engine.\+Rendering.\+IVolume\+Debug\+Settings2}}}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings}{Unity\+Engine.\+Rendering.\+IVolume\+Debug\+Settings}}}
+
+
+\doxysubsection{Detailed Description}
+The volume settings. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & A Mono\+Behaviour with \doxylink{interface_unity_engine_1_1_rendering_1_1_i_additional_data}{IAdditional\+Data}\\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_aa56b86c8c5876e767eef423fe93e9da5}\index{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}!ComponentDisplayName@{ComponentDisplayName}}
+\index{ComponentDisplayName@{ComponentDisplayName}!UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ComponentDisplayName()}{ComponentDisplayName()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_aa56b86c8c5876e767eef423fe93e9da5} 
+static string \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings}{Unity\+Engine.\+Rendering.\+Volume\+Debug\+Settings}}$<$ T $>$.Component\+Display\+Name (\begin{DoxyParamCaption}\item[{Type}]{component}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns the name of a component from its \doxylink{class_unity_engine_1_1_rendering_1_1_volume_component_menu_for_render_pipeline}{Volume\+Component\+Menu\+For\+Render\+Pipeline}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & A volume component.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The component display name.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a6697168c6053e08b72f1adaf59103a72}\index{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}!GetVolumes@{GetVolumes}}
+\index{GetVolumes@{GetVolumes}!UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetVolumes()}{GetVolumes()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a6697168c6053e08b72f1adaf59103a72} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume}{Volume}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings}{Unity\+Engine.\+Rendering.\+Volume\+Debug\+Settings}}$<$ T $>$.Get\+Volumes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get an array of volumes on the \doxylink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_acecb1ce5b28f344891c06b46d134445c}{selected\+Camera\+Layer\+Mask} 
+
+\begin{DoxyReturn}{Returns}
+An array of volumes sorted by influence.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings_af7ccde13a3fa830b04fca37bd504b4bd}{Unity\+Engine.\+Rendering.\+IVolume\+Debug\+Settings}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a4155dcfd127bf6383c9459fa71593f0f}\index{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}!GetVolumeWeight@{GetVolumeWeight}}
+\index{GetVolumeWeight@{GetVolumeWeight}!UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetVolumeWeight()}{GetVolumeWeight()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a4155dcfd127bf6383c9459fa71593f0f} 
+float \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings}{Unity\+Engine.\+Rendering.\+Volume\+Debug\+Settings}}$<$ T $>$.Get\+Volume\+Weight (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume}{Volume}}}]{volume}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtains the volume weight. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em volume} & \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The weight of the volume
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings_ae02f4e880050ddb34162fbb8fb1653fa}{Unity\+Engine.\+Rendering.\+IVolume\+Debug\+Settings}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_ad0e4f30fff5d4ca28ed5fc6867290824}\index{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}!RefreshVolumes@{RefreshVolumes}}
+\index{RefreshVolumes@{RefreshVolumes}!UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{RefreshVolumes()}{RefreshVolumes()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_ad0e4f30fff5d4ca28ed5fc6867290824} 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings}{Unity\+Engine.\+Rendering.\+Volume\+Debug\+Settings}}$<$ T $>$.Refresh\+Volumes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume}{Volume}}\mbox{[}$\,$\mbox{]}}]{new\+Volumes}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Refreshes the volumes, fetches the stored volumes on the panel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Volumes} & The list of \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} to refresh\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the volumes have been refreshed
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings_a8ee3ef8f0827f3d812211c6942ccc42f}{Unity\+Engine.\+Rendering.\+IVolume\+Debug\+Settings}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_ad7ddff153239c99fa2e56d4fde0f7595}\index{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}!RegisterCamera@{RegisterCamera}}
+\index{RegisterCamera@{RegisterCamera}!UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{RegisterCamera()}{RegisterCamera()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_ad7ddff153239c99fa2e56d4fde0f7595} 
+static void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings}{Unity\+Engine.\+Rendering.\+Volume\+Debug\+Settings}}$<$ T $>$.Register\+Camera (\begin{DoxyParamCaption}\item[{T}]{additional\+Camera}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Register the camera for the \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} Debug. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em additional\+Camera} & The Additional\+Camera\+Data of the camera to be registered.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a256bad70c1b1a672db9b3e0698170dfd}\index{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}!UnRegisterCamera@{UnRegisterCamera}}
+\index{UnRegisterCamera@{UnRegisterCamera}!UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{UnRegisterCamera()}{UnRegisterCamera()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a256bad70c1b1a672db9b3e0698170dfd} 
+static void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings}{Unity\+Engine.\+Rendering.\+Volume\+Debug\+Settings}}$<$ T $>$.Un\+Register\+Camera (\begin{DoxyParamCaption}\item[{T}]{additional\+Camera}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Unregister the camera for the \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} Debug. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em additional\+Camera} & The Additional\+Camera\+Data of the camera to be registered.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a7ff5a84c38202b6637bc82bd45e658e2}\index{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}!VolumeHasInfluence@{VolumeHasInfluence}}
+\index{VolumeHasInfluence@{VolumeHasInfluence}!UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{VolumeHasInfluence()}{VolumeHasInfluence()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a7ff5a84c38202b6637bc82bd45e658e2} 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings}{Unity\+Engine.\+Rendering.\+Volume\+Debug\+Settings}}$<$ T $>$.Volume\+Has\+Influence (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume}{Volume}}}]{volume}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return if the \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} has influence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em volume} & \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} to check the influence\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the volume has influence
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings_a957c3f2f67034148da1c6f53b67c632d}{Unity\+Engine.\+Rendering.\+IVolume\+Debug\+Settings}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a1ef52dd8be4364eeb069471eb7276dc0}\index{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}!cameras@{cameras}}
+\index{cameras@{cameras}!UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{cameras}{cameras}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a1ef52dd8be4364eeb069471eb7276dc0} 
+IEnumerable$<$Camera$>$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings}{Unity\+Engine.\+Rendering.\+Volume\+Debug\+Settings}}$<$ T $>$.cameras\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the collection of registered cameras. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings_a21db20601d2771c1f5ab38391fea56b9}{Unity\+Engine.\+Rendering.\+IVolume\+Debug\+Settings}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a7f683cdd51b80d278ab99d666f18a82f}\index{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}!selectedCamera@{selectedCamera}}
+\index{selectedCamera@{selectedCamera}!UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{selectedCamera}{selectedCamera}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a7f683cdd51b80d278ab99d666f18a82f} 
+Camera \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings}{Unity\+Engine.\+Rendering.\+Volume\+Debug\+Settings}}$<$ T $>$.selected\+Camera\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Current camera to debug. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings_aa9e64a7140d827eb3ac5b417695d0dda}{Unity\+Engine.\+Rendering.\+IVolume\+Debug\+Settings}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a5ec70a3244b6d2252cef43ad7ecedf96}\index{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}!selectedCameraIndex@{selectedCameraIndex}}
+\index{selectedCameraIndex@{selectedCameraIndex}!UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{selectedCameraIndex}{selectedCameraIndex}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a5ec70a3244b6d2252cef43ad7ecedf96} 
+int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings}{Unity\+Engine.\+Rendering.\+Volume\+Debug\+Settings}}$<$ T $>$.selected\+Camera\+Index\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Selected camera index. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings_a79f848867d1271090294d66515ea4614}{Unity\+Engine.\+Rendering.\+IVolume\+Debug\+Settings}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_acecb1ce5b28f344891c06b46d134445c}\index{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}!selectedCameraLayerMask@{selectedCameraLayerMask}}
+\index{selectedCameraLayerMask@{selectedCameraLayerMask}!UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{selectedCameraLayerMask}{selectedCameraLayerMask}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_acecb1ce5b28f344891c06b46d134445c} 
+Layer\+Mask \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings}{Unity\+Engine.\+Rendering.\+Volume\+Debug\+Settings}}$<$ T $>$.selected\+Camera\+Layer\+Mask\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [abstract]}}
+
+
+
+Selected camera volume layer mask. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings_af1593a4986cccbccb76431b79f64fc4a}{Unity\+Engine.\+Rendering.\+IVolume\+Debug\+Settings}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a8965b2087638cc524d4c2ac7cbfb3ac6}\index{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}!selectedCameraPosition@{selectedCameraPosition}}
+\index{selectedCameraPosition@{selectedCameraPosition}!UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{selectedCameraPosition}{selectedCameraPosition}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a8965b2087638cc524d4c2ac7cbfb3ac6} 
+Vector3 \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings}{Unity\+Engine.\+Rendering.\+Volume\+Debug\+Settings}}$<$ T $>$.selected\+Camera\+Position\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [abstract]}}
+
+
+
+Selected camera volume position. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings_a36ef7093b830bc85be4a4f01cb121872}{Unity\+Engine.\+Rendering.\+IVolume\+Debug\+Settings}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a77908d8f75d88833493176ba8b0e42be}\index{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}!selectedCameraVolumeStack@{selectedCameraVolumeStack}}
+\index{selectedCameraVolumeStack@{selectedCameraVolumeStack}!UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{selectedCameraVolumeStack}{selectedCameraVolumeStack}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a77908d8f75d88833493176ba8b0e42be} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_stack}{Volume\+Stack}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings}{Unity\+Engine.\+Rendering.\+Volume\+Debug\+Settings}}$<$ T $>$.selected\+Camera\+Volume\+Stack\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [abstract]}}
+
+
+
+Selected camera volume stack. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings_aa0a22abc7d146e39465c8fb662b79ad7}{Unity\+Engine.\+Rendering.\+IVolume\+Debug\+Settings}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a11c003f88043158ee1748557cc65714d}\index{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}!selectedComponent@{selectedComponent}}
+\index{selectedComponent@{selectedComponent}!UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{selectedComponent}{selectedComponent}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a11c003f88043158ee1748557cc65714d} 
+int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings}{Unity\+Engine.\+Rendering.\+Volume\+Debug\+Settings}}$<$ T $>$.selected\+Component = 0\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Current volume component to debug. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings_aedcee456e35da3b7dafe00f509666697}{Unity\+Engine.\+Rendering.\+IVolume\+Debug\+Settings}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a7ce62f1a1770fce8c91004a3ca955135}\index{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}!selectedComponentType@{selectedComponentType}}
+\index{selectedComponentType@{selectedComponentType}!UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{selectedComponentType}{selectedComponentType}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_a7ce62f1a1770fce8c91004a3ca955135} 
+Type \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings}{Unity\+Engine.\+Rendering.\+Volume\+Debug\+Settings}}$<$ T $>$.selected\+Component\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Type of the current component to debug. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings_aef968361740a370ca9cb880608ea1c2a}{Unity\+Engine.\+Rendering.\+IVolume\+Debug\+Settings}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_ae3a1d4151aca6924014efb9493563e4d}\index{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}!targetRenderPipeline@{targetRenderPipeline}}
+\index{targetRenderPipeline@{targetRenderPipeline}!UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{targetRenderPipeline}{targetRenderPipeline}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_ae3a1d4151aca6924014efb9493563e4d} 
+Type \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings}{Unity\+Engine.\+Rendering.\+Volume\+Debug\+Settings}}$<$ T $>$.target\+Render\+Pipeline\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [abstract]}}
+
+
+
+Specifies the render pipeline for this volume settings. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings2_a9491cbc4201a6c22564105ac5614c83f}{Unity\+Engine.\+Rendering.\+IVolume\+Debug\+Settings2}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_ae1388175413790b71403b03a2cc42ef7}\index{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}!volumeComponentsPathAndType@{volumeComponentsPathAndType}}
+\index{volumeComponentsPathAndType@{volumeComponentsPathAndType}!UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$@{UnityEngine.Rendering.VolumeDebugSettings$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{volumeComponentsPathAndType}{volumeComponentsPathAndType}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_ae1388175413790b71403b03a2cc42ef7} 
+List$<$(string, Type)$>$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings}{Unity\+Engine.\+Rendering.\+Volume\+Debug\+Settings}}$<$ T $>$.volume\+Components\+Path\+And\+Type\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+List of \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} component types. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings2_aa83679eec35acbad591bc6ff69cdffff}{Unity\+Engine.\+Rendering.\+IVolume\+Debug\+Settings2}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Debugging/Volume\+Debug\+Settings.\+cs\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/Deprecated.\+cs\end{DoxyCompactItemize}

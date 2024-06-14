@@ -1,0 +1,215 @@
+\doxysection{Unity\+Engine.\+Experimental.\+Rendering.\+Universal.\+Pixel\+Perfect\+Camera Class Reference}
+\hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera}{}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera}\index{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}}
+
+
+The Pixel Perfect Camera component ensures your pixel art remains crisp and clear at different resolutions, and stable in motion.  
+
+
+Inheritance diagram for Unity\+Engine.\+Experimental.\+Rendering.\+Universal.\+Pixel\+Perfect\+Camera\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.407035cm]{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a5a59a73052367ffd234725b574206f40}{Crop\+Frame}} \{ \newline
+\mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a5a59a73052367ffd234725b574206f40a6adf97f83acf6453d4a6a4b1070f3754}{None}}
+, \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a5a59a73052367ffd234725b574206f40a8672e256b4f7256712b0d4bdfbc80732}{Pillarbox}}
+, \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a5a59a73052367ffd234725b574206f40a3dc18b8e71fc36c10329da4554d58737}{Letterbox}}
+, \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a5a59a73052367ffd234725b574206f40aecd15dbcf9450c1701a64183673c8ae8}{Windowbox}}
+, \newline
+\mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a5a59a73052367ffd234725b574206f40a913e37c80dc03c2ea90ede99a30e591e}{Stretch\+Fill}}
+ \}
+\begin{DoxyCompactList}\small\item\em An enumeration of the types of display cropping. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_ac802f39b285019740a83290b07961bd4}{Grid\+Snapping}} \{ \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_ac802f39b285019740a83290b07961bd4a6adf97f83acf6453d4a6a4b1070f3754}{None}}
+, \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_ac802f39b285019740a83290b07961bd4aa7b1bd339d49f1636591da1023e1be73}{Pixel\+Snapping}}
+, \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_ac802f39b285019740a83290b07961bd4a16db840206302bb1b5344cfb755db7f7}{Upscale\+Render\+Texture}}
+ \}
+\begin{DoxyCompactList}\small\item\em Determines how pixels are snapped to the grid. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a8df5bdd0f67e34da888fb8e61f405275}{Pixel\+Perfect\+Filter\+Mode}} \{ \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a8df5bdd0f67e34da888fb8e61f405275a77b103b6b671e7b4b193ddfef38942e5}{Retro\+AA}}
+, \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a8df5bdd0f67e34da888fb8e61f405275a2a3cd5946cfd317eb99c3d32e35e2d4c}{Point}}
+ \}
+\begin{DoxyCompactList}\small\item\em Defines the filter mode use to render the final render target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Vector3 \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a0f03a0bc3b31001516ec42d836894c30}{Round\+To\+Pixel}} (Vector3 position)
+\begin{DoxyCompactList}\small\item\em Round a arbitrary position to an integer pixel position. Works in world space. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_affb993a1aa27751fb3dcc2278f66553c}{Correct\+Cinemachine\+Ortho\+Size}} (float target\+Ortho\+Size)
+\begin{DoxyCompactList}\small\item\em Find a pixel-\/perfect orthographic size as close to target\+Ortho\+Size as possible. Used by \doxylink{namespace_cinemachine}{Cinemachine} to solve compatibility issues with Pixel Perfect Camera. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_adca897fcdb81a7f6b849c269761a18a4}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_adca897fcdb81a7f6b849c269761a18a4} 
+void {\bfseries On\+Before\+Serialize} ()
+\begin{DoxyCompactList}\small\item\em On\+Before\+Serialize implementation. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_ad87c8d301b3032c13ca4c1a7c0c1f7b5}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_ad87c8d301b3032c13ca4c1a7c0c1f7b5} 
+void {\bfseries On\+After\+Deserialize} ()
+\begin{DoxyCompactList}\small\item\em On\+After\+Serialize implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_aad0c201e41c5a4ecf33773e41e06641c}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_aad0c201e41c5a4ecf33773e41e06641c} 
+\mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a5a59a73052367ffd234725b574206f40}{Crop\+Frame}} {\bfseries crop\+Frame}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Defines how the output display will be cropped. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a46cb1c5715fb06aecffc74a87d0076f5}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a46cb1c5715fb06aecffc74a87d0076f5} 
+\mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_ac802f39b285019740a83290b07961bd4}{Grid\+Snapping}} {\bfseries grid\+Snapping}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Defines if pixels will be locked to a grid determined by assets\+PPU. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a6178875cbca2f45f5996eafd517c7ddc}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a6178875cbca2f45f5996eafd517c7ddc} 
+float {\bfseries orthographic\+Size}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The target orthographic size of the camera. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_ab607804d4386a9745d7ad9ba8441a103}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_ab607804d4386a9745d7ad9ba8441a103} 
+int {\bfseries assets\+PPU}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Match this value to to the Pixels Per Unit values of all Sprites within the Scene. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a6909651f70e0677656ecc8ccd98e144a}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a6909651f70e0677656ecc8ccd98e144a} 
+int {\bfseries ref\+ResolutionX}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The original horizontal resolution your Assets are designed for. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a316b75265a4870b8e1690ca7131b90e3}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a316b75265a4870b8e1690ca7131b90e3} 
+int {\bfseries ref\+ResolutionY}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Original vertical resolution your Assets are designed for. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a4dfc9ddd45c9a6e3b8a7c752545e729f}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a4dfc9ddd45c9a6e3b8a7c752545e729f} 
+bool {\bfseries upscale\+RT}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Set to true to have the Scene rendered to a temporary texture set as close as possible to the Reference Resolution, while maintaining the full screen aspect ratio. This temporary texture is then upscaled to fit the full screen. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a00bcc6933d0a471a9a3bd4baf7bac83f}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a00bcc6933d0a471a9a3bd4baf7bac83f} 
+bool {\bfseries pixel\+Snapping}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Set to true to prevent subpixel movement and make Sprites appear to move in pixel-\/by-\/pixel increments. Only applicable when upscale\+RT is false. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a0c6db8af765df16e6250daa0998515eb}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a0c6db8af765df16e6250daa0998515eb} 
+bool {\bfseries crop\+FrameX}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Set to true to crop the viewport with black bars to match ref\+ResolutionX in the horizontal direction. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a18e0efbcf4755e654b549e1ee6da6e01}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a18e0efbcf4755e654b549e1ee6da6e01} 
+bool {\bfseries crop\+FrameY}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Set to true to crop the viewport with black bars to match ref\+ResolutionY in the vertical direction. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a06ea325da2c6ab47fedd527e6e0a49e5}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a06ea325da2c6ab47fedd527e6e0a49e5} 
+bool {\bfseries stretch\+Fill}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Set to true to expand the viewport to fit the screen resolution while maintaining the viewport\textquotesingle{}s aspect ratio. Only applicable when both crop\+FrameX and crop\+FrameY are true. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_ae36c4892847c0955449cdc50bf926859}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_ae36c4892847c0955449cdc50bf926859} 
+int {\bfseries pixel\+Ratio}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Ratio of the rendered Sprites compared to their original size (readonly). \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a2d1b7d81ed9893f11d63a4719d416416}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a2d1b7d81ed9893f11d63a4719d416416} 
+bool {\bfseries requires\+Upscale\+Pass}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns if an upscale pass is required. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The Pixel Perfect Camera component ensures your pixel art remains crisp and clear at different resolutions, and stable in motion. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a5a59a73052367ffd234725b574206f40}\index{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}!CropFrame@{CropFrame}}
+\index{CropFrame@{CropFrame}!UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}}
+\doxysubsubsection{\texorpdfstring{CropFrame}{CropFrame}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a5a59a73052367ffd234725b574206f40} 
+enum \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a5a59a73052367ffd234725b574206f40}{Unity\+Engine.\+Experimental.\+Rendering.\+Universal.\+Pixel\+Perfect\+Camera.\+Crop\+Frame}}}
+
+
+
+An enumeration of the types of display cropping. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}}\index{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}!None@{None}}}\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a5a59a73052367ffd234725b574206f40a6adf97f83acf6453d4a6a4b1070f3754}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a5a59a73052367ffd234725b574206f40} 
+None&No cropping. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Pillarbox@{Pillarbox}!UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}}\index{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}!Pillarbox@{Pillarbox}}}\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a5a59a73052367ffd234725b574206f40a8672e256b4f7256712b0d4bdfbc80732}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a5a59a73052367ffd234725b574206f40} 
+Pillarbox&Black borders added to the left and right of viewport to match Reference Resolution. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Letterbox@{Letterbox}!UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}}\index{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}!Letterbox@{Letterbox}}}\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a5a59a73052367ffd234725b574206f40a3dc18b8e71fc36c10329da4554d58737}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a5a59a73052367ffd234725b574206f40} 
+Letterbox&Black borders added to the top and bottom of viewport to match Reference Resolution. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Windowbox@{Windowbox}!UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}}\index{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}!Windowbox@{Windowbox}}}\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a5a59a73052367ffd234725b574206f40aecd15dbcf9450c1701a64183673c8ae8}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a5a59a73052367ffd234725b574206f40} 
+Windowbox&Black borders added to all sides of viewport to match Reference Resolution. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{StretchFill@{StretchFill}!UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}}\index{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}!StretchFill@{StretchFill}}}\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a5a59a73052367ffd234725b574206f40a913e37c80dc03c2ea90ede99a30e591e}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a5a59a73052367ffd234725b574206f40} 
+Stretch\+Fill&Expands the viewport to fit the screen resolution while maintaining the viewport\textquotesingle{}s aspect ratio. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_ac802f39b285019740a83290b07961bd4}\index{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}!GridSnapping@{GridSnapping}}
+\index{GridSnapping@{GridSnapping}!UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}}
+\doxysubsubsection{\texorpdfstring{GridSnapping}{GridSnapping}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_ac802f39b285019740a83290b07961bd4} 
+enum \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_ac802f39b285019740a83290b07961bd4}{Unity\+Engine.\+Experimental.\+Rendering.\+Universal.\+Pixel\+Perfect\+Camera.\+Grid\+Snapping}}}
+
+
+
+Determines how pixels are snapped to the grid. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}}\index{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}!None@{None}}}\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_ac802f39b285019740a83290b07961bd4a6adf97f83acf6453d4a6a4b1070f3754}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_ac802f39b285019740a83290b07961bd4} 
+None&No snapping. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PixelSnapping@{PixelSnapping}!UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}}\index{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}!PixelSnapping@{PixelSnapping}}}\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_ac802f39b285019740a83290b07961bd4aa7b1bd339d49f1636591da1023e1be73}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_ac802f39b285019740a83290b07961bd4} 
+Pixel\+Snapping&Prevent subpixel movement and make Sprites appear to move in pixel-\/by-\/pixel increments. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UpscaleRenderTexture@{UpscaleRenderTexture}!UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}}\index{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}!UpscaleRenderTexture@{UpscaleRenderTexture}}}\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_ac802f39b285019740a83290b07961bd4a16db840206302bb1b5344cfb755db7f7}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_ac802f39b285019740a83290b07961bd4} 
+Upscale\+Render\+Texture&The scene is rendered to a temporary texture set as close as possible to the Reference Resolution, while maintaining the full screen aspect ratio. This temporary texture is then upscaled to fit the full screen. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a8df5bdd0f67e34da888fb8e61f405275}\index{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}!PixelPerfectFilterMode@{PixelPerfectFilterMode}}
+\index{PixelPerfectFilterMode@{PixelPerfectFilterMode}!UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}}
+\doxysubsubsection{\texorpdfstring{PixelPerfectFilterMode}{PixelPerfectFilterMode}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a8df5bdd0f67e34da888fb8e61f405275} 
+enum \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a8df5bdd0f67e34da888fb8e61f405275}{Unity\+Engine.\+Experimental.\+Rendering.\+Universal.\+Pixel\+Perfect\+Camera.\+Pixel\+Perfect\+Filter\+Mode}}}
+
+
+
+Defines the filter mode use to render the final render target. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RetroAA@{RetroAA}!UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}}\index{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}!RetroAA@{RetroAA}}}\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a8df5bdd0f67e34da888fb8e61f405275a77b103b6b671e7b4b193ddfef38942e5}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a8df5bdd0f67e34da888fb8e61f405275} 
+Retro\+AA&Uses point filter to upscale to closest multiple of Reference Resolution, followed by bilinear filter to the target resolution. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Point@{Point}!UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}}\index{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}!Point@{Point}}}\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a8df5bdd0f67e34da888fb8e61f405275a2a3cd5946cfd317eb99c3d32e35e2d4c}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a8df5bdd0f67e34da888fb8e61f405275} 
+Point&Uses point filter to upscale to target resolution. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_affb993a1aa27751fb3dcc2278f66553c}\index{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}!CorrectCinemachineOrthoSize@{CorrectCinemachineOrthoSize}}
+\index{CorrectCinemachineOrthoSize@{CorrectCinemachineOrthoSize}!UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}}
+\doxysubsubsection{\texorpdfstring{CorrectCinemachineOrthoSize()}{CorrectCinemachineOrthoSize()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_affb993a1aa27751fb3dcc2278f66553c} 
+float Unity\+Engine.\+Experimental.\+Rendering.\+Universal.\+Pixel\+Perfect\+Camera.\+Correct\+Cinemachine\+Ortho\+Size (\begin{DoxyParamCaption}\item[{float}]{target\+Ortho\+Size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Find a pixel-\/perfect orthographic size as close to target\+Ortho\+Size as possible. Used by \doxylink{namespace_cinemachine}{Cinemachine} to solve compatibility issues with Pixel Perfect Camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Ortho\+Size} & Orthographic size from the live \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corrected orthographic size.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a0f03a0bc3b31001516ec42d836894c30}\index{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}!RoundToPixel@{RoundToPixel}}
+\index{RoundToPixel@{RoundToPixel}!UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera@{UnityEngine.Experimental.Rendering.Universal.PixelPerfectCamera}}
+\doxysubsubsection{\texorpdfstring{RoundToPixel()}{RoundToPixel()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_universal_1_1_pixel_perfect_camera_a0f03a0bc3b31001516ec42d836894c30} 
+Vector3 Unity\+Engine.\+Experimental.\+Rendering.\+Universal.\+Pixel\+Perfect\+Camera.\+Round\+To\+Pixel (\begin{DoxyParamCaption}\item[{Vector3}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Round a arbitrary position to an integer pixel position. Works in world space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position you want to round.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The rounded pixel position. Depending on the values of upscale\+RT and pixel\+Snapping, it could be a screen pixel position or an art pixel position. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/2\+D/Pixel\+Perfect\+Camera.\+cs\end{DoxyCompactItemize}

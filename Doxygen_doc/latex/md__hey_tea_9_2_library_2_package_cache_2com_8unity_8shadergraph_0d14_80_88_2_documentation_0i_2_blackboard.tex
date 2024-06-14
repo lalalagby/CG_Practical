@@ -1,0 +1,78 @@
+\chapter{Blackboard}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard}\index{Blackboard@{Blackboard}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2949}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2949}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2950}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2950}
+You can use the Blackboard to define, order, and categorize the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types}{Properties}{0} and \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_keywords}{Keywords}{0} in a graph. From the Blackboard, you can also edit the path for the selected Shader Graph Asset or Sub Graph.
+
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2951}{}\doxysection{\texorpdfstring{Accessing the Blackboard}{Accessing the Blackboard}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2951}
+The Blackboard is visible by default, and you cannot drag it off the graph and lose it. However, you are able to position it anywhere in the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_shader-_graph-_window}{Shader Graph Window}{0}. It always maintains the same distance from the nearest corner, even if you resize the window.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2952}{}\doxysection{\texorpdfstring{Adding properties and keywords to the Blackboard}{Adding properties and keywords to the Blackboard}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2952}
+To create a new property or keyword, click the {\bfseries{Add (+)}} button on the Blackboard\textquotesingle{}s title bar and select a type. For a full list of property types, see \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types}{Property Types}{0}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2953}{}\doxysection{\texorpdfstring{Editing properties and keywords}{Editing properties and keywords}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2953}
+Select a property or keyword in the Blackboard or graph to modify its settings in the Node Settings Menu.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Setting   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Setting   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+Name   &The property\textquotesingle{}s display name. The Editor strips quotation marks from display names and replaces them with underscores. Rename an item via the Blackboard by double-\/clicking on its name.    \\\cline{1-2}
+Reference   &The name that Shader Graph uses internally for this property. Although the Editor populates this value by default, you can modify it. To revert to the original reference name, right-\/click on the word {\bfseries{Reference}} (not the entry field) and select {\bfseries{Reset Reference}} in the context menu. If the Reference Name contains any characters that HLSL does not support, the Editor replaces those characters with underscores.    \\\cline{1-2}
+Default   &The default value of this property in any Material based on this Shader Graph. For example, if you have a Shader Graph for grass and expose the grass color as a property, you might set the default to Green.    \\\cline{1-2}
+Precision   &Set the precision mode for the property. See \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_precision-_modes}{Precision Modes}{0}.    \\\cline{1-2}
+Exposed   &Enable this setting to make the property available for you to edit via the C\# API. Enabled by default.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2954}{}\doxysection{\texorpdfstring{Modifying and selecting keywords and properties}{Modifying and selecting keywords and properties}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2954}
+
+\begin{DoxyItemize}
+\item To reorder items listed on the Blackboard, drag and drop them.
+\item To delete items, use the Delete key on Windows or Command + Backspace keys on mac\+OS.
+\item To select multiple items, hold down the Ctrl key while making your selections.
+\item To cancel the selection of one or multiple items, hold down the Ctrl key while clicking on the items you want to remove from the selection.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2955}{}\doxysection{\texorpdfstring{Using Blackboard categories}{Using Blackboard categories}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2955}
+To make the properties in your shader more discoverable, organize them into categories. Expand and collapse categories to make the Blackboard easier to navigate.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2956}{}\doxysubsection{\texorpdfstring{Creating, renaming, moving, and deleting categories}{Creating, renaming, moving, and deleting categories}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2956}
+
+\begin{DoxyItemize}
+\item To add a category, use {\bfseries{+}} on the Blackboard.
+\item To rename a category, double-\/click on the category name, or right-\/click and select {\bfseries{Rename}}.
+\item To move a category within the Blackboard, select and drag it.
+\item To remove a category, select it and press {\bfseries{Delete}}, or right-\/click and select {\bfseries{Delete}}. Deleting a category also deletes the properties within it, so move those you wish to keep.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2957}{}\doxysubsection{\texorpdfstring{Adding, removing, and reordering properties and keywords}{Adding, removing, and reordering properties and keywords}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2957}
+
+\begin{DoxyItemize}
+\item To add a property or keyword to a category, expand the category with the foldout (⌄) symbol, then drag and drop the property or keyword onto the expanded category.
+\end{DoxyItemize}
+
+
+
+
+\begin{DoxyItemize}
+\item To remove a property or keyword, select it and press {\bfseries{Delete}}, or right-\/click and select {\bfseries{Delete}}.
+\item To re-\/order properties or keywords, drag and drop them within a category or move them into other categories.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2958}{}\doxysubsection{\texorpdfstring{Creating a category for specific properties and keywords}{Creating a category for specific properties and keywords}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2958}
+Select multiple properties or keywords and use {\bfseries{+}} on the Blackboard to create a category that contains all of the items you have selected.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2959}{}\doxysubsection{\texorpdfstring{Copying and pasting categories, with or without properties}{Copying and pasting categories, with or without properties}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2959}
+You can paste empty categories, categories with all of their properties, and categories with some of their properties into one or more graphs. To copy a category with all of its properties\+:
+\begin{DoxyEnumerate}
+\item Select the property.
+\item Copy it with {\bfseries{Ctrl+C}}.
+\item Paste it into your target graph with {\bfseries{Ctrl+V}}.
+\end{DoxyEnumerate}
+
+To copy a specific set of properties\+:
+\begin{DoxyEnumerate}
+\item Select the category.
+\item Hold down the Ctrl key.
+\item Click the properties you do not want to include to remove them from the selection.
+\item Copy the property with {\bfseries{Ctrl+C}}.
+\item Paste it into your target graph with {\bfseries{Ctrl+V}}.
+\end{DoxyEnumerate}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2960}{}\doxysubsection{\texorpdfstring{Using categories in the Material Inspector}{Using categories in the Material Inspector}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2960}
+To modify a material you have created with a Shader Graph, you can adjust specific property or keyword values in the Material Inspector, or edit the graph itself.
+
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2961}{}\doxysubsubsection{\texorpdfstring{Working with Streaming Virtual Textures}{Working with Streaming Virtual Textures}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2961}
+\href{https://docs.unity3d.com/Documentation/Manual/svt-use-in-shader-graph.html}{\texttt{ Streaming Virtual Texture Properties}} sample texture layers. To access these layers in the Material Inspector, expand the relevant {\bfseries{Virtual Texture}} section with the ⌄ symbol next to its name. You can add and remove layers via the Inspector.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2962}{}\doxysection{\texorpdfstring{Exposing properties and keywords}{Exposing properties and keywords}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2962}
+\doxylink{namespace_unity}{Unity} exposes properties and keywords by default. This enables write access from scripts, so that you can edit them via the C\# API, in addition to the graph. Exposed items have a green dot in their label. Enable or disable this feature in the {\bfseries{Node Settings}} menu.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2963}{}\doxysection{\texorpdfstring{Creating nodes}{Creating nodes}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard_autotoc_md2963}
+Drag a property or keyword from the Blackboard into the graph to create a node of that kind. Settings for a node in the graph are identical to those for the related property or keyword in the Blackboard. Expand these nodes to use a sub-\/member of the property value. Property node names include a green dot if the property is exposed. 

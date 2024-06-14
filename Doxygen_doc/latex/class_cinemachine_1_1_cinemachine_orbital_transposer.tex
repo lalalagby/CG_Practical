@@ -1,0 +1,399 @@
+\doxysection{Cinemachine.\+Cinemachine\+Orbital\+Transposer Class Reference}
+\hypertarget{class_cinemachine_1_1_cinemachine_orbital_transposer}{}\label{class_cinemachine_1_1_cinemachine_orbital_transposer}\index{Cinemachine.CinemachineOrbitalTransposer@{Cinemachine.CinemachineOrbitalTransposer}}
+
+
+This is a Cinemachine\+Component in the the Body section of the component pipeline. Its job is to position the camera in a variable relationship to a the vcam\textquotesingle{}s Follow target object, with offsets and damping.  
+
+
+Inheritance diagram for Cinemachine.\+Cinemachine\+Orbital\+Transposer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_cinemachine_1_1_cinemachine_orbital_transposer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_orbital_transposer_1_1_heading}{Heading}}
+\begin{DoxyCompactList}\small\item\em How the "{}forward"{} direction is defined. Orbital offset is in relation to the forward direction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_orbital_transposer_a555ee6081cde736a6c0997a79fafe221}{Update\+Heading}} (float delta\+Time, Vector3 up, ref \mbox{\hyperlink{struct_cinemachine_1_1_axis_state}{Axis\+State}} axis)
+\begin{DoxyCompactList}\small\item\em Update the X axis and calculate the heading. This can be called by a delegate with a custom axis. Note that this method is obsolete. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_orbital_transposer_ad989f8a8b743175908b8b4150fa32eaa}{Update\+Heading}} (float delta\+Time, Vector3 up, ref \mbox{\hyperlink{struct_cinemachine_1_1_axis_state}{Axis\+State}} axis, ref \mbox{\hyperlink{struct_cinemachine_1_1_axis_state_1_1_recentering}{Axis\+State.\+Recentering}} recentering, bool is\+Live)
+\begin{DoxyCompactList}\small\item\em Update the X axis and calculate the heading. This can be called by a delegate with a custom axis. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_orbital_transposer_aaa533c3b92247c541196bf1507e43f2f}\label{class_cinemachine_1_1_cinemachine_orbital_transposer_aaa533c3b92247c541196bf1507e43f2f} 
+void {\bfseries Update\+Input\+Axis\+Provider} ()
+\begin{DoxyCompactList}\small\item\em API for the inspector. Internal use only. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_orbital_transposer_a6192372bb2100a6c7ac98f28ab7613e4}{On\+Target\+Object\+Warped}} (Transform target, Vector3 position\+Delta)
+\begin{DoxyCompactList}\small\item\em This is called to notify the us that a target got warped, so that we can update its internal state to make the camera also warp seamlessy. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_orbital_transposer_aff4e432dd6ef054ecca4d423d349023b}{Force\+Camera\+Position}} (Vector3 pos, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_a52fb5204e1ab5d1e684e521a644bfcfca3743af167c53361d795405561faac2b2}{Quaternion}} rot)
+\begin{DoxyCompactList}\small\item\em Force the virtual camera to assume a given position and orientation. \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_orbital_transposer_a96e89fd8e8f7b028fbdd209a974b70c1}{On\+Transition\+From\+Camera}} (\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} from\+Cam, Vector3 world\+Up, float delta\+Time, ref \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_virtual_camera_base_1_1_transition_params}{Cinemachine\+Virtual\+Camera\+Base.\+Transition\+Params}} transition\+Params)
+\begin{DoxyCompactList}\small\item\em Notification that this virtual camera is going live. Base class implementation does nothing. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_orbital_transposer_a67b7ff335a7548381a1050996a1db233}{Get\+Axis\+Closest\+Value}} (Vector3 camera\+Pos, Vector3 up)
+\begin{DoxyCompactList}\small\item\em What axis value would we need to get as close as possible to the desired camera\+Pos? \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_orbital_transposer_a09cc55b60f2ac9552e178e8f02d80dd7}{Mutate\+Camera\+State}} (ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} cur\+State, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Positions the virtual camera according to the transposer rules. \end{DoxyCompactList}\item 
+override Vector3 \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_orbital_transposer_a4862055b3f74937fb41a1f5c9a88fd6e}{Get\+Target\+Camera\+Position}} (Vector3 world\+Up)
+\begin{DoxyCompactList}\small\item\em Internal API for the Inspector \doxylink{namespace_cinemachine_1_1_editor}{Editor}, so it can draw a marker at the target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer}{Cinemachine.\+Cinemachine\+Transposer}}}
+\begin{DoxyCompactItemize}
+\item 
+override float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_ac86ae7e31203b6f41e0784d91a64ca05}{Get\+Max\+Damp\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Report maximum damping time needed for this component. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_ad422ba8f998aae4d18d331a9b8a92d9d}{Mutate\+Camera\+State}} (ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} cur\+State, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Positions the virtual camera according to the transposer rules. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_a86ff4df7f736deabe1a68956e4a36d36}{On\+Target\+Object\+Warped}} (Transform target, Vector3 position\+Delta)
+\begin{DoxyCompactList}\small\item\em This is called to notify the us that a target got warped, so that we can update its internal state to make the camera also warp seamlessy. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_a6b52a364356a83fa90003185d8b834cd}{Force\+Camera\+Position}} (Vector3 pos, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_a52fb5204e1ab5d1e684e521a644bfcfca3743af167c53361d795405561faac2b2}{Quaternion}} rot)
+\begin{DoxyCompactList}\small\item\em Force the virtual camera to assume a given position and orientation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_a52fb5204e1ab5d1e684e521a644bfcfca3743af167c53361d795405561faac2b2}{Quaternion}} \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_a9391fc6311fa649d3dc0ce8923f0c2fe}{Get\+Reference\+Orientation}} (Vector3 world\+Up)
+\begin{DoxyCompactList}\small\item\em Internal API for the Inspector \doxylink{namespace_cinemachine_1_1_editor}{Editor}, so it can draw a marker at the target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base}{Cinemachine.\+Cinemachine\+Component\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_aacf2cbdefb4d8fd09dabb01ec65f2fbd}{Pre\+Pipeline\+Mutate\+Camera\+State}} (ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} cur\+State, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Override this to do such things as offset the Referece\+Look\+At. Base class implementation does nothing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_a9dea4262821631006faf71feb3df050f}{Mutate\+Camera\+State}} (ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} cur\+State, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Mutates the camera state. This state will later be applied to the camera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_orbital_transposer_a7a0195773811a12bbccf2e72330dc4bd}\label{class_cinemachine_1_1_cinemachine_orbital_transposer_a7a0195773811a12bbccf2e72330dc4bd} 
+\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_orbital_transposer_1_1_heading}{Heading}} {\bfseries m\+\_\+\+Heading} = new \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_orbital_transposer_1_1_heading}{Heading}}(\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_orbital_transposer_1_1_heading_acce591417e13af3755e231e508cb6fe1ad51f44ff76a97e47e22e43e1c0f14354}{Heading.\+Heading\+Definition.\+Target\+Forward}}, 4, 0)
+\begin{DoxyCompactList}\small\item\em The definition of Forward. Camera will follow behind. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_orbital_transposer_a77f6457ca7544ebeb1ddaf0a7ef4c56b}\label{class_cinemachine_1_1_cinemachine_orbital_transposer_a77f6457ca7544ebeb1ddaf0a7ef4c56b} 
+\mbox{\hyperlink{struct_cinemachine_1_1_axis_state_1_1_recentering}{Axis\+State.\+Recentering}} {\bfseries m\+\_\+\+Recenter\+To\+Target\+Heading} = new \mbox{\hyperlink{struct_cinemachine_1_1_axis_state_1_1_recentering}{Axis\+State.\+Recentering}}(true, 1, 2)
+\begin{DoxyCompactList}\small\item\em Parameters that control Automating \doxylink{struct_cinemachine_1_1_cinemachine_orbital_transposer_1_1_heading}{Heading} Recentering. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_orbital_transposer_aec8b0fb8042359a8500e19697390de5c}\label{class_cinemachine_1_1_cinemachine_orbital_transposer_aec8b0fb8042359a8500e19697390de5c} 
+\mbox{\hyperlink{struct_cinemachine_1_1_axis_state}{Axis\+State}} {\bfseries m\+\_\+\+XAxis} = new \mbox{\hyperlink{struct_cinemachine_1_1_axis_state}{Axis\+State}}(-\/180, 180, true, false, 300f, 0.\+1f, 0.\+1f, "{}Mouse X"{}, true)
+\begin{DoxyCompactList}\small\item\em Axis representing the current heading. Value is in degrees and represents a rotation about the up vector. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_orbital_transposer_aa065c2be5544863d73940ff40f1fc7bd}\label{class_cinemachine_1_1_cinemachine_orbital_transposer_aa065c2be5544863d73940ff40f1fc7bd} 
+bool {\bfseries m\+\_\+\+Heading\+Is\+Slave} = false
+\begin{DoxyCompactList}\small\item\em Drive the x-\/axis setting programmatically. Automatic heading updating will be disabled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer}{Cinemachine.\+Cinemachine\+Transposer}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_ac2ed72c89186c06f0d7972e3ad65ab0b}{Binding\+Mode}} {\bfseries m\+\_\+\+Binding\+Mode} = \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_ac2ed72c89186c06f0d7972e3ad65ab0baa1c4a85bb5af449a9337c20ec293e621}{Binding\+Mode.\+Lock\+To\+Target\+With\+World\+Up}}
+\begin{DoxyCompactList}\small\item\em The coordinate space to use when interpreting the offset from the target. \end{DoxyCompactList}\item 
+Vector3 {\bfseries m\+\_\+\+Follow\+Offset} = Vector3.\+back \texorpdfstring{$\ast$}{*} 10f
+\begin{DoxyCompactList}\small\item\em The distance which the transposer will attempt to maintain from the transposer subject. \end{DoxyCompactList}\item 
+float {\bfseries m\+\_\+\+XDamping} = 1f
+\begin{DoxyCompactList}\small\item\em How aggressively the camera tries to maintain the offset in the X-\/axis. Small numbers are more responsive, rapidly translating the camera to keep the target\textquotesingle{}s x-\/axis offset. Larger numbers give a more heavy slowly responding camera. Using different settings per axis can yield a wide range of camera behaviors. \end{DoxyCompactList}\item 
+float {\bfseries m\+\_\+\+YDamping} = 1f
+\begin{DoxyCompactList}\small\item\em How aggressively the camera tries to maintain the offset in the Y-\/axis. Small numbers are more responsive, rapidly translating the camera to keep the target\textquotesingle{}s y-\/axis offset. Larger numbers give a more heavy slowly responding camera. Using different settings per axis can yield a wide range of camera behaviors. \end{DoxyCompactList}\item 
+float {\bfseries m\+\_\+\+ZDamping} = 1f
+\begin{DoxyCompactList}\small\item\em How aggressively the camera tries to maintain the offset in the Z-\/axis. Small numbers are more responsive, rapidly translating the camera to keep the target\textquotesingle{}s z-\/axis offset. Larger numbers give a more heavy slowly responding camera. Using different settings per axis can yield a wide range of camera behaviors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_a52fb5204e1ab5d1e684e521a644bfcfc}{Angular\+Damping\+Mode}} {\bfseries m\+\_\+\+Angular\+Damping\+Mode} = \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_a52fb5204e1ab5d1e684e521a644bfcfca0a7532036415f2491bf5f952220827b8}{Angular\+Damping\+Mode.\+Euler}}
+\begin{DoxyCompactList}\small\item\em How to calculate the angular damping for the target orientation. Use Quaternion if you expect the target to take on very steep pitches, which would be subject to gimbal lock if Eulers are used. \end{DoxyCompactList}\item 
+float {\bfseries m\+\_\+\+Pitch\+Damping} = 0
+\begin{DoxyCompactList}\small\item\em How aggressively the camera tries to track the target rotation\textquotesingle{}s X angle. Small numbers are more responsive. Larger numbers give a more heavy slowly responding camera. \end{DoxyCompactList}\item 
+float {\bfseries m\+\_\+\+Yaw\+Damping} = 0
+\begin{DoxyCompactList}\small\item\em How aggressively the camera tries to track the target rotation\textquotesingle{}s Y angle. Small numbers are more responsive. Larger numbers give a more heavy slowly responding camera. \end{DoxyCompactList}\item 
+float {\bfseries m\+\_\+\+Roll\+Damping} = 0f
+\begin{DoxyCompactList}\small\item\em How aggressively the camera tries to track the target rotation\textquotesingle{}s Z angle. Small numbers are more responsive. Larger numbers give a more heavy slowly responding camera. \end{DoxyCompactList}\item 
+float {\bfseries m\+\_\+\+Angular\+Damping} = 0f
+\begin{DoxyCompactList}\small\item\em How aggressively the camera tries to track the target\textquotesingle{}s orientation. Small numbers are more responsive. Larger numbers give a more heavy slowly responding camera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_orbital_transposer_a7d762f4536124cee6e22266557294289}{On\+Validate}} ()
+\begin{DoxyCompactList}\small\item\em Legacy support for old serialized versions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer}{Cinemachine.\+Cinemachine\+Transposer}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_a61cca055c8498f20ffcbdcc2355116bb}{Init\+Prev\+Frame\+State\+Info}} (ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} cur\+State, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Initializes the state for previous frame if appropriate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_af8c57829cda34cabaac9eaabdb2083c3}{Track\+Target}} (float delta\+Time, Vector3 up, Vector3 desired\+Camera\+Offset, out Vector3 out\+Target\+Position, out \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_a52fb5204e1ab5d1e684e521a644bfcfca3743af167c53361d795405561faac2b2}{Quaternion}} out\+Target\+Orient)
+\begin{DoxyCompactList}\small\item\em Positions the virtual camera according to the transposer rules. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_aabfab4a40c1fe1f11ab614ecf67cfdf7}{Get\+Offset\+For\+Minimum\+Target\+Distance}} (Vector3 damped\+Target\+Pos, Vector3 camera\+Offset, Vector3 camera\+Fwd, Vector3 up, Vector3 actual\+Target\+Pos)
+\begin{DoxyCompactList}\small\item\em Return a new damped target position that respects the minimum distance from the real target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_orbital_transposer_a876bfaf30d2801a82e83bf125f1535d7}\label{class_cinemachine_1_1_cinemachine_orbital_transposer_a876bfaf30d2801a82e83bf125f1535d7} 
+override bool {\bfseries Requires\+User\+Input}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Orbital\+Transposer is controlled by input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer}{Cinemachine.\+Cinemachine\+Transposer}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries Hide\+Offset\+In\+Inspector}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Hide the offset in int inspector. Used by Free\+Look. \end{DoxyCompactList}\item 
+Vector3 {\bfseries Effective\+Offset}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the target offset, with sanitization. \end{DoxyCompactList}\item 
+override bool {\bfseries Is\+Valid}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if component is enabled and has a valid Follow target. \end{DoxyCompactList}\item 
+override \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}} {\bfseries Stage}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{namespace_cinemachine}{Cinemachine} Pipeline stage that this component implements. Always returns the Body stage. \end{DoxyCompactList}\item 
+Vector3 {\bfseries Damping}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Damping speeds for each of the 3 axes of the offset from target. \end{DoxyCompactList}\item 
+Vector3 {\bfseries Angular\+Damping}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Damping speeds for each of the 3 axes of the target\textquotesingle{}s rotation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base}{Cinemachine.\+Cinemachine\+Component\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} {\bfseries Virtual\+Camera}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the associated \doxylink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}. \end{DoxyCompactList}\item 
+Transform {\bfseries Follow\+Target}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the owner vcam\textquotesingle{}s Follow target. \end{DoxyCompactList}\item 
+Transform {\bfseries Look\+At\+Target}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the owner vcam\textquotesingle{}s Look\+At target. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}} {\bfseries Abstract\+Follow\+Target\+Group}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get Follow target as \doxylink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}, or null if target is not a group. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}} {\bfseries Follow\+Target\+Group}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get Follow target as \doxylink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}, or null if target is not a \doxylink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}. \end{DoxyCompactList}\item 
+Vector3 {\bfseries Follow\+Target\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the position of the Follow target. Special handling\+: If the Follow target is a Virtual\+Camera, returns the vcam State\textquotesingle{}s position, not the transform\textquotesingle{}s position. \end{DoxyCompactList}\item 
+Quaternion {\bfseries Follow\+Target\+Rotation}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the rotation of the Follow target. Special handling\+: If the Follow target is a Virtual\+Camera, returns the vcam State\textquotesingle{}s rotation, not the transform\textquotesingle{}s rotation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}} {\bfseries Abstract\+Look\+At\+Target\+Group}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get Look\+At target as \doxylink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}, or null if target is not a group. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}} {\bfseries Look\+At\+Target\+Group}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get Look\+At target as \doxylink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}, or null if target is not a \doxylink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}. \end{DoxyCompactList}\item 
+Vector3 {\bfseries Look\+At\+Target\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the position of the Look\+At target. Special handling\+: If the Look\+At target is a Virtual\+Camera, returns the vcam State\textquotesingle{}s position, not the transform\textquotesingle{}s position. \end{DoxyCompactList}\item 
+Quaternion {\bfseries Look\+At\+Target\+Rotation}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the rotation of the Look\+At target. Special handling\+: If the Look\+At target is a Virtual\+Camera, returns the vcam State\textquotesingle{}s rotation, not the transform\textquotesingle{}s rotation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} {\bfseries Vcam\+State}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the owner vcam\textquotesingle{}s \doxylink{struct_cinemachine_1_1_camera_state}{Camera\+State}. \end{DoxyCompactList}\item 
+bool {\bfseries Is\+Valid}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if this object is enabled and set up to produce results. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}} {\bfseries Stage}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em What part of the pipeline this fits into. \end{DoxyCompactList}\item 
+virtual bool {\bfseries Body\+Applies\+After\+Aim}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Special for Body Stage compoments that want to be applied after Aim stage because they use the aim as inout for the procedural placement. \end{DoxyCompactList}\item 
+virtual bool {\bfseries Requires\+User\+Input}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Components that require user input should implement this and return true. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer}{Cinemachine.\+Cinemachine\+Transposer}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_ac2ed72c89186c06f0d7972e3ad65ab0b}{Binding\+Mode}} \{ \newline
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_ac2ed72c89186c06f0d7972e3ad65ab0bacbd7246786dfeab807738745c14d0d94}{Lock\+To\+Target\+On\+Assign}} = 0
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_ac2ed72c89186c06f0d7972e3ad65ab0baa1c4a85bb5af449a9337c20ec293e621}{Lock\+To\+Target\+With\+World\+Up}} = 1
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_ac2ed72c89186c06f0d7972e3ad65ab0ba0e11225a17b822ffc26f09ea91f5a6cf}{Lock\+To\+Target\+No\+Roll}} = 2
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_ac2ed72c89186c06f0d7972e3ad65ab0baaaac3cb806ad0f4737620ee349f546d5}{Lock\+To\+Target}} = 3
+, \newline
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_ac2ed72c89186c06f0d7972e3ad65ab0ba43c5bd4a88c440bd0862f954e4faa177}{World\+Space}} = 4
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_ac2ed72c89186c06f0d7972e3ad65ab0baf9d58f0af525093acc8783eca8cd2330}{Simple\+Follow\+With\+World\+Up}} = 5
+ \}
+\begin{DoxyCompactList}\small\item\em The coordinate space to use when interpreting the offset from the target. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_a52fb5204e1ab5d1e684e521a644bfcfc}{Angular\+Damping\+Mode}} \{ \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_a52fb5204e1ab5d1e684e521a644bfcfca0a7532036415f2491bf5f952220827b8}{Euler}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_a52fb5204e1ab5d1e684e521a644bfcfca3743af167c53361d795405561faac2b2}{Quaternion}}
+ \}
+\begin{DoxyCompactList}\small\item\em How to calculate the angular damping for the target orientation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base}{Cinemachine.\+Cinemachine\+Component\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+const float {\bfseries Epsilon} = Utility.\+Unity\+Vector\+Extensions.\+Epsilon
+\begin{DoxyCompactList}\small\item\em Useful constant for very small floats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is a Cinemachine\+Component in the the Body section of the component pipeline. Its job is to position the camera in a variable relationship to a the vcam\textquotesingle{}s Follow target object, with offsets and damping. 
+
+This component is typically used to implement a camera that follows its target. It can accept player input from an input device, which allows the player to dynamically control the relationship between the camera and the target, for example with a joystick.
+
+The Orbital\+Transposer introduces the concept of {\bfseries{\doxylink{struct_cinemachine_1_1_cinemachine_orbital_transposer_1_1_heading}{Heading}}}, which is the direction in which the target is moving, and the Orbital\+Transposer will attempt to position the camera in relationship to the heading, which is by default directly behind the target. You can control the default relationship by adjusting the \doxylink{struct_cinemachine_1_1_cinemachine_orbital_transposer_1_1_heading}{Heading} Bias setting.
+
+If you attach an input controller to the Orbital\+Transposer, then the player can also control the way the camera positions itself in relation to the target heading. This allows the camera to move to any spot on an orbit around the target. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_orbital_transposer_aff4e432dd6ef054ecca4d423d349023b}\index{Cinemachine.CinemachineOrbitalTransposer@{Cinemachine.CinemachineOrbitalTransposer}!ForceCameraPosition@{ForceCameraPosition}}
+\index{ForceCameraPosition@{ForceCameraPosition}!Cinemachine.CinemachineOrbitalTransposer@{Cinemachine.CinemachineOrbitalTransposer}}
+\doxysubsubsection{\texorpdfstring{ForceCameraPosition()}{ForceCameraPosition()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_orbital_transposer_aff4e432dd6ef054ecca4d423d349023b} 
+override void Cinemachine.\+Cinemachine\+Orbital\+Transposer.\+Force\+Camera\+Position (\begin{DoxyParamCaption}\item[{Vector3}]{pos}{, }\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_a52fb5204e1ab5d1e684e521a644bfcfca3743af167c53361d795405561faac2b2}{Quaternion}}}]{rot}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Force the virtual camera to assume a given position and orientation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Worldspace pposition to take\\
+\hline
+{\em rot} & Worldspace orientation to take\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_a2c1673f15b1bd3ff4d05c3e763ee6ee4}{Cinemachine.\+Cinemachine\+Component\+Base}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_orbital_transposer_a67b7ff335a7548381a1050996a1db233}\index{Cinemachine.CinemachineOrbitalTransposer@{Cinemachine.CinemachineOrbitalTransposer}!GetAxisClosestValue@{GetAxisClosestValue}}
+\index{GetAxisClosestValue@{GetAxisClosestValue}!Cinemachine.CinemachineOrbitalTransposer@{Cinemachine.CinemachineOrbitalTransposer}}
+\doxysubsubsection{\texorpdfstring{GetAxisClosestValue()}{GetAxisClosestValue()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_orbital_transposer_a67b7ff335a7548381a1050996a1db233} 
+float Cinemachine.\+Cinemachine\+Orbital\+Transposer.\+Get\+Axis\+Closest\+Value (\begin{DoxyParamCaption}\item[{Vector3}]{camera\+Pos}{, }\item[{Vector3}]{up}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+What axis value would we need to get as close as possible to the desired camera\+Pos? 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera\+Pos} & camera position we would like to approximate\\
+\hline
+{\em up} & world up\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The best value to put into the X axis, to approximate the desired camera pos
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_orbital_transposer_a4862055b3f74937fb41a1f5c9a88fd6e}\index{Cinemachine.CinemachineOrbitalTransposer@{Cinemachine.CinemachineOrbitalTransposer}!GetTargetCameraPosition@{GetTargetCameraPosition}}
+\index{GetTargetCameraPosition@{GetTargetCameraPosition}!Cinemachine.CinemachineOrbitalTransposer@{Cinemachine.CinemachineOrbitalTransposer}}
+\doxysubsubsection{\texorpdfstring{GetTargetCameraPosition()}{GetTargetCameraPosition()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_orbital_transposer_a4862055b3f74937fb41a1f5c9a88fd6e} 
+override Vector3 Cinemachine.\+Cinemachine\+Orbital\+Transposer.\+Get\+Target\+Camera\+Position (\begin{DoxyParamCaption}\item[{Vector3}]{world\+Up}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Internal API for the Inspector \doxylink{namespace_cinemachine_1_1_editor}{Editor}, so it can draw a marker at the target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world\+Up} & Current effective world up\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The position of the Follow target
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_adce283f1d393de9583f180ffc43cb49c}{Cinemachine.\+Cinemachine\+Transposer}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_orbital_transposer_a09cc55b60f2ac9552e178e8f02d80dd7}\index{Cinemachine.CinemachineOrbitalTransposer@{Cinemachine.CinemachineOrbitalTransposer}!MutateCameraState@{MutateCameraState}}
+\index{MutateCameraState@{MutateCameraState}!Cinemachine.CinemachineOrbitalTransposer@{Cinemachine.CinemachineOrbitalTransposer}}
+\doxysubsubsection{\texorpdfstring{MutateCameraState()}{MutateCameraState()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_orbital_transposer_a09cc55b60f2ac9552e178e8f02d80dd7} 
+override void Cinemachine.\+Cinemachine\+Orbital\+Transposer.\+Mutate\+Camera\+State (\begin{DoxyParamCaption}\item[{ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}}}]{cur\+State}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Positions the virtual camera according to the transposer rules. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cur\+State} & The current camera state\\
+\hline
+{\em delta\+Time} & Used for damping. If less than 0, no damping is done.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cinemachine_1_1_cinemachine_orbital_transposer_a6192372bb2100a6c7ac98f28ab7613e4}\index{Cinemachine.CinemachineOrbitalTransposer@{Cinemachine.CinemachineOrbitalTransposer}!OnTargetObjectWarped@{OnTargetObjectWarped}}
+\index{OnTargetObjectWarped@{OnTargetObjectWarped}!Cinemachine.CinemachineOrbitalTransposer@{Cinemachine.CinemachineOrbitalTransposer}}
+\doxysubsubsection{\texorpdfstring{OnTargetObjectWarped()}{OnTargetObjectWarped()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_orbital_transposer_a6192372bb2100a6c7ac98f28ab7613e4} 
+override void Cinemachine.\+Cinemachine\+Orbital\+Transposer.\+On\+Target\+Object\+Warped (\begin{DoxyParamCaption}\item[{Transform}]{target}{, }\item[{Vector3}]{position\+Delta}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+This is called to notify the us that a target got warped, so that we can update its internal state to make the camera also warp seamlessy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The object that was warped\\
+\hline
+{\em position\+Delta} & The amount the target\textquotesingle{}s position changed\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_abfd9cdc5dfa5520f0553553b35e88fd5}{Cinemachine.\+Cinemachine\+Component\+Base}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_orbital_transposer_a96e89fd8e8f7b028fbdd209a974b70c1}\index{Cinemachine.CinemachineOrbitalTransposer@{Cinemachine.CinemachineOrbitalTransposer}!OnTransitionFromCamera@{OnTransitionFromCamera}}
+\index{OnTransitionFromCamera@{OnTransitionFromCamera}!Cinemachine.CinemachineOrbitalTransposer@{Cinemachine.CinemachineOrbitalTransposer}}
+\doxysubsubsection{\texorpdfstring{OnTransitionFromCamera()}{OnTransitionFromCamera()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_orbital_transposer_a96e89fd8e8f7b028fbdd209a974b70c1} 
+override bool Cinemachine.\+Cinemachine\+Orbital\+Transposer.\+On\+Transition\+From\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}}}]{from\+Cam}{, }\item[{Vector3}]{world\+Up}{, }\item[{float}]{delta\+Time}{, }\item[{ref \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_virtual_camera_base_1_1_transition_params}{Cinemachine\+Virtual\+Camera\+Base.\+Transition\+Params}}}]{transition\+Params}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Notification that this virtual camera is going live. Base class implementation does nothing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from\+Cam} & The camera being deactivated. May be null.\\
+\hline
+{\em world\+Up} & Default world Up, set by the \doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain}\\
+\hline
+{\em delta\+Time} & Delta time for time-\/based effects (ignore if less than or equal to 0)\\
+\hline
+{\em transition\+Params} & Transition settings for this vcam\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the vcam should do an internal update as a result of this call
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_ab61a5ef5a8ae5713705a46a4091fa3c2}{Cinemachine.\+Cinemachine\+Component\+Base}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_orbital_transposer_a7d762f4536124cee6e22266557294289}\index{Cinemachine.CinemachineOrbitalTransposer@{Cinemachine.CinemachineOrbitalTransposer}!OnValidate@{OnValidate}}
+\index{OnValidate@{OnValidate}!Cinemachine.CinemachineOrbitalTransposer@{Cinemachine.CinemachineOrbitalTransposer}}
+\doxysubsubsection{\texorpdfstring{OnValidate()}{OnValidate()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_orbital_transposer_a7d762f4536124cee6e22266557294289} 
+override void Cinemachine.\+Cinemachine\+Orbital\+Transposer.\+On\+Validate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Legacy support for old serialized versions. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_transposer_a5e7a884c7a8bc539c5e076c4dbc4997d}{Cinemachine.\+Cinemachine\+Transposer}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_orbital_transposer_a555ee6081cde736a6c0997a79fafe221}\index{Cinemachine.CinemachineOrbitalTransposer@{Cinemachine.CinemachineOrbitalTransposer}!UpdateHeading@{UpdateHeading}}
+\index{UpdateHeading@{UpdateHeading}!Cinemachine.CinemachineOrbitalTransposer@{Cinemachine.CinemachineOrbitalTransposer}}
+\doxysubsubsection{\texorpdfstring{UpdateHeading()}{UpdateHeading()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_orbital_transposer_a555ee6081cde736a6c0997a79fafe221} 
+float Cinemachine.\+Cinemachine\+Orbital\+Transposer.\+Update\+Heading (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{, }\item[{Vector3}]{up}{, }\item[{ref \mbox{\hyperlink{struct_cinemachine_1_1_axis_state}{Axis\+State}}}]{axis}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Update the X axis and calculate the heading. This can be called by a delegate with a custom axis. Note that this method is obsolete. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & Used for damping. If less than 0, no damping is done.\\
+\hline
+{\em up} & World Up, set by the \doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain}\\
+\hline
+{\em axis} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Axis value
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_orbital_transposer_ad989f8a8b743175908b8b4150fa32eaa}\index{Cinemachine.CinemachineOrbitalTransposer@{Cinemachine.CinemachineOrbitalTransposer}!UpdateHeading@{UpdateHeading}}
+\index{UpdateHeading@{UpdateHeading}!Cinemachine.CinemachineOrbitalTransposer@{Cinemachine.CinemachineOrbitalTransposer}}
+\doxysubsubsection{\texorpdfstring{UpdateHeading()}{UpdateHeading()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_orbital_transposer_ad989f8a8b743175908b8b4150fa32eaa} 
+float Cinemachine.\+Cinemachine\+Orbital\+Transposer.\+Update\+Heading (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{, }\item[{Vector3}]{up}{, }\item[{ref \mbox{\hyperlink{struct_cinemachine_1_1_axis_state}{Axis\+State}}}]{axis}{, }\item[{ref \mbox{\hyperlink{struct_cinemachine_1_1_axis_state_1_1_recentering}{Axis\+State.\+Recentering}}}]{recentering}{, }\item[{bool}]{is\+Live}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Update the X axis and calculate the heading. This can be called by a delegate with a custom axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & Used for damping. If less than 0, no damping is done.\\
+\hline
+{\em up} & World Up, set by the \doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain}\\
+\hline
+{\em axis} & \\
+\hline
+{\em recentering} & \\
+\hline
+{\em is\+Live} & true if the vcam is live\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Axis value
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Components/Cinemachine\+Orbital\+Transposer.\+cs\end{DoxyCompactItemize}

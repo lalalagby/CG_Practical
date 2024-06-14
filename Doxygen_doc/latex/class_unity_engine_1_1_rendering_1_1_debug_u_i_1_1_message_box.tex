@@ -1,0 +1,105 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Message\+Box Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_message_box}{}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_message_box}\index{UnityEngine.Rendering.DebugUI.MessageBox@{UnityEngine.Rendering.DebugUI.MessageBox}}
+
+
+Simple message box widget, providing a couple of different styles.  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Debug\+UI.\+Message\+Box\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_message_box}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_message_box_af0d8ad62f9b48dd66edf21fbfb69fa5b}{Style}} \{ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_message_box_af0d8ad62f9b48dd66edf21fbfb69fa5ba4059b0251f66a18cb56f544728796875}{Info}}
+, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_message_box_af0d8ad62f9b48dd66edf21fbfb69fa5ba0eaadb4fcb48a0a0ed7bc9868be9fbaa}{Warning}}
+, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_message_box_af0d8ad62f9b48dd66edf21fbfb69fa5ba902b0d55fddef6f8d651fe1035b7d4bd}{Error}}
+ \}
+\begin{DoxyCompactList}\small\item\em Label style defines text color and background. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_message_box_a33144c18f1ca33e59c0d66b26f1cea0e}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_message_box_a33144c18f1ca33e59c0d66b26f1cea0e} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_message_box_af0d8ad62f9b48dd66edf21fbfb69fa5b}{Style}} {\bfseries style} = \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_message_box_af0d8ad62f9b48dd66edf21fbfb69fa5ba4059b0251f66a18cb56f544728796875}{Style.\+Info}}
+\begin{DoxyCompactList}\small\item\em Style used to render display\+Name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Widget}}}
+\begin{DoxyCompactItemize}
+\item 
+Func$<$ bool $>$ {\bfseries is\+Hidden\+Callback}
+\begin{DoxyCompactList}\small\item\em Optional delegate that can be used to conditionally hide widgets at runtime (e.\+g. due to state of other widgets). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Widget}}}
+\begin{DoxyCompactItemize}
+\item 
+override int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_a38fb7031b499496ecec8143573276a77}{Get\+Hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Returns the hash code of the widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Widget}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_panel}{Panel}} {\bfseries m\+\_\+\+Panel}
+\begin{DoxyCompactList}\small\item\em Panels containing the widget. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_i_container}{IContainer}} {\bfseries m\+\_\+\+Parent}
+\begin{DoxyCompactList}\small\item\em Parent container. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Widget}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_panel}{Panel}} {\bfseries panel}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Panels containing the widget. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_i_container}{IContainer}} {\bfseries parent}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Parent container. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_a53965df570fd5fa92e5ac8820bd20063}{Flags}} {\bfseries flags}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Flags for the widget. \end{DoxyCompactList}\item 
+string {\bfseries display\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Display name. \end{DoxyCompactList}\item 
+string {\bfseries tooltip}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Tooltip. \end{DoxyCompactList}\item 
+string {\bfseries query\+Path}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Path of the widget. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Editor\+Only}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the widget is Editor only. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Runtime\+Only}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the widget is Runtime only. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Inactive\+In\+Editor}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the widget is inactive in the editor (i.\+e. widget is runtime only and the application is not \textquotesingle{}Playing\textquotesingle{}). \end{DoxyCompactList}\item 
+bool {\bfseries is\+Hidden}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If \doxylink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_adf0c8caaccfd67c981baf81aa469dd5b}{should\+Hide\+Delegate} has been set and returns true, the widget is hidden from the \doxylink{namespace_unity_engine_1_1_rendering_1_1_u_i}{UI}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_1_1_name_and_tooltip}{Name\+And\+Tooltip}} {\bfseries name\+And\+Tooltip}\hspace{0.3cm}{\ttfamily  \mbox{[}set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Helper setter to allow more compact initialization of widgets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simple message box widget, providing a couple of different styles. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_message_box_af0d8ad62f9b48dd66edf21fbfb69fa5b}\index{UnityEngine.Rendering.DebugUI.MessageBox@{UnityEngine.Rendering.DebugUI.MessageBox}!Style@{Style}}
+\index{Style@{Style}!UnityEngine.Rendering.DebugUI.MessageBox@{UnityEngine.Rendering.DebugUI.MessageBox}}
+\doxysubsubsection{\texorpdfstring{Style}{Style}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_message_box_af0d8ad62f9b48dd66edf21fbfb69fa5b} 
+enum \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_message_box_af0d8ad62f9b48dd66edf21fbfb69fa5b}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Message\+Box.\+Style}}}
+
+
+
+Label style defines text color and background. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Info@{Info}!UnityEngine.Rendering.DebugUI.MessageBox@{UnityEngine.Rendering.DebugUI.MessageBox}}\index{UnityEngine.Rendering.DebugUI.MessageBox@{UnityEngine.Rendering.DebugUI.MessageBox}!Info@{Info}}}\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_message_box_af0d8ad62f9b48dd66edf21fbfb69fa5ba4059b0251f66a18cb56f544728796875}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_message_box_af0d8ad62f9b48dd66edf21fbfb69fa5b} 
+Info&Info category. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Warning@{Warning}!UnityEngine.Rendering.DebugUI.MessageBox@{UnityEngine.Rendering.DebugUI.MessageBox}}\index{UnityEngine.Rendering.DebugUI.MessageBox@{UnityEngine.Rendering.DebugUI.MessageBox}!Warning@{Warning}}}\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_message_box_af0d8ad62f9b48dd66edf21fbfb69fa5ba0eaadb4fcb48a0a0ed7bc9868be9fbaa}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_message_box_af0d8ad62f9b48dd66edf21fbfb69fa5b} 
+Warning&Warning category. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Error@{Error}!UnityEngine.Rendering.DebugUI.MessageBox@{UnityEngine.Rendering.DebugUI.MessageBox}}\index{UnityEngine.Rendering.DebugUI.MessageBox@{UnityEngine.Rendering.DebugUI.MessageBox}!Error@{Error}}}\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_message_box_af0d8ad62f9b48dd66edf21fbfb69fa5ba902b0d55fddef6f8d651fe1035b7d4bd}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_message_box_af0d8ad62f9b48dd66edf21fbfb69fa5b} 
+Error&Error category. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Debugging/Debug\+UI.\+Fields.\+cs\end{DoxyCompactItemize}

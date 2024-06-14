@@ -1,0 +1,830 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Gamepad Class Reference}
+\hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad}{}\label{class_unity_engine_1_1_input_system_1_1_gamepad}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+
+
+An Xbox-\/style gamepad with two sticks, a D-\/\+Pad, four face buttons, two triggers, two shoulder buttons, and two menu buttons that usually sit in the midsection of the gamepad.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Gamepad\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.105572cm]{class_unity_engine_1_1_input_system_1_1_gamepad}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_a01bf907889b90ddf9e14c6c86cb1551e}{Make\+Current}} ()
+\begin{DoxyCompactList}\small\item\em Make the gamepad the \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a6f0bd4b71340da07b56f6ec56097da1d}{current} gamepad. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_a845219ceccf3449a285612a17fc4e7a0}{Pause\+Haptics}} ()
+\begin{DoxyCompactList}\small\item\em Pause rumble effects on the gamepad. Resume with \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_aa82bd252168d6987b962064919497298}{Resume\+Haptics}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_aa82bd252168d6987b962064919497298}{Resume\+Haptics}} ()
+\begin{DoxyCompactList}\small\item\em Resume rumble affects on the gamepad that have been paused with \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a845219ceccf3449a285612a17fc4e7a0}{Pause\+Haptics}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_aa3c75b3a16ff2c32d3377686ce09b489}{Reset\+Haptics}} ()
+\begin{DoxyCompactList}\small\item\em Reset rumble effects on the gamepad. Puts the gamepad rumble motors back into their default state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_a2bd59cb42494ff6cf0c9c6d24e1ab359}{Set\+Motor\+Speeds}} (float low\+Frequency, float high\+Frequency)
+\begin{DoxyCompactList}\small\item\em Set the motor speeds of the low-\/frequency (usually on the left) and high-\/frequency (usually on the right) motors.
+
+
+\begin{DoxyParams}{Parameters}
+{\em low\+Frequency} & Speed of the low-\/frequency (left) motor. Normalized \mbox{[}0..1\mbox{]} value with 1 indicating maximum speed and 0 indicating the motor is turned off. Will automatically be clamped into range.\\
+\hline
+{\em high\+Frequency} & Speed of the high-\/frequency (right) motor. Normalized \mbox{[}0..1\mbox{]} value with 1 indicating maximum speed and 0 indicating the motor is turned off. Will automatically be clamped into range.\\
+\hline
+\end{DoxyParams}
+
+
+Note that hardware will put limits on the level of control you have over the motors. Rumbling the motors at maximum speed for an extended period of time may cause them to turn off for some time to prevent overheating. Also, how quickly the motors react and how often the speed can be updated will depend on the hardware and drivers.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Unity\+Engine.\+Input\+System.\+Input\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Input\+Device} ()
+\begin{DoxyCompactList}\small\item\em This constructor is public for the sake of {\ttfamily Activator.\+Create\+Instance} only. To construct devices, use methods such as Input\+System.\+Add\+Device$<$\+TDevice$>$(string). Manually using {\ttfamily new} on \doxylink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device} will not result in a usable device. \end{DoxyCompactList}\item 
+override unsafe object {\bfseries Read\+Value\+From\+Buffer\+As\+Object} (void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size)
+\item 
+override unsafe object {\bfseries Read\+Value\+From\+State\+As\+Object} (void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\item 
+override unsafe void {\bfseries Read\+Value\+From\+State\+Into\+Buffer} (void \texorpdfstring{$\ast$}{*}state\+Ptr, void \texorpdfstring{$\ast$}{*}buffer\+Ptr, int buffer\+Size)
+\item 
+override unsafe bool {\bfseries Compare\+Value} (void \texorpdfstring{$\ast$}{*}first\+State\+Ptr, void \texorpdfstring{$\ast$}{*}second\+State\+Ptr)
+\item 
+unsafe long \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_a7e2bf96b44d21b71f7a7b38106c72d3c}{Execute\+Command$<$ TCommand $>$}} (ref TCommand command)
+\begin{DoxyCompactList}\small\item\em Perform a device-\/specific command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control$<$ TValue $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+override string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_add7e6fae45c5135772098325a62e1705}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Return a string representation of the control useful for debugging. \end{DoxyCompactList}\item 
+unsafe float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Evaluate\+Magnitude}} ()
+\begin{DoxyCompactList}\small\item\em Compute an absolute, normalized magnitude value that indicates the extent to which the control is actuated. \end{DoxyCompactList}\item 
+virtual unsafe float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a039f4a670688b71cc026c661e0f9e80c}{Evaluate\+Magnitude}} (void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\begin{DoxyCompactList}\small\item\em Compute an absolute, normalized magnitude value that indicates the extent to which the control is actuated in the given state. \end{DoxyCompactList}\item 
+unsafe object {\bfseries Read\+Value\+From\+Buffer\+As\+Object} (void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size)
+\item 
+unsafe object \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a90e01e631b36eee981a31c308d96335e}{Read\+Value\+From\+State\+As\+Object}} (void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\begin{DoxyCompactList}\small\item\em Read the control\textquotesingle{}s final, processed value from the given state and return the value as an object. \end{DoxyCompactList}\item 
+unsafe void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_ac1692b72e9886b17c6439a87548ac73f}{Read\+Value\+From\+State\+Into\+Buffer}} (void \texorpdfstring{$\ast$}{*}state\+Ptr, void \texorpdfstring{$\ast$}{*}buffer\+Ptr, int buffer\+Size)
+\begin{DoxyCompactList}\small\item\em Read the control\textquotesingle{}s final, processed value from the given state and store it in the given buffer. \end{DoxyCompactList}\item 
+virtual unsafe void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a9337dcaddb6396e10b6de5a5e0012058}{Write\+Value\+From\+Buffer\+Into\+State}} (void \texorpdfstring{$\ast$}{*}buffer\+Ptr, int buffer\+Size, void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\begin{DoxyCompactList}\small\item\em Read a value from the given memory and store it as state. \end{DoxyCompactList}\item 
+virtual unsafe void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_ae0c47d69bbd2187830bdc0b72551788f}{Write\+Value\+From\+Object\+Into\+State}} (object \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}{value}}, void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\begin{DoxyCompactList}\small\item\em Read a value object and store it as state in the given memory. \end{DoxyCompactList}\item 
+unsafe bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a4cd88d98c79c75227e82734933fe83ac}{Compare\+Value}} (void \texorpdfstring{$\ast$}{*}first\+State\+Ptr, void \texorpdfstring{$\ast$}{*}second\+State\+Ptr)
+\begin{DoxyCompactList}\small\item\em Compare the value of the control as read from {\itshape first\+State\+Ptr}  to that read from {\itshape second\+State\+Ptr}  and return true if they are equal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a5426e6f11ab6c29da5d90256c8e7fe96}{Try\+Get\+Child\+Control}} (string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a60d8e17e65b94f2cf7a0ce7f10af0075}{path}})
+\begin{DoxyCompactList}\small\item\em Try to find a child control matching the given path. \end{DoxyCompactList}\item 
+TControl \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_aa0992bf4b4786f4a42887249c6890d78}{Try\+Get\+Child\+Control$<$ TControl $>$}} (string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a60d8e17e65b94f2cf7a0ce7f10af0075}{path}})
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} {\bfseries Get\+Child\+Control} (string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a60d8e17e65b94f2cf7a0ce7f10af0075}{path}})
+\item 
+TControl \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_adb1b7bfd6ae75e1a70c313303ece19ed}{Get\+Child\+Control$<$ TControl $>$}} (string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a60d8e17e65b94f2cf7a0ce7f10af0075}{path}})
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_ab30a6abcfbefca2dfe3666298f3df349}{Apply\+Parameter\+Changes}} ()
+\begin{DoxyCompactList}\small\item\em Apply built-\/in parameters changes (e.\+g. \doxylink{class_unity_engine_1_1_input_system_1_1_controls_1_1_axis_control_a502c9aaacf2eccc60b765b446cd2723c}{Axis\+Control.\+invert}, others), recompute \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a653394729f37ee532b315993885873ca}{Input\+Control.\+optimized\+Control\+Data\+Type} for impacted controls and clear cached value. \end{DoxyCompactList}\item 
+TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a2130e1c517844e5ae729eba1cd798c94}{Read\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current value of the control after processors have been applied. \end{DoxyCompactList}\item 
+TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a9e24c5086ac2dae3033b1a6895dcc147}{Read\+Value\+From\+Previous\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Get the control\textquotesingle{}s value from the previous frame (Input\+Control.\+previous\+Frame\+State\+Ptr). \end{DoxyCompactList}\item 
+TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a832514a26fff85b4ba3db603d0ef794c}{Read\+Default\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Get the control\textquotesingle{}s default value. \end{DoxyCompactList}\item 
+unsafe TValue {\bfseries Read\+Value\+From\+State} (void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\item 
+unsafe TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_aaeb8d6dd5f5099345fa155f9c3c2f3d1}{Read\+Value\+From\+State\+With\+Caching}} (void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\begin{DoxyCompactList}\small\item\em Read value from provided {\itshape state\+Ptr}  and apply processors. Try cache result if possible. \end{DoxyCompactList}\item 
+unsafe TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a03e5a1d1bf49c38b59219e039da7a104}{Read\+Unprocessed\+Value\+From\+State\+With\+Caching}} (void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\begin{DoxyCompactList}\small\item\em Read value from provided {\itshape state\+Ptr} . Try cache result if possible. \end{DoxyCompactList}\item 
+TValue {\bfseries Read\+Unprocessed\+Value} ()
+\item 
+unsafe TValue {\bfseries Read\+Unprocessed\+Value\+From\+State} (void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\item 
+override unsafe object {\bfseries Read\+Value\+From\+State\+As\+Object} (void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\item 
+override unsafe void {\bfseries Read\+Value\+From\+State\+Into\+Buffer} (void \texorpdfstring{$\ast$}{*}state\+Ptr, void \texorpdfstring{$\ast$}{*}buffer\+Ptr, int buffer\+Size)
+\item 
+override unsafe void {\bfseries Write\+Value\+From\+Buffer\+Into\+State} (void \texorpdfstring{$\ast$}{*}buffer\+Ptr, int buffer\+Size, void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\item 
+override unsafe void {\bfseries Write\+Value\+From\+Object\+Into\+State} (object \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}{value}}, void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\item 
+virtual unsafe void {\bfseries Write\+Value\+Into\+State} (TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}{value}}, void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\item 
+override unsafe object {\bfseries Read\+Value\+From\+Buffer\+As\+Object} (void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size)
+\item 
+override unsafe bool {\bfseries Compare\+Value} (void \texorpdfstring{$\ast$}{*}first\+State\+Ptr, void \texorpdfstring{$\ast$}{*}second\+State\+Ptr)
+\item 
+TValue {\bfseries Process\+Value} (TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}{value}})
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_aad856d3c6754bb2eb3b46e0a45ef2ad9}{Process\+Value}} (ref TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}{value}})
+\begin{DoxyCompactList}\small\item\em Applies all control processors to the passed value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_a71ab4f14e505d141e58f5924ae7b8d93}{Finish\+Setup}} ()
+\begin{DoxyCompactList}\small\item\em Perform final initialization tasks after the control hierarchy has been put into place.
+
+This method can be overridden to perform control-\/ or device-\/specific setup work. The most common use case is for looking up child controls and storing them in local getters.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyDevice\ :\ InputDevice}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ ButtonControl\ button\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ AxisControl\ axis\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnFinishSetup()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cache\ controls\ in\ getters.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ button\ =\ GetChildControl(\textcolor{stringliteral}{"{}button"{}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ axis\ =\ GetChildControl(\textcolor{stringliteral}{"{}axis"{}});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+  \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_aa4f803929782209af0486196f6590d72}{On\+Added}} ()
+\begin{DoxyCompactList}\small\item\em Called when the gamepad is added to the system. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_a6abfac67a3e87a8b93dce4aa6d4f2fb3}{On\+Removed}} ()
+\begin{DoxyCompactList}\small\item\em Called when the gamepad is removed from the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Unity\+Engine.\+Input\+System.\+Input\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_aee9bf97a14b8caea501895150b370793}{On\+Configuration\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Called by the system when the device configuration is changed. This happens when the backend sends a Device\+Configuration\+Event for the device. \end{DoxyCompactList}\item 
+virtual unsafe long {\bfseries Execute\+Command} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_device_command}{Input\+Device\+Command}} \texorpdfstring{$\ast$}{*}command\+Ptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control$<$ TValue $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a96934d2028848054141a854553646df7}{Refresh\+Configuration\+If\+Needed}} ()
+\begin{DoxyCompactList}\small\item\em Call Refresh\+Configuration if the configuration has in the interim been invalidated by a Device\+Configuration\+Event. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_aa3fd7e9f04578307e642f5da86b1f3b2}{Refresh\+Configuration}} ()
+\item 
+virtual \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_four_c_c}{Four\+CC}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a25e0b34cbff9915c141124e943a4bbc9}{Calculate\+Optimized\+Control\+Data\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Calculates and returns a optimized data type that can represent a control\textquotesingle{}s value in memory directly. The value then is cached in \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a653394729f37ee532b315993885873ca}{Input\+Control.\+optimized\+Control\+Data\+Type}. This method is for internal use only, you should not call this from your own code. \end{DoxyCompactList}\item 
+override void {\bfseries Finish\+Setup} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_a750c54d04a08f78103c72ae4a55c4d36}{button\+West}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The left face button of the gamepad. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_a404166b546907429967d3984d7521b01}{button\+North}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The top face button of the gamepad. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_a55b57fe1d0a61c4fe2e671284ec2ab3b}{button\+South}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The bottom face button of the gamepad. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_a1eb7f9e97f3a9426ace972762d56ecae}{button\+East}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The right face button of the gamepad. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_a5791ef8428a6e1b4000b0c0677ecca9f}{left\+Stick\+Button}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The button that gets triggered when \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a9f608a9e12af3301fb2d704e072ea024}{left\+Stick} is pressed down. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_ab63ac3d2a9645c35f10a978172fca4fd}{right\+Stick\+Button}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The button that gets triggered when \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a24a1a82fd0aab986f8e7e141dab4035f}{right\+Stick} is pressed down. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_a96da133b7f8dc0cebd7fe0475741c0a3}{start\+Button}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The right button in the middle section of the gamepad (called "{}menu"{} on Xbox controllers and "{}options"{} on PS4 controllers). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_a66c1350664f902ed14f9c33ddcab8d39}{select\+Button}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The left button in the middle section of the gamepad (called "{}view"{} on Xbox controllers and "{}share"{} on PS4 controllers). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_dpad_control}{Dpad\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_abeb31a818ab8cc7201a2333f8fac8b33}{dpad}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The 4-\/way directional pad on the gamepad. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_ab7f94ddc3a635b26551b2979da25d42c}{left\+Shoulder}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The left shoulder/bumper button that sits on top of \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_aa787a7b08b5a89ac03de5266a5f9a5d6}{left\+Trigger}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_a222decb0ab82ed0ea5931a8bc74b4b36}{right\+Shoulder}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The right shoulder/bumper button that sits on top of \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a51aa5a7eb8d09580ad0287e1655dd1de}{right\+Trigger}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_stick_control}{Stick\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_a9f608a9e12af3301fb2d704e072ea024}{left\+Stick}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The left thumbstick on the gamepad. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_stick_control}{Stick\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_a24a1a82fd0aab986f8e7e141dab4035f}{right\+Stick}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The right thumbstick on the gamepad. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_aa787a7b08b5a89ac03de5266a5f9a5d6}{left\+Trigger}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The left trigger button sitting below \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_ab7f94ddc3a635b26551b2979da25d42c}{left\+Shoulder}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_a51aa5a7eb8d09580ad0287e1655dd1de}{right\+Trigger}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The right trigger button sitting below \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a222decb0ab82ed0ea5931a8bc74b4b36}{right\+Shoulder}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_af2868f2c5a423a9408e90b0826604973}{a\+Button}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Same as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a55b57fe1d0a61c4fe2e671284ec2ab3b}{button\+South}. Xbox-\/style alias. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_ac78c2fa413c02cdda6a240f619211b21}{b\+Button}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Same as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a1eb7f9e97f3a9426ace972762d56ecae}{button\+East}. Xbox-\/style alias. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_ac0568580b46a199532438d7e53d1e40d}{x\+Button}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Same as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a750c54d04a08f78103c72ae4a55c4d36}{button\+West} Xbox-\/style alias. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_afc9933f2afc66ec57f10d2aadd1efe84}{y\+Button}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Same as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a404166b546907429967d3984d7521b01}{button\+North}. Xbox-\/style alias. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_a80e7bee1f41fbddbadceda48e82edbaf}{triangle\+Button}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Same as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a404166b546907429967d3984d7521b01}{button\+North}. PS4-\/style alias. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_a46048c640c56aa4a3f6ef70bcf855a43}{square\+Button}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Same as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a750c54d04a08f78103c72ae4a55c4d36}{button\+West}. PS4-\/style alias. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_a778596714ea5c531eb62f4730ba7f086}{circle\+Button}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Same as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a1eb7f9e97f3a9426ace972762d56ecae}{button\+East}. PS4-\/style alias. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_aec1cfe61366eba70a7050baa12745ad9}{cross\+Button}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Same as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a55b57fe1d0a61c4fe2e671284ec2ab3b}{button\+South}. PS4-\/style alias. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_af3acccb2527a813fb217c883629a57a4}{this\mbox{[}\+Gamepad\+Button button\mbox{]}}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Retrieve a gamepad button by its \doxylink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36}{Gamepad\+Button} enumeration constant. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad}{Gamepad}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_a6f0bd4b71340da07b56f6ec56097da1d}{current}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The gamepad last used/connected by the player or {\ttfamily null} if there is no gamepad connected to the system. \end{DoxyCompactList}\item 
+static new \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad}{Gamepad}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_afc11d44c896d7e03bc90709f79788692}{all}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A list of gamepads currently connected to the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Unity\+Engine.\+Input\+System.\+Input\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description}{Input\+Device\+Description}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_a84bd0036ee4b386967b855c4707cd4b1}{description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Metadata describing the device (product name etc.). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_a11b982f33c9ccecd0cbf73501e363e8f}{enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the device is currently enabled (that is, sends and receives events). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_acecc008067d46ee9a1db3cf059f6c709}{can\+Run\+In\+Background}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If true, the device is capable of delivering input while the application is running in the background, i.\+e. while {\ttfamily Application.\+is\+Focused} is false. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_a4ff5e7586f91a321108317341566d4eb}{added}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the device has been added to the system. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_a2eb3061178a0001505a28f4ac2bbf5f0}{remote}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the device is mirrored from a remote input system and not actually present as a "{}real"{} device in the local system. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_a1b56ee045064190e84a9c80098da6f33}{native}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the device comes from the \doxylink{}{runtime} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_a8582d897119e1524b4f695447afbc6c1}{update\+Before\+Render}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the device requires an extra update before rendering. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_a906021c4ff4cee89220ae87e7c253c56}{device\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Unique numeric ID for the device. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_a74f7cc4c07569928e3b9c72e8e7ed30d}{last\+Update\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Timestamp of last state event used to update the device. \end{DoxyCompactList}\item 
+bool {\bfseries was\+Updated\+This\+Frame}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_a145bc849c7d1afc083d7e54e9b05e61a}{all\+Controls}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A flattened list of controls that make up the device. \end{DoxyCompactList}\item 
+override Type \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_a0f4b17703125334f6281448722e971b0}{value\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+override int {\bfseries value\+Size\+In\+Bytes}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}} $>$ {\bfseries all}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control$<$ TValue $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a94f646dff1e9cbbbf84857bffa490274}{name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The name of the control, i.\+e. the final name part in its path. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_ac31c2a2f570e527aacc86ee8060e2ecc}{display\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The text to display as the name of the control. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_ab4716691d15fffa36ab61fec8c05c6ac}{short\+Display\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An alternate, abbreviated \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_ac31c2a2f570e527aacc86ee8060e2ecc}{display\+Name} (for example "{}\+LMB"{} instead of "{}\+Left Button"{}). \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a60d8e17e65b94f2cf7a0ce7f10af0075}{path}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Full path all the way from the root. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a8d349861ff83c7a74573bea9a2cf2886}{layout}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Layout the control is based on. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a89c641b9e70687d8d2d5049bb6c4bc46}{variants}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Semicolon-\/separated list of variants of the control layout or "{}default"{}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a5cb217f04299c9286604910b9caa2cd2}{device}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The device that this control is a part of. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_abce81da2e91c3b46a949185b66fff32d}{parent}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The immediate parent of the control or null if the control has no parent (which, once fully constructed) will only be the case for Input\+Devices). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a7861c4cd07f6b756c6f22c18f195a3c1}{children}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of immediate children. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_interned_string}{Interned\+String}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a09e4b347afac3558d9dbe4c4919457b8}{usages}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of usage tags associated with the control. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_interned_string}{Interned\+String}} $>$ {\bfseries aliases}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_block}{Input\+State\+Block}} {\bfseries state\+Block}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_afa5a8531d7c9a030e8e484560a59fe6f}{noisy}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the control is considered noisy. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a11348388ab9565068c0f1294de909b90}{synthetic}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the control is considered synthetic. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a133ddd2bc028dd97d624ff32fd842fff}{this\mbox{[}string path\mbox{]}}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Fetch a control from the control\textquotesingle{}s hierarchy by name. \end{DoxyCompactList}\item 
+Type \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_aa863a140183822dd850659336c9667ba}{value\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the underlying value type of this control. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a181a81b1a64265fec4919b1f09fe7940}{value\+Size\+In\+Bytes}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Size in bytes of values that the control returns. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_ab7546f119a75062ec7df894911cc5458}{magnitude}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Compute an absolute, normalized magnitude value that indicates the extent to which the control is actuated. Shortcut for \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Evaluate\+Magnitude()}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_four_c_c}{Four\+CC}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a653394729f37ee532b315993885873ca}{optimized\+Control\+Data\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For some types of control you can safely read/write state memory directly which is much faster than calling Read\+Unprocessed\+Value\+From\+State/\+Write\+Value\+Into\+State. This method returns a type that you can use for reading/writing the control directly, or it returns Input\+State\+Block.\+k\+Format\+Invalid if it\textquotesingle{}s not possible for this type of control. \end{DoxyCompactList}\item 
+override Type {\bfseries value\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+override int {\bfseries value\+Size\+In\+Bytes}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+ref readonly TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}{value}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the current value of the control after processors have been applied. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Unity\+Engine.\+Input\+System.\+Input\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_ae49df32fe16da4c9ab6cc0bb49ed045e}{Invalid\+Device\+Id}} = 0
+\begin{DoxyCompactList}\small\item\em Value of an invalid \doxylink{class_unity_engine_1_1_input_system_1_1_input_device_a906021c4ff4cee89220ae87e7c253c56}{device\+Id}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An Xbox-\/style gamepad with two sticks, a D-\/\+Pad, four face buttons, two triggers, two shoulder buttons, and two menu buttons that usually sit in the midsection of the gamepad. 
+
+The \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad}{Gamepad} layout provides a standardized layouts for gamepads. Generally, if a specific device is represented as a \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad}{Gamepad}, the controls, such as the face buttons, are guaranteed to be mapped correctly and consistently. If, based on the set of supported devices available to the input system, this cannot be guaranteed, a given device is usually represented as a generic \doxylink{class_unity_engine_1_1_input_system_1_1_joystick}{Joystick} or as just a plain \doxylink{class_unity_engine_1_1_input_system_1_1_h_i_d_1_1_h_i_d}{HID.\+HID} instead.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Show\ all\ gamepads\ in\ the\ system.}}
+\DoxyCodeLine{Debug.Log(\textcolor{keywordtype}{string}.Join(\textcolor{stringliteral}{"{}\(\backslash\)n"{}},\ Gamepad.all));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Check\ whether\ the\ X\ button\ on\ the\ current\ gamepad\ is\ pressed.}}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (Gamepad.current.xButton.wasPressedThisFrame)}
+\DoxyCodeLine{\ \ \ \ Debug.Log(\textcolor{stringliteral}{"{}Pressed"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Rumble\ the\ left\ motor\ on\ the\ current\ gamepad\ slightly.}}
+\DoxyCodeLine{Gamepad.current.SetMotorSpeeds(0.2f,\ 0.}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_a71ab4f14e505d141e58f5924ae7b8d93}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!FinishSetup@{FinishSetup}}
+\index{FinishSetup@{FinishSetup}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{FinishSetup()}{FinishSetup()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_a71ab4f14e505d141e58f5924ae7b8d93} 
+override void Unity\+Engine.\+Input\+System.\+Gamepad.\+Finish\+Setup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Perform final initialization tasks after the control hierarchy has been put into place.
+
+This method can be overridden to perform control-\/ or device-\/specific setup work. The most common use case is for looking up child controls and storing them in local getters.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyDevice\ :\ InputDevice}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ ButtonControl\ button\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ AxisControl\ axis\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnFinishSetup()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cache\ controls\ in\ getters.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ button\ =\ GetChildControl(\textcolor{stringliteral}{"{}button"{}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ axis\ =\ GetChildControl(\textcolor{stringliteral}{"{}axis"{}});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+  
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_ad017396c837bfdf27500932b4ecd77ce}{Unity\+Engine.\+Input\+System.\+Input\+Control$<$ TValue $>$}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_x_input_1_1_x_input_controller_a2c62a8f77b0aebf4fadedb98e1252bbd}{Unity\+Engine.\+Input\+System.\+XInput.\+XInput\+Controller}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_a01bf907889b90ddf9e14c6c86cb1551e}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!MakeCurrent@{MakeCurrent}}
+\index{MakeCurrent@{MakeCurrent}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{MakeCurrent()}{MakeCurrent()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_a01bf907889b90ddf9e14c6c86cb1551e} 
+override void Unity\+Engine.\+Input\+System.\+Gamepad.\+Make\+Current (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Make the gamepad the \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a6f0bd4b71340da07b56f6ec56097da1d}{current} gamepad. 
+
+This is called automatically by the system when there is input on a gamepad. 
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_a0a98203c32eb180ab8b7c862dc27635c}{Unity\+Engine.\+Input\+System.\+Input\+Device}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_aa4f803929782209af0486196f6590d72}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!OnAdded@{OnAdded}}
+\index{OnAdded@{OnAdded}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{OnAdded()}{OnAdded()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_aa4f803929782209af0486196f6590d72} 
+override void Unity\+Engine.\+Input\+System.\+Gamepad.\+On\+Added (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called when the gamepad is added to the system. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_aa2a3845943c58b663e80a5df467c8e70}{Unity\+Engine.\+Input\+System.\+Input\+Device}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_a6abfac67a3e87a8b93dce4aa6d4f2fb3}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!OnRemoved@{OnRemoved}}
+\index{OnRemoved@{OnRemoved}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{OnRemoved()}{OnRemoved()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_a6abfac67a3e87a8b93dce4aa6d4f2fb3} 
+override void Unity\+Engine.\+Input\+System.\+Gamepad.\+On\+Removed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called when the gamepad is removed from the system. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_aad95ad9eace58044e140b672e0170f63}{Unity\+Engine.\+Input\+System.\+Input\+Device}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_a845219ceccf3449a285612a17fc4e7a0}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!PauseHaptics@{PauseHaptics}}
+\index{PauseHaptics@{PauseHaptics}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{PauseHaptics()}{PauseHaptics()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_a845219ceccf3449a285612a17fc4e7a0} 
+virtual void Unity\+Engine.\+Input\+System.\+Gamepad.\+Pause\+Haptics (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Pause rumble effects on the gamepad. Resume with \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_aa82bd252168d6987b962064919497298}{Resume\+Haptics}. 
+
+\begin{DoxySeeAlso}{See also}
+IDual\+Motor\+Rumble
+
+
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_haptics_1_1_i_haptics_ad2e20388cf9f3ad08e4929ece68c167e}{Unity\+Engine.\+Input\+System.\+Haptics.\+IHaptics}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_aa3c75b3a16ff2c32d3377686ce09b489}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!ResetHaptics@{ResetHaptics}}
+\index{ResetHaptics@{ResetHaptics}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{ResetHaptics()}{ResetHaptics()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_aa3c75b3a16ff2c32d3377686ce09b489} 
+virtual void Unity\+Engine.\+Input\+System.\+Gamepad.\+Reset\+Haptics (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reset rumble effects on the gamepad. Puts the gamepad rumble motors back into their default state. 
+
+\begin{DoxySeeAlso}{See also}
+IDual\+Motor\+Rumble
+
+
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_haptics_1_1_i_haptics_aa17ed4b013ca6b7ed42061ada26b7692}{Unity\+Engine.\+Input\+System.\+Haptics.\+IHaptics}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_aa82bd252168d6987b962064919497298}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!ResumeHaptics@{ResumeHaptics}}
+\index{ResumeHaptics@{ResumeHaptics}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{ResumeHaptics()}{ResumeHaptics()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_aa82bd252168d6987b962064919497298} 
+virtual void Unity\+Engine.\+Input\+System.\+Gamepad.\+Resume\+Haptics (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Resume rumble affects on the gamepad that have been paused with \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a845219ceccf3449a285612a17fc4e7a0}{Pause\+Haptics}. 
+
+\begin{DoxySeeAlso}{See also}
+IDual\+Motor\+Rumble
+
+
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_haptics_1_1_i_haptics_a777a78e91c8120cd4c3e81d14a9d564f}{Unity\+Engine.\+Input\+System.\+Haptics.\+IHaptics}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_a2bd59cb42494ff6cf0c9c6d24e1ab359}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!SetMotorSpeeds@{SetMotorSpeeds}}
+\index{SetMotorSpeeds@{SetMotorSpeeds}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{SetMotorSpeeds()}{SetMotorSpeeds()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_a2bd59cb42494ff6cf0c9c6d24e1ab359} 
+virtual void Unity\+Engine.\+Input\+System.\+Gamepad.\+Set\+Motor\+Speeds (\begin{DoxyParamCaption}\item[{float}]{low\+Frequency}{, }\item[{float}]{high\+Frequency}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Set the motor speeds of the low-\/frequency (usually on the left) and high-\/frequency (usually on the right) motors.
+
+
+\begin{DoxyParams}{Parameters}
+{\em low\+Frequency} & Speed of the low-\/frequency (left) motor. Normalized \mbox{[}0..1\mbox{]} value with 1 indicating maximum speed and 0 indicating the motor is turned off. Will automatically be clamped into range.\\
+\hline
+{\em high\+Frequency} & Speed of the high-\/frequency (right) motor. Normalized \mbox{[}0..1\mbox{]} value with 1 indicating maximum speed and 0 indicating the motor is turned off. Will automatically be clamped into range.\\
+\hline
+\end{DoxyParams}
+
+
+Note that hardware will put limits on the level of control you have over the motors. Rumbling the motors at maximum speed for an extended period of time may cause them to turn off for some time to prevent overheating. Also, how quickly the motors react and how often the speed can be updated will depend on the hardware and drivers.  
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_haptics_1_1_i_dual_motor_rumble_a76a1e0c4e686c2a9bc309d1c00a92df3}{Unity\+Engine.\+Input\+System.\+Haptics.\+IDual\+Motor\+Rumble}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_af2868f2c5a423a9408e90b0826604973}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!aButton@{aButton}}
+\index{aButton@{aButton}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{aButton}{aButton}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_af2868f2c5a423a9408e90b0826604973} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Gamepad.\+a\+Button\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Same as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a55b57fe1d0a61c4fe2e671284ec2ab3b}{button\+South}. Xbox-\/style alias. 
+
+Same as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a55b57fe1d0a61c4fe2e671284ec2ab3b}{button\+South}.\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_afc11d44c896d7e03bc90709f79788692}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!all@{all}}
+\index{all@{all}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{all}{all}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_afc11d44c896d7e03bc90709f79788692} 
+new \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad}{Gamepad}}$>$ Unity\+Engine.\+Input\+System.\+Gamepad.\+all\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+A list of gamepads currently connected to the system. 
+
+All currently connected gamepads.
+
+Does not cause GC allocation.
+
+Do {\itshape not} hold on to the value returned by this getter but rather query it whenever you need it. Whenever the gamepad setup changes, the value returned by this getter is invalidated. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a6f0bd4b71340da07b56f6ec56097da1d}{current}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_ac78c2fa413c02cdda6a240f619211b21}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!bButton@{bButton}}
+\index{bButton@{bButton}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{bButton}{bButton}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_ac78c2fa413c02cdda6a240f619211b21} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Gamepad.\+b\+Button\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Same as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a1eb7f9e97f3a9426ace972762d56ecae}{button\+East}. Xbox-\/style alias. 
+
+Same as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a1eb7f9e97f3a9426ace972762d56ecae}{button\+East}.\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_a1eb7f9e97f3a9426ace972762d56ecae}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!buttonEast@{buttonEast}}
+\index{buttonEast@{buttonEast}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{buttonEast}{buttonEast}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_a1eb7f9e97f3a9426ace972762d56ecae} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Gamepad.\+button\+East\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The right face button of the gamepad. 
+
+Control representing the B/\+Circle face button.
+
+On an Xbox controller, this is the B button and on the PS4 controller, this is the circle button. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_ac78c2fa413c02cdda6a240f619211b21}{b\+Button}, \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a778596714ea5c531eb62f4730ba7f086}{circle\+Button}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_a404166b546907429967d3984d7521b01}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!buttonNorth@{buttonNorth}}
+\index{buttonNorth@{buttonNorth}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{buttonNorth}{buttonNorth}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_a404166b546907429967d3984d7521b01} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Gamepad.\+button\+North\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The top face button of the gamepad. 
+
+Control representing the Y/\+Triangle face button.
+
+On an Xbox controller, this is the Y button and on the PS4 controller, this is the triangle button. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_afc9933f2afc66ec57f10d2aadd1efe84}{y\+Button}, \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a80e7bee1f41fbddbadceda48e82edbaf}{triangle\+Button}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_a55b57fe1d0a61c4fe2e671284ec2ab3b}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!buttonSouth@{buttonSouth}}
+\index{buttonSouth@{buttonSouth}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{buttonSouth}{buttonSouth}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_a55b57fe1d0a61c4fe2e671284ec2ab3b} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Gamepad.\+button\+South\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The bottom face button of the gamepad. 
+
+Control representing the A/\+Cross face button.
+
+On an Xbox controller, this is the A button and on the PS4 controller, this is the cross button. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_af2868f2c5a423a9408e90b0826604973}{a\+Button}, \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_aec1cfe61366eba70a7050baa12745ad9}{cross\+Button}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_a750c54d04a08f78103c72ae4a55c4d36}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!buttonWest@{buttonWest}}
+\index{buttonWest@{buttonWest}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{buttonWest}{buttonWest}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_a750c54d04a08f78103c72ae4a55c4d36} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Gamepad.\+button\+West\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The left face button of the gamepad. 
+
+Control representing the X/\+Square face button.
+
+On an Xbox controller, this is the X button and on the PS4 controller, this is the square button. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_ac0568580b46a199532438d7e53d1e40d}{x\+Button}, \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a46048c640c56aa4a3f6ef70bcf855a43}{square\+Button}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_a778596714ea5c531eb62f4730ba7f086}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!circleButton@{circleButton}}
+\index{circleButton@{circleButton}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{circleButton}{circleButton}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_a778596714ea5c531eb62f4730ba7f086} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Gamepad.\+circle\+Button\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Same as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a1eb7f9e97f3a9426ace972762d56ecae}{button\+East}. PS4-\/style alias. 
+
+Same as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a1eb7f9e97f3a9426ace972762d56ecae}{button\+East}.\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_aec1cfe61366eba70a7050baa12745ad9}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!crossButton@{crossButton}}
+\index{crossButton@{crossButton}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{crossButton}{crossButton}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_aec1cfe61366eba70a7050baa12745ad9} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Gamepad.\+cross\+Button\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Same as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a55b57fe1d0a61c4fe2e671284ec2ab3b}{button\+South}. PS4-\/style alias. 
+
+Same as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a55b57fe1d0a61c4fe2e671284ec2ab3b}{button\+South}.\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_a6f0bd4b71340da07b56f6ec56097da1d}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!current@{current}}
+\index{current@{current}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{current}{current}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_a6f0bd4b71340da07b56f6ec56097da1d} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad}{Gamepad}} Unity\+Engine.\+Input\+System.\+Gamepad.\+current\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+The gamepad last used/connected by the player or {\ttfamily null} if there is no gamepad connected to the system. 
+
+When added, a device is automatically made current (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_device_a0a98203c32eb180ab8b7c862dc27635c}{Input\+Device.\+Make\+Current}), so when connecting a gamepad, it will also become current. After that, it will only become current again when input change on non-\/noisy controls (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_afa5a8531d7c9a030e8e484560a59fe6f}{Input\+Control.\+noisy}) is received.
+
+For local multiplayer scenarios (or whenever there are multiple gamepads that need to be usable in a concurrent fashion), it is not recommended to rely on this property. Instead, it is recommended to use \doxylink{class_unity_engine_1_1_input_system_1_1_player_input}{Player\+Input} or \doxylink{struct_unity_engine_1_1_input_system_1_1_users_1_1_input_user}{Users.\+Input\+User}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_device_a0a98203c32eb180ab8b7c862dc27635c}{Input\+Device.\+Make\+Current}, \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_afc11d44c896d7e03bc90709f79788692}{all}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_abeb31a818ab8cc7201a2333f8fac8b33}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!dpad@{dpad}}
+\index{dpad@{dpad}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{dpad}{dpad}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_abeb31a818ab8cc7201a2333f8fac8b33} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_dpad_control}{Dpad\+Control}} Unity\+Engine.\+Input\+System.\+Gamepad.\+dpad\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The 4-\/way directional pad on the gamepad. 
+
+Control representing the d-\/pad.\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_ab7f94ddc3a635b26551b2979da25d42c}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!leftShoulder@{leftShoulder}}
+\index{leftShoulder@{leftShoulder}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{leftShoulder}{leftShoulder}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_ab7f94ddc3a635b26551b2979da25d42c} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Gamepad.\+left\+Shoulder\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The left shoulder/bumper button that sits on top of \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_aa787a7b08b5a89ac03de5266a5f9a5d6}{left\+Trigger}. 
+
+Control representing the left shoulder button.
+
+On Xbox controllers, this is usually called "{}left bumper"{} whereas on PS4 controllers, this button is referred to as "{}\+L1"{}. \Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_a9f608a9e12af3301fb2d704e072ea024}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!leftStick@{leftStick}}
+\index{leftStick@{leftStick}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{leftStick}{leftStick}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_a9f608a9e12af3301fb2d704e072ea024} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_stick_control}{Stick\+Control}} Unity\+Engine.\+Input\+System.\+Gamepad.\+left\+Stick\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The left thumbstick on the gamepad. 
+
+Control representing the left thumbstick.\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_a5791ef8428a6e1b4000b0c0677ecca9f}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!leftStickButton@{leftStickButton}}
+\index{leftStickButton@{leftStickButton}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{leftStickButton}{leftStickButton}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_a5791ef8428a6e1b4000b0c0677ecca9f} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Gamepad.\+left\+Stick\+Button\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The button that gets triggered when \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a9f608a9e12af3301fb2d704e072ea024}{left\+Stick} is pressed down. 
+
+Control representing a click with the left stick.\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_aa787a7b08b5a89ac03de5266a5f9a5d6}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!leftTrigger@{leftTrigger}}
+\index{leftTrigger@{leftTrigger}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{leftTrigger}{leftTrigger}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_aa787a7b08b5a89ac03de5266a5f9a5d6} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Gamepad.\+left\+Trigger\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The left trigger button sitting below \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_ab7f94ddc3a635b26551b2979da25d42c}{left\+Shoulder}. 
+
+Control representing the left trigger button.
+
+On PS4 controllers, this button is referred to as "{}\+L2"{}. \Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_a222decb0ab82ed0ea5931a8bc74b4b36}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!rightShoulder@{rightShoulder}}
+\index{rightShoulder@{rightShoulder}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{rightShoulder}{rightShoulder}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_a222decb0ab82ed0ea5931a8bc74b4b36} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Gamepad.\+right\+Shoulder\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The right shoulder/bumper button that sits on top of \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a51aa5a7eb8d09580ad0287e1655dd1de}{right\+Trigger}. 
+
+Control representing the right shoulder button.
+
+On Xbox controllers, this is usually called "{}right bumper"{} whereas on PS4 controllers, this button is referred to as "{}\+R1"{}. \Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_a24a1a82fd0aab986f8e7e141dab4035f}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!rightStick@{rightStick}}
+\index{rightStick@{rightStick}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{rightStick}{rightStick}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_a24a1a82fd0aab986f8e7e141dab4035f} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_stick_control}{Stick\+Control}} Unity\+Engine.\+Input\+System.\+Gamepad.\+right\+Stick\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The right thumbstick on the gamepad. 
+
+Control representing the right thumbstick.\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_ab63ac3d2a9645c35f10a978172fca4fd}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!rightStickButton@{rightStickButton}}
+\index{rightStickButton@{rightStickButton}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{rightStickButton}{rightStickButton}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_ab63ac3d2a9645c35f10a978172fca4fd} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Gamepad.\+right\+Stick\+Button\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The button that gets triggered when \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a24a1a82fd0aab986f8e7e141dab4035f}{right\+Stick} is pressed down. 
+
+Control representing a click with the right stick.\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_a51aa5a7eb8d09580ad0287e1655dd1de}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!rightTrigger@{rightTrigger}}
+\index{rightTrigger@{rightTrigger}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{rightTrigger}{rightTrigger}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_a51aa5a7eb8d09580ad0287e1655dd1de} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Gamepad.\+right\+Trigger\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The right trigger button sitting below \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a222decb0ab82ed0ea5931a8bc74b4b36}{right\+Shoulder}. 
+
+Control representing the right trigger button.
+
+On PS4 controllers, this button is referred to as "{}\+R2"{}. \Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_a66c1350664f902ed14f9c33ddcab8d39}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!selectButton@{selectButton}}
+\index{selectButton@{selectButton}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{selectButton}{selectButton}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_a66c1350664f902ed14f9c33ddcab8d39} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Gamepad.\+select\+Button\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The left button in the middle section of the gamepad (called "{}view"{} on Xbox controllers and "{}share"{} on PS4 controllers). 
+
+Control representing the left button in midsection.\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_a46048c640c56aa4a3f6ef70bcf855a43}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!squareButton@{squareButton}}
+\index{squareButton@{squareButton}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{squareButton}{squareButton}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_a46048c640c56aa4a3f6ef70bcf855a43} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Gamepad.\+square\+Button\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Same as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a750c54d04a08f78103c72ae4a55c4d36}{button\+West}. PS4-\/style alias. 
+
+Same as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a750c54d04a08f78103c72ae4a55c4d36}{button\+West}.\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_a96da133b7f8dc0cebd7fe0475741c0a3}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!startButton@{startButton}}
+\index{startButton@{startButton}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{startButton}{startButton}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_a96da133b7f8dc0cebd7fe0475741c0a3} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Gamepad.\+start\+Button\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The right button in the middle section of the gamepad (called "{}menu"{} on Xbox controllers and "{}options"{} on PS4 controllers). 
+
+Control representing the right button in midsection.\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_af3acccb2527a813fb217c883629a57a4}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!this\mbox{[}GamepadButton button\mbox{]}@{this[GamepadButton button]}}
+\index{this\mbox{[}GamepadButton button\mbox{]}@{this[GamepadButton button]}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{this[GamepadButton button]}{this[GamepadButton button]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_af3acccb2527a813fb217c883629a57a4} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Gamepad.\+this\mbox{[}\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36}{Gamepad\+Button}} button\mbox{]}\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Retrieve a gamepad button by its \doxylink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36}{Gamepad\+Button} enumeration constant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & Button to retrieve.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & {\itshape button}  is not a valid gamepad button value.\\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_a80e7bee1f41fbddbadceda48e82edbaf}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!triangleButton@{triangleButton}}
+\index{triangleButton@{triangleButton}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{triangleButton}{triangleButton}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_a80e7bee1f41fbddbadceda48e82edbaf} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Gamepad.\+triangle\+Button\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Same as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a404166b546907429967d3984d7521b01}{button\+North}. PS4-\/style alias. 
+
+Same as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a404166b546907429967d3984d7521b01}{button\+North}.\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_ac0568580b46a199532438d7e53d1e40d}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!xButton@{xButton}}
+\index{xButton@{xButton}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{xButton}{xButton}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_ac0568580b46a199532438d7e53d1e40d} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Gamepad.\+x\+Button\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Same as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a750c54d04a08f78103c72ae4a55c4d36}{button\+West} Xbox-\/style alias. 
+
+Same as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a750c54d04a08f78103c72ae4a55c4d36}{button\+West}.\Hypertarget{class_unity_engine_1_1_input_system_1_1_gamepad_afc9933f2afc66ec57f10d2aadd1efe84}\index{UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}!yButton@{yButton}}
+\index{yButton@{yButton}!UnityEngine.InputSystem.Gamepad@{UnityEngine.InputSystem.Gamepad}}
+\doxysubsubsection{\texorpdfstring{yButton}{yButton}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_gamepad_afc9933f2afc66ec57f10d2aadd1efe84} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Gamepad.\+y\+Button\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Same as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a404166b546907429967d3984d7521b01}{button\+North}. Xbox-\/style alias. 
+
+Same as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a404166b546907429967d3984d7521b01}{button\+North}.
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Devices/Gamepad.\+cs\end{DoxyCompactItemize}

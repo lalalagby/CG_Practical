@@ -1,0 +1,84 @@
+\chapter{Normal From Height Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_normal-_from-_height-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_normal-_from-_height-_node}\index{Normal From Height Node@{Normal From Height Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_normal-_from-_height-_node_autotoc_md3531}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_normal-_from-_height-_node_autotoc_md3531}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_normal-_from-_height-_node_autotoc_md3532}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_normal-_from-_height-_node_autotoc_md3532}
+Creates a normal map from a height value defined by input {\bfseries{Input}} with a strength defined by input {\bfseries{Strength}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_normal-_from-_height-_node_autotoc_md3533}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_normal-_from-_height-_node_autotoc_md3533}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endhead
+In   &Input   &Float   &Input height value    \\\cline{1-4}
+Strength   &Input   &Float   &The strength of the output normal. Considered in real-\/world units, recommended range is 0 -\/ 0.\+1 .    \\\cline{1-4}
+Out   &Output   &Vector 3   &Output value   \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_normal-_from-_height-_node_autotoc_md3534}{}\doxysection{\texorpdfstring{Controls}{Controls}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_normal-_from-_height-_node_autotoc_md3534}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endhead
+Output Space   &Dropdown   &Tangent, World   &Sets the coordinate space of the output normal.   \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_normal-_from-_height-_node_autotoc_md3535}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_normal-_from-_height-_node_autotoc_md3535}
+The following example code represents one possible outcome of this node per {\bfseries{Output Space}} mode.
+
+{\bfseries{Tangent}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_NormalFromHeight\_Tangent\_float(float\ In,\ float\ Strength,\ float3\ Position,\ float3x3\ TangentMatrix,\ out\ float3\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ float3\ worldDerivativeX\ =\ ddx(Position);}
+\DoxyCodeLine{\ \ \ \ float3\ worldDerivativeY\ =\ ddy(Position);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ float3\ crossX\ =\ cross(TangentMatrix[2].xyz,\ worldDerivativeX);}
+\DoxyCodeLine{\ \ \ \ float3\ crossY\ =\ cross(worldDerivativeY,\ TangentMatrix[2].xyz);}
+\DoxyCodeLine{\ \ \ \ float\ d\ =\ dot(worldDerivativeX,\ crossY);}
+\DoxyCodeLine{\ \ \ \ float\ sgn\ =\ d\ <\ 0.0\ ?\ (-\/1.0f)\ :\ 1.0f;}
+\DoxyCodeLine{\ \ \ \ float\ surface\ =\ sgn\ /\ max(0.000000000000001192093f,\ abs(d));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ float\ dHdx\ =\ ddx(In);}
+\DoxyCodeLine{\ \ \ \ float\ dHdy\ =\ ddy(In);}
+\DoxyCodeLine{\ \ \ \ float3\ surfGrad\ =\ surface\ *\ (dHdx*crossY\ +\ dHdy*crossX);}
+\DoxyCodeLine{\ \ \ \ Out\ =\ normalize(TangentMatrix[2].xyz\ -\/\ (Strength\ *\ surfGrad));}
+\DoxyCodeLine{\ \ \ \ Out\ =\ TransformWorldToTangent(Out,\ TangentMatrix);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{World}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_NormalFromHeight\_World\_float(float\ In,\ float\ Strength,\ float3\ Position,\ float3x3\ TangentMatrix,\ out\ float3\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ float3\ worldDerivativeX\ =\ ddx(Position);}
+\DoxyCodeLine{\ \ \ \ float3\ worldDerivativeY\ =\ ddy(Position);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ float3\ crossX\ =\ cross(TangentMatrix[2].xyz,\ worldDerivativeX);}
+\DoxyCodeLine{\ \ \ \ float3\ crossY\ =\ cross(worldDerivativeY,\ TangentMatrix[2].xyz);}
+\DoxyCodeLine{\ \ \ \ float\ d\ =\ dot(worldDerivativeX,\ crossY);}
+\DoxyCodeLine{\ \ \ \ float\ sgn\ =\ d\ <\ 0.0\ ?\ (-\/1.0f)\ :\ 1.0f;}
+\DoxyCodeLine{\ \ \ \ float\ surface\ =\ sgn\ /\ max(0.000000000000001192093f,\ abs(d));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ float\ dHdx\ =\ ddx(In);}
+\DoxyCodeLine{\ \ \ \ float\ dHdy\ =\ ddy(In);}
+\DoxyCodeLine{\ \ \ \ float3\ surfGrad\ =\ surface\ *\ (dHdx*crossY\ +\ dHdy*crossX);}
+\DoxyCodeLine{\ \ \ \ Out\ =\ normalize(TangentMatrix[2].xyz\ -\/\ (Strength\ *\ surfGrad));}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

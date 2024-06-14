@@ -1,0 +1,45 @@
+\chapter{Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node}\index{Node@{Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node_autotoc_md3517}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node_autotoc_md3517}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node_autotoc_md3518}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node_autotoc_md3518}
+A {\bfseries{Node}} defines an input, output or operation on the Shader Graph, depending on its available \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_port}{Ports}{0}. A {\bfseries{Node}} may have any number of input and/or output ports. You create a Shader Graph by connecting these ports with \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_edge}{Edges}{0}. A {\bfseries{Node}} might also have any number of {\bfseries{Controls}}, these are controls on the {\bfseries{Node}} that do not have ports.
+
+You can collapse a {\bfseries{Node}} by clicking the {\bfseries{Collapse}} button in the top-\/right corner of the {\bfseries{Node}}. This will hide all unconnected ports.
+
+For components of a {\bfseries{Node}} see\+:
+\begin{DoxyItemize}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_port}{Port}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_edge}{Edge}{0}
+\end{DoxyItemize}
+
+There are many available {\bfseries{Nodes}} in Shader Graph. For a full list of all available {\bfseries{Nodes}} see the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node-_library}{Node Library}{0}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node_autotoc_md3519}{}\doxysection{\texorpdfstring{Preview}{Preview}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node_autotoc_md3519}
+Many nodes include a preview. This preview displays the main output value at that stage in the graph. Hide this preview with the Collapse control that displays when you hover over the node. You can also collapse and expand node previews via the Context Menu in the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_shader-_graph-_window}{Shader Graph Window}{0}. To configure the appearance of node previews, see \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_preview-_mode-_control}{Preview Mode Control}{0}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node_autotoc_md3520}{}\doxysection{\texorpdfstring{Context Menu}{Context Menu}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node_autotoc_md3520}
+Right clicking on a {\bfseries{Node}} will open a context menu. This menu contains many operations that can be performed on the {\bfseries{Node}}. Note that when multiple nodes are selected, these operations will be applied to the entire selection.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Item   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Item   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+Copy Shader   &Copies the generated HLSL code at this stage in the graph to the clipboard    \\\cline{1-2}
+Disconnect All   &Removes all edges from all ports on the {\bfseries{Node(s)}}    \\\cline{1-2}
+Cut   &Cuts selected {\bfseries{Node(s)}} to the clipboard    \\\cline{1-2}
+Copy   &Copies selected {\bfseries{Nodes(s)}} to the clipboard    \\\cline{1-2}
+Paste   &Pastes {\bfseries{Node(s)}} in the clipboard    \\\cline{1-2}
+Delete   &Deletes selected {\bfseries{Node(s)}}    \\\cline{1-2}
+Duplicate   &Duplicates selected {\bfseries{Node(s)}}    \\\cline{1-2}
+Convert To Sub-\/graph   &Creates a new \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_sub-graph-_asset}{Sub-\/graph Asset}{0} with the selected {\bfseries{Node(s)}} included    \\\cline{1-2}
+Convert To Inline Node   &Converts a \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types}{Property Node}{0} into a regular node of the appropriate \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_data-_types}{Data Type}{0}    \\\cline{1-2}
+Convert To Property   &Converts a {\bfseries{Node}} into a new {\bfseries{Property}} on the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blackboard}{Blackboard}{0} of the appropriate \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_property-_types}{Property Type}{0}    \\\cline{1-2}
+Open Documentation   &Opens a new web browser to the selected {\bfseries{Nodes}} documentation page in the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node-_library}{Node Library}{0}   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node_autotoc_md3521}{}\doxysection{\texorpdfstring{Color Mode}{Color Mode}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node_autotoc_md3521}
+{\bfseries{Nodes}} interact with the Shader Graph Window\textquotesingle{}s Color Modes. Colors are displayed on nodes underneath the text on the node title bar. See \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_color-_modes}{Color Modes}{0} for more information on available colors for nodes.
+
+$<$image$>$ 

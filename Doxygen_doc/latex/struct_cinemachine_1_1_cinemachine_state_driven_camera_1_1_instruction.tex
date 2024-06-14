@@ -1,0 +1,30 @@
+\doxysection{Cinemachine.\+Cinemachine\+State\+Driven\+Camera.\+Instruction Struct Reference}
+\hypertarget{struct_cinemachine_1_1_cinemachine_state_driven_camera_1_1_instruction}{}\label{struct_cinemachine_1_1_cinemachine_state_driven_camera_1_1_instruction}\index{Cinemachine.CinemachineStateDrivenCamera.Instruction@{Cinemachine.CinemachineStateDrivenCamera.Instruction}}
+
+
+This represents a single instrunction to the State\+Driven\+Camera. It associates an state from the state machine with a child Virtual Camera, and also holds activation tuning parameters.  
+
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_state_driven_camera_1_1_instruction_a3701407f739ea99fd12c8b2df2a85eec}\label{struct_cinemachine_1_1_cinemachine_state_driven_camera_1_1_instruction_a3701407f739ea99fd12c8b2df2a85eec} 
+int {\bfseries m\+\_\+\+Full\+Hash}
+\begin{DoxyCompactList}\small\item\em The full hash of the animation state. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_state_driven_camera_1_1_instruction_a11b542fc199052aba05398b168a0b20e}\label{struct_cinemachine_1_1_cinemachine_state_driven_camera_1_1_instruction_a11b542fc199052aba05398b168a0b20e} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} {\bfseries m\+\_\+\+Virtual\+Camera}
+\begin{DoxyCompactList}\small\item\em The virtual camera to activate when the animation state becomes active. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_state_driven_camera_1_1_instruction_ac3cb54ce422bf83ff98f13857a5e3f5c}\label{struct_cinemachine_1_1_cinemachine_state_driven_camera_1_1_instruction_ac3cb54ce422bf83ff98f13857a5e3f5c} 
+float {\bfseries m\+\_\+\+Activate\+After}
+\begin{DoxyCompactList}\small\item\em How long to wait (in seconds) before activating the virtual camera. This filters out very short state durations. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_state_driven_camera_1_1_instruction_a26689ed0b812df4028eae4d9e6b08f63}\label{struct_cinemachine_1_1_cinemachine_state_driven_camera_1_1_instruction_a26689ed0b812df4028eae4d9e6b08f63} 
+float {\bfseries m\+\_\+\+Min\+Duration}
+\begin{DoxyCompactList}\small\item\em The minimum length of time (in seconds) to keep a virtual camera active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This represents a single instrunction to the State\+Driven\+Camera. It associates an state from the state machine with a child Virtual Camera, and also holds activation tuning parameters. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Behaviours/Cinemachine\+State\+Driven\+Camera.\+cs\end{DoxyCompactItemize}

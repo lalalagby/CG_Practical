@@ -1,0 +1,86 @@
+\doxysection{Cinemachine.\+Editor.\+Cinemachine\+Smooth\+Path\+Editor Class Reference}
+\hypertarget{class_cinemachine_1_1_editor_1_1_cinemachine_smooth_path_editor}{}\label{class_cinemachine_1_1_editor_1_1_cinemachine_smooth_path_editor}\index{Cinemachine.Editor.CinemachineSmoothPathEditor@{Cinemachine.Editor.CinemachineSmoothPathEditor}}
+Inheritance diagram for Cinemachine.\+Editor.\+Cinemachine\+Smooth\+Path\+Editor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cinemachine_1_1_editor_1_1_cinemachine_smooth_path_editor}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_editor_1_1_cinemachine_smooth_path_editor_a90ae5c64b9b50c7d721254f22187e86f}\label{class_cinemachine_1_1_editor_1_1_cinemachine_smooth_path_editor_a90ae5c64b9b50c7d721254f22187e86f} 
+bool {\bfseries Has\+Frame\+Bounds} ()
+\item 
+\Hypertarget{class_cinemachine_1_1_editor_1_1_cinemachine_smooth_path_editor_af30f75008e10357741730dec0c1872ea}\label{class_cinemachine_1_1_editor_1_1_cinemachine_smooth_path_editor_af30f75008e10357741730dec0c1872ea} 
+Bounds {\bfseries On\+Get\+Frame\+Bounds} ()
+\item 
+\Hypertarget{class_cinemachine_1_1_editor_1_1_cinemachine_smooth_path_editor_a4c50a23ed69c769df3130b64e88bf97d}\label{class_cinemachine_1_1_editor_1_1_cinemachine_smooth_path_editor_a4c50a23ed69c769df3130b64e88bf97d} 
+override void {\bfseries On\+Inspector\+GUI} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_base_editor}{Cinemachine.\+Editor.\+Base\+Editor$<$ Cinemachine\+Smooth\+Path $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+override void {\bfseries On\+Inspector\+GUI} ()
+\begin{DoxyCompactList}\small\item\em Draw the inspector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_cinemachine_smooth_path_editor_aec7c2f86766e18518e6671f8d0ae1a14}{Get\+Excluded\+Properties\+In\+Inspector}} (List$<$ string $>$ excluded)
+\begin{DoxyCompactList}\small\item\em Get the property names to exclude in the inspector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_base_editor}{Cinemachine.\+Editor.\+Base\+Editor$<$ Cinemachine\+Smooth\+Path $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+Serialized\+Property \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_base_editor_a815c2a2ce15cd0f6bdc7c72b5a7d773f}{Find\+And\+Exclude\+Property$<$ TValue $>$}} (Expression$<$ Func$<$ T, TValue $>$ $>$ expr)
+\begin{DoxyCompactList}\small\item\em Return the Serialized property for a field, and exclude it from being automatically displayed in the inspector. Call this when you need to provide a custom UX for a field. \end{DoxyCompactList}\item 
+Serialized\+Property \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_base_editor_ad714695db8f6877d955d6d8be515d9b7}{Find\+Property$<$ TValue $>$}} (Expression$<$ Func$<$ T, TValue $>$ $>$ expr)
+\begin{DoxyCompactList}\small\item\em Return the Serialized property for a field. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_base_editor_a24720f002b1f365ac2d611492666273c}{Field\+Path$<$ TValue $>$}} (Expression$<$ Func$<$ T, TValue $>$ $>$ expr)
+\begin{DoxyCompactList}\small\item\em Magic code to get the string name of a field. Will not build if the field name changes. \end{DoxyCompactList}\item 
+virtual List$<$ string $>$ \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_base_editor_af90cf6e6744f15a306ddfe710f86aa96}{Get\+Excluded\+Properties\+In\+Inspector}} ()
+\begin{DoxyCompactList}\small\item\em Obsolete, do not use. Use the overload, which is more performant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_base_editor_aea8a1818a5621939e50af2981e47b6bf}{Exclude\+Property}} (string property\+Name)
+\begin{DoxyCompactList}\small\item\em Exclude a property from automatic inclusion in the inspector when \doxylink{class_cinemachine_1_1_editor_1_1_base_editor_ae45eba4abc3ab2b46747ae063e07f331}{Draw\+Remaining\+Properties\+In\+Inspector()} is called. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_base_editor_a8f039432e51ba818fddad6889b9519e3}{Is\+Property\+Excluded}} (string property\+Name)
+\begin{DoxyCompactList}\small\item\em Check whenther a property is in the excluded list. \end{DoxyCompactList}\item 
+virtual void {\bfseries Begin\+Inspector} ()
+\begin{DoxyCompactList}\small\item\em Clients should call this at the start of On\+Inspector\+GUI. ~\newline
+ Updates the serialized object and Sets up for excluded properties. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_base_editor_a49345cd32c260f8077abe5848642b843}{Draw\+Property\+In\+Inspector}} (Serialized\+Property p)
+\begin{DoxyCompactList}\small\item\em Draw a property in the inspector, if it is not excluded. ~\newline
+ Property is marked as drawn, so will not be drawn again by \doxylink{class_cinemachine_1_1_editor_1_1_base_editor_ae45eba4abc3ab2b46747ae063e07f331}{Draw\+Remaining\+Properties\+In\+Inspector()} \end{DoxyCompactList}\item 
+void {\bfseries Draw\+Remaining\+Properties\+In\+Inspector} ()
+\begin{DoxyCompactList}\small\item\em Draw all remaining unexcluded undrawn properties in the inspector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_base_editor}{Cinemachine.\+Editor.\+Base\+Editor$<$ Cinemachine\+Smooth\+Path $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+T {\bfseries Target}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The target object, cast as the same class as the object being edited. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cinemachine_1_1_editor_1_1_cinemachine_smooth_path_editor_aec7c2f86766e18518e6671f8d0ae1a14}\index{Cinemachine.Editor.CinemachineSmoothPathEditor@{Cinemachine.Editor.CinemachineSmoothPathEditor}!GetExcludedPropertiesInInspector@{GetExcludedPropertiesInInspector}}
+\index{GetExcludedPropertiesInInspector@{GetExcludedPropertiesInInspector}!Cinemachine.Editor.CinemachineSmoothPathEditor@{Cinemachine.Editor.CinemachineSmoothPathEditor}}
+\doxysubsubsection{\texorpdfstring{GetExcludedPropertiesInInspector()}{GetExcludedPropertiesInInspector()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_editor_1_1_cinemachine_smooth_path_editor_aec7c2f86766e18518e6671f8d0ae1a14} 
+override void Cinemachine.\+Editor.\+Cinemachine\+Smooth\+Path\+Editor.\+Get\+Excluded\+Properties\+In\+Inspector (\begin{DoxyParamCaption}\item[{List$<$ string $>$}]{excluded}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Get the property names to exclude in the inspector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em excluded} & Add the names to this list\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_base_editor_a56f7e3663a7136a29b6e2b25c383a513}{Cinemachine.\+Editor.\+Base\+Editor$<$ Cinemachine\+Smooth\+Path $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Editor/\+Editors/Cinemachine\+Smooth\+Path\+Editor.\+cs\end{DoxyCompactItemize}

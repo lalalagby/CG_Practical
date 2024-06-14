@@ -1,0 +1,233 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Universal.\+Forward\+Renderer Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_forward_renderer}{}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_forward_renderer}\index{UnityEngine.Rendering.Universal.ForwardRenderer@{UnityEngine.Rendering.Universal.ForwardRenderer}}
+
+
+Default renderer for \doxylink{namespace_unity_engine_1_1_rendering_1_1_universal}{Universal} RP. This renderer is supported on all \doxylink{namespace_unity_engine_1_1_rendering_1_1_universal}{Universal} RP supported platforms. It uses a classic forward rendering strategy with per-\/object light culling.  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Universal.\+Forward\+Renderer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_engine_1_1_rendering_1_1_universal_1_1_forward_renderer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_forward_renderer_a23a51b34153d1af92530dcdd298ced2c}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_forward_renderer_a23a51b34153d1af92530dcdd298ced2c} 
+{\bfseries Forward\+Renderer} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_forward_renderer_data}{Forward\+Renderer\+Data}} data)
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_forward_renderer_a9441042bf19db36396fc920b3b4a7600}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_forward_renderer_a9441042bf19db36396fc920b3b4a7600} 
+override void {\bfseries Setup} (Scriptable\+Render\+Context context, ref \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}} rendering\+Data)
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_forward_renderer_a19333b1f052fbc03d995e2cfa1ee5606}{Setup\+Lights}} (Scriptable\+Render\+Context context, ref \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}} rendering\+Data)
+\begin{DoxyCompactList}\small\item\em Override this method to implement the lighting setup for the renderer. You can use this to compute and upload light CBUFFER for example.
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Use this render context to issue any draw commands during execution.\\
+\hline
+{\em rendering\+Data} & Current render state information.\\
+\hline
+\end{DoxyParams}
+ \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_forward_renderer_a71c62b40e95eee9fce52b3cac43fc8bb}{Setup\+Culling\+Parameters}} (ref Scriptable\+Culling\+Parameters culling\+Parameters, ref \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_camera_data}{Camera\+Data}} camera\+Data)
+\begin{DoxyCompactList}\small\item\em Override this method to configure the culling parameters for the renderer. You can use this to configure if lights should be culled per-\/object or the maximum shadow distance for example.
+
+
+\begin{DoxyParams}{Parameters}
+{\em culling\+Parameters} & Use this to change culling parameters used by the render pipeline.\\
+\hline
+{\em camera\+Data} & Current render state information.\\
+\hline
+\end{DoxyParams}
+ \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_forward_renderer_a72c27b4a259ad1ba80295042cdc2cba4}{Finish\+Rendering}} (Command\+Buffer cmd)
+\begin{DoxyCompactList}\small\item\em Called upon finishing rendering the camera stack. You can release any resources created by the renderer here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & \\
+\hline
+\end{DoxyParams}
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Renderer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_ad7250df04b2408ffb04e5082617eb759}{Supported\+Camera\+Stacking\+Types}} ()
+\begin{DoxyCompactList}\small\item\em This setting controls if the camera editor should display the camera stack category. If your renderer is not supporting stacking this one should return 0. For the \doxylink{namespace_unity_engine_1_1_rendering_1_1_u_i}{UI} to show the Camera Stack widget this must support \doxylink{namespace_unity_engine_1_1_rendering_1_1_universal_af54eede616e112c00931fdfeb92a87e5a095a1b43effec73955e31e790438de49}{Camera\+Render\+Type.\+Base}. \doxylink{namespace_unity_engine_1_1_rendering_1_1_universal_af54eede616e112c00931fdfeb92a87e5}{Camera\+Render\+Type} Returns the bitmask of the supported camera render types in the renderer\textquotesingle{}s current state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_a7f0766674116b64c223fa1cdff13bb2a}{Supports\+Camera\+Stacking\+Type}} (\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_af54eede616e112c00931fdfeb92a87e5}{Camera\+Render\+Type}} camera\+Render\+Type)
+\begin{DoxyCompactList}\small\item\em Returns true if the given camera render type is supported in the renderer\textquotesingle{}s current state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_a2d4803ec8a53077881e340cb6e7b7432}{Scriptable\+Renderer}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_data}{Scriptable\+Renderer\+Data}} data)
+\begin{DoxyCompactList}\small\item\em Creates a new {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Scriptable\+Renderer}} instance. \end{DoxyCompactList}\item 
+void {\bfseries Dispose} ()
+\begin{DoxyCompactList}\small\item\em Disposable pattern implementation. Cleans up resources used by the renderer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_a9beba517ed6657a77260ef47cc4a102b}{Configure\+Camera\+Target}} (Render\+Target\+Identifier color\+Target, Render\+Target\+Identifier depth\+Target)
+\begin{DoxyCompactList}\small\item\em Configures the camera target. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_aaa363869032afebd138711635de7a1e9}{Configure\+Camera\+Target}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} color\+Target, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} depth\+Target)
+\begin{DoxyCompactList}\small\item\em Configures the camera target. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_a8bd535aedd2455f2a18615a90af77e5a}{Setup}} (Scriptable\+Render\+Context context, ref \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}} rendering\+Data)
+\begin{DoxyCompactList}\small\item\em Configures the render passes that will execute for this renderer. This method is called per-\/camera every frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_a2a52d0a415f6c8a323b8e97ba2423a88}{Execute}} (Scriptable\+Render\+Context context, ref \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}} rendering\+Data)
+\begin{DoxyCompactList}\small\item\em Execute the enqueued render passes. This automatically handles editor and stereo rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_adef70d792e8e83c7feab314db83b02f2}{Enqueue\+Pass}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Scriptable\+Render\+Pass}} pass)
+\begin{DoxyCompactList}\small\item\em Enqueues a render pass for execution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Renderer}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_a61bc771bbc368eb74e5c77e20782336d}{Set\+Camera\+Matrices}} (Command\+Buffer cmd, ref \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_camera_data}{Camera\+Data}} camera\+Data, bool set\+Inverse\+Matrices)
+\begin{DoxyCompactList}\small\item\em Set camera matrices. This method will set {\ttfamily UNITY\+\_\+\+MATRIX\+\_\+V}, {\ttfamily UNITY\+\_\+\+MATRIX\+\_\+P}, {\ttfamily UNITY\+\_\+\+MATRIX\+\_\+\+VP} to camera matrices. Additionally this will also set {\ttfamily unity\+\_\+\+Camera\+Projection} and {\ttfamily unity\+\_\+\+Camera\+Projection}. If {\ttfamily set\+Inverse\+Matrices} is set to true this function will also set {\ttfamily UNITY\+\_\+\+MATRIX\+\_\+\+I\+\_\+V} and {\ttfamily UNITY\+\_\+\+MATRIX\+\_\+\+I\+\_\+\+VP}. This function has no effect when rendering in stereo. When in stereo rendering you cannot override camera matrices. If you need to set general purpose view and projection matrices call Set\+View\+And\+Projection\+Matrices(\+Command\+Buffer, Matrix4x4, Matrix4x4, bool) instead. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Renderer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_a68665313dac0ee2543b9ad91aaeaa909}{Dispose}} (bool disposing)
+\begin{DoxyCompactList}\small\item\em Called by \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_a551158e9ebf57f4a8d3abbe81ab3f87f}{Dispose()}. Override this function to clean up resources in your renderer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_acd8ab2a0bbedbb60a133b33534356993}{Setup\+Render\+Passes}} (in \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}} rendering\+Data)
+\begin{DoxyCompactList}\small\item\em Calls {\ttfamily Setup} for each feature added to this renderer. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature_a100d4bf04924b49e6a14a533f0415add}{Scriptable\+Renderer\+Feature.\+Setup\+Render\+Passes(\+Scriptable\+Renderer, in Rendering\+Data)}
+
+
+\end{DoxySeeAlso}
+\end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Renderer}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a1f4d1dce2a5a025519f66545ce6bb4f6}{Clear\+Flag}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_a6a2c998329c7876ee21a84fe955bc042}{Get\+Camera\+Clear\+Flag}} (ref \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_camera_data}{Camera\+Data}} camera\+Data)
+\begin{DoxyCompactList}\small\item\em Returns a clear flag based on Camera\+Clear\+Flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Renderer}}}
+\begin{DoxyCompactItemize}
+\item 
+static readonly \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} {\bfseries k\+\_\+\+Camera\+Target} = RTHandles.\+Alloc(Builtin\+Render\+Texture\+Type.\+Camera\+Target)
+\begin{DoxyCompactList}\small\item\em The \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} for the Camera Target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Renderer}}}
+\begin{DoxyCompactItemize}
+\item 
+Render\+Target\+Identifier {\bfseries camera\+Depth}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The render target identifier for camera depth. This is obsolete, camera\+Depth has been renamed to camera\+Depth\+Target. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_profiling_sampler}{Profiling\+Sampler}} {\bfseries profiling\+Execute}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Override to provide a custom profiling name. \end{DoxyCompactList}\item 
+Render\+Target\+Identifier {\bfseries camera\+Color\+Target}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the camera color target for this renderer. It\textquotesingle{}s only valid to call camera\+Color\+Target in the scope of {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Scriptable\+Render\+Pass}}. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Scriptable\+Render\+Pass}
+
+
+\end{DoxySeeAlso}
+. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} {\bfseries camera\+Color\+Target\+Handle}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the camera color target for this renderer. It\textquotesingle{}s only valid to call camera\+Color\+Target in the scope of {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Scriptable\+Render\+Pass}}. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Scriptable\+Render\+Pass}
+
+
+\end{DoxySeeAlso}
+. \end{DoxyCompactList}\item 
+Render\+Target\+Identifier {\bfseries camera\+Depth\+Target}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the camera depth target for this renderer. It\textquotesingle{}s only valid to call camera\+Depth\+Target in the scope of {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Scriptable\+Render\+Pass}}. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Scriptable\+Render\+Pass}
+
+
+\end{DoxySeeAlso}
+. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} {\bfseries camera\+Depth\+Target\+Handle}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the camera depth target for this renderer. It\textquotesingle{}s only valid to call camera\+Depth\+Target in the scope of {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Scriptable\+Render\+Pass}}. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Scriptable\+Render\+Pass}
+
+
+\end{DoxySeeAlso}
+. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature}{Scriptable\+Renderer\+Feature}} $>$ {\bfseries renderer\+Features}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns a list of renderer features added to this renderer. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_feature}{Scriptable\+Renderer\+Feature}
+
+
+\end{DoxySeeAlso}
+\end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Scriptable\+Render\+Pass}} $>$ {\bfseries active\+Render\+Pass\+Queue}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns a list of render passes scheduled to be executed by this renderer. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_render_pass}{Scriptable\+Render\+Pass}
+
+
+\end{DoxySeeAlso}
+\end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_1_1_rendering_features}{Rendering\+Features}} {\bfseries supported\+Rendering\+Features} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_1_1_rendering_features}{Rendering\+Features}}()\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Supported rendering features by this renderer. Supported\+Rendering\+Features \end{DoxyCompactList}\item 
+Graphics\+Device\+Type\mbox{[}$\,$\mbox{]} {\bfseries unsupported\+Graphics\+Device\+Types} = new Graphics\+Device\+Type\mbox{[}0\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of unsupported \doxylink{namespace_graphics}{Graphics} APIs for this renderer. \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_af58b6d802d5b1d9f7de5d86e6440794f}{unsupported\+Graphics\+Device\+Types} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Default renderer for \doxylink{namespace_unity_engine_1_1_rendering_1_1_universal}{Universal} RP. This renderer is supported on all \doxylink{namespace_unity_engine_1_1_rendering_1_1_universal}{Universal} RP supported platforms. It uses a classic forward rendering strategy with per-\/object light culling. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_forward_renderer_a72c27b4a259ad1ba80295042cdc2cba4}\index{UnityEngine.Rendering.Universal.ForwardRenderer@{UnityEngine.Rendering.Universal.ForwardRenderer}!FinishRendering@{FinishRendering}}
+\index{FinishRendering@{FinishRendering}!UnityEngine.Rendering.Universal.ForwardRenderer@{UnityEngine.Rendering.Universal.ForwardRenderer}}
+\doxysubsubsection{\texorpdfstring{FinishRendering()}{FinishRendering()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_forward_renderer_a72c27b4a259ad1ba80295042cdc2cba4} 
+override void Unity\+Engine.\+Rendering.\+Universal.\+Forward\+Renderer.\+Finish\+Rendering (\begin{DoxyParamCaption}\item[{Command\+Buffer}]{cmd}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called upon finishing rendering the camera stack. You can release any resources created by the renderer here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & \\
+\hline
+\end{DoxyParams}
+ 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_aa353bea225752324a2e18b2514e4f3e1}{Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Renderer}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_forward_renderer_a71c62b40e95eee9fce52b3cac43fc8bb}\index{UnityEngine.Rendering.Universal.ForwardRenderer@{UnityEngine.Rendering.Universal.ForwardRenderer}!SetupCullingParameters@{SetupCullingParameters}}
+\index{SetupCullingParameters@{SetupCullingParameters}!UnityEngine.Rendering.Universal.ForwardRenderer@{UnityEngine.Rendering.Universal.ForwardRenderer}}
+\doxysubsubsection{\texorpdfstring{SetupCullingParameters()}{SetupCullingParameters()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_forward_renderer_a71c62b40e95eee9fce52b3cac43fc8bb} 
+override void Unity\+Engine.\+Rendering.\+Universal.\+Forward\+Renderer.\+Setup\+Culling\+Parameters (\begin{DoxyParamCaption}\item[{ref Scriptable\+Culling\+Parameters}]{culling\+Parameters}{, }\item[{ref \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_camera_data}{Camera\+Data}}}]{camera\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Override this method to configure the culling parameters for the renderer. You can use this to configure if lights should be culled per-\/object or the maximum shadow distance for example.
+
+
+\begin{DoxyParams}{Parameters}
+{\em culling\+Parameters} & Use this to change culling parameters used by the render pipeline.\\
+\hline
+{\em camera\+Data} & Current render state information.\\
+\hline
+\end{DoxyParams}
+ 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_af345a3183745faaba2c9bd8beed8d5ad}{Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Renderer}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_forward_renderer_a19333b1f052fbc03d995e2cfa1ee5606}\index{UnityEngine.Rendering.Universal.ForwardRenderer@{UnityEngine.Rendering.Universal.ForwardRenderer}!SetupLights@{SetupLights}}
+\index{SetupLights@{SetupLights}!UnityEngine.Rendering.Universal.ForwardRenderer@{UnityEngine.Rendering.Universal.ForwardRenderer}}
+\doxysubsubsection{\texorpdfstring{SetupLights()}{SetupLights()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_forward_renderer_a19333b1f052fbc03d995e2cfa1ee5606} 
+override void Unity\+Engine.\+Rendering.\+Universal.\+Forward\+Renderer.\+Setup\+Lights (\begin{DoxyParamCaption}\item[{Scriptable\+Render\+Context}]{context}{, }\item[{ref \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_universal_1_1_rendering_data}{Rendering\+Data}}}]{rendering\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Override this method to implement the lighting setup for the renderer. You can use this to compute and upload light CBUFFER for example.
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Use this render context to issue any draw commands during execution.\\
+\hline
+{\em rendering\+Data} & Current render state information.\\
+\hline
+\end{DoxyParams}
+ 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_a52df57708c94c02827ba89a5482fae10}{Unity\+Engine.\+Rendering.\+Universal.\+Scriptable\+Renderer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/Deprecated.\+cs\end{DoxyCompactItemize}

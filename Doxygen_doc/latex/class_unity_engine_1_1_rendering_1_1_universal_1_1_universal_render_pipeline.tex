@@ -1,0 +1,282 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline}{}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline}\index{UnityEngine.Rendering.Universal.UniversalRenderPipeline@{UnityEngine.Rendering.Universal.UniversalRenderPipeline}}
+
+
+The main class for the \doxylink{namespace_unity_engine_1_1_rendering_1_1_universal}{Universal} Render Pipeline (URP).  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_1_1_single_camera_request}{Single\+Camera\+Request}}
+\begin{DoxyCompactList}\small\item\em Data structure describing the data for a specific render request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a7709b76e5f3c5d875b7f151c8fdd729a}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a7709b76e5f3c5d875b7f151c8fdd729a} 
+override string {\bfseries To\+String} ()
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a22562ea2c09cc0e1f1f42d1153665583}{Universal\+Render\+Pipeline}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{Universal\+Render\+Pipeline\+Asset}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a1e1cefaddafce6c0ec4ede563862754d}{asset}})
+\begin{DoxyCompactList}\small\item\em Creates a new {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline}{Universal\+Render\+Pipeline}} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a5d2823f3bcf939b51640119dcea999a9}{Render\+Single\+Camera}} (Scriptable\+Render\+Context context, Camera camera)
+\begin{DoxyCompactList}\small\item\em Standalone camera rendering. Use this to render procedural cameras. This method doesn\textquotesingle{}t call {\ttfamily Begin\+Camera\+Rendering} and {\ttfamily End\+Camera\+Rendering} callbacks. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a51a3eb4b7cd9c413e8eeecc78696b750}{Is\+Game\+Camera}} (Camera camera)
+\begin{DoxyCompactList}\small\item\em Checks if a camera is a game camera. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_ac3da0f45f1fb027417c6439e8146d58b}{Is\+Stereo\+Enabled}} (Camera camera)
+\begin{DoxyCompactList}\small\item\em Checks if a camera is rendering in stereo mode. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_afa8f6b1d588e3b54bc28ab5f9ff7561d}{Get\+Light\+Attenuation\+And\+Spot\+Direction}} (Light\+Type light\+Type, float light\+Range, Matrix4x4 light\+Local\+To\+World\+Matrix, float spot\+Angle, float? inner\+Spot\+Angle, out Vector4 light\+Attenuation, out Vector4 light\+Spot\+Dir)
+\begin{DoxyCompactList}\small\item\em Calculates the attenuation for a given light and also direction for spot lights. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a24f5cf0429939f14d2996d9fd61b51db}{Initialize\+Light\+Constants\+\_\+\+Common}} (Native\+Array$<$ Visible\+Light $>$ lights, int light\+Index, out Vector4 light\+Pos, out Vector4 light\+Color, out Vector4 light\+Attenuation, out Vector4 light\+Spot\+Dir, out Vector4 light\+Occlusion\+Probe\+Channel)
+\begin{DoxyCompactList}\small\item\em Initializes common light constants. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a25abe32ea116758a0db01753f2815d9b}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a25abe32ea116758a0db01753f2815d9b} 
+const string {\bfseries k\+\_\+\+Shader\+Tag\+Name} = "{}Universal\+Pipeline"{}
+\begin{DoxyCompactList}\small\item\em The shader tag used in the \doxylink{namespace_unity_engine_1_1_rendering_1_1_universal}{Universal} Render Pipeline (URP) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a578bf8a0f59cb91f3db60592109b4b66}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a578bf8a0f59cb91f3db60592109b4b66} 
+override void {\bfseries Dispose} (bool disposing)
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_ae1dddf926cdf0d76304652308751e547}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_ae1dddf926cdf0d76304652308751e547} 
+override void {\bfseries Render} (Scriptable\+Render\+Context render\+Context, Camera\mbox{[}$\,$\mbox{]} cameras)
+\item 
+override bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_aa79df9111ce9828928038142cf07ccc9}{Is\+Render\+Request\+Supported$<$ Request\+Data $>$}} (Camera camera, Request\+Data data)
+\begin{DoxyCompactList}\small\item\em Check whether Render\+Request is supported. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a9969bb3b8412e522975b6c0bce65bc46}{Process\+Render\+Requests$<$ Request\+Data $>$}} (Scriptable\+Render\+Context context, Camera camera, Request\+Data render\+Request)
+\begin{DoxyCompactList}\small\item\em Process a render request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_aaf1f46a7e33d78aab44ea48dd6efa911}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_aaf1f46a7e33d78aab44ea48dd6efa911} 
+static float {\bfseries max\+Shadow\+Bias}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The maximum amount of bias allowed for shadows. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_ab35c68e83e3e740612952b4948a15244}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_ab35c68e83e3e740612952b4948a15244} 
+static float {\bfseries min\+Render\+Scale}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The minimum value allowed for render scale. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a3d05eacdeab314f8649d7ec5cd586d03}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a3d05eacdeab314f8649d7ec5cd586d03} 
+static float {\bfseries max\+Render\+Scale}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The maximum value allowed for render scale. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a34241a456cf33c1a99dedeb146ebada1}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a34241a456cf33c1a99dedeb146ebada1} 
+static int {\bfseries max\+Num\+Iterations\+Enclosing\+Sphere}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The max number of iterations allowed calculating enclosing sphere. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a770daf35fe457cb266a827752ed862c3}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a770daf35fe457cb266a827752ed862c3} 
+static int {\bfseries max\+Per\+Object\+Lights}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The max number of lights that can be shaded per object (in the for loop in the shader). \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a4ece90785d8efb19d9ebe2054798146f}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a4ece90785d8efb19d9ebe2054798146f} 
+static int {\bfseries max\+Visible\+Additional\+Lights}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The max number of additional lights that can can affect each Game\+Object. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_af1426ca3aac7f7bbe903e14dce0d083d}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_af1426ca3aac7f7bbe903e14dce0d083d} 
+override Render\+Pipeline\+Global\+Settings {\bfseries default\+Settings}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The default Render Pipeline Global Settings. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a1e1cefaddafce6c0ec4ede563862754d}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a1e1cefaddafce6c0ec4ede563862754d} 
+static \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{Universal\+Render\+Pipeline\+Asset}} {\bfseries asset}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the current render pipeline asset for the current quality setting. If no render pipeline asset is assigned in Quality\+Settings, then returns the one assigned in Graphics\+Settings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The main class for the \doxylink{namespace_unity_engine_1_1_rendering_1_1_universal}{Universal} Render Pipeline (URP). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a22562ea2c09cc0e1f1f42d1153665583}\index{UnityEngine.Rendering.Universal.UniversalRenderPipeline@{UnityEngine.Rendering.Universal.UniversalRenderPipeline}!UniversalRenderPipeline@{UniversalRenderPipeline}}
+\index{UniversalRenderPipeline@{UniversalRenderPipeline}!UnityEngine.Rendering.Universal.UniversalRenderPipeline@{UnityEngine.Rendering.Universal.UniversalRenderPipeline}}
+\doxysubsubsection{\texorpdfstring{UniversalRenderPipeline()}{UniversalRenderPipeline()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a22562ea2c09cc0e1f1f42d1153665583} 
+Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline.\+Universal\+Render\+Pipeline (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{Universal\+Render\+Pipeline\+Asset}}}]{asset}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline}{Universal\+Render\+Pipeline}} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em asset} & The {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{Universal\+Render\+Pipeline\+Asset}} asset to initialize the pipeline.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespace_unity_engine_1_1_rendering_1_1_universal_abcf86de95108d2ec392bc873e92392d5}{Render\+Pass\+Event}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_afa8f6b1d588e3b54bc28ab5f9ff7561d}\index{UnityEngine.Rendering.Universal.UniversalRenderPipeline@{UnityEngine.Rendering.Universal.UniversalRenderPipeline}!GetLightAttenuationAndSpotDirection@{GetLightAttenuationAndSpotDirection}}
+\index{GetLightAttenuationAndSpotDirection@{GetLightAttenuationAndSpotDirection}!UnityEngine.Rendering.Universal.UniversalRenderPipeline@{UnityEngine.Rendering.Universal.UniversalRenderPipeline}}
+\doxysubsubsection{\texorpdfstring{GetLightAttenuationAndSpotDirection()}{GetLightAttenuationAndSpotDirection()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_afa8f6b1d588e3b54bc28ab5f9ff7561d} 
+static void Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline.\+Get\+Light\+Attenuation\+And\+Spot\+Direction (\begin{DoxyParamCaption}\item[{Light\+Type}]{light\+Type}{, }\item[{float}]{light\+Range}{, }\item[{Matrix4x4}]{light\+Local\+To\+World\+Matrix}{, }\item[{float}]{spot\+Angle}{, }\item[{float?}]{inner\+Spot\+Angle}{, }\item[{out Vector4}]{light\+Attenuation}{, }\item[{out Vector4}]{light\+Spot\+Dir}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Calculates the attenuation for a given light and also direction for spot lights. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em light\+Type} & The type of light.\\
+\hline
+{\em light\+Range} & The range of the light.\\
+\hline
+{\em light\+Local\+To\+World\+Matrix} & The local to world light matrix.\\
+\hline
+{\em spot\+Angle} & The spotlight angle.\\
+\hline
+{\em inner\+Spot\+Angle} & The spotlight inner angle.\\
+\hline
+{\em light\+Attenuation} & The light attenuation.\\
+\hline
+{\em light\+Spot\+Dir} & The spot light direction.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a24f5cf0429939f14d2996d9fd61b51db}\index{UnityEngine.Rendering.Universal.UniversalRenderPipeline@{UnityEngine.Rendering.Universal.UniversalRenderPipeline}!InitializeLightConstants\_Common@{InitializeLightConstants\_Common}}
+\index{InitializeLightConstants\_Common@{InitializeLightConstants\_Common}!UnityEngine.Rendering.Universal.UniversalRenderPipeline@{UnityEngine.Rendering.Universal.UniversalRenderPipeline}}
+\doxysubsubsection{\texorpdfstring{InitializeLightConstants\_Common()}{InitializeLightConstants\_Common()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a24f5cf0429939f14d2996d9fd61b51db} 
+static void Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline.\+Initialize\+Light\+Constants\+\_\+\+Common (\begin{DoxyParamCaption}\item[{Native\+Array$<$ Visible\+Light $>$}]{lights}{, }\item[{int}]{light\+Index}{, }\item[{out Vector4}]{light\+Pos}{, }\item[{out Vector4}]{light\+Color}{, }\item[{out Vector4}]{light\+Attenuation}{, }\item[{out Vector4}]{light\+Spot\+Dir}{, }\item[{out Vector4}]{light\+Occlusion\+Probe\+Channel}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Initializes common light constants. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lights} & List of lights to iterate.\\
+\hline
+{\em light\+Index} & The index of the light.\\
+\hline
+{\em light\+Pos} & The position of the light.\\
+\hline
+{\em light\+Color} & The color of the light.\\
+\hline
+{\em light\+Attenuation} & The attenuation of the light.\\
+\hline
+{\em light\+Spot\+Dir} & The direction of the light.\\
+\hline
+{\em light\+Occlusion\+Probe\+Channel} & The occlusion probe channel for the light.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a51a3eb4b7cd9c413e8eeecc78696b750}\index{UnityEngine.Rendering.Universal.UniversalRenderPipeline@{UnityEngine.Rendering.Universal.UniversalRenderPipeline}!IsGameCamera@{IsGameCamera}}
+\index{IsGameCamera@{IsGameCamera}!UnityEngine.Rendering.Universal.UniversalRenderPipeline@{UnityEngine.Rendering.Universal.UniversalRenderPipeline}}
+\doxysubsubsection{\texorpdfstring{IsGameCamera()}{IsGameCamera()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a51a3eb4b7cd9c413e8eeecc78696b750} 
+static bool Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline.\+Is\+Game\+Camera (\begin{DoxyParamCaption}\item[{Camera}]{camera}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Checks if a camera is a game camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & Camera to check state from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if given camera is a game camera, false otherwise.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_aa79df9111ce9828928038142cf07ccc9}\index{UnityEngine.Rendering.Universal.UniversalRenderPipeline@{UnityEngine.Rendering.Universal.UniversalRenderPipeline}!IsRenderRequestSupported$<$ RequestData $>$@{IsRenderRequestSupported$<$ RequestData $>$}}
+\index{IsRenderRequestSupported$<$ RequestData $>$@{IsRenderRequestSupported$<$ RequestData $>$}!UnityEngine.Rendering.Universal.UniversalRenderPipeline@{UnityEngine.Rendering.Universal.UniversalRenderPipeline}}
+\doxysubsubsection{\texorpdfstring{IsRenderRequestSupported$<$ RequestData $>$()}{IsRenderRequestSupported< RequestData >()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_aa79df9111ce9828928038142cf07ccc9} 
+override bool Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline.\+Is\+Render\+Request\+Supported$<$ Request\+Data $>$ (\begin{DoxyParamCaption}\item[{Camera}]{camera}{, }\item[{Request\+Data}]{data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Check whether Render\+Request is supported. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & \\
+\hline
+{\em data} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Request\+Data} & \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_ac3da0f45f1fb027417c6439e8146d58b}\index{UnityEngine.Rendering.Universal.UniversalRenderPipeline@{UnityEngine.Rendering.Universal.UniversalRenderPipeline}!IsStereoEnabled@{IsStereoEnabled}}
+\index{IsStereoEnabled@{IsStereoEnabled}!UnityEngine.Rendering.Universal.UniversalRenderPipeline@{UnityEngine.Rendering.Universal.UniversalRenderPipeline}}
+\doxysubsubsection{\texorpdfstring{IsStereoEnabled()}{IsStereoEnabled()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_ac3da0f45f1fb027417c6439e8146d58b} 
+static bool Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline.\+Is\+Stereo\+Enabled (\begin{DoxyParamCaption}\item[{Camera}]{camera}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Checks if a camera is rendering in stereo mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & Camera to check state from.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the given camera is rendering in stereo mode, false otherwise.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a9969bb3b8412e522975b6c0bce65bc46}\index{UnityEngine.Rendering.Universal.UniversalRenderPipeline@{UnityEngine.Rendering.Universal.UniversalRenderPipeline}!ProcessRenderRequests$<$ RequestData $>$@{ProcessRenderRequests$<$ RequestData $>$}}
+\index{ProcessRenderRequests$<$ RequestData $>$@{ProcessRenderRequests$<$ RequestData $>$}!UnityEngine.Rendering.Universal.UniversalRenderPipeline@{UnityEngine.Rendering.Universal.UniversalRenderPipeline}}
+\doxysubsubsection{\texorpdfstring{ProcessRenderRequests$<$ RequestData $>$()}{ProcessRenderRequests< RequestData >()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a9969bb3b8412e522975b6c0bce65bc46} 
+override void Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline.\+Process\+Render\+Requests$<$ Request\+Data $>$ (\begin{DoxyParamCaption}\item[{Scriptable\+Render\+Context}]{context}{, }\item[{Camera}]{camera}{, }\item[{Request\+Data}]{render\+Request}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Process a render request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & \\
+\hline
+{\em camera} & \\
+\hline
+{\em render\+Request} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Request\+Data} & \\
+\hline
+\end{DoxyTemplParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a5d2823f3bcf939b51640119dcea999a9}\index{UnityEngine.Rendering.Universal.UniversalRenderPipeline@{UnityEngine.Rendering.Universal.UniversalRenderPipeline}!RenderSingleCamera@{RenderSingleCamera}}
+\index{RenderSingleCamera@{RenderSingleCamera}!UnityEngine.Rendering.Universal.UniversalRenderPipeline@{UnityEngine.Rendering.Universal.UniversalRenderPipeline}}
+\doxysubsubsection{\texorpdfstring{RenderSingleCamera()}{RenderSingleCamera()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_a5d2823f3bcf939b51640119dcea999a9} 
+static void Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline.\+Render\+Single\+Camera (\begin{DoxyParamCaption}\item[{Scriptable\+Render\+Context}]{context}{, }\item[{Camera}]{camera}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Standalone camera rendering. Use this to render procedural cameras. This method doesn\textquotesingle{}t call {\ttfamily Begin\+Camera\+Rendering} and {\ttfamily End\+Camera\+Rendering} callbacks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Render context used to record commands during execution.\\
+\hline
+{\em camera} & Camera to render.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Scriptable\+Render\+Context
+
+
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/Universal\+Render\+Pipeline.\+cs\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/Universal\+Render\+Pipeline\+Core.\+cs\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/Universal\+Render\+Pipeline\+Render\+Graph.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,62 @@
+\chapter{Using the begin\+Camera\+Rendering event}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5bd064643a7d4c95e1a7c7490852589b}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5bd064643a7d4c95e1a7c7490852589b}\index{Using the beginCameraRendering event@{Using the beginCameraRendering event}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5bd064643a7d4c95e1a7c7490852589b_autotoc_md2665}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5bd064643a7d4c95e1a7c7490852589b_autotoc_md2665}%
+ The example on this page shows how to use the \href{https://docs.unity3d.com/ScriptReference/Rendering.RenderPipelineManager-beginCameraRendering.html}{\texttt{ begin\+Camera\+Rendering}} event to run a custom method.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5bd064643a7d4c95e1a7c7490852589b_autotoc_md2666}{}\doxysection{\texorpdfstring{begin\+Camera\+Rendering event overview}{begin\+Camera\+Rendering event overview}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5bd064643a7d4c95e1a7c7490852589b_autotoc_md2666}
+\doxylink{namespace_unity}{Unity} raises a {\ttfamily begin\+Camera\+Rendering} event before it renders each active Camera in every frame. If a Camera is inactive (for example, if the {\bfseries{Camera}} component checkbox is cleared on a Camera Game\+Object), \doxylink{namespace_unity}{Unity} does not raise a {\ttfamily begin\+Camera\+Rendering} event for this Camera.
+
+When you subscribe a method to this event, you can execute custom logic before \doxylink{namespace_unity}{Unity} renders the Camera. Examples of custom logic include rendering extra Cameras to Render Textures, and using those Textures for effects like planar reflections or surveillance camera views.
+
+Other events in the \href{https://docs.unity3d.com/ScriptReference/Rendering.RenderPipelineManager.html}{\texttt{ Render\+Pipeline\+Manager}} class provide more ways to customize URP. You can also use the principles described in this article with those events.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5bd064643a7d4c95e1a7c7490852589b_autotoc_md2667}{}\doxysection{\texorpdfstring{begin\+Camera\+Rendering event example}{begin\+Camera\+Rendering event example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5bd064643a7d4c95e1a7c7490852589b_autotoc_md2667}
+This example demonstrates how to subscribe a method to the {\ttfamily begin\+Camera\+Rendering} event. To follow the steps in this example, create a \href{https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@8.0/manual/creating-a-new-project-with-urp.html}{\texttt{ new Unity project using the {\bfseries{Universal Project Template}}}}.
+
+
+\begin{DoxyEnumerate}
+\item In the Scene, create a Cube. Name it Example Cube.
+\item In your Project, create a C\# script. Call it {\ttfamily URPCallback\+Example}.
+\item Copy and paste the following code into the script. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#}}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }UnityEngine.Rendering;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }URPCallbackExample\ :\ MonoBehaviour}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{comment}{//\ Unity\ calls\ this\ method\ automatically\ when\ it\ enables\ this\ component}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnEnable()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Add\ WriteLogMessage\ as\ a\ delegate\ of\ the\ RenderPipelineManager.beginCameraRendering\ event}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ RenderPipelineManager.beginCameraRendering\ +=\ WriteLogMessage;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{comment}{//\ Unity\ calls\ this\ method\ automatically\ when\ it\ disables\ this\ component}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ OnDisable()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Remove\ WriteLogMessage\ as\ a\ delegate\ of\ the\ \ RenderPipelineManager.beginCameraRendering\ event}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ RenderPipelineManager.beginCameraRendering\ -\/=\ WriteLogMessage;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{comment}{//\ When\ this\ method\ is\ a\ delegate\ of\ RenderPipeline.beginCameraRendering\ event,\ Unity\ calls\ this\ method\ every\ time\ it\ raises\ the\ beginCameraRendering\ event}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ WriteLogMessage(ScriptableRenderContext\ context,\ Camera\ camera)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Write\ text\ to\ the\ console}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}Beginning\ rendering\ the\ camera:\ \{camera.name\}"{}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \}}
+
+\end{DoxyCode}
+ \begin{quote}
+{\bfseries{NOTE}}\+: When you subscribe to an event, your handler method (in this example, {\ttfamily Write\+Log\+Message}) must accept the parameters defined in the event delegate. In this example, the event delegate is {\ttfamily Render\+Pipeline.\+Begin\+Camera\+Rendering}, which expects the following parameters\+: {\ttfamily \texorpdfstring{$<$}{<}Scriptable\+Render\+Context, Camera\texorpdfstring{$>$}{>}}. \end{quote}
+
+\end{DoxyEnumerate}
+
+
+\begin{DoxyEnumerate}
+\item Attach the {\ttfamily URPCallback\+Example} script to Example Cube.
+\item Select {\bfseries{Play}}. \doxylink{namespace_unity}{Unity} prints the message from the script in the Console window each time \doxylink{namespace_unity}{Unity} raises the {\ttfamily begin\+Camera\+Rendering} event.
+
+
+\item To raise a call to the {\ttfamily On\+Disable()} method\+: In the Play mode, select Example Cube and clear the checkbox next to the script component title. \doxylink{namespace_unity}{Unity} unsubscribes {\ttfamily Write\+Log\+Message} from the {\ttfamily Render\+Pipeline\+Manager.\+begin\+Camera\+Rendering} event and stops printing the message in the Console window.
+
+ 
+\end{DoxyEnumerate}

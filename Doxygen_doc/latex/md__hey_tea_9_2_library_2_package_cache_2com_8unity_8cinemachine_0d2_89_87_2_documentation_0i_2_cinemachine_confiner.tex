@@ -1,0 +1,28 @@
+\chapter{Cinemachine Confiner}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_confiner}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_confiner}\index{Cinemachine Confiner@{Cinemachine Confiner}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_confiner_autotoc_md673}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_confiner_autotoc_md673}%
+ Use the {\bfseries{\doxylink{namespace_cinemachine}{Cinemachine} Confiner}} \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_414e015286be387e4fe85aa25dd01df7}{extension}{0} to limit the camera’s position to a volume or area.
+
+Confiner operates in 2D or 3D mode. The mode influences the kind of bounding shape it accepts. In 3D mode, the camera’s position in 3D is confined to a volume. This also works for 2D games, but you need to take the depth into account. In 2D mode, you don’t have to worry about depth.
+
+For orthographic cameras, there is an additional option to confine the screen edges, not just the camera point. This ensures that the entire screen area stays within the bounding area.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }}&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\multicolumn{2}{|l|}{\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }}&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-3}
+\endhead
+\multicolumn{2}{|l|}{{\bfseries{Confine Mode}}   }&Operate using a 2D bounding area or a 3D bounding volume.    \\\cline{1-3}
+&{\itshape Confine 2D}   &Use a Collider2D bounding area.    \\\cline{1-3}
+&{\itshape Confine 3D}   &Use a 3D Collider bounding volume.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Bounding Volume}}   }&The 3D volume to contain the camera in. This property is available when Confine Mode is set to Confine 3D.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Bounding Shape 2D}}   }&The 2D area to contain the camera in. This property is available when Confine Mode is set to Confine 2D.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Confine Screen Edges}}   }&Check to confine screen edges to the area when the camera is orthographic. When unchecked, confine only the camera center. Has no effect if camera is in perspective mode.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Damping}}   }&How gradually to return the camera to the bounding volume or area if it goes beyond the borders. Higher numbers are more gradual.   \\\cline{1-3}
+\end{longtabu}

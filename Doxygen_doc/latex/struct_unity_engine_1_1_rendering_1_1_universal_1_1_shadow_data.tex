@@ -1,0 +1,60 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Universal.\+Shadow\+Data Struct Reference}
+\hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data}{}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data}\index{UnityEngine.Rendering.Universal.ShadowData@{UnityEngine.Rendering.Universal.ShadowData}}
+
+
+Container struct for various data used for shadows in URP.  
+
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_aa2a15572a067fbb78d36a642c3250f11}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_aa2a15572a067fbb78d36a642c3250f11} 
+bool {\bfseries supports\+Main\+Light\+Shadows}
+\begin{DoxyCompactList}\small\item\em True if main light shadows are enabled. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_a8ca9c8d4362db4ced018ed8896c3ed74}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_a8ca9c8d4362db4ced018ed8896c3ed74} 
+bool {\bfseries requires\+Screen\+Space\+Shadow\+Resolve}
+\begin{DoxyCompactList}\small\item\em True if screen space shadows are required. Obsolete, this feature was replaced by new \textquotesingle{}Screen\+Space\+Shadows\textquotesingle{} renderer feature. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_ac5fb21d1eef6428854e8ba87d92997e3}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_ac5fb21d1eef6428854e8ba87d92997e3} 
+int {\bfseries main\+Light\+Shadowmap\+Width}
+\begin{DoxyCompactList}\small\item\em The width of the main light shadow map. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_a08c81912039f2f7c4447adb7e232b00b}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_a08c81912039f2f7c4447adb7e232b00b} 
+int {\bfseries main\+Light\+Shadowmap\+Height}
+\begin{DoxyCompactList}\small\item\em The height of the main light shadow map. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_a80c81cc173c0f4178c2387d1b53c1648}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_a80c81cc173c0f4178c2387d1b53c1648} 
+int {\bfseries main\+Light\+Shadow\+Cascades\+Count}
+\begin{DoxyCompactList}\small\item\em The number of shadow cascades. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_a32765377935ac576b09315a9bb75fe69}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_a32765377935ac576b09315a9bb75fe69} 
+Vector3 {\bfseries main\+Light\+Shadow\+Cascades\+Split}
+\begin{DoxyCompactList}\small\item\em The split between cascades. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_a2280c7e2861171d362ed1d86c5b06416}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_a2280c7e2861171d362ed1d86c5b06416} 
+float {\bfseries main\+Light\+Shadow\+Cascade\+Border}
+\begin{DoxyCompactList}\small\item\em Main light last cascade shadow fade border. Value represents the width of shadow fade that ranges from 0 to 1. Where value 0 is used for no shadow fade. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_a9a00dd2f2c24d972083d3c0138601934}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_a9a00dd2f2c24d972083d3c0138601934} 
+bool {\bfseries supports\+Additional\+Light\+Shadows}
+\begin{DoxyCompactList}\small\item\em True if additional lights shadows are enabled. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_aea38dca508e255880dd1535b310444d9}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_aea38dca508e255880dd1535b310444d9} 
+int {\bfseries additional\+Lights\+Shadowmap\+Width}
+\begin{DoxyCompactList}\small\item\em The width of the additional light shadow map. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_a8a5a5c857b3cdc3cb5775478b136d575}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_a8a5a5c857b3cdc3cb5775478b136d575} 
+int {\bfseries additional\+Lights\+Shadowmap\+Height}
+\begin{DoxyCompactList}\small\item\em The height of the additional light shadow map. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_a06d55c23f25ec2d7d24ca5fab6e4adc0}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_a06d55c23f25ec2d7d24ca5fab6e4adc0} 
+bool {\bfseries supports\+Soft\+Shadows}
+\begin{DoxyCompactList}\small\item\em True if soft shadows are enabled. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_a879db8c4ab49ce3606aedb0404d6d53a}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_a879db8c4ab49ce3606aedb0404d6d53a} 
+int {\bfseries shadowmap\+Depth\+Buffer\+Bits}
+\begin{DoxyCompactList}\small\item\em The number of bits used. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_a1e0d4eed753b370c75a766adec930de2}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_a1e0d4eed753b370c75a766adec930de2} 
+List$<$ Vector4 $>$ {\bfseries bias}
+\begin{DoxyCompactList}\small\item\em A list of shadow bias. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_ae52b8329634da44a87bd4a3abf022634}\label{struct_unity_engine_1_1_rendering_1_1_universal_1_1_shadow_data_ae52b8329634da44a87bd4a3abf022634} 
+List$<$ int $>$ {\bfseries resolution}
+\begin{DoxyCompactList}\small\item\em A list of resolution for the shadow maps. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Container struct for various data used for shadows in URP. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/Universal\+Render\+Pipeline\+Core.\+cs\end{DoxyCompactItemize}

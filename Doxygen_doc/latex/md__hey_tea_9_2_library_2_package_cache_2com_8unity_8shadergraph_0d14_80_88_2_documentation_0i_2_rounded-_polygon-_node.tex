@@ -1,0 +1,90 @@
+\chapter{Rounded Polygon Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_rounded-_polygon-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_rounded-_polygon-_node}\index{Rounded Polygon Node@{Rounded Polygon Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_rounded-_polygon-_node_autotoc_md3731}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_rounded-_polygon-_node_autotoc_md3731}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_rounded-_polygon-_node_autotoc_md3732}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_rounded-_polygon-_node_autotoc_md3732}
+Generates a rounded polygon shape based on input {\bfseries{UV}} at the size specified by inputs {\bfseries{Width}} and {\bfseries{Height}}. The input {\bfseries{Sides}} specifies the number of sides, and the input {\bfseries{Roundness}} defines the roundness of each corner.
+
+You can connect a \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_tiling-_and-_offset-_node}{Tiling And Offset Node}{0} to offset or tile the shape. To preserve the ability to offset the shape within the UV space, the shape does not automatically repeat if you tile it. To achieve a repeating rounded polygon effect, first connect your {\bfseries{UV}} input through a \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fraction-_node}{Fraction Node}{0}.
+
+You can only use the Rounded Polygon Node in the {\bfseries{Fragment}} \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_shader-_stage}{Shader Stage}{0}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_rounded-_polygon-_node_autotoc_md3733}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_rounded-_polygon-_node_autotoc_md3733}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+UV   &Input   &Vector 2   &UV   &Input UV value    \\\cline{1-5}
+Width   &Input   &Float   &None   &Rounded Polygon width    \\\cline{1-5}
+Height   &Input   &Float   &None   &Rounded Polygon height    \\\cline{1-5}
+Sides   &Input   &Float   &None   &Number of sides of the polygon    \\\cline{1-5}
+Roundness   &Input   &Float   &None   &Roundness of corners    \\\cline{1-5}
+Out   &Output   &Float   &None   &Output value   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_rounded-_polygon-_node_autotoc_md3734}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_rounded-_polygon-_node_autotoc_md3734}
+The following example code represents one possible outcome of this node.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ RoundedPolygon\_Func\_float(float2\ UV,\ float\ Width,\ float\ Height,\ float\ Sides,\ float\ Roundness,\ out\ float\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ UV\ =\ UV\ *\ 2.\ +\ float2(-\/1.,-\/1.);}
+\DoxyCodeLine{\ \ \ \ float\ epsilon\ =\ 1e-\/6;}
+\DoxyCodeLine{\ \ \ \ UV.x\ =\ UV.x\ /\ (\ Width\ +\ (Width==0)*epsilon);}
+\DoxyCodeLine{\ \ \ \ UV.y\ =\ UV.y\ /\ (\ Height\ +\ (Height==0)*epsilon);}
+\DoxyCodeLine{\ \ \ \ Roundness\ =\ clamp(Roundness,\ 1e-\/6,\ 1.);}
+\DoxyCodeLine{\ \ \ \ float\ i\_sides\ =\ floor(\ abs(\ Sides\ )\ );}
+\DoxyCodeLine{\ \ \ \ float\ fullAngle\ =\ 2.\ *\ PI\ /\ i\_sides;}
+\DoxyCodeLine{\ \ \ \ float\ halfAngle\ =\ fullAngle\ /\ 2.;}
+\DoxyCodeLine{\ \ \ \ float\ opositeAngle\ =\ HALF\_PI\ -\/\ halfAngle;}
+\DoxyCodeLine{\ \ \ \ float\ diagonal\ =\ 1.\ /\ cos(\ halfAngle\ );}
+\DoxyCodeLine{\ \ \ \ //\ Chamfer\ values}
+\DoxyCodeLine{\ \ \ \ float\ chamferAngle\ =\ Roundness\ *\ halfAngle;\ //\ Angle\ taken\ by\ the\ chamfer}
+\DoxyCodeLine{\ \ \ \ float\ remainingAngle\ =\ halfAngle\ -\/\ chamferAngle;\ //\ Angle\ that\ remains}
+\DoxyCodeLine{\ \ \ \ float\ ratio\ =\ tan(remainingAngle)\ /\ tan(halfAngle);\ //\ This\ is\ the\ ratio\ between\ the\ length\ of\ the\ polygon's\ triangle\ and\ the\ distance\ of\ the\ chamfer\ center\ to\ the\ polygon\ center}
+\DoxyCodeLine{\ \ \ \ //\ Center\ of\ the\ chamfer\ arc}
+\DoxyCodeLine{\ \ \ \ float2\ chamferCenter\ =\ float2(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ cos(halfAngle)\ ,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ sin(halfAngle)}
+\DoxyCodeLine{\ \ \ \ )*\ ratio\ *\ diagonal;}
+\DoxyCodeLine{\ \ \ \ //\ starting\ of\ the\ chamfer\ arc}
+\DoxyCodeLine{\ \ \ \ float2\ chamferOrigin\ =\ float2(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ 1.,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ tan(remainingAngle)}
+\DoxyCodeLine{\ \ \ \ );}
+\DoxyCodeLine{\ \ \ \ //\ Using\ Al\ Kashi\ algebra,\ we\ determine:}
+\DoxyCodeLine{\ \ \ \ //\ The\ distance\ distance\ of\ the\ center\ of\ the\ chamfer\ to\ the\ center\ of\ the\ polygon\ (side\ A)}
+\DoxyCodeLine{\ \ \ \ float\ distA\ =\ length(chamferCenter);}
+\DoxyCodeLine{\ \ \ \ //\ The\ radius\ of\ the\ chamfer\ (side\ B)}
+\DoxyCodeLine{\ \ \ \ float\ distB\ =\ 1.\ -\/\ chamferCenter.x;}
+\DoxyCodeLine{\ \ \ \ //\ The\ refence\ length\ of\ side\ C,\ which\ is\ the\ distance\ to\ the\ chamfer\ start}
+\DoxyCodeLine{\ \ \ \ float\ distCref\ =\ length(chamferOrigin);}
+\DoxyCodeLine{\ \ \ \ //\ This\ will\ rescale\ the\ chamfered\ polygon\ to\ fit\ the\ uv\ space}
+\DoxyCodeLine{\ \ \ \ //\ diagonal\ =\ length(chamferCenter)\ +\ distB;}
+\DoxyCodeLine{\ \ \ \ float\ uvScale\ =\ diagonal;}
+\DoxyCodeLine{\ \ \ \ UV\ *=\ uvScale;}
+\DoxyCodeLine{\ \ \ \ float2\ polaruv\ =\ float2\ (}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ atan2(\ UV.y,\ UV.x\ ),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ length(UV)}
+\DoxyCodeLine{\ \ \ \ );}
+\DoxyCodeLine{\ \ \ \ polaruv.x\ +=\ HALF\_PI\ +\ 2*PI;}
+\DoxyCodeLine{\ \ \ \ polaruv.x\ =\ fmod(\ polaruv.x\ +\ halfAngle,\ fullAngle\ );}
+\DoxyCodeLine{\ \ \ \ polaruv.x\ =\ abs(polaruv.x\ -\/\ halfAngle);}
+\DoxyCodeLine{\ \ \ \ UV\ =\ float2(\ cos(polaruv.x),\ sin(polaruv.x)\ )\ *\ polaruv.y;}
+\DoxyCodeLine{\ \ \ \ //\ Calculate\ the\ angle\ needed\ for\ the\ Al\ Kashi\ algebra}
+\DoxyCodeLine{\ \ \ \ float\ angleRatio\ =\ 1.\ -\/\ (polaruv.x-\/remainingAngle)\ /\ chamferAngle;}
+\DoxyCodeLine{\ \ \ \ //\ Calculate\ the\ distance\ of\ the\ polygon\ center\ to\ the\ chamfer\ extremity}
+\DoxyCodeLine{\ \ \ \ float\ distC\ =\ sqrt(\ distA*distA\ +\ distB*distB\ -\/\ 2.*distA*distB*cos(\ PI\ -\/\ halfAngle\ *\ angleRatio\ )\ );}
+\DoxyCodeLine{\ \ \ \ Out\ =\ UV.x;}
+\DoxyCodeLine{\ \ \ \ float\ chamferZone\ =\ (\ halfAngle\ -\/\ polaruv.x\ )\ <\ chamferAngle;}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(\ UV.x,\ polaruv.y\ /\ distC,\ chamferZone\ );}
+\DoxyCodeLine{\ \ \ \ //\ Output\ this\ to\ have\ the\ shape\ mask\ instead\ of\ the\ distance\ field}
+\DoxyCodeLine{\ \ \ \ Out\ =\ saturate((1\ -\/\ Out)\ /\ fwidth(Out));}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

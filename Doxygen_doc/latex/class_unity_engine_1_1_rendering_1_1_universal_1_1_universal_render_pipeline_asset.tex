@@ -1,0 +1,597 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+
+
+The asset that contains the URP setting. You can use this asset as a graphics quality level.  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.473684cm]{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_1_1_texture_resources}{Texture\+Resources}}
+\begin{DoxyCompactList}\small\item\em Class containing texture resources used in URP. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_data}{Scriptable\+Renderer\+Data}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a9b772c5035da12deeb46417737e7abc2}{Load\+Builtin\+Renderer\+Data}} (\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a5d7d31b9b1a24a9406a1a47613bd4984}{Renderer\+Type}} type=\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a5d7d31b9b1a24a9406a1a47613bd4984a6886b1f54705d65e6160d55c025295f2}{Renderer\+Type.\+Universal\+Renderer}})
+\begin{DoxyCompactList}\small\item\em Use this class to initialize the renderer\+Data element that is required by the renderer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Scriptable\+Renderer}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_af7c4343498271811577d219d6c5654ab}{Get\+Renderer}} (int index)
+\begin{DoxyCompactList}\small\item\em Returns a renderer from the current pipeline asset. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a0c69eff207be55627588c8a70a301be0}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a0c69eff207be55627588c8a70a301be0} 
+void {\bfseries On\+Before\+Serialize} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity}{Unity} raises a callback to this method before it serializes the asset. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_add2a96fa209dcbb17ac0596b4804af51}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_add2a96fa209dcbb17ac0596b4804af51} 
+void {\bfseries On\+After\+Deserialize} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity}{Unity} raises a callback to this method after it deserializes the asset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_aed27dfa39129f6aa1e3cdf05d963fc01}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_aed27dfa39129f6aa1e3cdf05d963fc01} 
+const int {\bfseries k\+\_\+\+Min\+Lut\+Size} = 16
+\begin{DoxyCompactList}\small\item\em The minimum size of the color grading LUT. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a8a3d995d53227b787155ad3ccab87168}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a8a3d995d53227b787155ad3ccab87168} 
+const int {\bfseries k\+\_\+\+Max\+Lut\+Size} = 65
+\begin{DoxyCompactList}\small\item\em The maximum size of the color grading LUT. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a900d7f1ab21160cc79ae02636f48484f}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a900d7f1ab21160cc79ae02636f48484f} 
+static readonly int {\bfseries Additional\+Lights\+Default\+Shadow\+Resolution\+Tier\+Low} = 256
+\begin{DoxyCompactList}\small\item\em The default value of {\ttfamily additional\+Lights\+Shadow\+Resolution\+Tier\+Low}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a526d23aefc66a39312c1223add3c61c6}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a526d23aefc66a39312c1223add3c61c6} 
+static readonly int {\bfseries Additional\+Lights\+Default\+Shadow\+Resolution\+Tier\+Medium} = 512
+\begin{DoxyCompactList}\small\item\em The default value of {\ttfamily additional\+Lights\+Shadow\+Resolution\+Tier\+Medium}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_acb0518a0a7636b92116260a66de3e97b}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_acb0518a0a7636b92116260a66de3e97b} 
+static readonly int {\bfseries Additional\+Lights\+Default\+Shadow\+Resolution\+Tier\+High} = 1024
+\begin{DoxyCompactList}\small\item\em The default value of {\ttfamily additional\+Lights\+Shadow\+Resolution\+Tier\+High}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override Render\+Pipeline \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_aae597a197cdc149c6f8003e13b64b7b8}{Create\+Pipeline}} ()
+\begin{DoxyCompactList}\small\item\em Creates a {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline}{Universal\+Render\+Pipeline}} from the {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{Universal\+Render\+Pipeline\+Asset}}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a20af80feb2ed208cdb4090411fca8ab1}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a20af80feb2ed208cdb4090411fca8ab1} 
+override void {\bfseries On\+Validate} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity}{Unity} calls this function when it loads the asset or when the asset is changed with the Inspector. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a3c851ef16c1b87b8158e6a96305b4351}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a3c851ef16c1b87b8158e6a96305b4351} 
+override void {\bfseries On\+Disable} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity}{Unity} calls this function when the asset is disabled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a3b3e1ef6d1e3244033c18e49cbf9a7f6}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a3b3e1ef6d1e3244033c18e49cbf9a7f6} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Scriptable\+Renderer}} {\bfseries scriptable\+Renderer}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the default renderer being used by this pipeline. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a8f2e41ea67cddd8cfc41cca1b58f04ed}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a8f2e41ea67cddd8cfc41cca1b58f04ed} 
+bool {\bfseries supports\+Camera\+Depth\+Texture}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em When true, the pipeline creates a depth texture that can be read in shaders. The depth texture can be accessed as \+\_\+\+Camera\+Depth\+Texture. This setting can be overridden per camera. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a9b1d7d22f065bad5cd8b09d4bc8bccc2}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a9b1d7d22f065bad5cd8b09d4bc8bccc2} 
+bool {\bfseries supports\+Camera\+Opaque\+Texture}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em When true, the pipeline creates a texture that contains a copy of the color buffer after rendering opaque objects. This texture can be accessed in shaders as \+\_\+\+Camera\+Opaque\+Texture. This setting can be overridden per camera. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ae5b082bdc466c3268fac3d2c1be01403}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ae5b082bdc466c3268fac3d2c1be01403} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a9d14728e50ceb95fb874849be5cdfe8c}{Downsampling}} {\bfseries opaque\+Downsampling}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the downsampling method used when copying the camera color texture after rendering opaques. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_acba2bfff56a26330324e7d12f70ef405}{supports\+Terrain\+Holes}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This settings controls if the asset {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{Universal\+Render\+Pipeline\+Asset}} supports terrain holes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a3b397e122ca0ac288bcc2e027eb9da65}{Store\+Actions\+Optimization}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a03ca9619220f090ad1aa7e995e053397}{store\+Actions\+Optimization}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the active store action optimization value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a1f3672c8821df008c2284abb098c9f9f}{supports\+HDR}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em When enabled, the camera renders to HDR buffers. This setting can be overridden per camera. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ab7b895d63fa855c3acc295cb23eeb95c}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ab7b895d63fa855c3acc295cb23eeb95c} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a5c7efc905196cbf3fc75baf1452472e3}{HDRColor\+Buffer\+Precision}} {\bfseries hdr\+Color\+Buffer\+Precision}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_graphics}{Graphics} format requested for HDR color buffers. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_acc4ba82d70a571b059e85b0e9e626c45}{msaa\+Sample\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies the msaa sample count used by this {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{Universal\+Render\+Pipeline\+Asset}} \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_af6f083a65e52aa7217ba2bbb451cacf7}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_af6f083a65e52aa7217ba2bbb451cacf7} 
+float {\bfseries render\+Scale}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies the render scale which scales the render target resolution used by this {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{Universal\+Render\+Pipeline\+Asset}}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a8d29c818641c28c72cbeec7255146a9f}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a8d29c818641c28c72cbeec7255146a9f} 
+bool {\bfseries enable\+LODCross\+Fade}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if the cross-\/fade style blending between the current LOD and the next LOD is enabled. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ac11fd2f9ca39c6af5d24f89270edcc50}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ac11fd2f9ca39c6af5d24f89270edcc50} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a1acd980f82571dd4875b2f01c8bbbcea}{LODCross\+Fade\+Dithering\+Type}} {\bfseries lod\+Cross\+Fade\+Dithering\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the type of active LOD cross-\/fade. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a4b858b202bc9714e283a2616928d2351}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a4b858b202bc9714e283a2616928d2351} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_af539fda77acea2b3d4b611576bbb47d2}{Upscaling\+Filter\+Selection}} {\bfseries upscaling\+Filter}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the upscaling filter desired by the user Note\+: Filter selections differ from actual filters in that they may include "{}meta-\/filters"{} such as "{}\+Automatic"{} which resolve to an actual filter at a later time. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_afdb52d760407552351c5a17ff8278aa6}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_afdb52d760407552351c5a17ff8278aa6} 
+bool {\bfseries fsr\+Override\+Sharpness}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If this property is set to true, the value from the fsr\+Sharpness property will control the intensity of the sharpening filter associated with Fidelity\+FX Super Resolution. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a1e64d23a8d4989b5a7a7846e7d9905f8}{fsr\+Sharpness}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Controls the intensity of the sharpening filter associated with Fidelity\+FX Super Resolution. A value of 1.\+0 produces maximum sharpness while a value of 0.\+0 disables the sharpening filter entirely. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a94cbe5ab8943498e86cc0a3bed273e3d}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a94cbe5ab8943498e86cc0a3bed273e3d} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a49eb0a2b0da2f6a7b8703dbc1a1cbaf9}{Sh\+Eval\+Mode}} {\bfseries sh\+Eval\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Defines the type of Spherical Harmonic (SH) evaluation in lighting. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_aeb2718dfe6cb419be648cc9744ce3087}{Light\+Rendering\+Mode}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a4dbc02c8808af0f13f0b32e1537ba6de}{main\+Light\+Rendering\+Mode}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies the {\ttfamily Light\+Rendering\+Mode} for the main light used by this {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{Universal\+Render\+Pipeline\+Asset}}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a945b40b1e4f08c9d2106731743826633}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a945b40b1e4f08c9d2106731743826633} 
+bool {\bfseries supports\+Main\+Light\+Shadows}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies if objects lit by main light cast shadows. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a3dcf9188bcd5a5bb7d354ea3e1f87d64}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a3dcf9188bcd5a5bb7d354ea3e1f87d64} 
+int {\bfseries main\+Light\+Shadowmap\+Resolution}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the main light shadowmap resolution used for this {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{Universal\+Render\+Pipeline\+Asset}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_aeb2718dfe6cb419be648cc9744ce3087}{Light\+Rendering\+Mode}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a853eaaeb1cebe11a5f4f74d685e1bd9d}{additional\+Lights\+Rendering\+Mode}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies the {\ttfamily Light\+Rendering\+Mode} for the additional lights used by this {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{Universal\+Render\+Pipeline\+Asset}}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a19cc835c41c113a080255ad339e8e26e}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a19cc835c41c113a080255ad339e8e26e} 
+int {\bfseries max\+Additional\+Lights\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies the maximum amount of per-\/object additional lights which can be used by this {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{Universal\+Render\+Pipeline\+Asset}}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_aaa1edd91d505d702528e3d1ecd9515b4}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_aaa1edd91d505d702528e3d1ecd9515b4} 
+bool {\bfseries supports\+Additional\+Light\+Shadows}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies if objects lit by additional lights cast shadows. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a347d9ba7dbd77b1142be5924f3f3d07b}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a347d9ba7dbd77b1142be5924f3f3d07b} 
+int {\bfseries additional\+Lights\+Shadowmap\+Resolution}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Additional light shadows are rendered into a single shadow map atlas texture. This setting controls the resolution of the shadow map atlas texture. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ad6d5a20329a28b7beab071221bc83cc2}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ad6d5a20329a28b7beab071221bc83cc2} 
+int {\bfseries additional\+Lights\+Shadow\+Resolution\+Tier\+Low}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the additional light shadow resolution defined for tier "{}\+Low"{} in the \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline}{Universal\+Render\+Pipeline} asset. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_af1a3fd614fb815a3464b54b683330e78}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_af1a3fd614fb815a3464b54b683330e78} 
+int {\bfseries additional\+Lights\+Shadow\+Resolution\+Tier\+Medium}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the additional light shadow resolution defined for tier "{}\+Medium"{} in the \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline}{Universal\+Render\+Pipeline} asset. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a6783a3bd3c69fff9da2b8714e64bcb0e}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a6783a3bd3c69fff9da2b8714e64bcb0e} 
+int {\bfseries additional\+Lights\+Shadow\+Resolution\+Tier\+High}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the additional light shadow resolution defined for tier "{}\+High"{} in the \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline}{Universal\+Render\+Pipeline} asset. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_acac25a5df91f2eec5732fa1ed9ae388e}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_acac25a5df91f2eec5732fa1ed9ae388e} 
+bool {\bfseries reflection\+Probe\+Blending}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies if this {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{Universal\+Render\+Pipeline\+Asset}} should use Probe blending for the reflection probes in the scene. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ad6d6e90991ef3a51c552c3ffc7ecc967}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ad6d6e90991ef3a51c552c3ffc7ecc967} 
+bool {\bfseries reflection\+Probe\+Box\+Projection}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies if this {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{Universal\+Render\+Pipeline\+Asset}} should allow box projection for the reflection probes in the scene. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_af0806d4c4c8d73ecdaeeef932263e397}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_af0806d4c4c8d73ecdaeeef932263e397} 
+float {\bfseries shadow\+Distance}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Controls the maximum distance at which shadows are visible. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a12e8512b8f3f5c24eb221924a5993fc9}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a12e8512b8f3f5c24eb221924a5993fc9} 
+int {\bfseries shadow\+Cascade\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the number of shadow cascades. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a273ff984020ec958bfc4051a489e040e}{cascade2\+Split}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the split value. \end{DoxyCompactList}\item 
+Vector2 \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_abbdb741191d3e57cfcb475b1a0b78de1}{cascade3\+Split}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the split values. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a87f4ab9892aea09c440129d2b7168150}{cascade4\+Split}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the split values. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_aa6ca1974d9ea13dedb748296ea61f48f}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_aa6ca1974d9ea13dedb748296ea61f48f} 
+float {\bfseries cascade\+Border}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Last cascade fade distance in percentage. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a0333277f7ef0cd6442fb664380ea2558}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a0333277f7ef0cd6442fb664380ea2558} 
+float {\bfseries shadow\+Depth\+Bias}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Shadow Depth Bias, controls the offset of the lit pixels. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ac1240fe5b07002a9bea4d90c0e10d34e}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ac1240fe5b07002a9bea4d90c0e10d34e} 
+float {\bfseries shadow\+Normal\+Bias}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Controls the distance at which the shadow casting surfaces are shrunk along the surface normal. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ac056be319ea551e3d6b5e2c080d7ae1c}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ac056be319ea551e3d6b5e2c080d7ae1c} 
+bool {\bfseries supports\+Soft\+Shadows}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Supports Soft Shadows controls the Soft Shadows. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a7982e36db5f461197dd91a953b88cc2a}{supports\+Dynamic\+Batching}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies if this {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{Universal\+Render\+Pipeline\+Asset}} should use dynamic batching. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ab15026379284e805527e287b496facfe}{supports\+Mixed\+Lighting}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if the Render Pipeline Asset supports mixed lighting, false otherwise. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a3ffc5c72644541605241e0c8a0670640}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a3ffc5c72644541605241e0c8a0670640} 
+bool {\bfseries supports\+Light\+Cookies}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if the Render Pipeline Asset supports light cookies, false otherwise. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a3046ab3a15ccc6aff28811e0e2ed2145}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a3046ab3a15ccc6aff28811e0e2ed2145} 
+bool {\bfseries supports\+Light\+Layers}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if the Render Pipeline Asset supports light layers, false otherwise. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_aa666363c41b031c4958ed7b1a564f8ed}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_aa666363c41b031c4958ed7b1a564f8ed} 
+bool {\bfseries use\+Rendering\+Layers}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if the Render Pipeline Asset supports rendering layers for lights, false otherwise. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a2eac5b6337284e9b8bc42dfa6d525858}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a2eac5b6337284e9b8bc42dfa6d525858} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a4b77875ca0aaf4fefddaf9787fe53a9f}{Volume\+Framework\+Update\+Mode}} {\bfseries volume\+Framework\+Update\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the selected update mode for volumes. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a5cf5bf03c41511f74ec3a9d6e7edf49d}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a5cf5bf03c41511f74ec3a9d6e7edf49d} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a198cecefbd7bea7aa6b4432df8bd40e9}{Pipeline\+Debug\+Level}} {\bfseries debug\+Level}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Previously returned the debug level for this Render Pipeline Asset but is now deprecated. Replaced to use the profiler and is no longer used. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a0422a66e0aefe5322786759f4d68696a}{use\+SRPBatcher}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies if SRPBacher is used by this {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{Universal\+Render\+Pipeline\+Asset}}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a4e0abe42a4aa9477be996ae48a3764ba}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a4e0abe42a4aa9477be996ae48a3764ba} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a7e1bd21321739f290fc0e901034236d9}{Color\+Grading\+Mode}} {\bfseries color\+Grading\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the selected Color\+Grading\+Mode in the URP Asset. \doxylink{namespace_unity_engine_1_1_rendering_1_1_universal_a7e1bd21321739f290fc0e901034236d9}{Color\+Grading\+Mode} \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ad705c3f294619fb7052cbb0353b9ac4b}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ad705c3f294619fb7052cbb0353b9ac4b} 
+int {\bfseries color\+Grading\+Lut\+Size}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies the color grading LUT (lookup table) size in the URP Asset. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a8284137ae85973745de29a9c75b721ae}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a8284137ae85973745de29a9c75b721ae} 
+bool {\bfseries use\+Fast\+SRGBLinear\+Conversion}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if fast approximation functions are used when converting between the s\+RGB and Linear color spaces, false otherwise. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ab92f48fcdc47df17fc3c1c9a0ca67143}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ab92f48fcdc47df17fc3c1c9a0ca67143} 
+bool {\bfseries support\+Data\+Driven\+Lens\+Flare}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if Data Driven Lens Flare are supported by this asset, false otherwise. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a798d041c0b56002fa605735e7de6b4c0}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a798d041c0b56002fa605735e7de6b4c0} 
+bool {\bfseries use\+Adaptive\+Performance}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Set to true to allow Adaptive performance to modify graphics quality settings during runtime. Only applicable when Adaptive performance package is available. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_aa2bdcbe497ac43b5f89d7b45eadfb084}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_aa2bdcbe497ac43b5f89d7b45eadfb084} 
+bool {\bfseries conservative\+Enclosing\+Sphere}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Set to true to enable a conservative method for calculating the size and position of the minimal enclosing sphere around the frustum cascade corner points for shadow culling. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a14916d9dba9d89e35e5b620ae35b3e3c}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a14916d9dba9d89e35e5b620ae35b3e3c} 
+int {\bfseries num\+Iterations\+Enclosing\+Sphere}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Set the number of iterations to reduce the cascade culling enlcosing sphere to be closer to the absolute minimun enclosing sphere, but will also require more CPU computation for increasing values. This parameter is used only when conservative\+Enclosing\+Sphere is set to true. Default value is 64. \end{DoxyCompactList}\item 
+override Material \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ae05e8e90dcaec8c6708a4a7d2f51e8a3}{default\+Material}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the default Material. \end{DoxyCompactList}\item 
+override Material \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_aa47462ee8ffa472c35ecbee8aac883b6}{default\+Particle\+Material}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the default particle Material. \end{DoxyCompactList}\item 
+override Material \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a158aa3f0a13d74b1b8ec5e245243b6ce}{default\+Line\+Material}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the default line Material. \end{DoxyCompactList}\item 
+override Material \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a45f525d3991f4d81d5e58d4716ef4376}{default\+Terrain\+Material}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the default terrain Material. \end{DoxyCompactList}\item 
+override Material \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a3b8484e3f30b9d25bd4953a714ab7abb}{default\+UIMaterial}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the default \doxylink{namespace_unity_engine_1_1_rendering_1_1_u_i}{UI} Material. \end{DoxyCompactList}\item 
+override Material \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a5c41f2524621e18bfe62326dda497121}{default\+UIOverdraw\+Material}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the default \doxylink{namespace_unity_engine_1_1_rendering_1_1_u_i}{UI} overdraw Material. \end{DoxyCompactList}\item 
+override Material \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ad6ecee0fcfbce5d7c2516f74646df2a7}{default\+UIETC1\+Supported\+Material}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the default UIETC1 supported Material for this asset. \end{DoxyCompactList}\item 
+override Material \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ad8bd305991c203cafeab4f63ce7df489}{default2\+DMaterial}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the default material for the 2D renderer. \end{DoxyCompactList}\item 
+override Material \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ab0551e5f7fddcaf4a1761a265acaeced}{default2\+DMask\+Material}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the default sprite mask material for the 2D renderer. \end{DoxyCompactList}\item 
+Material \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ac029c14a31bd353df3b19907224a6048}{decal\+Material}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the Material that \doxylink{namespace_unity}{Unity} uses to render decals. \end{DoxyCompactList}\item 
+override Shader \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ab4a4e94795d26095aed49960189fca64}{default\+Shader}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the default shader for the specified renderer. When creating new objects in the editor, the materials of those objects will use the selected default shader. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a76a99899376b397175a515759a5a0c6a}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a76a99899376b397175a515759a5a0c6a} 
+override string\mbox{[}$\,$\mbox{]} {\bfseries rendering\+Layer\+Mask\+Names}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Names used for display of rendering layer masks. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a1eecd88d86846a828f636f2bcac29e01}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a1eecd88d86846a828f636f2bcac29e01} 
+override string\mbox{[}$\,$\mbox{]} {\bfseries prefixed\+Rendering\+Layer\+Mask\+Names}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Names used for display of rendering layer masks with prefix. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a0588b23a8f2f8c0948f11177dfb335fb}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a0588b23a8f2f8c0948f11177dfb335fb} 
+string\mbox{[}$\,$\mbox{]} {\bfseries light\+Layer\+Mask\+Names}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Names used for display of light layers. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a63292b76a3ada246fedae1244ad4a0da}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a63292b76a3ada246fedae1244ad4a0da} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_1_1_texture_resources}{Texture\+Resources}} {\bfseries textures}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns asset texture resources. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_aa4f12d0be8abc3154607f53cf15b4d12}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_aa4f12d0be8abc3154607f53cf15b4d12} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a780bd71b87b6de9e1a689e12cd0366bd}{Shader\+Variant\+Log\+Level}} {\bfseries shader\+Variant\+Log\+Level}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Previously returned the shader variant log level for this Render Pipeline Asset but is now deprecated. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_aadff56a788140ac796a477dc5582c885}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_aadff56a788140ac796a477dc5582c885} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_ae2fc11951b20efe0ec7ce431f7adfac0}{Shadow\+Cascades\+Option}} {\bfseries shadow\+Cascade\+Option}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Previously used instead of shadow\+Cascade\+Count. Please use that instead. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The asset that contains the URP setting. You can use this asset as a graphics quality level. 
+
+Render\+Pipeline\+Asset \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline}{Universal\+Render\+Pipeline} 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_aae597a197cdc149c6f8003e13b64b7b8}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!CreatePipeline@{CreatePipeline}}
+\index{CreatePipeline@{CreatePipeline}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{CreatePipeline()}{CreatePipeline()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_aae597a197cdc149c6f8003e13b64b7b8} 
+override Render\+Pipeline Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+Create\+Pipeline (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Creates a {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline}{Universal\+Render\+Pipeline}} from the {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{Universal\+Render\+Pipeline\+Asset}}. 
+
+\begin{DoxyReturn}{Returns}
+Returns a {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline}{Universal\+Render\+Pipeline}} created from this \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{Universal\+Render\+Pipeline\+Asset}.
+\end{DoxyReturn}
+Render\+Pipeline \Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_af7c4343498271811577d219d6c5654ab}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!GetRenderer@{GetRenderer}}
+\index{GetRenderer@{GetRenderer}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{GetRenderer()}{GetRenderer()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_af7c4343498271811577d219d6c5654ab} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer}{Scriptable\+Renderer}} Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+Get\+Renderer (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a renderer from the current pipeline asset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index to the renderer. If invalid index is passed, the default renderer is returned instead.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a9b772c5035da12deeb46417737e7abc2}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!LoadBuiltinRendererData@{LoadBuiltinRendererData}}
+\index{LoadBuiltinRendererData@{LoadBuiltinRendererData}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{LoadBuiltinRendererData()}{LoadBuiltinRendererData()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a9b772c5035da12deeb46417737e7abc2} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_scriptable_renderer_data}{Scriptable\+Renderer\+Data}} Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+Load\+Builtin\+Renderer\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a5d7d31b9b1a24a9406a1a47613bd4984}{Renderer\+Type}}}]{type}{ = {\ttfamily \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a5d7d31b9b1a24a9406a1a47613bd4984a6886b1f54705d65e6160d55c025295f2}{Renderer\+Type\+::\+Universal\+Renderer}}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Use this class to initialize the renderer\+Data element that is required by the renderer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The {\ttfamily Renderer\+Type} of the new renderer that is initialized within this asset.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\doxylink{namespace_unity_engine_1_1_rendering_1_1_universal_a5d7d31b9b1a24a9406a1a47613bd4984}{Renderer\+Type} 
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a853eaaeb1cebe11a5f4f74d685e1bd9d}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!additionalLightsRenderingMode@{additionalLightsRenderingMode}}
+\index{additionalLightsRenderingMode@{additionalLightsRenderingMode}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{additionalLightsRenderingMode}{additionalLightsRenderingMode}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a853eaaeb1cebe11a5f4f74d685e1bd9d} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_aeb2718dfe6cb419be648cc9744ce3087}{Light\+Rendering\+Mode}} Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+additional\+Lights\+Rendering\+Mode\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies the {\ttfamily Light\+Rendering\+Mode} for the additional lights used by this {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{Universal\+Render\+Pipeline\+Asset}}. 
+
+\doxylink{namespace_unity_engine_1_1_rendering_1_1_universal_aeb2718dfe6cb419be648cc9744ce3087}{Light\+Rendering\+Mode} \Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a273ff984020ec958bfc4051a489e040e}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!cascade2Split@{cascade2Split}}
+\index{cascade2Split@{cascade2Split}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{cascade2Split}{cascade2Split}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a273ff984020ec958bfc4051a489e040e} 
+float Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+cascade2\+Split\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Returns the split value. 
+
+\begin{DoxyReturn}{Returns}
+Returns a Float with the split value.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_abbdb741191d3e57cfcb475b1a0b78de1}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!cascade3Split@{cascade3Split}}
+\index{cascade3Split@{cascade3Split}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{cascade3Split}{cascade3Split}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_abbdb741191d3e57cfcb475b1a0b78de1} 
+Vector2 Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+cascade3\+Split\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Returns the split values. 
+
+\begin{DoxyReturn}{Returns}
+Returns a Vector2 with the split values.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a87f4ab9892aea09c440129d2b7168150}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!cascade4Split@{cascade4Split}}
+\index{cascade4Split@{cascade4Split}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{cascade4Split}{cascade4Split}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a87f4ab9892aea09c440129d2b7168150} 
+Vector3 Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+cascade4\+Split\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Returns the split values. 
+
+\begin{DoxyReturn}{Returns}
+Returns a Vector3 with the split values.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ac029c14a31bd353df3b19907224a6048}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!decalMaterial@{decalMaterial}}
+\index{decalMaterial@{decalMaterial}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{decalMaterial}{decalMaterial}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ac029c14a31bd353df3b19907224a6048} 
+Material Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+decal\+Material\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the Material that \doxylink{namespace_unity}{Unity} uses to render decals. 
+
+\begin{DoxyReturn}{Returns}
+Returns the Material containing the \doxylink{namespace_unity}{Unity} decal shader.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ab0551e5f7fddcaf4a1761a265acaeced}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!default2DMaskMaterial@{default2DMaskMaterial}}
+\index{default2DMaskMaterial@{default2DMaskMaterial}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{default2DMaskMaterial}{default2DMaskMaterial}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ab0551e5f7fddcaf4a1761a265acaeced} 
+override Material Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+default2\+DMask\+Material\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the default sprite mask material for the 2D renderer. 
+
+\begin{DoxyReturn}{Returns}
+Returns the material containing the default shader pass for sprite mask in the 2D renderer.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ad8bd305991c203cafeab4f63ce7df489}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!default2DMaterial@{default2DMaterial}}
+\index{default2DMaterial@{default2DMaterial}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{default2DMaterial}{default2DMaterial}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ad8bd305991c203cafeab4f63ce7df489} 
+override Material Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+default2\+DMaterial\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the default material for the 2D renderer. 
+
+\begin{DoxyReturn}{Returns}
+Returns the material containing the default lit and unlit shader passes for sprites in the 2D renderer.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a158aa3f0a13d74b1b8ec5e245243b6ce}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!defaultLineMaterial@{defaultLineMaterial}}
+\index{defaultLineMaterial@{defaultLineMaterial}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{defaultLineMaterial}{defaultLineMaterial}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a158aa3f0a13d74b1b8ec5e245243b6ce} 
+override Material Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+default\+Line\+Material\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the default line Material. 
+
+\begin{DoxyReturn}{Returns}
+Returns the default line Material.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ae05e8e90dcaec8c6708a4a7d2f51e8a3}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!defaultMaterial@{defaultMaterial}}
+\index{defaultMaterial@{defaultMaterial}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{defaultMaterial}{defaultMaterial}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ae05e8e90dcaec8c6708a4a7d2f51e8a3} 
+override Material Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+default\+Material\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the default Material. 
+
+\begin{DoxyReturn}{Returns}
+Returns the default Material.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_aa47462ee8ffa472c35ecbee8aac883b6}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!defaultParticleMaterial@{defaultParticleMaterial}}
+\index{defaultParticleMaterial@{defaultParticleMaterial}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{defaultParticleMaterial}{defaultParticleMaterial}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_aa47462ee8ffa472c35ecbee8aac883b6} 
+override Material Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+default\+Particle\+Material\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the default particle Material. 
+
+\begin{DoxyReturn}{Returns}
+Returns the default particle Material.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ab4a4e94795d26095aed49960189fca64}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!defaultShader@{defaultShader}}
+\index{defaultShader@{defaultShader}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{defaultShader}{defaultShader}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ab4a4e94795d26095aed49960189fca64} 
+override Shader Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+default\+Shader\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the default shader for the specified renderer. When creating new objects in the editor, the materials of those objects will use the selected default shader. 
+
+\begin{DoxyReturn}{Returns}
+Returns the default shader for the specified renderer.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a45f525d3991f4d81d5e58d4716ef4376}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!defaultTerrainMaterial@{defaultTerrainMaterial}}
+\index{defaultTerrainMaterial@{defaultTerrainMaterial}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{defaultTerrainMaterial}{defaultTerrainMaterial}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a45f525d3991f4d81d5e58d4716ef4376} 
+override Material Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+default\+Terrain\+Material\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the default terrain Material. 
+
+\begin{DoxyReturn}{Returns}
+Returns the default terrain Material.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ad6ecee0fcfbce5d7c2516f74646df2a7}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!defaultUIETC1SupportedMaterial@{defaultUIETC1SupportedMaterial}}
+\index{defaultUIETC1SupportedMaterial@{defaultUIETC1SupportedMaterial}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{defaultUIETC1SupportedMaterial}{defaultUIETC1SupportedMaterial}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ad6ecee0fcfbce5d7c2516f74646df2a7} 
+override Material Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+default\+UIETC1\+Supported\+Material\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the default UIETC1 supported Material for this asset. 
+
+\begin{DoxyReturn}{Returns}
+Returns the default UIETC1 supported Material.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a3b8484e3f30b9d25bd4953a714ab7abb}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!defaultUIMaterial@{defaultUIMaterial}}
+\index{defaultUIMaterial@{defaultUIMaterial}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{defaultUIMaterial}{defaultUIMaterial}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a3b8484e3f30b9d25bd4953a714ab7abb} 
+override Material Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+default\+UIMaterial\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the default \doxylink{namespace_unity_engine_1_1_rendering_1_1_u_i}{UI} Material. 
+
+\begin{DoxyReturn}{Returns}
+Returns the default \doxylink{namespace_unity_engine_1_1_rendering_1_1_u_i}{UI} Material.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a5c41f2524621e18bfe62326dda497121}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!defaultUIOverdrawMaterial@{defaultUIOverdrawMaterial}}
+\index{defaultUIOverdrawMaterial@{defaultUIOverdrawMaterial}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{defaultUIOverdrawMaterial}{defaultUIOverdrawMaterial}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a5c41f2524621e18bfe62326dda497121} 
+override Material Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+default\+UIOverdraw\+Material\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the default \doxylink{namespace_unity_engine_1_1_rendering_1_1_u_i}{UI} overdraw Material. 
+
+\begin{DoxyReturn}{Returns}
+Returns the default \doxylink{namespace_unity_engine_1_1_rendering_1_1_u_i}{UI} overdraw Material.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a1e64d23a8d4989b5a7a7846e7d9905f8}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!fsrSharpness@{fsrSharpness}}
+\index{fsrSharpness@{fsrSharpness}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{fsrSharpness}{fsrSharpness}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a1e64d23a8d4989b5a7a7846e7d9905f8} 
+float Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+fsr\+Sharpness\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Controls the intensity of the sharpening filter associated with Fidelity\+FX Super Resolution. A value of 1.\+0 produces maximum sharpness while a value of 0.\+0 disables the sharpening filter entirely. 
+
+Note\+: This value only has an effect when the fsr\+Override\+Sharpness property is set to true. \Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a4dbc02c8808af0f13f0b32e1537ba6de}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!mainLightRenderingMode@{mainLightRenderingMode}}
+\index{mainLightRenderingMode@{mainLightRenderingMode}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{mainLightRenderingMode}{mainLightRenderingMode}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a4dbc02c8808af0f13f0b32e1537ba6de} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_aeb2718dfe6cb419be648cc9744ce3087}{Light\+Rendering\+Mode}} Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+main\+Light\+Rendering\+Mode\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies the {\ttfamily Light\+Rendering\+Mode} for the main light used by this {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{Universal\+Render\+Pipeline\+Asset}}. 
+
+\doxylink{namespace_unity_engine_1_1_rendering_1_1_universal_aeb2718dfe6cb419be648cc9744ce3087}{Light\+Rendering\+Mode} \Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_acc4ba82d70a571b059e85b0e9e626c45}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!msaaSampleCount@{msaaSampleCount}}
+\index{msaaSampleCount@{msaaSampleCount}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{msaaSampleCount}{msaaSampleCount}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_acc4ba82d70a571b059e85b0e9e626c45} 
+int Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+msaa\+Sample\+Count\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies the msaa sample count used by this {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{Universal\+Render\+Pipeline\+Asset}} 
+
+\doxylink{namespace_unity_engine_1_1_rendering_1_1_universal_aa49b63caa4b56d52a8186dfbc76cddd5}{Sample\+Count} \Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a03ca9619220f090ad1aa7e995e053397}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!storeActionsOptimization@{storeActionsOptimization}}
+\index{storeActionsOptimization@{storeActionsOptimization}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{storeActionsOptimization}{storeActionsOptimization}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a03ca9619220f090ad1aa7e995e053397} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_1_1_universal_a3b397e122ca0ac288bcc2e027eb9da65}{Store\+Actions\+Optimization}} Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+store\+Actions\+Optimization\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Returns the active store action optimization value. 
+
+\begin{DoxyReturn}{Returns}
+Returns the active store action optimization value.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a7982e36db5f461197dd91a953b88cc2a}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!supportsDynamicBatching@{supportsDynamicBatching}}
+\index{supportsDynamicBatching@{supportsDynamicBatching}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{supportsDynamicBatching}{supportsDynamicBatching}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a7982e36db5f461197dd91a953b88cc2a} 
+bool Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+supports\+Dynamic\+Batching\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies if this {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{Universal\+Render\+Pipeline\+Asset}} should use dynamic batching. 
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a1f3672c8821df008c2284abb098c9f9f}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!supportsHDR@{supportsHDR}}
+\index{supportsHDR@{supportsHDR}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{supportsHDR}{supportsHDR}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a1f3672c8821df008c2284abb098c9f9f} 
+bool Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+supports\+HDR\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+When enabled, the camera renders to HDR buffers. This setting can be overridden per camera. 
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ab15026379284e805527e287b496facfe}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!supportsMixedLighting@{supportsMixedLighting}}
+\index{supportsMixedLighting@{supportsMixedLighting}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{supportsMixedLighting}{supportsMixedLighting}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_ab15026379284e805527e287b496facfe} 
+bool Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+supports\+Mixed\+Lighting\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns true if the Render Pipeline Asset supports mixed lighting, false otherwise. 
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_acba2bfff56a26330324e7d12f70ef405}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!supportsTerrainHoles@{supportsTerrainHoles}}
+\index{supportsTerrainHoles@{supportsTerrainHoles}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{supportsTerrainHoles}{supportsTerrainHoles}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_acba2bfff56a26330324e7d12f70ef405} 
+bool Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+supports\+Terrain\+Holes\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+This settings controls if the asset {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{Universal\+Render\+Pipeline\+Asset}} supports terrain holes. 
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a0422a66e0aefe5322786759f4d68696a}\index{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}!useSRPBatcher@{useSRPBatcher}}
+\index{useSRPBatcher@{useSRPBatcher}!UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset@{UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset}}
+\doxysubsubsection{\texorpdfstring{useSRPBatcher}{useSRPBatcher}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_a0422a66e0aefe5322786759f4d68696a} 
+bool Unity\+Engine.\+Rendering.\+Universal.\+Universal\+Render\+Pipeline\+Asset.\+use\+SRPBatcher\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies if SRPBacher is used by this {\ttfamily \doxylink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{Universal\+Render\+Pipeline\+Asset}}. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/\+Data/Universal\+Render\+Pipeline\+Asset.\+cs\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/Deprecated.\+cs\end{DoxyCompactItemize}

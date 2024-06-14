@@ -1,0 +1,110 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Core\+Unsafe\+Utils.\+Fixed\+Buffer\+String\+Queue Struct Reference}
+\hypertarget{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue}{}\label{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue}\index{UnityEngine.Rendering.CoreUnsafeUtils.FixedBufferStringQueue@{UnityEngine.Rendering.CoreUnsafeUtils.FixedBufferStringQueue}}
+
+
+Fixed Buffer String Queue class.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue_a91b1e05037b1ff229d757a97d502d276}{Fixed\+Buffer\+String\+Queue}} (byte \texorpdfstring{$\ast$}{*}ptr, int length)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue_a38607ba2d687be04bcc679476807e5a9}{Try\+Push}} (string v)
+\begin{DoxyCompactList}\small\item\em Try to push a new element in the queue. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue_abf489b2032af4ebbe63dd954376840cc}{Try\+Pop}} (out string v)
+\begin{DoxyCompactList}\small\item\em Pop an element of the queue. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue_a933b0000fa147e00c1edaa3c2927669c}\label{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue_a933b0000fa147e00c1edaa3c2927669c} 
+void {\bfseries Clear} ()
+\begin{DoxyCompactList}\small\item\em Clear the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue_a0acdce4b6a8fdd20cf832b19b4deef87}\label{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue_a0acdce4b6a8fdd20cf832b19b4deef87} 
+byte \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+\+Read\+Cursor}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue_afae3c3ab3976ae1f596463de972057cb}\label{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue_afae3c3ab3976ae1f596463de972057cb} 
+byte \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+\+Write\+Cursor}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue_a0fed30f7ef45403fa714682d719c6098}\label{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue_a0fed30f7ef45403fa714682d719c6098} 
+readonly byte \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+\+Buffer\+End}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue_a94152dbf19777041c261dce4a45de121}\label{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue_a94152dbf19777041c261dce4a45de121} 
+readonly byte \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+\+Buffer\+Start}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue_a3b42316d583b65306290a06f859a604e}\label{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue_a3b42316d583b65306290a06f859a604e} 
+readonly int {\bfseries m\+\_\+\+Buffer\+Length}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue_a9033009103f06057f96cf377115a1269}\label{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue_a9033009103f06057f96cf377115a1269} 
+int {\bfseries Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Number of element in the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fixed Buffer String Queue class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue_a91b1e05037b1ff229d757a97d502d276}\index{UnityEngine.Rendering.CoreUnsafeUtils.FixedBufferStringQueue@{UnityEngine.Rendering.CoreUnsafeUtils.FixedBufferStringQueue}!FixedBufferStringQueue@{FixedBufferStringQueue}}
+\index{FixedBufferStringQueue@{FixedBufferStringQueue}!UnityEngine.Rendering.CoreUnsafeUtils.FixedBufferStringQueue@{UnityEngine.Rendering.CoreUnsafeUtils.FixedBufferStringQueue}}
+\doxysubsubsection{\texorpdfstring{FixedBufferStringQueue()}{FixedBufferStringQueue()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue_a91b1e05037b1ff229d757a97d502d276} 
+Unity\+Engine.\+Rendering.\+Core\+Unsafe\+Utils.\+Fixed\+Buffer\+String\+Queue.\+Fixed\+Buffer\+String\+Queue (\begin{DoxyParamCaption}\item[{byte \texorpdfstring{$\ast$}{*}}]{ptr}{, }\item[{int}]{length}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & Buffer pointer.\\
+\hline
+{\em length} & Length of the provided allocated buffer in byte.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue_abf489b2032af4ebbe63dd954376840cc}\index{UnityEngine.Rendering.CoreUnsafeUtils.FixedBufferStringQueue@{UnityEngine.Rendering.CoreUnsafeUtils.FixedBufferStringQueue}!TryPop@{TryPop}}
+\index{TryPop@{TryPop}!UnityEngine.Rendering.CoreUnsafeUtils.FixedBufferStringQueue@{UnityEngine.Rendering.CoreUnsafeUtils.FixedBufferStringQueue}}
+\doxysubsubsection{\texorpdfstring{TryPop()}{TryPop()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue_abf489b2032af4ebbe63dd954376840cc} 
+bool Unity\+Engine.\+Rendering.\+Core\+Unsafe\+Utils.\+Fixed\+Buffer\+String\+Queue.\+Try\+Pop (\begin{DoxyParamCaption}\item[{out string}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pop an element of the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Output result string.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if an element was succesfuly poped.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue_a38607ba2d687be04bcc679476807e5a9}\index{UnityEngine.Rendering.CoreUnsafeUtils.FixedBufferStringQueue@{UnityEngine.Rendering.CoreUnsafeUtils.FixedBufferStringQueue}!TryPush@{TryPush}}
+\index{TryPush@{TryPush}!UnityEngine.Rendering.CoreUnsafeUtils.FixedBufferStringQueue@{UnityEngine.Rendering.CoreUnsafeUtils.FixedBufferStringQueue}}
+\doxysubsubsection{\texorpdfstring{TryPush()}{TryPush()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_rendering_1_1_core_unsafe_utils_1_1_fixed_buffer_string_queue_a38607ba2d687be04bcc679476807e5a9} 
+bool Unity\+Engine.\+Rendering.\+Core\+Unsafe\+Utils.\+Fixed\+Buffer\+String\+Queue.\+Try\+Push (\begin{DoxyParamCaption}\item[{string}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Try to push a new element in the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Element to push in the queue.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the new element could be pushed in the queue. False if reserved memory was not enough.
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Common/Core\+Unsafe\+Utils.\+cs\end{DoxyCompactItemize}

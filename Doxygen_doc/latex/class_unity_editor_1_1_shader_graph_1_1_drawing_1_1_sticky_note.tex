@@ -1,0 +1,123 @@
+\doxysection{Unity\+Editor.\+Shader\+Graph.\+Drawing.\+Sticky\+Note Class Reference}
+\hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note}{}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note}\index{UnityEditor.ShaderGraph.Drawing.StickyNote@{UnityEditor.ShaderGraph.Drawing.StickyNote}}
+Inheritance diagram for Unity\+Editor.\+Shader\+Graph.\+Drawing.\+Sticky\+Note\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.400000cm]{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_afd3cfe6a74908cb0cbafa31e452f59ae}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_afd3cfe6a74908cb0cbafa31e452f59ae} 
+enum {\bfseries Theme} \{ \newline
+{\bfseries Classic}
+, {\bfseries Black}
+, {\bfseries Orange}
+, {\bfseries Green}
+, \newline
+{\bfseries Blue}
+, {\bfseries Red}
+, {\bfseries Purple}
+, {\bfseries Teal}
+ \}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_ae15ff912e6101d2f1ef8b0c8a259d710}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_ae15ff912e6101d2f1ef8b0c8a259d710} 
+enum {\bfseries Text\+Size} \{ {\bfseries Small}
+, {\bfseries Medium}
+, {\bfseries Large}
+, {\bfseries Huge}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a693e336e85908fe7869d9abde21a1bf7}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a693e336e85908fe7869d9abde21a1bf7} 
+virtual void {\bfseries On\+Start\+Resize} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_aeafabdf6e9aaf86d27908a623502dec4}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_aeafabdf6e9aaf86d27908a623502dec4} 
+virtual void {\bfseries On\+Resized} ()
+\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_aab1d84ddf6656bc0379c5eb1756e5b82}{Can\+Resize\+Past\+Parent\+Bounds}} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_af3000bbf2d4c4eda28eb5e998a310dcc}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_af3000bbf2d4c4eda28eb5e998a310dcc} 
+void {\bfseries Fit\+Text} (bool only\+If\+Smaller)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_aebf1949d59dd7d499098e635b0d8b263}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_aebf1949d59dd7d499098e635b0d8b263} 
+{\bfseries Sticky\+Note} (Rect position, \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_graph_data}{Graph\+Data}} graph)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a38b34f77a520a46cd1b73845a52a30a3}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a38b34f77a520a46cd1b73845a52a30a3} 
+{\bfseries Sticky\+Note} (string ui\+File, Rect position, \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_graph_data}{Graph\+Data}} graph)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a36f3aababd51d6c102ea18c0fe274d4d}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a36f3aababd51d6c102ea18c0fe274d4d} 
+void {\bfseries Build\+Contextual\+Menu} (Contextual\+Menu\+Populate\+Event evt)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_aa9c051d12428fb3d04954f77e6b1e1cb}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_aa9c051d12428fb3d04954f77e6b1e1cb} 
+\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_property_sheet}{Property\+Sheet}} {\bfseries Get\+Inspector\+Content} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a3224179940b113c7c447c9a5d300ea56}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a3224179940b113c7c447c9a5d300ea56} 
+override void {\bfseries Set\+Position} (Rect rect)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a3b7c4b0ffc8992cc86167e0254a3860c}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a3b7c4b0ffc8992cc86167e0254a3860c} 
+override Rect {\bfseries Get\+Position} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a6a6b3b5cb5b779bd560e3cd2b2764987}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a6a6b3b5cb5b779bd560e3cd2b2764987} 
+System.\+Action$<$ Sticky\+Node\+Change\+Event.\+Change $>$ {\bfseries On\+Change}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_ada09822b028894ecc06107384d5402f4}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_ada09822b028894ecc06107384d5402f4} 
+static readonly Vector2 {\bfseries default\+Size} = new Vector2(200, 160)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a66f5368536737af6c9e6596ac7f64b45}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a66f5368536737af6c9e6596ac7f64b45} 
+Text\+Field {\bfseries m\+\_\+\+Title\+Field}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_ab211147961ea39bbf3b99831bdc5b575}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_ab211147961ea39bbf3b99831bdc5b575} 
+Text\+Field {\bfseries m\+\_\+\+Contents\+Field}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a750bae5f053c1360dbf751eb2117121c}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a750bae5f053c1360dbf751eb2117121c} 
+new \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_sticky_note_data}{Sticky\+Note\+Data}} {\bfseries user\+Data}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a76b7e3e16c8be82e1b5085d58cc03da3}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a76b7e3e16c8be82e1b5085d58cc03da3} 
+Theme {\bfseries theme}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a171dd0cf5766101d734a9f71f4d7d920}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a171dd0cf5766101d734a9f71f4d7d920} 
+Text\+Size {\bfseries text\+Size}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a5c3e27a4650bbd0930f2fa771de990f4}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a5c3e27a4650bbd0930f2fa771de990f4} 
+string {\bfseries display\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a1e483a75075f691aa9920e588f4ad989}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a1e483a75075f691aa9920e588f4ad989} 
+string {\bfseries contents}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a88d4ed766dc55466762eef8e75768c73}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_a88d4ed766dc55466762eef8e75768c73} 
+new string {\bfseries title}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_aab1d84ddf6656bc0379c5eb1756e5b82}\index{UnityEditor.ShaderGraph.Drawing.StickyNote@{UnityEditor.ShaderGraph.Drawing.StickyNote}!CanResizePastParentBounds@{CanResizePastParentBounds}}
+\index{CanResizePastParentBounds@{CanResizePastParentBounds}!UnityEditor.ShaderGraph.Drawing.StickyNote@{UnityEditor.ShaderGraph.Drawing.StickyNote}}
+\doxysubsubsection{\texorpdfstring{CanResizePastParentBounds()}{CanResizePastParentBounds()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_sticky_note_aab1d84ddf6656bc0379c5eb1756e5b82} 
+bool Unity\+Editor.\+Shader\+Graph.\+Drawing.\+Sticky\+Note.\+Can\+Resize\+Past\+Parent\+Bounds (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_drawing_1_1_interfaces_1_1_i_s_g_resizable}{Unity\+Editor.\+Shader\+Graph.\+Drawing.\+Interfaces.\+ISGResizable}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+shadergraph@14.\+0.\+8/\+Editor/\+Drawing/\+Views/Sticky\+Note.\+cs\end{DoxyCompactItemize}

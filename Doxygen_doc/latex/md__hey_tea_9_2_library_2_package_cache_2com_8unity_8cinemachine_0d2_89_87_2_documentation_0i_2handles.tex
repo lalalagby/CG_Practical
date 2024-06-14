@@ -1,0 +1,67 @@
+\chapter{Cinemachine Scene Handles}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2handles}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2handles}\index{Cinemachine Scene Handles@{Cinemachine Scene Handles}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2handles_autotoc_md742}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2handles_autotoc_md742}%
+ \doxylink{namespace_cinemachine}{Cinemachine} Scene Handles are a group of 3D controls that allow you to manipulate virtual camera parameters visually in the Scene view. You can use the handle tools to interactively adjust the selected object\textquotesingle{}s parameters quickly and efficiently rather than controlling them via the inspector.
+
+\doxylink{namespace_cinemachine}{Cinemachine} Scene Handles automatically appear in the Scene view {\bfseries{toolbar overlay}} when you select a type of virtual camera with an associated handle.
+
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2handles_autotoc_md743}{}\doxysection{\texorpdfstring{Types of Scene Handles}{Types of Scene Handles}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2handles_autotoc_md743}
+The following four \doxylink{namespace_cinemachine}{Cinemachine} Handle tools are available in the toolbar\+:
+
+
+
+{\bfseries{1. Field of View (FOV)}}
+
+The FOV tool can adjust Vertical FOV, Horizontal FOV, Orthographic Size, or Focal Length depending on what\textquotesingle{}s selected by the user. It can control\+:
+
+
+\begin{DoxyItemize}
+\item Vertical or Horizontal FOV (depending on the selection in the Main Camera) when the camera is in {\bfseries{Perspective}} mode.
+\item Orthographic Size when the camera is in {\bfseries{Orthographic}} mode.
+\item Focal length when the camera is in {\bfseries{Physical}} mode.
+\end{DoxyItemize}
+
+
+
+For more information on the Field of View (FOV) property, see \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_virtual_camera}{Setting Virtual Camera properties}{0}.
+
+{\bfseries{2. Far/\+Near clip planes}}
+
+
+\begin{DoxyItemize}
+\item You can drag the points to increase the far clip plane and near clip plane.
+\end{DoxyItemize}
+
+
+
+For more information on the Far and Near clip plane properties, see \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_virtual_camera}{Setting Virtual Camera properties}{0}.
+
+{\bfseries{3. Follow offset}}
+
+The Follow offset is an offset from the Follow Target. You can drag the points to increase or decrease the Follow offset position.
+
+
+
+For more information on the Follow offset property, see \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_d1eecda77a41f7373053e4f2c0a56bf7}{Orbital Transposer properties}{0}.
+
+{\bfseries{4. Tracked object offset}}
+
+This starts from where the camera is placed. You can drag the points to increase or decrease the tracking target position when the desired area isn\textquotesingle{}t the tracked object’s center.
+
+
+
+For more information on the Tracked object offset property, see \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_aim_composer}{Composer properties}{0}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2handles_autotoc_md744}{}\doxysection{\texorpdfstring{Cinemachine tool settings}{Cinemachine tool settings}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2handles_autotoc_md744}
+\doxylink{namespace_cinemachine}{Cinemachine} tool settings are automatically displayed when a Free Look camera is selected. These settings allow you to adjust the position of the three separate camera rigs\+: {\bfseries{Top}}, {\bfseries{Middle}}, and {\bfseries{Bottom}}.
+
+
+
+For more information, see \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_free_look}{Cinemachine Free Look Camera}{0}.
+
+To deactivate the \doxylink{namespace_cinemachine}{Cinemachine} tool settings for a Free Look camera\+:
+
+
+\begin{DoxyEnumerate}
+\item Right-\/click on the {\bfseries{Scene}} tab in the Scene view.
+\item Select {\bfseries{Overlays}} and then {\bfseries{\doxylink{namespace_cinemachine}{Cinemachine} tools}} from the pop-\/up menu. 
+\end{DoxyEnumerate}

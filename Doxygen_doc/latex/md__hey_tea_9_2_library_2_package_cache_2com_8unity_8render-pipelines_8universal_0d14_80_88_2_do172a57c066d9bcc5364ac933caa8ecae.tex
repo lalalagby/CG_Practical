@@ -1,0 +1,48 @@
+\chapter{Shaders and Materials}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do172a57c066d9bcc5364ac933caa8ecae}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do172a57c066d9bcc5364ac933caa8ecae}\index{Shaders and Materials@{Shaders and Materials}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do172a57c066d9bcc5364ac933caa8ecae_autotoc_md2481}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do172a57c066d9bcc5364ac933caa8ecae_autotoc_md2481}%
+ URP provides the following Shaders for the most common use case scenarios\+:
+
+
+\begin{DoxyItemize}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dobad11f4bc095c28bb5b8a1698bb5a9dc}{Complex Lit}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2lit-shader}{Lit}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe4da8ababb5b180f91a96b1c5f6e66e8}{Simple Lit}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do7970c7cc297560e6e016a13171ece674}{Baked Lit}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2unlit-shader}{Unlit}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do153bedd0e21ba38a1f190f9c8d21a66d}{Terrain Lit}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do8e352e9ffdbb877fc2d2bfb90b507442}{Particles Lit}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do1a4380a85dc7c7008128dcabd90d3de1}{Particles Simple Lit}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do905d217601d4fb35d70e1d927e131af5}{Particles Unlit}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2speedtree}{Speed\+Tree}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2decal-shader}{Decal}{0}
+\item Autodesk Interactive
+\item Autodesk Interactive Transparent
+\item Autodesk Interactive Masked
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do172a57c066d9bcc5364ac933caa8ecae_autotoc_md2482}{}\doxysection{\texorpdfstring{Shader compatibility}{Shader compatibility}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do172a57c066d9bcc5364ac933caa8ecae_autotoc_md2482}
+Lit and custom Lit shaders written for the Built-\/in Render Pipeline are not compatible with URP.
+
+Unlit shaders written for the Built-\/in Render Pipeline are compatible with URP.
+
+For information on converting shaders written for the Built-\/in Render Pipeline to URP shaders, see the page \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do95ff25160875704a67e3dc7190307069}{Converting your shaders}{0}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do172a57c066d9bcc5364ac933caa8ecae_autotoc_md2483}{}\doxysection{\texorpdfstring{Choosing a shader}{Choosing a shader}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do172a57c066d9bcc5364ac933caa8ecae_autotoc_md2483}
+The Universal Render Pipeline implements Physically Based Rendering (PBR).
+
+The pipeline provides pre-\/built shaders that can simulate real world materials.
+
+PBR materials provide a set of parameters that let artists achieve consistency between different material types and under different lighting conditions.
+
+The URP \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2lit-shader}{Lit shader}{0} is suitable for modeling most of the real world materials. The \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_dobad11f4bc095c28bb5b8a1698bb5a9dc}{Complex Lit shader}{0} is suitable for simulating advanced materials that require more complex lighting evaluation, such as the clear coat effect.
+
+URP provides the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe4da8ababb5b180f91a96b1c5f6e66e8}{Simple Lit shader}{0} as a helper to convert non-\/\+PBR projects made with the Built-\/in Render Pipeline to URP. This shader is non-\/\+PBR and is not supported by Shader Graph.
+
+If you don’t need real-\/time lighting, or would rather only use \href{https://docs.unity3d.com/Manual/LightMode-Baked.html}{\texttt{ baked lighting}} and sample global illumination, choose a Baked Lit Shader.
+
+If you don’t need lighting on a Material at all, you can choose the Unlit Shader.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do172a57c066d9bcc5364ac933caa8ecae_autotoc_md2484}{}\doxysection{\texorpdfstring{SRP Batcher compatibility}{SRP Batcher compatibility}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do172a57c066d9bcc5364ac933caa8ecae_autotoc_md2484}
+To ensure that a Shader is SRP Batcher compatible\+:
+\begin{DoxyItemize}
+\item Declare all Material properties in a single CBUFFER called {\ttfamily Unity\+Per\+Material}.
+\item Declare all built-\/in engine properties, such as {\ttfamily unity\+\_\+\+Object\+To\+World} or {\ttfamily unity\+\_\+\+World\+Transform\+Params}, in a single CBUFFER called {\ttfamily Unity\+Per\+Draw}.
+\end{DoxyItemize}
+
+For more information on the SRP Batcher, see the page \href{https://docs.unity3d.com/Manual/SRPBatcher.html}{\texttt{ Scriptable Render Pipeline (SRP) Batcher}}. 

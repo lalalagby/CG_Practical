@@ -1,0 +1,352 @@
+\chapter{Changelog}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g}\index{Changelog@{Changelog}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2712}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2712}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2713}{}\doxysection{\texorpdfstring{\mbox{[}4.\+9.\+2\mbox{]} -\/ 2022-\/02-\/22}{\mbox{[}4.\+9.\+2\mbox{]} -\/ 2022-\/02-\/22}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2713}
+
+\begin{DoxyItemize}
+\item Fixed a bug that stopped keyboard keys from affecting navigation and interaction with search results list, unless user explicitly focused/click on list using the mouse \mbox{[}1396759\mbox{]}
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2714}{}\doxysection{\texorpdfstring{\mbox{[}4.\+9.\+1\mbox{]} -\/ 2021-\/10-\/05}{\mbox{[}4.\+9.\+1\mbox{]} -\/ 2021-\/10-\/05}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2714}
+
+\begin{DoxyItemize}
+\item Fixed a usability issue where in some cases searcher would suggest one collapsed category of results that user would have to manually expand anyway
+\item Fixed bug that caused incorrect search results with non whitespaced queries for nodes with spaces in their name and for subgraphs \mbox{[}1359158\mbox{]}
+\item Fixed bug that causes search results to not be visible sometimes in the searcher window \mbox{[}1366061\mbox{]}
+\item Fixed bug that causes exceptions to be thrown when using the up/down arrow keys with search list focused \mbox{[}1358016\mbox{]}
+\item Fixed bug that causes some searcher items to be irreversibly collapsed due to expand icon disappearing on collapsing those items \mbox{[}1366074\mbox{]}
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2715}{}\doxysection{\texorpdfstring{\mbox{[}4.\+9.\+0\mbox{]} -\/ 2021-\/09-\/07}{\mbox{[}4.\+9.\+0\mbox{]} -\/ 2021-\/09-\/07}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2715}
+
+\begin{DoxyItemize}
+\item Remove Lucene API and dlls
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2716}{}\doxysection{\texorpdfstring{\mbox{[}4.\+8.\+0\mbox{]} -\/ 2021-\/02-\/17}{\mbox{[}4.\+8.\+0\mbox{]} -\/ 2021-\/02-\/17}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2716}
+
+\begin{DoxyItemize}
+\item Added ability for clients of searcher window to filter and prioritize search results as they need
+\item Fixed bug that causes searcher window to prioritize categories over node entries of the same name \mbox{[}case 1304055\mbox{]}
+\item Fixed bug that causes searcher window to close when double-\/clicking a category \mbox{[}case 1302267\mbox{]}
+\item Fixed bug that causes searcher window to be offset too far when accounting for host window boundaries
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2717}{}\doxysection{\texorpdfstring{\mbox{[}4.\+7.\+1\mbox{]} -\/ 2020-\/10-\/15}{\mbox{[}4.\+7.\+1\mbox{]} -\/ 2020-\/10-\/15}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2717}
+
+\begin{DoxyItemize}
+\item Fix Regex error during highlighting when the query contains a backslash
+\item Fix serialization depth warning caused by a property\textquotesingle{}s backing field getting serialized
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2718}{}\doxysection{\texorpdfstring{\mbox{[}4.\+7.\+0\mbox{]} -\/ 2020-\/08-\/11}{\mbox{[}4.\+7.\+0\mbox{]} -\/ 2020-\/08-\/11}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2718}
+
+\begin{DoxyItemize}
+\item Added Lucene.\+Net DLLs and first version of the Lucene\+Database
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2719}{}\doxysection{\texorpdfstring{\mbox{[}4.\+6.\+0\mbox{]} -\/ 2020-\/07-\/27}{\mbox{[}4.\+6.\+0\mbox{]} -\/ 2020-\/07-\/27}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2719}
+
+\begin{DoxyItemize}
+\item Added support for multi-\/select, enabled via Multi\+Select\+Enabled in the Searcher\+Adapter.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2720}{}\doxysection{\texorpdfstring{\mbox{[}4.\+5.\+0\mbox{]} -\/ 2020-\/07-\/15}{\mbox{[}4.\+5.\+0\mbox{]} -\/ 2020-\/07-\/15}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2720}
+
+\begin{DoxyItemize}
+\item Add support for displaying icons in Searcher\+Item.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2721}{}\doxysection{\texorpdfstring{\mbox{[}4.\+4.\+0\mbox{]} -\/ 2020-\/07-\/13}{\mbox{[}4.\+4.\+0\mbox{]} -\/ 2020-\/07-\/13}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2721}
+
+\begin{DoxyItemize}
+\item Add custom User\+Data field to Searcher\+Item.
+\item Add Searcher\+Tree\+Utility to create a Searcher\+Item tree from a flat list of paths.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2722}{}\doxysection{\texorpdfstring{\mbox{[}4.\+3.\+1\mbox{]} -\/ 2020-\/06-\/08}{\mbox{[}4.\+3.\+1\mbox{]} -\/ 2020-\/06-\/08}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2722}
+
+\begin{DoxyItemize}
+\item Fix bug that cause keyboard navigation to fail. \mbox{[}case 1253544\mbox{]}
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2723}{}\doxysection{\texorpdfstring{\mbox{[}4.\+3.\+0\mbox{]} -\/ 2020-\/05-\/27}{\mbox{[}4.\+3.\+0\mbox{]} -\/ 2020-\/05-\/27}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2723}
+Package\+: \href{https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.3.0-preview.tgz}{\texttt{ https\+://artifactory.\+prd.\+cds.\+internal.\+unity3d.\+com/artifactory/upm-\/candidates/com.\+unity.\+searcher/-\//com.\+unity.\+searcher-\/4.\+3.\+0-\/preview.\+tgz}}
+
+
+\begin{DoxyItemize}
+\item Bump minor version for synonyms.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2724}{}\doxysection{\texorpdfstring{\mbox{[}4.\+2.\+0\mbox{]} -\/ 2020-\/04-\/30}{\mbox{[}4.\+2.\+0\mbox{]} -\/ 2020-\/04-\/30}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2724}
+Package\+: \href{https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.2.0-preview.tgz}{\texttt{ https\+://artifactory.\+prd.\+cds.\+internal.\+unity3d.\+com/artifactory/upm-\/candidates/com.\+unity.\+searcher/-\//com.\+unity.\+searcher-\/4.\+2.\+0-\/preview.\+tgz}}
+
+
+\begin{DoxyItemize}
+\item Bump to minor version for API validation.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2725}{}\doxysection{\texorpdfstring{\mbox{[}4.\+1.\+1\mbox{]} -\/ 2020-\/04-\/30}{\mbox{[}4.\+1.\+1\mbox{]} -\/ 2020-\/04-\/30}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2725}
+Package\+: \href{https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.1.1-preview.tgz}{\texttt{ https\+://artifactory.\+prd.\+cds.\+internal.\+unity3d.\+com/artifactory/upm-\/candidates/com.\+unity.\+searcher/-\//com.\+unity.\+searcher-\/4.\+1.\+1-\/preview.\+tgz}}
+
+
+\begin{DoxyItemize}
+\item Add all children is now an adapter override.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2726}{}\doxysection{\texorpdfstring{\mbox{[}4.\+1.\+0\mbox{]} -\/ 2020-\/03-\/20}{\mbox{[}4.\+1.\+0\mbox{]} -\/ 2020-\/03-\/20}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2726}
+Package\+: \href{https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.1.0-preview.tgz}{\texttt{ https\+://artifactory.\+prd.\+cds.\+internal.\+unity3d.\+com/artifactory/upm-\/candidates/com.\+unity.\+searcher/-\//com.\+unity.\+searcher-\/4.\+1.\+0-\/preview.\+tgz}}
+
+
+\begin{DoxyItemize}
+\item Improve matching algorithm
+\item Add a splitter between searcher and details panel
+\item Fix adding all children of matching expanded categories
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2727}{}\doxysection{\texorpdfstring{\mbox{[}4.\+0.\+9\mbox{]} -\/ 2019-\/10-\/22}{\mbox{[}4.\+0.\+9\mbox{]} -\/ 2019-\/10-\/22}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2727}
+Package\+: \href{https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.0.9-preview.tgz}{\texttt{ https\+://artifactory.\+prd.\+cds.\+internal.\+unity3d.\+com/artifactory/upm-\/candidates/com.\+unity.\+searcher/-\//com.\+unity.\+searcher-\/4.\+0.\+9-\/preview.\+tgz}}
+
+
+\begin{DoxyItemize}
+\item Update List\+View API
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2728}{}\doxysection{\texorpdfstring{\mbox{[}4.\+0.\+8\mbox{]} -\/ 2019-\/09-\/16}{\mbox{[}4.\+0.\+8\mbox{]} -\/ 2019-\/09-\/16}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2728}
+Package\+: \href{https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.0.8-preview.tgz}{\texttt{ https\+://artifactory.\+prd.\+cds.\+internal.\+unity3d.\+com/artifactory/upm-\/candidates/com.\+unity.\+searcher/-\//com.\+unity.\+searcher-\/4.\+0.\+8-\/preview.\+tgz}}
+
+
+\begin{DoxyItemize}
+\item Made Searcher\+Item Name property virtual
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2729}{}\doxysection{\texorpdfstring{\mbox{[}4.\+0.\+7\mbox{]} -\/ 2019-\/08-\/29}{\mbox{[}4.\+0.\+7\mbox{]} -\/ 2019-\/08-\/29}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2729}
+Package\+: \href{https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.0.7-preview.tgz}{\texttt{ https\+://artifactory.\+prd.\+cds.\+internal.\+unity3d.\+com/artifactory/upm-\/candidates/com.\+unity.\+searcher/-\//com.\+unity.\+searcher-\/4.\+0.\+7-\/preview.\+tgz}}
+
+
+\begin{DoxyItemize}
+\item Fix bold fonts (case 1178374)
+\item case 1178373 and 1071573014\+: minor examples tweaks
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2730}{}\doxysection{\texorpdfstring{\mbox{[}4.\+0.\+6\mbox{]} -\/ 2019-\/08-\/01}{\mbox{[}4.\+0.\+6\mbox{]} -\/ 2019-\/08-\/01}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2730}
+Package\+: \href{https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.0.6-preview.tgz}{\texttt{ https\+://artifactory.\+prd.\+cds.\+internal.\+unity3d.\+com/artifactory/upm-\/candidates/com.\+unity.\+searcher/-\//com.\+unity.\+searcher-\/4.\+0.\+6-\/preview.\+tgz}}
+
+
+\begin{DoxyItemize}
+\item Fix bug where items were selected twice when using keyboard inputs
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2731}{}\doxysection{\texorpdfstring{\mbox{[}4.\+0.\+5\mbox{]} -\/ 2019-\/07-\/26}{\mbox{[}4.\+0.\+5\mbox{]} -\/ 2019-\/07-\/26}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2731}
+Package\+: \href{https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.0.5-preview.tgz}{\texttt{ https\+://artifactory.\+prd.\+cds.\+internal.\+unity3d.\+com/artifactory/upm-\/candidates/com.\+unity.\+searcher/-\//com.\+unity.\+searcher-\/4.\+0.\+5-\/preview.\+tgz}}
+
+
+\begin{DoxyItemize}
+\item Fix searcher look to match Northstar changes
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2732}{}\doxysection{\texorpdfstring{\mbox{[}4.\+0.\+4\mbox{]} -\/ 2019-\/07-\/23}{\mbox{[}4.\+0.\+4\mbox{]} -\/ 2019-\/07-\/23}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2732}
+Package\+: \href{https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.0.4-preview.tgz}{\texttt{ https\+://artifactory.\+prd.\+cds.\+internal.\+unity3d.\+com/artifactory/upm-\/candidates/com.\+unity.\+searcher/-\//com.\+unity.\+searcher-\/4.\+0.\+4-\/preview.\+tgz}}
+
+
+\begin{DoxyItemize}
+\item Change the default size when the searcher has a details panel
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2733}{}\doxysection{\texorpdfstring{\mbox{[}4.\+0.\+3\mbox{]} -\/ 2019-\/06-\/11}{\mbox{[}4.\+0.\+3\mbox{]} -\/ 2019-\/06-\/11}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2733}
+Package\+: \href{https://artifactory.prd.cds.internal.unity3d.com/artifactory/upm-candidates/com.unity.searcher/-/com.unity.searcher-4.0.3-preview.tgz}{\texttt{ https\+://artifactory.\+prd.\+cds.\+internal.\+unity3d.\+com/artifactory/upm-\/candidates/com.\+unity.\+searcher/-\//com.\+unity.\+searcher-\/4.\+0.\+3-\/preview.\+tgz}}
+
+
+\begin{DoxyItemize}
+\item Added ability to use capital letters in a search bar
+\item Bugfix\+: Search bar focus after the escape button pressed
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2734}{}\doxysection{\texorpdfstring{\mbox{[}4.\+0.\+2\mbox{]} -\/ 2019-\/05-\/24}{\mbox{[}4.\+0.\+2\mbox{]} -\/ 2019-\/05-\/24}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2734}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/4.0.2-preview}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/4.\+0.\+2-\/preview}}
+
+
+\begin{DoxyItemize}
+\item API Make Match() virtual again in Searcher\+Database
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2735}{}\doxysection{\texorpdfstring{\mbox{[}4.\+0.\+1\mbox{]} -\/ 2019-\/04-\/30}{\mbox{[}4.\+0.\+1\mbox{]} -\/ 2019-\/04-\/30}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2735}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/4.0.1-preview}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/4.\+0.\+1-\/preview}}
+
+
+\begin{DoxyItemize}
+\item Bugfix\+: \mbox{[}Mac\+Os\mbox{]} Fix issue where the searcher moves on the top left corner while resizing/moving
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2736}{}\doxysection{\texorpdfstring{\mbox{[}4.\+0.\+0\mbox{]} -\/ 2019-\/04-\/24}{\mbox{[}4.\+0.\+0\mbox{]} -\/ 2019-\/04-\/24}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2736}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/4.0.0-preview}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/4.\+0.\+0-\/preview}}
+
+
+\begin{DoxyItemize}
+\item Cleanup for promotion to production
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2737}{}\doxysection{\texorpdfstring{\mbox{[}3.\+0.\+12\mbox{]} -\/ 2019-\/04-\/17}{\mbox{[}3.\+0.\+12\mbox{]} -\/ 2019-\/04-\/17}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2737}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.12}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/3.\+0.\+12}}
+
+
+\begin{DoxyItemize}
+\item API\+: Make Searcher\+Field public again
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2738}{}\doxysection{\texorpdfstring{\mbox{[}3.\+0.\+11\mbox{]} -\/ 2019-\/04-\/15}{\mbox{[}3.\+0.\+11\mbox{]} -\/ 2019-\/04-\/15}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2738}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.11}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/3.\+0.\+11}}
+
+
+\begin{DoxyItemize}
+\item Fix all issues flagged by Re\+Sharper
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2739}{}\doxysection{\texorpdfstring{\mbox{[}3.\+0.\+10\mbox{]} -\/ 2019-\/03-\/26}{\mbox{[}3.\+0.\+10\mbox{]} -\/ 2019-\/03-\/26}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2739}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.10}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/3.\+0.\+10}}
+
+
+\begin{DoxyItemize}
+\item fix CI
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2740}{}\doxysection{\texorpdfstring{\mbox{[}3.\+0.\+9\mbox{]} -\/ 2019-\/03-\/24}{\mbox{[}3.\+0.\+9\mbox{]} -\/ 2019-\/03-\/24}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2740}
+Package\+: none
+
+
+\begin{DoxyItemize}
+\item Add Yamato CI config
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2741}{}\doxysection{\texorpdfstring{\mbox{[}3.\+0.\+8\mbox{]} -\/ 2019-\/03-\/24}{\mbox{[}3.\+0.\+8\mbox{]} -\/ 2019-\/03-\/24}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2741}
+Package\+: none
+
+
+\begin{DoxyItemize}
+\item Bugfix\+: Autocomplete text was misaligned.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2742}{}\doxysection{\texorpdfstring{\mbox{[}3.\+0.\+7\mbox{]} -\/ 2019-\/02-\/28}{\mbox{[}3.\+0.\+7\mbox{]} -\/ 2019-\/02-\/28}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2742}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.7}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/3.\+0.\+7}}
+
+
+\begin{DoxyItemize}
+\item API\+: Remove Experimental API reference.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2743}{}\doxysection{\texorpdfstring{\mbox{[}3.\+0.\+6\mbox{]} -\/ 2019-\/09-\/27}{\mbox{[}3.\+0.\+6\mbox{]} -\/ 2019-\/09-\/27}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2743}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.6}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/3.\+0.\+6}}
+
+
+\begin{DoxyItemize}
+\item UI\+: Restyling
+\item API\+: Add public ctor to Searcher\+Database
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2744}{}\doxysection{\texorpdfstring{\mbox{[}3.\+0.\+5\mbox{]} -\/ 2018-\/12-\/18}{\mbox{[}3.\+0.\+5\mbox{]} -\/ 2018-\/12-\/18}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2744}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.5}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/3.\+0.\+5}}
+
+
+\begin{DoxyItemize}
+\item Bugfix\+: Focus search text field when window is displayed
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2745}{}\doxysection{\texorpdfstring{\mbox{[}3.\+0.\+4\mbox{]} -\/ 2018-\/11-\/30}{\mbox{[}3.\+0.\+4\mbox{]} -\/ 2018-\/11-\/30}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2745}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.4}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/3.\+0.\+4}}
+
+
+\begin{DoxyItemize}
+\item Trigger callback when an item is selected instead of when the details panel is displayed
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2746}{}\doxysection{\texorpdfstring{\mbox{[}3.\+0.\+3\mbox{]} -\/ 2018-\/11-\/28}{\mbox{[}3.\+0.\+3\mbox{]} -\/ 2018-\/11-\/28}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2746}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.3}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/3.\+0.\+3}}
+
+
+\begin{DoxyItemize}
+\item Add alignments
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2747}{}\doxysection{\texorpdfstring{\mbox{[}3.\+0.\+2\mbox{]} -\/ 2018-\/11-\/22}{\mbox{[}3.\+0.\+2\mbox{]} -\/ 2018-\/11-\/22}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2747}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.2}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/3.\+0.\+2}}
+
+
+\begin{DoxyItemize}
+\item Bugfix\+: Searcher autocomplete label now bold to match text input style
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2748}{}\doxysection{\texorpdfstring{\mbox{[}3.\+0.\+1\mbox{]} -\/ 2018-\/11-\/20}{\mbox{[}3.\+0.\+1\mbox{]} -\/ 2018-\/11-\/20}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2748}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.1}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/3.\+0.\+1}}
+
+
+\begin{DoxyItemize}
+\item Bugfix
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2749}{}\doxysection{\texorpdfstring{\mbox{[}3.\+0.\+0\mbox{]} -\/ 2018-\/11-\/20}{\mbox{[}3.\+0.\+0\mbox{]} -\/ 2018-\/11-\/20}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2749}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/3.0.0}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/3.\+0.\+0}}
+
+
+\begin{DoxyItemize}
+\item Restyling and move + resize
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2750}{}\doxysection{\texorpdfstring{\mbox{[}2.\+1.\+1\mbox{]} -\/ 2018-\/11-\/12}{\mbox{[}2.\+1.\+1\mbox{]} -\/ 2018-\/11-\/12}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2750}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/2.1.1}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/2.\+1.\+1}}
+
+
+\begin{DoxyItemize}
+\item Fix text input filtering
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2751}{}\doxysection{\texorpdfstring{\mbox{[}2.\+1.\+0\mbox{]} -\/ 2018-\/11-\/05}{\mbox{[}2.\+1.\+0\mbox{]} -\/ 2018-\/11-\/05}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2751}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/2.1.0}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/2.\+1.\+0}}
+
+
+\begin{DoxyItemize}
+\item UIElements compatibility update
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2752}{}\doxysection{\texorpdfstring{\mbox{[}2.\+0.\+6\mbox{]} -\/ 2018-\/08-\/15}{\mbox{[}2.\+0.\+6\mbox{]} -\/ 2018-\/08-\/15}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2752}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/2.0.6-preview}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/2.\+0.\+6-\/preview}}
+
+
+\begin{DoxyItemize}
+\item Add possibility to sort items
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2753}{}\doxysection{\texorpdfstring{\mbox{[}2.\+0.\+5\mbox{]} -\/ 2018-\/08-\/15}{\mbox{[}2.\+0.\+5\mbox{]} -\/ 2018-\/08-\/15}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2753}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/2.0.5-preview}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/2.\+0.\+5-\/preview}}
+
+
+\begin{DoxyItemize}
+\item Filtering fix
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2754}{}\doxysection{\texorpdfstring{\mbox{[}2.\+0.\+4\mbox{]} -\/ 2018-\/08-\/08}{\mbox{[}2.\+0.\+4\mbox{]} -\/ 2018-\/08-\/08}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2754}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/2.0.4-preview}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/2.\+0.\+4-\/preview}}
+
+
+\begin{DoxyItemize}
+\item Added hooks for analytics
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2755}{}\doxysection{\texorpdfstring{\mbox{[}2.\+0.\+3\mbox{]} -\/ 2018-\/08-\/07}{\mbox{[}2.\+0.\+3\mbox{]} -\/ 2018-\/08-\/07}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2755}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/2.0.3-preview}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/2.\+0.\+3-\/preview}}
+
+
+\begin{DoxyItemize}
+\item The match\+Filter is now also applied at database initial setup time
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2756}{}\doxysection{\texorpdfstring{\mbox{[}2.\+0.\+2\mbox{]} -\/ 2018-\/08-\/02}{\mbox{[}2.\+0.\+2\mbox{]} -\/ 2018-\/08-\/02}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2756}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/2.0.2-preview}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/2.\+0.\+2-\/preview}}
+
+
+\begin{DoxyItemize}
+\item Added match\+Filter delegate on Searcher\+Database to further control the match criteria
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2757}{}\doxysection{\texorpdfstring{\mbox{[}2.\+0.\+1\mbox{]} -\/ 2018-\/07-\/13}{\mbox{[}2.\+0.\+1\mbox{]} -\/ 2018-\/07-\/13}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2757}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/2.0.1-preview}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/2.\+0.\+1-\/preview}}
+
+
+\begin{DoxyItemize}
+\item Fixed Exception when a whitespace query is entered
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2758}{}\doxysection{\texorpdfstring{\mbox{[}2.\+0.\+0\mbox{]} -\/ 2018-\/07-\/12}{\mbox{[}2.\+0.\+0\mbox{]} -\/ 2018-\/07-\/12}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2758}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/2.0.0-preview}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/2.\+0.\+0-\/preview}}
+
+
+\begin{DoxyItemize}
+\item Created a base class for Databases, renamed Searcher\+Database to Lucene\+Database, add a brand new Searcher\+Database written from scratch
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2759}{}\doxysection{\texorpdfstring{\mbox{[}1.\+0.\+6\mbox{]} -\/ 2018-\/06-\/21}{\mbox{[}1.\+0.\+6\mbox{]} -\/ 2018-\/06-\/21}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2759}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/1.0.6-preview}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/1.\+0.\+6-\/preview}}
+
+
+\begin{DoxyItemize}
+\item hotfix for left arrow on a child that cannot be collapsed will select the parent feature
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2760}{}\doxysection{\texorpdfstring{\mbox{[}1.\+0.\+5\mbox{]} -\/ 2018-\/06-\/21}{\mbox{[}1.\+0.\+5\mbox{]} -\/ 2018-\/06-\/21}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2760}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/1.0.5-preview}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/1.\+0.\+5-\/preview}}
+
+
+\begin{DoxyItemize}
+\item fixed an draw issue when expanding and collapsing an item on a small list -\/ issue \#25
+\item pressing left arrow on a child that cannot be collapsed will select the parent
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2761}{}\doxysection{\texorpdfstring{\mbox{[}1.\+0.\+4\mbox{]} -\/ 2018-\/05-\/16}{\mbox{[}1.\+0.\+4\mbox{]} -\/ 2018-\/05-\/16}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2761}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/1.0.4-preview}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/1.\+0.\+4-\/preview}}
+
+
+\begin{DoxyItemize}
+\item fixed compilation error with latest trunk (around styles.\+flex)
+\item added third party notices file
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2762}{}\doxysection{\texorpdfstring{\mbox{[}1.\+0.\+3\mbox{]} -\/ 2018-\/05-\/03}{\mbox{[}1.\+0.\+3\mbox{]} -\/ 2018-\/05-\/03}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2762}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/1.0.3-preview}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/1.\+0.\+3-\/preview}}
+
+
+\begin{DoxyItemize}
+\item window close due to focus loss will now trigger the selection callback with null
+\item fixed potential null ref exception in sample code
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2763}{}\doxysection{\texorpdfstring{\mbox{[}1.\+0.\+2\mbox{]} -\/ 2018-\/04-\/30}{\mbox{[}1.\+0.\+2\mbox{]} -\/ 2018-\/04-\/30}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2763}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/1.0.2-preview}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/1.\+0.\+2-\/preview}}
+
+
+\begin{DoxyItemize}
+\item removed Auto\+Completer in favor of a more robust top-\/result based approach
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2764}{}\doxysection{\texorpdfstring{\mbox{[}1.\+0.\+1\mbox{]} -\/ 2018-\/04-\/26}{\mbox{[}1.\+0.\+1\mbox{]} -\/ 2018-\/04-\/26}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2764}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/1.0.1-preview}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/1.\+0.\+1-\/preview}}
+
+
+\begin{DoxyItemize}
+\item now showing children of matching items -\/ issue \#19
+\item fixed completion scoring with multiple databases
+\item search results in general have been improved
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2765}{}\doxysection{\texorpdfstring{\mbox{[}1.\+0.\+0\mbox{]} -\/ 2018-\/04-\/25}{\mbox{[}1.\+0.\+0\mbox{]} -\/ 2018-\/04-\/25}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2765}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/1.0.0-preview}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/1.\+0.\+0-\/preview}}
+
+
+\begin{DoxyItemize}
+\item added basic tests -\/ issue \#18
+\item added a README and documentation
+\item fixed Searcher.\+Search() not returning anything if query contained capital letters -\/ issue \#22
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2766}{}\doxysection{\texorpdfstring{\mbox{[}0.\+1.\+3\mbox{]} -\/ 2018-\/04-\/23}{\mbox{[}0.\+1.\+3\mbox{]} -\/ 2018-\/04-\/23}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2766}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/0.1.3-preview}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/0.\+1.\+3-\/preview}}
+
+
+\begin{DoxyItemize}
+\item added ability to add a title to the Searcher window -\/ feature \#3
+\item removed Searcher arrow and moved default display point to top-\/right corner -\/ related issues \#2, \#12, \#16
+\item fixed lingering arrow when bring Searcher window up from Inspector -\/ issue \#2
+\item fixed Searcher\+Window.\+Show() to always take world space display location -\/ issue \#17
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2767}{}\doxysection{\texorpdfstring{\mbox{[}0.\+1.\+2\mbox{]} -\/ 2018-\/04-\/18}{\mbox{[}0.\+1.\+2\mbox{]} -\/ 2018-\/04-\/18}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2767}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/0.1.2-experimental}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/0.\+1.\+2-\/experimental}}
+
+
+\begin{DoxyItemize}
+\item fixed Searcher\textquotesingle{}s list is visually cut off when closing a parent Searcher\+Item -\/ issue \#9
+\item scroll to selected item/best result
+\item add parents field, do not autocomplete it, search using a multi phrase query, auto create the parents path in overwrite\+Path()
+\item fixed window arrow being removed AFTER the target window repaint, leaving remnant arrwos sometimes -\/ issue \#6
+\item fixed Null Ref Exception when getting the selected item of an empty listview. only get it if relevant
+\item fixed bug where child was not under parent in Searcher
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2768}{}\doxysection{\texorpdfstring{\mbox{[}0.\+1.\+1\mbox{]} -\/ 2018-\/03-\/21}{\mbox{[}0.\+1.\+1\mbox{]} -\/ 2018-\/03-\/21}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2768}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/0.1.1-experimental}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/0.\+1.\+1-\/experimental}}
+
+
+\begin{DoxyItemize}
+\item Minor fixes for Visual\+Scripting
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2769}{}\doxysection{\texorpdfstring{\mbox{[}0.\+1.\+0\mbox{]} -\/ 2018-\/03-\/05}{\mbox{[}0.\+1.\+0\mbox{]} -\/ 2018-\/03-\/05}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2769}
+Package\+: \href{https://bintray.com/unity/unity-staging/com.unity.searcher/0.1.0-experimental}{\texttt{ https\+://bintray.\+com/unity/unity-\/staging/com.\+unity.\+searcher/0.\+1.\+0-\/experimental}}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2770}{}\doxysubsection{\texorpdfstring{This is the first release of {\itshape Unity Package Searcher}.}{This is the first release of {\itshape Unity Package Searcher}.}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8searcher_0d4_89_82_2_c_h_a_n_g_e_l_o_g_autotoc_md2770}
+General search window for use in the Editor. First target use is for Graph\+View node search. 

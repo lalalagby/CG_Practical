@@ -1,0 +1,231 @@
+\doxysection{Cinemachine.\+Cinemachine\+Confiner Class Reference}
+\hypertarget{class_cinemachine_1_1_cinemachine_confiner}{}\label{class_cinemachine_1_1_cinemachine_confiner}\index{Cinemachine.CinemachineConfiner@{Cinemachine.CinemachineConfiner}}
+
+
+An add-\/on module for \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera that post-\/processes the final position of the virtual camera. It will confine the virtual camera\textquotesingle{}s position to the volume specified in the Bounding Volume field.  
+
+
+Inheritance diagram for Cinemachine.\+Cinemachine\+Confiner\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_cinemachine_1_1_cinemachine_confiner}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_confiner_a8b3907c9a1b1ac296e0f9c28cc2ddfd8}{Mode}} \{ \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_confiner_a8b3907c9a1b1ac296e0f9c28cc2ddfd8a9c70dc056290434823ebbf38e53f34fa}{Confine2D}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_confiner_a8b3907c9a1b1ac296e0f9c28cc2ddfd8a84ac289df3e8a501acb3962f274d938f}{Confine3D}}
+ \}
+\begin{DoxyCompactList}\small\item\em The confiner can operate using a 2D bounding shape or a 3D bounding volume. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_confiner_a0d585d5313cf676a86daa84a345f8bd6}{Camera\+Was\+Displaced}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} vcam)
+\begin{DoxyCompactList}\small\item\em See whether the virtual camera has been moved by the confiner. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_confiner_a2912dcfb30493ee5222ab628f819f1af}{Get\+Camera\+Displacement\+Distance}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} vcam)
+\begin{DoxyCompactList}\small\item\em See how far virtual camera has been moved by the confiner. \end{DoxyCompactList}\item 
+override float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_confiner_aeccf0ee2b005df3337319338fd43b755}{Get\+Max\+Damp\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Report maximum damping time needed for this component. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_confiner_a2b3cc840d038253b62e12114aa3ad7d2}\label{class_cinemachine_1_1_cinemachine_confiner_a2b3cc840d038253b62e12114aa3ad7d2} 
+void {\bfseries Invalidate\+Path\+Cache} ()
+\begin{DoxyCompactList}\small\item\em Call this if the bounding shape\textquotesingle{}s points change at runtime. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension}{Cinemachine.\+Cinemachine\+Extension}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_ab1cc3fb8f3edbcb9eb6a4aa96f998170}{Pre\+Pipeline\+Mutate\+Camera\+State\+Callback}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} vcam, ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} cur\+State, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Override this to do such things as offset the Referece\+Look\+At. Base class implementation does nothing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_ac896b83e871cb82b7a9669d07ac23f0d}{Invoke\+Post\+Pipeline\+Stage\+Callback}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} vcam, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}} stage, ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} state, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Legacy support. This is only here to avoid changing the API to make \doxylink{class_cinemachine_1_1_cinemachine_extension_a29d31e35cf1e1fee15d923eed7eeda43}{Post\+Pipeline\+Stage\+Callback()} public. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_ae0ca22a4b7cc143ac024ce70b196ef36}{On\+Target\+Object\+Warped}} (Transform target, Vector3 position\+Delta)
+\begin{DoxyCompactList}\small\item\em This is called to notify the extension that a target got warped, so that the extension can update its internal state to make the camera also warp seamlessy. Base class implementation does nothing. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_abfa0892159a67a17019163eca0802d1f}{Force\+Camera\+Position}} (Vector3 pos, Quaternion rot)
+\begin{DoxyCompactList}\small\item\em Force the virtual camera to assume a given position and orientation. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a6ff5692b6c0348f319da017ee4573594}{On\+Transition\+From\+Camera}} (\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} from\+Cam, Vector3 world\+Up, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Notification that this virtual camera is going live. Base class implementation must be called by any overridden method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_confiner_ac2ac5987d5a30a803235b54e9b89c722}\label{class_cinemachine_1_1_cinemachine_confiner_ac2ac5987d5a30a803235b54e9b89c722} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_confiner_a8b3907c9a1b1ac296e0f9c28cc2ddfd8}{Mode}} {\bfseries m\+\_\+\+Confine\+Mode}
+\begin{DoxyCompactList}\small\item\em The confiner can operate using a 2D bounding shape or a 3D bounding volume. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_confiner_a23a0b976deb919dc6542c730d0dde377}\label{class_cinemachine_1_1_cinemachine_confiner_a23a0b976deb919dc6542c730d0dde377} 
+Collider {\bfseries m\+\_\+\+Bounding\+Volume}
+\begin{DoxyCompactList}\small\item\em The volume within which the camera is to be contained. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_confiner_a334ba008b6c8551395d06446c6c1081d}\label{class_cinemachine_1_1_cinemachine_confiner_a334ba008b6c8551395d06446c6c1081d} 
+Collider2D {\bfseries m\+\_\+\+Bounding\+Shape2D}
+\begin{DoxyCompactList}\small\item\em The 2D shape within which the camera is to be contained. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_confiner_a0f9906f404a32beb5ace19a7a25c04c3}\label{class_cinemachine_1_1_cinemachine_confiner_a0f9906f404a32beb5ace19a7a25c04c3} 
+bool {\bfseries m\+\_\+\+Confine\+Screen\+Edges} = true
+\begin{DoxyCompactList}\small\item\em If camera is orthographic, screen edges will be confined to the volume. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_confiner_ad21342f5b043034921bf15ab76ec721e}\label{class_cinemachine_1_1_cinemachine_confiner_ad21342f5b043034921bf15ab76ec721e} 
+float {\bfseries m\+\_\+\+Damping} = 0
+\begin{DoxyCompactList}\small\item\em How gradually to return the camera to the bounding volume if it goes beyond the borders. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_confiner_a827cf64b40400f0f925e09630f1f3d2d}{Connect\+To\+Vcam}} (bool connect)
+\begin{DoxyCompactList}\small\item\em Called when connecting to a virtual camera. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_confiner_ad2373a23f9677db8052f165988c3305a}{Post\+Pipeline\+Stage\+Callback}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} vcam, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}} stage, ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} state, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Callback to do the camera confining. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension}{Cinemachine.\+Cinemachine\+Extension}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Awake} ()
+\begin{DoxyCompactList}\small\item\em Connect to virtual camera pipeline. Override implementations must call this base implementation. \end{DoxyCompactList}\item 
+virtual void {\bfseries On\+Enable} ()
+\begin{DoxyCompactList}\small\item\em Does nothing. It\textquotesingle{}s here for the little checkbox in the inspector. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_adf1df72db4c68b49f91c2685470b80ef}{On\+Destroy}} ()
+\begin{DoxyCompactList}\small\item\em Disconnect from virtual camera pipeline. Override implementations must call this base implementation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a29d31e35cf1e1fee15d923eed7eeda43}{Post\+Pipeline\+Stage\+Callback}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} vcam, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}} stage, ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} state, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em This callback will be called after the virtual camera has implemented each stage in the pipeline. This method may modify the referenced state. If delta\+Time less than 0, reset all state info and perform no damping. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_abfd25e075e45a038b59e17ac7b55dc02}{Get\+Extra\+State$<$ T $>$}} (\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} vcam)
+\begin{DoxyCompactList}\small\item\em Because extensions can be placed on manager cams and will in that case be called for all the vcam children, vcam-\/specific state information should be stored here. Just define a class to hold your state info and use it exclusively when calling this. \end{DoxyCompactList}\item 
+List$<$ T $>$ \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a97f9c52f94e138ecefda901f891b0966}{Get\+All\+Extra\+States$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em Inefficient method to get all extra state info for all vcams. Intended for \doxylink{namespace_cinemachine_1_1_editor}{Editor} use only, not runtime! \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_confiner_a1eb45d13487992eb89868b806a54a878}\label{class_cinemachine_1_1_cinemachine_confiner_a1eb45d13487992eb89868b806a54a878} 
+bool {\bfseries Is\+Valid}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Check if the bounding volume is defined. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension}{Cinemachine.\+Cinemachine\+Extension}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} {\bfseries Virtual\+Camera}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{class_cinemachine_1_1_cinemachine_virtual_camera}{Cinemachine\+Virtual\+Camera} to which this extension is attached. \end{DoxyCompactList}\item 
+virtual bool {\bfseries Requires\+User\+Input}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extensions that require user input should implement this and return true. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension}{Cinemachine.\+Cinemachine\+Extension}}}
+\begin{DoxyCompactItemize}
+\item 
+const float {\bfseries Epsilon} = Utility.\+Unity\+Vector\+Extensions.\+Epsilon
+\begin{DoxyCompactList}\small\item\em Useful constant for very small floats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An add-\/on module for \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera that post-\/processes the final position of the virtual camera. It will confine the virtual camera\textquotesingle{}s position to the volume specified in the Bounding Volume field. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_confiner_a8b3907c9a1b1ac296e0f9c28cc2ddfd8}\index{Cinemachine.CinemachineConfiner@{Cinemachine.CinemachineConfiner}!Mode@{Mode}}
+\index{Mode@{Mode}!Cinemachine.CinemachineConfiner@{Cinemachine.CinemachineConfiner}}
+\doxysubsubsection{\texorpdfstring{Mode}{Mode}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_confiner_a8b3907c9a1b1ac296e0f9c28cc2ddfd8} 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_confiner_a8b3907c9a1b1ac296e0f9c28cc2ddfd8}{Cinemachine.\+Cinemachine\+Confiner.\+Mode}}}
+
+
+
+The confiner can operate using a 2D bounding shape or a 3D bounding volume. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Confine2D@{Confine2D}!Cinemachine.CinemachineConfiner@{Cinemachine.CinemachineConfiner}}\index{Cinemachine.CinemachineConfiner@{Cinemachine.CinemachineConfiner}!Confine2D@{Confine2D}}}\Hypertarget{class_cinemachine_1_1_cinemachine_confiner_a8b3907c9a1b1ac296e0f9c28cc2ddfd8a9c70dc056290434823ebbf38e53f34fa}\label{class_cinemachine_1_1_cinemachine_confiner_a8b3907c9a1b1ac296e0f9c28cc2ddfd8} 
+Confine2D&Use a 2D bounding shape, suitable for an orthographic camera. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Confine3D@{Confine3D}!Cinemachine.CinemachineConfiner@{Cinemachine.CinemachineConfiner}}\index{Cinemachine.CinemachineConfiner@{Cinemachine.CinemachineConfiner}!Confine3D@{Confine3D}}}\Hypertarget{class_cinemachine_1_1_cinemachine_confiner_a8b3907c9a1b1ac296e0f9c28cc2ddfd8a84ac289df3e8a501acb3962f274d938f}\label{class_cinemachine_1_1_cinemachine_confiner_a8b3907c9a1b1ac296e0f9c28cc2ddfd8} 
+Confine3D&Use a 3D bounding shape, suitable for perspective cameras. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_confiner_a0d585d5313cf676a86daa84a345f8bd6}\index{Cinemachine.CinemachineConfiner@{Cinemachine.CinemachineConfiner}!CameraWasDisplaced@{CameraWasDisplaced}}
+\index{CameraWasDisplaced@{CameraWasDisplaced}!Cinemachine.CinemachineConfiner@{Cinemachine.CinemachineConfiner}}
+\doxysubsubsection{\texorpdfstring{CameraWasDisplaced()}{CameraWasDisplaced()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_confiner_a0d585d5313cf676a86daa84a345f8bd6} 
+bool Cinemachine.\+Cinemachine\+Confiner.\+Camera\+Was\+Displaced (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}}}]{vcam}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+See whether the virtual camera has been moved by the confiner. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vcam} & The virtual camera in question. This might be different from the virtual camera that owns the confiner, in the event that the camera has children\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the virtual camera has been repositioned
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_confiner_a827cf64b40400f0f925e09630f1f3d2d}\index{Cinemachine.CinemachineConfiner@{Cinemachine.CinemachineConfiner}!ConnectToVcam@{ConnectToVcam}}
+\index{ConnectToVcam@{ConnectToVcam}!Cinemachine.CinemachineConfiner@{Cinemachine.CinemachineConfiner}}
+\doxysubsubsection{\texorpdfstring{ConnectToVcam()}{ConnectToVcam()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_confiner_a827cf64b40400f0f925e09630f1f3d2d} 
+override void Cinemachine.\+Cinemachine\+Confiner.\+Connect\+To\+Vcam (\begin{DoxyParamCaption}\item[{bool}]{connect}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called when connecting to a virtual camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connect} & True if connecting, false if disconnecting\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a65b00ddb064ec30c6e8a53082868befe}{Cinemachine.\+Cinemachine\+Extension}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_confiner_a2912dcfb30493ee5222ab628f819f1af}\index{Cinemachine.CinemachineConfiner@{Cinemachine.CinemachineConfiner}!GetCameraDisplacementDistance@{GetCameraDisplacementDistance}}
+\index{GetCameraDisplacementDistance@{GetCameraDisplacementDistance}!Cinemachine.CinemachineConfiner@{Cinemachine.CinemachineConfiner}}
+\doxysubsubsection{\texorpdfstring{GetCameraDisplacementDistance()}{GetCameraDisplacementDistance()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_confiner_a2912dcfb30493ee5222ab628f819f1af} 
+float Cinemachine.\+Cinemachine\+Confiner.\+Get\+Camera\+Displacement\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}}}]{vcam}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+See how far virtual camera has been moved by the confiner. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vcam} & The virtual camera in question. This might be different from the virtual camera that owns the confiner, in the event that the camera has children\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the virtual camera has been repositioned
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_cinemachine_confiner_aeccf0ee2b005df3337319338fd43b755}\index{Cinemachine.CinemachineConfiner@{Cinemachine.CinemachineConfiner}!GetMaxDampTime@{GetMaxDampTime}}
+\index{GetMaxDampTime@{GetMaxDampTime}!Cinemachine.CinemachineConfiner@{Cinemachine.CinemachineConfiner}}
+\doxysubsubsection{\texorpdfstring{GetMaxDampTime()}{GetMaxDampTime()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_confiner_aeccf0ee2b005df3337319338fd43b755} 
+override float Cinemachine.\+Cinemachine\+Confiner.\+Get\+Max\+Damp\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Report maximum damping time needed for this component. 
+
+\begin{DoxyReturn}{Returns}
+Highest damping setting in this component
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a539ec5013baf5d36cfd2bc98ae7a3248}{Cinemachine.\+Cinemachine\+Extension}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_confiner_ad2373a23f9677db8052f165988c3305a}\index{Cinemachine.CinemachineConfiner@{Cinemachine.CinemachineConfiner}!PostPipelineStageCallback@{PostPipelineStageCallback}}
+\index{PostPipelineStageCallback@{PostPipelineStageCallback}!Cinemachine.CinemachineConfiner@{Cinemachine.CinemachineConfiner}}
+\doxysubsubsection{\texorpdfstring{PostPipelineStageCallback()}{PostPipelineStageCallback()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_confiner_ad2373a23f9677db8052f165988c3305a} 
+override void Cinemachine.\+Cinemachine\+Confiner.\+Post\+Pipeline\+Stage\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}}}]{vcam}{, }\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}}}]{stage}{, }\item[{ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}}}]{state}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Callback to do the camera confining. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vcam} & The virtual camera being processed\\
+\hline
+{\em stage} & The current pipeline stage\\
+\hline
+{\em state} & The current virtual camera state\\
+\hline
+{\em delta\+Time} & The current applicable delta\+Time\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Behaviours/Cinemachine\+Confiner.\+cs\end{DoxyCompactItemize}

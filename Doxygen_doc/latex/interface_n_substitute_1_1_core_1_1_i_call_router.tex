@@ -1,0 +1,59 @@
+\doxysection{NSubstitute.\+Core.\+ICall\+Router Interface Reference}
+\hypertarget{interface_n_substitute_1_1_core_1_1_i_call_router}{}\label{interface_n_substitute_1_1_core_1_1_i_call_router}\index{NSubstitute.Core.ICallRouter@{NSubstitute.Core.ICallRouter}}
+Inheritance diagram for NSubstitute.\+Core.\+ICall\+Router\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_n_substitute_1_1_core_1_1_i_call_router}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{interface_n_substitute_1_1_core_1_1_i_call_router_a72996e489ac9fea465bd45704c182811}\label{interface_n_substitute_1_1_core_1_1_i_call_router_a72996e489ac9fea465bd45704c182811} 
+\mbox{\hyperlink{class_n_substitute_1_1_core_1_1_configured_call}{Configured\+Call}} {\bfseries Last\+Call\+Should\+Return} (\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_return}{IReturn}} return\+Value, \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_match_args}{Match\+Args}} match\+Args, \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_pending_specification_info}{Pending\+Specification\+Info}} pending\+Spec\+Info)
+\item 
+\Hypertarget{interface_n_substitute_1_1_core_1_1_i_call_router_a8680eef02793192eac201811138e7ecc}\label{interface_n_substitute_1_1_core_1_1_i_call_router_a8680eef02793192eac201811138e7ecc} 
+object? {\bfseries Route} (\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call}{ICall}} call)
+\item 
+\Hypertarget{interface_n_substitute_1_1_core_1_1_i_call_router_a392cedcbe0da6c803188523fbf45ed82}\label{interface_n_substitute_1_1_core_1_1_i_call_router_a392cedcbe0da6c803188523fbf45ed82} 
+IEnumerable$<$ \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call}{ICall}} $>$ {\bfseries Received\+Calls} ()
+\item 
+\Hypertarget{interface_n_substitute_1_1_core_1_1_i_call_router_a5583abe12b679e9bf5864c274e813f7b}\label{interface_n_substitute_1_1_core_1_1_i_call_router_a5583abe12b679e9bf5864c274e813f7b} 
+void {\bfseries Set\+Route} (Func$<$ \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_substitute_state}{ISubstitute\+State}}, \mbox{\hyperlink{interface_n_substitute_1_1_routing_1_1_i_route}{IRoute}} $>$ get\+Route)
+\item 
+\Hypertarget{interface_n_substitute_1_1_core_1_1_i_call_router_ae3b839e44f0f28b9ea6c3d92095a7de5}\label{interface_n_substitute_1_1_core_1_1_i_call_router_ae3b839e44f0f28b9ea6c3d92095a7de5} 
+void {\bfseries Set\+Return\+For\+Type} (Type type, \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_return}{IReturn}} return\+Value)
+\item 
+\Hypertarget{interface_n_substitute_1_1_core_1_1_i_call_router_a2912494c8586e07a6dbc706460f21bd9}\label{interface_n_substitute_1_1_core_1_1_i_call_router_a2912494c8586e07a6dbc706460f21bd9} 
+void {\bfseries Register\+Custom\+Call\+Handler\+Factory} (\mbox{\hyperlink{namespace_n_substitute_1_1_core_a9dbcacc890ecbaa5326a95627e79b91a}{Call\+Handler\+Factory}} factory)
+\item 
+\Hypertarget{interface_n_substitute_1_1_core_1_1_i_call_router_adaf86452ee65d79646dde0c74c386747}\label{interface_n_substitute_1_1_core_1_1_i_call_router_adaf86452ee65d79646dde0c74c386747} 
+void {\bfseries Clear} (\mbox{\hyperlink{namespace_n_substitute_aa6bb0fd9a1053ee2be4b66596c296e4d}{Clear\+Options}} clear)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_router_aab9f8ed34f0841e13fd75db1a4bf62fc}{Call\+Base\+By\+Default}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies whether base method should be called by default. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{interface_n_substitute_1_1_core_1_1_i_call_router_aab9f8ed34f0841e13fd75db1a4bf62fc}\index{NSubstitute.Core.ICallRouter@{NSubstitute.Core.ICallRouter}!CallBaseByDefault@{CallBaseByDefault}}
+\index{CallBaseByDefault@{CallBaseByDefault}!NSubstitute.Core.ICallRouter@{NSubstitute.Core.ICallRouter}}
+\doxysubsubsection{\texorpdfstring{CallBaseByDefault}{CallBaseByDefault}}
+{\footnotesize\ttfamily \label{interface_n_substitute_1_1_core_1_1_i_call_router_aab9f8ed34f0841e13fd75db1a4bf62fc} 
+bool NSubstitute.\+Core.\+ICall\+Router.\+Call\+Base\+By\+Default\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Specifies whether base method should be called by default. 
+
+This configuration is considered only when base method exists (e.\+g. you created a substitute for the Abstract\+Type with method implementation). 
+
+Implemented in \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_call_router_a6d1e370807c9a05655d98727dcbbe293}{NSubstitute.\+Core.\+Call\+Router}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/net.\+tnrd.\+nsubstitute@449712b25a/\+Runtime/\+Core/ICall\+Router.\+cs\end{DoxyCompactItemize}

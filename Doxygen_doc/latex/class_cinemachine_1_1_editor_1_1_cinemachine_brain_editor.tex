@@ -1,0 +1,127 @@
+\doxysection{Cinemachine.\+Editor.\+Cinemachine\+Brain\+Editor Class Reference}
+\hypertarget{class_cinemachine_1_1_editor_1_1_cinemachine_brain_editor}{}\label{class_cinemachine_1_1_editor_1_1_cinemachine_brain_editor}\index{Cinemachine.Editor.CinemachineBrainEditor@{Cinemachine.Editor.CinemachineBrainEditor}}
+
+
+Inspector for \doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain}.  
+
+
+Inheritance diagram for Cinemachine.\+Editor.\+Cinemachine\+Brain\+Editor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cinemachine_1_1_editor_1_1_cinemachine_brain_editor}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_editor_1_1_cinemachine_brain_editor_a141252aa7283e0efae0db68229e81b39}\label{class_cinemachine_1_1_editor_1_1_cinemachine_brain_editor_a141252aa7283e0efae0db68229e81b39} 
+override void {\bfseries On\+Inspector\+GUI} ()
+\begin{DoxyCompactList}\small\item\em Create the contents of the inspector panel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_base_editor}{Cinemachine.\+Editor.\+Base\+Editor$<$ Cinemachine\+Brain $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+override void {\bfseries On\+Inspector\+GUI} ()
+\begin{DoxyCompactList}\small\item\em Draw the inspector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_cinemachine_brain_editor_a2e308f62653f50fd995b348e302738d3}{Draw\+Virtual\+Camera\+Base\+Gizmos}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} vcam, Gizmo\+Type selection\+Type)
+\begin{DoxyCompactList}\small\item\em Draw the gizmo for a virtual camera in the scene view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override List$<$ string $>$ \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_cinemachine_brain_editor_ae2893f6a47753214ca7f2cc9b424bc23}{Get\+Excluded\+Properties\+In\+Inspector}} ()
+\begin{DoxyCompactList}\small\item\em Obsolete, do not use. Use the overload, which is more performant. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_cinemachine_brain_editor_aa4c69bad9a2467bcdeeb422f13bfed1e}{Get\+Excluded\+Properties\+In\+Inspector}} (List$<$ string $>$ excluded)
+\begin{DoxyCompactList}\small\item\em Get the property names to exclude in the inspector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_base_editor}{Cinemachine.\+Editor.\+Base\+Editor$<$ Cinemachine\+Brain $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+Serialized\+Property \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_base_editor_a815c2a2ce15cd0f6bdc7c72b5a7d773f}{Find\+And\+Exclude\+Property$<$ TValue $>$}} (Expression$<$ Func$<$ T, TValue $>$ $>$ expr)
+\begin{DoxyCompactList}\small\item\em Return the Serialized property for a field, and exclude it from being automatically displayed in the inspector. Call this when you need to provide a custom UX for a field. \end{DoxyCompactList}\item 
+Serialized\+Property \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_base_editor_ad714695db8f6877d955d6d8be515d9b7}{Find\+Property$<$ TValue $>$}} (Expression$<$ Func$<$ T, TValue $>$ $>$ expr)
+\begin{DoxyCompactList}\small\item\em Return the Serialized property for a field. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_base_editor_a24720f002b1f365ac2d611492666273c}{Field\+Path$<$ TValue $>$}} (Expression$<$ Func$<$ T, TValue $>$ $>$ expr)
+\begin{DoxyCompactList}\small\item\em Magic code to get the string name of a field. Will not build if the field name changes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_base_editor_aea8a1818a5621939e50af2981e47b6bf}{Exclude\+Property}} (string property\+Name)
+\begin{DoxyCompactList}\small\item\em Exclude a property from automatic inclusion in the inspector when \doxylink{class_cinemachine_1_1_editor_1_1_base_editor_ae45eba4abc3ab2b46747ae063e07f331}{Draw\+Remaining\+Properties\+In\+Inspector()} is called. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_base_editor_a8f039432e51ba818fddad6889b9519e3}{Is\+Property\+Excluded}} (string property\+Name)
+\begin{DoxyCompactList}\small\item\em Check whenther a property is in the excluded list. \end{DoxyCompactList}\item 
+virtual void {\bfseries Begin\+Inspector} ()
+\begin{DoxyCompactList}\small\item\em Clients should call this at the start of On\+Inspector\+GUI. ~\newline
+ Updates the serialized object and Sets up for excluded properties. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_base_editor_a49345cd32c260f8077abe5848642b843}{Draw\+Property\+In\+Inspector}} (Serialized\+Property p)
+\begin{DoxyCompactList}\small\item\em Draw a property in the inspector, if it is not excluded. ~\newline
+ Property is marked as drawn, so will not be drawn again by \doxylink{class_cinemachine_1_1_editor_1_1_base_editor_ae45eba4abc3ab2b46747ae063e07f331}{Draw\+Remaining\+Properties\+In\+Inspector()} \end{DoxyCompactList}\item 
+void {\bfseries Draw\+Remaining\+Properties\+In\+Inspector} ()
+\begin{DoxyCompactList}\small\item\em Draw all remaining unexcluded undrawn properties in the inspector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_base_editor}{Cinemachine.\+Editor.\+Base\+Editor$<$ Cinemachine\+Brain $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+T {\bfseries Target}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The target object, cast as the same class as the object being edited. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Inspector for \doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cinemachine_1_1_editor_1_1_cinemachine_brain_editor_a2e308f62653f50fd995b348e302738d3}\index{Cinemachine.Editor.CinemachineBrainEditor@{Cinemachine.Editor.CinemachineBrainEditor}!DrawVirtualCameraBaseGizmos@{DrawVirtualCameraBaseGizmos}}
+\index{DrawVirtualCameraBaseGizmos@{DrawVirtualCameraBaseGizmos}!Cinemachine.Editor.CinemachineBrainEditor@{Cinemachine.Editor.CinemachineBrainEditor}}
+\doxysubsubsection{\texorpdfstring{DrawVirtualCameraBaseGizmos()}{DrawVirtualCameraBaseGizmos()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_editor_1_1_cinemachine_brain_editor_a2e308f62653f50fd995b348e302738d3} 
+static void Cinemachine.\+Editor.\+Cinemachine\+Brain\+Editor.\+Draw\+Virtual\+Camera\+Base\+Gizmos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}}}]{vcam}{, }\item[{Gizmo\+Type}]{selection\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Draw the gizmo for a virtual camera in the scene view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vcam} & The virtual camera\\
+\hline
+{\em selection\+Type} & How the object is selected\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cinemachine_1_1_editor_1_1_cinemachine_brain_editor_ae2893f6a47753214ca7f2cc9b424bc23}\index{Cinemachine.Editor.CinemachineBrainEditor@{Cinemachine.Editor.CinemachineBrainEditor}!GetExcludedPropertiesInInspector@{GetExcludedPropertiesInInspector}}
+\index{GetExcludedPropertiesInInspector@{GetExcludedPropertiesInInspector}!Cinemachine.Editor.CinemachineBrainEditor@{Cinemachine.Editor.CinemachineBrainEditor}}
+\doxysubsubsection{\texorpdfstring{GetExcludedPropertiesInInspector()}{GetExcludedPropertiesInInspector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_editor_1_1_cinemachine_brain_editor_ae2893f6a47753214ca7f2cc9b424bc23} 
+override List$<$ string $>$ Cinemachine.\+Editor.\+Cinemachine\+Brain\+Editor.\+Get\+Excluded\+Properties\+In\+Inspector (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Obsolete, do not use. Use the overload, which is more performant. 
+
+\begin{DoxyReturn}{Returns}
+List of property names to exclude
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_base_editor_af90cf6e6744f15a306ddfe710f86aa96}{Cinemachine.\+Editor.\+Base\+Editor$<$ Cinemachine\+Brain $>$}}.
+
+\Hypertarget{class_cinemachine_1_1_editor_1_1_cinemachine_brain_editor_aa4c69bad9a2467bcdeeb422f13bfed1e}\index{Cinemachine.Editor.CinemachineBrainEditor@{Cinemachine.Editor.CinemachineBrainEditor}!GetExcludedPropertiesInInspector@{GetExcludedPropertiesInInspector}}
+\index{GetExcludedPropertiesInInspector@{GetExcludedPropertiesInInspector}!Cinemachine.Editor.CinemachineBrainEditor@{Cinemachine.Editor.CinemachineBrainEditor}}
+\doxysubsubsection{\texorpdfstring{GetExcludedPropertiesInInspector()}{GetExcludedPropertiesInInspector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_editor_1_1_cinemachine_brain_editor_aa4c69bad9a2467bcdeeb422f13bfed1e} 
+override void Cinemachine.\+Editor.\+Cinemachine\+Brain\+Editor.\+Get\+Excluded\+Properties\+In\+Inspector (\begin{DoxyParamCaption}\item[{List$<$ string $>$}]{excluded}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Get the property names to exclude in the inspector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em excluded} & Add the names to this list\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_editor_1_1_base_editor_a56f7e3663a7136a29b6e2b25c383a513}{Cinemachine.\+Editor.\+Base\+Editor$<$ Cinemachine\+Brain $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Editor/\+Editors/Cinemachine\+Brain\+Editor.\+cs\end{DoxyCompactItemize}

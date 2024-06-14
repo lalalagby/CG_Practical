@@ -1,0 +1,32 @@
+\chapter{Cinemachine Impulse Sources}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_75fc99995925f3533366f51e02dd367f}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_75fc99995925f3533366f51e02dd367f}\index{Cinemachine Impulse Sources@{Cinemachine Impulse Sources}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_75fc99995925f3533366f51e02dd367f_autotoc_md700}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_75fc99995925f3533366f51e02dd367f_autotoc_md700}%
+ An Impulse Source is a component that emits a vibration signal from a point in Scene space. Game events can cause an Impulse Source to emit a signal from the place where the event occurs. The event {\itshape triggers} impulses, and the source {\itshape generates} impulses. Virtual cameras with an Impulse Listener extension {\itshape react} to impulses by shaking.
+
+In the image below, the figure\textquotesingle{}s feet are Impulse Sources. When they collide with the floor (A) they generate impulses. The camera is an Impulse Listener and reacts to the impulses by shaking (B), which shakes the resulting image in the game view (C).
+
+
+
+\doxylink{namespace_cinemachine}{Cinemachine} ships with two types of Impulse Source components.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_18be0cd77d67e52cc6eac7de939a1374}{Cinemachine Collision Impulse Source}{0}}} generates impulses in reaction to collisions and trigger zones.
+\item {\bfseries{\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_source}{Cinemachine Impulse Source}{0}}} generates impulses in reaction to events other than collisions. ~\newline
+
+\end{DoxyItemize}
+
+Your Scene can have as many Impulse Sources as you want. Here are a few examples of where you might use Impulse Source components in a Scene\+:
+
+
+\begin{DoxyItemize}
+\item On each of a giant’s feet, so that the ground shakes when the giant walks.
+\item On a projectile that explodes when it hits a target.
+\item On the surface of a gelatin planet that wobbles when something touches it.
+\end{DoxyItemize}
+
+By default, an Impulse Source affects every \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_listener}{Impulse Listener}{0} in range, but you can apply \href{CinemachineImpulseFiltering.md\#ChannelFiltering}{\texttt{ channel filtering}} to make Sources affect some Listeners and not others.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_75fc99995925f3533366f51e02dd367f_autotoc_md701}{}\doxysection{\texorpdfstring{Key Impulse Source properties}{Key Impulse Source properties}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_75fc99995925f3533366f51e02dd367f_autotoc_md701}
+While the vibration signal defines the basic “shape” of the camera shake, the Impulse Source controls several other important properties that define the impulses it generates.
+
+For descriptions of all Impulse Source properties, as well as instructions for adding Impulse Sources to your scene, see documentation on the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_impulse_source}{Impulse Source}{0} and \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_18be0cd77d67e52cc6eac7de939a1374}{Collision Impulse Source}{0} components. 

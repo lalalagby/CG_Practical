@@ -1,0 +1,87 @@
+\doxysection{Unity\+Editor.\+Rendering.\+Look\+Dev.\+Camera\+State Class Reference}
+\hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state}{}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state}\index{UnityEditor.Rendering.LookDev.CameraState@{UnityEditor.Rendering.LookDev.CameraState}}
+
+
+Class containing data regarding position, rotation and viewport size of a camera.  
+
+
+Inheritance diagram for Unity\+Editor.\+Rendering.\+Look\+Dev.\+Camera\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_ad9468c74bfe0c12983a14ad60c953687}{Update\+Camera}} (Camera camera)
+\begin{DoxyCompactList}\small\item\em Update a Camera component and its transform with this state values. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_a3da560052a27346a68d31f9abd1b0f99}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_a3da560052a27346a68d31f9abd1b0f99} 
+void {\bfseries Reset} ()
+\begin{DoxyCompactList}\small\item\em Reset the State to its default values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_a42b2b02bba122c817ddeb0376ac2156b}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_a42b2b02bba122c817ddeb0376ac2156b} 
+Vector3 {\bfseries pivot} = k\+\_\+\+Default\+Pivot\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The position of the camera pivot. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_a7323c0ae8e6520835975f1879c6d4595}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_a7323c0ae8e6520835975f1879c6d4595} 
+Quaternion {\bfseries rotation} = k\+\_\+\+Default\+Rotation\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The rotation of the camera arround the pivot. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_a9f2584b2e41c5dbf4337fbf751659576}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_a9f2584b2e41c5dbf4337fbf751659576} 
+float {\bfseries view\+Size} = k\+\_\+\+Default\+View\+Size\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The size of the view. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_af8e7417fdaf08590dde26fe13a5807bc}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_af8e7417fdaf08590dde26fe13a5807bc} 
+float {\bfseries distance\+From\+Pivot}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The distance from pivot. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_a5aad9218efbb3e2666838dafc9524a22}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_a5aad9218efbb3e2666838dafc9524a22} 
+Vector3 {\bfseries position}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The position of the camera. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_a0294aee9fd2b100fabbda156b6edc0f2}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_a0294aee9fd2b100fabbda156b6edc0f2} 
+float {\bfseries field\+Of\+View}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The field of view of the camera. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_a3377f90d662163bf91f961a9b1fb4442}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_a3377f90d662163bf91f961a9b1fb4442} 
+float {\bfseries far\+Clip}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The far clip distance from camera. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_a2eeba5c56dc27877cf417cb24ff491a7}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_a2eeba5c56dc27877cf417cb24ff491a7} 
+float {\bfseries near\+Clip}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The near clip distance from camera. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_a6f0e10a2ec2eb3534c1fedca3fbb4e18}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_a6f0e10a2ec2eb3534c1fedca3fbb4e18} 
+Vector3 {\bfseries forward}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Forward vector in world space. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_a37b66cfa5f60fd401d6df04040a0fe30}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_a37b66cfa5f60fd401d6df04040a0fe30} 
+Vector3 {\bfseries up}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Up vector in world space. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_a625415bf070bc5c4a4b7a0199d030827}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_a625415bf070bc5c4a4b7a0199d030827} 
+Vector3 {\bfseries right}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Right vector in world space. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class containing data regarding position, rotation and viewport size of a camera. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_ad9468c74bfe0c12983a14ad60c953687}\index{UnityEditor.Rendering.LookDev.CameraState@{UnityEditor.Rendering.LookDev.CameraState}!UpdateCamera@{UpdateCamera}}
+\index{UpdateCamera@{UpdateCamera}!UnityEditor.Rendering.LookDev.CameraState@{UnityEditor.Rendering.LookDev.CameraState}}
+\doxysubsubsection{\texorpdfstring{UpdateCamera()}{UpdateCamera()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state_ad9468c74bfe0c12983a14ad60c953687} 
+void Unity\+Editor.\+Rendering.\+Look\+Dev.\+Camera\+State.\+Update\+Camera (\begin{DoxyParamCaption}\item[{Camera}]{camera}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Update a Camera component and its transform with this state values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & The camera to update\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_rendering_1_1_look_dev_1_1_i_camera_updater_a307648246ef92512268049d799c84eee}{Unity\+Editor.\+Rendering.\+Look\+Dev.\+ICamera\+Updater}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Editor/\+Look\+Dev/Camera\+State.\+cs\end{DoxyCompactItemize}

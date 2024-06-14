@@ -1,0 +1,200 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Utilities.\+Read\+Only\+Array\texorpdfstring{$<$}{<} TValue \texorpdfstring{$>$}{>} Struct Template Reference}
+\hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{}\label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}\index{UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$@{UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$}}
+
+
+Read-\/only access to an array or to a slice of an array.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Utilities.\+Read\+Only\+Array\texorpdfstring{$<$}{<} TValue \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_1_1_enumerator}{Enumerator}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_a3df7da9295ec8e0aceef9bb559cdc0d1}{Read\+Only\+Array$<$\+TValue$>$} Enumerates the elements of a read-\/only array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_a3df7da9295ec8e0aceef9bb559cdc0d1}{Read\+Only\+Array}} (TValue\mbox{[}$\,$\mbox{]} array)
+\begin{DoxyCompactList}\small\item\em Construct a read-\/only array covering all of the given array. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_a802aa6412c0415693a9b4263e06629e4}{Read\+Only\+Array}} (TValue\mbox{[}$\,$\mbox{]} array, int index, int length)
+\begin{DoxyCompactList}\small\item\em Construct a read-\/only array that covers only the given slice of {\itshape array} . \end{DoxyCompactList}\item 
+TValue\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_ae93259d64c7b863b20c5d154326f2e37}{To\+Array}} ()
+\begin{DoxyCompactList}\small\item\em Convert to array. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_a122b8bab8adf2f0cf0d5ee11709204e8}{Index\+Of}} (Predicate$<$ TValue $>$ predicate)
+\begin{DoxyCompactList}\small\item\em Searches for the first element in the array for which the given {\itshape predicate}  is {\ttfamily true} and returns the index of that element. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_ae011ba2876d163b4070a4db20aa69740}\label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_ae011ba2876d163b4070a4db20aa69740} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_1_1_enumerator}{Enumerator}} {\bfseries Get\+Enumerator} ()
+\begin{DoxyCompactList}\small\item\em Returns an enumerator that iterates through the read-\/only array. \begin{DoxyReturn}{Returns}
+Read\+Only\+Array$<$\+TValue$>$.\+Enumerator An enumerator for the read-\/only array. 
+\end{DoxyReturn}
+\end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_a12d0b64f7c40f4eaa0ad16512122bfea}\label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_a12d0b64f7c40f4eaa0ad16512122bfea} 
+IEnumerator$<$ TValue $>$ IEnumerable$<$ TValue $>$. {\bfseries Get\+Enumerator} ()
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_a2d697b5f1c6c22f72a94c9be6b3e4f59}\label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_a2d697b5f1c6c22f72a94c9be6b3e4f59} 
+IEnumerator IEnumerable. {\bfseries Get\+Enumerator} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static implicit \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_a063fb09859d1880eb672e0a1190fd38f}{operator Read\+Only\+Array$<$ TValue $>$}} (TValue\mbox{[}$\,$\mbox{]} array)
+\begin{DoxyCompactList}\small\item\em Constructs a read-\/only array containing elements {\itshape array} . \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_a8af8a480a767240be59488831daaa65e}\label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_a8af8a480a767240be59488831daaa65e} 
+int {\bfseries Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Number of elements in the array. \end{DoxyCompactList}\item 
+TValue \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_a7d4e1314bf1b424261199ccd39171185}{this\mbox{[}int index\mbox{]}}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Return the element at the given index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Read-\/only access to an array or to a slice of an array. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TValue} & Type of values stored in the array.\\
+\hline
+\end{DoxyTemplParams}
+
+
+The purpose of this struct is to allow exposing internal arrays directly such that no boxing and no going through interfaces is required but at the same time not allowing the internal arrays to be modified.
+
+It differs from {\ttfamily Read\+Only\+Span\texorpdfstring{$<$}{<}T\texorpdfstring{$>$}{>}} in that it can be stored on the heap and differs from {\ttfamily Read\+Only\+Collection\texorpdfstring{$<$}{<}T\texorpdfstring{$>$}{>}} in that it supports slices directly without needing an intermediate object representing the slice.
+
+Note that in most cases, the \doxylink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array} instance should be treated as a {\itshape temporary}. The actual array referred to by a \doxylink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array} instance is usually owned and probably mutated by another piece of code. When that code makes changes to the array, the \doxylink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array} instance will not get updated. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_a3df7da9295ec8e0aceef9bb559cdc0d1}\index{UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$@{UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$}!ReadOnlyArray@{ReadOnlyArray}}
+\index{ReadOnlyArray@{ReadOnlyArray}!UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$@{UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{ReadOnlyArray()}{ReadOnlyArray()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_a3df7da9295ec8e0aceef9bb559cdc0d1} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Unity\+Engine.\+Input\+System.\+Utilities.\+Read\+Only\+Array}}$<$ TValue $>$.\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}} (\begin{DoxyParamCaption}\item[{TValue\mbox{[}$\,$\mbox{]}}]{array}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a read-\/only array covering all of the given array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & Array to index.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_a802aa6412c0415693a9b4263e06629e4}\index{UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$@{UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$}!ReadOnlyArray@{ReadOnlyArray}}
+\index{ReadOnlyArray@{ReadOnlyArray}!UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$@{UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{ReadOnlyArray()}{ReadOnlyArray()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_a802aa6412c0415693a9b4263e06629e4} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Unity\+Engine.\+Input\+System.\+Utilities.\+Read\+Only\+Array}}$<$ TValue $>$.\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}} (\begin{DoxyParamCaption}\item[{TValue\mbox{[}$\,$\mbox{]}}]{array}{, }\item[{int}]{index}{, }\item[{int}]{length}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a read-\/only array that covers only the given slice of {\itshape array} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & Array to index.\\
+\hline
+{\em index} & Index at which to start indexing {\itshape array} . The given element becomes index \#0 for the read-\/only array.\\
+\hline
+{\em length} & Length of the slice to index from {\itshape array} .\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_a122b8bab8adf2f0cf0d5ee11709204e8}\index{UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$@{UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$}!IndexOf@{IndexOf}}
+\index{IndexOf@{IndexOf}!UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$@{UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{IndexOf()}{IndexOf()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_a122b8bab8adf2f0cf0d5ee11709204e8} 
+int \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Unity\+Engine.\+Input\+System.\+Utilities.\+Read\+Only\+Array}}$<$ TValue $>$.Index\+Of (\begin{DoxyParamCaption}\item[{Predicate$<$ TValue $>$}]{predicate}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Searches for the first element in the array for which the given {\itshape predicate}  is {\ttfamily true} and returns the index of that element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em predicate} & The predicate to be evaluated for each element which defines the condition for the search.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index of the first element for which {\itshape predicate}  is {\ttfamily true}x or -\/1 if no such element exists.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & If predicate is {\ttfamily null}.\\
+\hline
+\end{DoxyExceptions}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Searches\ for\ the\ first\ element\ in\ an\ integer\ array\ that\ is\ greater\ or\ equal\ to\ 5.}}
+\DoxyCodeLine{var\ haystack\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_a3df7da9295ec8e0aceef9bb559cdc0d1}{ReadOnlyArray<int>}}(\textcolor{keyword}{new}[]\ \{\ 1,\ 2,\ 3,\ 4,\ 5,\ 6,\ 7\ \});}
+\DoxyCodeLine{var\ index\ =\ haystack.IndexOf((value)\ =>\ value\ >=\ 5);\ \textcolor{comment}{//\ index\ ==\ 4}}
+
+\end{DoxyCode}
+ \Hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_a063fb09859d1880eb672e0a1190fd38f}\index{UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$@{UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$}!operator ReadOnlyArray$<$ TValue $>$@{operator ReadOnlyArray$<$ TValue $>$}}
+\index{operator ReadOnlyArray$<$ TValue $>$@{operator ReadOnlyArray$<$ TValue $>$}!UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$@{UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{operator ReadOnlyArray$<$ TValue $>$()}{operator ReadOnlyArray< TValue >()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_a063fb09859d1880eb672e0a1190fd38f} 
+static implicit \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Unity\+Engine.\+Input\+System.\+Utilities.\+Read\+Only\+Array}}$<$ TValue $>$.operator \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ TValue $>$ (\begin{DoxyParamCaption}\item[{TValue\mbox{[}$\,$\mbox{]}}]{array}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Constructs a read-\/only array containing elements {\itshape array} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & An existing array containing elements to be wrapped as a read-\/only array.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_ae93259d64c7b863b20c5d154326f2e37}\index{UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$@{UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$}!ToArray@{ToArray}}
+\index{ToArray@{ToArray}!UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$@{UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{ToArray()}{ToArray()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_ae93259d64c7b863b20c5d154326f2e37} 
+TValue\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Unity\+Engine.\+Input\+System.\+Utilities.\+Read\+Only\+Array}}$<$ TValue $>$.To\+Array (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert to array. 
+
+\begin{DoxyReturn}{Returns}
+A new array containing a copy of the contents of the read-\/only array.
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_a7d4e1314bf1b424261199ccd39171185}\index{UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$@{UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$}!this\mbox{[}int index\mbox{]}@{this[int index]}}
+\index{this\mbox{[}int index\mbox{]}@{this[int index]}!UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$@{UnityEngine.InputSystem.Utilities.ReadOnlyArray$<$ TValue $>$}}
+\doxysubsubsection{\texorpdfstring{this[int index]}{this[int index]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_a7d4e1314bf1b424261199ccd39171185} 
+TValue \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Unity\+Engine.\+Input\+System.\+Utilities.\+Read\+Only\+Array}}$<$ TValue $>$.this\mbox{[}int index\mbox{]}\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Return the element at the given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index into the array.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Index\+Out\+Of\+Range\+Exception} & {\itshape index}  is less than 0 or greater than \doxylink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array_a8af8a480a767240be59488831daaa65e}{Count}.\\
+\hline
+{\em Invalid\+Operation\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Utilities/Read\+Only\+Array.\+cs\end{DoxyCompactItemize}

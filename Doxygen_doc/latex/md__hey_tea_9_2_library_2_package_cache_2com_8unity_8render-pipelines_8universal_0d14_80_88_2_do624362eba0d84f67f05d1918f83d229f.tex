@@ -1,0 +1,64 @@
+\chapter{Clearing, rendering order and overdraw}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f}\index{Clearing, rendering order and overdraw@{Clearing, rendering order and overdraw}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_autotoc_md2088}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_autotoc_md2088}%
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_clearing}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_clearing}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_autotoc_md2089}{}\doxysection{\texorpdfstring{Clearing}{Clearing}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_autotoc_md2089}
+In the Universal Render Pipeline (URP), Camera clearing behavior depends on the Camera\textquotesingle{}s \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do281102a196ad8cdcf90806a18445bf3f}{Render Type}{0}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_autotoc_md2090}{}\doxysubsection{\texorpdfstring{Base Camera}{Base Camera}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_autotoc_md2090}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_autotoc_md2091}{}\doxysubsubsection{\texorpdfstring{Color buffer}{Color buffer}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_autotoc_md2091}
+At the start of its render loop, a Camera with the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do281102a196ad8cdcf90806a18445bf3f}{Base Render Type}{0} can clear its color buffer to a Skybox, clear its color buffer to a solid color, or use an uninitialized color buffer. You can define this behavior using the {\bfseries{Background Type}} property in the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9}{Camera Inspector}{0} when {\bfseries{Render Type}} is set to {\bfseries{Base}}.
+
+Note that the contents of the uninitialized color buffer vary by platform. On some platforms, the unitialized color buffer will contain data from the previous frame. On other platforms, the unitialized color buffer will contain unintialized memory. You should choose to use an unitialized color buffer only if your Camera draws to every pixel in the color buffer, and you do not wish to incur the cost of an unnecessary clear operation.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_autotoc_md2092}{}\doxysubsubsection{\texorpdfstring{Depth buffer}{Depth buffer}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_autotoc_md2092}
+A Base Camera always clears its depth buffer at the start of each render loop.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_autotoc_md2093}{}\doxysection{\texorpdfstring{Overlay Camera}{Overlay Camera}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_autotoc_md2093}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_autotoc_md2094}{}\doxysubsubsection{\texorpdfstring{Color buffer}{Color buffer}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_autotoc_md2094}
+At the start of its render loop, an \href{camera-types-and-render-type.md\#overlay-camera}{\texttt{ Overlay Camera}} receives a color buffer containing color data from the previous Cameras in the Camera stack. It does not clear the contents of the color buffer.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_autotoc_md2095}{}\doxysubsubsection{\texorpdfstring{Depth buffer}{Depth buffer}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_autotoc_md2095}
+At the start of its render loop, an Overlay Camera receives a depth buffer containing depth data from the previous Cameras in the Camera Stack. You can define this behavior using the {\bfseries{Clear Depth}} property in the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9}{Camera Inspector}{0} when {\bfseries{Render Type}} is set to {\bfseries{Overlay}}.
+
+When {\bfseries{Clear Depth}} is set to true, the Overlay Camera clears the depth buffer and draws its view to the color buffer on top of any existing color data. When {\bfseries{Clear Depth}} is set to false, the Overlay Camera tests against the depth buffer before drawing its view to the color buffer.
+
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_rendering-order}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_rendering-order}%
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_autotoc_md2096}{}\doxysection{\texorpdfstring{Camera culling and rendering order}{Camera culling and rendering order}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_autotoc_md2096}
+If your URP Scene contains multiple Cameras, \doxylink{namespace_unity}{Unity} performs their culling and rendering operations in a predictable order.
+
+Once per frame, \doxylink{namespace_unity}{Unity} performs the following operations\+:
+
+
+\begin{DoxyEnumerate}
+\item \doxylink{namespace_unity}{Unity} gets the list of all active \href{camera-types-and-render-type.md\#base-camera}{\texttt{ Base Cameras}} in the Scene.
+\item \doxylink{namespace_unity}{Unity} organises the active Base Cameras into 2 groups\+: Cameras that render their view to Render Textures, and Cameras that render their view to the screen.
+\item \doxylink{namespace_unity}{Unity} sorts the Base Cameras that render to Render Textures into {\bfseries{Priority}} order, so that Cameras with a higher {\bfseries{Priority}} value are drawn last.
+\item For each Base Camera that renders to a Render Texture, \doxylink{namespace_unity}{Unity} performs the following steps\+:
+\begin{DoxyEnumerate}
+\item Cull the Base Camera
+\item Render the Base Camera to the Render Texture
+\item For each \href{camera-types-and-render-type.md\#overlay-camera}{\texttt{ Overlay Camera}} that is part of the Base Camera\textquotesingle{}s \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2camera-stacking}{Camera Stack}{0}, in the order defined in the Camera Stack\+:
+\begin{DoxyEnumerate}
+\item Cull the Overlay Camera
+\item Render the Overlay Camera to the Render Texture
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}
+\item \doxylink{namespace_unity}{Unity} sorts the Base Cameras that render to the screen into {\bfseries{Priority}} order, so that Cameras with a higher {\bfseries{Priority}} value are drawn last.
+\item For each Base Camera that renders to the screen, \doxylink{namespace_unity}{Unity} performs the following steps\+:
+\begin{DoxyEnumerate}
+\item Cull the Base Camera
+\item Render the Base Camera to the screen
+\item For each Overlay Camera that is part of the Base Camera\textquotesingle{}s Camera Stack, in the order defined in the Camera Stack\+:
+\begin{DoxyEnumerate}
+\item Cull the Overlay Camera
+\item Render the Overlay Camera to the screen
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}
+
+\doxylink{namespace_unity}{Unity} can render an Overlay Camera’s view multiple times during a frame -\/ either because the Overlay Camera appears in more than one Camera Stack, or because the Overlay Camera appears in the same Camera Stack more than once. When this happens, \doxylink{namespace_unity}{Unity} does not reuse any element of the culling or rendering operation. The operations are repeated in full, in the order detailed above.
+
+{\bfseries{Important note\+:}} In this version of URP, Overlay Cameras and Camera Stacking are supported only when using the Universal Renderer. Overlay Cameras will not perform any part of their rendering loop if using the 2D Renderer. \label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_overdraw}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_overdraw}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_autotoc_md2097}{}\doxysection{\texorpdfstring{Overdraw}{Overdraw}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do624362eba0d84f67f05d1918f83d229f_autotoc_md2097}
+URP performs several optimizations within a Camera, including rendering order optimizations to reduce overdraw. However, when you use a Camera Stack, you effectively define the order in which those Cameras are rendered. You must therefore be careful not to order the Cameras in a way that causes excessive overdraw.
+
+When multiple Cameras in a Camera Stack render to the same render target, \doxylink{namespace_unity}{Unity} draws each pixel in the render target for each Camera in the Camera Stack. Additionally, if more than one Base Camera or Camera Stack renders to the same area of the same render target, \doxylink{namespace_unity}{Unity} draws any pixels in the overlapping area again, as many times as required by each Base Camera or Camera Stack.
+
+You can use \doxylink{namespace_unity}{Unity}\textquotesingle{}s \href{https://docs.unity3d.com/Manual/FrameDebugger.html}{\texttt{ Frame Debugger}}, or platform-\/specific frame capture and debugging tools, to understand where excessive overdraw occurs in your Scene. You can then optimize your Camera Stacks accordingly. 

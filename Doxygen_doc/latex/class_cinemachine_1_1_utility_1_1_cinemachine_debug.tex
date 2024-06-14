@@ -1,0 +1,109 @@
+\doxysection{Cinemachine.\+Utility.\+Cinemachine\+Debug Class Reference}
+\hypertarget{class_cinemachine_1_1_utility_1_1_cinemachine_debug}{}\label{class_cinemachine_1_1_utility_1_1_cinemachine_debug}\index{Cinemachine.Utility.CinemachineDebug@{Cinemachine.Utility.CinemachineDebug}}
+
+
+Manages onscreen positions for \doxylink{namespace_cinemachine}{Cinemachine} debugging output.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_utility_1_1_cinemachine_debug_a15a0db5147b1c4d0bdd588e91d235581}\label{class_cinemachine_1_1_utility_1_1_cinemachine_debug_a15a0db5147b1c4d0bdd588e91d235581} 
+delegate void {\bfseries On\+GUIDelegate} ()
+\begin{DoxyCompactList}\small\item\em Delegate for On\+GUI debugging. ~\newline
+ This will be called by the \doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain} in its On\+GUI (editor only) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_cinemachine_1_1_utility_1_1_cinemachine_debug_a77ebf58d7ac807c403d9817d27970653}{Release\+Screen\+Pos}} (Object client)
+\begin{DoxyCompactList}\small\item\em Release a screen rectangle previously obtained through \doxylink{class_cinemachine_1_1_utility_1_1_cinemachine_debug_a7b35723fd83560a70db124a98ec79afb}{Get\+Screen\+Pos()} \end{DoxyCompactList}\item 
+static Rect \mbox{\hyperlink{class_cinemachine_1_1_utility_1_1_cinemachine_debug_a7b35723fd83560a70db124a98ec79afb}{Get\+Screen\+Pos}} (Object client, string text, GUIStyle style)
+\begin{DoxyCompactList}\small\item\em Reserve an on-\/screen rectangle for debugging output. \end{DoxyCompactList}\item 
+static String\+Builder \mbox{\hyperlink{class_cinemachine_1_1_utility_1_1_cinemachine_debug_aea235f88037f89d638d1df9c29140a84}{SBFrom\+Pool}} ()
+\begin{DoxyCompactList}\small\item\em Get a preallocated String\+Builder from the pool. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_cinemachine_1_1_utility_1_1_cinemachine_debug_a262acdac2e639efb5c78adef58bbc9c4}{Return\+To\+Pool}} (String\+Builder sb)
+\begin{DoxyCompactList}\small\item\em Return a String\+Builder to the preallocated pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_utility_1_1_cinemachine_debug_aca43b9ccf0886c845ca2b9e0fc38b838}\label{class_cinemachine_1_1_utility_1_1_cinemachine_debug_aca43b9ccf0886c845ca2b9e0fc38b838} 
+static \mbox{\hyperlink{class_cinemachine_1_1_utility_1_1_cinemachine_debug_a15a0db5147b1c4d0bdd588e91d235581}{On\+GUIDelegate}} {\bfseries On\+GUIHandlers}
+\begin{DoxyCompactList}\small\item\em Delegate for On\+GUI debugging. ~\newline
+ This will be called by the \doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain} in its On\+GUI (editor only) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages onscreen positions for \doxylink{namespace_cinemachine}{Cinemachine} debugging output. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cinemachine_1_1_utility_1_1_cinemachine_debug_a7b35723fd83560a70db124a98ec79afb}\index{Cinemachine.Utility.CinemachineDebug@{Cinemachine.Utility.CinemachineDebug}!GetScreenPos@{GetScreenPos}}
+\index{GetScreenPos@{GetScreenPos}!Cinemachine.Utility.CinemachineDebug@{Cinemachine.Utility.CinemachineDebug}}
+\doxysubsubsection{\texorpdfstring{GetScreenPos()}{GetScreenPos()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_utility_1_1_cinemachine_debug_a7b35723fd83560a70db124a98ec79afb} 
+static Rect Cinemachine.\+Utility.\+Cinemachine\+Debug.\+Get\+Screen\+Pos (\begin{DoxyParamCaption}\item[{Object}]{client}{, }\item[{string}]{text}{, }\item[{GUIStyle}]{style}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Reserve an on-\/screen rectangle for debugging output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & The client caller. This is used as a handle.\\
+\hline
+{\em text} & Sample text, for determining rectangle size\\
+\hline
+{\em style} & What style will be used to draw, used here for determining rect size\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An area on the game screen large enough to print the text in the style indicated
+\end{DoxyReturn}
+\Hypertarget{class_cinemachine_1_1_utility_1_1_cinemachine_debug_a77ebf58d7ac807c403d9817d27970653}\index{Cinemachine.Utility.CinemachineDebug@{Cinemachine.Utility.CinemachineDebug}!ReleaseScreenPos@{ReleaseScreenPos}}
+\index{ReleaseScreenPos@{ReleaseScreenPos}!Cinemachine.Utility.CinemachineDebug@{Cinemachine.Utility.CinemachineDebug}}
+\doxysubsubsection{\texorpdfstring{ReleaseScreenPos()}{ReleaseScreenPos()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_utility_1_1_cinemachine_debug_a77ebf58d7ac807c403d9817d27970653} 
+static void Cinemachine.\+Utility.\+Cinemachine\+Debug.\+Release\+Screen\+Pos (\begin{DoxyParamCaption}\item[{Object}]{client}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Release a screen rectangle previously obtained through \doxylink{class_cinemachine_1_1_utility_1_1_cinemachine_debug_a7b35723fd83560a70db124a98ec79afb}{Get\+Screen\+Pos()} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client} & The client caller. Used as a handle.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cinemachine_1_1_utility_1_1_cinemachine_debug_a262acdac2e639efb5c78adef58bbc9c4}\index{Cinemachine.Utility.CinemachineDebug@{Cinemachine.Utility.CinemachineDebug}!ReturnToPool@{ReturnToPool}}
+\index{ReturnToPool@{ReturnToPool}!Cinemachine.Utility.CinemachineDebug@{Cinemachine.Utility.CinemachineDebug}}
+\doxysubsubsection{\texorpdfstring{ReturnToPool()}{ReturnToPool()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_utility_1_1_cinemachine_debug_a262acdac2e639efb5c78adef58bbc9c4} 
+static void Cinemachine.\+Utility.\+Cinemachine\+Debug.\+Return\+To\+Pool (\begin{DoxyParamCaption}\item[{String\+Builder}]{sb}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return a String\+Builder to the preallocated pool. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sb} & The string builder object to return to the pool\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cinemachine_1_1_utility_1_1_cinemachine_debug_aea235f88037f89d638d1df9c29140a84}\index{Cinemachine.Utility.CinemachineDebug@{Cinemachine.Utility.CinemachineDebug}!SBFromPool@{SBFromPool}}
+\index{SBFromPool@{SBFromPool}!Cinemachine.Utility.CinemachineDebug@{Cinemachine.Utility.CinemachineDebug}}
+\doxysubsubsection{\texorpdfstring{SBFromPool()}{SBFromPool()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_utility_1_1_cinemachine_debug_aea235f88037f89d638d1df9c29140a84} 
+static String\+Builder Cinemachine.\+Utility.\+Cinemachine\+Debug.\+SBFrom\+Pool (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get a preallocated String\+Builder from the pool. 
+
+\begin{DoxyReturn}{Returns}
+The preallocated String\+Builder from the pool. ~\newline
+ Client must call Return\+To\+Pool when done
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Core/Cinemachine\+Debug.\+cs\end{DoxyCompactItemize}

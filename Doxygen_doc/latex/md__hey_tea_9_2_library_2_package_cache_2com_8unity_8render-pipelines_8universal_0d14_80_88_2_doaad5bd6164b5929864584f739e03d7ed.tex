@@ -1,0 +1,329 @@
+\chapter{Control URP Quality settings through code}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doaad5bd6164b5929864584f739e03d7ed}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doaad5bd6164b5929864584f739e03d7ed}\index{Control URP Quality settings through code@{Control URP Quality settings through code}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doaad5bd6164b5929864584f739e03d7ed_autotoc_md2373}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doaad5bd6164b5929864584f739e03d7ed_autotoc_md2373}%
+ \doxylink{namespace_unity}{Unity} has several preset levels of \href{https://docs.unity3d.com/Manual/class-QualitySettings.html}{\texttt{ Quality settings}} and you might add more to your project. To accommodate different hardware specifications, you can switch between these levels and the associated URP Asset from C\# scripts. The following examples show how to use API to change Quality setting levels and the active URP Asset, and how to change specific settings in the URP Asset at runtime.
+
+{\bfseries{Note}}\+: You should only change Quality settings and URP Asset settings at runtime at points where performance is not essential, such as during loading screens or on static menus. This is because these changes cause a temporary but significant performance impact.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doaad5bd6164b5929864584f739e03d7ed_autotoc_md2374}{}\doxysection{\texorpdfstring{Change URP Asset at runtime}{Change URP Asset at runtime}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doaad5bd6164b5929864584f739e03d7ed_autotoc_md2374}
+Each quality level uses a URP Asset to control many of the specific graphics settings. You can assigning different URP Assets to each quality level and switch between them at runtime.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doaad5bd6164b5929864584f739e03d7ed_autotoc_md2375}{}\doxysubsection{\texorpdfstring{Configure Project Quality settings}{Configure Project Quality settings}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doaad5bd6164b5929864584f739e03d7ed_autotoc_md2375}
+To use Quality settings to switch between URP Assets, ensure that the quality levels of your project are configured to use different URP Assets. The URP 3D Sample scene has this configuration by default.
+
+
+\begin{DoxyEnumerate}
+\item Create a URP Asset for each quality level. To do this, right-\/click in the Project window and select {\bfseries{Create}} \texorpdfstring{$>$}{>} {\bfseries{Rendering}} \texorpdfstring{$>$}{>} {\bfseries{URP Asset (with Universal Renderer)}}.
+\end{DoxyEnumerate}
+
+\begin{quote}
+{\bfseries{Note}}\+: These instructions are also valid for URP Assets that use the 2D Renderer. \end{quote}
+
+
+
+\begin{DoxyEnumerate}
+\item Configure and name the new URP Assets as necessary.
+\item Open the Quality section in the Project Settings ({\bfseries{Edit}} \texorpdfstring{$>$}{>} {\bfseries{Project Settings}} \texorpdfstring{$>$}{>} {\bfseries{Quality}}).
+\item Assign each URP Asset to a quality level. To do this, select a quality level from the Levels list, then go to {\bfseries{Rendering}} \texorpdfstring{$>$}{>} {\bfseries{Render Pipeline Asset}} and choose the URP Asset you created for this quality level. Do this for each quality level.
+\end{DoxyEnumerate}
+
+The quality levels of your project are now ready to be used to change between URP Assets at runtime.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doaad5bd6164b5929864584f739e03d7ed_autotoc_md2376}{}\doxysubsection{\texorpdfstring{Change Quality Level}{Change Quality Level}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doaad5bd6164b5929864584f739e03d7ed_autotoc_md2376}
+You can change the quality level \doxylink{namespace_unity}{Unity} uses at runtime through the \href{https://docs.unity3d.com/ScriptReference/QualitySettings.html}{\texttt{ Quality\+Settings API}}. With the quality levels setup as shown previously, this enables you to switch between URP Assets as well as Quality settings presets.
+
+In the following simple example, the C\# script uses the system\textquotesingle{}s total \doxylink{namespace_graphics}{Graphics} Memory to determine the appropriate quality level without any input from the user when they open the built project.
+
+
+\begin{DoxyEnumerate}
+\item Create a new C\# script with the name Quality\+Controls.
+\item Open the Quality\+Controls script and add the {\ttfamily Switch\+Quality\+Level} method to the {\ttfamily Quality\+Controls} class.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#}}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }QualityControls\ :\ MonoBehaviour}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36aa6122a65eaa676f700ae68d393054a37}{Start}}()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SwitchQualityLevel()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \}}
+
+\end{DoxyCode}
+
+\item Add a {\ttfamily switch} statement in the {\ttfamily Switch\+Quality\+Level} method to select the quality level with the {\ttfamily Quality\+Settings.\+Set\+Quality\+Level()} method as shown below.
+\end{DoxyEnumerate}
+
+\begin{quote}
+{\bfseries{Note}}\+: Each Quality level has an index that matches the level\textquotesingle{}s position in the list in the Quality section of the Project Settings window. The quality level at the top of the list has an index of 0. This index only counts quality levels which you specified as enabled for the target platform of any built version of your project. \end{quote}
+
+
+\`{}\`{}\`{}C\# using System.\+Collections; using System.\+Collections.\+Generic; using \doxylink{namespace_unity_engine}{Unity\+Engine};
+
+public class Quality\+Controls \+: Mono\+Behaviour \{ void Start() \{
+
+\}
+
+private void Switch\+Quality\+Level() \{ // Select Quality settings level (URP Asset) based on the size of the device\textquotesingle{}s graphics memory switch (System\+Info.\+graphics\+Memory\+Size) \{ case \texorpdfstring{$<$}{<}= 2048\+: Quality\+Settings.\+Set\+Quality\+Level(1); break; case \texorpdfstring{$<$}{<}= 4096\+: Quality\+Settings.\+Set\+Quality\+Level(2); break; default\+: Quality\+Settings.\+Set\+Quality\+Level(0); break; \} \} \} \`{}\`{}\`{}
+
+
+\begin{DoxyEnumerate}
+\item Add a call to the {\ttfamily Switch\+Quality\+Level} method in the {\ttfamily Start} method. This ensures that the quality level only changes when the scene first loads.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#}}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }QualityControls\ :\ MonoBehaviour}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36aa6122a65eaa676f700ae68d393054a37}{Start}}()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ SwitchQualityLevel();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SwitchQualityLevel()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select\ Quality\ settings\ level\ (URP\ Asset)\ based\ on\ the\ size\ of\ the\ device's\ graphics\ memory}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (SystemInfo.graphicsMemorySize)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ <=\ 2048:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QualitySettings.SetQualityLevel(1);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ <=\ 4096:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QualitySettings.SetQualityLevel(2);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QualitySettings.SetQualityLevel(0);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \}}
+
+\end{DoxyCode}
+
+\item Open the first scene that your built project loads on startup.
+\item Create an empty Game\+Object and call it Quality\+Controller. To do this, right-\/click in the Hierarchy Window and select {\bfseries{Create Empty}}.
+\item Open the Quality\+Controller object in the Inspector.
+\item Add the Quality\+Controls script to the Quality\+Controller as a component.
+\end{DoxyEnumerate}
+
+Now when this scene loads, \doxylink{namespace_unity}{Unity} runs the {\ttfamily Switch\+Quality\+Level} method in the Quality\+Controls script which detects the system\textquotesingle{}s total graphics memory and sets the quality level. The quality level sets the URP Asset as the active Render Pipeline Asset.
+
+You can create more complex systems and sequences of checks to determine which quality level to use, but the fundamental process remains the same. When the project starts, run a script which uses \href{https://docs.unity3d.com/ScriptReference/QualitySettings.SetQualityLevel.html}{\texttt{ {\ttfamily Quality\+Settings.\+Set\+Quality\+Level}}} to select a quality level and through that select the URP Asset for the project to use at runtime.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doaad5bd6164b5929864584f739e03d7ed_autotoc_md2377}{}\doxysection{\texorpdfstring{Change URP Asset settings}{Change URP Asset settings}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doaad5bd6164b5929864584f739e03d7ed_autotoc_md2377}
+You can change some properties of the URP Asset at runtime with C\# scripts. This can help fine tune performance on devices with hardware that doesn\textquotesingle{}t perfectly match any of the quality levels in your project.
+
+\begin{quote}
+{\bfseries{Note}}\+: To change a property of the URP Asset with a C\# script, the property must have a {\ttfamily set} method. For more information on these properties see Accessible Properties. \end{quote}
+
+
+The following example uses the Quality\+Controls script and Quality\+Controller object from the Change Quality Level through code section, and extends the functionality to locate the active URP Asset and change some of its properties to fit the performance level of the hardware.
+
+
+\begin{DoxyEnumerate}
+\item Open the Quality\+Controls script.
+\item At the top of the script add {\ttfamily using \doxylink{namespace_unity_engine_1_1_rendering}{Unity\+Engine.\+Rendering}} and {\ttfamily using \doxylink{namespace_unity_engine_1_1_rendering_1_1_universal}{Unity\+Engine.\+Rendering.\+Universal}}.
+\item Add a method with the name {\ttfamily Change\+Asset\+Properties} and the type {\ttfamily void} to the {\ttfamily Quality\+Controls} class as shown below.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#}}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }UnityEngine.Rendering;}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }UnityEngine.Rendering.Universal;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }QualityController\ :\ MonoBehaviour}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36aa6122a65eaa676f700ae68d393054a37}{Start}}()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select\ the\ appropriate\ Quality\ Level\ first}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ SwitchQualityLevel();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SwitchQualityLevel()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Code\ from\ previous\ example}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ChangeAssetProperties()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ New\ code\ is\ added\ to\ this\ method}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \}}
+
+\end{DoxyCode}
+
+\item Retrieve the active Render Pipeline Asset with {\ttfamily Graphics\+Settings.\+current\+Render\+Pipeline} as shown below.
+\end{DoxyEnumerate}
+
+\begin{quote}
+{\bfseries{Note}}\+: You must use the {\ttfamily as} keyword to cast the Render Pipeline Asset as the {\ttfamily Universal\+Render\+Pipeline\+Asset} type for the script to work correctly. \end{quote}
+
+
+\`{}\`{}\`{}C\# using System.\+Collections; using System.\+Collections.\+Generic; using \doxylink{namespace_unity_engine}{Unity\+Engine}; using \doxylink{namespace_unity_engine_1_1_rendering}{Unity\+Engine.\+Rendering}; using \doxylink{namespace_unity_engine_1_1_rendering_1_1_universal}{Unity\+Engine.\+Rendering.\+Universal};
+
+public class Quality\+Controller \+: Mono\+Behaviour \{ void Start() \{ // Select the appropriate Quality Level first Switch\+Quality\+Level(); \}
+
+private void Switch\+Quality\+Level() \{ // Code from previous example \}
+
+private void Change\+Asset\+Properties() \{ // Locate the current URP Asset Universal\+Render\+Pipeline\+Asset data = Graphics\+Settings.\+current\+Render\+Pipeline as Universal\+Render\+Pipeline\+Asset;
+
+// Do nothing if \doxylink{namespace_unity}{Unity} can\textquotesingle{}t locate the URP Asset if (!data) return; \} \} \`{}\`{}\`{}
+
+
+\begin{DoxyEnumerate}
+\item Add a {\ttfamily switch} statement in the Change\+Asset\+Properties method to set the value of the URP Asset properties.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#}}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }UnityEngine.Rendering;}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }UnityEngine.Rendering.Universal;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }QualityController\ :\ MonoBehaviour}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36aa6122a65eaa676f700ae68d393054a37}{Start}}()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select\ the\ appropriate\ Quality\ Level\ first}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ SwitchQualityLevel();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SwitchQualityLevel()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Code\ from\ previous\ example}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ChangeAssetProperties()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Locate\ the\ current\ URP\ Asset}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{UniversalRenderPipelineAsset}}\ data\ =\ GraphicsSettings.currentRenderPipeline\ as\ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{UniversalRenderPipelineAsset}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Do\ nothing\ if\ Unity\ can't\ locate\ the\ URP\ Asset}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!data)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Change\ URP\ Asset\ settings\ based\ on\ the\ size\ of\ the\ device's\ graphics\ memory}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (SystemInfo.graphicsMemorySize)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ <=\ 1024:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_af6f083a65e52aa7217ba2bbb451cacf7}{renderScale}}\ =\ 0.7f;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_af0806d4c4c8d73ecdaeeef932263e397}{shadowDistance}}\ =\ 50.0f;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ <=\ 3072:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_af6f083a65e52aa7217ba2bbb451cacf7}{renderScale}}\ =\ 0.9f;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_af0806d4c4c8d73ecdaeeef932263e397}{shadowDistance}}\ =\ 150.0f;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_af6f083a65e52aa7217ba2bbb451cacf7}{renderScale}}\ =\ 0.7f;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_af0806d4c4c8d73ecdaeeef932263e397}{shadowDistance}}\ =\ 25.0f;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \}}
+
+\end{DoxyCode}
+
+\item Add a call to the {\ttfamily Change\+Asset\+Properties} method in the {\ttfamily Start} method. This ensures that the URP Asset only changes when the scene first loads.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#}}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }UnityEngine.Rendering;}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }UnityEngine.Rendering.Universal;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }QualityController\ :\ MonoBehaviour}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36aa6122a65eaa676f700ae68d393054a37}{Start}}()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Select\ the\ appropriate\ Quality\ Level\ first}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ SwitchQualityLevel();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Fine\ tune\ performance\ with\ specific\ URP\ Asset\ properties}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ ChangeAssetProperties();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ SwitchQualityLevel()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Code\ from\ previous\ example}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ChangeAssetProperties()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Locate\ the\ current\ URP\ Asset}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{UniversalRenderPipelineAsset}}\ data\ =\ GraphicsSettings.currentRenderPipeline\ as\ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset}{UniversalRenderPipelineAsset}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Do\ nothing\ if\ Unity\ can't\ locate\ the\ URP\ Asset}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!data)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Change\ URP\ Asset\ settings\ based\ on\ the\ size\ of\ the\ device's\ graphics\ memory}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (SystemInfo.graphicsMemorySize)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ <=\ 1024:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_af6f083a65e52aa7217ba2bbb451cacf7}{renderScale}}\ =\ 0.7f;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_af0806d4c4c8d73ecdaeeef932263e397}{shadowDistance}}\ =\ 50.0f;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ <=\ 3072:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_af6f083a65e52aa7217ba2bbb451cacf7}{renderScale}}\ =\ 0.9f;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_af0806d4c4c8d73ecdaeeef932263e397}{shadowDistance}}\ =\ 150.0f;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_af6f083a65e52aa7217ba2bbb451cacf7}{renderScale}}\ =\ 0.7f;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_universal_render_pipeline_asset_af0806d4c4c8d73ecdaeeef932263e397}{shadowDistance}}\ =\ 25.0f;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \}}
+
+\end{DoxyCode}
+
+\end{DoxyEnumerate}
+
+Now when this scene loads, \doxylink{namespace_unity}{Unity} detects the system\textquotesingle{}s total graphics memory and sets the URP Asset properties accordingly.
+
+You can use this method of changing particular URP Asset properties in conjunction with changing quality levels to fine tune the performance of your project for different systems without the need to create a quality level for every target hardware configuration.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doaad5bd6164b5929864584f739e03d7ed_autotoc_md2378}{}\doxysubsection{\texorpdfstring{Accessible Properties}{Accessible Properties}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doaad5bd6164b5929864584f739e03d7ed_autotoc_md2378}
+You can access and change any properties of the URP Asset which have a {\ttfamily set} method through a C\# script at runtime.
+
+The following properties of the URP Asset have a {\ttfamily set} method\+:
+
+
+\begin{DoxyItemize}
+\item cascade\+Border
+\item color\+Grading\+Lut\+Size
+\item color\+Grading\+Mode
+\item conservative\+Enclosing\+Sphere
+\item fsr\+Override\+Sharpness
+\item fsr\+Sharpness
+\item hdr\+Color\+Buffer\+Precision
+\item max\+Additional\+Lights\+Count
+\item msaa\+Sample\+Count
+\item num\+Iterations\+Enclosing\+Sphere
+\item render\+Scale
+\item shadow\+Cascade\+Count
+\item shadow\+Depth\+Bias
+\item shadow\+Distance
+\item shadow\+Normal\+Bias
+\item store\+Actions\+Optimization
+\item supports\+Camera\+Depth\+Texture
+\item supports\+Camera\+Opaque\+Texture
+\item supports\+Dynamic\+Batching
+\item supports\+HDR
+\item upscaling\+Filter
+\item use\+Adaptive\+Performance
+\item use\+SRPBatcher
+\end{DoxyItemize}
+
+For more information on these properties, see \href{https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@14.0/api/UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.html\#properties}{\texttt{ Universal Render Pipeline Asset API}}. 

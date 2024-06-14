@@ -1,0 +1,198 @@
+\doxysection{NSubstitute.\+Core.\+Thread\+Local\+Context Class Reference}
+\hypertarget{class_n_substitute_1_1_core_1_1_thread_local_context}{}\label{class_n_substitute_1_1_core_1_1_thread_local_context}\index{NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}}
+Inheritance diagram for NSubstitute.\+Core.\+Thread\+Local\+Context\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_n_substitute_1_1_core_1_1_thread_local_context}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_thread_local_context_aa58700f1041f23c6458fd68dc5ea4a05}{Set\+Last\+Call\+Router}} (\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_router}{ICall\+Router}} call\+Router)
+\item 
+\mbox{\hyperlink{class_n_substitute_1_1_core_1_1_configured_call}{Configured\+Call}} \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_thread_local_context_ae8a42c98c3f17e70872437262d0829c5}{Last\+Call\+Should\+Return}} (\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_return}{IReturn}} value, \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_match_args}{Match\+Args}} match\+Args)
+\item 
+void \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_thread_local_context_a51c92f8aa4286052ea05a76ef8788135}{Set\+Next\+Route}} (\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_router}{ICall\+Router}} call\+Router, Func$<$ \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_substitute_state}{ISubstitute\+State}}, \mbox{\hyperlink{interface_n_substitute_1_1_routing_1_1_i_route}{IRoute}} $>$ next\+Route\+Factory)
+\begin{DoxyCompactList}\small\item\em Sets the route to use for the next call dispatch on the current thread for the specified {\itshape call\+Router} . \end{DoxyCompactList}\item 
+Func$<$ \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_substitute_state}{ISubstitute\+State}}, \mbox{\hyperlink{interface_n_substitute_1_1_routing_1_1_i_route}{IRoute}} $>$? \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_thread_local_context_a1dfab417068546a597b4165c92ae79e0}{Use\+Next\+Route}} (\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_router}{ICall\+Router}} call\+Router)
+\begin{DoxyCompactList}\small\item\em Returns the previously configured next route and resets the stored value. If route was configured for the different router, returns {\ttfamily null} and persist the route info. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_thread_local_context_ade6b82bc5a6c709098363198e25b1897}{Clear\+Last\+Call\+Router}} ()
+\item 
+void \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_thread_local_context_aa569375751833402b590995086cc73f4}{Enqueue\+Argument\+Specification}} (\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_arguments_1_1_i_argument_specification}{IArgument\+Specification}} spec)
+\item 
+IList$<$ \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_arguments_1_1_i_argument_specification}{IArgument\+Specification}} $>$ \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_thread_local_context_aaec49fcbf881b1750847fcefa09134b5}{Dequeue\+All\+Argument\+Specifications}} ()
+\item 
+void \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_thread_local_context_aa61afc7f2b94b280a5a28bcac0013c39}{Set\+Pending\+Raising\+Event\+Arguments\+Factory}} (Func$<$ \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call}{ICall}}, object?\mbox{[}$\,$\mbox{]}$>$ get\+Arguments)
+\item 
+Func$<$ \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call}{ICall}}, object?\mbox{[}$\,$\mbox{]}$>$? \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_thread_local_context_ac77f1c4446565e2ce6e59e73e7762711}{Use\+Pending\+Raising\+Event\+Arguments\+Factory}} ()
+\begin{DoxyCompactList}\small\item\em Returns the previously set arguments factory and resets the stored value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_thread_local_context_aea95d6327d12ddd2699ca825d5e9e63a}{Run\+In\+Query\+Context}} (Action calls, \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_query}{IQuery}} query)
+\begin{DoxyCompactList}\small\item\em Invokes the passed callback in a context of the specified query. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_thread_local_context_a2d9d1ce4f6d2e71ee21767e4c76c01e3}{Register\+In\+Context\+Query}} (\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call}{ICall}} call)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_pending_specification}{IPending\+Specification}} \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_thread_local_context_ab0faf3ce64a5b3dc34bb978d2ed2ed33}{Pending\+Specification}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_thread_local_context_a48c3e8396e8436e62c5954aa1fc86675}{Is\+Querying}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_thread_local_context}{NSubstitute.\+Core.\+IThread\+Local\+Context}}}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_n_substitute_1_1_core_1_1_thread_local_context_ade6b82bc5a6c709098363198e25b1897}\index{NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}!ClearLastCallRouter@{ClearLastCallRouter}}
+\index{ClearLastCallRouter@{ClearLastCallRouter}!NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}}
+\doxysubsubsection{\texorpdfstring{ClearLastCallRouter()}{ClearLastCallRouter()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_thread_local_context_ade6b82bc5a6c709098363198e25b1897} 
+void NSubstitute.\+Core.\+Thread\+Local\+Context.\+Clear\+Last\+Call\+Router (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_thread_local_context}{NSubstitute.\+Core.\+IThread\+Local\+Context}}.
+
+\Hypertarget{class_n_substitute_1_1_core_1_1_thread_local_context_aaec49fcbf881b1750847fcefa09134b5}\index{NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}!DequeueAllArgumentSpecifications@{DequeueAllArgumentSpecifications}}
+\index{DequeueAllArgumentSpecifications@{DequeueAllArgumentSpecifications}!NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}}
+\doxysubsubsection{\texorpdfstring{DequeueAllArgumentSpecifications()}{DequeueAllArgumentSpecifications()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_thread_local_context_aaec49fcbf881b1750847fcefa09134b5} 
+IList$<$ \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_arguments_1_1_i_argument_specification}{IArgument\+Specification}} $>$ NSubstitute.\+Core.\+Thread\+Local\+Context.\+Dequeue\+All\+Argument\+Specifications (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_thread_local_context}{NSubstitute.\+Core.\+IThread\+Local\+Context}}.
+
+\Hypertarget{class_n_substitute_1_1_core_1_1_thread_local_context_aa569375751833402b590995086cc73f4}\index{NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}!EnqueueArgumentSpecification@{EnqueueArgumentSpecification}}
+\index{EnqueueArgumentSpecification@{EnqueueArgumentSpecification}!NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}}
+\doxysubsubsection{\texorpdfstring{EnqueueArgumentSpecification()}{EnqueueArgumentSpecification()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_thread_local_context_aa569375751833402b590995086cc73f4} 
+void NSubstitute.\+Core.\+Thread\+Local\+Context.\+Enqueue\+Argument\+Specification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_arguments_1_1_i_argument_specification}{IArgument\+Specification}}}]{spec}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_thread_local_context}{NSubstitute.\+Core.\+IThread\+Local\+Context}}.
+
+\Hypertarget{class_n_substitute_1_1_core_1_1_thread_local_context_ae8a42c98c3f17e70872437262d0829c5}\index{NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}!LastCallShouldReturn@{LastCallShouldReturn}}
+\index{LastCallShouldReturn@{LastCallShouldReturn}!NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}}
+\doxysubsubsection{\texorpdfstring{LastCallShouldReturn()}{LastCallShouldReturn()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_thread_local_context_ae8a42c98c3f17e70872437262d0829c5} 
+\mbox{\hyperlink{class_n_substitute_1_1_core_1_1_configured_call}{Configured\+Call}} NSubstitute.\+Core.\+Thread\+Local\+Context.\+Last\+Call\+Should\+Return (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_return}{IReturn}}}]{value}{, }\item[{\mbox{\hyperlink{class_n_substitute_1_1_core_1_1_match_args}{Match\+Args}}}]{match\+Args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_thread_local_context}{NSubstitute.\+Core.\+IThread\+Local\+Context}}.
+
+\Hypertarget{class_n_substitute_1_1_core_1_1_thread_local_context_a2d9d1ce4f6d2e71ee21767e4c76c01e3}\index{NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}!RegisterInContextQuery@{RegisterInContextQuery}}
+\index{RegisterInContextQuery@{RegisterInContextQuery}!NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}}
+\doxysubsubsection{\texorpdfstring{RegisterInContextQuery()}{RegisterInContextQuery()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_thread_local_context_a2d9d1ce4f6d2e71ee21767e4c76c01e3} 
+void NSubstitute.\+Core.\+Thread\+Local\+Context.\+Register\+In\+Context\+Query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call}{ICall}}}]{call}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_thread_local_context}{NSubstitute.\+Core.\+IThread\+Local\+Context}}.
+
+\Hypertarget{class_n_substitute_1_1_core_1_1_thread_local_context_aea95d6327d12ddd2699ca825d5e9e63a}\index{NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}!RunInQueryContext@{RunInQueryContext}}
+\index{RunInQueryContext@{RunInQueryContext}!NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}}
+\doxysubsubsection{\texorpdfstring{RunInQueryContext()}{RunInQueryContext()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_thread_local_context_aea95d6327d12ddd2699ca825d5e9e63a} 
+void NSubstitute.\+Core.\+Thread\+Local\+Context.\+Run\+In\+Query\+Context (\begin{DoxyParamCaption}\item[{Action}]{calls}{, }\item[{\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_query}{IQuery}}}]{query}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Invokes the passed callback in a context of the specified query. 
+
+
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_thread_local_context_adeab97c7f7032b0cb2ded26db532ae3b}{NSubstitute.\+Core.\+IThread\+Local\+Context}}.
+
+\Hypertarget{class_n_substitute_1_1_core_1_1_thread_local_context_aa58700f1041f23c6458fd68dc5ea4a05}\index{NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}!SetLastCallRouter@{SetLastCallRouter}}
+\index{SetLastCallRouter@{SetLastCallRouter}!NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}}
+\doxysubsubsection{\texorpdfstring{SetLastCallRouter()}{SetLastCallRouter()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_thread_local_context_aa58700f1041f23c6458fd68dc5ea4a05} 
+void NSubstitute.\+Core.\+Thread\+Local\+Context.\+Set\+Last\+Call\+Router (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_router}{ICall\+Router}}}]{call\+Router}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_thread_local_context}{NSubstitute.\+Core.\+IThread\+Local\+Context}}.
+
+\Hypertarget{class_n_substitute_1_1_core_1_1_thread_local_context_a51c92f8aa4286052ea05a76ef8788135}\index{NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}!SetNextRoute@{SetNextRoute}}
+\index{SetNextRoute@{SetNextRoute}!NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}}
+\doxysubsubsection{\texorpdfstring{SetNextRoute()}{SetNextRoute()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_thread_local_context_a51c92f8aa4286052ea05a76ef8788135} 
+void NSubstitute.\+Core.\+Thread\+Local\+Context.\+Set\+Next\+Route (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_router}{ICall\+Router}}}]{call\+Router}{, }\item[{Func$<$ \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_substitute_state}{ISubstitute\+State}}, \mbox{\hyperlink{interface_n_substitute_1_1_routing_1_1_i_route}{IRoute}} $>$}]{next\+Route\+Factory}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the route to use for the next call dispatch on the current thread for the specified {\itshape call\+Router} . 
+
+
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_thread_local_context_ae9e2cce6ead31b08fc814c83742319e6}{NSubstitute.\+Core.\+IThread\+Local\+Context}}.
+
+\Hypertarget{class_n_substitute_1_1_core_1_1_thread_local_context_aa61afc7f2b94b280a5a28bcac0013c39}\index{NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}!SetPendingRaisingEventArgumentsFactory@{SetPendingRaisingEventArgumentsFactory}}
+\index{SetPendingRaisingEventArgumentsFactory@{SetPendingRaisingEventArgumentsFactory}!NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}}
+\doxysubsubsection{\texorpdfstring{SetPendingRaisingEventArgumentsFactory()}{SetPendingRaisingEventArgumentsFactory()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_thread_local_context_aa61afc7f2b94b280a5a28bcac0013c39} 
+void NSubstitute.\+Core.\+Thread\+Local\+Context.\+Set\+Pending\+Raising\+Event\+Arguments\+Factory (\begin{DoxyParamCaption}\item[{Func$<$ \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call}{ICall}}, object?\mbox{[}$\,$\mbox{]}$>$}]{get\+Arguments}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_thread_local_context}{NSubstitute.\+Core.\+IThread\+Local\+Context}}.
+
+\Hypertarget{class_n_substitute_1_1_core_1_1_thread_local_context_a1dfab417068546a597b4165c92ae79e0}\index{NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}!UseNextRoute@{UseNextRoute}}
+\index{UseNextRoute@{UseNextRoute}!NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}}
+\doxysubsubsection{\texorpdfstring{UseNextRoute()}{UseNextRoute()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_thread_local_context_a1dfab417068546a597b4165c92ae79e0} 
+Func$<$ \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_substitute_state}{ISubstitute\+State}}, \mbox{\hyperlink{interface_n_substitute_1_1_routing_1_1_i_route}{IRoute}} $>$? NSubstitute.\+Core.\+Thread\+Local\+Context.\+Use\+Next\+Route (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_router}{ICall\+Router}}}]{call\+Router}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the previously configured next route and resets the stored value. If route was configured for the different router, returns {\ttfamily null} and persist the route info. 
+
+
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_thread_local_context_a77861011718fb9037477dce53c599b8a}{NSubstitute.\+Core.\+IThread\+Local\+Context}}.
+
+\Hypertarget{class_n_substitute_1_1_core_1_1_thread_local_context_ac77f1c4446565e2ce6e59e73e7762711}\index{NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}!UsePendingRaisingEventArgumentsFactory@{UsePendingRaisingEventArgumentsFactory}}
+\index{UsePendingRaisingEventArgumentsFactory@{UsePendingRaisingEventArgumentsFactory}!NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}}
+\doxysubsubsection{\texorpdfstring{UsePendingRaisingEventArgumentsFactory()}{UsePendingRaisingEventArgumentsFactory()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_thread_local_context_ac77f1c4446565e2ce6e59e73e7762711} 
+Func$<$ \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call}{ICall}}, object?\mbox{[}$\,$\mbox{]}$>$? NSubstitute.\+Core.\+Thread\+Local\+Context.\+Use\+Pending\+Raising\+Event\+Arguments\+Factory (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the previously set arguments factory and resets the stored value. 
+
+
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_thread_local_context_a82dddd860f42279dd4c9f15096bcf9f4}{NSubstitute.\+Core.\+IThread\+Local\+Context}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_n_substitute_1_1_core_1_1_thread_local_context_a48c3e8396e8436e62c5954aa1fc86675}\index{NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}!IsQuerying@{IsQuerying}}
+\index{IsQuerying@{IsQuerying}!NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}}
+\doxysubsubsection{\texorpdfstring{IsQuerying}{IsQuerying}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_thread_local_context_a48c3e8396e8436e62c5954aa1fc86675} 
+bool NSubstitute.\+Core.\+Thread\+Local\+Context.\+Is\+Querying\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_thread_local_context}{NSubstitute.\+Core.\+IThread\+Local\+Context}}.
+
+\Hypertarget{class_n_substitute_1_1_core_1_1_thread_local_context_ab0faf3ce64a5b3dc34bb978d2ed2ed33}\index{NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}!PendingSpecification@{PendingSpecification}}
+\index{PendingSpecification@{PendingSpecification}!NSubstitute.Core.ThreadLocalContext@{NSubstitute.Core.ThreadLocalContext}}
+\doxysubsubsection{\texorpdfstring{PendingSpecification}{PendingSpecification}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_thread_local_context_ab0faf3ce64a5b3dc34bb978d2ed2ed33} 
+\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_pending_specification}{IPending\+Specification}} NSubstitute.\+Core.\+Thread\+Local\+Context.\+Pending\+Specification\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_thread_local_context}{NSubstitute.\+Core.\+IThread\+Local\+Context}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/net.\+tnrd.\+nsubstitute@449712b25a/\+Runtime/\+Core/Thread\+Local\+Context.\+cs\end{DoxyCompactItemize}

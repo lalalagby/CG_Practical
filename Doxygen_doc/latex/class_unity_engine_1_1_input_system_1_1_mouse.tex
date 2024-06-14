@@ -1,0 +1,550 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Mouse Class Reference}
+\hypertarget{class_unity_engine_1_1_input_system_1_1_mouse}{}\label{class_unity_engine_1_1_input_system_1_1_mouse}\index{UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}}
+
+
+An input device representing a mouse.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Mouse\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.469136cm]{class_unity_engine_1_1_input_system_1_1_mouse}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_mouse_a7db1fcc707062369699c9395aaef2d37}{Make\+Current}} ()
+\begin{DoxyCompactList}\small\item\em Called when the mouse becomes the current mouse. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_mouse_a9eb8330b40ca072563cd5ecf5e0e6220}{Warp\+Cursor\+Position}} (Vector2 \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_pointer_a56648a46fa117cfe39f1bd3530c49700}{position}})
+\begin{DoxyCompactList}\small\item\em Move the operating system\textquotesingle{}s mouse cursor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_pointer}{Unity\+Engine.\+Input\+System.\+Pointer}}}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_pointer_af520df194ce0742bed345af0faf1b3f3}{Make\+Current}} ()
+\begin{DoxyCompactList}\small\item\em Make this the current device of its type.
+
+This method is called automatically by the input system when a device is added or when input is received on it. Many types of devices have {\ttfamily .current} getters that allow querying the last used device of a specific type directly (for example, see \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a6f0bd4b71340da07b56f6ec56097da1d}{Gamepad.\+current}).
+
+There is one special case, however, related to noise. A device that has noisy controls (i.\+e. controls for which \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_afa5a8531d7c9a030e8e484560a59fe6f}{Input\+Control.\+noisy} is true) may receive input events that contain no meaningful user interaction but are simply just noise from the device. A good example of this is the PS4 gamepad which has a built-\/in gyro and may thus constantly feed events into the input system even if not being actually in use. If, for example, an Xbox gamepad and PS4 gamepad are both connected to a PC and the user is playing with the Xbox gamepad, the PS4 gamepad would still constantly make itself \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a6f0bd4b71340da07b56f6ec56097da1d}{Gamepad.\+current} by simply flooding the system with events. Hence why by default, noise on {\ttfamily .current} getters will be filtered out and a device will only see {\ttfamily Make\+Current} getting called if there input was detected on non-\/noisy controls.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Unity\+Engine.\+Input\+System.\+Input\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Input\+Device} ()
+\begin{DoxyCompactList}\small\item\em This constructor is public for the sake of {\ttfamily Activator.\+Create\+Instance} only. To construct devices, use methods such as Input\+System.\+Add\+Device$<$\+TDevice$>$(string). Manually using {\ttfamily new} on \doxylink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device} will not result in a usable device. \end{DoxyCompactList}\item 
+override unsafe object {\bfseries Read\+Value\+From\+Buffer\+As\+Object} (void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size)
+\item 
+override unsafe object {\bfseries Read\+Value\+From\+State\+As\+Object} (void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\item 
+override unsafe void {\bfseries Read\+Value\+From\+State\+Into\+Buffer} (void \texorpdfstring{$\ast$}{*}state\+Ptr, void \texorpdfstring{$\ast$}{*}buffer\+Ptr, int buffer\+Size)
+\item 
+override unsafe bool {\bfseries Compare\+Value} (void \texorpdfstring{$\ast$}{*}first\+State\+Ptr, void \texorpdfstring{$\ast$}{*}second\+State\+Ptr)
+\item 
+unsafe long \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_a7e2bf96b44d21b71f7a7b38106c72d3c}{Execute\+Command$<$ TCommand $>$}} (ref TCommand command)
+\begin{DoxyCompactList}\small\item\em Perform a device-\/specific command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control$<$ TValue $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+override string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_add7e6fae45c5135772098325a62e1705}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Return a string representation of the control useful for debugging. \end{DoxyCompactList}\item 
+unsafe float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Evaluate\+Magnitude}} ()
+\begin{DoxyCompactList}\small\item\em Compute an absolute, normalized magnitude value that indicates the extent to which the control is actuated. \end{DoxyCompactList}\item 
+virtual unsafe float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a039f4a670688b71cc026c661e0f9e80c}{Evaluate\+Magnitude}} (void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\begin{DoxyCompactList}\small\item\em Compute an absolute, normalized magnitude value that indicates the extent to which the control is actuated in the given state. \end{DoxyCompactList}\item 
+unsafe object {\bfseries Read\+Value\+From\+Buffer\+As\+Object} (void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size)
+\item 
+unsafe object \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a90e01e631b36eee981a31c308d96335e}{Read\+Value\+From\+State\+As\+Object}} (void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\begin{DoxyCompactList}\small\item\em Read the control\textquotesingle{}s final, processed value from the given state and return the value as an object. \end{DoxyCompactList}\item 
+unsafe void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_ac1692b72e9886b17c6439a87548ac73f}{Read\+Value\+From\+State\+Into\+Buffer}} (void \texorpdfstring{$\ast$}{*}state\+Ptr, void \texorpdfstring{$\ast$}{*}buffer\+Ptr, int buffer\+Size)
+\begin{DoxyCompactList}\small\item\em Read the control\textquotesingle{}s final, processed value from the given state and store it in the given buffer. \end{DoxyCompactList}\item 
+virtual unsafe void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a9337dcaddb6396e10b6de5a5e0012058}{Write\+Value\+From\+Buffer\+Into\+State}} (void \texorpdfstring{$\ast$}{*}buffer\+Ptr, int buffer\+Size, void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\begin{DoxyCompactList}\small\item\em Read a value from the given memory and store it as state. \end{DoxyCompactList}\item 
+virtual unsafe void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_ae0c47d69bbd2187830bdc0b72551788f}{Write\+Value\+From\+Object\+Into\+State}} (object \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}{value}}, void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\begin{DoxyCompactList}\small\item\em Read a value object and store it as state in the given memory. \end{DoxyCompactList}\item 
+unsafe bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a4cd88d98c79c75227e82734933fe83ac}{Compare\+Value}} (void \texorpdfstring{$\ast$}{*}first\+State\+Ptr, void \texorpdfstring{$\ast$}{*}second\+State\+Ptr)
+\begin{DoxyCompactList}\small\item\em Compare the value of the control as read from {\itshape first\+State\+Ptr}  to that read from {\itshape second\+State\+Ptr}  and return true if they are equal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a5426e6f11ab6c29da5d90256c8e7fe96}{Try\+Get\+Child\+Control}} (string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a60d8e17e65b94f2cf7a0ce7f10af0075}{path}})
+\begin{DoxyCompactList}\small\item\em Try to find a child control matching the given path. \end{DoxyCompactList}\item 
+TControl \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_aa0992bf4b4786f4a42887249c6890d78}{Try\+Get\+Child\+Control$<$ TControl $>$}} (string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a60d8e17e65b94f2cf7a0ce7f10af0075}{path}})
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} {\bfseries Get\+Child\+Control} (string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a60d8e17e65b94f2cf7a0ce7f10af0075}{path}})
+\item 
+TControl \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_adb1b7bfd6ae75e1a70c313303ece19ed}{Get\+Child\+Control$<$ TControl $>$}} (string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a60d8e17e65b94f2cf7a0ce7f10af0075}{path}})
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_ab30a6abcfbefca2dfe3666298f3df349}{Apply\+Parameter\+Changes}} ()
+\begin{DoxyCompactList}\small\item\em Apply built-\/in parameters changes (e.\+g. \doxylink{class_unity_engine_1_1_input_system_1_1_controls_1_1_axis_control_a502c9aaacf2eccc60b765b446cd2723c}{Axis\+Control.\+invert}, others), recompute \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a653394729f37ee532b315993885873ca}{Input\+Control.\+optimized\+Control\+Data\+Type} for impacted controls and clear cached value. \end{DoxyCompactList}\item 
+TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a2130e1c517844e5ae729eba1cd798c94}{Read\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current value of the control after processors have been applied. \end{DoxyCompactList}\item 
+TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a9e24c5086ac2dae3033b1a6895dcc147}{Read\+Value\+From\+Previous\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Get the control\textquotesingle{}s value from the previous frame (Input\+Control.\+previous\+Frame\+State\+Ptr). \end{DoxyCompactList}\item 
+TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a832514a26fff85b4ba3db603d0ef794c}{Read\+Default\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Get the control\textquotesingle{}s default value. \end{DoxyCompactList}\item 
+unsafe TValue {\bfseries Read\+Value\+From\+State} (void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\item 
+unsafe TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_aaeb8d6dd5f5099345fa155f9c3c2f3d1}{Read\+Value\+From\+State\+With\+Caching}} (void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\begin{DoxyCompactList}\small\item\em Read value from provided {\itshape state\+Ptr}  and apply processors. Try cache result if possible. \end{DoxyCompactList}\item 
+unsafe TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a03e5a1d1bf49c38b59219e039da7a104}{Read\+Unprocessed\+Value\+From\+State\+With\+Caching}} (void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\begin{DoxyCompactList}\small\item\em Read value from provided {\itshape state\+Ptr} . Try cache result if possible. \end{DoxyCompactList}\item 
+TValue {\bfseries Read\+Unprocessed\+Value} ()
+\item 
+unsafe TValue {\bfseries Read\+Unprocessed\+Value\+From\+State} (void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\item 
+override unsafe object {\bfseries Read\+Value\+From\+State\+As\+Object} (void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\item 
+override unsafe void {\bfseries Read\+Value\+From\+State\+Into\+Buffer} (void \texorpdfstring{$\ast$}{*}state\+Ptr, void \texorpdfstring{$\ast$}{*}buffer\+Ptr, int buffer\+Size)
+\item 
+override unsafe void {\bfseries Write\+Value\+From\+Buffer\+Into\+State} (void \texorpdfstring{$\ast$}{*}buffer\+Ptr, int buffer\+Size, void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\item 
+override unsafe void {\bfseries Write\+Value\+From\+Object\+Into\+State} (object \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}{value}}, void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\item 
+virtual unsafe void {\bfseries Write\+Value\+Into\+State} (TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}{value}}, void \texorpdfstring{$\ast$}{*}state\+Ptr)
+\item 
+override unsafe object {\bfseries Read\+Value\+From\+Buffer\+As\+Object} (void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size)
+\item 
+override unsafe bool {\bfseries Compare\+Value} (void \texorpdfstring{$\ast$}{*}first\+State\+Ptr, void \texorpdfstring{$\ast$}{*}second\+State\+Ptr)
+\item 
+TValue {\bfseries Process\+Value} (TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}{value}})
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_aad856d3c6754bb2eb3b46e0a45ef2ad9}{Process\+Value}} (ref TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}{value}})
+\begin{DoxyCompactList}\small\item\em Applies all control processors to the passed value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_mouse_aa30a28ebf7f0cb54c3c660796996a9ea}{On\+Added}} ()
+\begin{DoxyCompactList}\small\item\em Called when the mouse is added to the system. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_mouse_a676fce8d5fdbf283d63deac019ae1fbc}{On\+Removed}} ()
+\begin{DoxyCompactList}\small\item\em Called when the device is removed from the system. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_mouse_a7cd1f3796385bf7448b521e753e24894}{Finish\+Setup}} ()
+\begin{DoxyCompactList}\small\item\em Perform final initialization tasks after the control hierarchy has been put into place.
+
+This method can be overridden to perform control-\/ or device-\/specific setup work. The most common use case is for looking up child controls and storing them in local getters.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyDevice\ :\ InputDevice}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ ButtonControl\ button\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ AxisControl\ axis\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnFinishSetup()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cache\ controls\ in\ getters.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ button\ =\ GetChildControl(\textcolor{stringliteral}{"{}button"{}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ axis\ =\ GetChildControl(\textcolor{stringliteral}{"{}axis"{}});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+  \end{DoxyCompactList}\item 
+new void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_mouse_a46a5b8e7e38d46b2b317292c49a61755}{On\+Next\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Implements \doxylink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_state_callback_receiver_adce9d48e2f0993385b8b2384cb4ad43b}{IInput\+State\+Callback\+Receiver.\+On\+Next\+Update} for the mouse. \end{DoxyCompactList}\item 
+new unsafe void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_mouse_a5a0b9033b629993e26940b4f9eeee2a0}{On\+State\+Event}} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr}{Input\+Event\+Ptr}} event\+Ptr)
+\begin{DoxyCompactList}\small\item\em Implements \doxylink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_state_callback_receiver_a559e92564d67323e1b743c0f9beb1bd1}{IInput\+State\+Callback\+Receiver.\+On\+State\+Event} for the mouse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_pointer}{Unity\+Engine.\+Input\+System.\+Pointer}}}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_pointer_a9101acd433070e0b960fa707e98f39a9}{On\+Removed}} ()
+\begin{DoxyCompactList}\small\item\em Called by the system when the device is removed from Input\+System.\+devices.
+
+This is called {\itshape after} the device has already been removed.  \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_pointer_a393ea39b9f736373f62cc01b9cd9e567}{Finish\+Setup}} ()
+\begin{DoxyCompactList}\small\item\em Perform final initialization tasks after the control hierarchy has been put into place.
+
+This method can be overridden to perform control-\/ or device-\/specific setup work. The most common use case is for looking up child controls and storing them in local getters.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyDevice\ :\ InputDevice}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ ButtonControl\ button\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ AxisControl\ axis\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnFinishSetup()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cache\ controls\ in\ getters.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ button\ =\ GetChildControl(\textcolor{stringliteral}{"{}button"{}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ axis\ =\ GetChildControl(\textcolor{stringliteral}{"{}axis"{}});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_pointer_ad094347ca32340201c61f8495a0cf007}{On\+Next\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Called whenever the input system advances by one frame. \end{DoxyCompactList}\item 
+unsafe void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_pointer_a11e0abe9b00357720b2bcbbe343a8138}{On\+State\+Event}} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr}{Input\+Event\+Ptr}} event\+Ptr)
+\begin{DoxyCompactList}\small\item\em Called when the pointer receives a state event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Unity\+Engine.\+Input\+System.\+Input\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_aee9bf97a14b8caea501895150b370793}{On\+Configuration\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Called by the system when the device configuration is changed. This happens when the backend sends a Device\+Configuration\+Event for the device. \end{DoxyCompactList}\item 
+virtual unsafe long {\bfseries Execute\+Command} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_device_command}{Input\+Device\+Command}} \texorpdfstring{$\ast$}{*}command\+Ptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control$<$ TValue $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a96934d2028848054141a854553646df7}{Refresh\+Configuration\+If\+Needed}} ()
+\begin{DoxyCompactList}\small\item\em Call Refresh\+Configuration if the configuration has in the interim been invalidated by a Device\+Configuration\+Event. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_aa3fd7e9f04578307e642f5da86b1f3b2}{Refresh\+Configuration}} ()
+\item 
+virtual \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_four_c_c}{Four\+CC}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a25e0b34cbff9915c141124e943a4bbc9}{Calculate\+Optimized\+Control\+Data\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Calculates and returns a optimized data type that can represent a control\textquotesingle{}s value in memory directly. The value then is cached in \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a653394729f37ee532b315993885873ca}{Input\+Control.\+optimized\+Control\+Data\+Type}. This method is for internal use only, you should not call this from your own code. \end{DoxyCompactList}\item 
+override void {\bfseries Finish\+Setup} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_delta_control}{Delta\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_mouse_a48bec1be13fb0983b120a1a7e4597854}{scroll}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The horizontal and vertical scroll wheels. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_mouse_a595f9a73e9c41d4565d0d0742448b09c}{left\+Button}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The left mouse button. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_mouse_ac63e1158a6eb834f35991ed1a92914f4}{middle\+Button}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The middle mouse button. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_mouse_a991be121f531145ba1c0f3bded17170c}{right\+Button}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The right mouse button. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_mouse_a7cdabfa515cb2c0b8f1496ac610ea1fd}{back\+Button}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The first side button, often labeled/used as "{}back"{}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_mouse_a2799a4b183ee5705f7c0204a0741c7d2}{forward\+Button}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The second side button, often labeled/used as "{}forward"{}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_integer_control}{Integer\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_mouse_a1657dac794e03771b274c448ccd6c6e7}{click\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Number of times any of the mouse buttons has been clicked in succession within the system-\/defined click time threshold. \end{DoxyCompactList}\item 
+static new \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_mouse}{Mouse}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_mouse_aa28c79a23d415a777ae4360661236fec}{current}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The mouse that was added or updated last or null if there is no mouse connected to the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_pointer}{Unity\+Engine.\+Input\+System.\+Pointer}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_vector2_control}{Vector2\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_pointer_a56648a46fa117cfe39f1bd3530c49700}{position}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The current pointer coordinates in window space. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_delta_control}{Delta\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_pointer_a9bc9a66dcf6b4d35ee95d09870c73c4b}{delta}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The current window-\/space motion delta of the pointer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_vector2_control}{Vector2\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_pointer_aa61c0583b46637d315bdaac4506cc17d}{radius}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Window-\/space radius of the pointer contact with the surface. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_axis_control}{Axis\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_pointer_a45223ffb13bf6dba7351d423c635c4ec}{pressure}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Normalized pressure with which the pointer is currently pressed while in contact with the pointer surface. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_pointer_a150c38a69a848c7b2cb702696763784b}{press}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the pointer is pressed down. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_integer_control}{Integer\+Control}} {\bfseries display\+Index}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The index of the display the \doxylink{class_unity_engine_1_1_input_system_1_1_pointer}{Pointer} is currently on. This is useful for multiple screen setups. This may not be supported on all platforms. When unsupported, this will always produce the index of the primary display i.\+e. zero.  \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_pointer}{Pointer}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_pointer_a1460ffdd490f78f36c270e12c90910f5}{current}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The pointer that was added or used last by the user or {\ttfamily null} if there is no pointer device connected to the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Unity\+Engine.\+Input\+System.\+Input\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_device_description}{Input\+Device\+Description}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_a84bd0036ee4b386967b855c4707cd4b1}{description}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Metadata describing the device (product name etc.). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_a11b982f33c9ccecd0cbf73501e363e8f}{enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the device is currently enabled (that is, sends and receives events). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_acecc008067d46ee9a1db3cf059f6c709}{can\+Run\+In\+Background}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If true, the device is capable of delivering input while the application is running in the background, i.\+e. while {\ttfamily Application.\+is\+Focused} is false. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_a4ff5e7586f91a321108317341566d4eb}{added}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the device has been added to the system. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_a2eb3061178a0001505a28f4ac2bbf5f0}{remote}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the device is mirrored from a remote input system and not actually present as a "{}real"{} device in the local system. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_a1b56ee045064190e84a9c80098da6f33}{native}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the device comes from the \doxylink{}{runtime} \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_a8582d897119e1524b4f695447afbc6c1}{update\+Before\+Render}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the device requires an extra update before rendering. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_a906021c4ff4cee89220ae87e7c253c56}{device\+Id}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Unique numeric ID for the device. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_a74f7cc4c07569928e3b9c72e8e7ed30d}{last\+Update\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Timestamp of last state event used to update the device. \end{DoxyCompactList}\item 
+bool {\bfseries was\+Updated\+This\+Frame}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_a145bc849c7d1afc083d7e54e9b05e61a}{all\+Controls}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A flattened list of controls that make up the device. \end{DoxyCompactList}\item 
+override Type \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_a0f4b17703125334f6281448722e971b0}{value\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+override int {\bfseries value\+Size\+In\+Bytes}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}} $>$ {\bfseries all}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Unity\+Engine.\+Input\+System.\+Input\+Control$<$ TValue $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a94f646dff1e9cbbbf84857bffa490274}{name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The name of the control, i.\+e. the final name part in its path. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_ac31c2a2f570e527aacc86ee8060e2ecc}{display\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The text to display as the name of the control. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_ab4716691d15fffa36ab61fec8c05c6ac}{short\+Display\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An alternate, abbreviated \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_ac31c2a2f570e527aacc86ee8060e2ecc}{display\+Name} (for example "{}\+LMB"{} instead of "{}\+Left Button"{}). \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a60d8e17e65b94f2cf7a0ce7f10af0075}{path}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Full path all the way from the root. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a8d349861ff83c7a74573bea9a2cf2886}{layout}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Layout the control is based on. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a89c641b9e70687d8d2d5049bb6c4bc46}{variants}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Semicolon-\/separated list of variants of the control layout or "{}default"{}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a5cb217f04299c9286604910b9caa2cd2}{device}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The device that this control is a part of. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_abce81da2e91c3b46a949185b66fff32d}{parent}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The immediate parent of the control or null if the control has no parent (which, once fully constructed) will only be the case for Input\+Devices). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a7861c4cd07f6b756c6f22c18f195a3c1}{children}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of immediate children. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_interned_string}{Interned\+String}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a09e4b347afac3558d9dbe4c4919457b8}{usages}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of usage tags associated with the control. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_interned_string}{Interned\+String}} $>$ {\bfseries aliases}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_block}{Input\+State\+Block}} {\bfseries state\+Block}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_afa5a8531d7c9a030e8e484560a59fe6f}{noisy}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the control is considered noisy. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a11348388ab9565068c0f1294de909b90}{synthetic}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the control is considered synthetic. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a133ddd2bc028dd97d624ff32fd842fff}{this\mbox{[}string path\mbox{]}}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Fetch a control from the control\textquotesingle{}s hierarchy by name. \end{DoxyCompactList}\item 
+Type \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_aa863a140183822dd850659336c9667ba}{value\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the underlying value type of this control. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a181a81b1a64265fec4919b1f09fe7940}{value\+Size\+In\+Bytes}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Size in bytes of values that the control returns. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_ab7546f119a75062ec7df894911cc5458}{magnitude}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Compute an absolute, normalized magnitude value that indicates the extent to which the control is actuated. Shortcut for \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Evaluate\+Magnitude()}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_four_c_c}{Four\+CC}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a653394729f37ee532b315993885873ca}{optimized\+Control\+Data\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For some types of control you can safely read/write state memory directly which is much faster than calling Read\+Unprocessed\+Value\+From\+State/\+Write\+Value\+Into\+State. This method returns a type that you can use for reading/writing the control directly, or it returns Input\+State\+Block.\+k\+Format\+Invalid if it\textquotesingle{}s not possible for this type of control. \end{DoxyCompactList}\item 
+override Type {\bfseries value\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+override int {\bfseries value\+Size\+In\+Bytes}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+ref readonly TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_a190888e1bbbd636276392fb3b8625172}{value}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the current value of the control after processors have been applied. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Unity\+Engine.\+Input\+System.\+Input\+Device}}}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_ae49df32fe16da4c9ab6cc0bb49ed045e}{Invalid\+Device\+Id}} = 0
+\begin{DoxyCompactList}\small\item\em Value of an invalid \doxylink{class_unity_engine_1_1_input_system_1_1_input_device_a906021c4ff4cee89220ae87e7c253c56}{device\+Id}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An input device representing a mouse. 
+
+Adds a scroll wheel and a typical 3-\/button setup with a left, middle, and right button.
+
+To control cursor display and behavior, use Unity\+Engine.\+Cursor. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_mouse_a7cd1f3796385bf7448b521e753e24894}\index{UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}!FinishSetup@{FinishSetup}}
+\index{FinishSetup@{FinishSetup}!UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}}
+\doxysubsubsection{\texorpdfstring{FinishSetup()}{FinishSetup()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_mouse_a7cd1f3796385bf7448b521e753e24894} 
+override void Unity\+Engine.\+Input\+System.\+Mouse.\+Finish\+Setup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Perform final initialization tasks after the control hierarchy has been put into place.
+
+This method can be overridden to perform control-\/ or device-\/specific setup work. The most common use case is for looking up child controls and storing them in local getters.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyDevice\ :\ InputDevice}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ ButtonControl\ button\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ AxisControl\ axis\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnFinishSetup()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cache\ controls\ in\ getters.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ button\ =\ GetChildControl(\textcolor{stringliteral}{"{}button"{}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ axis\ =\ GetChildControl(\textcolor{stringliteral}{"{}axis"{}});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+  
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control_ad017396c837bfdf27500932b4ecd77ce}{Unity\+Engine.\+Input\+System.\+Input\+Control$<$ TValue $>$}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_mouse_a7db1fcc707062369699c9395aaef2d37}\index{UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}!MakeCurrent@{MakeCurrent}}
+\index{MakeCurrent@{MakeCurrent}!UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}}
+\doxysubsubsection{\texorpdfstring{MakeCurrent()}{MakeCurrent()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_mouse_a7db1fcc707062369699c9395aaef2d37} 
+override void Unity\+Engine.\+Input\+System.\+Mouse.\+Make\+Current (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called when the mouse becomes the current mouse. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_a0a98203c32eb180ab8b7c862dc27635c}{Unity\+Engine.\+Input\+System.\+Input\+Device}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_mouse_aa30a28ebf7f0cb54c3c660796996a9ea}\index{UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}!OnAdded@{OnAdded}}
+\index{OnAdded@{OnAdded}!UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}}
+\doxysubsubsection{\texorpdfstring{OnAdded()}{OnAdded()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_mouse_aa30a28ebf7f0cb54c3c660796996a9ea} 
+override void Unity\+Engine.\+Input\+System.\+Mouse.\+On\+Added (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called when the mouse is added to the system. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_aa2a3845943c58b663e80a5df467c8e70}{Unity\+Engine.\+Input\+System.\+Input\+Device}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_mouse_a46a5b8e7e38d46b2b317292c49a61755}\index{UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}!OnNextUpdate@{OnNextUpdate}}
+\index{OnNextUpdate@{OnNextUpdate}!UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}}
+\doxysubsubsection{\texorpdfstring{OnNextUpdate()}{OnNextUpdate()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_mouse_a46a5b8e7e38d46b2b317292c49a61755} 
+new void Unity\+Engine.\+Input\+System.\+Mouse.\+On\+Next\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Implements \doxylink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_state_callback_receiver_adce9d48e2f0993385b8b2384cb4ad43b}{IInput\+State\+Callback\+Receiver.\+On\+Next\+Update} for the mouse. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_state_callback_receiver_adce9d48e2f0993385b8b2384cb4ad43b}{Unity\+Engine.\+Input\+System.\+Low\+Level.\+IInput\+State\+Callback\+Receiver}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_mouse_a676fce8d5fdbf283d63deac019ae1fbc}\index{UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}!OnRemoved@{OnRemoved}}
+\index{OnRemoved@{OnRemoved}!UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}}
+\doxysubsubsection{\texorpdfstring{OnRemoved()}{OnRemoved()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_mouse_a676fce8d5fdbf283d63deac019ae1fbc} 
+override void Unity\+Engine.\+Input\+System.\+Mouse.\+On\+Removed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Called when the device is removed from the system. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device_aad95ad9eace58044e140b672e0170f63}{Unity\+Engine.\+Input\+System.\+Input\+Device}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_mouse_a5a0b9033b629993e26940b4f9eeee2a0}\index{UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}!OnStateEvent@{OnStateEvent}}
+\index{OnStateEvent@{OnStateEvent}!UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}}
+\doxysubsubsection{\texorpdfstring{OnStateEvent()}{OnStateEvent()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_mouse_a5a0b9033b629993e26940b4f9eeee2a0} 
+new unsafe void Unity\+Engine.\+Input\+System.\+Mouse.\+On\+State\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr}{Input\+Event\+Ptr}}}]{event\+Ptr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Implements \doxylink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_state_callback_receiver_a559e92564d67323e1b743c0f9beb1bd1}{IInput\+State\+Callback\+Receiver.\+On\+State\+Event} for the mouse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Ptr} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_state_callback_receiver_a559e92564d67323e1b743c0f9beb1bd1}{Unity\+Engine.\+Input\+System.\+Low\+Level.\+IInput\+State\+Callback\+Receiver}}.
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_mouse_a9eb8330b40ca072563cd5ecf5e0e6220}\index{UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}!WarpCursorPosition@{WarpCursorPosition}}
+\index{WarpCursorPosition@{WarpCursorPosition}!UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}}
+\doxysubsubsection{\texorpdfstring{WarpCursorPosition()}{WarpCursorPosition()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_mouse_a9eb8330b40ca072563cd5ecf5e0e6220} 
+void Unity\+Engine.\+Input\+System.\+Mouse.\+Warp\+Cursor\+Position (\begin{DoxyParamCaption}\item[{Vector2}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Move the operating system\textquotesingle{}s mouse cursor. 
+
+REVIEW\+: how should we handle this being called from Editor\+Window\textquotesingle{}s? (where the editor window space processor will turn coordinates automatically into editor window space)
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & New position in player window space.\\
+\hline
+\end{DoxyParams}
+
+
+The \doxylink{class_unity_engine_1_1_input_system_1_1_pointer_a56648a46fa117cfe39f1bd3530c49700}{Pointer.\+position} property will not update immediately but rather will update in the next input update. 
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_mouse_a7cdabfa515cb2c0b8f1496ac610ea1fd}\index{UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}!backButton@{backButton}}
+\index{backButton@{backButton}!UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}}
+\doxysubsubsection{\texorpdfstring{backButton}{backButton}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_mouse_a7cdabfa515cb2c0b8f1496ac610ea1fd} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Mouse.\+back\+Button\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The first side button, often labeled/used as "{}back"{}. 
+
+Control representing the back button on the mouse.
+
+On Windows, this corresponds to {\ttfamily RI\+\_\+\+MOUSE\+\_\+\+BUTTON\+\_\+4}. \Hypertarget{class_unity_engine_1_1_input_system_1_1_mouse_a1657dac794e03771b274c448ccd6c6e7}\index{UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}!clickCount@{clickCount}}
+\index{clickCount@{clickCount}!UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}}
+\doxysubsubsection{\texorpdfstring{clickCount}{clickCount}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_mouse_a1657dac794e03771b274c448ccd6c6e7} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_integer_control}{Integer\+Control}} Unity\+Engine.\+Input\+System.\+Mouse.\+click\+Count\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+Number of times any of the mouse buttons has been clicked in succession within the system-\/defined click time threshold. 
+
+Control representing the mouse click count.\Hypertarget{class_unity_engine_1_1_input_system_1_1_mouse_aa28c79a23d415a777ae4360661236fec}\index{UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}!current@{current}}
+\index{current@{current}!UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}}
+\doxysubsubsection{\texorpdfstring{current}{current}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_mouse_aa28c79a23d415a777ae4360661236fec} 
+new \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_mouse}{Mouse}} Unity\+Engine.\+Input\+System.\+Mouse.\+current\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+The mouse that was added or updated last or null if there is no mouse connected to the system. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_device_a0a98203c32eb180ab8b7c862dc27635c}{Input\+Device.\+Make\+Current}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_mouse_a2799a4b183ee5705f7c0204a0741c7d2}\index{UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}!forwardButton@{forwardButton}}
+\index{forwardButton@{forwardButton}!UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}}
+\doxysubsubsection{\texorpdfstring{forwardButton}{forwardButton}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_mouse_a2799a4b183ee5705f7c0204a0741c7d2} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Mouse.\+forward\+Button\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The second side button, often labeled/used as "{}forward"{}. 
+
+Control representing the forward button on the mouse.
+
+On Windows, this corresponds to {\ttfamily RI\+\_\+\+MOUSE\+\_\+\+BUTTON\+\_\+5}. \Hypertarget{class_unity_engine_1_1_input_system_1_1_mouse_a595f9a73e9c41d4565d0d0742448b09c}\index{UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}!leftButton@{leftButton}}
+\index{leftButton@{leftButton}!UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}}
+\doxysubsubsection{\texorpdfstring{leftButton}{leftButton}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_mouse_a595f9a73e9c41d4565d0d0742448b09c} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Mouse.\+left\+Button\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The left mouse button. 
+
+Control representing the left mouse button.\Hypertarget{class_unity_engine_1_1_input_system_1_1_mouse_ac63e1158a6eb834f35991ed1a92914f4}\index{UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}!middleButton@{middleButton}}
+\index{middleButton@{middleButton}!UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}}
+\doxysubsubsection{\texorpdfstring{middleButton}{middleButton}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_mouse_ac63e1158a6eb834f35991ed1a92914f4} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Mouse.\+middle\+Button\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The middle mouse button. 
+
+Control representing the middle mouse button.\Hypertarget{class_unity_engine_1_1_input_system_1_1_mouse_a991be121f531145ba1c0f3bded17170c}\index{UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}!rightButton@{rightButton}}
+\index{rightButton@{rightButton}!UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}}
+\doxysubsubsection{\texorpdfstring{rightButton}{rightButton}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_mouse_a991be121f531145ba1c0f3bded17170c} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Button\+Control}} Unity\+Engine.\+Input\+System.\+Mouse.\+right\+Button\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The right mouse button. 
+
+Control representing the right mouse button.\Hypertarget{class_unity_engine_1_1_input_system_1_1_mouse_a48bec1be13fb0983b120a1a7e4597854}\index{UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}!scroll@{scroll}}
+\index{scroll@{scroll}!UnityEngine.InputSystem.Mouse@{UnityEngine.InputSystem.Mouse}}
+\doxysubsubsection{\texorpdfstring{scroll}{scroll}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_mouse_a48bec1be13fb0983b120a1a7e4597854} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_controls_1_1_delta_control}{Delta\+Control}} Unity\+Engine.\+Input\+System.\+Mouse.\+scroll\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+
+
+The horizontal and vertical scroll wheels. 
+
+Control representing the mouse scroll wheels.
+
+The {\ttfamily x} component corresponds to the horizontal scroll wheel, the {\ttfamily y} component to the vertical scroll wheel. Most mice do not have horizontal scroll wheels and will thus only see activity on {\ttfamily y}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Devices/Mouse.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,127 @@
+\doxysection{Unity\+Editor.\+U2\+D.\+Sprites.\+ISprite\+Mesh\+Data\+Provider Interface Reference}
+\hypertarget{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_mesh_data_provider}{}\label{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_mesh_data_provider}\index{UnityEditor.U2D.Sprites.ISpriteMeshDataProvider@{UnityEditor.U2D.Sprites.ISpriteMeshDataProvider}}
+
+
+Data Provider interface that deals with Sprite mesh data.  
+
+
+
+
+Inherited by Unity\+Editor.\+U2\+D.\+Sprites.\+Sprite\+Mesh\+Data\+Transfer.
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_unity_editor_1_1_u2_d_1_1_sprites_1_1_vertex2_d_meta_data}{Vertex2\+DMeta\+Data}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_mesh_data_provider_aa39df68eba0b32f40a56b50f4dc0984e}{Get\+Vertices}} (GUID guid)
+\begin{DoxyCompactList}\small\item\em Returns the list of vertex datas for the corresponding Sprite ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_mesh_data_provider_a460871340890e5f5611bc410db7a3cb0}{Set\+Vertices}} (GUID guid, \mbox{\hyperlink{struct_unity_editor_1_1_u2_d_1_1_sprites_1_1_vertex2_d_meta_data}{Vertex2\+DMeta\+Data}}\mbox{[}$\,$\mbox{]} vertices)
+\begin{DoxyCompactList}\small\item\em Sets a new list of vertices for the corresponding Sprite ID. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_mesh_data_provider_aa9ae5edc200d44b974b280e545e97b29}{Get\+Indices}} (GUID guid)
+\begin{DoxyCompactList}\small\item\em Returns the list of mesh index for the corresponding Sprite ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_mesh_data_provider_af8c9709bac8a454c7d63c70a5163bf77}{Set\+Indices}} (GUID guid, int\mbox{[}$\,$\mbox{]} indices)
+\begin{DoxyCompactList}\small\item\em Sets a new list of indices for the corresponding Sprite ID. \end{DoxyCompactList}\item 
+Vector2\+Int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_mesh_data_provider_acd8a00ef363d9bf335b4cae47d587fa4}{Get\+Edges}} (GUID guid)
+\begin{DoxyCompactList}\small\item\em Returns the list of mesh edges for the corresponding Sprite ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_mesh_data_provider_ac42ed3fec045c17dd923750e6b113150}{Set\+Edges}} (GUID guid, Vector2\+Int\mbox{[}$\,$\mbox{]} edges)
+\begin{DoxyCompactList}\small\item\em Sets a new list of edges for the corresponding Sprite ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Data Provider interface that deals with Sprite mesh data. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_mesh_data_provider_acd8a00ef363d9bf335b4cae47d587fa4}\index{UnityEditor.U2D.Sprites.ISpriteMeshDataProvider@{UnityEditor.U2D.Sprites.ISpriteMeshDataProvider}!GetEdges@{GetEdges}}
+\index{GetEdges@{GetEdges}!UnityEditor.U2D.Sprites.ISpriteMeshDataProvider@{UnityEditor.U2D.Sprites.ISpriteMeshDataProvider}}
+\doxysubsubsection{\texorpdfstring{GetEdges()}{GetEdges()}}
+{\footnotesize\ttfamily \label{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_mesh_data_provider_acd8a00ef363d9bf335b4cae47d587fa4} 
+Vector2\+Int\mbox{[}$\,$\mbox{]} Unity\+Editor.\+U2\+D.\+Sprites.\+ISprite\+Mesh\+Data\+Provider.\+Get\+Edges (\begin{DoxyParamCaption}\item[{GUID}]{guid}{}\end{DoxyParamCaption})}
+
+
+
+Returns the list of mesh edges for the corresponding Sprite ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em guid} & Sprite ID.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_mesh_data_provider_aa9ae5edc200d44b974b280e545e97b29}\index{UnityEditor.U2D.Sprites.ISpriteMeshDataProvider@{UnityEditor.U2D.Sprites.ISpriteMeshDataProvider}!GetIndices@{GetIndices}}
+\index{GetIndices@{GetIndices}!UnityEditor.U2D.Sprites.ISpriteMeshDataProvider@{UnityEditor.U2D.Sprites.ISpriteMeshDataProvider}}
+\doxysubsubsection{\texorpdfstring{GetIndices()}{GetIndices()}}
+{\footnotesize\ttfamily \label{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_mesh_data_provider_aa9ae5edc200d44b974b280e545e97b29} 
+int\mbox{[}$\,$\mbox{]} Unity\+Editor.\+U2\+D.\+Sprites.\+ISprite\+Mesh\+Data\+Provider.\+Get\+Indices (\begin{DoxyParamCaption}\item[{GUID}]{guid}{}\end{DoxyParamCaption})}
+
+
+
+Returns the list of mesh index for the corresponding Sprite ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em guid} & Sprite ID.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_mesh_data_provider_aa39df68eba0b32f40a56b50f4dc0984e}\index{UnityEditor.U2D.Sprites.ISpriteMeshDataProvider@{UnityEditor.U2D.Sprites.ISpriteMeshDataProvider}!GetVertices@{GetVertices}}
+\index{GetVertices@{GetVertices}!UnityEditor.U2D.Sprites.ISpriteMeshDataProvider@{UnityEditor.U2D.Sprites.ISpriteMeshDataProvider}}
+\doxysubsubsection{\texorpdfstring{GetVertices()}{GetVertices()}}
+{\footnotesize\ttfamily \label{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_mesh_data_provider_aa39df68eba0b32f40a56b50f4dc0984e} 
+\mbox{\hyperlink{struct_unity_editor_1_1_u2_d_1_1_sprites_1_1_vertex2_d_meta_data}{Vertex2\+DMeta\+Data}}\mbox{[}$\,$\mbox{]} Unity\+Editor.\+U2\+D.\+Sprites.\+ISprite\+Mesh\+Data\+Provider.\+Get\+Vertices (\begin{DoxyParamCaption}\item[{GUID}]{guid}{}\end{DoxyParamCaption})}
+
+
+
+Returns the list of vertex datas for the corresponding Sprite ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em guid} & Sprite ID.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_mesh_data_provider_ac42ed3fec045c17dd923750e6b113150}\index{UnityEditor.U2D.Sprites.ISpriteMeshDataProvider@{UnityEditor.U2D.Sprites.ISpriteMeshDataProvider}!SetEdges@{SetEdges}}
+\index{SetEdges@{SetEdges}!UnityEditor.U2D.Sprites.ISpriteMeshDataProvider@{UnityEditor.U2D.Sprites.ISpriteMeshDataProvider}}
+\doxysubsubsection{\texorpdfstring{SetEdges()}{SetEdges()}}
+{\footnotesize\ttfamily \label{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_mesh_data_provider_ac42ed3fec045c17dd923750e6b113150} 
+void Unity\+Editor.\+U2\+D.\+Sprites.\+ISprite\+Mesh\+Data\+Provider.\+Set\+Edges (\begin{DoxyParamCaption}\item[{GUID}]{guid}{, }\item[{Vector2\+Int\mbox{[}$\,$\mbox{]}}]{edges}{}\end{DoxyParamCaption})}
+
+
+
+Sets a new list of edges for the corresponding Sprite ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em guid} & Sprite ID.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_mesh_data_provider_af8c9709bac8a454c7d63c70a5163bf77}\index{UnityEditor.U2D.Sprites.ISpriteMeshDataProvider@{UnityEditor.U2D.Sprites.ISpriteMeshDataProvider}!SetIndices@{SetIndices}}
+\index{SetIndices@{SetIndices}!UnityEditor.U2D.Sprites.ISpriteMeshDataProvider@{UnityEditor.U2D.Sprites.ISpriteMeshDataProvider}}
+\doxysubsubsection{\texorpdfstring{SetIndices()}{SetIndices()}}
+{\footnotesize\ttfamily \label{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_mesh_data_provider_af8c9709bac8a454c7d63c70a5163bf77} 
+void Unity\+Editor.\+U2\+D.\+Sprites.\+ISprite\+Mesh\+Data\+Provider.\+Set\+Indices (\begin{DoxyParamCaption}\item[{GUID}]{guid}{, }\item[{int\mbox{[}$\,$\mbox{]}}]{indices}{}\end{DoxyParamCaption})}
+
+
+
+Sets a new list of indices for the corresponding Sprite ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em guid} & Sprite ID.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_mesh_data_provider_a460871340890e5f5611bc410db7a3cb0}\index{UnityEditor.U2D.Sprites.ISpriteMeshDataProvider@{UnityEditor.U2D.Sprites.ISpriteMeshDataProvider}!SetVertices@{SetVertices}}
+\index{SetVertices@{SetVertices}!UnityEditor.U2D.Sprites.ISpriteMeshDataProvider@{UnityEditor.U2D.Sprites.ISpriteMeshDataProvider}}
+\doxysubsubsection{\texorpdfstring{SetVertices()}{SetVertices()}}
+{\footnotesize\ttfamily \label{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_mesh_data_provider_a460871340890e5f5611bc410db7a3cb0} 
+void Unity\+Editor.\+U2\+D.\+Sprites.\+ISprite\+Mesh\+Data\+Provider.\+Set\+Vertices (\begin{DoxyParamCaption}\item[{GUID}]{guid}{, }\item[{\mbox{\hyperlink{struct_unity_editor_1_1_u2_d_1_1_sprites_1_1_vertex2_d_meta_data}{Vertex2\+DMeta\+Data}}\mbox{[}$\,$\mbox{]}}]{vertices}{}\end{DoxyParamCaption})}
+
+
+
+Sets a new list of vertices for the corresponding Sprite ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em guid} & Sprite ID.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+2d.\+sprite@1.\+0.\+0/\+Editor/\+Interface/ISprite\+Editor\+Data\+Provider.\+cs\end{DoxyCompactItemize}

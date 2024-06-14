@@ -1,0 +1,60 @@
+\chapter{Framing Transposer}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_f9db1c5e155acee6f94cb182d284b185}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_f9db1c5e155acee6f94cb182d284b185}\index{Framing Transposer@{Framing Transposer}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_f9db1c5e155acee6f94cb182d284b185_autotoc_md651}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_f9db1c5e155acee6f94cb182d284b185_autotoc_md651}%
+ This Virtual Camera {\bfseries{Body}} algorithm moves the camera in a fixed screen-\/space relationship to the {\bfseries{Follow}} target. You can also specify offsets, damping, and composition rules. {\bfseries{Framing Transposer}} only changes the camera’s position in space. It does not re-\/orient or otherwise aim the camera.
+
+{\bfseries{Framing Transposer}} is designed for 2D and orthographic cameras. But it works also with perspective cameras and 3D environments.
+
+This algorithm first moves the camera along the camera Z axis until the {\bfseries{Follow}} target is at the desired distance from the camera’s X-\/Y plane. It then moves the camera in its X-\/Y plane until the {\bfseries{Follow}} target is at the desired point on the camera’s screen.
+
+{\bfseries{Note}}\+: {\bfseries{Framing Transposer}} ignores the Look\+At target -\/ only the Follow target is used.
+
+If the {\bfseries{Follow}} target is a \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_target_group}{Target Group}{0}, then additional properties are available to frame the entire group.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_f9db1c5e155acee6f94cb182d284b185_autotoc_md652}{}\doxysection{\texorpdfstring{Properties}{Properties}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_f9db1c5e155acee6f94cb182d284b185_autotoc_md652}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }}&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\multicolumn{2}{|l|}{\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }}&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-3}
+\endhead
+\multicolumn{2}{|l|}{{\bfseries{Lookahead Time}}   }&Adjusts the offset of the Virtual Camera from the Follow target based on the motion of the target. \doxylink{namespace_cinemachine}{Cinemachine} estimates the point where the target will be this many seconds into the future. This feature is sensitive to noisy animation and can amplify the noise, resulting in undesirable camera jitter. If the camera jitters unacceptably when the target is in motion, turn down this property, or animate the target more smoothly.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Lookahead Smoothing}}   }&The smoothness of the lookahead algorithm. Larger values smooth out jittery predictions and increase prediction lag.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Lookahead Ignore Y}}   }&If checked, ignore movement along the Y axis for lookahead calculations.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{X Damping}}   }&How responsively the camera tries to maintain the offset in the x-\/axis. Small numbers make the camera more responsive. Larger numbers make the camera respond more slowly. Using different settings per axis can yield a wide range of camera behaviors.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Y Damping}}   }&How responsively the camera tries to maintain the offset in the y-\/axis. Small numbers make the camera more responsive. Larger numbers make the camera respond more slowly.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Z Damping}}   }&How responsively the camera tries to maintain the offset in the z-\/axis. Small numbers make the camera more responsive. Larger numbers make the camera respond more slowly.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Target Movement Only}}   }&If this is enabled, then damping only applies to the motion of the target. Camera rotation changes will bypass damping.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Screen X}}   }&Horizontal screen position for target. The camera moves to position the tracked object here.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Screen Y}}   }&Vertical screen position for target, The camera moves to position the tracked object here.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Camera Distance}}   }&The distance to maintain along the camera axis from the Follow target.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Dead Zone Width}}   }&Do not move the camera horizontally when the target is within this range of the position.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Dead Zone Height}}   }&Do not move the camera vertically if the target is within this range of the position.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Dead Zone Depth}}   }&Do not move the camera along its z-\/axis if the Follow target is within this distance of the specified camera distance.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Unlimited Soft Zone}}   }&If checked, then the soft zone is unlimited in size.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Soft Zone Width}}   }&When the target is in this range, move the camera horizontally to frame the target in the dead zone. The Damping properties affect the rate of the camera movement.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Soft Zone Height}}   }&When the target is in this range, move the camera vertically to frame the target in the dead zone. The Damping properties affect the rate of the camera movement.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Bias X}}   }&Moves the target position horizontally away from the center of the soft zone.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Bias Y}}   }&Moves the target position vertically away from the center of the soft zone.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Group Framing Mode}}   }&Available when Follow specifies a \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_target_group}{Target Group}{0}. Specifies the screen dimensions to consider when framing.    \\\cline{1-3}
+&{\itshape Horizontal}   &Consider only the horizontal dimension. Ignore vertical framing.    \\\cline{1-3}
+&{\itshape Vertical}   &Consider only the vertical dimension. Ignore horizontal framing.    \\\cline{1-3}
+&{\itshape Horizontal And Vertical}   &Use the larger of the horizontal and vertical dimensions to get the best fit.    \\\cline{1-3}
+&{\itshape None}   &Don’t do any framing adjustment.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Adjustment Mode}}   }&How to adjust the camera to get the desired framing. You can zoom, dolly in or out, or do both. Available when Follow specifies a Target Group.    \\\cline{1-3}
+&{\itshape Zoom Only}   &Don’t move the camera, only adjust the FOV.    \\\cline{1-3}
+&{\itshape Dolly Only}   &Move the camera, don’t change the FOV.    \\\cline{1-3}
+&{\itshape Dolly Then Zoom}   &Move the camera as much as permitted by the ranges, then adjust the FOV if necessary to make the shot.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Group Framing Size}}   }&The bounding box that the targets should occupy. Use 1 to fill the whole screen, 0.\+5 to fill half the screen, and so on. Available when Follow specifies a Target Group.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Max Dolly In}}   }&The maximum distance toward the target to move the camera. Available when Follow specifies a Target Group.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Max Dolly Out}}   }&The maximum distance away from the target to move the camera. Available when Follow specifies a Target Group.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Minimum Distance}}   }&Set this to limit how close to the target the camera can get. Available when Follow specifies a Target Group.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Maximum Distance}}   }&Set this to limit how far from the target the camera can get. Available when Follow specifies a Target Group.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Minimum FOV}}   }&If adjusting FOV, do not set the FOV lower than this. Available when Follow specifies a Target Group.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Maximum FOV}}   }&If adjusting FOV, do not set the FOV higher than this. Available when Follow specifies a Target Group.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Minimum Ortho Size}}   }&If adjusting Orthographic Size, do not set it lower than this. Available when Follow specifies a Target Group.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Maximum Ortho Size}}   }&If adjusting Orthographic Size, do not set it higher than this. Available when Follow specifies a Target Group.   \\\cline{1-3}
+\end{longtabu}

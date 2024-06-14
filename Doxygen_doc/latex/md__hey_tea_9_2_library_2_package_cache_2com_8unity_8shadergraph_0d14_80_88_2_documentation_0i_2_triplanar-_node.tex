@@ -1,0 +1,100 @@
+\chapter{Triplanar Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_triplanar-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_triplanar-_node}\index{Triplanar Node@{Triplanar Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_triplanar-_node_autotoc_md4063}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_triplanar-_node_autotoc_md4063}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_triplanar-_node_autotoc_md4064}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_triplanar-_node_autotoc_md4064}
+Generates UVs and samples a texture by projecting in world space. This method is commonly used to texture large models such as terrain, where hand authoring UV coordinates would either be problematic or not performant. \doxylink{namespace_samples}{Samples} the input {\bfseries{Texture}} 3 times, once in each of the world x, y, and z axes. The resulting information is planar projected onto the model, blended by the normal, or surface angle. You can scale the generated UVs with the input {\bfseries{Tile}} and you can control the final blending strength with the input {\bfseries{Blend}}.
+
+{\bfseries{Blend}} controls the way the normal affects the blending of each plane sample and should be greater than or equal to 0. The larger {\bfseries{Blend}} is, the more contribution will be given to the sample from the plane towards which the normal is most oriented. (The maximum blend exponent is between 17 and 158 depending on the platform and the precision of the node.) A {\bfseries{Blend}} of 0 makes each plane get equal weight regardless of normal orientation.
+
+To choose the projection, change the {\bfseries{Input Space}}. You can also modify the projection via the inputs {\bfseries{Position}} and {\bfseries{Normal}}.
+
+Use the {\bfseries{Type}} dropdown to change the expected type of the input {\bfseries{Texture}}. If set to {\bfseries{Normal}}, the {\bfseries{Out}} port returns the blended normals in {\bfseries{Normal Output Space}}.
+
+If you experience texture sampling errors while using this node in a graph which includes Custom Function Nodes or Sub Graphs, upgrade to version 10.\+3 or later.
+
+NOTE\+: You can only use the Triplanar Node in the {\bfseries{Fragment}} shader stage.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_triplanar-_node_autotoc_md4065}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_triplanar-_node_autotoc_md4065}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+Texture   &Input   &Texture   &None   &Input texture value    \\\cline{1-5}
+Sampler   &Input   &Sampler State   &None   &Sampler for input {\bfseries{Texture}}    \\\cline{1-5}
+Position   &Input   &Vector 3   &Input Space Position   &Fragment position    \\\cline{1-5}
+Normal   &Input   &Vector 3   &Input Space Normal   &Fragment normal    \\\cline{1-5}
+Tile   &Input   &Float   &None   &Tiling amount for generated UVs    \\\cline{1-5}
+Blend   &Input   &Float   &None   &Blend factor between different samples    \\\cline{1-5}
+Out   &Output   &Vector 4   &None   &Output value   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_triplanar-_node_autotoc_md4066}{}\doxysection{\texorpdfstring{Controls}{Controls}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_triplanar-_node_autotoc_md4066}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endhead
+Type   &Dropdown   &Default, Normal   &Type of input {\bfseries{Texture}}   \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_triplanar-_node_autotoc_md4067}{}\doxysection{\texorpdfstring{Node Settings Controls}{Node Settings Controls}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_triplanar-_node_autotoc_md4067}
+The following controls appear on the Node Settings tab of the Graph Inspector, when you select the Triplanar Node.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endhead
+Input Space   &Dropdown   &Object, View, World, Tangent, Absolute\+World   &Controls the coordinate space used by the input ports {\bfseries{Position}} and {\bfseries{Normal}}. When you change the {\bfseries{Input Space}} value, it changes the bindings on the {\bfseries{Position}} and {\bfseries{Normal}} ports to use the specified space. The default value is {\bfseries{Absolute\+World}}.    \\\cline{1-4}
+Normal Output Space   &Dropdown   &Object, View, World, Tangent, Absolute\+World   &Controls the coordinate space used for the {\bfseries{Out}} port. The Normal Output Space control is only available when {\bfseries{Type}} is set to {\bfseries{Normal}}. The default value is {\bfseries{Tangent}}.   \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_triplanar-_node_autotoc_md4068}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_triplanar-_node_autotoc_md4068}
+The following example code represents one possible outcome of this node.
+
+{\bfseries{Default}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3\ Node\_UV\ =\ Position\ *\ Tile;}
+\DoxyCodeLine{float3\ Node\_Blend\ =\ pow(abs(Normal),\ Blend);}
+\DoxyCodeLine{Node\_Blend\ /=\ dot(Node\_Blend,\ 1.0);}
+\DoxyCodeLine{float4\ Node\_X\ =\ SAMPLE\_TEXTURE2D(Texture,\ Sampler,\ Node\_UV.zy);}
+\DoxyCodeLine{float4\ Node\_Y\ =\ SAMPLE\_TEXTURE2D(Texture,\ Sampler,\ Node\_UV.xz);}
+\DoxyCodeLine{float4\ Node\_Z\ =\ SAMPLE\_TEXTURE2D(Texture,\ Sampler,\ Node\_UV.xy);}
+\DoxyCodeLine{float4\ Out\ =\ Node\_X\ *\ Node\_Blend.x\ +\ Node\_Y\ *\ Node\_Blend.y\ +\ Node\_Z\ *\ Node\_Blend.z;}
+
+\end{DoxyCode}
+
+
+{\bfseries{Normal}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float3\ Node\_UV\ =\ Position\ *\ Tile;}
+\DoxyCodeLine{float3\ Node\_Blend\ =\ max(pow(abs(Normal),\ Blend),\ 0);}
+\DoxyCodeLine{Node\_Blend\ /=\ (Node\_Blend.x\ +\ Node\_Blend.y\ +\ Node\_Blend.z\ ).xxx;}
+\DoxyCodeLine{float3\ Node\_X\ =\ UnpackNormal(SAMPLE\_TEXTURE2D(Texture,\ Sampler,\ Node\_UV.zy));}
+\DoxyCodeLine{float3\ Node\_Y\ =\ UnpackNormal(SAMPLE\_TEXTURE2D(Texture,\ Sampler,\ Node\_UV.xz));}
+\DoxyCodeLine{float3\ Node\_Z\ =\ UnpackNormal(SAMPLE\_TEXTURE2D(Texture,\ Sampler,\ Node\_UV.xy));}
+\DoxyCodeLine{Node\_X\ =\ float3(Node\_X.xy\ +\ Normal.zy,\ abs(Node\_X.z)\ *\ Normal.x);}
+\DoxyCodeLine{Node\_Y\ =\ float3(Node\_Y.xy\ +\ Normal.xz,\ abs(Node\_Y.z)\ *\ Normal.y);}
+\DoxyCodeLine{Node\_Z\ =\ float3(Node\_Z.xy\ +\ Normal.xy,\ abs(Node\_Z.z)\ *\ Normal.z);}
+\DoxyCodeLine{float4\ Out\ =\ float4(normalize(Node\_X.zyx\ *\ Node\_Blend.x\ +\ Node\_Y.xzy\ *\ Node\_Blend.y\ +\ Node\_Z.xyz\ *\ Node\_Blend.z),\ 1);}
+\DoxyCodeLine{float3x3\ Node\_Transform\ =\ float3x3(IN.WorldSpaceTangent,\ IN.WorldSpaceBiTangent,\ IN.WorldSpaceNormal);}
+\DoxyCodeLine{Out.rgb\ =\ TransformWorldToTangent(Out.rgb,\ Node\_Transform);}
+
+\end{DoxyCode}
+ 

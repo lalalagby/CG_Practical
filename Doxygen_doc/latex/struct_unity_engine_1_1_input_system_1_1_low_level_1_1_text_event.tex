@@ -1,0 +1,69 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Low\+Level.\+Text\+Event Struct Reference}
+\hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event}{}\label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event}\index{UnityEngine.InputSystem.LowLevel.TextEvent@{UnityEngine.InputSystem.LowLevel.TextEvent}}
+
+
+A single character text input event.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Low\+Level.\+Text\+Event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event_aaa8af7a375f6b8e3ddfc7c89f3a2e879}\label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event_aaa8af7a375f6b8e3ddfc7c89f3a2e879} 
+static unsafe \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event}{Text\+Event}} \texorpdfstring{$\ast$}{*} {\bfseries From} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr}{Input\+Event\+Ptr}} event\+Ptr)
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event_ad80b86848fbd3891ea697f95c7062feb}\label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event_ad80b86848fbd3891ea697f95c7062feb} 
+static \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event}{Text\+Event}} {\bfseries Create} (int device\+Id, char \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event_a345ffba87df93f61c16a85c244669063}{character}}, double time=-\/1)
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event_a42b4f1c09c391fac77c1ff82154a34f1}\label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event_a42b4f1c09c391fac77c1ff82154a34f1} 
+static \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event}{Text\+Event}} {\bfseries Create} (int device\+Id, int \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event_a345ffba87df93f61c16a85c244669063}{character}}, double time=-\/1)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event_a1b0a9f9c08d7592c17bd68eaa4d05903}\label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event_a1b0a9f9c08d7592c17bd68eaa4d05903} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event}{Input\+Event}} {\bfseries base\+Event}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event_a345ffba87df93f61c16a85c244669063}\label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event_a345ffba87df93f61c16a85c244669063} 
+int {\bfseries character}
+\begin{DoxyCompactList}\small\item\em Character in UTF-\/32 encoding. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event_a3067e7826f84daacb088c7f21032540b}\label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event_a3067e7826f84daacb088c7f21032540b} 
+const int {\bfseries Type} = 0x54455854
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_four_c_c}{Four\+CC}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event_a7e0a583410c8a4badc8d04570848bbe0}{type\+Static}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_event_type_info}{Unity\+Engine.\+Input\+System.\+Low\+Level.\+IInput\+Event\+Type\+Info}}}
+
+
+\doxysubsection{Detailed Description}
+A single character text input event. 
+
+Text input does not fit the control-\/based input model well and thus is represented as its own form of input. A device that is capable of receiving text input (such as \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard}{Keyboard}) receives text input events and should implement \doxylink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_text_input_receiver}{IText\+Input\+Receiver} in order for the input system to be able to relay these events to the device. 
+
+\doxysubsection{Property Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event_a7e0a583410c8a4badc8d04570848bbe0}\index{UnityEngine.InputSystem.LowLevel.TextEvent@{UnityEngine.InputSystem.LowLevel.TextEvent}!typeStatic@{typeStatic}}
+\index{typeStatic@{typeStatic}!UnityEngine.InputSystem.LowLevel.TextEvent@{UnityEngine.InputSystem.LowLevel.TextEvent}}
+\doxysubsubsection{\texorpdfstring{typeStatic}{typeStatic}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event_a7e0a583410c8a4badc8d04570848bbe0} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_four_c_c}{Four\+CC}} Unity\+Engine.\+Input\+System.\+Low\+Level.\+Text\+Event.\+type\+Static\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_event_type_info}{Unity\+Engine.\+Input\+System.\+Low\+Level.\+IInput\+Event\+Type\+Info}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Events/Text\+Event.\+cs\end{DoxyCompactItemize}

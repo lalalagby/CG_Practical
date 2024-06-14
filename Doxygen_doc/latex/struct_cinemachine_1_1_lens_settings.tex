@@ -1,0 +1,230 @@
+\doxysection{Cinemachine.\+Lens\+Settings Struct Reference}
+\hypertarget{struct_cinemachine_1_1_lens_settings}{}\label{struct_cinemachine_1_1_lens_settings}\index{Cinemachine.LensSettings@{Cinemachine.LensSettings}}
+
+
+Describes the FOV and clip planes for a camera. This generally mirrors the \doxylink{namespace_unity}{Unity} Camera\textquotesingle{}s lens settings, and will be used to drive the \doxylink{namespace_unity}{Unity} camera when the vcam is active.  
+
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{struct_cinemachine_1_1_lens_settings_a2f821d2e85c47da9e79b9c81fd042f1a}{Override\+Modes}} \{ \mbox{\hyperlink{struct_cinemachine_1_1_lens_settings_a2f821d2e85c47da9e79b9c81fd042f1aa6adf97f83acf6453d4a6a4b1070f3754}{None}} = 0
+, \mbox{\hyperlink{struct_cinemachine_1_1_lens_settings_a2f821d2e85c47da9e79b9c81fd042f1aa03424250432f2aa71de95579d2c0eaeb}{Orthographic}}
+, \mbox{\hyperlink{struct_cinemachine_1_1_lens_settings_a2f821d2e85c47da9e79b9c81fd042f1aaa80420eef88d11f77532f1b9cb467fa3}{Perspective}}
+, \mbox{\hyperlink{struct_cinemachine_1_1_lens_settings_a2f821d2e85c47da9e79b9c81fd042f1aace898d62ed9ca7653a01fe0c781e97e9}{Physical}}
+ \}
+\begin{DoxyCompactList}\small\item\em This enum controls how the Camera seetings are driven. Some settings can be pulled from the main camera, or pushed to it, depending on these values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{struct_cinemachine_1_1_lens_settings_a5eec650383c3623b47fbfac4035ccf32}{Snapshot\+Camera\+Read\+Only\+Properties}} (Camera camera)
+\begin{DoxyCompactList}\small\item\em Snapshot the properties that are read-\/only in the Camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_cinemachine_1_1_lens_settings_a99d945ffb6c101780b1eaf250f659092}{Snapshot\+Camera\+Read\+Only\+Properties}} (ref \mbox{\hyperlink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings}} lens)
+\begin{DoxyCompactList}\small\item\em Snapshot the properties that are read-\/only in the Camera. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_cinemachine_1_1_lens_settings_a5a4fd6a32dbe6b235cce215c88040d0a}{Lens\+Settings}} (float vertical\+FOV, float orthographic\+Size, float near\+Clip, float far\+Clip, float dutch)
+\begin{DoxyCompactList}\small\item\em Explicit constructor for this \doxylink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings}. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_lens_settings_a2acd5a113f3578c91829010a6a51b447}\label{struct_cinemachine_1_1_lens_settings_a2acd5a113f3578c91829010a6a51b447} 
+void {\bfseries Validate} ()
+\begin{DoxyCompactList}\small\item\em Make sure lens settings are sane. Call this from On\+Validate(). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings}} \mbox{\hyperlink{struct_cinemachine_1_1_lens_settings_a945e284636220b4d45a1b54d11a731fa}{From\+Camera}} (Camera from\+Camera)
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings}, copying the values from the supplied Camera. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings}} \mbox{\hyperlink{struct_cinemachine_1_1_lens_settings_a45cc0bb5359fc12a7bcc6baa792f2e4a}{Lerp}} (\mbox{\hyperlink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings}} lensA, \mbox{\hyperlink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings}} lensB, float t)
+\begin{DoxyCompactList}\small\item\em Linearly blends the fields of two \doxylink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings} and returns the result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_cinemachine_1_1_lens_settings_a7000d6a5b08258a95b11a80700edd301}\label{struct_cinemachine_1_1_lens_settings_a7000d6a5b08258a95b11a80700edd301} 
+float {\bfseries Field\+Of\+View}
+\begin{DoxyCompactList}\small\item\em This is the camera view in degrees. For cinematic people, a 50mm lens on a super-\/35mm sensor would equal a 19.\+6 degree FOV. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_lens_settings_ab0886ce548315f23356b4853fc75fb79}\label{struct_cinemachine_1_1_lens_settings_ab0886ce548315f23356b4853fc75fb79} 
+float {\bfseries Orthographic\+Size}
+\begin{DoxyCompactList}\small\item\em When using an orthographic camera, this defines the half-\/height, in world co-\/ordinates, of the camera view. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_lens_settings_acddfc4e9f6b4e0dffba3b2374668dc5d}\label{struct_cinemachine_1_1_lens_settings_acddfc4e9f6b4e0dffba3b2374668dc5d} 
+float {\bfseries Near\+Clip\+Plane}
+\begin{DoxyCompactList}\small\item\em The near clip plane for this \doxylink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings}. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_lens_settings_acf3b849f43439452b855da7301998eee}\label{struct_cinemachine_1_1_lens_settings_acf3b849f43439452b855da7301998eee} 
+float {\bfseries Far\+Clip\+Plane}
+\begin{DoxyCompactList}\small\item\em The far clip plane for this \doxylink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings}. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_lens_settings_aebfcddb309c4c51b2b95da6196f4fb7b}\label{struct_cinemachine_1_1_lens_settings_aebfcddb309c4c51b2b95da6196f4fb7b} 
+float {\bfseries Dutch}
+\begin{DoxyCompactList}\small\item\em The dutch (tilt) to be applied to the camera. In degrees. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_lens_settings_a89eb8b06f8088153fc121df98296ce88}\label{struct_cinemachine_1_1_lens_settings_a89eb8b06f8088153fc121df98296ce88} 
+\mbox{\hyperlink{struct_cinemachine_1_1_lens_settings_a2f821d2e85c47da9e79b9c81fd042f1a}{Override\+Modes}} {\bfseries Mode\+Override}
+\begin{DoxyCompactList}\small\item\em Allows you to select a different camera mode to apply to the Camera component when \doxylink{namespace_cinemachine}{Cinemachine} activates this Virtual Camera. The changes applied to the Camera component through this setting will remain after the Virtual Camera deactivation. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_lens_settings_ad62a9a4f6efe760b52652880834a2f61}\label{struct_cinemachine_1_1_lens_settings_ad62a9a4f6efe760b52652880834a2f61} 
+Vector2 {\bfseries Lens\+Shift}
+\begin{DoxyCompactList}\small\item\em For physical cameras only\+: position of the gate relative to the film back. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_lens_settings_aa14e58ad986236a10ef7fd055e0578c4}\label{struct_cinemachine_1_1_lens_settings_aa14e58ad986236a10ef7fd055e0578c4} 
+Camera.\+Gate\+Fit\+Mode {\bfseries Gate\+Fit}
+\begin{DoxyCompactList}\small\item\em For physical cameras only\+: how the image is fitted to the sensor if the aspect ratios differ. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_lens_settings_a6ee434d02c731b3d68a76b64c79eb9d1}\label{struct_cinemachine_1_1_lens_settings_a6ee434d02c731b3d68a76b64c79eb9d1} 
+Vector2 {\bfseries m\+\_\+\+Sensor\+Size}
+\item 
+\Hypertarget{struct_cinemachine_1_1_lens_settings_acb75ce1b488ec378a51bc8e95b12fbcb}\label{struct_cinemachine_1_1_lens_settings_acb75ce1b488ec378a51bc8e95b12fbcb} 
+bool {\bfseries m\+\_\+\+Ortho\+From\+Camera}
+\item 
+\Hypertarget{struct_cinemachine_1_1_lens_settings_a4880210812e96b2ff98dcd0ec2d2159c}\label{struct_cinemachine_1_1_lens_settings_a4880210812e96b2ff98dcd0ec2d2159c} 
+bool {\bfseries m\+\_\+\+Physical\+From\+Camera}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_cinemachine_1_1_lens_settings_ae6e8e916469b4cfb653a64476a516e79}\label{struct_cinemachine_1_1_lens_settings_ae6e8e916469b4cfb653a64476a516e79} 
+static \mbox{\hyperlink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings}} {\bfseries Default} = new \mbox{\hyperlink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings}}(40f, 10f, 0.\+1f, 5000f, 0)
+\begin{DoxyCompactList}\small\item\em Default Lens Settings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_cinemachine_1_1_lens_settings_a48a426aeceabc6e50916ef6f4dcdedde}\label{struct_cinemachine_1_1_lens_settings_a48a426aeceabc6e50916ef6f4dcdedde} 
+bool {\bfseries Orthographic}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This is set every frame by the virtual camera, based on the value found in the currently associated \doxylink{namespace_unity}{Unity} camera. Do not set this property. Instead, use the Mode\+Override field to set orthographic mode. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_lens_settings_a55c9ac45df4567987f0df53ba463ae2c}\label{struct_cinemachine_1_1_lens_settings_a55c9ac45df4567987f0df53ba463ae2c} 
+Vector2 {\bfseries Sensor\+Size}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em For physical cameras, this is the actual size of the image sensor (in mm); it is used to convert between focal length and field of vue. For nonphysical cameras, it is the aspect ratio. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_lens_settings_acbb5fabcf44566d9fe585f45111a0468}\label{struct_cinemachine_1_1_lens_settings_acbb5fabcf44566d9fe585f45111a0468} 
+float {\bfseries Aspect}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sensor aspect, not screen aspect. For nonphysical cameras, this is the same thing. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_lens_settings_a00f2b25f33790df3e63f1e4b03b30827}\label{struct_cinemachine_1_1_lens_settings_a00f2b25f33790df3e63f1e4b03b30827} 
+bool {\bfseries Is\+Physical\+Camera}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This property will be true if the camera mode is set, either directly or indirectly, to Physical Camera Do not set this property. Instead, use the Mode\+Override field to set physical mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Describes the FOV and clip planes for a camera. This generally mirrors the \doxylink{namespace_unity}{Unity} Camera\textquotesingle{}s lens settings, and will be used to drive the \doxylink{namespace_unity}{Unity} camera when the vcam is active. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{struct_cinemachine_1_1_lens_settings_a2f821d2e85c47da9e79b9c81fd042f1a}\index{Cinemachine.LensSettings@{Cinemachine.LensSettings}!OverrideModes@{OverrideModes}}
+\index{OverrideModes@{OverrideModes}!Cinemachine.LensSettings@{Cinemachine.LensSettings}}
+\doxysubsubsection{\texorpdfstring{OverrideModes}{OverrideModes}}
+{\footnotesize\ttfamily \label{struct_cinemachine_1_1_lens_settings_a2f821d2e85c47da9e79b9c81fd042f1a} 
+enum \mbox{\hyperlink{struct_cinemachine_1_1_lens_settings_a2f821d2e85c47da9e79b9c81fd042f1a}{Cinemachine.\+Lens\+Settings.\+Override\+Modes}}}
+
+
+
+This enum controls how the Camera seetings are driven. Some settings can be pulled from the main camera, or pushed to it, depending on these values. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!Cinemachine.LensSettings@{Cinemachine.LensSettings}}\index{Cinemachine.LensSettings@{Cinemachine.LensSettings}!None@{None}}}\Hypertarget{struct_cinemachine_1_1_lens_settings_a2f821d2e85c47da9e79b9c81fd042f1aa6adf97f83acf6453d4a6a4b1070f3754}\label{struct_cinemachine_1_1_lens_settings_a2f821d2e85c47da9e79b9c81fd042f1a} 
+None&Perspective/\+Ortho, Is\+Physical will not be changed in \doxylink{namespace_unity}{Unity} Camera. This is the default setting. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Orthographic@{Orthographic}!Cinemachine.LensSettings@{Cinemachine.LensSettings}}\index{Cinemachine.LensSettings@{Cinemachine.LensSettings}!Orthographic@{Orthographic}}}\Hypertarget{struct_cinemachine_1_1_lens_settings_a2f821d2e85c47da9e79b9c81fd042f1aa03424250432f2aa71de95579d2c0eaeb}\label{struct_cinemachine_1_1_lens_settings_a2f821d2e85c47da9e79b9c81fd042f1a} 
+Orthographic&Orthographic projection mode will be pushed to the \doxylink{namespace_unity}{Unity} Camera. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Perspective@{Perspective}!Cinemachine.LensSettings@{Cinemachine.LensSettings}}\index{Cinemachine.LensSettings@{Cinemachine.LensSettings}!Perspective@{Perspective}}}\Hypertarget{struct_cinemachine_1_1_lens_settings_a2f821d2e85c47da9e79b9c81fd042f1aaa80420eef88d11f77532f1b9cb467fa3}\label{struct_cinemachine_1_1_lens_settings_a2f821d2e85c47da9e79b9c81fd042f1a} 
+Perspective&Perspective projection mode will be pushed to the \doxylink{namespace_unity}{Unity} Camera. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Physical@{Physical}!Cinemachine.LensSettings@{Cinemachine.LensSettings}}\index{Cinemachine.LensSettings@{Cinemachine.LensSettings}!Physical@{Physical}}}\Hypertarget{struct_cinemachine_1_1_lens_settings_a2f821d2e85c47da9e79b9c81fd042f1aace898d62ed9ca7653a01fe0c781e97e9}\label{struct_cinemachine_1_1_lens_settings_a2f821d2e85c47da9e79b9c81fd042f1a} 
+Physical&A physically-\/modeled Perspective projection type will be pushed to the \doxylink{namespace_unity}{Unity} Camera. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_cinemachine_1_1_lens_settings_a5a4fd6a32dbe6b235cce215c88040d0a}\index{Cinemachine.LensSettings@{Cinemachine.LensSettings}!LensSettings@{LensSettings}}
+\index{LensSettings@{LensSettings}!Cinemachine.LensSettings@{Cinemachine.LensSettings}}
+\doxysubsubsection{\texorpdfstring{LensSettings()}{LensSettings()}}
+{\footnotesize\ttfamily \label{struct_cinemachine_1_1_lens_settings_a5a4fd6a32dbe6b235cce215c88040d0a} 
+Cinemachine.\+Lens\+Settings.\+Lens\+Settings (\begin{DoxyParamCaption}\item[{float}]{vertical\+FOV}{, }\item[{float}]{orthographic\+Size}{, }\item[{float}]{near\+Clip}{, }\item[{float}]{far\+Clip}{, }\item[{float}]{dutch}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Explicit constructor for this \doxylink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertical\+FOV} & The Vertical field of view\\
+\hline
+{\em orthographic\+Size} & If orthographic, this is the half-\/height of the screen\\
+\hline
+{\em near\+Clip} & The near clip plane\\
+\hline
+{\em far\+Clip} & The far clip plane\\
+\hline
+{\em dutch} & Camera roll, in degrees. This is applied at the end after shot composition.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_cinemachine_1_1_lens_settings_a945e284636220b4d45a1b54d11a731fa}\index{Cinemachine.LensSettings@{Cinemachine.LensSettings}!FromCamera@{FromCamera}}
+\index{FromCamera@{FromCamera}!Cinemachine.LensSettings@{Cinemachine.LensSettings}}
+\doxysubsubsection{\texorpdfstring{FromCamera()}{FromCamera()}}
+{\footnotesize\ttfamily \label{struct_cinemachine_1_1_lens_settings_a945e284636220b4d45a1b54d11a731fa} 
+static \mbox{\hyperlink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings}} Cinemachine.\+Lens\+Settings.\+From\+Camera (\begin{DoxyParamCaption}\item[{Camera}]{from\+Camera}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Creates a new \doxylink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings}, copying the values from the supplied Camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from\+Camera} & The Camera from which the FoV, near and far clip planes will be copied.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \doxylink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings} as extracted from the supplied Camera
+\end{DoxyReturn}
+\Hypertarget{struct_cinemachine_1_1_lens_settings_a45cc0bb5359fc12a7bcc6baa792f2e4a}\index{Cinemachine.LensSettings@{Cinemachine.LensSettings}!Lerp@{Lerp}}
+\index{Lerp@{Lerp}!Cinemachine.LensSettings@{Cinemachine.LensSettings}}
+\doxysubsubsection{\texorpdfstring{Lerp()}{Lerp()}}
+{\footnotesize\ttfamily \label{struct_cinemachine_1_1_lens_settings_a45cc0bb5359fc12a7bcc6baa792f2e4a} 
+static \mbox{\hyperlink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings}} Cinemachine.\+Lens\+Settings.\+Lerp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings}}}]{lensA}{, }\item[{\mbox{\hyperlink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings}}}]{lensB}{, }\item[{float}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Linearly blends the fields of two \doxylink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings} and returns the result. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lensA} & The \doxylink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings} to blend from\\
+\hline
+{\em lensB} & The \doxylink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings} to blend to\\
+\hline
+{\em t} & The interpolation value. Internally clamped to the range \mbox{[}0,1\mbox{]}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Interpolated settings
+\end{DoxyReturn}
+\Hypertarget{struct_cinemachine_1_1_lens_settings_a5eec650383c3623b47fbfac4035ccf32}\index{Cinemachine.LensSettings@{Cinemachine.LensSettings}!SnapshotCameraReadOnlyProperties@{SnapshotCameraReadOnlyProperties}}
+\index{SnapshotCameraReadOnlyProperties@{SnapshotCameraReadOnlyProperties}!Cinemachine.LensSettings@{Cinemachine.LensSettings}}
+\doxysubsubsection{\texorpdfstring{SnapshotCameraReadOnlyProperties()}{SnapshotCameraReadOnlyProperties()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_cinemachine_1_1_lens_settings_a5eec650383c3623b47fbfac4035ccf32} 
+void Cinemachine.\+Lens\+Settings.\+Snapshot\+Camera\+Read\+Only\+Properties (\begin{DoxyParamCaption}\item[{Camera}]{camera}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Snapshot the properties that are read-\/only in the Camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & The Camera from which we will take the info\\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_cinemachine_1_1_lens_settings_a99d945ffb6c101780b1eaf250f659092}\index{Cinemachine.LensSettings@{Cinemachine.LensSettings}!SnapshotCameraReadOnlyProperties@{SnapshotCameraReadOnlyProperties}}
+\index{SnapshotCameraReadOnlyProperties@{SnapshotCameraReadOnlyProperties}!Cinemachine.LensSettings@{Cinemachine.LensSettings}}
+\doxysubsubsection{\texorpdfstring{SnapshotCameraReadOnlyProperties()}{SnapshotCameraReadOnlyProperties()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_cinemachine_1_1_lens_settings_a99d945ffb6c101780b1eaf250f659092} 
+void Cinemachine.\+Lens\+Settings.\+Snapshot\+Camera\+Read\+Only\+Properties (\begin{DoxyParamCaption}\item[{ref \mbox{\hyperlink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings}}}]{lens}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Snapshot the properties that are read-\/only in the Camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lens} & The \doxylink{struct_cinemachine_1_1_lens_settings}{Lens\+Settings} from which we will take the info\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Core/Lens\+Settings.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,90 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Global\+Dynamic\+Resolution\+Settings Struct Reference}
+\hypertarget{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings}{}\label{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings}\index{UnityEngine.Rendering.GlobalDynamicResolutionSettings@{UnityEngine.Rendering.GlobalDynamicResolutionSettings}}
+
+
+User-\/facing settings for dynamic resolution.  
+
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings}{Global\+Dynamic\+Resolution\+Settings}} \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a3f7ef60e86430672ab5a53ccfed50daf}{New\+Default}} ()
+\begin{DoxyCompactList}\small\item\em Default \doxylink{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings}{Global\+Dynamic\+Resolution\+Settings}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a50b37f6f137334ae8f09b61eedf46646}\label{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a50b37f6f137334ae8f09b61eedf46646} 
+bool {\bfseries enabled}
+\begin{DoxyCompactList}\small\item\em Select whether the dynamic resolution is enabled or not. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_aada3cb734af0fff962b5a5fc9ae3a24d}\label{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_aada3cb734af0fff962b5a5fc9ae3a24d} 
+bool {\bfseries use\+Mip\+Bias}
+\begin{DoxyCompactList}\small\item\em Offsets the mip bias to recover mode detail. This only works if the camera is utilizing TAA. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a7f067e371d4b9aa8d72c648f5fb59471}\label{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a7f067e371d4b9aa8d72c648f5fb59471} 
+bool {\bfseries enable\+DLSS}
+\begin{DoxyCompactList}\small\item\em Toggle NVIDIA Deep Learning Super Sampling (DLSS). \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a2c426c1eeddd79f5d49d5e7d523c881e}\label{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a2c426c1eeddd79f5d49d5e7d523c881e} 
+uint {\bfseries DLSSPerf\+Quality\+Setting}
+\begin{DoxyCompactList}\small\item\em Opaque quality setting of NVIDIA Deep Learning Super Sampling (DLSS). Use the system enum Unity\+Engine.\+NVIDIA.\+DLSSQuality to set the quality. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a2a9e8c2a5953026decf977f6bdad87ea}\label{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a2a9e8c2a5953026decf977f6bdad87ea} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_resolution_handler_af848e503328306eb04e9a1eec421899d}{Dynamic\+Resolution\+Handler.\+Upsampler\+Schedule\+Type}} {\bfseries DLSSInjection\+Point}
+\begin{DoxyCompactList}\small\item\em The injection point at which to apply DLSS upscaling. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a9f34e92da70314ef01762e9d3dcd6cc6}\label{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a9f34e92da70314ef01762e9d3dcd6cc6} 
+bool {\bfseries DLSSUse\+Optimal\+Settings}
+\begin{DoxyCompactList}\small\item\em Toggle NVIDIA Deep Learning Super Sampling (DLSS) automatic recommendation system for scaling and sharpness. If this is on, the manually established scale callback for Dynamic Resolution Scaling is ignored. The sharpness setting of DLSS is also ignored. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a8129df8bf38dbc005e8418affe1e38ee}\label{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a8129df8bf38dbc005e8418affe1e38ee} 
+float {\bfseries DLSSSharpness}
+\begin{DoxyCompactList}\small\item\em Pixel sharpness of NVIDIA Deep Leraning Super Sampling (DLSS). \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a6508229985e66d63cc513bd129fbf659}\label{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a6508229985e66d63cc513bd129fbf659} 
+bool {\bfseries fsr\+Override\+Sharpness}
+\begin{DoxyCompactList}\small\item\em Toggle sharpness override for AMD Fidelity\+FX Super Resolution (FSR). If this is on, a sharpness value specified by the user will be used instead of the default. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_ac8d5e19726e36697a80f0c1fe3af7fe3}\label{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_ac8d5e19726e36697a80f0c1fe3af7fe3} 
+float {\bfseries fsr\+Sharpness}
+\begin{DoxyCompactList}\small\item\em Pixel sharpness of AMD Fidelity\+FX Super Resolution (FSR). \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a0ae6f11e2af5df14ce726e8408701f61}\label{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a0ae6f11e2af5df14ce726e8408701f61} 
+float {\bfseries max\+Percentage}
+\begin{DoxyCompactList}\small\item\em The maximum resolution percentage that dynamic resolution can reach. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_aaa3c442d03d7d8b4cc65a16407a6096a}\label{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_aaa3c442d03d7d8b4cc65a16407a6096a} 
+float {\bfseries min\+Percentage}
+\begin{DoxyCompactList}\small\item\em The minimum resolution percentage that dynamic resolution can reach. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_aea49f1f39321a151e362afa806b6758e}\label{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_aea49f1f39321a151e362afa806b6758e} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a84a8183d6fab23941264d2b5415cb868}{Dynamic\+Resolution\+Type}} {\bfseries dyn\+Res\+Type}
+\begin{DoxyCompactList}\small\item\em The type of dynamic resolution method. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a17f59ca12c93b20a015b6f465fc48f94}\label{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a17f59ca12c93b20a015b6f465fc48f94} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a36393c4bbe5c13c0087b769cd9fb04e6}{Dynamic\+Res\+Upscale\+Filter}} {\bfseries upsample\+Filter}
+\begin{DoxyCompactList}\small\item\em The default of upscaling filter used. It can be overridden via the API \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_resolution_handler_a07b777f5360562d2db434572bc42195e}{Dynamic\+Resolution\+Handler.\+Set\+Upscale\+Filter}. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a91c37d5399dfbe941ca2db17a8f2c0e0}\label{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a91c37d5399dfbe941ca2db17a8f2c0e0} 
+bool {\bfseries force\+Resolution}
+\begin{DoxyCompactList}\small\item\em Select whether dynamic resolution system will force a specific resolution percentage. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_acdb753dc8890d315d2144cddf4702b52}\label{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_acdb753dc8890d315d2144cddf4702b52} 
+float {\bfseries forced\+Percentage}
+\begin{DoxyCompactList}\small\item\em The resolution percentage forced in case force\+Resolution is set to true. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a96477f0d5401559fc205b1002fc2d707}\label{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a96477f0d5401559fc205b1002fc2d707} 
+float {\bfseries low\+Res\+Transparency\+Minimum\+Threshold}
+\begin{DoxyCompactList}\small\item\em The minimum percentage threshold allowed to clamp low resolution transparency. When the resolution percentage falls below this threshold, HDRP will clamp the low resolution to this percentage. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_ae785a448c78ed2c491868d83ea4e9662}\label{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_ae785a448c78ed2c491868d83ea4e9662} 
+float {\bfseries ray\+Tracing\+Half\+Res\+Threshold}
+\begin{DoxyCompactList}\small\item\em The minimum percentage threshold allowed to render ray tracing effects at half resolution. When the resolution percentage falls below this threshold, HDRP will render ray tracing effects at full resolution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+User-\/facing settings for dynamic resolution. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a3f7ef60e86430672ab5a53ccfed50daf}\index{UnityEngine.Rendering.GlobalDynamicResolutionSettings@{UnityEngine.Rendering.GlobalDynamicResolutionSettings}!NewDefault@{NewDefault}}
+\index{NewDefault@{NewDefault}!UnityEngine.Rendering.GlobalDynamicResolutionSettings@{UnityEngine.Rendering.GlobalDynamicResolutionSettings}}
+\doxysubsubsection{\texorpdfstring{NewDefault()}{NewDefault()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings_a3f7ef60e86430672ab5a53ccfed50daf} 
+static \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings}{Global\+Dynamic\+Resolution\+Settings}} Unity\+Engine.\+Rendering.\+Global\+Dynamic\+Resolution\+Settings.\+New\+Default (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Default \doxylink{struct_unity_engine_1_1_rendering_1_1_global_dynamic_resolution_settings}{Global\+Dynamic\+Resolution\+Settings}. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Common/Global\+Dynamic\+Resolution\+Settings.\+cs\end{DoxyCompactItemize}

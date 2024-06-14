@@ -1,0 +1,243 @@
+\doxysection{Unity\+Editor.\+Rendering.\+Serialized\+Bit\+Array Class Reference}
+\hypertarget{class_unity_editor_1_1_rendering_1_1_serialized_bit_array}{}\label{class_unity_editor_1_1_rendering_1_1_serialized_bit_array}\index{UnityEditor.Rendering.SerializedBitArray@{UnityEditor.Rendering.SerializedBitArray}}
+
+
+Abstract base classe of all \doxylink{class_unity_editor_1_1_rendering_1_1_serialized_bit_array}{Serialized\+Bit\+Array}.  
+
+
+Inheritance diagram for Unity\+Editor.\+Rendering.\+Serialized\+Bit\+Array\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.033210cm]{class_unity_editor_1_1_rendering_1_1_serialized_bit_array}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_aa75a53f0d40fde65756a3b4d6432cc09}{Has\+Bit\+Multiple\+Different\+Value}} (uint bit\+Index)
+\begin{DoxyCompactList}\small\item\em Does the bit at given index have multiple different values? \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_a696bafbbc1f84edf3efe445b3d744ca1}{Get\+Bit\+At}} (uint bit\+Index)
+\begin{DoxyCompactList}\small\item\em Get the bit at given index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_ac4869b2b51e06df51f45c2ac37d294ec}{Set\+Bit\+At}} (uint bit\+Index, bool value)
+\begin{DoxyCompactList}\small\item\em Set the bit at given index. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_ab86e72c0858c0b528c225fc356abea44}\label{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_ab86e72c0858c0b528c225fc356abea44} 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em Sync the reflected value with target value change. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Serialized\+Property\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_a8a8792daa05f9d18ebc3760daf7a7f60}{Get\+Or\+Initialize\+Serialized\+Properties}} ()
+\begin{DoxyCompactList}\small\item\em Initialisation of dedicated Serialized\+Propertiws. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_a9baccd24fce414d6c24c8f19360da104}{Has\+Bit\+Multiple\+Different\+Value\+\_\+\+Internal}} (uint bit\+Index)
+\begin{DoxyCompactList}\small\item\em Say if the properties have differente values. \end{DoxyCompactList}\item 
+unsafe bool \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_aec87895e7969ac78d477f901231c248e}{Has\+Bit\+Multiple\+Different\+Value\+\_\+\+For64\+Bits}} (string property\+Path, Serialized\+Property serialized\+Property, uint bit\+Index)
+\begin{DoxyCompactList}\small\item\em Safety\+: serialized\+Property must match its path. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_a85ecd1c39289e4691300d30f76d93859}{Get\+Bit\+At\+\_\+\+Internal}} (uint bit\+Index)
+\begin{DoxyCompactList}\small\item\em Get the value at index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_a268c5cbea7e226817145bdd61a51441d}{Set\+Bit\+At\+\_\+\+Internal}} (uint bit\+Index, bool value)
+\begin{DoxyCompactList}\small\item\em Set the bit at given index. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_ae554a28fdd54ae32de8ec8f9e4dda74a}\label{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_ae554a28fdd54ae32de8ec8f9e4dda74a} 
+void {\bfseries Resync\+Serialization} ()
+\begin{DoxyCompactList}\small\item\em Sync again every serialized\+Property. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_a27c40413d4d3a2fbd42fc9955391f3e2}\label{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_a27c40413d4d3a2fbd42fc9955391f3e2} 
+Serialized\+Property {\bfseries m\+\_\+\+Serialized\+Property}
+\begin{DoxyCompactList}\small\item\em The underlying serialized property. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_a7e473bbdbb4e1a4de0273028b0548d0c}\label{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_a7e473bbdbb4e1a4de0273028b0548d0c} 
+static Action$<$ Serialized\+Property, int, bool $>$ {\bfseries Set\+Bit\+At\+Index\+For\+All\+Targets\+Immediate}
+\begin{DoxyCompactList}\small\item\em Set the bit at given index. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_acc95b3ee38d58685942827244615aaf7}\label{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_acc95b3ee38d58685942827244615aaf7} 
+static Func$<$ Serialized\+Property, int $>$ {\bfseries Has\+Multiple\+Different\+Values\+Bitwise}
+\begin{DoxyCompactList}\small\item\em Has multiple differente value bitwise. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+uint \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_a326664b8e40707a37350ef65a741a620}{capacity}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Capacity of the bitarray. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_editor_1_1_rendering_1_1_i_serialized_bit_array}{Unity\+Editor.\+Rendering.\+ISerialized\+Bit\+Array}}}
+
+
+\doxysubsection{Detailed Description}
+Abstract base classe of all \doxylink{class_unity_editor_1_1_rendering_1_1_serialized_bit_array}{Serialized\+Bit\+Array}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_a696bafbbc1f84edf3efe445b3d744ca1}\index{UnityEditor.Rendering.SerializedBitArray@{UnityEditor.Rendering.SerializedBitArray}!GetBitAt@{GetBitAt}}
+\index{GetBitAt@{GetBitAt}!UnityEditor.Rendering.SerializedBitArray@{UnityEditor.Rendering.SerializedBitArray}}
+\doxysubsubsection{\texorpdfstring{GetBitAt()}{GetBitAt()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_a696bafbbc1f84edf3efe445b3d744ca1} 
+bool Unity\+Editor.\+Rendering.\+Serialized\+Bit\+Array.\+Get\+Bit\+At (\begin{DoxyParamCaption}\item[{uint}]{bit\+Index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the bit at given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+Index} & The index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bit value
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_rendering_1_1_i_serialized_bit_array_a199dda271d8886f797f5711be19433e4}{Unity\+Editor.\+Rendering.\+ISerialized\+Bit\+Array}}.
+
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_a85ecd1c39289e4691300d30f76d93859}\index{UnityEditor.Rendering.SerializedBitArray@{UnityEditor.Rendering.SerializedBitArray}!GetBitAt\_Internal@{GetBitAt\_Internal}}
+\index{GetBitAt\_Internal@{GetBitAt\_Internal}!UnityEditor.Rendering.SerializedBitArray@{UnityEditor.Rendering.SerializedBitArray}}
+\doxysubsubsection{\texorpdfstring{GetBitAt\_Internal()}{GetBitAt\_Internal()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_a85ecd1c39289e4691300d30f76d93859} 
+bool Unity\+Editor.\+Rendering.\+Serialized\+Bit\+Array.\+Get\+Bit\+At\+\_\+\+Internal (\begin{DoxyParamCaption}\item[{uint}]{bit\+Index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}
+
+
+
+Get the value at index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+Index} & The index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value at the index
+\end{DoxyReturn}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_a8a8792daa05f9d18ebc3760daf7a7f60}\index{UnityEditor.Rendering.SerializedBitArray@{UnityEditor.Rendering.SerializedBitArray}!GetOrInitializeSerializedProperties@{GetOrInitializeSerializedProperties}}
+\index{GetOrInitializeSerializedProperties@{GetOrInitializeSerializedProperties}!UnityEditor.Rendering.SerializedBitArray@{UnityEditor.Rendering.SerializedBitArray}}
+\doxysubsubsection{\texorpdfstring{GetOrInitializeSerializedProperties()}{GetOrInitializeSerializedProperties()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_a8a8792daa05f9d18ebc3760daf7a7f60} 
+Serialized\+Property\mbox{[}$\,$\mbox{]} Unity\+Editor.\+Rendering.\+Serialized\+Bit\+Array.\+Get\+Or\+Initialize\+Serialized\+Properties (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Initialisation of dedicated Serialized\+Propertiws. 
+
+\begin{DoxyReturn}{Returns}
+Arrays of Serialized\+Property
+\end{DoxyReturn}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_aa75a53f0d40fde65756a3b4d6432cc09}\index{UnityEditor.Rendering.SerializedBitArray@{UnityEditor.Rendering.SerializedBitArray}!HasBitMultipleDifferentValue@{HasBitMultipleDifferentValue}}
+\index{HasBitMultipleDifferentValue@{HasBitMultipleDifferentValue}!UnityEditor.Rendering.SerializedBitArray@{UnityEditor.Rendering.SerializedBitArray}}
+\doxysubsubsection{\texorpdfstring{HasBitMultipleDifferentValue()}{HasBitMultipleDifferentValue()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_aa75a53f0d40fde65756a3b4d6432cc09} 
+bool Unity\+Editor.\+Rendering.\+Serialized\+Bit\+Array.\+Has\+Bit\+Multiple\+Different\+Value (\begin{DoxyParamCaption}\item[{uint}]{bit\+Index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Does the bit at given index have multiple different values? 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+Index} & The index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True\+: Multiple different value
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_rendering_1_1_i_serialized_bit_array_a70142e14ced5ca5218a26ccd063d9747}{Unity\+Editor.\+Rendering.\+ISerialized\+Bit\+Array}}.
+
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_aec87895e7969ac78d477f901231c248e}\index{UnityEditor.Rendering.SerializedBitArray@{UnityEditor.Rendering.SerializedBitArray}!HasBitMultipleDifferentValue\_For64Bits@{HasBitMultipleDifferentValue\_For64Bits}}
+\index{HasBitMultipleDifferentValue\_For64Bits@{HasBitMultipleDifferentValue\_For64Bits}!UnityEditor.Rendering.SerializedBitArray@{UnityEditor.Rendering.SerializedBitArray}}
+\doxysubsubsection{\texorpdfstring{HasBitMultipleDifferentValue\_For64Bits()}{HasBitMultipleDifferentValue\_For64Bits()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_aec87895e7969ac78d477f901231c248e} 
+unsafe bool Unity\+Editor.\+Rendering.\+Serialized\+Bit\+Array.\+Has\+Bit\+Multiple\+Different\+Value\+\_\+\+For64\+Bits (\begin{DoxyParamCaption}\item[{string}]{property\+Path}{, }\item[{Serialized\+Property}]{serialized\+Property}{, }\item[{uint}]{bit\+Index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Safety\+: serialized\+Property must match its path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em property\+Path} & serialized\+Property must match its path\\
+\hline
+{\em serialized\+Property} & serialized\+Property must match its path\\
+\hline
+{\em bit\+Index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_a9baccd24fce414d6c24c8f19360da104}\index{UnityEditor.Rendering.SerializedBitArray@{UnityEditor.Rendering.SerializedBitArray}!HasBitMultipleDifferentValue\_Internal@{HasBitMultipleDifferentValue\_Internal}}
+\index{HasBitMultipleDifferentValue\_Internal@{HasBitMultipleDifferentValue\_Internal}!UnityEditor.Rendering.SerializedBitArray@{UnityEditor.Rendering.SerializedBitArray}}
+\doxysubsubsection{\texorpdfstring{HasBitMultipleDifferentValue\_Internal()}{HasBitMultipleDifferentValue\_Internal()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_a9baccd24fce414d6c24c8f19360da104} 
+bool Unity\+Editor.\+Rendering.\+Serialized\+Bit\+Array.\+Has\+Bit\+Multiple\+Different\+Value\+\_\+\+Internal (\begin{DoxyParamCaption}\item[{uint}]{bit\+Index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}
+
+
+
+Say if the properties have differente values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+Index} & The index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True\+: properties have different value
+\end{DoxyReturn}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_ac4869b2b51e06df51f45c2ac37d294ec}\index{UnityEditor.Rendering.SerializedBitArray@{UnityEditor.Rendering.SerializedBitArray}!SetBitAt@{SetBitAt}}
+\index{SetBitAt@{SetBitAt}!UnityEditor.Rendering.SerializedBitArray@{UnityEditor.Rendering.SerializedBitArray}}
+\doxysubsubsection{\texorpdfstring{SetBitAt()}{SetBitAt()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_ac4869b2b51e06df51f45c2ac37d294ec} 
+void Unity\+Editor.\+Rendering.\+Serialized\+Bit\+Array.\+Set\+Bit\+At (\begin{DoxyParamCaption}\item[{uint}]{bit\+Index}{, }\item[{bool}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the bit at given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+Index} & The index\\
+\hline
+{\em value} & The value\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_rendering_1_1_i_serialized_bit_array_ad2b93fba6899daba85f02574fecf5471}{Unity\+Editor.\+Rendering.\+ISerialized\+Bit\+Array}}.
+
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_a268c5cbea7e226817145bdd61a51441d}\index{UnityEditor.Rendering.SerializedBitArray@{UnityEditor.Rendering.SerializedBitArray}!SetBitAt\_Internal@{SetBitAt\_Internal}}
+\index{SetBitAt\_Internal@{SetBitAt\_Internal}!UnityEditor.Rendering.SerializedBitArray@{UnityEditor.Rendering.SerializedBitArray}}
+\doxysubsubsection{\texorpdfstring{SetBitAt\_Internal()}{SetBitAt\_Internal()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_a268c5cbea7e226817145bdd61a51441d} 
+void Unity\+Editor.\+Rendering.\+Serialized\+Bit\+Array.\+Set\+Bit\+At\+\_\+\+Internal (\begin{DoxyParamCaption}\item[{uint}]{bit\+Index}{, }\item[{bool}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}
+
+
+
+Set the bit at given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+Index} & The index\\
+\hline
+{\em value} & The value\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_a326664b8e40707a37350ef65a741a620}\index{UnityEditor.Rendering.SerializedBitArray@{UnityEditor.Rendering.SerializedBitArray}!capacity@{capacity}}
+\index{capacity@{capacity}!UnityEditor.Rendering.SerializedBitArray@{UnityEditor.Rendering.SerializedBitArray}}
+\doxysubsubsection{\texorpdfstring{capacity}{capacity}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_serialized_bit_array_a326664b8e40707a37350ef65a741a620} 
+uint Unity\+Editor.\+Rendering.\+Serialized\+Bit\+Array.\+capacity\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Capacity of the bitarray. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_rendering_1_1_i_serialized_bit_array_aa5258c8e295dbb6d37ec092a1b2d8653}{Unity\+Editor.\+Rendering.\+ISerialized\+Bit\+Array}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Editor/\+Utilities/Serialized\+Bit\+Array.\+cs\end{DoxyCompactItemize}

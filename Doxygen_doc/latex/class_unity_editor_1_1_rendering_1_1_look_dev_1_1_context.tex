@@ -1,0 +1,118 @@
+\doxysection{Unity\+Editor.\+Rendering.\+Look\+Dev.\+Context Class Reference}
+\hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_context}{}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_context}\index{UnityEditor.Rendering.LookDev.Context@{UnityEditor.Rendering.LookDev.Context}}
+
+
+Class containing all data used by the \doxylink{namespace_unity_editor_1_1_rendering_1_1_look_dev}{Look\+Dev} Window to render.  
+
+
+Inheritance diagram for Unity\+Editor.\+Rendering.\+Look\+Dev.\+Context\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_context}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_unity_editor_1_1_rendering_1_1_look_dev_1_1_context_1_1_view_iterator}{View\+Iterator}}
+\begin{DoxyCompactList}\small\item\em Helper class to iterate on views. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context}{View\+Context}} \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_context_a71335ec0d3a600adc90e6e080a9dd4b3}{Get\+View\+Content}} (\mbox{\hyperlink{namespace_unity_editor_1_1_rendering_1_1_look_dev_a7bad94c3ebf919531376774c81abc3f0}{View\+Index}} index)
+\begin{DoxyCompactList}\small\item\em Get datas relative to a view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_context_aaf1096218eaefec5c2076625cb475db9}{Update\+Environment\+Library}} (\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_environment_library}{Environment\+Library}} library)
+\begin{DoxyCompactList}\small\item\em Update the environment library used. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_context_a64e450cc9e67c6b61cffc41b8a3b74ac}{Synchronize\+Camera\+States}} (\mbox{\hyperlink{namespace_unity_editor_1_1_rendering_1_1_look_dev_a7bad94c3ebf919531376774c81abc3f0}{View\+Index}} base\+Camera\+State)
+\begin{DoxyCompactList}\small\item\em Synchronize cameras from both view using data from the base\+Camera\+State. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_context_a656eb23a1e91b1557959a6e507458bfa}{Set\+Focused\+Camera}} (\mbox{\hyperlink{namespace_unity_editor_1_1_rendering_1_1_look_dev_a7bad94c3ebf919531376774c81abc3f0}{View\+Index}} index)
+\begin{DoxyCompactList}\small\item\em Change focused view. Focused view is the base view to copy data when syncing views\textquotesingle{} cameras. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_context_a72983ec7d4ea205ed62656c43b3eeb41}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_context_a72983ec7d4ea205ed62656c43b3eeb41} 
+\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_environment_library}{Environment\+Library}} {\bfseries environment\+Library}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The currently used \doxylink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_environment}{Environment}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_context_a61e4ea2e288a8a236cae67b1e879b8f7}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_context_a61e4ea2e288a8a236cae67b1e879b8f7} 
+\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_layout_context}{Layout\+Context}} {\bfseries layout} = new \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_layout_context}{Layout\+Context}}()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The currently used layout. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_context_af16e91d43ad474b6c7b0fad7f5b99971}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_context_af16e91d43ad474b6c7b0fad7f5b99971} 
+bool {\bfseries camera\+Synced}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em State if both views camera movement are synced or not. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_context_a8baaa68f106529a64c4c936c6139c72a}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_context_a8baaa68f106529a64c4c936c6139c72a} 
+\mbox{\hyperlink{struct_unity_editor_1_1_rendering_1_1_look_dev_1_1_context_1_1_view_iterator}{View\+Iterator}} {\bfseries view\+Contexts}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Helper function to get \doxylink{struct_unity_editor_1_1_rendering_1_1_look_dev_1_1_context_1_1_view_iterator}{View\+Iterator} on View\+Contexts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class containing all data used by the \doxylink{namespace_unity_editor_1_1_rendering_1_1_look_dev}{Look\+Dev} Window to render. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_context_a71335ec0d3a600adc90e6e080a9dd4b3}\index{UnityEditor.Rendering.LookDev.Context@{UnityEditor.Rendering.LookDev.Context}!GetViewContent@{GetViewContent}}
+\index{GetViewContent@{GetViewContent}!UnityEditor.Rendering.LookDev.Context@{UnityEditor.Rendering.LookDev.Context}}
+\doxysubsubsection{\texorpdfstring{GetViewContent()}{GetViewContent()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_context_a71335ec0d3a600adc90e6e080a9dd4b3} 
+\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context}{View\+Context}} Unity\+Editor.\+Rendering.\+Look\+Dev.\+Context.\+Get\+View\+Content (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_unity_editor_1_1_rendering_1_1_look_dev_a7bad94c3ebf919531376774c81abc3f0}{View\+Index}}}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Get datas relative to a view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The view index to look at\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Datas for the selected view
+\end{DoxyReturn}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_context_a656eb23a1e91b1557959a6e507458bfa}\index{UnityEditor.Rendering.LookDev.Context@{UnityEditor.Rendering.LookDev.Context}!SetFocusedCamera@{SetFocusedCamera}}
+\index{SetFocusedCamera@{SetFocusedCamera}!UnityEditor.Rendering.LookDev.Context@{UnityEditor.Rendering.LookDev.Context}}
+\doxysubsubsection{\texorpdfstring{SetFocusedCamera()}{SetFocusedCamera()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_context_a656eb23a1e91b1557959a6e507458bfa} 
+void Unity\+Editor.\+Rendering.\+Look\+Dev.\+Context.\+Set\+Focused\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_unity_editor_1_1_rendering_1_1_look_dev_a7bad94c3ebf919531376774c81abc3f0}{View\+Index}}}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Change focused view. Focused view is the base view to copy data when syncing views\textquotesingle{} cameras. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the view\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_context_a64e450cc9e67c6b61cffc41b8a3b74ac}\index{UnityEditor.Rendering.LookDev.Context@{UnityEditor.Rendering.LookDev.Context}!SynchronizeCameraStates@{SynchronizeCameraStates}}
+\index{SynchronizeCameraStates@{SynchronizeCameraStates}!UnityEditor.Rendering.LookDev.Context@{UnityEditor.Rendering.LookDev.Context}}
+\doxysubsubsection{\texorpdfstring{SynchronizeCameraStates()}{SynchronizeCameraStates()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_context_a64e450cc9e67c6b61cffc41b8a3b74ac} 
+void Unity\+Editor.\+Rendering.\+Look\+Dev.\+Context.\+Synchronize\+Camera\+States (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_unity_editor_1_1_rendering_1_1_look_dev_a7bad94c3ebf919531376774c81abc3f0}{View\+Index}}}]{base\+Camera\+State}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Synchronize cameras from both view using data from the base\+Camera\+State. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Camera\+State} & The \doxylink{namespace_unity_editor_1_1_rendering_1_1_look_dev_a7bad94c3ebf919531376774c81abc3f0}{View\+Index} to be used as reference\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_context_aaf1096218eaefec5c2076625cb475db9}\index{UnityEditor.Rendering.LookDev.Context@{UnityEditor.Rendering.LookDev.Context}!UpdateEnvironmentLibrary@{UpdateEnvironmentLibrary}}
+\index{UpdateEnvironmentLibrary@{UpdateEnvironmentLibrary}!UnityEditor.Rendering.LookDev.Context@{UnityEditor.Rendering.LookDev.Context}}
+\doxysubsubsection{\texorpdfstring{UpdateEnvironmentLibrary()}{UpdateEnvironmentLibrary()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_context_aaf1096218eaefec5c2076625cb475db9} 
+void Unity\+Editor.\+Rendering.\+Look\+Dev.\+Context.\+Update\+Environment\+Library (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_environment_library}{Environment\+Library}}}]{library}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Update the environment library used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em library} & The new \doxylink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_environment_library}{Environment\+Library}\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Editor/\+Look\+Dev/Context.\+cs\end{DoxyCompactItemize}

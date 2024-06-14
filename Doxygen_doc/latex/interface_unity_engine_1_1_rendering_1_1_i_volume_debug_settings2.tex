@@ -1,0 +1,90 @@
+\doxysection{Unity\+Engine.\+Rendering.\+IVolume\+Debug\+Settings2 Interface Reference}
+\hypertarget{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings2}{}\label{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings2}\index{UnityEngine.Rendering.IVolumeDebugSettings2@{UnityEngine.Rendering.IVolumeDebugSettings2}}
+
+
+\doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} debug settings.  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+IVolume\+Debug\+Settings2\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings2}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Type \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings2_a9491cbc4201a6c22564105ac5614c83f}{target\+Render\+Pipeline}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Specifies the render pipelie. \end{DoxyCompactList}\item 
+List$<$(string, Type)$>$ \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings2_aa83679eec35acbad591bc6ff69cdffff}{volume\+Components\+Path\+And\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} component types and their path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings}{Unity\+Engine.\+Rendering.\+IVolume\+Debug\+Settings}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings_aedcee456e35da3b7dafe00f509666697}{selected\+Component}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Selected component. \end{DoxyCompactList}\item 
+Camera \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings_aa9e64a7140d827eb3ac5b417695d0dda}{selected\+Camera}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current camera to debug. \end{DoxyCompactList}\item 
+IEnumerable$<$ Camera $>$ \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings_a21db20601d2771c1f5ab38391fea56b9}{cameras}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the collection of registered cameras. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings_a79f848867d1271090294d66515ea4614}{selected\+Camera\+Index}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Selected camera index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_stack}{Volume\+Stack}} \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings_aa0a22abc7d146e39465c8fb662b79ad7}{selected\+Camera\+Volume\+Stack}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Selected camera volume stack. \end{DoxyCompactList}\item 
+Layer\+Mask \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings_af1593a4986cccbccb76431b79f64fc4a}{selected\+Camera\+Layer\+Mask}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Selected camera volume layer mask. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings_a36ef7093b830bc85be4a4f01cb121872}{selected\+Camera\+Position}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Selected camera volume position. \end{DoxyCompactList}\item 
+Type \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings_aef968361740a370ca9cb880608ea1c2a}{selected\+Component\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Type of the current component to debug. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings}{Unity\+Engine.\+Rendering.\+IVolume\+Debug\+Settings}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume}{Volume}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings_af7ccde13a3fa830b04fca37bd504b4bd}{Get\+Volumes}} ()
+\begin{DoxyCompactList}\small\item\em Obtains the Volumes. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings_a957c3f2f67034148da1c6f53b67c632d}{Volume\+Has\+Influence}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume}{Volume}} volume)
+\begin{DoxyCompactList}\small\item\em Return if the \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} has influence. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings_a8ee3ef8f0827f3d812211c6942ccc42f}{Refresh\+Volumes}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume}{Volume}}\mbox{[}$\,$\mbox{]} new\+Volumes)
+\begin{DoxyCompactList}\small\item\em Refreshes the volumes, fetches the stored volumes on the panel. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings_ae02f4e880050ddb34162fbb8fb1653fa}{Get\+Volume\+Weight}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume}{Volume}} volume)
+\begin{DoxyCompactList}\small\item\em Obtains the volume weight. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} debug settings. 
+
+\doxysubsection{Property Documentation}
+\Hypertarget{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings2_a9491cbc4201a6c22564105ac5614c83f}\index{UnityEngine.Rendering.IVolumeDebugSettings2@{UnityEngine.Rendering.IVolumeDebugSettings2}!targetRenderPipeline@{targetRenderPipeline}}
+\index{targetRenderPipeline@{targetRenderPipeline}!UnityEngine.Rendering.IVolumeDebugSettings2@{UnityEngine.Rendering.IVolumeDebugSettings2}}
+\doxysubsubsection{\texorpdfstring{targetRenderPipeline}{targetRenderPipeline}}
+{\footnotesize\ttfamily \label{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings2_a9491cbc4201a6c22564105ac5614c83f} 
+Type Unity\+Engine.\+Rendering.\+IVolume\+Debug\+Settings2.\+target\+Render\+Pipeline\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Specifies the render pipelie. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_ae3a1d4151aca6924014efb9493563e4d}{Unity\+Engine.\+Rendering.\+Volume\+Debug\+Settings$<$ T $>$}}.
+
+\Hypertarget{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings2_aa83679eec35acbad591bc6ff69cdffff}\index{UnityEngine.Rendering.IVolumeDebugSettings2@{UnityEngine.Rendering.IVolumeDebugSettings2}!volumeComponentsPathAndType@{volumeComponentsPathAndType}}
+\index{volumeComponentsPathAndType@{volumeComponentsPathAndType}!UnityEngine.Rendering.IVolumeDebugSettings2@{UnityEngine.Rendering.IVolumeDebugSettings2}}
+\doxysubsubsection{\texorpdfstring{volumeComponentsPathAndType}{volumeComponentsPathAndType}}
+{\footnotesize\ttfamily \label{interface_unity_engine_1_1_rendering_1_1_i_volume_debug_settings2_aa83679eec35acbad591bc6ff69cdffff} 
+List$<$(string, Type)$>$ Unity\+Engine.\+Rendering.\+IVolume\+Debug\+Settings2.\+volume\+Components\+Path\+And\+Type\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+List of \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} component types and their path. 
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_debug_settings_ae1388175413790b71403b03a2cc42ef7}{Unity\+Engine.\+Rendering.\+Volume\+Debug\+Settings$<$ T $>$}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Debugging/IVolume\+Debug\+Settings.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,209 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Low\+Level.\+Pen\+State Struct Reference}
+\hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state}{}\label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state}\index{UnityEngine.InputSystem.LowLevel.PenState@{UnityEngine.InputSystem.LowLevel.PenState}}
+
+
+Default state layout for pen devices.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Low\+Level.\+Pen\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state}{Pen\+State}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_aaeb48f9f609b8e4b60690cb70960566f}{With\+Button}} (\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59d}{Pen\+Button}} button, bool state=true)
+\begin{DoxyCompactList}\small\item\em Set or unset the bit in \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_a64525f5015f9fb4d240b6f7816246ee8}{buttons} for the given {\itshape button} . \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vector2 \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_ab59c07a4f348ffb9dc8daa97490a8b3f}{position}}
+\begin{DoxyCompactList}\small\item\em Current screen-\/space position of the pen. \end{DoxyCompactList}\item 
+Vector2 \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_a501e9f94c918a6c3306756dc1ea985d7}{delta}}
+\begin{DoxyCompactList}\small\item\em Screen-\/space motion delta. \end{DoxyCompactList}\item 
+Vector2 \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_ae6dd959434299b44ce57974ce14122d4}{tilt}}
+\begin{DoxyCompactList}\small\item\em The way the pen is leaned over perpendicular to the tablet surface. X goes \mbox{[}-\/1..1\mbox{]} left to right (with -\/1 and 1 being completely flush to the surface) and Y goes \mbox{[}-\/1..1\mbox{]} bottom to top. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_a377d0a1b6a461189104045788aa250aa}{pressure}}
+\begin{DoxyCompactList}\small\item\em Pressure with which the pen is pressed against the surface. 0 is none, 1 is full pressure. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_a71c19491c7f13123e1864a4ca227a043}{twist}}
+\begin{DoxyCompactList}\small\item\em Amount by which the pen is rotated around itself. \end{DoxyCompactList}\item 
+ushort \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_a64525f5015f9fb4d240b6f7816246ee8}{buttons}}
+\begin{DoxyCompactList}\small\item\em Button mask for which buttons on the pen are active. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_a950ef6f9d94de108d047119de5fa90c5}\label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_a950ef6f9d94de108d047119de5fa90c5} 
+ushort {\bfseries display\+Index}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_four_c_c}{Four\+CC}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_a82217f5dcef3f315b2735de65505a30f}{Format}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Format code for \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state}{Pen\+State}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_four_c_c}{Four\+CC}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_a1d147080e5dd7ee65414241bc1c1c946}{format}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_state_type_info}{Unity\+Engine.\+Input\+System.\+Low\+Level.\+IInput\+State\+Type\+Info}}}
+
+
+\doxysubsection{Detailed Description}
+Default state layout for pen devices. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_aaeb48f9f609b8e4b60690cb70960566f}\index{UnityEngine.InputSystem.LowLevel.PenState@{UnityEngine.InputSystem.LowLevel.PenState}!WithButton@{WithButton}}
+\index{WithButton@{WithButton}!UnityEngine.InputSystem.LowLevel.PenState@{UnityEngine.InputSystem.LowLevel.PenState}}
+\doxysubsubsection{\texorpdfstring{WithButton()}{WithButton()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_aaeb48f9f609b8e4b60690cb70960566f} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state}{Pen\+State}} Unity\+Engine.\+Input\+System.\+Low\+Level.\+Pen\+State.\+With\+Button (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59d}{Pen\+Button}}}]{button}{, }\item[{bool}]{state}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set or unset the bit in \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_a64525f5015f9fb4d240b6f7816246ee8}{buttons} for the given {\itshape button} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em button} & Button whose state to set.\\
+\hline
+{\em state} & Whether the button is on or off.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Same \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state}{Pen\+State} with an updated \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_a64525f5015f9fb4d240b6f7816246ee8}{buttons} mask.
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_a64525f5015f9fb4d240b6f7816246ee8}\index{UnityEngine.InputSystem.LowLevel.PenState@{UnityEngine.InputSystem.LowLevel.PenState}!buttons@{buttons}}
+\index{buttons@{buttons}!UnityEngine.InputSystem.LowLevel.PenState@{UnityEngine.InputSystem.LowLevel.PenState}}
+\doxysubsubsection{\texorpdfstring{buttons}{buttons}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_a64525f5015f9fb4d240b6f7816246ee8} 
+ushort Unity\+Engine.\+Input\+System.\+Low\+Level.\+Pen\+State.\+buttons}
+
+
+
+Button mask for which buttons on the pen are active. 
+
+Bitmask for buttons on the pen.\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_a501e9f94c918a6c3306756dc1ea985d7}\index{UnityEngine.InputSystem.LowLevel.PenState@{UnityEngine.InputSystem.LowLevel.PenState}!delta@{delta}}
+\index{delta@{delta}!UnityEngine.InputSystem.LowLevel.PenState@{UnityEngine.InputSystem.LowLevel.PenState}}
+\doxysubsubsection{\texorpdfstring{delta}{delta}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_a501e9f94c918a6c3306756dc1ea985d7} 
+Vector2 Unity\+Engine.\+Input\+System.\+Low\+Level.\+Pen\+State.\+delta}
+
+
+
+Screen-\/space motion delta. 
+
+Screen-\/space motion delta.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_pointer_a9bc9a66dcf6b4d35ee95d09870c73c4b}{Pointer.\+delta}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_ab59c07a4f348ffb9dc8daa97490a8b3f}\index{UnityEngine.InputSystem.LowLevel.PenState@{UnityEngine.InputSystem.LowLevel.PenState}!position@{position}}
+\index{position@{position}!UnityEngine.InputSystem.LowLevel.PenState@{UnityEngine.InputSystem.LowLevel.PenState}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_ab59c07a4f348ffb9dc8daa97490a8b3f} 
+Vector2 Unity\+Engine.\+Input\+System.\+Low\+Level.\+Pen\+State.\+position}
+
+
+
+Current screen-\/space position of the pen. 
+
+Screen-\/space position.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_pointer_a56648a46fa117cfe39f1bd3530c49700}{Pointer.\+position}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_a377d0a1b6a461189104045788aa250aa}\index{UnityEngine.InputSystem.LowLevel.PenState@{UnityEngine.InputSystem.LowLevel.PenState}!pressure@{pressure}}
+\index{pressure@{pressure}!UnityEngine.InputSystem.LowLevel.PenState@{UnityEngine.InputSystem.LowLevel.PenState}}
+\doxysubsubsection{\texorpdfstring{pressure}{pressure}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_a377d0a1b6a461189104045788aa250aa} 
+float Unity\+Engine.\+Input\+System.\+Low\+Level.\+Pen\+State.\+pressure}
+
+
+
+Pressure with which the pen is pressed against the surface. 0 is none, 1 is full pressure. 
+
+Pressure with which the pen is pressed.
+
+May go beyond 1 depending on pressure calibration on the system. The maximum pressure point may be set to less than the physical maximum pressure point determined by the hardware. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_pointer_a45223ffb13bf6dba7351d423c635c4ec}{Pointer.\+pressure}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_ae6dd959434299b44ce57974ce14122d4}\index{UnityEngine.InputSystem.LowLevel.PenState@{UnityEngine.InputSystem.LowLevel.PenState}!tilt@{tilt}}
+\index{tilt@{tilt}!UnityEngine.InputSystem.LowLevel.PenState@{UnityEngine.InputSystem.LowLevel.PenState}}
+\doxysubsubsection{\texorpdfstring{tilt}{tilt}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_ae6dd959434299b44ce57974ce14122d4} 
+Vector2 Unity\+Engine.\+Input\+System.\+Low\+Level.\+Pen\+State.\+tilt}
+
+
+
+The way the pen is leaned over perpendicular to the tablet surface. X goes \mbox{[}-\/1..1\mbox{]} left to right (with -\/1 and 1 being completely flush to the surface) and Y goes \mbox{[}-\/1..1\mbox{]} bottom to top. 
+
+Amount pen is leaning over.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_pen_a6990c1217cc3b7b10cc5b433d0a31120}{Pen.\+tilt}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_a71c19491c7f13123e1864a4ca227a043}\index{UnityEngine.InputSystem.LowLevel.PenState@{UnityEngine.InputSystem.LowLevel.PenState}!twist@{twist}}
+\index{twist@{twist}!UnityEngine.InputSystem.LowLevel.PenState@{UnityEngine.InputSystem.LowLevel.PenState}}
+\doxysubsubsection{\texorpdfstring{twist}{twist}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_a71c19491c7f13123e1864a4ca227a043} 
+float Unity\+Engine.\+Input\+System.\+Low\+Level.\+Pen\+State.\+twist}
+
+
+
+Amount by which the pen is rotated around itself. 
+
+Rotation of the pen around itself.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_pen_aea99e31b8b98e2d2d209cf9f54478217}{Pen.\+twist}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_a82217f5dcef3f315b2735de65505a30f}\index{UnityEngine.InputSystem.LowLevel.PenState@{UnityEngine.InputSystem.LowLevel.PenState}!Format@{Format}}
+\index{Format@{Format}!UnityEngine.InputSystem.LowLevel.PenState@{UnityEngine.InputSystem.LowLevel.PenState}}
+\doxysubsubsection{\texorpdfstring{Format}{Format}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_a82217f5dcef3f315b2735de65505a30f} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_four_c_c}{Four\+CC}} Unity\+Engine.\+Input\+System.\+Low\+Level.\+Pen\+State.\+Format\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+Format code for \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state}{Pen\+State}. 
+
+Returns "{}\+PEN "{}.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_block_a2432f14069a29cbe590e13b1f8ed595e}{Input\+State\+Block.\+format}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_a1d147080e5dd7ee65414241bc1c1c946}\index{UnityEngine.InputSystem.LowLevel.PenState@{UnityEngine.InputSystem.LowLevel.PenState}!format@{format}}
+\index{format@{format}!UnityEngine.InputSystem.LowLevel.PenState@{UnityEngine.InputSystem.LowLevel.PenState}}
+\doxysubsubsection{\texorpdfstring{format}{format}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state_a1d147080e5dd7ee65414241bc1c1c946} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_four_c_c}{Four\+CC}} Unity\+Engine.\+Input\+System.\+Low\+Level.\+Pen\+State.\+format\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_state_type_info}{Unity\+Engine.\+Input\+System.\+Low\+Level.\+IInput\+State\+Type\+Info}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Devices/Pen.\+cs\end{DoxyCompactItemize}

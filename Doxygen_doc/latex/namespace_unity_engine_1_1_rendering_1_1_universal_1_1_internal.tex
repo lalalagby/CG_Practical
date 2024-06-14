@@ -1,0 +1,53 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Universal.\+Internal Namespace Reference}
+\hypertarget{namespace_unity_engine_1_1_rendering_1_1_universal_1_1_internal}{}\label{namespace_unity_engine_1_1_rendering_1_1_universal_1_1_internal}\index{UnityEngine.Rendering.Universal.Internal@{UnityEngine.Rendering.Universal.Internal}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_additional_lights_shadow_caster_pass}{Additional\+Lights\+Shadow\+Caster\+Pass}}
+\begin{DoxyCompactList}\small\item\em Renders a shadow map atlas for additional shadow-\/casting Lights. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_color_grading_lut_pass}{Color\+Grading\+Lut\+Pass}}
+\begin{DoxyCompactList}\small\item\em Renders a color grading LUT texture. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_copy_color_pass}{Copy\+Color\+Pass}}
+\begin{DoxyCompactList}\small\item\em Copy the given color buffer to the given destination color buffer. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_copy_depth_pass}{Copy\+Depth\+Pass}}
+\begin{DoxyCompactList}\small\item\em Copy the given depth buffer into the given destination depth buffer. \end{DoxyCompactList}\item 
+class {\bfseries Deferred\+Config}
+\item 
+class {\bfseries Deferred\+Lights}
+\item 
+class {\bfseries Deferred\+Pass}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_normal_only_pass}{Depth\+Normal\+Only\+Pass}}
+\begin{DoxyCompactList}\small\item\em Render all objects that have a \textquotesingle{}Depth\+Normals\textquotesingle{} and/or \textquotesingle{}Depth\+Normals\+Only\textquotesingle{} pass into the given depth and normal buffers. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_depth_only_pass}{Depth\+Only\+Pass}}
+\begin{DoxyCompactList}\small\item\em Render all objects that have a \textquotesingle{}Depth\+Only\textquotesingle{} pass into the given depth buffer. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_draw_objects_pass}{Draw\+Objects\+Pass}}
+\begin{DoxyCompactList}\small\item\em Draw objects into the given color and depth target. \end{DoxyCompactList}\item 
+class {\bfseries Draw\+Objects\+With\+Rendering\+Layers\+Pass}
+\begin{DoxyCompactList}\small\item\em Extension of Draw\+Object\+Pass that also output \doxylink{namespace_unity_engine_1_1_rendering}{Rendering} Layers Texture as second render target. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_final_blit_pass}{Final\+Blit\+Pass}}
+\begin{DoxyCompactList}\small\item\em Copy the given color target to the current camera target. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_forward_lights}{Forward\+Lights}}
+\begin{DoxyCompactList}\small\item\em Computes and submits lighting data to the GPU. \end{DoxyCompactList}\item 
+class {\bfseries GBuffer\+Pass}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_internal_1_1_main_light_shadow_caster_pass}{Main\+Light\+Shadow\+Caster\+Pass}}
+\begin{DoxyCompactList}\small\item\em Renders a shadow map for the main Light. \end{DoxyCompactList}\item 
+class {\bfseries Normal\+Reconstruction}
+\begin{DoxyCompactList}\small\item\em Util class for normal reconstruction. \end{DoxyCompactList}\item 
+class {\bfseries Render\+Target\+Buffer\+System}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespace_unity_engine_1_1_rendering_1_1_universal_1_1_internal_a7367d79713f42ecc7d2a82b19c4fb7d5}\label{namespace_unity_engine_1_1_rendering_1_1_universal_1_1_internal_a7367d79713f42ecc7d2a82b19c4fb7d5} 
+enum {\bfseries Stencil\+Usage} \{ \newline
+{\bfseries User\+Mask} = 0b\+\_\+0000\+\_\+1111
+, {\bfseries Stencil\+Light} = 0b\+\_\+0001\+\_\+0000
+, {\bfseries Material\+Mask} = 0b\+\_\+0110\+\_\+0000
+, {\bfseries Material\+Unlit} = 0b\+\_\+0000\+\_\+0000
+, \newline
+{\bfseries Material\+Lit} = 0b\+\_\+0010\+\_\+0000
+, {\bfseries Material\+Simple\+Lit} = 0b\+\_\+0100\+\_\+0000
+ \}
+\end{DoxyCompactItemize}

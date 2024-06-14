@@ -1,0 +1,278 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Input\+Action\+Property Struct Reference}
+\hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_property}{}\label{struct_unity_engine_1_1_input_system_1_1_input_action_property}\index{UnityEngine.InputSystem.InputActionProperty@{UnityEngine.InputSystem.InputActionProperty}}
+
+
+A serializable property type that can either reference an action externally defined in an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset} or define a new action directly on the property.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Input\+Action\+Property\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.362530cm]{struct_unity_engine_1_1_input_system_1_1_input_action_property}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property_a83151a05d388a41e6396be15623e199a}{Input\+Action\+Property}} (\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property_a9512da298d640e4e7148c5953f08863a}{action}})
+\begin{DoxyCompactList}\small\item\em Initialize the property to contain the given action. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property_a76b13eaa42162b1a2b6539a8f1153828}{Input\+Action\+Property}} (\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_reference}{Input\+Action\+Reference}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property_ade15d78e0106b3e43efa251f8e82c8d5}{reference}})
+\begin{DoxyCompactList}\small\item\em Initialize the property to use the given action reference. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property_aeb8b7518fc7e1c137c35e9f635730538}{Equals}} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property}{Input\+Action\+Property}} other)
+\begin{DoxyCompactList}\small\item\em Compare two action properties to see whether they refer to the same action. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property_ad06d37c6b52ec51b076d02de1b5f232d}{Equals}} (\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} other)
+\begin{DoxyCompactList}\small\item\em Check whether the property refers to the same action. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property_ab4a935bcce601501a4e62888de149f6b}{Equals}} (\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_reference}{Input\+Action\+Reference}} other)
+\begin{DoxyCompactList}\small\item\em Check whether the property references the same action. \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property_ad1e6d2ae68b593204ac1d1db5e3bad7e}{Equals}} (object obj)
+\begin{DoxyCompactList}\small\item\em Check whether the given object is an \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_property}{Input\+Action\+Property} referencing the same action. \end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property_a5567be7a8e8e483cbe3d490d3c25ddc3}{Get\+Hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Compute a hash code for the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property_a3add41e0cbb3fc8736dfd3a594a3005f}{operator==}} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property}{Input\+Action\+Property}} left, \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property}{Input\+Action\+Property}} right)
+\begin{DoxyCompactList}\small\item\em Compare the two properties for equivalence. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property_a415dc4535b072ba5e5f9925cd8afff41}{operator!=}} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property}{Input\+Action\+Property}} left, \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property}{Input\+Action\+Property}} right)
+\begin{DoxyCompactList}\small\item\em Compare the two properties for not being equivalent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property_a9512da298d640e4e7148c5953f08863a}{action}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The action held on to by the property. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_reference}{Input\+Action\+Reference}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property_ade15d78e0106b3e43efa251f8e82c8d5}{reference}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If the property contains a reference to the action, this property returns the reference. Otherwise it returns {\ttfamily null}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A serializable property type that can either reference an action externally defined in an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset} or define a new action directly on the property. 
+
+This struct is meant to be used for serialized fields in {\ttfamily Mono\+Behaviour} and {\ttfamily Scriptable\+Object} classes. It has a custom property drawer attached to it that allows to switch between using the property as a reference and using it to define an action in place.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyBehavior\ :\ MonoBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ This\ can\ be\ edited\ in\ the\ inspector\ to\ either\ reference\ an\ existing}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ action\ or\ to\ define\ an\ action\ directly\ on\ the\ component.}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ InputActionProperty\ myAction;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_reference}{Input\+Action\+Reference}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_property_a83151a05d388a41e6396be15623e199a}\index{UnityEngine.InputSystem.InputActionProperty@{UnityEngine.InputSystem.InputActionProperty}!InputActionProperty@{InputActionProperty}}
+\index{InputActionProperty@{InputActionProperty}!UnityEngine.InputSystem.InputActionProperty@{UnityEngine.InputSystem.InputActionProperty}}
+\doxysubsubsection{\texorpdfstring{InputActionProperty()}{InputActionProperty()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_property_a83151a05d388a41e6396be15623e199a} 
+Unity\+Engine.\+Input\+System.\+Input\+Action\+Property.\+Input\+Action\+Property (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}}}]{action}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialize the property to contain the given action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & An action.\\
+\hline
+\end{DoxyParams}
+
+
+When the struct is serialized, it will serialize the given action as part of it. The \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_property_ade15d78e0106b3e43efa251f8e82c8d5}{reference} property will return {\ttfamily null}. \Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_property_a76b13eaa42162b1a2b6539a8f1153828}\index{UnityEngine.InputSystem.InputActionProperty@{UnityEngine.InputSystem.InputActionProperty}!InputActionProperty@{InputActionProperty}}
+\index{InputActionProperty@{InputActionProperty}!UnityEngine.InputSystem.InputActionProperty@{UnityEngine.InputSystem.InputActionProperty}}
+\doxysubsubsection{\texorpdfstring{InputActionProperty()}{InputActionProperty()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_property_a76b13eaa42162b1a2b6539a8f1153828} 
+Unity\+Engine.\+Input\+System.\+Input\+Action\+Property.\+Input\+Action\+Property (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_reference}{Input\+Action\+Reference}}}]{reference}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialize the property to use the given action reference. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reference} & Reference to an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}.\\
+\hline
+\end{DoxyParams}
+
+
+When the struct is serialized, it will only serialize a reference to the given {\itshape reference}  object. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_property_ad06d37c6b52ec51b076d02de1b5f232d}\index{UnityEngine.InputSystem.InputActionProperty@{UnityEngine.InputSystem.InputActionProperty}!Equals@{Equals}}
+\index{Equals@{Equals}!UnityEngine.InputSystem.InputActionProperty@{UnityEngine.InputSystem.InputActionProperty}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_property_ad06d37c6b52ec51b076d02de1b5f232d} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Action\+Property.\+Equals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}}}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check whether the property refers to the same action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & An action.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_property_a9512da298d640e4e7148c5953f08863a}{action} is the same as {\itshape other} .
+\end{DoxyReturn}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_property_aeb8b7518fc7e1c137c35e9f635730538}\index{UnityEngine.InputSystem.InputActionProperty@{UnityEngine.InputSystem.InputActionProperty}!Equals@{Equals}}
+\index{Equals@{Equals}!UnityEngine.InputSystem.InputActionProperty@{UnityEngine.InputSystem.InputActionProperty}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_property_aeb8b7518fc7e1c137c35e9f635730538} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Action\+Property.\+Equals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property}{Input\+Action\+Property}}}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compare two action properties to see whether they refer to the same action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another action property.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if both properties refer to the same action.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_property_ab4a935bcce601501a4e62888de149f6b}\index{UnityEngine.InputSystem.InputActionProperty@{UnityEngine.InputSystem.InputActionProperty}!Equals@{Equals}}
+\index{Equals@{Equals}!UnityEngine.InputSystem.InputActionProperty@{UnityEngine.InputSystem.InputActionProperty}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_property_ab4a935bcce601501a4e62888de149f6b} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Action\+Property.\+Equals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_reference}{Input\+Action\+Reference}}}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check whether the property references the same action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & An action reference.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the property and {\itshape other}  reference the same action.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_property_ad1e6d2ae68b593204ac1d1db5e3bad7e}\index{UnityEngine.InputSystem.InputActionProperty@{UnityEngine.InputSystem.InputActionProperty}!Equals@{Equals}}
+\index{Equals@{Equals}!UnityEngine.InputSystem.InputActionProperty@{UnityEngine.InputSystem.InputActionProperty}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_property_ad1e6d2ae68b593204ac1d1db5e3bad7e} 
+override bool Unity\+Engine.\+Input\+System.\+Input\+Action\+Property.\+Equals (\begin{DoxyParamCaption}\item[{object}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check whether the given object is an \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_property}{Input\+Action\+Property} referencing the same action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & An object or {\ttfamily null}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the given {\itshape obj}  is an \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_property}{Input\+Action\+Property} equivalent to this one.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_property_aeb8b7518fc7e1c137c35e9f635730538}{Equals(\+Input\+Action\+Property)}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_property_a5567be7a8e8e483cbe3d490d3c25ddc3}\index{UnityEngine.InputSystem.InputActionProperty@{UnityEngine.InputSystem.InputActionProperty}!GetHashCode@{GetHashCode}}
+\index{GetHashCode@{GetHashCode}!UnityEngine.InputSystem.InputActionProperty@{UnityEngine.InputSystem.InputActionProperty}}
+\doxysubsubsection{\texorpdfstring{GetHashCode()}{GetHashCode()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_property_a5567be7a8e8e483cbe3d490d3c25ddc3} 
+override int Unity\+Engine.\+Input\+System.\+Input\+Action\+Property.\+Get\+Hash\+Code (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compute a hash code for the object. 
+
+\begin{DoxyReturn}{Returns}
+A hash code.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_property_a415dc4535b072ba5e5f9925cd8afff41}\index{UnityEngine.InputSystem.InputActionProperty@{UnityEngine.InputSystem.InputActionProperty}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!UnityEngine.InputSystem.InputActionProperty@{UnityEngine.InputSystem.InputActionProperty}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_property_a415dc4535b072ba5e5f9925cd8afff41} 
+static bool Unity\+Engine.\+Input\+System.\+Input\+Action\+Property.\+operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property}{Input\+Action\+Property}}}]{left}{, }\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property}{Input\+Action\+Property}}}]{right}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Compare the two properties for not being equivalent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & The first property.\\
+\hline
+{\em right} & The second property.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the two action properties are not equivalent.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_property_aeb8b7518fc7e1c137c35e9f635730538}{Equals(\+Input\+Action\+Property)}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_property_a3add41e0cbb3fc8736dfd3a594a3005f}\index{UnityEngine.InputSystem.InputActionProperty@{UnityEngine.InputSystem.InputActionProperty}!operator==@{operator==}}
+\index{operator==@{operator==}!UnityEngine.InputSystem.InputActionProperty@{UnityEngine.InputSystem.InputActionProperty}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_property_a3add41e0cbb3fc8736dfd3a594a3005f} 
+static bool Unity\+Engine.\+Input\+System.\+Input\+Action\+Property.\+operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property}{Input\+Action\+Property}}}]{left}{, }\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property}{Input\+Action\+Property}}}]{right}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Compare the two properties for equivalence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & The first property.\\
+\hline
+{\em right} & The second property.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the two action properties are equivalent.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_property_aeb8b7518fc7e1c137c35e9f635730538}{Equals(\+Input\+Action\+Property)}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_property_a9512da298d640e4e7148c5953f08863a}\index{UnityEngine.InputSystem.InputActionProperty@{UnityEngine.InputSystem.InputActionProperty}!action@{action}}
+\index{action@{action}!UnityEngine.InputSystem.InputActionProperty@{UnityEngine.InputSystem.InputActionProperty}}
+\doxysubsubsection{\texorpdfstring{action}{action}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_property_a9512da298d640e4e7148c5953f08863a} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Property.\+action\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The action held on to by the property. 
+
+The action object contained in the property.
+
+This property will return {\ttfamily null} if the property is using a \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_property_ade15d78e0106b3e43efa251f8e82c8d5}{reference} and the referenced action cannot be found. Also, it will be {\ttfamily null} if the property has been manually initialized with a {\ttfamily null} \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action} using \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_property_a83151a05d388a41e6396be15623e199a}{Input\+Action\+Property(\+Input\+Action)}. \Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_property_ade15d78e0106b3e43efa251f8e82c8d5}\index{UnityEngine.InputSystem.InputActionProperty@{UnityEngine.InputSystem.InputActionProperty}!reference@{reference}}
+\index{reference@{reference}!UnityEngine.InputSystem.InputActionProperty@{UnityEngine.InputSystem.InputActionProperty}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_property_ade15d78e0106b3e43efa251f8e82c8d5} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_reference}{Input\+Action\+Reference}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Property.\+reference\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+If the property contains a reference to the action, this property returns the reference. Otherwise it returns {\ttfamily null}. 
+
+Reference to external input action, if defined.
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Actions/Input\+Action\+Property.\+cs\end{DoxyCompactItemize}

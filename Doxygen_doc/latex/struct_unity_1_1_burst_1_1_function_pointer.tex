@@ -1,0 +1,90 @@
+\doxysection{Unity.\+Burst.\+Function\+Pointer\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Struct Template Reference}
+\hypertarget{struct_unity_1_1_burst_1_1_function_pointer}{}\label{struct_unity_1_1_burst_1_1_function_pointer}\index{Unity.Burst.FunctionPointer$<$ T $>$@{Unity.Burst.FunctionPointer$<$ T $>$}}
+
+
+A function pointer that can be used from a \doxylink{namespace_unity_1_1_burst}{Burst} Job or from regular C\#. It needs to be compiled through Burst\+Compiler.\+Compile\+Function\+Pointer$<$\+T$>$  
+
+
+Inheritance diagram for Unity.\+Burst.\+Function\+Pointer\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_unity_1_1_burst_1_1_function_pointer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_unity_1_1_burst_1_1_function_pointer_a4ba030dba6ac08403328f415977f35c8}{Function\+Pointer}} (Int\+Ptr ptr)
+\begin{DoxyCompactList}\small\item\em Creates a new instance of this function pointer with the following native pointer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_unity_1_1_burst_1_1_i_function_pointer}{IFunction\+Pointer}} IFunction\+Pointer. \mbox{\hyperlink{struct_unity_1_1_burst_1_1_function_pointer_a2192a75dd50624996c0b7ceb653005f1}{From\+Int\+Ptr}} (Int\+Ptr ptr)
+\begin{DoxyCompactList}\small\item\em Converts a pointer to a function pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_1_1_burst_1_1_function_pointer_a2f5e91f136fab369c0da9a50f75c8075}\label{struct_unity_1_1_burst_1_1_function_pointer_a2f5e91f136fab369c0da9a50f75c8075} 
+Int\+Ptr {\bfseries Value}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the underlying pointer. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_1_1_burst_1_1_function_pointer_ace9f67929476f929895dc08d8016c1db}\label{struct_unity_1_1_burst_1_1_function_pointer_ace9f67929476f929895dc08d8016c1db} 
+T {\bfseries Invoke}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the delegate associated to this function pointer in order to call the function pointer. This delegate can be called from a \doxylink{namespace_unity_1_1_burst}{Burst} Job or from regular C\#. If calling from regular C\#, it is recommended to cache the returned delegate of this property instead of using this property every time you need to call the delegate. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_1_1_burst_1_1_function_pointer_a5e240b45de5ca1c8bac842374d71ea9a}\label{struct_unity_1_1_burst_1_1_function_pointer_a5e240b45de5ca1c8bac842374d71ea9a} 
+bool {\bfseries Is\+Created}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the function pointer is valid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A function pointer that can be used from a \doxylink{namespace_unity_1_1_burst}{Burst} Job or from regular C\#. It needs to be compiled through Burst\+Compiler.\+Compile\+Function\+Pointer$<$\+T$>$ 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the delegate of this function pointer\\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_unity_1_1_burst_1_1_function_pointer_a4ba030dba6ac08403328f415977f35c8}\index{Unity.Burst.FunctionPointer$<$ T $>$@{Unity.Burst.FunctionPointer$<$ T $>$}!FunctionPointer@{FunctionPointer}}
+\index{FunctionPointer@{FunctionPointer}!Unity.Burst.FunctionPointer$<$ T $>$@{Unity.Burst.FunctionPointer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{FunctionPointer()}{FunctionPointer()}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_burst_1_1_function_pointer_a4ba030dba6ac08403328f415977f35c8} 
+\mbox{\hyperlink{struct_unity_1_1_burst_1_1_function_pointer}{Unity.\+Burst.\+Function\+Pointer}}$<$ T $>$.\mbox{\hyperlink{struct_unity_1_1_burst_1_1_function_pointer}{Function\+Pointer}} (\begin{DoxyParamCaption}\item[{Int\+Ptr}]{ptr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new instance of this function pointer with the following native pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_unity_1_1_burst_1_1_function_pointer_a2192a75dd50624996c0b7ceb653005f1}\index{Unity.Burst.FunctionPointer$<$ T $>$@{Unity.Burst.FunctionPointer$<$ T $>$}!FromIntPtr@{FromIntPtr}}
+\index{FromIntPtr@{FromIntPtr}!Unity.Burst.FunctionPointer$<$ T $>$@{Unity.Burst.FunctionPointer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{FromIntPtr()}{FromIntPtr()}}
+{\footnotesize\ttfamily \label{struct_unity_1_1_burst_1_1_function_pointer_a2192a75dd50624996c0b7ceb653005f1} 
+\mbox{\hyperlink{interface_unity_1_1_burst_1_1_i_function_pointer}{IFunction\+Pointer}} IFunction\+Pointer. \mbox{\hyperlink{struct_unity_1_1_burst_1_1_function_pointer}{Unity.\+Burst.\+Function\+Pointer}}$<$ T $>$.From\+Int\+Ptr (\begin{DoxyParamCaption}\item[{Int\+Ptr}]{ptr}{}\end{DoxyParamCaption})}
+
+
+
+Converts a pointer to a function pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & The native pointer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An instance of this interface.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_burst_1_1_i_function_pointer_ad06ed17dbeeaec5e1288bc9232837f53}{Unity.\+Burst.\+IFunction\+Pointer}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+burst@1.\+8.\+7/\+Runtime/Function\+Pointer.\+cs\end{DoxyCompactItemize}

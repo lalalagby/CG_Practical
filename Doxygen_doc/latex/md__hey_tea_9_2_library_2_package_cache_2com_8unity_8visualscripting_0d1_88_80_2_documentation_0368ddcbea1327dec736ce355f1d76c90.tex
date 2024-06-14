@@ -1,0 +1,95 @@
+\chapter{Trigger a Custom Scripting Event from a C\# script}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0368ddcbea1327dec736ce355f1d76c90}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0368ddcbea1327dec736ce355f1d76c90}\index{Trigger a Custom Scripting Event from a C\# script@{Trigger a Custom Scripting Event from a C\# script}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0368ddcbea1327dec736ce355f1d76c90_autotoc_md5282}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0368ddcbea1327dec736ce355f1d76c90_autotoc_md5282}%
+ You can send or trigger a Custom Scripting Event node in a Script Graph with a C\# script instead of a Custom Scripting Event Sender node. For more information on how to create a Custom Scripting Event Sender node, see \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_039a0e2aa5464bc68d38ebd92d57ec4fc}{Create a Custom Scripting Event Sender node}{0}.
+
+\begin{DoxyNote}{Note}
+Before you can trigger a Custom Scripting Event node, you must create your Custom Scripting Event node. \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_033a8ef149dfa2b3576e594bdca14540a}{tasks-\/note-\/end}{0}\mbox{]}.
+\end{DoxyNote}
+To trigger an Event from a C\# script\+:
+
+
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_02d03661124e0bd86dfb18db85fc8ceba}{open-\/project-\/window}{0}\mbox{]}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_08e34a592cc0e8541615db3733ae88b57}{right-\/click-\/project}{0}\mbox{]}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_059d97be577f9030fa0ef5eb469c8b969}{create-\/c-\/script-\/project}{0}\mbox{]}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Enter a name, such as {\ttfamily Code\+Trigger\+Custom\+Event}, for the new script file.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Press Enter.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_09d38870b1cab13c8e6231c5db868b782}{open-\/new-\/external-\/code}{0}\mbox{]}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item In your external editor, copy and paste the following code into your C\# script\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_1_1_visual_scripting}{Unity.VisualScripting}};}
+\DoxyCodeLine{\textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }CodeTriggerCustomEvent\ :\ MonoBehaviour}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordtype}{void}\ Update()}
+\DoxyCodeLine{\ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Input.anyKeyDown)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Trigger\ the\ previously\ created\ Custom\ Scripting\ Event\ MyCustomEvent\ with\ the\ integer\ value\ 2.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ EventBus.Trigger(EventNames.MyCustomEvent,\ 2);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \}}
+
+\end{DoxyCode}
+ ~\newline
+
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2snippets_2vs-save-script}{save-\/script}{0}\mbox{]}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2snippets_2vs-return-unity}{return-\/unity}{0}\mbox{]}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_01b8576ec7a772dec58bafc7460cd57fb}{open-\/hierarchy-\/window}{0}\mbox{]}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Do one of the following in the Hierarchy window\+:
+\begin{DoxyItemize}
+\item Select an existing Game\+Object where you want to attach the new script.
+\item Select {\bfseries{Add New}} (+) and in the menu, select a new Game\+Object to add to your scene from any of the available options. You can also right-\/click anywhere in the Hierarchy window and select the same options in the context menu.
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0e9d7825430e3771479edc4004f004d3d}{open-\/inspector-\/window}{0}\mbox{]}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Select {\bfseries{Add Component}}.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item In the Component menu, enter the name of the script file.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Select it to add it to the Game\+Object.
+
+
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Select {\bfseries{Play}} from \href{https://docs.unity3d.com/Manual/Toolbar.html}{\texttt{ the Unity Editor\textquotesingle{}s Toolbar}} to enter Play mode.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Press any key on keyboard in the \href{https://docs.unity3d.com/Manual/GameView.html}{\texttt{ Game view}}.
+
+Visual Scripting triggers your Event in any Script Graph in the current scene that contains the Custom Scripting Event node.
+\end{DoxyEnumerate}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0368ddcbea1327dec736ce355f1d76c90_autotoc_md5283}{}\doxysection{\texorpdfstring{Next steps}{Next steps}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0368ddcbea1327dec736ce355f1d76c90_autotoc_md5283}
+After you create the script, you can \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_05ae8897d6ebd57729a6428a0e93cf56a}{create a script to listen to your Event}{0}.
+
+You can also \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_039a0e2aa5464bc68d38ebd92d57ec4fc}{create an Event Sender node}{0} to trigger the Event from another Script Graph or location in the same Script Graph. 

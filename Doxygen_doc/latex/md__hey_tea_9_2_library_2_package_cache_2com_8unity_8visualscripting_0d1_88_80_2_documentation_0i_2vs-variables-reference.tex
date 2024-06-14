@@ -1,0 +1,222 @@
+\chapter{Variables node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference}\index{Variables node@{Variables node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5632}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5632}%
+ \begin{DoxyNote}{Note}
+For versions 2019/2020 LTS, download the Visual Scripting package from the \href{https://assetstore.unity.com/packages/tools/visual-bolt-163802}{\texttt{ Unity Asset Store}}.
+\end{DoxyNote}
+There are six kinds of \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables}{variable}{0} nodes. Each of these variable nodes has three object nodes\+:
+
+
+\begin{DoxyItemize}
+\item Get, to retrieve the value of the variable
+\item Set, to assign a new value to the variable
+\item Is Defined, to check whether the variable is defined
+\end{DoxyItemize}
+
+They are located under the Variables category in the fuzzy finder.
+
+Variable nodes are teal colored.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5633}{}\doxysection{\texorpdfstring{Dynamic Typing}{Dynamic Typing}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5633}
+For get / set nodes, variables are not statically typed, meaning their type can change at runtime. Their type displays as an object when defined from the blackboard window.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5634}{}\doxysubsection{\texorpdfstring{Get Variable}{Get Variable}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5634}
+
+
+The get variable node requires the name of the variable as an input and returns the {\bfseries{Value}} as an output.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5635}{}\doxysubsection{\texorpdfstring{Set Variable}{Set Variable}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5635}
+
+
+The set variable nodes require the name of the variable and the new value assigned to it as inputs. For convenience in layouting, it returns this same value as an output.
+
+Connect the control input port to indicate when the variable should be assigned and, optionally, the control output port to indicate what to do after.
+
+Using a set node with a variable name that doesn\textquotesingle{}t yet exist creates the variable.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5636}{}\doxysubsection{\texorpdfstring{Has Variable}{Has Variable}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5636}
+The Has Variable nodes require the name of the variable as an input and returns an Is Defined boolean as an output. They\textquotesingle{}re useful to check if a variable has been created, and often, provide a fallback value if it hasn\textquotesingle{}t.
+
+
+
+Do the same thing more easily by checking the Fallback box in the graph inspector for a Get Variable node. This adds a Fallback input to the node that is returned if the variable hasn\textquotesingle{}t been defined\+:
+
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5637}{}\doxysection{\texorpdfstring{Dynamic Variables}{Dynamic Variables}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5637}
+As the name of the variable is a standard value input port, connect it to any other port that returns a string. Refer to "{}dynamic variables"{}, that is, variables whose reference might change during play mode.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5638}{}\doxysection{\texorpdfstring{Object Variables}{Object Variables}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5638}
+Object variable nodes require an additional input for the Source. That port indicates which game object the variable you\textquotesingle{}re referring to is defined. When left to its default value, they look on the current object (self).
+
+For example, the Get Variable node gets the value of the health variable on the player2 object.
+
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5639}{}\doxysection{\texorpdfstring{Dropdowns}{Dropdowns}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5639}
+The kind and the name dropdowns can quickly configure the variable nodes. The name suggestions are contextual and are based on the existing variables of this kind and on the other variable nodes in the current graph.
+
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5640}{}\doxysection{\texorpdfstring{Drag and Drop}{Drag and Drop}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5640}
+Drag and drop items from the blackboard window directly into the graph to create matching nodes.
+
+
+\begin{DoxyItemize}
+\item By default, a Get node is created.
+\item If the Alt key is held, a Set node is created.
+\item If the Shiftkey is held, an Is Defined node is created.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5641}{}\doxysection{\texorpdfstring{Variables API}{Variables API}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5641}
+Visual scripting provides an easy API to handle variables, to get or set their value and verify if they are defined. All these operations are available from the Variables class.
+
+For example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Variables.Application.Set("{}score"{},\ 100);}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5642}{}\doxysubsection{\texorpdfstring{Usings}{Usings}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5642}
+Add the following usings to your C\# script to access the API\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{using\ Unity.VisualScripting;}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5643}{}\doxysection{\texorpdfstring{Scope}{Scope}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5643}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5644}{}\doxysubsection{\texorpdfstring{Graph}{Graph}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5644}
+To access variables on a graph, create a graph reference. This is basically a path to the nested graph from its root machine.
+
+To get the root graph on a machine\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ graphReference\ =\ GraphReference.New(flowMachine,\ true);}
+
+\end{DoxyCode}
+
+
+To access nested graphs, pass their parent nodes as additional parameters\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ graphReference\ =\ GraphReference.New(flowMachine,\ new\ IGraphParentElement[]\ \{\ superUnit\ \},\ true);}
+
+\end{DoxyCode}
+
+
+To pass a graph reference\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Variables.Graph(graphReference)}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5645}{}\doxysubsection{\texorpdfstring{Object}{Object}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5645}
+To access variables on an object\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Variables.Object(gameObject)}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5646}{}\doxysubsection{\texorpdfstring{Scene}{Scene}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5646}
+To access scene variables, do one of the following\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Variables.Scene(scene)}
+
+\end{DoxyCode}
+
+
+Or\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Variables.Scene(gameObjectInScene)}
+
+\end{DoxyCode}
+
+
+Or\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Variables.ActiveScene}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5647}{}\doxysubsection{\texorpdfstring{Application}{Application}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5647}
+To access application variables\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Variables.Application}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5648}{}\doxysubsection{\texorpdfstring{Saved}{Saved}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5648}
+To access saved variables\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Variables.Saved}
+
+\end{DoxyCode}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5649}{}\doxysection{\texorpdfstring{Operations}{Operations}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5649}
+In these examples, the lowercase scope refers to one of the previous scopes.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5650}{}\doxysubsection{\texorpdfstring{Get}{Get}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5650}
+To get the value of a variable, use the Get method with a name parameter\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{scope.Get("{}name"{});}
+
+\end{DoxyCode}
+
+
+Note that variables are not strongly typed; they need to be cast manually. For example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{int\ health\ =\ (int)Variables.Object(player).Get("{}health"{})}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5651}{}\doxysubsection{\texorpdfstring{Set}{Set}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5651}
+To set the value of a variable, use the Set method with the name and value parameters\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{scope.Set("{}name"{},\ value);}
+
+\end{DoxyCode}
+
+
+For example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Variables.Object(player).Set("{}health"{},\ 100);}
+
+\end{DoxyCode}
+
+
+Because variables are not strongly typed, pass any value to the second parameter, even if the variable currently is of a different type.
+
+\begin{DoxyNote}{Note}
+Using the set method with a variable name that does not yet exist defines a new variable.
+\end{DoxyNote}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5652}{}\doxysubsection{\texorpdfstring{Is Defined}{Is Defined}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-variables-reference_autotoc_md5652}
+To check if a variable is defined, use the Is\+Defined method with a name parameter\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{scope.IsDefined("{}name"{});}
+
+\end{DoxyCode}
+
+
+For example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{if\ (Variables.Application.IsDefined("{}score"{}))}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ //\ ...}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

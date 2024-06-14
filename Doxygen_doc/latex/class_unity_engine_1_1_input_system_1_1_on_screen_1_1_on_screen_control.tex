@@ -1,0 +1,105 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+On\+Screen.\+On\+Screen\+Control Class Reference}
+\hypertarget{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control}{}\label{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control}\index{UnityEngine.InputSystem.OnScreen.OnScreenControl@{UnityEngine.InputSystem.OnScreen.OnScreenControl}}
+
+
+Base class for on-\/screen controls.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+On\+Screen.\+On\+Screen\+Control\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control_af1e80ec351a861005a58044253308af9}{Send\+Value\+To\+Control$<$ TValue $>$}} (TValue value)
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control_abb744519cde7c485a025173ce4610fbd}\label{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control_abb744519cde7c485a025173ce4610fbd} 
+void {\bfseries Sent\+Default\+Value\+To\+Control} ()
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control_ad7cd6b499ddf7c50e721113196501445}\label{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control_ad7cd6b499ddf7c50e721113196501445} 
+virtual void {\bfseries On\+Enable} ()
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control_a8c04d817548a7b1153b2c0759400900e}\label{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control_a8c04d817548a7b1153b2c0759400900e} 
+virtual void {\bfseries On\+Disable} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control_a440725827f18048c680cf33bff96af9f}{control\+Path}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The control path (see Input\+Control\+Path) for the control that the on-\/screen control will feed input into. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control_a430da0e4fe868e03ff198a985c46cb07}{control}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The actual control that is fed input from the on-\/screen control. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control_acd500b665f8a69cea5b494c0e3a3259c}{control\+Path\+Internal}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Accessor for the \doxylink{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control_a440725827f18048c680cf33bff96af9f}{control\+Path} of the component. Must be implemented by subclasses. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for on-\/screen controls. 
+
+The set of on-\/screen controls together forms a device. A control layout is automatically generated from the set and a device using the layout is added to the system when the on-\/screen controls are enabled.
+
+The layout that the generated layout is based on is determined by the control paths chosen for each on-\/screen control. If, for example, an on-\/screen control chooses the \textquotesingle{}a\textquotesingle{} key from the "{}\+Keyboard"{} layout as its path, a device layout is generated that is based on the "{}\+Keyboard"{} layout and the on-\/screen control becomes the \textquotesingle{}a\textquotesingle{} key in that layout.
+
+If a Game\+Object has multiple on-\/screen controls that reference different types of device layouts (e.\+g. one control references \textquotesingle{}button\+West\textquotesingle{} on a gamepad and another references \textquotesingle{}left\+Button\textquotesingle{} on a mouse), then a device is created for each type referenced by the setup. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control_af1e80ec351a861005a58044253308af9}\index{UnityEngine.InputSystem.OnScreen.OnScreenControl@{UnityEngine.InputSystem.OnScreen.OnScreenControl}!SendValueToControl$<$ TValue $>$@{SendValueToControl$<$ TValue $>$}}
+\index{SendValueToControl$<$ TValue $>$@{SendValueToControl$<$ TValue $>$}!UnityEngine.InputSystem.OnScreen.OnScreenControl@{UnityEngine.InputSystem.OnScreen.OnScreenControl}}
+\doxysubsubsection{\texorpdfstring{SendValueToControl$<$ TValue $>$()}{SendValueToControl< TValue >()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control_af1e80ec351a861005a58044253308af9} 
+void Unity\+Engine.\+Input\+System.\+On\+Screen.\+On\+Screen\+Control.\+Send\+Value\+To\+Control$<$ TValue $>$ (\begin{DoxyParamCaption}\item[{TValue}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TValue} : {\em struct}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control_a430da0e4fe868e03ff198a985c46cb07}\index{UnityEngine.InputSystem.OnScreen.OnScreenControl@{UnityEngine.InputSystem.OnScreen.OnScreenControl}!control@{control}}
+\index{control@{control}!UnityEngine.InputSystem.OnScreen.OnScreenControl@{UnityEngine.InputSystem.OnScreen.OnScreenControl}}
+\doxysubsubsection{\texorpdfstring{control}{control}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control_a430da0e4fe868e03ff198a985c46cb07} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} Unity\+Engine.\+Input\+System.\+On\+Screen.\+On\+Screen\+Control.\+control\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The actual control that is fed input from the on-\/screen control. 
+
+This is only valid while the on-\/screen control is enabled. Otherwise, it is {\ttfamily null}. Also, if no \doxylink{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control_a440725827f18048c680cf33bff96af9f}{control\+Path} has been set, this will remain {\ttfamily null} even if the component is enabled. \Hypertarget{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control_a440725827f18048c680cf33bff96af9f}\index{UnityEngine.InputSystem.OnScreen.OnScreenControl@{UnityEngine.InputSystem.OnScreen.OnScreenControl}!controlPath@{controlPath}}
+\index{controlPath@{controlPath}!UnityEngine.InputSystem.OnScreen.OnScreenControl@{UnityEngine.InputSystem.OnScreen.OnScreenControl}}
+\doxysubsubsection{\texorpdfstring{controlPath}{controlPath}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control_a440725827f18048c680cf33bff96af9f} 
+string Unity\+Engine.\+Input\+System.\+On\+Screen.\+On\+Screen\+Control.\+control\+Path\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The control path (see Input\+Control\+Path) for the control that the on-\/screen control will feed input into. 
+
+A device will be created from the device layout referenced by the control path (see Input\+Control\+Path.\+Try\+Get\+Device\+Layout). The path is then used to look up \doxylink{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control_a430da0e4fe868e03ff198a985c46cb07}{control} on the device. The resulting control will be fed values from the on-\/screen control.
+
+Multiple on-\/screen controls sharing the same device layout will together create a single virtual device. If, for example, one component uses {\ttfamily "{}<\+Gamepad>/button\+South"{}} and another uses {\ttfamily "{}<\+Gamepad>/left\+Stick"{}} as the control path, a single \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad}{Gamepad} will be created and the first component will feed data to \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a55b57fe1d0a61c4fe2e671284ec2ab3b}{Gamepad.\+button\+South} and the second component will feed data to \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a9f608a9e12af3301fb2d704e072ea024}{Gamepad.\+left\+Stick}. 
+
+\begin{DoxySeeAlso}{See also}
+Input\+Control\+Path
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control_acd500b665f8a69cea5b494c0e3a3259c}\index{UnityEngine.InputSystem.OnScreen.OnScreenControl@{UnityEngine.InputSystem.OnScreen.OnScreenControl}!controlPathInternal@{controlPathInternal}}
+\index{controlPathInternal@{controlPathInternal}!UnityEngine.InputSystem.OnScreen.OnScreenControl@{UnityEngine.InputSystem.OnScreen.OnScreenControl}}
+\doxysubsubsection{\texorpdfstring{controlPathInternal}{controlPathInternal}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control_acd500b665f8a69cea5b494c0e3a3259c} 
+string Unity\+Engine.\+Input\+System.\+On\+Screen.\+On\+Screen\+Control.\+control\+Path\+Internal\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}, {\ttfamily [abstract]}, {\ttfamily [protected]}}
+
+
+
+Accessor for the \doxylink{class_unity_engine_1_1_input_system_1_1_on_screen_1_1_on_screen_control_a440725827f18048c680cf33bff96af9f}{control\+Path} of the component. Must be implemented by subclasses. 
+
+Moving the definition of how the control path is stored into subclasses allows them to apply their own Input\+Control\+Attribute attributes to them and thus set their own layout filters. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Plugins/\+On\+Screen/On\+Screen\+Control.\+cs\end{DoxyCompactItemize}

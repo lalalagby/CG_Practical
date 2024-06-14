@@ -1,0 +1,49 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Baking\+Batch Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_baking_batch}{}\label{class_unity_engine_1_1_rendering_1_1_baking_batch}\index{UnityEngine.Rendering.BakingBatch@{UnityEngine.Rendering.BakingBatch}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_baking_batch_a855a666b17404a16ef19c95d771915a6}\label{class_unity_engine_1_1_rendering_1_1_baking_batch_a855a666b17404a16ef19c95d771915a6} 
+{\bfseries Baking\+Batch} (int index, Vector3\+Int cell\+Count)
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_baking_batch_ae8182bca2bbca16551e9680b222c988c}\label{class_unity_engine_1_1_rendering_1_1_baking_batch_ae8182bca2bbca16551e9680b222c988c} 
+void {\bfseries Clear} ()
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_baking_batch_ad17aa202dd64ce90f646fabcc4ab6009}\label{class_unity_engine_1_1_rendering_1_1_baking_batch_ad17aa202dd64ce90f646fabcc4ab6009} 
+int {\bfseries Get\+Probe\+Position\+Hash} (Vector3 position)
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_baking_batch_a2a79c20f18cfa0dc08786c19b718bc39}\label{class_unity_engine_1_1_rendering_1_1_baking_batch_a2a79c20f18cfa0dc08786c19b718bc39} 
+int {\bfseries Get\+Subdiv\+Level\+At} (Vector3 position)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_baking_batch_a07efc6914599da59e6ee40fe88cf1a6e}\label{class_unity_engine_1_1_rendering_1_1_baking_batch_a07efc6914599da59e6ee40fe88cf1a6e} 
+int {\bfseries index}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_baking_batch_abf8f262cad3ee8c51e049160bf2515c6}\label{class_unity_engine_1_1_rendering_1_1_baking_batch_abf8f262cad3ee8c51e049160bf2515c6} 
+Dictionary$<$ int, Hash\+Set$<$ Scene $>$ $>$ {\bfseries cell\+Index2\+Scene\+References} = new Dictionary$<$int, Hash\+Set$<$Scene$>$$>$()
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_baking_batch_ac03b6d308c5cfed410fe71b5ead7520d}\label{class_unity_engine_1_1_rendering_1_1_baking_batch_ac03b6d308c5cfed410fe71b5ead7520d} 
+List$<$ \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_baking_cell}{Baking\+Cell}} $>$ {\bfseries cells} = new List$<$\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_baking_cell}{Baking\+Cell}}$>$()
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_baking_batch_ae2e0738f42f5f77b2a5c24384ea441e4}\label{class_unity_engine_1_1_rendering_1_1_baking_batch_ae2e0738f42f5f77b2a5c24384ea441e4} 
+Vector3\mbox{[}$\,$\mbox{]} {\bfseries virtual\+Offsets}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_baking_batch_ad468e1bc244f2520709b5d7a1d7fd90f}\label{class_unity_engine_1_1_rendering_1_1_baking_batch_ad468e1bc244f2520709b5d7a1d7fd90f} 
+Dictionary$<$ int, int $>$ {\bfseries unique\+Brick\+Subdiv} = new ()
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_baking_batch_ae353be3695d56bdaf52aea56f381f368}\label{class_unity_engine_1_1_rendering_1_1_baking_batch_ae353be3695d56bdaf52aea56f381f368} 
+Dictionary$<$ Vector3, bool $>$ {\bfseries invalidated\+Positions} = new Dictionary$<$Vector3, bool$>$()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_baking_batch_a7feae843e560942adb94c95e3673d993}\label{class_unity_engine_1_1_rendering_1_1_baking_batch_a7feae843e560942adb94c95e3673d993} 
+int {\bfseries unique\+Probe\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Editor/\+Lighting/\+Probe\+Volume/Probe\+GIBaking.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,87 @@
+\chapter{Screen Position Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_screen-_position-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_screen-_position-_node}\index{Screen Position Node@{Screen Position Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_screen-_position-_node_autotoc_md3838}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_screen-_position-_node_autotoc_md3838}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_screen-_position-_node_autotoc_md3839}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_screen-_position-_node_autotoc_md3839}
+Provides access to the screen position of the mesh vertex or fragment. The X and Y values represent the horizontal and vertical positions respectively. Use the {\bfseries{Mode}} dropdown control to select the mode of the output value. The available modes are as follows\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Default}} -\/ Returns X and Y values that represent the normalized {\bfseries{Screen Position}}. The normalized {\bfseries{Screen Position}} is the {\bfseries{Screen Position}} divided by the clip space position W component. The X and Y value ranges are between 0 and 1 with position {\ttfamily float2(0,0)} at the lower left corner of the screen. The Z and W values aren\textquotesingle{}t used in this mode, so they\textquotesingle{}re always 0.
+\item {\bfseries{Raw}} -\/ Returns the raw {\bfseries{Screen Position}} values, which are the {\bfseries{Screen Position}} values before the clip space position W component is divided out. Position {\ttfamily float2(0,0)} is at the lower left corner of the screen. This mode is useful for projection.
+\item {\bfseries{Center}} -\/ Returns X and Y values that represent the normalized {\bfseries{Screen Position}} offset so position {\ttfamily float2(0,0)} is at the center of the screen. The range of the X and Y values is –1 to 1. The Z and W values aren\textquotesingle{}t used in this mode, so they\textquotesingle{}re always 0.
+\item {\bfseries{Tiled}} -\/ Returns {\bfseries{Screen Position}} offset so position {\ttfamily float2(0,0)} is at the center of the screen and tiled using {\ttfamily frac}.
+\item {\bfseries{Pixel}} -\/ Returns {\bfseries{Screen Position}} in terms of the actual pixel width and height values of the screen. In this mode, position {\ttfamily float2(0,0)} is at the lower left corner of the screen. Whereas the range of Default mode is always 0 to 1, the range of Pixel mode depends on the screen resolution. The Z and W values aren\textquotesingle{}t used in this mode, so they\textquotesingle{}re always 0.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_screen-_position-_node_autotoc_md3840}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_screen-_position-_node_autotoc_md3840}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+Out   &Output   &Vector 4   &None   &Get the {\bfseries{Screen Position}} of the mesh.   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_screen-_position-_node_autotoc_md3841}{}\doxysection{\texorpdfstring{Controls}{Controls}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_screen-_position-_node_autotoc_md3841}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endhead
+Mode   &Dropdown   &Default, Raw, Center, Tiled, Pixel   &Select which coordinate space to use for the {\bfseries{Screen Position}} output.   \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_screen-_position-_node_autotoc_md3842}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_screen-_position-_node_autotoc_md3842}
+The following code examples represent one possible outcome for each mode.
+
+{\bfseries{Default}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float4\ Out\ =\ float4(IN.NDCPosition.xy,\ 0,\ 0);}
+
+\end{DoxyCode}
+
+
+{\bfseries{Raw}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float4\ Out\ =\ IN.ScreenPosition;}
+
+\end{DoxyCode}
+
+
+{\bfseries{Center}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float4\ Out\ =\ float4(IN.NDCPosition.xy\ *\ 2\ -\/\ 1,\ 0,\ 0);}
+
+\end{DoxyCode}
+
+
+{\bfseries{Tiled}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float4\ Out\ =\ frac(float4((IN.NDCPosition.x\ *\ 2\ -\/\ 1)\ *\ \_ScreenParams.x\ /\ \_ScreenParams.y,\ IN.\{0\}.y\ *\ 2\ -\/\ 1,\ 0,\ 0));}
+
+\end{DoxyCode}
+
+
+{\bfseries{Pixel}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float4\ Out\ =\ float4(IN.PixelPosition.xy,\ 0,\ 0);}
+
+\end{DoxyCode}
+ 

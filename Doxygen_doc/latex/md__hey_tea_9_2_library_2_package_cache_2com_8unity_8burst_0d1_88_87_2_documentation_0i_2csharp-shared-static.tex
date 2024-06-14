@@ -1,0 +1,43 @@
+\chapter{Shared\+Static struct}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-shared-static}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-shared-static}\index{SharedStatic struct@{SharedStatic struct}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-shared-static_autotoc_md355}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-shared-static_autotoc_md355}%
+ \doxylink{namespace_burst}{Burst} has basic support for accessing static readonly data. However, if you want to share static mutable data between C\# and HPC\#, use the {\ttfamily Shared\+Static\texorpdfstring{$<$}{<}T\texorpdfstring{$>$}{>}} struct.
+
+The following example shows accessing an {\ttfamily int} static field that both C\# and HPC\# can change\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#}}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ abstract\ \textcolor{keyword}{class\ }MutableStaticTest}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ readonly\ SharedStatic<int>\ IntField\ =\ SharedStatic<int>.GetOrCreate<MutableStaticTest,\ IntFieldKey>();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{comment}{//\ Define\ a\ Key\ type\ to\ identify\ IntField}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{class\ }IntFieldKey\ \{\}}
+\DoxyCodeLine{\ \ \ \}}
+
+\end{DoxyCode}
+
+
+C\# and HPC\# can then access this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#}}
+\DoxyCodeLine{\ \ \ \textcolor{comment}{//\ Write\ to\ a\ shared\ static\ }}
+\DoxyCodeLine{\ \ \ MutableStaticTest.IntField.Data\ =\ 5;}
+\DoxyCodeLine{\ \ \ \textcolor{comment}{//\ Read\ from\ a\ shared\ static}}
+\DoxyCodeLine{\ \ \ var\ value\ =\ 1\ +\ MutableStaticTest.IntField.Data;}
+
+\end{DoxyCode}
+
+
+When you use {\ttfamily Shared\+Static\texorpdfstring{$<$}{<}T\texorpdfstring{$>$}{>}}, be aware of the following\+:
+
+
+\begin{DoxyItemize}
+\item The {\ttfamily T} in {\ttfamily Shared\+Static\texorpdfstring{$<$}{<}T\texorpdfstring{$>$}{>}} defines the data type.
+\item To identify a static field, provide a context for it. To do this, create a key for both the containing type (for example, {\ttfamily Mutable\+Static\+Test} in the example above), identify the field (for example, {\ttfamily Int\+Field\+Key} class in the example above) and pass these classes as generic arguments of {\ttfamily Shared\+Static\texorpdfstring{$<$}{<}int\texorpdfstring{$>$}{>}.Get\+Or\+Create\texorpdfstring{$<$}{<}Mutable\+Static\+Test, Int\+Field\+Key\texorpdfstring{$>$}{>}()}.
+\item Always initialize the shared static field in C\# from a static constructor before accessing it from HPC\#. If you don\textquotesingle{}t initialize the data before accessing it, it might lead to an undefined initialization state. 
+\end{DoxyItemize}

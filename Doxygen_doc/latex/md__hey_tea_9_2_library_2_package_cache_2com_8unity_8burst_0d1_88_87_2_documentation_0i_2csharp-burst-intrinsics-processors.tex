@@ -1,0 +1,123 @@
+\chapter{Processor specific SIMD extensions}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-burst-intrinsics-processors}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-burst-intrinsics-processors}\index{Processor specific SIMD extensions@{Processor specific SIMD extensions}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-burst-intrinsics-processors_autotoc_md335}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-burst-intrinsics-processors_autotoc_md335}%
+ \doxylink{namespace_burst}{Burst} exposes all Intel SIMD intrinsics from SSE up to and including AVX2 in the \href{xref:Unity.Burst.Intrinsics.X86}{\texttt{ {\ttfamily Unity.\+Burst.\+Intrinsics.\+X86}}} family of nested classes. The \href{xref:Unity.Burst.Intrinsics.Arm.Neon}{\texttt{ {\ttfamily Unity.\+Burst.\+Intrinsics.\+Arm.\+Neon}}} class provides intrinsics for Arm Neon\textquotesingle{}s Armv7, Armv8, and Armv8.\+2 (RDMA, crypto, dotprod).\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-burst-intrinsics-processors_autotoc_md336}{}\doxysection{\texorpdfstring{Organizing your code}{Organizing your code}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-burst-intrinsics-processors_autotoc_md336}
+You should statically import these intrinsics because they contain plain static functions\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keyword}{using\ }static\ \mbox{\hyperlink{namespace_unity}{Unity}}.\mbox{\hyperlink{namespace_unity_1_1_burst}{Burst}}.\mbox{\hyperlink{namespace_unity_1_1_burst_1_1_intrinsics}{Intrinsics}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86}{X86}};}
+\DoxyCodeLine{\textcolor{keyword}{using\ }static\ \mbox{\hyperlink{namespace_unity}{Unity}}.\mbox{\hyperlink{namespace_unity_1_1_burst}{Burst}}.\mbox{\hyperlink{namespace_unity_1_1_burst_1_1_intrinsics}{Intrinsics}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86}{X86}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_sse}{Sse}};}
+\DoxyCodeLine{\textcolor{keyword}{using\ }static\ \mbox{\hyperlink{namespace_unity}{Unity}}.\mbox{\hyperlink{namespace_unity_1_1_burst}{Burst}}.\mbox{\hyperlink{namespace_unity_1_1_burst_1_1_intrinsics}{Intrinsics}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86}{X86}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_sse2}{Sse2}};}
+\DoxyCodeLine{\textcolor{keyword}{using\ }static\ \mbox{\hyperlink{namespace_unity}{Unity}}.\mbox{\hyperlink{namespace_unity_1_1_burst}{Burst}}.\mbox{\hyperlink{namespace_unity_1_1_burst_1_1_intrinsics}{Intrinsics}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86}{X86}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_sse3}{Sse3}};}
+\DoxyCodeLine{\textcolor{keyword}{using\ }static\ \mbox{\hyperlink{namespace_unity}{Unity}}.\mbox{\hyperlink{namespace_unity_1_1_burst}{Burst}}.\mbox{\hyperlink{namespace_unity_1_1_burst_1_1_intrinsics}{Intrinsics}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86}{X86}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_ssse3}{Ssse3}};}
+\DoxyCodeLine{\textcolor{keyword}{using\ }static\ \mbox{\hyperlink{namespace_unity}{Unity}}.\mbox{\hyperlink{namespace_unity_1_1_burst}{Burst}}.\mbox{\hyperlink{namespace_unity_1_1_burst_1_1_intrinsics}{Intrinsics}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86}{X86}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_sse4__1}{Sse4\_1}};}
+\DoxyCodeLine{\textcolor{keyword}{using\ }static\ \mbox{\hyperlink{namespace_unity}{Unity}}.\mbox{\hyperlink{namespace_unity_1_1_burst}{Burst}}.\mbox{\hyperlink{namespace_unity_1_1_burst_1_1_intrinsics}{Intrinsics}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86}{X86}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_sse4__2}{Sse4\_2}};}
+\DoxyCodeLine{\textcolor{keyword}{using\ }static\ \mbox{\hyperlink{namespace_unity}{Unity}}.\mbox{\hyperlink{namespace_unity_1_1_burst}{Burst}}.\mbox{\hyperlink{namespace_unity_1_1_burst_1_1_intrinsics}{Intrinsics}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86}{X86}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_popcnt}{Popcnt}};}
+\DoxyCodeLine{\textcolor{keyword}{using\ }static\ \mbox{\hyperlink{namespace_unity}{Unity}}.\mbox{\hyperlink{namespace_unity_1_1_burst}{Burst}}.\mbox{\hyperlink{namespace_unity_1_1_burst_1_1_intrinsics}{Intrinsics}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86}{X86}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_avx}{Avx}};}
+\DoxyCodeLine{\textcolor{keyword}{using\ }static\ \mbox{\hyperlink{namespace_unity}{Unity}}.\mbox{\hyperlink{namespace_unity_1_1_burst}{Burst}}.\mbox{\hyperlink{namespace_unity_1_1_burst_1_1_intrinsics}{Intrinsics}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86}{X86}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_avx2}{Avx2}};}
+\DoxyCodeLine{\textcolor{keyword}{using\ }static\ \mbox{\hyperlink{namespace_unity}{Unity}}.\mbox{\hyperlink{namespace_unity_1_1_burst}{Burst}}.\mbox{\hyperlink{namespace_unity_1_1_burst_1_1_intrinsics}{Intrinsics}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86}{X86}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_fma}{Fma}};}
+\DoxyCodeLine{\textcolor{keyword}{using\ }static\ \mbox{\hyperlink{namespace_unity}{Unity}}.\mbox{\hyperlink{namespace_unity_1_1_burst}{Burst}}.\mbox{\hyperlink{namespace_unity_1_1_burst_1_1_intrinsics}{Intrinsics}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86}{X86}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_f16_c}{F16C}};}
+\DoxyCodeLine{\textcolor{keyword}{using\ }static\ \mbox{\hyperlink{namespace_unity}{Unity}}.\mbox{\hyperlink{namespace_unity_1_1_burst}{Burst}}.\mbox{\hyperlink{namespace_unity_1_1_burst_1_1_intrinsics}{Intrinsics}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86}{X86}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_bmi1}{Bmi1}};}
+\DoxyCodeLine{\textcolor{keyword}{using\ }static\ \mbox{\hyperlink{namespace_unity}{Unity}}.\mbox{\hyperlink{namespace_unity_1_1_burst}{Burst}}.\mbox{\hyperlink{namespace_unity_1_1_burst_1_1_intrinsics}{Intrinsics}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86}{X86}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_x86_1_1_bmi2}{Bmi2}};}
+\DoxyCodeLine{\textcolor{keyword}{using\ }static\ \mbox{\hyperlink{namespace_unity}{Unity}}.\mbox{\hyperlink{namespace_unity_1_1_burst}{Burst}}.\mbox{\hyperlink{namespace_unity_1_1_burst_1_1_intrinsics}{Intrinsics}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_arm}{Arm}}.\mbox{\hyperlink{class_unity_1_1_burst_1_1_intrinsics_1_1_arm_1_1_neon}{Neon}};}
+
+\end{DoxyCode}
+
+
+\doxylink{namespace_burst}{Burst} CPU intrinsics are translated into specific CPU instructions. However, \doxylink{namespace_burst}{Burst} has a special compiler pass which makes sure that your CPU target set in {\ttfamily \doxylink{namespace_burst}{Burst} AOT Settings} is compatible with the intrinsics used in your code. This ensures you don\textquotesingle{}t try to call unsupported instructions (for example, AArch64 Neon on an Intel CPU or AVX2 instructions on an SSE4 CPU), which causes the process to abort with an "{}\+Invalid instruction"{} exception. A compiler error is generated if the check fails.
+
+However, if you want to provide several code paths with different CPU targets, or to make sure your intrinsics code is compatible with any target CPU, you can wrap your intrinsics code with the followinf property checks\+:
+
+
+\begin{DoxyItemize}
+\item \href{xref:Unity.Burst.Intrinsics.Arm.Neon.IsNeonSupported}{\texttt{ Is\+Neon\+Supported}}
+\item \href{xref:Unity.Burst.Intrinsics.Arm.Neon.IsNeonArmv82FeaturesSupported}{\texttt{ Is\+Neon\+Armv82\+Features\+Supported}}
+\item \href{xref:Unity.Burst.Intrinsics.Arm.Neon.IsNeonCryptoSupported}{\texttt{ Is\+Neon\+Crypto\+Supported}}
+\item \href{xref:Unity.Burst.Intrinsics.Arm.Neon.IsNeonDotProdSupported}{\texttt{ Is\+Neon\+Dot\+Prod\+Supported}}
+\item \href{xref:Unity.Burst.Intrinsics.Arm.Neon.IsNeonRDMASupported}{\texttt{ Is\+Neon\+RDMASupported}}
+\end{DoxyItemize}
+
+For example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (IsAvx2Supported)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Code\ path\ for\ AVX2\ instructions}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (IsSse42Supported)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Code\ path\ for\ SSE4.2\ instructions}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (IsNeonArmv82FeaturesSupported)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Code\ path\ for\ Armv8.2\ Neon\ instructions}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (IsNeonSupported)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Code\ path\ for\ Arm\ Neon\ instructions}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{\textcolor{keywordflow}{else}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Fallback\ path\ for\ everything\ else}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+These branches don\textquotesingle{}t affect performance. \doxylink{namespace_burst}{Burst} evaluates the {\ttfamily Is\+XXXSupported} properties at compile-\/time and eliminates unsupported branches as dead code, while the active branch stays there without the if check. Later feature levels implicitly include the previous ones, so you should organize tests from most recent to oldest. \doxylink{namespace_burst}{Burst} emits compile-\/time errors if you\textquotesingle{}ve used intrinsics that aren\textquotesingle{}t part of the current compilation target. \doxylink{namespace_burst}{Burst} doesn\textquotesingle{}t bracket these with a feature level test, which helps you to narrow in on what to put inside a feature test.
+
+If you run your application in .NET, Mono or IL2\+CPP without \doxylink{namespace_burst}{Burst} enabled, all the {\ttfamily Is\+XXXSupported} properties return {\ttfamily false}. However, if you skip the test you can still run a reference version of most intrinsics in Mono (exceptions listed below), which is helpful if you need to use the managed debugger. Reference implementations are slow and only intended for managed debugging.
+
+\texorpdfstring{$>$}{>}\mbox{[}!\+IMPORTANT\mbox{]} \texorpdfstring{$>$}{>}There isn\textquotesingle{}t a reference managed implementation of Arm Neon intrinsics. This means that you can\textquotesingle{}t use the technique mentioned in the previous paragraph to step through the intrinsics in Mono. FMA intrinsics that operate on doubles don\textquotesingle{}t have a software fallback because of the inherit complexity in emulating fused 64-\/bit floating point math.
+
+Intrinsics use the types {\ttfamily v64} (Arm only), {\ttfamily v128} and {\ttfamily v256}, which represent a 64-\/bit, 128-\/bit or 256-\/bit vector respectively. For example, given a {\ttfamily Native\+Array\texorpdfstring{$<$}{<}float\texorpdfstring{$>$}{>}} and a {\ttfamily Lut} lookup table of v128 shuffle masks, a code fragment like this performs lane left packing, demonstrating the use of vector load/store reinterpretation and direct intrinsic calls\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{v128\ a\ =\ Input.ReinterpretLoad<v128>(i);}
+\DoxyCodeLine{v128\ mask\ =\ cmplt\_ps(a,\ Limit);}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ m\ =\ movemask\_ps(a);}
+\DoxyCodeLine{v128\ packed\ =\ shuffle\_epi8(a,\ Lut[m]);}
+\DoxyCodeLine{Output.ReinterpretStore(outputIndex,\ packed);}
+\DoxyCodeLine{outputIndex\ +=\ popcnt\_u32((uint)m);}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-burst-intrinsics-processors_autotoc_md337}{}\doxysection{\texorpdfstring{Intel intrinsics}{Intel intrinsics}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-burst-intrinsics-processors_autotoc_md337}
+The Intel intrinsics API mirrors the \href{https://software.intel.com/sites/landingpage/IntrinsicsGuide/}{\texttt{ C/\+C++ Intel instrinsics API}}, with a the following differences\+:
+
+
+\begin{DoxyItemize}
+\item All 128-\/bit vector types ({\ttfamily \+\_\+\+\_\+m128}, {\ttfamily \+\_\+\+\_\+m128i} and {\ttfamily \+\_\+\+\_\+m128d}) are collapsed into {\ttfamily v128}
+\item All 256-\/bit vector types ({\ttfamily \+\_\+\+\_\+m256}, {\ttfamily \+\_\+\+\_\+m256i} and {\ttfamily \+\_\+\+\_\+m256d}) are collapsed into {\ttfamily v256}
+\item All {\ttfamily \+\_\+mm} prefixes on instructions and macros are dropped, because C\# has namespaces
+\item All bitfield constants (for example, rounding mode selection) are replaced with C\# bitflag enum values
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-burst-intrinsics-processors_autotoc_md338}{}\doxysection{\texorpdfstring{Arm Neon intrinsics}{Arm Neon intrinsics}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-burst-intrinsics-processors_autotoc_md338}
+The Arm Neon intrinsics API mirrors the \href{https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics}{\texttt{ Arm C Language Extensions}}, with the following differences\+:
+
+
+\begin{DoxyItemize}
+\item All vector types are collapsed into {\ttfamily v64} and {\ttfamily v128}, becoming typeless. This means that the vector type must contain expected element types and count when calling an API.
+\item The {\ttfamily \texorpdfstring{$\ast$}{*}x2}, {\ttfamily \texorpdfstring{$\ast$}{*}x3}, {\ttfamily \texorpdfstring{$\ast$}{*}x4} vector types aren\textquotesingle{}t supported.
+\item {\ttfamily poly\texorpdfstring{$\ast$}{*}} types aren\textquotesingle{}t supported.
+\item {\ttfamily reinterpret\texorpdfstring{$\ast$}{*}} functions aren\textquotesingle{}t supported (they aren\textquotesingle{}t needed because of the usage of {\ttfamily v64} and {\ttfamily v128} vector types).
+\item Intrinsic usage is only supported on Armv8 (64-\/bit) hardware.
+\end{DoxyItemize}
+
+\doxylink{namespace_burst}{Burst}\textquotesingle{}s CPU intrinsics use typeless vectors. Because of this, \doxylink{namespace_burst}{Burst} doesn\textquotesingle{}t perform any type checks. For example, if you call an intrinsic which processes 4 ints on a vector that was initialized with 4 floats, then there\textquotesingle{}s no compiler error. The vector types have fields that represent every element type, in a union-\/like struct, which gives you flexibility to use these intrinsics in a way that best fits your code.
+
+Arm Neon C intrinsics (ACLE) use typed vectors, for example int32x4\+\_\+t, and has special APIs (for example, {\ttfamily reinterpret\+\_\+\textbackslash{}\texorpdfstring{$\ast$}{*}}) to convert to a vector of another element type. \doxylink{namespace_burst}{Burst} CPU intrinsics vectors are typeless, so these APIs are not needed. The following APIs provide the equivalent functionality\+:
+
+
+\begin{DoxyItemize}
+\item \href{xref:Unity.Burst.Intrinsics.v64}{\texttt{ v64 (Arm Neon only)}}
+\item \href{xref:Unity.Burst.Intrinsics.v128}{\texttt{ v128}}
+\item \href{xref:Unity.Burst.Intrinsics.v256}{\texttt{ v256}}
+\end{DoxyItemize}
+
+For a categorized index of Arm Neon intrinsics supported in \doxylink{namespace_burst}{Burst}, see the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-burst-intrinsics-neon}{Arm Neon intrinsics reference}{0}. 

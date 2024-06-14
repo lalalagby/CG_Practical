@@ -1,0 +1,33 @@
+\chapter{Color Curves}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do2ded8f192c20f2c38a5706f373b050aa}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do2ded8f192c20f2c38a5706f373b050aa}\index{Color Curves@{Color Curves}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do2ded8f192c20f2c38a5706f373b050aa_autotoc_md2287}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do2ded8f192c20f2c38a5706f373b050aa_autotoc_md2287}%
+ Grading curves are an advanced way to adjust specific ranges in hue, saturation, or luminosity. You can adjust the curves in eight available graphs to achieve effects such as specific hue replacement or desaturating certain luminosities.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do2ded8f192c20f2c38a5706f373b050aa_autotoc_md2288}{}\doxysection{\texorpdfstring{Using Color Curves}{Using Color Curves}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do2ded8f192c20f2c38a5706f373b050aa_autotoc_md2288}
+{\bfseries{Color Curves}} uses the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_volumes}{Volume}{0} framework, so to enable and modify {\bfseries{Color Curves}} properties, you must add a {\bfseries{Color Curves}} override to a \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_volumes}{Volume}{0} in your Scene. To add {\bfseries{Color Curves}} to a Volume\+:
+
+
+\begin{DoxyEnumerate}
+\item In the Scene or Hierarchy view, select a Game\+Object that contains a Volume component to view it in the Inspector.
+\item In the Inspector, navigate to {\bfseries{Add Override \texorpdfstring{$>$}{>} Post-\/processing}} and click on {\bfseries{Color Curves}}. URP now applies {\bfseries{Color Curves}} to any Camera this Volume affects.
+\end{DoxyEnumerate}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do2ded8f192c20f2c38a5706f373b050aa_autotoc_md2289}{}\doxysection{\texorpdfstring{Properties}{Properties}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do2ded8f192c20f2c38a5706f373b050aa_autotoc_md2289}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Curve}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Curve}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Master}}   &This curve affects the luminance across the whole image. The x-\/axis of the graph represents input luminance and the y-\/axis represents output luminance. You can use this to further adjust the appearance of basic attributes such as contrast and brightness across all color channels at the same time.    \\\cline{1-2}
+{\bfseries{Red}}   &This curve affects the red channel intensity across the whole image. The x-\/axis of the graph represents input intensity and the y-\/axis represents output intensity for the red channel.    \\\cline{1-2}
+{\bfseries{Green}}   &This curve affects the green channel intensity across the whole image. The x-\/axis of the graph represents input intensity and the y-\/axis represents output intensity for the green channel.    \\\cline{1-2}
+{\bfseries{Blue}}   &This curve affects the blue channel intensity across the whole image. The x-\/axis of the graph represents input intensity and the y-\/axis represents output intensity for the blue channel.    \\\cline{1-2}
+{\bfseries{Hue Vs Hue}}   &This curve shifts the input hue (x-\/axis) according to the output hue (y-\/axis). You can use this to fine tune hues of specific ranges or perform color replacement.    \\\cline{1-2}
+{\bfseries{Hue Vs Sat}}   &This curve adjusts saturation (y-\/axis) according to the input hue (x-\/axis). You can use this to tone down particularly bright areas or create artistic effects such as monochromatic except a single dominant color.    \\\cline{1-2}
+{\bfseries{Sat Vs Sat}}   &This curve adjusts saturation (y-\/axis) according to the input saturation (x-\/axis). You can use this to fine tune saturation adjustments made with \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7a393cf8311f1efea75eddd58f0ea73}{Color Adjustments}{0}.    \\\cline{1-2}
+{\bfseries{Lum Vs Sat}}   &This curve adjusts saturation (y-\/axis) according to the input luminance (x-\/axis). You can use this to desaturate areas of darkness to provide an interesting visual contrast.   \\\cline{1-2}
+\end{longtabu}

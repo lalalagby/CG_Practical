@@ -1,0 +1,174 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Volume\+Component Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_volume_component}{}\label{class_unity_engine_1_1_rendering_1_1_volume_component}\index{UnityEngine.Rendering.VolumeComponent@{UnityEngine.Rendering.VolumeComponent}}
+
+
+The base class for all the components that can be part of a \doxylink{class_unity_engine_1_1_rendering_1_1_volume_profile}{Volume\+Profile}. The \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} framework automatically handles and interpolates any \doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter} members found in this class.  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Volume\+Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_unity_engine_1_1_rendering_1_1_volume_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_1_1_indent}{Indent}}
+\begin{DoxyCompactList}\small\item\em Local attribute for \doxylink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component} fields only. It handles relative indentation of a property for inspector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_a9d4f76f7cb2a843be7e947ee7cd9fd86}{Override}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component}} state, float interp\+Factor)
+\begin{DoxyCompactList}\small\item\em Interpolates a \doxylink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component} with this component by an interpolation factor and puts the result back into the given \doxylink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_a28e604e4bea241b469d10eaf0d7aca05}{Set\+All\+Overrides\+To}} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets the state of all the overrides on this component to a given value. \end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_ae2bbeaecf77f5806e9a2b6407037356c}{Get\+Hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em A custom hashing function that \doxylink{namespace_unity}{Unity} uses to compare the state of parameters. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_a54586fce4a8f74cea39827af82cd873c}{Any\+Properties\+Is\+Overridden}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if any of the volume properites has been overridden. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_component_afb63b679fca241ec06966713a0efe231}\label{class_unity_engine_1_1_rendering_1_1_volume_component_afb63b679fca241ec06966713a0efe231} 
+void {\bfseries Release} ()
+\begin{DoxyCompactList}\small\item\em Releases all the allocated resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_component_a074640a5f34be05cb089ed7a56067dda}\label{class_unity_engine_1_1_rendering_1_1_volume_component_a074640a5f34be05cb089ed7a56067dda} 
+bool {\bfseries active} = true
+\begin{DoxyCompactList}\small\item\em The active state of the set of parameters defined in this class. You can use this to quickly turn on or off all the overrides at once. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_ab69d6656bb7f4922fb99724f562e6215}{On\+Enable}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity}{Unity} calls this method when it loads the class. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_component_ae14c6003c104e8d053002f19fbf65b3f}\label{class_unity_engine_1_1_rendering_1_1_volume_component_ae14c6003c104e8d053002f19fbf65b3f} 
+virtual void {\bfseries On\+Disable} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity}{Unity} calls this method when the object goes out of scope. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_component_a1daeaed6a898788f0aece5128d51618e}\label{class_unity_engine_1_1_rendering_1_1_volume_component_a1daeaed6a898788f0aece5128d51618e} 
+virtual void {\bfseries On\+Destroy} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity}{Unity} calls this method before the object is destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_component_ab0586d768154b4a04682aa00a6a98d85}\label{class_unity_engine_1_1_rendering_1_1_volume_component_ab0586d768154b4a04682aa00a6a98d85} 
+string {\bfseries display\+Name} = "{}"{}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The name displayed in the component header. If you do not set a name, \doxylink{namespace_unity}{Unity} generates one from the class name automatically. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_component_a5cc7e4a524ca87fa8d5db8e4fa68ebbf}\label{class_unity_engine_1_1_rendering_1_1_volume_component_a5cc7e4a524ca87fa8d5db8e4fa68ebbf} 
+Read\+Only\+Collection$<$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}} $>$ {\bfseries parameters}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A read-\/only collection of all the \doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}s defined in this class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The base class for all the components that can be part of a \doxylink{class_unity_engine_1_1_rendering_1_1_volume_profile}{Volume\+Profile}. The \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} framework automatically handles and interpolates any \doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter} members found in this class. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine_1_1_rendering}{UnityEngine.Rendering}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{[Serializable,\ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_menu_for_render_pipeline}{VolumeComponentMenuForRenderPipeline}}(\textcolor{stringliteral}{"{}Custom/Example\ Component"{}})]}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ExampleComponent\ :\ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{VolumeComponent}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{ClampedFloatParameter}}\ intensity\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{ClampedFloatParameter}}(0f,\ 0f,\ 1f);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_component_a54586fce4a8f74cea39827af82cd873c}\index{UnityEngine.Rendering.VolumeComponent@{UnityEngine.Rendering.VolumeComponent}!AnyPropertiesIsOverridden@{AnyPropertiesIsOverridden}}
+\index{AnyPropertiesIsOverridden@{AnyPropertiesIsOverridden}!UnityEngine.Rendering.VolumeComponent@{UnityEngine.Rendering.VolumeComponent}}
+\doxysubsubsection{\texorpdfstring{AnyPropertiesIsOverridden()}{AnyPropertiesIsOverridden()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_component_a54586fce4a8f74cea39827af82cd873c} 
+bool Unity\+Engine.\+Rendering.\+Volume\+Component.\+Any\+Properties\+Is\+Overridden (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true if any of the volume properites has been overridden. 
+
+\begin{DoxyReturn}{Returns}
+True if any of the volume properites has been overridden.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_component_ae2bbeaecf77f5806e9a2b6407037356c}\index{UnityEngine.Rendering.VolumeComponent@{UnityEngine.Rendering.VolumeComponent}!GetHashCode@{GetHashCode}}
+\index{GetHashCode@{GetHashCode}!UnityEngine.Rendering.VolumeComponent@{UnityEngine.Rendering.VolumeComponent}}
+\doxysubsubsection{\texorpdfstring{GetHashCode()}{GetHashCode()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_component_ae2bbeaecf77f5806e9a2b6407037356c} 
+override int Unity\+Engine.\+Rendering.\+Volume\+Component.\+Get\+Hash\+Code (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A custom hashing function that \doxylink{namespace_unity}{Unity} uses to compare the state of parameters. 
+
+\begin{DoxyReturn}{Returns}
+A computed hash code for the current instance.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_component_ab69d6656bb7f4922fb99724f562e6215}\index{UnityEngine.Rendering.VolumeComponent@{UnityEngine.Rendering.VolumeComponent}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!UnityEngine.Rendering.VolumeComponent@{UnityEngine.Rendering.VolumeComponent}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_component_ab69d6656bb7f4922fb99724f562e6215} 
+virtual void Unity\+Engine.\+Rendering.\+Volume\+Component.\+On\+Enable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\doxylink{namespace_unity}{Unity} calls this method when it loads the class. 
+
+If you want to override this method, you must call {\ttfamily base.\+On\+Enable()}. \Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_component_a9d4f76f7cb2a843be7e947ee7cd9fd86}\index{UnityEngine.Rendering.VolumeComponent@{UnityEngine.Rendering.VolumeComponent}!Override@{Override}}
+\index{Override@{Override}!UnityEngine.Rendering.VolumeComponent@{UnityEngine.Rendering.VolumeComponent}}
+\doxysubsubsection{\texorpdfstring{Override()}{Override()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_component_a9d4f76f7cb2a843be7e947ee7cd9fd86} 
+virtual void Unity\+Engine.\+Rendering.\+Volume\+Component.\+Override (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component}}}]{state}{, }\item[{float}]{interp\+Factor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Interpolates a \doxylink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component} with this component by an interpolation factor and puts the result back into the given \doxylink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component}. 
+
+You can override this method to do your own blending. Either loop through the \doxylink{class_unity_engine_1_1_rendering_1_1_volume_component_a5cc7e4a524ca87fa8d5db8e4fa68ebbf}{parameters} list or reference direct fields. You should only use \doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter_ac9929a552b941984c4c70ab430c74af3}{Volume\+Parameter.\+Set\+Value} to set parameter values and not assign directly to the state object. you should also manually check \doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter_ac34edb743c75c1d597d6155bd087f0da}{Volume\+Parameter.\+override\+State} before you set any values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The internal component to interpolate from. You must store the result of the interpolation in this same component.\\
+\hline
+{\em interp\+Factor} & The interpolation factor in range \mbox{[}0,1\mbox{]}.\\
+\hline
+\end{DoxyParams}
+
+
+Below is the default implementation for blending\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_a9d4f76f7cb2a843be7e947ee7cd9fd86}{Override}}(VolumeComponent\ state,\ \textcolor{keywordtype}{float}\ interpFactor)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_a5cc7e4a524ca87fa8d5db8e4fa68ebbf}{parameters}}.Count;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ count;\ i++)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ stateParam\ =\ state.parameters[i];}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ toParam\ =\ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_a5cc7e4a524ca87fa8d5db8e4fa68ebbf}{parameters}}[i];}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Keep\ track\ of\ the\ override\ state\ for\ debugging\ purpose}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ stateParam.overrideState\ =\ toParam.overrideState;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (toParam.overrideState)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ stateParam.Interp(stateParam,\ toParam,\ interpFactor);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_component_a28e604e4bea241b469d10eaf0d7aca05}\index{UnityEngine.Rendering.VolumeComponent@{UnityEngine.Rendering.VolumeComponent}!SetAllOverridesTo@{SetAllOverridesTo}}
+\index{SetAllOverridesTo@{SetAllOverridesTo}!UnityEngine.Rendering.VolumeComponent@{UnityEngine.Rendering.VolumeComponent}}
+\doxysubsubsection{\texorpdfstring{SetAllOverridesTo()}{SetAllOverridesTo()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_component_a28e604e4bea241b469d10eaf0d7aca05} 
+void Unity\+Engine.\+Rendering.\+Volume\+Component.\+Set\+All\+Overrides\+To (\begin{DoxyParamCaption}\item[{bool}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the state of all the overrides on this component to a given value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The value to set the state of the overrides to.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Volume/Volume\+Component.\+cs\end{DoxyCompactItemize}

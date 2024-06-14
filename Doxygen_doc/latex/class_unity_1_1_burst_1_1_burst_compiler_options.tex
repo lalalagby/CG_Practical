@@ -1,0 +1,72 @@
+\doxysection{Unity.\+Burst.\+Burst\+Compiler\+Options Class Reference}
+\hypertarget{class_unity_1_1_burst_1_1_burst_compiler_options}{}\label{class_unity_1_1_burst_1_1_burst_compiler_options}\index{Unity.Burst.BurstCompilerOptions@{Unity.Burst.BurstCompilerOptions}}
+
+
+Options available at \doxylink{namespace_unity_1_1_burst_1_1_editor}{Editor} time and partially at runtime to control the behavior of the compilation and to enable/disable burst jobs.  
+
+
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_1_1_burst_1_1_burst_compiler_options_a6220dda114eae0d8a68a8b4036b932f5}\label{class_unity_1_1_burst_1_1_burst_compiler_options_a6220dda114eae0d8a68a8b4036b932f5} 
+bool {\bfseries Is\+Enabled}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a boolean indicating whether burst is enabled. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_1_1_burst_1_1_burst_compiler_options_a7cfd74a74d7ac8414e4f6842c27b4a46}\label{class_unity_1_1_burst_1_1_burst_compiler_options_a7cfd74a74d7ac8414e4f6842c27b4a46} 
+bool {\bfseries Enable\+Burst\+Compilation}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets a boolean to enable or disable compilation of burst jobs. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_burst_1_1_burst_compiler_options_af1571c239138480cd1d15ae1a644c878}{Enable\+Burst\+Compile\+Synchronously}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets a boolean to force the compilation of all burst jobs synchronously. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_burst_1_1_burst_compiler_options_aa10bc1eee7b2ec36a5b8743f2e6cc8e9}{Enable\+Burst\+Safety\+Checks}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets a boolean to enable or disable safety checks. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_burst_1_1_burst_compiler_options_a42baff9c65a854a671eac91c692074dc}{Force\+Enable\+Burst\+Safety\+Checks}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets a boolean to force enable safety checks, irrespective of what {\ttfamily Enable\+Burst\+Safety\+Checks} is set to, or whether the job or function has {\ttfamily Disable\+Safety\+Checks} set. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_1_1_burst_1_1_burst_compiler_options_a98a0e864b73fdf48e780c06e69151a44}\label{class_unity_1_1_burst_1_1_burst_compiler_options_a98a0e864b73fdf48e780c06e69151a44} 
+bool {\bfseries Enable\+Burst\+Debug}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enable debugging mode. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_1_1_burst_1_1_burst_compiler_options_adcfd32eee516e1f3e0d00a676dfe9f92}\label{class_unity_1_1_burst_1_1_burst_compiler_options_adcfd32eee516e1f3e0d00a676dfe9f92} 
+bool {\bfseries Disable\+Optimizations}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This property is no longer used and will be removed in a future major release. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_1_1_burst_1_1_burst_compiler_options_a8ad0c6aa3fa3ac0295ddbbab73218d6f}\label{class_unity_1_1_burst_1_1_burst_compiler_options_a8ad0c6aa3fa3ac0295ddbbab73218d6f} 
+bool {\bfseries Enable\+Fast\+Math}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This property is no longer used and will be removed in a future major release. Use the \mbox{[}Burst\+Compile(Float\+Mode = \doxylink{namespace_unity_1_1_burst_a384ceec749585a3910db4eccd4759602ae16b5b7f26f54214445cbe38d72c2828}{Float\+Mode.\+Fast})\mbox{]} on the method directly to enable this feature. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Options available at \doxylink{namespace_unity_1_1_burst_1_1_editor}{Editor} time and partially at runtime to control the behavior of the compilation and to enable/disable burst jobs. 
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_1_1_burst_1_1_burst_compiler_options_af1571c239138480cd1d15ae1a644c878}\index{Unity.Burst.BurstCompilerOptions@{Unity.Burst.BurstCompilerOptions}!EnableBurstCompileSynchronously@{EnableBurstCompileSynchronously}}
+\index{EnableBurstCompileSynchronously@{EnableBurstCompileSynchronously}!Unity.Burst.BurstCompilerOptions@{Unity.Burst.BurstCompilerOptions}}
+\doxysubsubsection{\texorpdfstring{EnableBurstCompileSynchronously}{EnableBurstCompileSynchronously}}
+{\footnotesize\ttfamily \label{class_unity_1_1_burst_1_1_burst_compiler_options_af1571c239138480cd1d15ae1a644c878} 
+bool Unity.\+Burst.\+Burst\+Compiler\+Options.\+Enable\+Burst\+Compile\+Synchronously\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets a boolean to force the compilation of all burst jobs synchronously. 
+
+This is only available at \doxylink{namespace_unity_1_1_burst_1_1_editor}{Editor} time. Does not have an impact on player mode. \Hypertarget{class_unity_1_1_burst_1_1_burst_compiler_options_aa10bc1eee7b2ec36a5b8743f2e6cc8e9}\index{Unity.Burst.BurstCompilerOptions@{Unity.Burst.BurstCompilerOptions}!EnableBurstSafetyChecks@{EnableBurstSafetyChecks}}
+\index{EnableBurstSafetyChecks@{EnableBurstSafetyChecks}!Unity.Burst.BurstCompilerOptions@{Unity.Burst.BurstCompilerOptions}}
+\doxysubsubsection{\texorpdfstring{EnableBurstSafetyChecks}{EnableBurstSafetyChecks}}
+{\footnotesize\ttfamily \label{class_unity_1_1_burst_1_1_burst_compiler_options_aa10bc1eee7b2ec36a5b8743f2e6cc8e9} 
+bool Unity.\+Burst.\+Burst\+Compiler\+Options.\+Enable\+Burst\+Safety\+Checks\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets a boolean to enable or disable safety checks. 
+
+This is only available at \doxylink{namespace_unity_1_1_burst_1_1_editor}{Editor} time. Does not have an impact on player mode. \Hypertarget{class_unity_1_1_burst_1_1_burst_compiler_options_a42baff9c65a854a671eac91c692074dc}\index{Unity.Burst.BurstCompilerOptions@{Unity.Burst.BurstCompilerOptions}!ForceEnableBurstSafetyChecks@{ForceEnableBurstSafetyChecks}}
+\index{ForceEnableBurstSafetyChecks@{ForceEnableBurstSafetyChecks}!Unity.Burst.BurstCompilerOptions@{Unity.Burst.BurstCompilerOptions}}
+\doxysubsubsection{\texorpdfstring{ForceEnableBurstSafetyChecks}{ForceEnableBurstSafetyChecks}}
+{\footnotesize\ttfamily \label{class_unity_1_1_burst_1_1_burst_compiler_options_a42baff9c65a854a671eac91c692074dc} 
+bool Unity.\+Burst.\+Burst\+Compiler\+Options.\+Force\+Enable\+Burst\+Safety\+Checks\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets a boolean to force enable safety checks, irrespective of what {\ttfamily Enable\+Burst\+Safety\+Checks} is set to, or whether the job or function has {\ttfamily Disable\+Safety\+Checks} set. 
+
+This is only available at \doxylink{namespace_unity_1_1_burst_1_1_editor}{Editor} time. Does not have an impact on player mode. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+burst@1.\+8.\+7/\+Runtime/Burst\+Compiler\+Options.\+cs\end{DoxyCompactItemize}

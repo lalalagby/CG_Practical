@@ -1,0 +1,62 @@
+\chapter{Sample Texture 2D Array node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2bf2f3904fbe8329f116e1baef2ec06fd}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2bf2f3904fbe8329f116e1baef2ec06fd}\index{Sample Texture 2D Array node@{Sample Texture 2D Array node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2bf2f3904fbe8329f116e1baef2ec06fd_autotoc_md3751}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2bf2f3904fbe8329f116e1baef2ec06fd_autotoc_md3751}%
+ The Sample Texture 2D Array node samples a {\bfseries{Texture 2D Array}} asset and returns a {\bfseries{Vector 4}} color value. You can specify the {\bfseries{UV}} coordinates for a texture sample and use a \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_sampler-_state-_node}{Sampler State node}{0} to define a specific Sampler State. The node\textquotesingle{}s {\bfseries{Index}} input port specifies which index of a Texture 2D Array to sample.
+
+For more information about Texture 2D Arrays, see \href{https://docs.unity3d.com/Manual/class-Texture2DArray.html}{\texttt{ Texture Arrays}} in the \doxylink{namespace_unity}{Unity} User manual.
+
+\mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_26438334a054a70adfa5b2db8a09e37e1}{nodes-\/sample-\/errors}{0}\mbox{]}
+
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2bf2f3904fbe8329f116e1baef2ec06fd_autotoc_md3752}{}\doxysection{\texorpdfstring{Create Node menu category}{Create Node menu category}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2bf2f3904fbe8329f116e1baef2ec06fd_autotoc_md3752}
+The Sample Texture 2D Array node is under the {\bfseries{Input}} \texorpdfstring{$>$}{>} {\bfseries{Texture}} category in the Create Node menu.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2bf2f3904fbe8329f116e1baef2ec06fd_autotoc_md3753}{}\doxysection{\texorpdfstring{Compatibility}{Compatibility}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2bf2f3904fbe8329f116e1baef2ec06fd_autotoc_md3753}
+The Sample Texture 3D \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2ab9f2417f09a36f21697511583f6bf1b}{nodes-\/compatibility-\/all}{0}\mbox{]}
+
+\mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_28cbf7c1e26870abe3b080107be028425}{nodes-\/sample-\/fragment-\/lod}{0}\mbox{]}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2bf2f3904fbe8329f116e1baef2ec06fd_autotoc_md3754}{}\doxysection{\texorpdfstring{Inputs}{Inputs}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2bf2f3904fbe8329f116e1baef2ec06fd_autotoc_md3754}
+The Sample Texture 3D \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2snippets_2nodes-inputs}{nodes-\/inputs}{0}\mbox{]}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}} }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}} }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Binding}} }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}} }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}} }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Binding}} }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-4}
+\endhead
+{\bfseries{Texture Array}} &Texture 2D Array &None &The Texture 2D Array asset to sample.  \\\cline{1-4}
+{\bfseries{Index}} &Float &None &The index of the specific Texture in the Texture array to sample. The index value is the Texture\textquotesingle{}s location in the Texture array. The index values in an array always start at 0. An array with four textures would have locations 0, 1, 2, and 3.  \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2ce286bd9cb453c2d92f1b840410654e5}{nodes-\/sample-\/uv-\/table}{0}\mbox{]} \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_268fed84e33d77577055c883b01077c7c}{nodes-\/sample-\/ss-\/table}{0}\mbox{]} \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_29b240db5e232f6b78ceb4255725565d2}{nodes-\/sample-\/lod-\/table}{0}\mbox{]} \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2b9d697d49d93f292db58e63bd549d733}{nodes-\/sample-\/mip-\/bias-\/table}{0}\mbox{]} \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2f0d08c8205c374ae82b99d85bf58ac68}{nodes-\/sample-\/ddx-\/table}{0}\mbox{]} \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_29f25ca4e6ace68de4fab4ddf3e896e99}{nodes-\/sample-\/ddy-\/table}{0}\mbox{]}  \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2bf2f3904fbe8329f116e1baef2ec06fd_autotoc_md3755}{}\doxysection{\texorpdfstring{Additional node settings}{Additional node settings}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2bf2f3904fbe8329f116e1baef2ec06fd_autotoc_md3755}
+The Sample Texture 3D \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_234a9d89b70e587b3461d402df97bb7ae}{nodes-\/additional-\/settings}{0}\mbox{]}
+
+\mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2eaa272624ad352081ef6294d1cc656b0}{nodes-\/sample-\/mip-\/bias-\/sample-\/mode-\/table}{0}\mbox{]}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2bf2f3904fbe8329f116e1baef2ec06fd_autotoc_md3756}{}\doxysection{\texorpdfstring{Outputs}{Outputs}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2bf2f3904fbe8329f116e1baef2ec06fd_autotoc_md3756}
+The Sample Texture 3D \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2snippets_2nodes-outputs}{nodes-\/outputs}{0}\mbox{]}
+
+\mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2e359e00fb0969009fd6301bf7b055472}{nodes-\/sample-\/rgba-\/output-\/table}{0}\mbox{]}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2bf2f3904fbe8329f116e1baef2ec06fd_autotoc_md3757}{}\doxysection{\texorpdfstring{Example graph usage}{Example graph usage}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2bf2f3904fbe8329f116e1baef2ec06fd_autotoc_md3757}
+In the following example, the Sample Texture 2D Array node samples a Texture array that has 4 different cloth normal maps. Change the number given to the {\bfseries{Index}} port as an input, and the Sample Texture 2D Array node can sample a specific normal map from the array. The {\bfseries{Index}} value changes the output the node sends to the Normal Unpack node, and the Normal (Tangent Space) Block node in the Master Stack.
+
+
+
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2bf2f3904fbe8329f116e1baef2ec06fd_autotoc_md3758}{}\doxysection{\texorpdfstring{Generated code example}{Generated code example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2bf2f3904fbe8329f116e1baef2ec06fd_autotoc_md3758}
+\mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2snippets_2nodes-generated-code}{nodes-\/generated-\/code}{0}\mbox{]}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float4\ \_SampleTexture2DArray\_RGBA\ =\ SAMPLE\_TEXTURE2D\_ARRAY(Texture,\ Sampler,\ UV,\ Index);}
+\DoxyCodeLine{float\ \_SampleTexture2DArray\_R\ =\ \_SampleTexture2DArray\_RGBA.r;}
+\DoxyCodeLine{float\ \_SampleTexture2DArray\_G\ =\ \_SampleTexture2DArray\_RGBA.g;}
+\DoxyCodeLine{float\ \_SampleTexture2DArray\_B\ =\ \_SampleTexture2DArray\_RGBA.b;}
+\DoxyCodeLine{float\ \_SampleTexture2DArray\_A\ =\ \_SampleTexture2DArray\_RGBA.a;}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2bf2f3904fbe8329f116e1baef2ec06fd_autotoc_md3759}{}\doxysection{\texorpdfstring{Related nodes}{Related nodes}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2bf2f3904fbe8329f116e1baef2ec06fd_autotoc_md3759}
+\mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2snippets_2nodes-related}{nodes-\/related}{0}\mbox{]} Sample Texture 3D node\+:
+
+
+\begin{DoxyItemize}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_sample-_texture-2_d-_node}{Sample Texture 2D node}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_sample-_texture-3_d-_node}{Sample Texture 3D node}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_sampler-_state-_node}{Sampler State node}{0} 
+\end{DoxyItemize}

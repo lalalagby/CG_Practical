@@ -1,0 +1,146 @@
+\doxysection{Cinemachine.\+Cinemachine3rd\+Person\+Aim Class Reference}
+\hypertarget{class_cinemachine_1_1_cinemachine3rd_person_aim}{}\label{class_cinemachine_1_1_cinemachine3rd_person_aim}\index{Cinemachine.Cinemachine3rdPersonAim@{Cinemachine.Cinemachine3rdPersonAim}}
+
+
+An add-\/on module for \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera that forces the Look\+At point to the center of the screen, based on the Follow target\textquotesingle{}s orientation, cancelling noise and other corrections. This is useful for third-\/person style aim cameras that want a dead-\/accurate aim at all times, even in the presence of positional or rotational noise.  
+
+
+Inheritance diagram for Cinemachine.\+Cinemachine3rd\+Person\+Aim\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_cinemachine_1_1_cinemachine3rd_person_aim}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override bool \mbox{\hyperlink{class_cinemachine_1_1_cinemachine3rd_person_aim_a90ab1a9e9d9e79c9204ebb96e12ffbfb}{On\+Transition\+From\+Camera}} (\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} from\+Cam, Vector3 world\+Up, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Notification that this virtual camera is going live. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension}{Cinemachine.\+Cinemachine\+Extension}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_ab1cc3fb8f3edbcb9eb6a4aa96f998170}{Pre\+Pipeline\+Mutate\+Camera\+State\+Callback}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} vcam, ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} cur\+State, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Override this to do such things as offset the Referece\+Look\+At. Base class implementation does nothing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_ac896b83e871cb82b7a9669d07ac23f0d}{Invoke\+Post\+Pipeline\+Stage\+Callback}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} vcam, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}} stage, ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} state, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Legacy support. This is only here to avoid changing the API to make \doxylink{class_cinemachine_1_1_cinemachine_extension_a29d31e35cf1e1fee15d923eed7eeda43}{Post\+Pipeline\+Stage\+Callback()} public. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_ae0ca22a4b7cc143ac024ce70b196ef36}{On\+Target\+Object\+Warped}} (Transform target, Vector3 position\+Delta)
+\begin{DoxyCompactList}\small\item\em This is called to notify the extension that a target got warped, so that the extension can update its internal state to make the camera also warp seamlessy. Base class implementation does nothing. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_abfa0892159a67a17019163eca0802d1f}{Force\+Camera\+Position}} (Vector3 pos, Quaternion rot)
+\begin{DoxyCompactList}\small\item\em Force the virtual camera to assume a given position and orientation. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a539ec5013baf5d36cfd2bc98ae7a3248}{Get\+Max\+Damp\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Report maximum damping time needed for this extension. Only used in editor for timeline scrubbing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine3rd_person_aim_a835d432d2128eb83bf818be4f7a9a1d5}\label{class_cinemachine_1_1_cinemachine3rd_person_aim_a835d432d2128eb83bf818be4f7a9a1d5} 
+Layer\+Mask {\bfseries Aim\+Collision\+Filter}
+\begin{DoxyCompactList}\small\item\em Objects on these layers will be detected. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine3rd_person_aim_a0ef56a298f4f364dbc5e41120f6dc348}\label{class_cinemachine_1_1_cinemachine3rd_person_aim_a0ef56a298f4f364dbc5e41120f6dc348} 
+string {\bfseries Ignore\+Tag} = string.\+Empty
+\begin{DoxyCompactList}\small\item\em Objects with this tag will be ignored. ~\newline
+ It is a good idea to set this field to the target\textquotesingle{}s tag. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine3rd_person_aim_a9662d8660574fc5eb01575876676a4fe}\label{class_cinemachine_1_1_cinemachine3rd_person_aim_a9662d8660574fc5eb01575876676a4fe} 
+float {\bfseries Aim\+Distance}
+\begin{DoxyCompactList}\small\item\em How far to project the object detection ray. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine3rd_person_aim_af30c540d3863a0fd0642dad8be5d387f}\label{class_cinemachine_1_1_cinemachine3rd_person_aim_af30c540d3863a0fd0642dad8be5d387f} 
+Rect\+Transform {\bfseries Aim\+Target\+Reticle}
+\begin{DoxyCompactList}\small\item\em This 2D object will be positioned in the game view over the raycast hit point, if any, or will remain in the center of the screen if no hit point is detected. May be null, in which case no on-\/screen indicator will appear. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine3rd_person_aim_ab2aeac67ce5ad376d15a5ceb0bc3dbcd}{Post\+Pipeline\+Stage\+Callback}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} vcam, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}} stage, ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} state, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Sets the Reference\+Look\+At to be the result of a raycast in the direction of camera forward. If an object is hit, point is placed there, else it is placed at Aim\+Distance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension}{Cinemachine.\+Cinemachine\+Extension}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Awake} ()
+\begin{DoxyCompactList}\small\item\em Connect to virtual camera pipeline. Override implementations must call this base implementation. \end{DoxyCompactList}\item 
+virtual void {\bfseries On\+Enable} ()
+\begin{DoxyCompactList}\small\item\em Does nothing. It\textquotesingle{}s here for the little checkbox in the inspector. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_adf1df72db4c68b49f91c2685470b80ef}{On\+Destroy}} ()
+\begin{DoxyCompactList}\small\item\em Disconnect from virtual camera pipeline. Override implementations must call this base implementation. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a65b00ddb064ec30c6e8a53082868befe}{Connect\+To\+Vcam}} (bool connect)
+\begin{DoxyCompactList}\small\item\em Connect to virtual camera. Implementation must be safe to be called redundantly. Override implementations must call this base implementation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a29d31e35cf1e1fee15d923eed7eeda43}{Post\+Pipeline\+Stage\+Callback}} (\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} vcam, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}} stage, ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} state, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em This callback will be called after the virtual camera has implemented each stage in the pipeline. This method may modify the referenced state. If delta\+Time less than 0, reset all state info and perform no damping. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_abfd25e075e45a038b59e17ac7b55dc02}{Get\+Extra\+State$<$ T $>$}} (\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} vcam)
+\begin{DoxyCompactList}\small\item\em Because extensions can be placed on manager cams and will in that case be called for all the vcam children, vcam-\/specific state information should be stored here. Just define a class to hold your state info and use it exclusively when calling this. \end{DoxyCompactList}\item 
+List$<$ T $>$ \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a97f9c52f94e138ecefda901f891b0966}{Get\+All\+Extra\+States$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em Inefficient method to get all extra state info for all vcams. Intended for \doxylink{namespace_cinemachine_1_1_editor}{Editor} use only, not runtime! \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine3rd_person_aim_a99fa039ae6e85abfc247abe7ef0c1a07}\label{class_cinemachine_1_1_cinemachine3rd_person_aim_a99fa039ae6e85abfc247abe7ef0c1a07} 
+Vector3 {\bfseries Aim\+Target}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em World space position of where the player would hit if a projectile were to be fired from the player origin. This may be different from state.\+Reference\+Look\+At due to camera offset from player origin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension}{Cinemachine.\+Cinemachine\+Extension}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} {\bfseries Virtual\+Camera}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{class_cinemachine_1_1_cinemachine_virtual_camera}{Cinemachine\+Virtual\+Camera} to which this extension is attached. \end{DoxyCompactList}\item 
+virtual bool {\bfseries Requires\+User\+Input}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Extensions that require user input should implement this and return true. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension}{Cinemachine.\+Cinemachine\+Extension}}}
+\begin{DoxyCompactItemize}
+\item 
+const float {\bfseries Epsilon} = Utility.\+Unity\+Vector\+Extensions.\+Epsilon
+\begin{DoxyCompactList}\small\item\em Useful constant for very small floats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An add-\/on module for \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera that forces the Look\+At point to the center of the screen, based on the Follow target\textquotesingle{}s orientation, cancelling noise and other corrections. This is useful for third-\/person style aim cameras that want a dead-\/accurate aim at all times, even in the presence of positional or rotational noise. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine3rd_person_aim_a90ab1a9e9d9e79c9204ebb96e12ffbfb}\index{Cinemachine.Cinemachine3rdPersonAim@{Cinemachine.Cinemachine3rdPersonAim}!OnTransitionFromCamera@{OnTransitionFromCamera}}
+\index{OnTransitionFromCamera@{OnTransitionFromCamera}!Cinemachine.Cinemachine3rdPersonAim@{Cinemachine.Cinemachine3rdPersonAim}}
+\doxysubsubsection{\texorpdfstring{OnTransitionFromCamera()}{OnTransitionFromCamera()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine3rd_person_aim_a90ab1a9e9d9e79c9204ebb96e12ffbfb} 
+override bool Cinemachine.\+Cinemachine3rd\+Person\+Aim.\+On\+Transition\+From\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}}}]{from\+Cam}{, }\item[{Vector3}]{world\+Up}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Notification that this virtual camera is going live. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from\+Cam} & The camera being deactivated. May be null.\\
+\hline
+{\em world\+Up} & Default world Up, set by the \doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain}\\
+\hline
+{\em delta\+Time} & Delta time for time-\/based effects (ignore if less than or equal to 0)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True to request a vcam update of internal state
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_extension_a6ff5692b6c0348f319da017ee4573594}{Cinemachine.\+Cinemachine\+Extension}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine3rd_person_aim_ab2aeac67ce5ad376d15a5ceb0bc3dbcd}\index{Cinemachine.Cinemachine3rdPersonAim@{Cinemachine.Cinemachine3rdPersonAim}!PostPipelineStageCallback@{PostPipelineStageCallback}}
+\index{PostPipelineStageCallback@{PostPipelineStageCallback}!Cinemachine.Cinemachine3rdPersonAim@{Cinemachine.Cinemachine3rdPersonAim}}
+\doxysubsubsection{\texorpdfstring{PostPipelineStageCallback()}{PostPipelineStageCallback()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine3rd_person_aim_ab2aeac67ce5ad376d15a5ceb0bc3dbcd} 
+override void Cinemachine.\+Cinemachine3rd\+Person\+Aim.\+Post\+Pipeline\+Stage\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}}}]{vcam}{, }\item[{\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}}}]{stage}{, }\item[{ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}}}]{state}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets the Reference\+Look\+At to be the result of a raycast in the direction of camera forward. If an object is hit, point is placed there, else it is placed at Aim\+Distance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vcam} & The virtual camera being processed\\
+\hline
+{\em stage} & The current pipeline stage\\
+\hline
+{\em state} & The current virtual camera state\\
+\hline
+{\em delta\+Time} & The current applicable delta\+Time\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Behaviours/Cinemachine3rd\+Person\+Aim.\+cs\end{DoxyCompactItemize}

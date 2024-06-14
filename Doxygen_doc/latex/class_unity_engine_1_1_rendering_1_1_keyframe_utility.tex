@@ -1,0 +1,80 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Keyframe\+Utility Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_keyframe_utility}{}\label{class_unity_engine_1_1_rendering_1_1_keyframe_utility}\index{UnityEngine.Rendering.KeyframeUtility@{UnityEngine.Rendering.KeyframeUtility}}
+
+
+A helper function for interpolating Animation\+Curves together. In general, curves can not be directly blended because they will have keypoints at different places. Interp\+Animation\+Curve traverses through the keypoints. If both curves have a keypoint at the same time, they keypoints are trivially lerped together. However if one curve has a keypoint at a time that is missing in the other curve (which is the most common case), Interp\+Animation\+Curve calculates a synthetic keypoint at that time based on value and derivative, and interpolates the resulting keys. Note that this function should only be called by internal rendering code. It creates a small pool of animation curves and reuses them to avoid creating garbage. The number of curves needed is quite small, since curves only need to be used when interpolating multiple volumes together with different curve parameters. The underlying interp function isn\textquotesingle{}t allowed to fail, so in the case where we run out of memory we fall back to returning a single keyframe.  
+
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_keyframe_utility_afd140c34798570e27c6ae497dd78ab8e}{Reset\+Animation\+Curve}} (Animation\+Curve curve)
+\begin{DoxyCompactList}\small\item\em Helper function to remove all control points for an animation curve. Since animation curves are reused in a pool, this function clears existing keys so the curve is ready for reuse. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_keyframe_utility_ab3e61c2ef6208423234fa8dd9c14172d}{Interp\+Animation\+Curve}} (ref Animation\+Curve lhs\+And\+Result\+Curve, \mbox{[}Disallow\+Null\mbox{]} Animation\+Curve rhs\+Curve, float t)
+\begin{DoxyCompactList}\small\item\em Interpolates two Animation\+Curves. Since both curves likely have control points at different places in the curve, this method will create a new curve from the union of times between both curves. However, to avoid creating garbage, this function will always replace the keys of lhs\+And\+Result\+Curve with the final result, and return lhs\+And\+Result\+Curve. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A helper function for interpolating Animation\+Curves together. In general, curves can not be directly blended because they will have keypoints at different places. Interp\+Animation\+Curve traverses through the keypoints. If both curves have a keypoint at the same time, they keypoints are trivially lerped together. However if one curve has a keypoint at a time that is missing in the other curve (which is the most common case), Interp\+Animation\+Curve calculates a synthetic keypoint at that time based on value and derivative, and interpolates the resulting keys. Note that this function should only be called by internal rendering code. It creates a small pool of animation curves and reuses them to avoid creating garbage. The number of curves needed is quite small, since curves only need to be used when interpolating multiple volumes together with different curve parameters. The underlying interp function isn\textquotesingle{}t allowed to fail, so in the case where we run out of memory we fall back to returning a single keyframe. 
+
+Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ AnimationCurve\ curve0\ =\ \textcolor{keyword}{new}\ AnimationCurve();}
+\DoxyCodeLine{\ \ \ \ curve0.AddKey(\textcolor{keyword}{new}\ Keyframe(0.0f,\ 3.0f));}
+\DoxyCodeLine{\ \ \ \ curve0.AddKey(\textcolor{keyword}{new}\ Keyframe(4.0f,\ 2.0f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ AnimationCurve\ curve1\ =\ \textcolor{keyword}{new}\ AnimationCurve();}
+\DoxyCodeLine{\ \ \ \ curve1.AddKey(\textcolor{keyword}{new}\ Keyframe(0.0f,\ 0.0f));}
+\DoxyCodeLine{\ \ \ \ curve1.AddKey(\textcolor{keyword}{new}\ Keyframe(2.0f,\ 1.0f));}
+\DoxyCodeLine{\ \ \ \ curve1.AddKey(\textcolor{keyword}{new}\ Keyframe(4.0f,\ 4.0f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{float}\ t\ =\ 0.5f;}
+\DoxyCodeLine{\ \ \ \ KeyframeUtility.InterpAnimationCurve(curve0,\ curve1,\ t);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ curve0\ now\ stores\ the\ resulting\ interpolated\ curve}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_keyframe_utility_ab3e61c2ef6208423234fa8dd9c14172d}\index{UnityEngine.Rendering.KeyframeUtility@{UnityEngine.Rendering.KeyframeUtility}!InterpAnimationCurve@{InterpAnimationCurve}}
+\index{InterpAnimationCurve@{InterpAnimationCurve}!UnityEngine.Rendering.KeyframeUtility@{UnityEngine.Rendering.KeyframeUtility}}
+\doxysubsubsection{\texorpdfstring{InterpAnimationCurve()}{InterpAnimationCurve()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_keyframe_utility_ab3e61c2ef6208423234fa8dd9c14172d} 
+static void Unity\+Engine.\+Rendering.\+Keyframe\+Utility.\+Interp\+Animation\+Curve (\begin{DoxyParamCaption}\item[{ref Animation\+Curve}]{lhs\+And\+Result\+Curve}{, }\item[{\mbox{[}\+Disallow\+Null\mbox{]} Animation\+Curve}]{rhs\+Curve}{, }\item[{float}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Interpolates two Animation\+Curves. Since both curves likely have control points at different places in the curve, this method will create a new curve from the union of times between both curves. However, to avoid creating garbage, this function will always replace the keys of lhs\+And\+Result\+Curve with the final result, and return lhs\+And\+Result\+Curve. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs\+And\+Result\+Curve} & The start value. Additionaly, this instance will be reused and returned as the result.\\
+\hline
+{\em rhs\+Curve} & The end value.\\
+\hline
+{\em t} & The interpolation factor in range \mbox{[}0,1\mbox{]}.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_keyframe_utility_afd140c34798570e27c6ae497dd78ab8e}\index{UnityEngine.Rendering.KeyframeUtility@{UnityEngine.Rendering.KeyframeUtility}!ResetAnimationCurve@{ResetAnimationCurve}}
+\index{ResetAnimationCurve@{ResetAnimationCurve}!UnityEngine.Rendering.KeyframeUtility@{UnityEngine.Rendering.KeyframeUtility}}
+\doxysubsubsection{\texorpdfstring{ResetAnimationCurve()}{ResetAnimationCurve()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_keyframe_utility_afd140c34798570e27c6ae497dd78ab8e} 
+static void Unity\+Engine.\+Rendering.\+Keyframe\+Utility.\+Reset\+Animation\+Curve (\begin{DoxyParamCaption}\item[{Animation\+Curve}]{curve}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Helper function to remove all control points for an animation curve. Since animation curves are reused in a pool, this function clears existing keys so the curve is ready for reuse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em curve} & The curve to reset.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Volume/Keyframe\+Utility.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,36 @@
+\chapter{Forward+ Rendering Path}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do2f669e3ed7336897bbb0b5f1fbb6125b}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do2f669e3ed7336897bbb0b5f1fbb6125b}\index{Forward+ Rendering Path@{Forward+ Rendering Path}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do2f669e3ed7336897bbb0b5f1fbb6125b_autotoc_md2446}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do2f669e3ed7336897bbb0b5f1fbb6125b_autotoc_md2446}%
+ The Forward+ Rendering Path lets you avoid the per object limit of the Forward Rendering Path.
+
+The Forward+ Rendering Path has the following advantages compared with the Forward Rendering Path\+:
+
+
+\begin{DoxyItemize}
+\item There is no per-\/object limit for the number of Lights that affect Game\+Objects, the per-\/\+Camera limit still applies.~\newline
+The per-\/\+Camera limits for different platforms are\+:
+\begin{DoxyItemize}
+\item Desktop and console platforms\+: 256 Lights
+\item Mobile platforms\+: 32 Lights. Open\+GL ES 3.\+0 and earlier\+: 16 Lights.
+\end{DoxyItemize}This implementation lets you avoid splitting big meshes when more than 8 lights affect them.
+\item Blending of more than 2 reflection probes.
+\item Support for multiple Lights when using \doxylink{namespace_unity}{Unity} Entity Component \doxylink{namespace_system}{System} (ECS).
+\item More flexibility with procedural draws.
+\end{DoxyItemize}
+
+See also\+: \href{../urp-universal-renderer.md\#rendering-path-comparison}{\texttt{ Rendering Path comparison}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do2f669e3ed7336897bbb0b5f1fbb6125b_autotoc_md2447}{}\doxysection{\texorpdfstring{\label{_how-to-enable}%
+How to select the Forward+ Rendering Path}{\label{_how-to-enable}%
+How to select the Forward+ Rendering Path}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do2f669e3ed7336897bbb0b5f1fbb6125b_autotoc_md2447}
+To select the Forward+ Rendering Path, use the property {\bfseries{Rendering}} \texorpdfstring{$>$}{>} {\bfseries{Rendering Path}} in the URP Universal Renderer asset.
+
+
+
+When you set the Rendering Path to Forward+, \doxylink{namespace_unity}{Unity} ignores the values in the following properties in URP Asset, {\bfseries{Lighting}} section\+:
+\begin{DoxyItemize}
+\item {\bfseries{Main Light}}. With Forward+ the value of this property is {\bfseries{Per Pixel}} regardless of the value you select.
+\item {\bfseries{Additional Lights}}. With Forward+ the value of this property is {\bfseries{Per Pixel}} regardless of the value you select.
+\item {\bfseries{Additional Lights}} \texorpdfstring{$>$}{>} {\bfseries{Per Object Limit}}. \doxylink{namespace_unity}{Unity} ignores this property.
+\item {\bfseries{Reflection Probes}} \texorpdfstring{$>$}{>} {\bfseries{Probe Blending}}. Reflection probe blending is always on.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do2f669e3ed7336897bbb0b5f1fbb6125b_autotoc_md2448}{}\doxysection{\texorpdfstring{Limitations}{Limitations}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do2f669e3ed7336897bbb0b5f1fbb6125b_autotoc_md2448}
+The Forward+ Rendering Path has no limitations compared with the Forward Rendering Path. 

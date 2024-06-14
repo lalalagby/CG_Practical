@@ -5,23 +5,38 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-/*
-File Name : SoupContainerCounter.cs
-Function  : Container interaction class
-Author    : Yong Wu
-Data      : 28.08.2023
-Last Modified by: Xinyue Cheng
-Last Modification Date  :   18.05.2024
-*/
-
-
+/**
+ * @file SoupContainerCounter.cs
+ * @brief Container interaction class
+ * 
+ * @details This class handles interactions between the player and the SoupContainerCounter.
+ * It checks if the player is holding a kitchenware object (e.g., a cup) and attempts to add an ingredient to it.
+ * If successful, it triggers an event.
+ * 
+ * @date 28.08.2023
+ * @author Yong Wu, Xinyue Cheng
+ */
 public class SoupContainerCounter : BaseCounter
 {
-    // Define events for cabinet interactions
+    /**
+     * @brief Event triggered when the player grabs an object from the counter.
+     */
     public event EventHandler OnPlayerGrabbedObject;
 
+    /**
+     * @brief The ingredient to be added to the kitchenware.
+     */
     [SerializeField] private HeyTeaObjectSO heyTeaObjectSO;
 
+    /**
+     * @brief Interacts with the player.
+     * 
+     * @details This method handles the interaction between the player and the counter. 
+     * If the player is holding a kitchenware object (e.g., a cup), it attempts to add an ingredient to it. 
+     * If successful, it triggers an event.
+     * 
+     * @param player The player interacting with the counter.
+     */
     public override void Interact(Player player)
     {
         // To see if player has heytea object
@@ -31,7 +46,7 @@ public class SoupContainerCounter : BaseCounter
             return;
         }
 
-        // Try to get the kichenware object from player's hand
+        // Try to get the kitchenware object from player's hand
         if (player.GetHeyTeaObject().TryGetKichenware(out IKichenwareObejct kichenwareObject))
         {
             // Attempt to add ingredient to the kitchenware object

@@ -1,0 +1,19 @@
+\chapter{Setting up Virtual Cameras}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_set_up_v_cam}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_set_up_v_cam}\index{Setting up Virtual Cameras@{Setting up Virtual Cameras}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_set_up_v_cam_autotoc_md716}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_set_up_v_cam_autotoc_md716}%
+ In your project, organize your Scene Hierarchy to have a single \doxylink{namespace_unity}{Unity} camera with a Cinemachine\+Brain component and many Virtual Cameras.
+
+To add a Virtual Camera to a Scene\+:
+
+
+\begin{DoxyEnumerate}
+\item In the \doxylink{namespace_unity}{Unity} menu, choose {\bfseries{Game\+Object \texorpdfstring{$>$}{>} \doxylink{namespace_cinemachine}{Cinemachine} \texorpdfstring{$>$}{>} Virtual Camera}}. ~\newline
+\doxylink{namespace_unity}{Unity} adds a new Game\+Object with a \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera component. If necessary, \doxylink{namespace_unity}{Unity} also adds a \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_brain_properties}{Cinemachine Brain}{0} component to the \doxylink{namespace_unity}{Unity} camera Game\+Object for you.
+\item Use the {\bfseries{Follow}} property to specify a Game\+Object to follow. ~\newline
+The Virtual Camera automatically positions the \doxylink{namespace_unity}{Unity} camera relative to this Game\+Object at all times, even as you move it in the Scene.
+\item Use the {\bfseries{Look At}} property to specify the Game\+Object that the Virtual Camera should aim at. ~\newline
+The Virtual Camera automatically rotates the \doxylink{namespace_unity}{Unity} camera to face this Game\+Object at all times, even as you move it in the Scene.
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_virtual_camera}{Customize the Virtual Camera}{0} as needed. ~\newline
+Choose the algorithm for following and looking at, and adjust settings such as the follow offset, the follow damping, the screen composition, and the damping used when re-\/aiming the camera. 
+\end{DoxyEnumerate}

@@ -1,0 +1,41 @@
+\doxysection{Cinemachine.\+Axis\+State.\+IInput\+Axis\+Provider Interface Reference}
+\hypertarget{interface_cinemachine_1_1_axis_state_1_1_i_input_axis_provider}{}\label{interface_cinemachine_1_1_axis_state_1_1_i_input_axis_provider}\index{Cinemachine.AxisState.IInputAxisProvider@{Cinemachine.AxisState.IInputAxisProvider}}
+
+
+This is an interface to override default querying of \doxylink{namespace_unity}{Unity}\textquotesingle{}s legacy Input system. If a befaviour implementing this interface is attached to a \doxylink{namespace_cinemachine}{Cinemachine} virtual camera that requires input, that interface will be polled for input instead of the standard Input system.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{interface_cinemachine_1_1_axis_state_1_1_i_input_axis_provider_a046ecb11430447f864fcb701f331323d}{Get\+Axis\+Value}} (int axis)
+\begin{DoxyCompactList}\small\item\em Get the value of the input axis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is an interface to override default querying of \doxylink{namespace_unity}{Unity}\textquotesingle{}s legacy Input system. If a befaviour implementing this interface is attached to a \doxylink{namespace_cinemachine}{Cinemachine} virtual camera that requires input, that interface will be polled for input instead of the standard Input system. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_cinemachine_1_1_axis_state_1_1_i_input_axis_provider_a046ecb11430447f864fcb701f331323d}\index{Cinemachine.AxisState.IInputAxisProvider@{Cinemachine.AxisState.IInputAxisProvider}!GetAxisValue@{GetAxisValue}}
+\index{GetAxisValue@{GetAxisValue}!Cinemachine.AxisState.IInputAxisProvider@{Cinemachine.AxisState.IInputAxisProvider}}
+\doxysubsubsection{\texorpdfstring{GetAxisValue()}{GetAxisValue()}}
+{\footnotesize\ttfamily \label{interface_cinemachine_1_1_axis_state_1_1_i_input_axis_provider_a046ecb11430447f864fcb701f331323d} 
+float Cinemachine.\+Axis\+State.\+IInput\+Axis\+Provider.\+Get\+Axis\+Value (\begin{DoxyParamCaption}\item[{int}]{axis}{}\end{DoxyParamCaption})}
+
+
+
+Get the value of the input axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em axis} & Which axis to query\+: 0, 1, or 2. These represent, respectively, the X, Y, and Z axes\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The input value of the axis queried
+\end{DoxyReturn}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Core/Axis\+State.\+cs\end{DoxyCompactItemize}

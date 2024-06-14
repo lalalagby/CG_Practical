@@ -1,0 +1,198 @@
+\doxysection{Unity\+Editor.\+Rendering.\+Speed\+Tree8\+Material\+Upgrader Class Reference}
+\hypertarget{class_unity_editor_1_1_rendering_1_1_speed_tree8_material_upgrader}{}\label{class_unity_editor_1_1_rendering_1_1_speed_tree8_material_upgrader}\index{UnityEditor.Rendering.SpeedTree8MaterialUpgrader@{UnityEditor.Rendering.SpeedTree8MaterialUpgrader}}
+
+
+Material upgrader and relevant utilities for Speed\+Tree 8.  
+
+
+Inheritance diagram for Unity\+Editor.\+Rendering.\+Speed\+Tree8\+Material\+Upgrader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_editor_1_1_rendering_1_1_speed_tree8_material_upgrader}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_speed_tree8_material_upgrader_af67b4ee64e95176620490ee849df8250}{Speed\+Tree8\+Material\+Upgrader}} (string source\+Shader\+Name, string dest\+Shader\+Name, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a98234da890880f41e988d8c44b3f71b8}{Material\+Finalizer}} finalizer=null)
+\begin{DoxyCompactList}\small\item\em Creates a material upgrader that handles the property renames that HD and \doxylink{namespace_unity_editor_1_1_rendering_1_1_universal}{Universal} have in common when upgrading from the built-\/in Speed\+Tree 8 shader. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Unity\+Editor.\+Rendering.\+Material\+Upgrader}}}
+\begin{DoxyCompactItemize}
+\item 
+delegate void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a98234da890880f41e988d8c44b3f71b8}{Material\+Finalizer}} (Material mat)
+\begin{DoxyCompactList}\small\item\em Material Upgrader finalizer delegate. \end{DoxyCompactList}\item 
+IRead\+Only\+Dictionary$<$ string, string $>$ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_af0c6f8e80d6b69b479151911a5f495c2}{Get\+Property\+Rename\+Map}} (\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51}{Material\+Property\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Retrieves a collection of renamed parameters of a specific Material\+Property\+Type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a320d09c23a39770795772cf030f0aef6}{Upgrade}} (Material material, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}} flags)
+\begin{DoxyCompactList}\small\item\em Upgrade method. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a62c80501072104c7deb5f603b03dd9ce}{Convert}} (Material src\+Material, Material dst\+Material)
+\begin{DoxyCompactList}\small\item\em Custom material conversion method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a9b14630063e12bdd34bc86e64ba8bceb}{Rename\+Shader}} (string old\+Name, string new\+Name, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a98234da890880f41e988d8c44b3f71b8}{Material\+Finalizer}} finalizer=null)
+\begin{DoxyCompactList}\small\item\em Rename shader. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a0d7dc09f609292bfe091925e4acb77af}{Rename\+Texture}} (string old\+Name, string new\+Name)
+\begin{DoxyCompactList}\small\item\em Rename Texture Parameter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a2a9b4da70759e4d5d8b595d28dc37289}{Rename\+Float}} (string old\+Name, string new\+Name)
+\begin{DoxyCompactList}\small\item\em Rename Float Parameter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_aff5da4e0aae4321e3f975216937b5345}{Rename\+Color}} (string old\+Name, string new\+Name)
+\begin{DoxyCompactList}\small\item\em Rename Color Parameter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a60a2c90e0a82a6b73ff4081e06a3fb32}{Remove\+Texture}} (string name)
+\begin{DoxyCompactList}\small\item\em Remove Texture Parameter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a0467b661019b8d65ec8314e0f526f98e}{Set\+Float}} (string property\+Name, float value)
+\begin{DoxyCompactList}\small\item\em Set float property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a9c20b05aa0a8b29d9d6806b6ee1a0684}{Set\+Color}} (string property\+Name, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51acb5feb1b7314637725a2e73bdc9f7295}{Color}} value)
+\begin{DoxyCompactList}\small\item\em Set color property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_ac4257426897f3b9886a499153398afb4}{Set\+Texture}} (string property\+Name, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51aa3e8ae43188ae76d38f414b2bdb0077b}{Texture}} value)
+\begin{DoxyCompactList}\small\item\em Set texture property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a8f1fd4f68774f41868984368d1f5126d}{Rename\+Keyword\+To\+Float}} (string old\+Name, string new\+Name, float set\+Val, float unset\+Val)
+\begin{DoxyCompactList}\small\item\em Rename a keyword to float. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_speed_tree8_material_upgrader_a7e06399d4df207658e91add73e7d3a35}{Does\+Material\+Have\+Speed\+Tree\+Wind\+Keyword}} (Material material)
+\begin{DoxyCompactList}\small\item\em Returns true if the material contains a Speed\+Tree Wind keyword. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_speed_tree8_material_upgrader_ac782e0ba3d11e0f83a25ac78dacd5b04}{Is\+Wind\+Enabled}} (Material material)
+\begin{DoxyCompactList}\small\item\em Checks the material for Speed\+Tree keywords to determine if the wind is enabled. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_speed_tree8_material_upgrader_a4d8b2f241830ad8734d67c09f7259467}{Postprocess\+Speed\+Tree8\+Materials}} (Game\+Object speedtree, Speed\+Tree\+Importer st\+Importer, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a98234da890880f41e988d8c44b3f71b8}{Material\+Finalizer}} finalizer=null)
+\begin{DoxyCompactList}\small\item\em Postprocesses materials while you are importing a Speed\+Tree 8 asset. Call from On\+Postprocess\+Speed\+Tree in a Material\+Postprocessor. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_speed_tree8_material_upgrader_af8839962134934ac89b53a2924ce9929}{Speed\+Tree8\+Material\+Finalizer}} (Material material)
+\begin{DoxyCompactList}\small\item\em Preserves wind quality and billboard settings while you are upgrading a Speed\+Tree 8 material from previous versions of Speed\+Tree 8. Wind priority order is \+\_\+\+Wind\+Quality float value \texorpdfstring{$>$}{>} enabled keyword. Should work for upgrading versions within a pipeline and from standard to current pipeline. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Unity\+Editor.\+Rendering.\+Material\+Upgrader}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a1832602e3a534a9a2984362a24a63796}{Upgrade\+Project\+Folder}} (List$<$ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Material\+Upgrader}} $>$ upgraders, string progress\+Bar\+Name, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}} flags=\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8a6adf97f83acf6453d4a6a4b1070f3754}{Upgrade\+Flags.\+None}})
+\begin{DoxyCompactList}\small\item\em Upgrade the project folder. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a2f0d2139ae69be45475de2bf20709506}{Upgrade\+Project\+Folder}} (List$<$ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Material\+Upgrader}} $>$ upgraders, Hash\+Set$<$ string $>$ shader\+Names\+To\+Ignore, string progress\+Bar\+Name, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}} flags=\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8a6adf97f83acf6453d4a6a4b1070f3754}{Upgrade\+Flags.\+None}})
+\begin{DoxyCompactList}\small\item\em Upgrade the project folder. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a5ec367f95189095c37a9deee6dcec533}{Upgrade}} (Material material, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Material\+Upgrader}} upgrader, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}} flags)
+\begin{DoxyCompactList}\small\item\em Upgrade a material. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_ab1ae60ee10b5d6507175d9e64b7038a1}{Upgrade}} (Material material, List$<$ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Material\+Upgrader}} $>$ upgraders, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}} flags)
+\begin{DoxyCompactList}\small\item\em Upgrade a material. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_aae262b25520e3c9d41b3337d9dbfd73f}{Upgrade}} (Material material, List$<$ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Material\+Upgrader}} $>$ upgraders, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}} flags, ref string message)
+\begin{DoxyCompactList}\small\item\em Upgrade a material. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a782192367d0a93d3064be96e93796557}{Upgrade\+Selection}} (List$<$ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Material\+Upgrader}} $>$ upgraders, string progress\+Bar\+Name, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}} flags=\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8a6adf97f83acf6453d4a6a4b1070f3754}{Upgrade\+Flags.\+None}})
+\begin{DoxyCompactList}\small\item\em Upgrade the selection. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_abc05774981e1420dba2e4781ba6f5eea}{Upgrade\+Selection}} (List$<$ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Material\+Upgrader}} $>$ upgraders, Hash\+Set$<$ string $>$ shader\+Names\+To\+Ignore, string progress\+Bar\+Name, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}} flags=\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8a6adf97f83acf6453d4a6a4b1070f3754}{Upgrade\+Flags.\+None}})
+\begin{DoxyCompactList}\small\item\em Upgrade the selection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Unity\+Editor.\+Rendering.\+Material\+Upgrader}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51}{Material\+Property\+Type}} \{ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51aa3e8ae43188ae76d38f414b2bdb0077b}{Texture}}
+, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51a22ae0e2b89e5e3d477f988cc36d3272b}{Float}}
+, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_aa25d26666830e44d7e2f26a6747b0e51acb5feb1b7314637725a2e73bdc9f7295}{Color}}
+ \}
+\begin{DoxyCompactList}\small\item\em Type of property to rename. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8}{Upgrade\+Flags}} \{ \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8a6adf97f83acf6453d4a6a4b1070f3754}{None}} = 0
+, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8adedfb5279a145fee76a2720ba500184a}{Log\+Error\+On\+Non\+Existing\+Property}} = 1
+, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8a17c3c53d026358756bd79472afa85790}{Cleanup\+Non\+Upgraded\+Properties}} = 2
+, \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a661416df46296907f65eb417ec424ca8aacb4b21b9740d0730d09a07a5722878e}{Log\+Message\+When\+No\+Upgrader\+Found}} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em Upgrade Flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader}{Unity\+Editor.\+Rendering.\+Material\+Upgrader}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries New\+Shader\+Path}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Retrieves path to new shader. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Material upgrader and relevant utilities for Speed\+Tree 8. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_speed_tree8_material_upgrader_af67b4ee64e95176620490ee849df8250}\index{UnityEditor.Rendering.SpeedTree8MaterialUpgrader@{UnityEditor.Rendering.SpeedTree8MaterialUpgrader}!SpeedTree8MaterialUpgrader@{SpeedTree8MaterialUpgrader}}
+\index{SpeedTree8MaterialUpgrader@{SpeedTree8MaterialUpgrader}!UnityEditor.Rendering.SpeedTree8MaterialUpgrader@{UnityEditor.Rendering.SpeedTree8MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{SpeedTree8MaterialUpgrader()}{SpeedTree8MaterialUpgrader()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_speed_tree8_material_upgrader_af67b4ee64e95176620490ee849df8250} 
+Unity\+Editor.\+Rendering.\+Speed\+Tree8\+Material\+Upgrader.\+Speed\+Tree8\+Material\+Upgrader (\begin{DoxyParamCaption}\item[{string}]{source\+Shader\+Name}{, }\item[{string}]{dest\+Shader\+Name}{, }\item[{\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a98234da890880f41e988d8c44b3f71b8}{Material\+Finalizer}}}]{finalizer}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a material upgrader that handles the property renames that HD and \doxylink{namespace_unity_editor_1_1_rendering_1_1_universal}{Universal} have in common when upgrading from the built-\/in Speed\+Tree 8 shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source\+Shader\+Name} & Original Speed\+Tree8 shader name.\\
+\hline
+{\em dest\+Shader\+Name} & New Speed\+Tree 8 shader name.\\
+\hline
+{\em finalizer} & A delegate that postprocesses the material for the render pipeline in use.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_speed_tree8_material_upgrader_a7e06399d4df207658e91add73e7d3a35}\index{UnityEditor.Rendering.SpeedTree8MaterialUpgrader@{UnityEditor.Rendering.SpeedTree8MaterialUpgrader}!DoesMaterialHaveSpeedTreeWindKeyword@{DoesMaterialHaveSpeedTreeWindKeyword}}
+\index{DoesMaterialHaveSpeedTreeWindKeyword@{DoesMaterialHaveSpeedTreeWindKeyword}!UnityEditor.Rendering.SpeedTree8MaterialUpgrader@{UnityEditor.Rendering.SpeedTree8MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{DoesMaterialHaveSpeedTreeWindKeyword()}{DoesMaterialHaveSpeedTreeWindKeyword()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_speed_tree8_material_upgrader_a7e06399d4df207658e91add73e7d3a35} 
+static bool Unity\+Editor.\+Rendering.\+Speed\+Tree8\+Material\+Upgrader.\+Does\+Material\+Have\+Speed\+Tree\+Wind\+Keyword (\begin{DoxyParamCaption}\item[{Material}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns true if the material contains a Speed\+Tree Wind keyword. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & Material to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the material has a Speed\+Tree wind keyword that enables Vertex Shader wind animation 
+\end{DoxyReturn}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_speed_tree8_material_upgrader_ac782e0ba3d11e0f83a25ac78dacd5b04}\index{UnityEditor.Rendering.SpeedTree8MaterialUpgrader@{UnityEditor.Rendering.SpeedTree8MaterialUpgrader}!IsWindEnabled@{IsWindEnabled}}
+\index{IsWindEnabled@{IsWindEnabled}!UnityEditor.Rendering.SpeedTree8MaterialUpgrader@{UnityEditor.Rendering.SpeedTree8MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{IsWindEnabled()}{IsWindEnabled()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_speed_tree8_material_upgrader_ac782e0ba3d11e0f83a25ac78dacd5b04} 
+static bool Unity\+Editor.\+Rendering.\+Speed\+Tree8\+Material\+Upgrader.\+Is\+Wind\+Enabled (\begin{DoxyParamCaption}\item[{Material}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Checks the material for Speed\+Tree keywords to determine if the wind is enabled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & Material to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the material has a Speed\+Tree wind keyword that enables Vertex Shader wind animation and Wind\+Quality other than None (0) 
+\end{DoxyReturn}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_speed_tree8_material_upgrader_a4d8b2f241830ad8734d67c09f7259467}\index{UnityEditor.Rendering.SpeedTree8MaterialUpgrader@{UnityEditor.Rendering.SpeedTree8MaterialUpgrader}!PostprocessSpeedTree8Materials@{PostprocessSpeedTree8Materials}}
+\index{PostprocessSpeedTree8Materials@{PostprocessSpeedTree8Materials}!UnityEditor.Rendering.SpeedTree8MaterialUpgrader@{UnityEditor.Rendering.SpeedTree8MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{PostprocessSpeedTree8Materials()}{PostprocessSpeedTree8Materials()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_speed_tree8_material_upgrader_a4d8b2f241830ad8734d67c09f7259467} 
+static void Unity\+Editor.\+Rendering.\+Speed\+Tree8\+Material\+Upgrader.\+Postprocess\+Speed\+Tree8\+Materials (\begin{DoxyParamCaption}\item[{Game\+Object}]{speedtree}{, }\item[{Speed\+Tree\+Importer}]{st\+Importer}{, }\item[{\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_upgrader_a98234da890880f41e988d8c44b3f71b8}{Material\+Finalizer}}}]{finalizer}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Postprocesses materials while you are importing a Speed\+Tree 8 asset. Call from On\+Postprocess\+Speed\+Tree in a Material\+Postprocessor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speedtree} & The Game\+Object \doxylink{namespace_unity}{Unity} creates from this imported Speed\+Tree.\\
+\hline
+{\em st\+Importer} & The asset importer used to import this Speed\+Tree asset.\\
+\hline
+{\em finalizer} & Render pipeline-\/specific material finalizer.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_speed_tree8_material_upgrader_af8839962134934ac89b53a2924ce9929}\index{UnityEditor.Rendering.SpeedTree8MaterialUpgrader@{UnityEditor.Rendering.SpeedTree8MaterialUpgrader}!SpeedTree8MaterialFinalizer@{SpeedTree8MaterialFinalizer}}
+\index{SpeedTree8MaterialFinalizer@{SpeedTree8MaterialFinalizer}!UnityEditor.Rendering.SpeedTree8MaterialUpgrader@{UnityEditor.Rendering.SpeedTree8MaterialUpgrader}}
+\doxysubsubsection{\texorpdfstring{SpeedTree8MaterialFinalizer()}{SpeedTree8MaterialFinalizer()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_speed_tree8_material_upgrader_af8839962134934ac89b53a2924ce9929} 
+static void Unity\+Editor.\+Rendering.\+Speed\+Tree8\+Material\+Upgrader.\+Speed\+Tree8\+Material\+Finalizer (\begin{DoxyParamCaption}\item[{Material}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Preserves wind quality and billboard settings while you are upgrading a Speed\+Tree 8 material from previous versions of Speed\+Tree 8. Wind priority order is \+\_\+\+Wind\+Quality float value \texorpdfstring{$>$}{>} enabled keyword. Should work for upgrading versions within a pipeline and from standard to current pipeline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & Speed\+Tree 8 material to upgrade.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Editor/Speed\+Tree8\+Material\+Upgrader.\+cs\end{DoxyCompactItemize}

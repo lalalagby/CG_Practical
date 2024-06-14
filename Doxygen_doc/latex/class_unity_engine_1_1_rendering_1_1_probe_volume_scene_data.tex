@@ -1,0 +1,85 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Probe\+Volume\+Scene\+Data Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_probe_volume_scene_data}{}\label{class_unity_engine_1_1_rendering_1_1_probe_volume_scene_data}\index{UnityEngine.Rendering.ProbeVolumeSceneData@{UnityEngine.Rendering.ProbeVolumeSceneData}}
+
+
+A class containing info about the bounds defined by the probe volumes in various scenes.  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Probe\+Volume\+Scene\+Data\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_rendering_1_1_probe_volume_scene_data}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Baking\+Set}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_probe_volume_scene_data_a2fb56b635b8e9a99e094daa3262e65cc}{Probe\+Volume\+Scene\+Data}} (Object parent\+Asset, string parent\+Scene\+Data\+Property\+Name)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_unity_engine_1_1_rendering_1_1_probe_volume_scene_data}{Probe\+Volume\+Scene\+Data}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_probe_volume_scene_data_ae6a358ecbfb3029fa46ad756afc04ecd}{Set\+Parent\+Object}} (Object parent, string parent\+Scene\+Data\+Property\+Name)
+\begin{DoxyCompactList}\small\item\em Set a reference to the object holding this \doxylink{class_unity_engine_1_1_rendering_1_1_probe_volume_scene_data}{Probe\+Volume\+Scene\+Data}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_volume_scene_data_af764248727f4367d8cc5a7a1e537905e}\label{class_unity_engine_1_1_rendering_1_1_probe_volume_scene_data_af764248727f4367d8cc5a7a1e537905e} 
+void {\bfseries On\+After\+Deserialize} ()
+\begin{DoxyCompactList}\small\item\em On\+After\+Deserialize implementation. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_volume_scene_data_a274b9e218740e4c66b2ac0b101f43529}\label{class_unity_engine_1_1_rendering_1_1_probe_volume_scene_data_a274b9e218740e4c66b2ac0b101f43529} 
+void {\bfseries On\+Before\+Serialize} ()
+\begin{DoxyCompactList}\small\item\em On\+Before\+Serialize implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_volume_scene_data_a64c81405a2be775fcfb630945745cb88}\label{class_unity_engine_1_1_rendering_1_1_probe_volume_scene_data_a64c81405a2be775fcfb630945745cb88} 
+Dictionary$<$ string, Bounds $>$ {\bfseries scene\+Bounds}
+\begin{DoxyCompactList}\small\item\em A dictionary containing the Bounds defined by probe volumes for each scene (scene path is the key of the dictionary). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class containing info about the bounds defined by the probe volumes in various scenes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_volume_scene_data_a2fb56b635b8e9a99e094daa3262e65cc}\index{UnityEngine.Rendering.ProbeVolumeSceneData@{UnityEngine.Rendering.ProbeVolumeSceneData}!ProbeVolumeSceneData@{ProbeVolumeSceneData}}
+\index{ProbeVolumeSceneData@{ProbeVolumeSceneData}!UnityEngine.Rendering.ProbeVolumeSceneData@{UnityEngine.Rendering.ProbeVolumeSceneData}}
+\doxysubsubsection{\texorpdfstring{ProbeVolumeSceneData()}{ProbeVolumeSceneData()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_probe_volume_scene_data_a2fb56b635b8e9a99e094daa3262e65cc} 
+Unity\+Engine.\+Rendering.\+Probe\+Volume\+Scene\+Data.\+Probe\+Volume\+Scene\+Data (\begin{DoxyParamCaption}\item[{Object}]{parent\+Asset}{, }\item[{string}]{parent\+Scene\+Data\+Property\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for \doxylink{class_unity_engine_1_1_rendering_1_1_probe_volume_scene_data}{Probe\+Volume\+Scene\+Data}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent\+Asset} & The asset holding this \doxylink{class_unity_engine_1_1_rendering_1_1_probe_volume_scene_data}{Probe\+Volume\+Scene\+Data}, it will be dirtied every time scene bounds or settings are changed.\\
+\hline
+{\em parent\+Scene\+Data\+Property\+Name} & The name of the property holding the \doxylink{class_unity_engine_1_1_rendering_1_1_probe_volume_scene_data}{Probe\+Volume\+Scene\+Data} in the parent\+Asset.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_volume_scene_data_ae6a358ecbfb3029fa46ad756afc04ecd}\index{UnityEngine.Rendering.ProbeVolumeSceneData@{UnityEngine.Rendering.ProbeVolumeSceneData}!SetParentObject@{SetParentObject}}
+\index{SetParentObject@{SetParentObject}!UnityEngine.Rendering.ProbeVolumeSceneData@{UnityEngine.Rendering.ProbeVolumeSceneData}}
+\doxysubsubsection{\texorpdfstring{SetParentObject()}{SetParentObject()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_probe_volume_scene_data_ae6a358ecbfb3029fa46ad756afc04ecd} 
+void Unity\+Engine.\+Rendering.\+Probe\+Volume\+Scene\+Data.\+Set\+Parent\+Object (\begin{DoxyParamCaption}\item[{Object}]{parent}{, }\item[{string}]{parent\+Scene\+Data\+Property\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set a reference to the object holding this \doxylink{class_unity_engine_1_1_rendering_1_1_probe_volume_scene_data}{Probe\+Volume\+Scene\+Data}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The object holding this \doxylink{class_unity_engine_1_1_rendering_1_1_probe_volume_scene_data}{Probe\+Volume\+Scene\+Data}, it will be dirtied every time scene bounds or settings are changed. \\
+\hline
+{\em parent\+Scene\+Data\+Property\+Name} & The name of the property holding the \doxylink{class_unity_engine_1_1_rendering_1_1_probe_volume_scene_data}{Probe\+Volume\+Scene\+Data} in the parent\+Asset.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Lighting/\+Probe\+Volume/Probe\+Volume\+Scene\+Data.\+cs\end{DoxyCompactItemize}

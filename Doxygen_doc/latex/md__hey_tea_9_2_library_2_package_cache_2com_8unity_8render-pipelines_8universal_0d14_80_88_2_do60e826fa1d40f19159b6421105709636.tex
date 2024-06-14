@@ -1,0 +1,64 @@
+\chapter{Rendering in the Universal Render Pipeline}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do60e826fa1d40f19159b6421105709636}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do60e826fa1d40f19159b6421105709636}\index{Rendering in the Universal Render Pipeline@{Rendering in the Universal Render Pipeline}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do60e826fa1d40f19159b6421105709636_autotoc_md2423}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do60e826fa1d40f19159b6421105709636_autotoc_md2423}%
+ The Universal Render Pipeline (URP) renders Scenes using the following components\+:
+
+
+\begin{DoxyItemize}
+\item URP Renderer. URP contains the following Renderers\+:
+\begin{DoxyItemize}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doad43f38d8bd83e3ded10003a74c51826}{Universal Renderer}{0}.
+\item \href{Setup.md\#2d-renderer-setup}{\texttt{ 2D Renderer}}.
+\end{DoxyItemize}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2shading-model}{Shading models}{0} for shaders shipped with URP
+\item Camera
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do6a4fd81cefe986341b093c28ca9c1f30}{URP Asset}{0}
+\end{DoxyItemize}
+
+The following illustration shows the frame rendering loop of the URP Universal Renderer.
+
+
+
+When the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do725301a77635678c75535ca740a1ac66}{render pipeline is active in Graphics Settings}{0}, \doxylink{namespace_unity}{Unity} uses URP to render all Cameras in your Project, including game and Scene view cameras, Reflection Probes, and the preview windows in your Inspectors.
+
+The URP renderer executes a Camera loop for each Camera, which performs the following steps\+:
+
+
+\begin{DoxyEnumerate}
+\item Culls rendered objects in your Scene
+\item Builds data for the renderer
+\item Executes a renderer that outputs an image to the framebuffer.
+\end{DoxyEnumerate}
+
+For more information about each step, see Camera loop.
+
+In the \href{https://docs.unity3d.com/ScriptReference/Rendering.RenderPipelineManager.html}{\texttt{ Render\+Pipeline\+Manager}} class, URP provides events that you can use to execute code before and after rendering a frame, and before and after rendering each Camera loop. The events are\+:
+
+
+\begin{DoxyItemize}
+\item \href{https://docs.unity3d.com/ScriptReference/Rendering.RenderPipelineManager-beginCameraRendering.html}{\texttt{ begin\+Camera\+Rendering}}
+\item \href{https://docs.unity3d.com/ScriptReference/Rendering.RenderPipelineManager-beginFrameRendering.html}{\texttt{ begin\+Frame\+Rendering}}
+\item \href{https://docs.unity3d.com/ScriptReference/Rendering.RenderPipelineManager-endCameraRendering.html}{\texttt{ end\+Camera\+Rendering}}
+\item \href{https://docs.unity3d.com/ScriptReference/Rendering.RenderPipelineManager-endFrameRendering.html}{\texttt{ end\+Frame\+Rendering}}
+\end{DoxyItemize}
+
+For the example of how to use the begin\+Camera\+Rendering event, see the page \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5bd064643a7d4c95e1a7c7490852589b}{Using the begin\+Camera\+Rendering event}{0}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do60e826fa1d40f19159b6421105709636_autotoc_md2424}{}\doxysection{\texorpdfstring{Camera loop}{Camera loop}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do60e826fa1d40f19159b6421105709636_autotoc_md2424}
+The Camera loop performs the following steps\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Step   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Step   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\bfseries{Setup Culling Parameters}}   &Configures parameters that determine how the culling system culls Lights and shadows. You can override this part of the render pipeline with a custom renderer.    \\\cline{1-2}
+{\bfseries{Culling}}   &Uses the culling parameters from the previous step to compute a list of visible renderers, shadow casters, and Lights that are visible to the Camera. Culling parameters and Camera \href{https://docs.unity3d.com/ScriptReference/Camera-layerCullDistances.html}{\texttt{ layer distances}} affect culling and rendering performance.    \\\cline{1-2}
+{\bfseries{Build Rendering Data}}   &Catches information based on the culling output, quality settings from the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do6a4fd81cefe986341b093c28ca9c1f30}{URP Asset}{0}, \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2cameras}{Camera}{0}, and the current running platform to build the {\ttfamily Rendering\+Data}. The rendering data tells the renderer the amount of rendering work and quality required for the Camera and the currently chosen platform.    \\\cline{1-2}
+{\bfseries{Setup Renderer}}   &Builds a list of render passes, and queues them for execution according to the rendering data. You can override this part of the render pipeline with a custom renderer.    \\\cline{1-2}
+{\bfseries{Execute Renderer}}   &Executes each render pass in the queue. The renderer outputs the Camera image to the framebuffer.   \\\cline{1-2}
+\end{longtabu}

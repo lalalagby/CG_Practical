@@ -1,0 +1,137 @@
+\chapter{Freeform}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_light_types}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_light_types}\index{Freeform@{Freeform}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_light_types_autotoc_md2224}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_light_types_autotoc_md2224}%
+ 
+
+Select the {\bfseries{Freeform}} Light type to create a Light from an editable polygon with a spline editor. To begin editing your shape, select the Light and find the button in its Inspector window. Select it to enable the shape editing mode.
+
+Add new control points by clicking the mouse along the inner polygon’s outline. Remove control points selecting the point and pressing the Delete key.
+
+The following additional properties are available to the {\bfseries{Freeform}} Light type.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Function    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Function    }\\\cline{1-2}
+\endhead
+{\bfseries{Falloff}}   &Adjust the amount the blending from solid to transparent, starting from the center of the shape to its edges.    \\\cline{1-2}
+{\bfseries{Falloff Intensity}}   &Adjusts the falloff curve of the Light.    \\\cline{1-2}
+{\bfseries{Falloff Offset}}   &Sets the offset for the outer falloff shape.   \\\cline{1-2}
+\end{longtabu}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{    }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{     }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{    }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{     }\\\cline{1-2}
+\endhead
+Freeform Light in edit mode   &Resulting Light Effect   \\\cline{1-2}
+\end{longtabu}
+
+
+When creating a {\bfseries{Freeform}} Light, take care to avoid self-\/intersection as this may cause unintended lighting results. Self-\/intersection may occur by creating outlines where edges cross one another, or by enlarging falloff until it overlaps itself. To prevent such issues, it is recommended to edit the shape of the Light until the conditions creating the self-\/intersection no longer occur.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{    }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{     }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{    }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{     }\\\cline{1-2}
+\endhead
+Outline self-\/intersection in Edit mode.   &Light effect with a black triangular artifact   \\\cline{1-2}
+\end{longtabu}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{    }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{     }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{    }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{     }\\\cline{1-2}
+\endhead
+Falloff overlap in Edit mode   &Light effect with double lighted areas with overlapping falloff   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_light_types_autotoc_md2225}{}\doxysection{\texorpdfstring{Parametric}{Parametric}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_light_types_autotoc_md2225}
+The {\bfseries{Parametric}} light type has been deprecated. To convert existing Parametric lights to {\bfseries{Freeform}} lights, Edit \texorpdfstring{$>$}{>} Rendering \texorpdfstring{$>$}{>} Lights \texorpdfstring{$>$}{>} Upgrade Project/\+Scene URP Parametric Lights to Freeform\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_light_types_autotoc_md2226}{}\doxysection{\texorpdfstring{Sprite}{Sprite}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_light_types_autotoc_md2226}
+Select the {\bfseries{Sprite}} Light type to create a Light based on a selected Sprite by assigning the selected Sprite to the additional Sprite property.
+
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Function    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Function    }\\\cline{1-2}
+\endhead
+{\bfseries{Sprite}}   &Select a Sprite as the Light source.   \\\cline{1-2}
+\end{longtabu}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{    }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{     }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{    }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{     }\\\cline{1-2}
+\endhead
+Selected Sprite   &Resulting Light effect   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_light_types_autotoc_md2227}{}\doxysection{\texorpdfstring{Spot}{Spot}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_light_types_autotoc_md2227}
+Select the {\bfseries{Spot}} Light type for great control over the angle and direction of the selected Light with the following additional properties.
+
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Function    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Function    }\\\cline{1-2}
+\endhead
+{\bfseries{Radius Inner}}   &Set the inner radius here or with the gizmo. Light within the inner radius will be at maximum \href{2DLightProperties.md\#intensity}{\texttt{ intensity}}.    \\\cline{1-2}
+{\bfseries{Radius Outer}}   &Set the outer radius here or with the gizmo. Light intensity decreases to zero as it approaches the outer radius.    \\\cline{1-2}
+{\bfseries{Inner / Outer Spot Angle}}   &Set the angles with this slider or with the gizmo. Light within the inner and outer angles will be at the intensity specified by inner and outer radius.   \\\cline{1-2}
+\end{longtabu}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{    }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{     }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{    }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{     }\\\cline{1-2}
+\endhead
+Point Light in Edit mode   &Resulting Light effect   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_light_types_autotoc_md2228}{}\doxysection{\texorpdfstring{Global}{Global}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_light_types_autotoc_md2228}
+Global Lights light all objects on the \href{2DLightProperties.md\#target-sorting-layers}{\texttt{ targeted sorting layers}}. Only one global Light can be used per \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do720528df5c911c3870e907bfec2799ed}{Blend Style}{0}, and per sorting layer. 

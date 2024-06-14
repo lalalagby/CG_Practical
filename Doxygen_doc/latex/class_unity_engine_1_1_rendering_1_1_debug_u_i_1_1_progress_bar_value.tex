@@ -1,0 +1,122 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Progress\+Bar\+Value Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_progress_bar_value}{}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_progress_bar_value}\index{UnityEngine.Rendering.DebugUI.ProgressBarValue@{UnityEngine.Rendering.DebugUI.ProgressBarValue}}
+
+
+Progress bar value.  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Debug\+UI.\+Progress\+Bar\+Value\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_progress_bar_value}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override string \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_progress_bar_value_afe8615bc98de9309802ad4d1765489ec}{Format\+String}} (object value)
+\begin{DoxyCompactList}\small\item\em Get the current progress string, remapped to \mbox{[}0, 1\mbox{]} range, representing the progress between min and max. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_value}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Value}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Value} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual object \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_value_aff1ab6068fb427b748337b05f584fbf0}{Get\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Returns the value of the widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Widget}}}
+\begin{DoxyCompactItemize}
+\item 
+override int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_a38fb7031b499496ecec8143573276a77}{Get\+Hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Returns the hash code of the widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_progress_bar_value_a7b2d593efb1d494235869ba792f79e45}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_progress_bar_value_a7b2d593efb1d494235869ba792f79e45} 
+float {\bfseries min} = 0f
+\begin{DoxyCompactList}\small\item\em Minimum value. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_progress_bar_value_a5a3b0c6365973ab4b64b2606047787a1}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_progress_bar_value_a5a3b0c6365973ab4b64b2606047787a1} 
+float {\bfseries max} = 1f
+\begin{DoxyCompactList}\small\item\em Maximum value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_value}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Value}}}
+\begin{DoxyCompactItemize}
+\item 
+float {\bfseries refresh\+Rate} = 0.\+1f
+\begin{DoxyCompactList}\small\item\em Refresh rate for the read-\/only value (runtime only) \end{DoxyCompactList}\item 
+string {\bfseries format\+String} = null
+\begin{DoxyCompactList}\small\item\em Optional C\# numeric format string, using following syntax\+: "{}\{0\mbox{[}\+:numeric\+Format\+String\mbox{]}\}"{} See \href{https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings}{\texttt{ https\+://docs.\+microsoft.\+com/en-\/us/dotnet/standard/base-\/types/standard-\/numeric-\/format-\/strings}} and \href{https://docs.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting}{\texttt{ https\+://docs.\+microsoft.\+com/en-\/us/dotnet/standard/base-\/types/composite-\/formatting}} Example\+: 123.\+45678 with format\+String "{}\{0\+:\+F2\} ms"{} -\/-\/\texorpdfstring{$>$}{>} "{}123.\+45 ms"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Widget}}}
+\begin{DoxyCompactItemize}
+\item 
+Func$<$ bool $>$ {\bfseries is\+Hidden\+Callback}
+\begin{DoxyCompactList}\small\item\em Optional delegate that can be used to conditionally hide widgets at runtime (e.\+g. due to state of other widgets). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Widget}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_panel}{Panel}} {\bfseries m\+\_\+\+Panel}
+\begin{DoxyCompactList}\small\item\em Panels containing the widget. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_i_container}{IContainer}} {\bfseries m\+\_\+\+Parent}
+\begin{DoxyCompactList}\small\item\em Parent container. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_value}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Value}}}
+\begin{DoxyCompactItemize}
+\item 
+Func$<$ object $>$ {\bfseries getter}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Getter for the \doxylink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_value}{Value}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Widget}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_panel}{Panel}} {\bfseries panel}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Panels containing the widget. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_i_container}{IContainer}} {\bfseries parent}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Parent container. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_a53965df570fd5fa92e5ac8820bd20063}{Flags}} {\bfseries flags}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Flags for the widget. \end{DoxyCompactList}\item 
+string {\bfseries display\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Display name. \end{DoxyCompactList}\item 
+string {\bfseries tooltip}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Tooltip. \end{DoxyCompactList}\item 
+string {\bfseries query\+Path}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Path of the widget. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Editor\+Only}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the widget is Editor only. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Runtime\+Only}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the widget is Runtime only. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Inactive\+In\+Editor}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the widget is inactive in the editor (i.\+e. widget is runtime only and the application is not \textquotesingle{}Playing\textquotesingle{}). \end{DoxyCompactList}\item 
+bool {\bfseries is\+Hidden}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If \doxylink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_adf0c8caaccfd67c981baf81aa469dd5b}{should\+Hide\+Delegate} has been set and returns true, the widget is hidden from the \doxylink{namespace_unity_engine_1_1_rendering_1_1_u_i}{UI}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_1_1_name_and_tooltip}{Name\+And\+Tooltip}} {\bfseries name\+And\+Tooltip}\hspace{0.3cm}{\ttfamily  \mbox{[}set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Helper setter to allow more compact initialization of widgets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Progress bar value. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_progress_bar_value_afe8615bc98de9309802ad4d1765489ec}\index{UnityEngine.Rendering.DebugUI.ProgressBarValue@{UnityEngine.Rendering.DebugUI.ProgressBarValue}!FormatString@{FormatString}}
+\index{FormatString@{FormatString}!UnityEngine.Rendering.DebugUI.ProgressBarValue@{UnityEngine.Rendering.DebugUI.ProgressBarValue}}
+\doxysubsubsection{\texorpdfstring{FormatString()}{FormatString()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_progress_bar_value_afe8615bc98de9309802ad4d1765489ec} 
+override string Unity\+Engine.\+Rendering.\+Debug\+UI.\+Progress\+Bar\+Value.\+Format\+String (\begin{DoxyParamCaption}\item[{object}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get the current progress string, remapped to \mbox{[}0, 1\mbox{]} range, representing the progress between min and max. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \doxylink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_value}{Value} to be formatted.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Formatted progress percentage string between 0\% and 100\%.
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_value_aa6d29378b7c14bd96681999c268ed986}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Value}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Debugging/Debug\+UI.\+cs\end{DoxyCompactItemize}

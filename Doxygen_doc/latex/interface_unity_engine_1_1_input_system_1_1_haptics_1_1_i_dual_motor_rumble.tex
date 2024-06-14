@@ -1,0 +1,63 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Haptics.\+IDual\+Motor\+Rumble Interface Reference}
+\hypertarget{interface_unity_engine_1_1_input_system_1_1_haptics_1_1_i_dual_motor_rumble}{}\label{interface_unity_engine_1_1_input_system_1_1_haptics_1_1_i_dual_motor_rumble}\index{UnityEngine.InputSystem.Haptics.IDualMotorRumble@{UnityEngine.InputSystem.Haptics.IDualMotorRumble}}
+
+
+A simple haptics interface that allows to control two motors individually.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Haptics.\+IDual\+Motor\+Rumble\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.642229cm]{interface_unity_engine_1_1_input_system_1_1_haptics_1_1_i_dual_motor_rumble}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_haptics_1_1_i_dual_motor_rumble_a76a1e0c4e686c2a9bc309d1c00a92df3}{Set\+Motor\+Speeds}} (float low\+Frequency, float high\+Frequency)
+\begin{DoxyCompactList}\small\item\em Set the motor speeds of the low-\/frequency (usually on the left) and high-\/frequency (usually on the right) motors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_haptics_1_1_i_haptics}{Unity\+Engine.\+Input\+System.\+Haptics.\+IHaptics}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_haptics_1_1_i_haptics_ad2e20388cf9f3ad08e4929ece68c167e}{Pause\+Haptics}} ()
+\begin{DoxyCompactList}\small\item\em Pause haptics playback on the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_haptics_1_1_i_haptics_a777a78e91c8120cd4c3e81d14a9d564f}{Resume\+Haptics}} ()
+\begin{DoxyCompactList}\small\item\em Resume haptics playback on the device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_haptics_1_1_i_haptics_aa17ed4b013ca6b7ed42061ada26b7692}{Reset\+Haptics}} ()
+\begin{DoxyCompactList}\small\item\em Reset haptics playback on the device to its default state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A simple haptics interface that allows to control two motors individually. 
+
+Dual-\/motor control is most common on gamepads (see \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad}{Gamepad}) such as Xbox and Play\+Station controllers. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_unity_engine_1_1_input_system_1_1_haptics_1_1_i_dual_motor_rumble_a76a1e0c4e686c2a9bc309d1c00a92df3}\index{UnityEngine.InputSystem.Haptics.IDualMotorRumble@{UnityEngine.InputSystem.Haptics.IDualMotorRumble}!SetMotorSpeeds@{SetMotorSpeeds}}
+\index{SetMotorSpeeds@{SetMotorSpeeds}!UnityEngine.InputSystem.Haptics.IDualMotorRumble@{UnityEngine.InputSystem.Haptics.IDualMotorRumble}}
+\doxysubsubsection{\texorpdfstring{SetMotorSpeeds()}{SetMotorSpeeds()}}
+{\footnotesize\ttfamily \label{interface_unity_engine_1_1_input_system_1_1_haptics_1_1_i_dual_motor_rumble_a76a1e0c4e686c2a9bc309d1c00a92df3} 
+void Unity\+Engine.\+Input\+System.\+Haptics.\+IDual\+Motor\+Rumble.\+Set\+Motor\+Speeds (\begin{DoxyParamCaption}\item[{float}]{low\+Frequency}{, }\item[{float}]{high\+Frequency}{}\end{DoxyParamCaption})}
+
+
+
+Set the motor speeds of the low-\/frequency (usually on the left) and high-\/frequency (usually on the right) motors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em low\+Frequency} & Speed of the low-\/frequency (left) motor. Normalized \mbox{[}0..1\mbox{]} value with 1 indicating maximum speed and 0 indicating the motor is turned off. Will automatically be clamped into range.\\
+\hline
+{\em high\+Frequency} & Speed of the high-\/frequency (right) motor. Normalized \mbox{[}0..1\mbox{]} value with 1 indicating maximum speed and 0 indicating the motor is turned off. Will automatically be clamped into range.\\
+\hline
+\end{DoxyParams}
+
+
+Note that hardware will put limits on the level of control you have over the motors. Rumbling the motors at maximum speed for an extended period of time may cause them to turn off for some time to prevent overheating. Also, how quickly the motors react and how often the speed can be updated will depend on the hardware and drivers. 
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad_a2bd59cb42494ff6cf0c9c6d24e1ab359}{Unity\+Engine.\+Input\+System.\+Gamepad}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Devices/\+Haptics/IDual\+Motor\+Rumble.\+cs\end{DoxyCompactItemize}

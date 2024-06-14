@@ -1,0 +1,82 @@
+\doxysection{Cinemachine.\+Cinemachine\+Impulse\+Listener.\+Impulse\+Reaction Struct Reference}
+\hypertarget{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction}{}\label{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction}\index{Cinemachine.CinemachineImpulseListener.ImpulseReaction@{Cinemachine.CinemachineImpulseListener.ImpulseReaction}}
+
+
+This controls the secondary reaction of the listener to the incoming impulse. ~\newline
+ The impulse might be for example a sharp shock, and the secondary reaction could be a vibration whose amplitude and duration is controlled by the size of the original impulse. This allows different listeners to respond in different ways to the same impulse signal.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction_aed0e213f864bda262cdc004b5b097c7e}\label{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction_aed0e213f864bda262cdc004b5b097c7e} 
+void {\bfseries Re\+Seed} ()
+\begin{DoxyCompactList}\small\item\em Generate a new random seed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction_ab5254ac1821931e975ee72458e313ef8}{Get\+Reaction}} (float delta\+Time, Vector3 impulse\+Pos, out Vector3 pos, out Quaternion rot)
+\begin{DoxyCompactList}\small\item\em Get the rection effect for a given impulse at a given time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction_aac65ba842d066002b9f2d59a53a74ca3}\label{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction_aac65ba842d066002b9f2d59a53a74ca3} 
+\mbox{\hyperlink{class_cinemachine_1_1_noise_settings}{Noise\+Settings}} {\bfseries m\+\_\+\+Secondary\+Noise}
+\begin{DoxyCompactList}\small\item\em Secondary shake that will be triggered by the primary impulse. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction_af54dc002909b543a5eb8ef71c63506bf}\label{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction_af54dc002909b543a5eb8ef71c63506bf} 
+float {\bfseries m\+\_\+\+Amplitude\+Gain}
+\begin{DoxyCompactList}\small\item\em Gain to apply to the amplitudes defined in the signal source asset. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction_aed55474b06a7c8e5a4f6598bbdd83a55}\label{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction_aed55474b06a7c8e5a4f6598bbdd83a55} 
+float {\bfseries m\+\_\+\+Frequency\+Gain}
+\begin{DoxyCompactList}\small\item\em Scale factor to apply to the time axis. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction_a623a4108ac7891f0f117bbae7df199f4}\label{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction_a623a4108ac7891f0f117bbae7df199f4} 
+float {\bfseries m\+\_\+\+Duration}
+\begin{DoxyCompactList}\small\item\em How long the secondary reaction lasts. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction_ae13338fdedd53ed7ade62f2b5b0442ba}\label{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction_ae13338fdedd53ed7ade62f2b5b0442ba} 
+float {\bfseries m\+\_\+\+Current\+Amount}
+\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction_a33cf2d905e8e7c3a01bcf7c34bdf66cd}\label{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction_a33cf2d905e8e7c3a01bcf7c34bdf66cd} 
+float {\bfseries m\+\_\+\+Current\+Time}
+\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction_a27f7355e8813d374bde321e56d733176}\label{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction_a27f7355e8813d374bde321e56d733176} 
+float {\bfseries m\+\_\+\+Current\+Damping}
+\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction_a06866182fbc1152f3a1c34ded5c54510}\label{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction_a06866182fbc1152f3a1c34ded5c54510} 
+bool {\bfseries m\+\_\+\+Initialized}
+\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction_ab1aaef4742f0645f8a9bc812d6728752}\label{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction_ab1aaef4742f0645f8a9bc812d6728752} 
+Vector3 {\bfseries m\+\_\+\+Noise\+Offsets}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This controls the secondary reaction of the listener to the incoming impulse. ~\newline
+ The impulse might be for example a sharp shock, and the secondary reaction could be a vibration whose amplitude and duration is controlled by the size of the original impulse. This allows different listeners to respond in different ways to the same impulse signal. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction_ab5254ac1821931e975ee72458e313ef8}\index{Cinemachine.CinemachineImpulseListener.ImpulseReaction@{Cinemachine.CinemachineImpulseListener.ImpulseReaction}!GetReaction@{GetReaction}}
+\index{GetReaction@{GetReaction}!Cinemachine.CinemachineImpulseListener.ImpulseReaction@{Cinemachine.CinemachineImpulseListener.ImpulseReaction}}
+\doxysubsubsection{\texorpdfstring{GetReaction()}{GetReaction()}}
+{\footnotesize\ttfamily \label{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction_ab5254ac1821931e975ee72458e313ef8} 
+bool Cinemachine.\+Cinemachine\+Impulse\+Listener.\+Impulse\+Reaction.\+Get\+Reaction (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{, }\item[{Vector3}]{impulse\+Pos}{, }\item[{out Vector3}]{pos}{, }\item[{out Quaternion}]{rot}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the rection effect for a given impulse at a given time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & Current time interval\\
+\hline
+{\em impulse\+Pos} & The input impulse signal at this time\\
+\hline
+{\em pos} & output reaction position delta\\
+\hline
+{\em rot} & output reaction rotation delta\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if thewre is a reaction effect, false otherwise
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Impulse/Cinemachine\+Impulse\+Listener.\+cs\end{DoxyCompactItemize}

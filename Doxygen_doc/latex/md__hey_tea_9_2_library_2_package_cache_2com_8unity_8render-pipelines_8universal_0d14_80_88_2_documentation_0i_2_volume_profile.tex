@@ -1,0 +1,24 @@
+\chapter{Volume\+Profile}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_volume_profile}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_volume_profile}\index{VolumeProfile@{VolumeProfile}}
+\#\+Volume Profile
+
+A Volume Profile is a \href{https://docs.unity3d.com/Manual/class-ScriptableObject.html}{\texttt{ Scriptable Object}} which contains properties that \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_volumes}{Volumes}{0} use to determine how to render the Scene environment for Cameras they affect. A Volume references a Volume Profile in its {\bfseries{Profile}} field and uses values from the Volume Profile it references.
+
+A Volume Profile organizes its properties into structures which control different environment settings. These structures all have default values that you can use, but you can use \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5d8e84fb42b2bb0720761c155081d9b4}{Volume Overrides}{0} to override these values and customize the environment settings.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_volume_profile_autotoc_md2670}{}\doxysubsection{\texorpdfstring{Create and custom a Volume Profile}{Create and custom a Volume Profile}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_volume_profile_autotoc_md2670}
+There are multiple ways to create a Volume Profile. \doxylink{namespace_unity}{Unity} creates, and links, a Volume Profile automatically when you create a {\bfseries{Scene Settings}} Game\+Object (menu\+: {\bfseries{Rendering \texorpdfstring{$>$}{>} Scene Settings}}). You can also create a Volume Profile manually. Navigate to menu\+: {\bfseries{Assets \texorpdfstring{$>$}{>} Create \texorpdfstring{$>$}{>} Volume Profile}}.
+
+Open the Volume Profile in the Inspector to edit its properties. To do this, you can either\+:
+
+\&\#8226; Select the Volume Profile in the Assets folder.
+
+
+
+\&\#8226; Select a Game\+Object with a Volume component that has a Volume Profile set in its {\bfseries{Profile}} field.
+
+
+
+When you view the Volume Profile in the Inspector, you can only see values from the Volume overrides that the Volume Profile includes; the Volume Profile hides all other values. You must add Volume override components in order to edit the default properties of the Volume Profile.
+
+To add a Volume override component, click on the {\bfseries{Add Override}} button, and select which Volume override you want to add to the Volume Profile.
+
+For example, click on the {\bfseries{Add Override}} button and select the {\bfseries{Motion Blur}} Volume override. This exposes properties relating to the Motion Blur effect in URP. 

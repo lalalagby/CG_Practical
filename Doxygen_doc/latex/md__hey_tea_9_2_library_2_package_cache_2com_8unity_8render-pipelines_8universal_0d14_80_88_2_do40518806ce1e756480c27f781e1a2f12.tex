@@ -1,0 +1,36 @@
+\chapter{Film Grain}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do40518806ce1e756480c27f781e1a2f12}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do40518806ce1e756480c27f781e1a2f12}\index{Film Grain@{Film Grain}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do40518806ce1e756480c27f781e1a2f12_autotoc_md2295}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do40518806ce1e756480c27f781e1a2f12_autotoc_md2295}%
+  ~\newline
+{\itshape Scene with Film Grain effect turned off.}
+
+ ~\newline
+{\itshape Scene with Film Grain effect turned on.}
+
+The Film Grain effect simulates the random optical texture of photographic film, usually caused by small particles being present on the physical film.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do40518806ce1e756480c27f781e1a2f12_autotoc_md2296}{}\doxysection{\texorpdfstring{Using Film Grain}{Using Film Grain}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do40518806ce1e756480c27f781e1a2f12_autotoc_md2296}
+{\bfseries{Film Grain}} uses the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_volumes}{Volume}{0} framework, so to enable and modify {\bfseries{Film Grain}} properties, you must add a {\bfseries{Film Grain}} override to a \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_volumes}{Volume}{0} in your Scene. To add {\bfseries{Film Grain}} to a Volume\+:
+
+
+\begin{DoxyEnumerate}
+\item In the Scene or Hierarchy view, select a Game\+Object that contains a Volume component to view it in the Inspector.
+\item In the Inspector, navigate to {\bfseries{Add Override \texorpdfstring{$>$}{>} Post-\/processing}} and click on {\bfseries{Film Grain}}. URP now applies {\bfseries{Film Grain}} to any Camera this Volume affects.
+\end{DoxyEnumerate}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do40518806ce1e756480c27f781e1a2f12_autotoc_md2297}{}\doxysection{\texorpdfstring{Properties}{Properties}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do40518806ce1e756480c27f781e1a2f12_autotoc_md2297}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Type}}   &Use the drop-\/down to select the type of grain to use. You can select from a list of presets that URP includes, or select {\bfseries{Custom}} to provide your own grain Texture.    \\\cline{1-2}
+{\bfseries{Texture}}   &Assign a Texture that this effect uses as a custom grain Texture.\+This property is only available when {\bfseries{Type}} is set to {\bfseries{Custom}}.    \\\cline{1-2}
+{\bfseries{Intensity}}   &Use the slider to set the strength of the Film Grain effect.    \\\cline{1-2}
+{\bfseries{Response}}   &Use the slider to set the noisiness response curve. The higher you set this value, the less noise there is in brighter areas. ~\newline
+{\itshape Response value 1 (left), and 0 (right).}   \\\cline{1-2}
+\end{longtabu}

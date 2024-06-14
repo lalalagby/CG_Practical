@@ -1,0 +1,20 @@
+\chapter{Body properties}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_virtual_camera_body}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_virtual_camera_body}\index{Body properties@{Body properties}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_virtual_camera_body_autotoc_md736}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_virtual_camera_body_autotoc_md736}%
+ Use the Body properties to specify the algorithm that moves the Virtual Camera in the Scene. To rotate the camera, set the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_virtual_camera_aim}{Aim properties}{0}.
+
+
+
+\doxylink{namespace_cinemachine}{Cinemachine} includes these algorithms for moving a Virtual Camera\+:
+
+
+\begin{DoxyItemize}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_body_do_nothing}{{\bfseries{Do Nothing}}}{0}\+: does not move the Virtual Camera.
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine3rd_person_follow}{{\bfseries{3rd Person follow}}}{0}\+: Pivots the camera horizontally and vertically around the player, to the {\bfseries{Follow}} target.
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_f9db1c5e155acee6f94cb182d284b185}{{\bfseries{Framing Transposer}}}{0}\+: moves in a fixed screen-\/space relationship to the {\bfseries{Follow}} target.
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_3d7f67ebf07ab57ce9d12e976cf16138}{{\bfseries{Hard Lock to Target}}}{0}\+: uses the same position at the {\bfseries{Follow}} target.
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_d1eecda77a41f7373053e4f2c0a56bf7}{{\bfseries{Orbital Transposer}}}{0}\+: moves in a variable relationship to the {\bfseries{Follow}} target, optionally accepting player input.
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_body_tracked_dolly}{{\bfseries{Tracked Dolly}}}{0}\+: moves along a predefined path.
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_body_transposer}{{\bfseries{Transposer}}}{0}\+: moves in a fixed relationship to the {\bfseries{Follow}} target. 
+\end{DoxyItemize}

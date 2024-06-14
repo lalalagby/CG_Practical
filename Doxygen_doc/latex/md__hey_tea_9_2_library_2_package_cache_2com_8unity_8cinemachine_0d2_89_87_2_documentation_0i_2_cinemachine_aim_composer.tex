@@ -1,0 +1,31 @@
+\chapter{Composer}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_aim_composer}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_aim_composer}\index{Composer@{Composer}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_aim_composer_autotoc_md489}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_aim_composer_autotoc_md489}%
+ This Virtual Camera {\bfseries{Aim}} algorithm rotates the camera to face the {\bfseries{Look At}} target. It also applies offsets, damping, and composition rules. Examples of targets for aiming\+: the upper spine or head bone of a character, vehicles, or dummy objects which are controlled or animated programmatically.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_aim_composer_autotoc_md490}{}\doxysection{\texorpdfstring{Properties\+:}{Properties\+:}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_aim_composer_autotoc_md490}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Center On Activate}}   &Forces the camera to the center of the screen when the camera becomes live.    \\\cline{1-2}
+{\bfseries{Tracked Object Offset}}   &Offset from the center of the Look At target, in target-\/local space. Fine-\/tune the tracking target position when the desired area is not the tracked object’s center. You can also use \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2handles}{Scene Handles}{0} to modify this property.    \\\cline{1-2}
+{\bfseries{Lookahead Time}}   &Adjust the offset based on the motion of the Look At target. The algorithm estimates the point that the target will be this many seconds into the future. This feature is sensitive to noisy animation. It can amplify the noise, resulting in undesirable camera jitter. If the camera jitters unacceptably when the target is in motion, turn down this property or animate the target more smoothly.    \\\cline{1-2}
+{\bfseries{Lookahead Smoothing}}   &Controls the smoothness of the lookahead algorithm. Larger values smooth out jittery predictions and increase prediction lag.    \\\cline{1-2}
+{\bfseries{Lookahead Ignore Y}}   &Toggle to ignore movement along the Y axis for lookahead calculations.    \\\cline{1-2}
+{\bfseries{Horizontal Damping}}   &How responsively the camera follows the target in the screen-\/horizontal direction. Use small numbers for more responsive, rapid rotation of the camera to keep the target in the dead zone. Use larger numbers for a more heavy, slowly-\/responding camera.    \\\cline{1-2}
+{\bfseries{Vertical Damping}}   &How responsively the camera follows the target in the screen-\/vertical direction. Use different vertical and horizontal settings to give a wide range of camera behaviors.    \\\cline{1-2}
+{\bfseries{Screen X}}   &Horizontal screen position for the center of the dead zone. The camera rotates so that the target appears here.    \\\cline{1-2}
+{\bfseries{Screen Y}}   &Vertical screen position for target. The camera rotates so that the target appears here.    \\\cline{1-2}
+{\bfseries{Dead Zone Width}}   &The width of the screen region within which the camera ignores any movement of the target. If the target is positioned anywhere within this region, the Virtual Camera doesn\textquotesingle{}t update its rotation. This is useful for ignoring minor target movement.    \\\cline{1-2}
+{\bfseries{Dead Zone Height}}   &The height of the screen region within which the camera ignores any movement of the target. If the target is positioned anywhere within this region, the Virtual Camera doesn\textquotesingle{}t update its rotation. This is useful for ignoring minor target movement.    \\\cline{1-2}
+{\bfseries{Soft Zone Width}}   &The width of the soft zone. If the target appears in this region of the screen, the camera will rotate to push it back out to the dead zone, in the time specified by the Horizontal Damping setting.    \\\cline{1-2}
+{\bfseries{Soft Zone Height}}   &The height of the soft zone. If the target appears in this region of the screen, the camera will rotate to push it back out to the dead zone, in the time specified by the Vertical Damping setting.    \\\cline{1-2}
+{\bfseries{Bias X}}   &Positions the soft zone horizontally, relative to the dead zone.    \\\cline{1-2}
+{\bfseries{Bias Y}}   &Positions the soft zone vertically, relative to the dead zone.   \\\cline{1-2}
+\end{longtabu}

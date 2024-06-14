@@ -1,0 +1,90 @@
+\doxysection{Unity\+Editor.\+Rendering.\+Material\+Header\+Scope\+List Class Reference}
+\hypertarget{class_unity_editor_1_1_rendering_1_1_material_header_scope_list}{}\label{class_unity_editor_1_1_rendering_1_1_material_header_scope_list}\index{UnityEditor.Rendering.MaterialHeaderScopeList@{UnityEditor.Rendering.MaterialHeaderScopeList}}
+
+
+Collection to store \doxylink{}{Material\+Header\+Scope\+Item}  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_header_scope_list_a65a1320ecae089953cb06af749f917a4}{Material\+Header\+Scope\+List}} (uint default\+Expanded\+State=uint.\+Max\+Value)
+\begin{DoxyCompactList}\small\item\em Constructor that initializes it with the default expanded state for the internal scopes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_header_scope_list_a076866ca70e259d67b455129a2fc857e}{Register\+Header\+Scope$<$ TEnum $>$}} (GUIContent title, TEnum expandable, Action$<$ Material $>$ action)
+\begin{DoxyCompactList}\small\item\em Registers a Material\+Header\+Scope\+Item into the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_header_scope_list_a5aa1fd7be5a3a25dab2d8f898a6f2321}{Draw\+Headers}} (Material\+Editor material\+Editor, Material material)
+\begin{DoxyCompactList}\small\item\em Draws all the Material\+Header\+Scope\+Item with its information stored. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Collection to store \doxylink{}{Material\+Header\+Scope\+Item} 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_header_scope_list_a65a1320ecae089953cb06af749f917a4}\index{UnityEditor.Rendering.MaterialHeaderScopeList@{UnityEditor.Rendering.MaterialHeaderScopeList}!MaterialHeaderScopeList@{MaterialHeaderScopeList}}
+\index{MaterialHeaderScopeList@{MaterialHeaderScopeList}!UnityEditor.Rendering.MaterialHeaderScopeList@{UnityEditor.Rendering.MaterialHeaderScopeList}}
+\doxysubsubsection{\texorpdfstring{MaterialHeaderScopeList()}{MaterialHeaderScopeList()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_header_scope_list_a65a1320ecae089953cb06af749f917a4} 
+Unity\+Editor.\+Rendering.\+Material\+Header\+Scope\+List.\+Material\+Header\+Scope\+List (\begin{DoxyParamCaption}\item[{uint}]{default\+Expanded\+State}{ = {\ttfamily uint\+:\+:MaxValue}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor that initializes it with the default expanded state for the internal scopes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em default\+Expanded\+State} & By default, everything is expanded\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_header_scope_list_a5aa1fd7be5a3a25dab2d8f898a6f2321}\index{UnityEditor.Rendering.MaterialHeaderScopeList@{UnityEditor.Rendering.MaterialHeaderScopeList}!DrawHeaders@{DrawHeaders}}
+\index{DrawHeaders@{DrawHeaders}!UnityEditor.Rendering.MaterialHeaderScopeList@{UnityEditor.Rendering.MaterialHeaderScopeList}}
+\doxysubsubsection{\texorpdfstring{DrawHeaders()}{DrawHeaders()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_header_scope_list_a5aa1fd7be5a3a25dab2d8f898a6f2321} 
+void Unity\+Editor.\+Rendering.\+Material\+Header\+Scope\+List.\+Draw\+Headers (\begin{DoxyParamCaption}\item[{Material\+Editor}]{material\+Editor}{, }\item[{Material}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Draws all the Material\+Header\+Scope\+Item with its information stored. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material\+Editor} & Material\+Editor\\
+\hline
+{\em material} & Material\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_material_header_scope_list_a076866ca70e259d67b455129a2fc857e}\index{UnityEditor.Rendering.MaterialHeaderScopeList@{UnityEditor.Rendering.MaterialHeaderScopeList}!RegisterHeaderScope$<$ TEnum $>$@{RegisterHeaderScope$<$ TEnum $>$}}
+\index{RegisterHeaderScope$<$ TEnum $>$@{RegisterHeaderScope$<$ TEnum $>$}!UnityEditor.Rendering.MaterialHeaderScopeList@{UnityEditor.Rendering.MaterialHeaderScopeList}}
+\doxysubsubsection{\texorpdfstring{RegisterHeaderScope$<$ TEnum $>$()}{RegisterHeaderScope< TEnum >()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_material_header_scope_list_a076866ca70e259d67b455129a2fc857e} 
+void Unity\+Editor.\+Rendering.\+Material\+Header\+Scope\+List.\+Register\+Header\+Scope$<$ TEnum $>$ (\begin{DoxyParamCaption}\item[{GUIContent}]{title}{, }\item[{TEnum}]{expandable}{, }\item[{Action$<$ Material $>$}]{action}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Registers a Material\+Header\+Scope\+Item into the list. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TEnum} & A valid struct and IConvertible\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em title} & GUIContent The title of the scope\\
+\hline
+{\em expandable} & The mask identifying the scope\\
+\hline
+{\em action} & The action that will be drawn if the scope is expanded\\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TEnum} : {\em struct}]\item[{\em TEnum} : {\em IConvertible}]\end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Editor/\+Material/Material\+Header\+Scope\+List.\+cs\end{DoxyCompactItemize}

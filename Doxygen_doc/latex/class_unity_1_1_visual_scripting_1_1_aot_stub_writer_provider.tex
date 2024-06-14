@@ -1,0 +1,89 @@
+\doxysection{Unity.\+Visual\+Scripting.\+Aot\+Stub\+Writer\+Provider Class Reference}
+\hypertarget{class_unity_1_1_visual_scripting_1_1_aot_stub_writer_provider}{}\label{class_unity_1_1_visual_scripting_1_1_aot_stub_writer_provider}\index{Unity.VisualScripting.AotStubWriterProvider@{Unity.VisualScripting.AotStubWriterProvider}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Aot\+Stub\+Writer\+Provider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.996435cm]{class_unity_1_1_visual_scripting_1_1_aot_stub_writer_provider}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_aot_stub_writer_provider_a867bb9fc1171a46fad91f649133ec1bf}\label{class_unity_1_1_visual_scripting_1_1_aot_stub_writer_provider_a867bb9fc1171a46fad91f649133ec1bf} 
+override bool {\bfseries Is\+Valid} (object decorated)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider}{Unity.\+Visual\+Scripting.\+Single\+Decorator\+Provider$<$ object, Aot\+Stub\+Writer, Aot\+Stub\+Writer\+Attribute $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries Has\+Decorator} (Type decorated\+Type)
+\item 
+bool {\bfseries Try\+Get\+Decorator\+Type} (Type decorated\+Type, out Type decorator\+Type)
+\item 
+Type {\bfseries Get\+Decorator\+Type} (Type decorated\+Type)
+\item 
+bool {\bfseries Is\+Valid} (TDecorated decorated)
+\item 
+TDecorator {\bfseries Get\+Decorator} (TDecorated decorated)
+\item 
+T {\bfseries Get\+Decorator$<$ T $>$} (TDecorated decorated)
+\item 
+void {\bfseries Free} (TDecorator decorator)
+\item 
+void {\bfseries Free} (IEnumerable$<$ TDecorator $>$ decorators)
+\item 
+void {\bfseries Free\+Invalid} ()
+\item 
+void {\bfseries Free\+All} ()
+\item 
+void {\bfseries Renew$<$ TSpecific\+Decorator $>$} (ref TSpecific\+Decorator decorator, TDecorated decorated, Func$<$ TDecorated, TSpecific\+Decorator $>$ constructor=null)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_aot_stub_writer_provider_abfe884b8d0f823dad91cdf69bc2b8e68}\label{class_unity_1_1_visual_scripting_1_1_aot_stub_writer_provider_abfe884b8d0f823dad91cdf69bc2b8e68} 
+static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_aot_stub_writer_provider}{Aot\+Stub\+Writer\+Provider}} {\bfseries instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_aot_stub_writer_provider_ada3f936a7ea6f7e7fe5a057dd8b554b8}\label{class_unity_1_1_visual_scripting_1_1_aot_stub_writer_provider_ada3f936a7ea6f7e7fe5a057dd8b554b8} 
+override bool {\bfseries cache}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider}{Unity.\+Visual\+Scripting.\+Single\+Decorator\+Provider$<$ object, Aot\+Stub\+Writer, Aot\+Stub\+Writer\+Attribute $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual IEnumerable$<$ Type $>$ {\bfseries typeset}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries cache}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+virtual Time\+Span {\bfseries free\+Interval}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider}{Unity.\+Visual\+Scripting.\+Single\+Decorator\+Provider$<$ object, Aot\+Stub\+Writer, Aot\+Stub\+Writer\+Attribute $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual TDecorator {\bfseries Create\+Decorator} (Type decorator\+Type, TDecorated decorated)
+\item 
+virtual Type {\bfseries Get\+Decorated\+Type} (TDecorated decorated)
+\item 
+virtual Type {\bfseries Resolve\+Decorator\+Type} (Type decorated\+Type)
+\item 
+Type {\bfseries Resolve\+Decorator\+Type\+By\+Hierarchy} (Type decorated\+Type, bool inherit=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider}{Unity.\+Visual\+Scripting.\+Single\+Decorator\+Provider$<$ object, Aot\+Stub\+Writer, Aot\+Stub\+Writer\+Attribute $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+readonly object {\bfseries types\+Lock}
+\item 
+readonly object {\bfseries instances\+Lock}
+\item 
+readonly Dictionary$<$ Type, Type $>$ {\bfseries defined\+Decorator\+Types}
+\item 
+readonly Dictionary$<$ Type, Type $>$ {\bfseries resolved\+Decorator\+Types}
+\item 
+readonly Dictionary$<$ TDecorated, TDecorator $>$ {\bfseries decorators}
+\item 
+readonly Dictionary$<$ TDecorator, TDecorated $>$ {\bfseries decorateds}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+8.\+0/\+Editor/\+Visual\+Scripting.\+Core/\+Platforms/Aot\+Stub\+Writer\+Provider.\+cs\end{DoxyCompactItemize}

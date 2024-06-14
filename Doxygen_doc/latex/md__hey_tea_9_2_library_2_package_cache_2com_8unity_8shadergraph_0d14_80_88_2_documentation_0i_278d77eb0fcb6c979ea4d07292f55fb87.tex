@@ -1,0 +1,33 @@
+\chapter{Iris Out of Bound Color Clamp Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_278d77eb0fcb6c979ea4d07292f55fb87}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_278d77eb0fcb6c979ea4d07292f55fb87}\index{Iris Out of Bound Color Clamp Node@{Iris Out of Bound Color Clamp Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_278d77eb0fcb6c979ea4d07292f55fb87_autotoc_md3386}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_278d77eb0fcb6c979ea4d07292f55fb87_autotoc_md3386}%
+ Clamps the color of the Iris to a given color. This is useful in case the refraction ray reaches the inside of the cornea.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_278d77eb0fcb6c979ea4d07292f55fb87_autotoc_md3387}{}\doxysection{\texorpdfstring{Render pipeline compatibility}{Render pipeline compatibility}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_278d77eb0fcb6c979ea4d07292f55fb87_autotoc_md3387}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Node}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Universal Render Pipeline (URP)}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{High Definition Render Pipeline (HDRP)}}    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Node}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Universal Render Pipeline (URP)}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{High Definition Render Pipeline (HDRP)}}    }\\\cline{1-3}
+\endhead
+{\bfseries{Iris Out of Bound Color Clamp Node}}   &No   &Yes   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_278d77eb0fcb6c979ea4d07292f55fb87_autotoc_md3388}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_278d77eb0fcb6c979ea4d07292f55fb87_autotoc_md3388}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Direction}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Direction}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ description    }\\\cline{1-4}
+\endhead
+{\bfseries{Iris\+UV}}   &Input   &Vector2   &Normalized UV coordinates to sample either a texture or procedurally generate an Iris Texture.    \\\cline{1-4}
+{\bfseries{Iris Color}}   &Input   &Color   &Previously sampled or generated color of the Iris.    \\\cline{1-4}
+{\bfseries{Clamp Color}}   &Input   &Color   &The color to clamp the Iris to.    \\\cline{1-4}
+{\bfseries{Iris Color}}   &Output   &Color   &Result Iris color for the rest of the pipeline.   \\\cline{1-4}
+\end{longtabu}

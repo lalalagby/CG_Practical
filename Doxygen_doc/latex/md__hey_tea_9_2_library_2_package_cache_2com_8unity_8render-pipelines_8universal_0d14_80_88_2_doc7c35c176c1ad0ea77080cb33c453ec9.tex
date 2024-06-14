@@ -1,0 +1,283 @@
+\chapter{Camera component reference}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9}\index{Camera component reference@{Camera component reference}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9_autotoc_md2073}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9_autotoc_md2073}%
+ In the Universal Render Pipeline (URP), \doxylink{namespace_unity}{Unity} exposes different properties of the Camera component in the Inspector depending on the Camera type. To change the type of the Camera, change the property {\bfseries{Render Type}}.
+
+
+\begin{DoxyItemize}
+\item Base Render Type
+\begin{DoxyItemize}
+\item \doxylink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9_Projection}{Projection}
+\item Physical Camera
+\item \doxylink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9_Rendering}{Rendering}
+\item Stack
+\item Environment
+\item Output
+\end{DoxyItemize}
+\item Overlay Render Type
+\begin{DoxyItemize}
+\item \doxylink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9_Projection}{Projection}
+\item Physical Camera
+\item \doxylink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9_Rendering}{Rendering}
+\item Environment
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9_Projection}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9_Projection}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9_autotoc_md2074}{}\doxysection{\texorpdfstring{Projection}{Projection}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9_autotoc_md2074}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\multicolumn{2}{|c|}{\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }}&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\multicolumn{2}{|c|}{\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }}&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-3}
+\endhead
+\multicolumn{2}{|l|}{{\bfseries{Projection}}   }&Toggle the camera\textquotesingle{}s capability to simulate perspective.    \\\cline{1-3}
+&{\itshape Perspective}   &Camera will render objects with perspective intact.    \\\cline{1-3}
+&{\itshape Orthographic}   &Camera will render objects uniformly, with no sense of perspective.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Field of View Axis}}   }&Set the axis \doxylink{namespace_unity}{Unity} measures the Camera\textquotesingle{}s field of view along.~\newline
+~\newline
+Available options\+:
+\begin{DoxyItemize}
+\item {\bfseries{Vertical}}
+\item {\bfseries{Horizontal}}
+\end{DoxyItemize}This property is only visible when {\bfseries{Projection}} is set to {\bfseries{Perspective}}.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Field of View}}   }&Set the width of the Camera\textquotesingle{}s view angle, measured in degrees along the selected axis.~\newline
+~\newline
+This property is only visible when {\bfseries{Projection}} is set to {\bfseries{Perspective}}.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Size}}   }&Set the viewport size of the Camera.~\newline
+~\newline
+This property is only visible when {\bfseries{Projection}} is set to {\bfseries{Orthographic}}.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Clipping Planes}}   }&Set the distances from the camera where rendering starts and stops.    \\\cline{1-3}
+&{\itshape Near}   &The closest point relative to the Camera that drawing will occur.    \\\cline{1-3}
+&{\itshape Far}   &The furthest point relative to the Camera that drawing will occur.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Physical Camera}}   }&Enable Physical Camera properties for this camera.~\newline
+~\newline
+When the Physical Camera properties are enabled, \doxylink{namespace_unity}{Unity} calculates the {\bfseries{Field of View}} using the properties that simulate real-\/world camera attributes\+: {\bfseries{Focal Length}}, {\bfseries{Sensor Size}}, and {\bfseries{Lens Shift}}.~\newline
+~\newline
+Physical Camera properties are not visible in the Inspector until you tick this box.~\newline
+~\newline
+This property is only visible when {\bfseries{Projection}} is set to {\bfseries{Perspective}}.   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9_autotoc_md2075}{}\doxysubsection{\texorpdfstring{\label{_PhysicalCamera}%
+Physical Camera}{\label{_PhysicalCamera}%
+Physical Camera}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9_autotoc_md2075}
+\texorpdfstring{$\vert$}{|} {\bfseries{Property}} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} {\bfseries{Description}} \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- \texorpdfstring{$\vert$}{|} -\/ \texorpdfstring{$\vert$}{|} \+:-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} {\bfseries{Camera Body}} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} {\itshape Sensor Type} \texorpdfstring{$\vert$}{|} Specify the real-\/world camera format you want the camera to simulate. Choose the desired format from the list. ~\newline
+~\newline
+When you choose a camera format, \doxylink{namespace_unity}{Unity} sets the the {\bfseries{Sensor Size \texorpdfstring{$>$}{>} X}} and {\bfseries{Y}} properties to the correct values automatically. ~\newline
+~\newline
+If you change the {\bfseries{Sensor Size}} values manually, \doxylink{namespace_unity}{Unity} automatically sets this property to {\bfseries{Custom}}. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} {\itshape Sensor Size} \texorpdfstring{$\vert$}{|} Set the size, in millimeters, of the camera sensor. ~\newline
+~\newline
+\doxylink{namespace_unity}{Unity} sets the {\bfseries{X}} and {\bfseries{Y}} values automatically when you choose the {\bfseries{Sensor Type}}. You can enter custom values if needed. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape X} \texorpdfstring{$\vert$}{|} Set the horizontal size of the camera sensor. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape Y} \texorpdfstring{$\vert$}{|} Set the vertical size of the camera sensor. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} {\itshape ISO} \texorpdfstring{$\vert$}{|} Set the light sensitivity of the Camera sensor. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} {\itshape Shutter Speed} \texorpdfstring{$\vert$}{|} Set the amount of time the Camera sensor captures light. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape Shutter Speed Unit} \texorpdfstring{$\vert$}{|} Select the unit of measurement for {\bfseries{Shutter Speed}}.~\newline
+~\newline
+Available options\+:
+\begin{DoxyItemize}
+\item {\bfseries{Second}}
+\item {\bfseries{1/\+Second}}
+\end{DoxyItemize}\texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} {\itshape Gate Fit} \texorpdfstring{$\vert$}{|} Options for changing the size of the {\bfseries{resolution gate}} (size/aspect ratio of the game view) relative to the {\bfseries{film gate}} (size/aspect ratio of the Physical Camera sensor). ~\newline
+~\newline
+For further information about resolution gate and film gate, see documentation on \href{https://docs.unity3d.com/Manual/PhysicalCameras.html}{\texttt{ Physical Cameras}}. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape Vertical} \texorpdfstring{$\vert$}{|} Fits the resolution gate to the height of the film gate. ~\newline
+~\newline
+If the sensor aspect ratio is larger than the game view aspect ratio, \doxylink{namespace_unity}{Unity} crops the rendered image at the sides. ~\newline
+~\newline
+If the sensor aspect ratio is smaller than the game view aspect ratio, \doxylink{namespace_unity}{Unity} overscans the rendered image at the sides. ~\newline
+~\newline
+When you choose this setting, changing the sensor width ({\bfseries{Sensor Size \texorpdfstring{$>$}{>} X property}}) has no effect on the rendered image. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape Horizontal} \texorpdfstring{$\vert$}{|} Fits the resolution gate to the width of the film gate. ~\newline
+~\newline
+If the sensor aspect ratio is larger than the game view aspect ratio, \doxylink{namespace_unity}{Unity} overscans the rendered image on the top and bottom. ~\newline
+~\newline
+If the sensor aspect ratio is smaller than the game view aspect ratio, \doxylink{namespace_unity}{Unity} crops the rendered image on the top and bottom. ~\newline
+~\newline
+When you choose this setting, changing the sensor height ({\bfseries{Sensor Size \texorpdfstring{$>$}{>} Y}} property) has no effect on the rendered image. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape Fill} \texorpdfstring{$\vert$}{|} Fits the resolution gate to either the width or height of the film gate, whichever is smaller. This crops the rendered image. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape Overscan} \texorpdfstring{$\vert$}{|} Fits the resolution gate to either the width or height of the film gate, whichever is larger. This overscans the rendered image. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape None} \texorpdfstring{$\vert$}{|} Ignores the resolution gate and uses the film gate only. This stretches the rendered image to fit the game view aspect ratio. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} {\bfseries{Lens}} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} {\itshape Focal Length} \texorpdfstring{$\vert$}{|} Set the distance, in millimeters, between the camera sensor and the camera lens.~\newline
+~\newline
+Lower values result in a wider {\bfseries{Field of View}}, and vice versa. ~\newline
+~\newline
+When you change this value, \doxylink{namespace_unity}{Unity} automatically updates the {\bfseries{Field of View}} property accordingly. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} {\itshape Shift} \texorpdfstring{$\vert$}{|} Shift the lens horizontally or vertically from center. Values are multiples of the sensor size; for example, a shift of 0.\+5 along the X axis offsets the sensor by half its horizontal size. ~\newline
+~\newline
+You can use lens shifts to correct distortion that occurs when the camera is at an angle to the subject (for example, converging parallel lines). ~\newline
+~\newline
+Shift the lens along either axis to make the camera frustum \href{https://docs.unity3d.com/Manual/ObliqueFrustum.html}{\texttt{ oblique}}. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape X} \texorpdfstring{$\vert$}{|} Set the horizontal offset of the lens from the Camera sensor. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape Y} \texorpdfstring{$\vert$}{|} Set the vertical offset of the lens from the Camera sensor. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} {\itshape Aperture} \texorpdfstring{$\vert$}{|} Set the f-\/stop (f-\/number) of the lens. A lower value gives a wider lens aperture. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} {\itshape Focus Distance} \texorpdfstring{$\vert$}{|} Set the distance from the camera where objects appear sharp when you enable Depth of Field. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} {\bfseries{Aperture Shape}} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} {\itshape Blade Count} \texorpdfstring{$\vert$}{|} The number of blades in the lens aperture. A higher value gives a rounder aperture shape. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} {\itshape Curvature} \texorpdfstring{$\vert$}{|} Set the curvature of the lens aperture blades. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} {\itshape Barrel Clipping} \texorpdfstring{$\vert$}{|} Set the self-\/occlusion of the lens. A higher value creates a cat\textquotesingle{}s eye effect. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} {\itshape Anamorphism} \texorpdfstring{$\vert$}{|} Set the stretch of the sensor. A higher value increases the stretch of the sensor to simulate an anamorphic look. \texorpdfstring{$\vert$}{|}
+
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9_Rendering}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9_Rendering}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9_autotoc_md2076}{}\doxysection{\texorpdfstring{Rendering}{Rendering}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9_autotoc_md2076}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Renderer}}   &Control which renderer this Camera uses.    \\\cline{1-2}
+{\bfseries{Post Processing}}   &Enable post-\/processing effects.    \\\cline{1-2}
+{\bfseries{Anti-\/\+Aliasing}}   &Select the method that this Camera uses for post-\/process anti-\/aliasing. A Camera can still use Multisample Anti-\/aliasing (MSAA), which is a hardware feature, at the same time as post-\/process anti-\/aliasing unless you use Temporal Anti-\/aliasing.The following Anti-\/aliasing options are available\+:
+\begin{DoxyItemize}
+\item {\bfseries{None}}\+: This Camera can process MSAA but does not process any post-\/process anti-\/aliasing.
+\item {\bfseries{Fast Approximate Anti-\/aliasing (FXAA)}}\+: Performs a full screen pass which smooths edges on a per-\/pixel level.
+\item {\bfseries{Subpixel Morphological Anti-\/aliasing (SMAA)}}\+: Finds edge patterns in the image and blends the pixels on these edges according to those patterns.
+\item {\bfseries{Temporal Anti-\/aliasing (TAA)}}\+: Uses previous frames accumulated into a color history buffer to smooth edges over the course of multiple frames.
+\end{DoxyItemize}For more information, see \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2anti-aliasing}{Anti-\/aliasing in the Universal Render Pipeline}{0}.~\newline
+~\newline
+This property is only visible when {\bfseries{Render Type}} is set to {\bfseries{Base}}.    \\\cline{1-2}
+\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape Quality (SMAA)}   &Select the quality of SMAA. The difference in resource intensity is fairly small between {\bfseries{Low}} and {\bfseries{High}}.Available options\+:
+\begin{DoxyItemize}
+\item {\bfseries{Low}}
+\item {\bfseries{Medium}}
+\item {\bfseries{High}}
+\end{DoxyItemize}This property only appears when you select {\bfseries{Subpixel Morphological Anti-\/aliasing (SMAA)}} from the {\bfseries{Anti-\/aliasing}} drop-\/down.    \\\cline{1-2}
+\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape Quality (TAA)}   &Select the quality of TAA.Available options\+:
+\begin{DoxyItemize}
+\item {\bfseries{Very Low}}
+\item {\bfseries{Low}}
+\item {\bfseries{Medium}}
+\item {\bfseries{High}}
+\item {\bfseries{Very High}}
+\end{DoxyItemize}This property only appears when you select {\bfseries{Temporal Anti-\/aliasing (TAA)}} from the {\bfseries{Anti-\/aliasing}} drop-\/down.    \\\cline{1-2}
+\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape Contrast Adaptive Sharpening}   &Enable high quality post sharpening to reduce TAA blur.This setting is overridden when you enable \href{universalrp-asset.md\#quality}{\texttt{ AMD Fidelity\+FX Super Resolution (FSR)}} upscaling in the URP Asset as FSR handles sharpening when it performs post-\/upscale sharpening.This property only appears when you select {\bfseries{Temporal Anti-\/aliasing (TAA)}} from the {\bfseries{Anti-\/aliasing}} drop-\/down.    \\\cline{1-2}
+\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape Base Blend Factor}   &Set how much the history buffer blends with the current frame result. Higher values mean more history contribution, which improves the anti-\/aliasing, but also increases the chance of ghosting.This property only appears when you select {\bfseries{Temporal Anti-\/aliasing (TAA)}} from the {\bfseries{Anti-\/aliasing}} drop-\/down and enable {\bfseries{Show Additional Properties}} in the Inspector.    \\\cline{1-2}
+\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape Jitter Scale}   &Set the scale of the jitter applied when TAA is enabled. A lower value reduces visible flickering and jittering, but also reduces the effectiveness of the anti-\/aliasing.This property only appears when you select {\bfseries{Temporal Anti-\/aliasing (TAA)}} from the {\bfseries{Anti-\/aliasing}} drop-\/down and enable {\bfseries{Show Additional Properties}} in the Inspector.    \\\cline{1-2}
+\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape Mip Bias}   &Set how much texture mipmap selection is biased when rendering.A positive bias makes a texture appear more blurry, while a negative bias sharpens the texture. However, a lower value also has a negative impact on performance.{\bfseries{Note}}\+: Requires mipmaps in textures.This property only appears when you select {\bfseries{Temporal Anti-\/aliasing (TAA)}} from the {\bfseries{Anti-\/aliasing}} drop-\/down and enable {\bfseries{Show Additional Properties}} in the Inspector.    \\\cline{1-2}
+\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape Variance Clamp Scale}   &Set the size of the color volume \doxylink{namespace_unity}{Unity} uses to find nearby pixels when the color history is incorrect or unavailable. To do this, the clamp limits how much a pixel\textquotesingle{}s color can vary from the color of the pixels that surround it.Lower values can reduce ghosting, but produce more flickering. Higher values reduce flickering, but are prone to blur and ghosting.This property only appears when you select {\bfseries{Temporal Anti-\/aliasing (TAA)}} from the {\bfseries{Anti-\/aliasing}} drop-\/down and enable {\bfseries{Show Additional Properties}} in the Inspector.    \\\cline{1-2}
+{\bfseries{Stop Na\+Ns}}   &Enable the checkbox to make this Camera replace values that are Not a Number (NaN) with a black pixel. This stops certain effects from breaking, but is a resource-\/intensive process. Only enable this feature if you experience NaN issues that you can not fix.~\newline
+~\newline
+This property is only visible when {\bfseries{Render Type}} is set to {\bfseries{Base}}.    \\\cline{1-2}
+{\bfseries{Dithering}}   &Enable the checkbox to apply 8-\/bit dithering to the final render. This can help reduce banding on wide gradients and low light areas.~\newline
+~\newline
+This property is only visible when {\bfseries{Render Type}} is set to {\bfseries{Base}}.    \\\cline{1-2}
+{\bfseries{Clear Depth}}   &Enable to clear depth from previous camera on rendering.~\newline
+~\newline
+This property is only visible when {\bfseries{Render Type}} is set to {\bfseries{Overlay}}.    \\\cline{1-2}
+{\bfseries{Render Shadows}}   &Enable shadow rendering.    \\\cline{1-2}
+{\bfseries{Priority}}   &A Camera with a higher priority is drawn on top of a Camera with a lower priority. Priority has a range from -\/100 to 100.~\newline
+~\newline
+This property is only visible when {\bfseries{Render Type}} is set to {\bfseries{Base}}.    \\\cline{1-2}
+{\bfseries{Opaque Texture}}   &Control whether the Camera creates a Camera\+Opaque\+Texture, which is a copy of the rendered view.~\newline
+~\newline
+Available options\+:
+\begin{DoxyItemize}
+\item {\bfseries{Off}}\+: Camera does not create a Camera\+Opaque\+Texture.
+\item {\bfseries{On}}\+: Camera creates a Camera\+Opaque\+Texture.
+\item {\bfseries{Use Pipeline Settings}}\+: The Render Pipeline Asset determines the value of this setting.
+\end{DoxyItemize}This property is only visible when {\bfseries{Render Type}} is set to {\bfseries{Base}}.    \\\cline{1-2}
+{\bfseries{Depth Texture}}   &Control whether the Camera creates Camera\+Depth\+Texture, which is a copy of the rendered depth values.~\newline
+~\newline
+Available options\+:
+\begin{DoxyItemize}
+\item {\bfseries{Off}}\+: Camera does not create a Camera\+Depth\+Texture.
+\item {\bfseries{On}}\+: Camera creates a Camera\+Depth\+Texture.
+\item {\bfseries{Use Pipeline Settings}}\+: The Render Pipeline Asset determines the value of this setting.
+\end{DoxyItemize}\\\cline{1-2}
+{\bfseries{Culling Mask}}   &Select which Layers the Camera renders to.    \\\cline{1-2}
+{\bfseries{Occlusion Culling}}   &Enable Occlusion Culling.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9_autotoc_md2077}{}\doxysection{\texorpdfstring{\label{_Stack}%
+Stack}{\label{_Stack}%
+Stack}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9_autotoc_md2077}
+\begin{quote}
+{\bfseries{Note\+:}} This section is only available if {\bfseries{Render Type}} is set to {\bfseries{Base}} \end{quote}
+
+
+A camera stack allows to composite results of several cameras together. The camera stack consists of a Base camera and any number of additional Overlay cameras.
+
+You can use the stack property add Overlay cameras to the stack and they will render in the order as defined in the stack. For more information on configuring and using Camera Stacks, see \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2camera-stacking}{Camera Stacking}{0}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9_autotoc_md2078}{}\doxysection{\texorpdfstring{\label{_Environment}%
+Environment}{\label{_Environment}%
+Environment}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9_autotoc_md2078}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Background Type}}   &Control how to initialize the color buffer at the start of this Camera\textquotesingle{}s render loop. For more information, see \href{cameras-advanced.md\#clearing}{\texttt{ the documentation on clearing}}.~\newline
+~\newline
+This property is only visible when {\bfseries{Render Type}} is set to {\bfseries{Base}}.    \\\cline{1-2}
+\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape Skybox}   &Initializes the color buffer by clearing to a Skybox. Defaults to a background color if no Skybox is found.    \\\cline{1-2}
+\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape Solid Color}   &Initializes the color buffer by clearing to a given color.~\newline
+If you select this property, \doxylink{namespace_unity}{Unity} shows the following extra property\+:~\newline
+{\bfseries{Background}}\+: the Camera clears its color buffer to this color before rendering.    \\\cline{1-2}
+\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape Uninitialized}   &Does not initialize the color buffer. This means that the load action for that specific Render\+Target will be {\ttfamily Dont\+Care} instead of {\ttfamily Load} or {\ttfamily Clear}. {\ttfamily Dont\+Care} specifies that the previous contents of the Render\+Target don\textquotesingle{}t need to be preserved.~\newline
+~\newline
+Only use this option in order to optimize performance in situations where your Camera or Camera Stack will draw to every pixel in the color buffer, otherwise the behaviour of pixels the Camera doesn\textquotesingle{}t draw is undefined.~\newline
+~\newline
+{\bfseries{Note}}\+: The results might look different between Editor and \doxylink{class_player}{Player}, as the Editor doesn\textquotesingle{}t run on Tile-\/\+Based Deferred Rendering (TBDR) GPUs (found in mobile devices). If you use this option on TBDR GPUs, it causes uninitialized tile memory and the content is undefined.    \\\cline{1-2}
+{\bfseries{Volumes}}   &The settings in this section define how Volumes affect this Camera.    \\\cline{1-2}
+\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape Update\&\#160;Mode}   &Select how \doxylink{namespace_unity}{Unity} updates Volumes.~\newline
+~\newline
+Available options\+:
+\begin{DoxyItemize}
+\item {\bfseries{Every Frame}}\+: Update Volumes with every frame \doxylink{namespace_unity}{Unity} renders.
+\item {\bfseries{Via Scripting}}\+: Only update volumes when triggered by a script.
+\item {\bfseries{Use Pipeline Settings}}\+: Use the default setting for the Render Pipeline.
+\end{DoxyItemize}\\\cline{1-2}
+\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape Volume\&\#160;Mask}   &Use the drop-\/down to set the Layer Mask that defines which Volumes affect this Camera.    \\\cline{1-2}
+\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape Volume\&\#160;Trigger}   &Assign a Transform that the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_volumes}{Volume}{0} system uses to handle the position of this Camera. For example, if your application uses a third person view of a character, set this property to the character\textquotesingle{}s Transform. The Camera then uses the post-\/processing and Scene settings for Volumes that the character enters. If you do not assign a Transform, the Camera uses its own Transform instead.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9_autotoc_md2079}{}\doxysection{\texorpdfstring{\label{_Output}%
+Output}{\label{_Output}%
+Output}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doc7c35c176c1ad0ea77080cb33c453ec9_autotoc_md2079}
+\begin{quote}
+{\bfseries{Note\+:}} This section is only available if {\bfseries{Render Type}} is set to {\bfseries{Base}} \end{quote}
+
+
+\begin{quote}
+{\bfseries{Note\+:}} When a Camera\textquotesingle{}s {\bfseries{Render Type}} is set to {\bfseries{Base}} and its {\bfseries{Render Target}} is set to {\bfseries{Texture}}, \doxylink{namespace_unity}{Unity} does not show the following properties in the Inspector for the Camera\+:
+\begin{DoxyItemize}
+\item Target Display
+\item HDR
+\item MSAA
+\item Allow Dynamic Resolution 
+\end{DoxyItemize}\end{quote}
+
+
+This is because the Render Texture determines these properties. To change them, do so on the Render Texture Asset.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Output Texture}}   &Render this Camera\textquotesingle{}s output to a Render\+Texture if this field is assigned, otherwise render to the screen.    \\\cline{1-2}
+{\bfseries{Target Display}}   &Define which external device to render to. Between 1 and 8.~\newline
+~\newline
+This property only appears when you select {\bfseries{Screen}} from the {\bfseries{Output Target}} drop-\/down.    \\\cline{1-2}
+{\bfseries{Target Eye}}   &Select the target eye for this camera.~\newline
+~\newline
+Available options\+:
+\begin{DoxyItemize}
+\item {\bfseries{Both}}\+: Allows XR rendering from the selected Camera.
+\item {\bfseries{None}}\+: Disables XR rendering for the selected Camera.
+\end{DoxyItemize}\\\cline{1-2}
+{\bfseries{Viewport Rect}}   &Four values that indicate where on the screen this camera view is drawn. Measured in Viewport Coordinates (values 0-\/1).~\newline
+~\newline
+This property only appears when you select {\bfseries{Screen}} from the {\bfseries{Output Target}} drop-\/down.    \\\cline{1-2}
+\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape X}   &The beginning horizontal position \doxylink{namespace_unity}{Unity} uses to draw the camera view.    \\\cline{1-2}
+\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape Y}   &The beginning vertical position \doxylink{namespace_unity}{Unity} uses to draw the camera view.    \\\cline{1-2}
+\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape W} (Width)   &Width of the camera output on the screen.    \\\cline{1-2}
+\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;\&\#160;{\itshape H} (Height)   &Height of the camera output on the screen.    \\\cline{1-2}
+{\bfseries{HDR}}   &Enable High Dynamic Range rendering for this camera.~\newline
+~\newline
+This property only appears when you select {\bfseries{Screen}} from the {\bfseries{Output Target}} drop-\/down.    \\\cline{1-2}
+{\bfseries{MSAA}}   &Enable \href{anti-aliasing.md\#msaa}{\texttt{ Multisample Anti-\/aliasing}} for this camera.~\newline
+~\newline
+This property only appears when you select {\bfseries{Screen}} from the {\bfseries{Output Target}} drop-\/down.    \\\cline{1-2}
+{\bfseries{Allow Dynamic Resolution}}   &Enable URP Dynamic Resolution rendering for this Camera.~\newline
+~\newline
+This property only appears when you select {\bfseries{Screen}} from the {\bfseries{Output Target}} drop-\/down.   \\\cline{1-2}
+\end{longtabu}

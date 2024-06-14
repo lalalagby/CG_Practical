@@ -1,0 +1,13 @@
+\doxysection{Save\+During\+Play Namespace Reference}
+\hypertarget{namespace_save_during_play}{}\label{namespace_save_during_play}\index{SaveDuringPlay@{SaveDuringPlay}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_save_during_play_1_1_game_object_field_scanner}{Game\+Object\+Field\+Scanner}}
+\item 
+class \mbox{\hyperlink{class_save_during_play_1_1_object_state_saver}{Object\+State\+Saver}}
+\begin{DoxyCompactList}\small\item\em Using reflection, this class scans a Game\+Object (and optionally its children) and records all the field settings. This only works for "{}nice"{} field settings within Mono\+Behaviours. Changes to the behaviour stack made between saving and restoring will fool this class. \end{DoxyCompactList}\item 
+class {\bfseries Object\+Tree\+Util}
+\begin{DoxyCompactList}\small\item\em A collection of tools for finding objects. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_save_during_play_1_1_save_during_play}{Save\+During\+Play}}
+\begin{DoxyCompactList}\small\item\em For all registered object types, record their state when exiting Play Mode, and restore that state to the objects in the scene. This is a very limited implementation which has not been rigorously tested with many objects types. It\textquotesingle{}s quite possible that not everything will be saved. \end{DoxyCompactList}\end{DoxyCompactItemize}

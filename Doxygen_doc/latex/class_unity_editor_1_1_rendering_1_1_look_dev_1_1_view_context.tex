@@ -1,0 +1,82 @@
+\doxysection{Unity\+Editor.\+Rendering.\+Look\+Dev.\+View\+Context Class Reference}
+\hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context}{}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context}\index{UnityEditor.Rendering.LookDev.ViewContext@{UnityEditor.Rendering.LookDev.ViewContext}}
+
+
+Data container containing content of a view.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context_aca97f8087add62005093e05cf0036dc5}{Update\+Environment}} (Unity\+Engine.\+Object environment\+Or\+Cubemap\+Asset)
+\begin{DoxyCompactList}\small\item\em Update the environment used. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context_a3a4807263e37e0e8cdc471f1258df544}{Update\+Viewed\+Object}} (Game\+Object viewed\+Object)
+\begin{DoxyCompactList}\small\item\em Update the object reference used for instantiation. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context_af9d0bec9af06a3081a7cab8cb551afae}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context_af9d0bec9af06a3081a7cab8cb551afae} 
+void {\bfseries Reset\+Camera\+State} ()
+\begin{DoxyCompactList}\small\item\em Reset the camera state to default values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context_afe488e653ed63f60d3ffd827f50c4f17}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context_afe488e653ed63f60d3ffd827f50c4f17} 
+\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state}{Camera\+State}} {\bfseries camera} = new \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_camera_state}{Camera\+State}}()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The position and rotation of the camera. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context_a0e8bf90cb84f5a17fbde4bf46997dd86}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context_a0e8bf90cb84f5a17fbde4bf46997dd86} 
+\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_debug_context}{Debug\+Context}} {\bfseries debug} = new \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_debug_context}{Debug\+Context}}()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The currently viewed debug\+State. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context_a52b9f7d41b5931d03c663f8ad4c7203b}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context_a52b9f7d41b5931d03c663f8ad4c7203b} 
+bool {\bfseries has\+Environment}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Check if an \doxylink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_environment}{Environment} is registered for this view. The result will be accurate even if the \doxylink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_environment}{Environment} have not been reloaded yet. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context_ab34955c318828c780747822d335f5f35}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context_ab34955c318828c780747822d335f5f35} 
+\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_environment}{Environment}} {\bfseries environment}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The currently used \doxylink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_environment}{Environment}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context_a7b955a7ad2b201f75c6b055a74fea4ff}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context_a7b955a7ad2b201f75c6b055a74fea4ff} 
+bool {\bfseries has\+Viewed\+Object}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Check if an \doxylink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_environment}{Environment} is registered for this view. The result will be accurate even if the object have not been reloaded yet. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context_a773fceed3881570ab71ee2d60968977f}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context_a773fceed3881570ab71ee2d60968977f} 
+Game\+Object {\bfseries viewed\+Object\+Reference}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Reference to the object given for instantiation. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context_adc0cd27c92f39b496df4fe6b13af92c3}\label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context_adc0cd27c92f39b496df4fe6b13af92c3} 
+Game\+Object {\bfseries viewed\+Instance\+In\+Preview}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The currently displayed instance of \doxylink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context_a773fceed3881570ab71ee2d60968977f}{viewed\+Object\+Reference}. It will be instantiated when pushing changes to renderer. See Look\+Dev.\+Save\+Context\+Change\+And\+Apply(\+View\+Index) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Data container containing content of a view. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context_aca97f8087add62005093e05cf0036dc5}\index{UnityEditor.Rendering.LookDev.ViewContext@{UnityEditor.Rendering.LookDev.ViewContext}!UpdateEnvironment@{UpdateEnvironment}}
+\index{UpdateEnvironment@{UpdateEnvironment}!UnityEditor.Rendering.LookDev.ViewContext@{UnityEditor.Rendering.LookDev.ViewContext}}
+\doxysubsubsection{\texorpdfstring{UpdateEnvironment()}{UpdateEnvironment()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context_aca97f8087add62005093e05cf0036dc5} 
+void Unity\+Editor.\+Rendering.\+Look\+Dev.\+View\+Context.\+Update\+Environment (\begin{DoxyParamCaption}\item[{Unity\+Engine.\+Object}]{environment\+Or\+Cubemap\+Asset}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Update the environment used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em environment\+Or\+Cubemap\+Asset} & The new \doxylink{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_environment}{Environment} to use. Or the Cubemap to use to build a new one. Other types will raise an Argument\+Exception. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context_a3a4807263e37e0e8cdc471f1258df544}\index{UnityEditor.Rendering.LookDev.ViewContext@{UnityEditor.Rendering.LookDev.ViewContext}!UpdateViewedObject@{UpdateViewedObject}}
+\index{UpdateViewedObject@{UpdateViewedObject}!UnityEditor.Rendering.LookDev.ViewContext@{UnityEditor.Rendering.LookDev.ViewContext}}
+\doxysubsubsection{\texorpdfstring{UpdateViewedObject()}{UpdateViewedObject()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_look_dev_1_1_view_context_a3a4807263e37e0e8cdc471f1258df544} 
+void Unity\+Editor.\+Rendering.\+Look\+Dev.\+View\+Context.\+Update\+Viewed\+Object (\begin{DoxyParamCaption}\item[{Game\+Object}]{viewed\+Object}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Update the object reference used for instantiation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em viewed\+Object} & The new reference.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Editor/\+Look\+Dev/Context.\+cs\end{DoxyCompactItemize}

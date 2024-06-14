@@ -1,0 +1,92 @@
+\chapter{Decal Shader Graph}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2decal-shader}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2decal-shader}\index{Decal Shader Graph@{Decal Shader Graph}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2decal-shader_autotoc_md2108}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2decal-shader_autotoc_md2108}%
+ The \href{renderer-feature-decal.md\#decal-projector-component}{\texttt{ Decal Projector}} component can project a Material as a decal if the Material uses a Shader Graph with the Decal Material type.
+
+~\newline
+{\itshape Shader Graph with the Decal Material type}
+
+URP contains the pre-\/built Decal Shader ({\ttfamily Shader Graphs/\+Decal}).
+
+~\newline
+{\itshape Decal Material properties and advanced options.}
+
+You can assign a Material that uses a Decal Shader Graph to a Game\+Object directly. For example, you can \href{renderer-feature-decal.md\#decal-gameobject}{\texttt{ use a Quad as the Decal Game\+Object}}.
+
+The pre-\/built Decal Shader has the following properties\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Base Map}}\+: the Base texture of the Material.
+\item {\bfseries{Normal Map}}\+: the normal texture of the Material.
+\item {\bfseries{Normal Blend}}\+: this property defines the proportion in which the the normal texture selected in the Normal Map property blends with the normal map of the Material that the decal is projected on. 0\+: the decal does not affect the Material it\textquotesingle{}s projected on. 1\+: the normal map of the decal replaces the normal map of the Material it\textquotesingle{}s projected on.
+\end{DoxyItemize}
+
+You can create your own Shader Graphs that render decals in a way that suits your project best.
+
+The Decal Material properties above are defined in the pre-\/built Shader Graph. Custom decal Material properties depend on a custom Shader Graph.
+
+The following table describes the properties in the {\bfseries{Advanced Options}} section. These properties are common for all decal shaders.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Enable GPU\&\#160;Instancing}}   &Enabling this option lets URP render meshes with the same geometry and Material in one batch, when possible. This makes rendering faster. URP cannot render Meshes in one batch if they have different Materials or if the hardware does not support GPU instancing.    \\\cline{1-2}
+{\bfseries{Priority}}   &This property defines the order in which URP draws decals in the Scene. URP draws decals with lower Priority values first, and draws decals with higher Priority values on top of those with lower values. ~\newline
+If there are multiple Decal Materials with the same {\bfseries{Priority}} in the Scene, URP renders them in the order in which the Materials were created.    \\\cline{1-2}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2decal-shader_mesh-bias-type}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2decal-shader_mesh-bias-type}%
+{\bfseries{Mesh Bias Type}}   &Select the Mesh bias type. The Mesh bias lets you prevent z-\/fighting between the Decal Game\+Object and the Game\+Object it overlaps. This property is only applicable for Game\+Objects with a \href{renderer-feature-decal.md\#decal-gameobject}{\texttt{ Decal Material type assigned directly}}.    \\\cline{1-2}
+{\itshape View Bias}   &A world-\/space bias (in meters). When drawing the Decal Game\+Object, \doxylink{namespace_unity}{Unity} shifts each pixel of the Game\+Object by this value along the view vector. A positive value shifts pixels closer to the Camera, so that \doxylink{namespace_unity}{Unity} draws the Decal Game\+Object on top of the overlapping Mesh, which prevents z-\/fighting. Decal Projectors ignore this property.    \\\cline{1-2}
+{\itshape Depth Bias}   &When drawing the Decal Game\+Object, \doxylink{namespace_unity}{Unity} changes the depth value of each pixel of the Game\+Object by this value. A negative value shifts pixels closer to the Camera, so that \doxylink{namespace_unity}{Unity} draws the Decal Game\+Object on top of the overlapping Mesh, which prevents z-\/fighting. Decal Projectors ignore this property.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2decal-shader_autotoc_md2109}{}\doxysection{\texorpdfstring{\label{_create-decal-shaders}%
+Create custom Decal shaders}{\label{_create-decal-shaders}%
+Create custom Decal shaders}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2decal-shader_autotoc_md2109}
+The pre-\/built {\ttfamily Shader Graphs/\+Decal} shader serves as a simple example. You can create your own decal shaders that render decals in a way that suits your project best.
+
+To create a custom decal Shader Graph, select the {\bfseries{Decal}} value in Material property of the shader target.
+
+
+
+Enabling one of the following properties override the equivalent Lit Shader property on the surface of the Material.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Affect\&\#160;Base\+Color}}   &When enabled, the shader affects the base color. Most decals make use of this option. An exception is a surface damage effect, were you might want to manipulate other properties, such as normals.~\newline
+{\itshape From left to right\+: shader affecting only the color, affecting all properties, affecting all properties but color.}    \\\cline{1-2}
+{\bfseries{Affect Normal}}   &When enabled, the shader affects normals. Use cases\+: adding damage effects to materials, for example, bullet holes or cracks. Use the {\bfseries{Blend}} property to blend the normals of the decal with the normals of the surface it\textquotesingle{}s projected to. If the {\bfseries{Blend}} property is disabled, the decal overrides the normals all over the surface it\textquotesingle{}s projected to.~\newline
+{\itshape From left to right\+: Affect Normal is off; Affect Normal is on, Blend is off; Affect Normal and Blend are on.}    \\\cline{1-2}
+{\bfseries{Affect MAOS}}   &MOAS stands for Metallic, Ambient Occlusion, and Smoothness. These properties are grouped together to save memory. You can change values of each property separately in the shader, but all properties are blended with a single common alpha value.~\newline
+Use cases\+:~\newline
+Override smoothness to highlight puddles or wet paint. Override metallic values with lower values to render rust. Override AO to give the decal more depth.~\newline
+{\itshape Left\+: the decal does not affect MAOS. Right\+: the decal affects MAOS.}    \\\cline{1-2}
+{\bfseries{Affect\&\#160;Emission}}   &Use cases\+: you can affect the emission values to make surfaces seem like they are emitting light, or to make surfaces seem like they are being lit by light.~\newline
+ {\itshape Left\+: Affect Emission is off. Right\+: Affect Emission is on.}   \\\cline{1-2}
+\end{longtabu}
+
+
+To improve performance, pack data for different surface properties into a single texture. This way the shader performs fewer samples and \doxylink{namespace_unity}{Unity} stores fewer textures.
+
+For example, the following Shader Graph uses a normal map and a mask map to drive all properties in the shader. This decal is used for the damaged tarmac effect, and a hardcoded roughness value of 0 suites the use case.
+
+
+
+The shader samples the mask and uses the color for setting the Ambient Occlusion values (Red channel), smoothness values (Green channel), Emission intensity values (Blue channel), and alpha values for the entire decal. Decals are often blended using single alpha values for all properties. The following image shows the mask map for the example tarmac cracks\+:~\newline
+ {\itshape Example of mask map that packs Ambient Occlusion, Smoothness, Emission, and alpha values of a decal atlas into a single texture.} 

@@ -1,0 +1,130 @@
+\chapter{Simple Lit Shader}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe4da8ababb5b180f91a96b1c5f6e66e8}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe4da8ababb5b180f91a96b1c5f6e66e8}\index{Simple Lit Shader@{Simple Lit Shader}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe4da8ababb5b180f91a96b1c5f6e66e8_autotoc_md2514}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe4da8ababb5b180f91a96b1c5f6e66e8_autotoc_md2514}%
+ Use this Shader when performance is more important than photorealism. This Shader uses a simple approximation for lighting. Because this Shader \href{shading-model.md\#simple-shading}{\texttt{ does not calculate for physical correctness and energy conservation}}, it renders quickly.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe4da8ababb5b180f91a96b1c5f6e66e8_autotoc_md2515}{}\doxysection{\texorpdfstring{Using the Simple Lit Shader in the Editor}{Using the Simple Lit Shader in the Editor}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe4da8ababb5b180f91a96b1c5f6e66e8_autotoc_md2515}
+To select and use this Shader\+:
+
+
+\begin{DoxyEnumerate}
+\item In your Project, create or find the Material you want to use the Shader on. Select the {\bfseries{Material}}. A Material Inspector window opens.
+\item Click {\bfseries{Shader}}, and select {\bfseries{Universal Render Pipeline}} \texorpdfstring{$>$}{>} {\bfseries{Simple Lit}}.
+\end{DoxyEnumerate}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe4da8ababb5b180f91a96b1c5f6e66e8_autotoc_md2516}{}\doxysection{\texorpdfstring{UI overview}{UI overview}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe4da8ababb5b180f91a96b1c5f6e66e8_autotoc_md2516}
+The Inspector window for this Shader contains these elements\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Surface Options}}
+\item {\bfseries{Surface Inputs}}
+\item {\bfseries{Advanced}}
+\end{DoxyItemize}
+
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe4da8ababb5b180f91a96b1c5f6e66e8_autotoc_md2517}{}\doxysubsection{\texorpdfstring{Surface Options}{Surface Options}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe4da8ababb5b180f91a96b1c5f6e66e8_autotoc_md2517}
+The {\bfseries{Surface Options}} control how the Material is rendered on a screen.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\bfseries{Surface Type}}   &Use this drop-\/down to apply an {\bfseries{Opaque}} or {\bfseries{Transparent}} surface type to the Material. This determines which render pass URP renders the material in. {\bfseries{Opaque}} surface types are always fully visible, regardless of what’s behind them. URP renders opaque Materials first. {\bfseries{Transparent}} surface types are affected by their background, and they can vary according to which type of transparent surface type you choose. URP renders transparent Materials in a separate pass after opaque objects. If you select {\bfseries{Transparent}}, the {\bfseries{Blending Mode}} drop-\/down appears.    \\\cline{1-2}
+{\bfseries{Blending Mode}}   &Select how \doxylink{namespace_unity}{Unity} calculates the color of each pixel of a transparent Material when it blends the Material with the background.~\newline
+~\newline
+In the context of Blending Modes, Source refers to the transparent Material where the Blending Mode is set and Destination refers to anything that Material overlaps with.    \\\cline{1-2}
+\&\#160;\&\#160;\&\#160;\&\#160;Alpha   &~\newline
+{\itshape Alpha blending mode.}~\newline
+~\newline
+{\bfseries{Alpha}} uses the Material\textquotesingle{}s alpha value to change how transparent an object is. 0 is fully transparent. 255 is fully opaque, this is translated to a value of 1 when used with the blending equations. The Material is always rendered in the Transparent render pass regardless of it\textquotesingle{}s alpha value.~\newline
+This mode lets you use the \doxylink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe4da8ababb5b180f91a96b1c5f6e66e8_preserve-specular}{Preserve Specular Lighting} property.~\newline
+~\newline
+Alpha equation\+:~\newline
+{\itshape Output\+RGBA} = ({\itshape Source\+RGB} \&\#215; {\itshape Source\+Alpha}) + {\itshape Destination\+RGB} \&\#215; (1 \&\#8722; {\itshape Source\+Alpha})    \\\cline{1-2}
+\&\#160;\&\#160;\&\#160;\&\#160;Premultiply   &~\newline
+{\itshape Premultiply blending mode.}~\newline
+~\newline
+{\bfseries{Premultiply}} first multiplies the RGB values of the transparent Material by its alpha value then applies a similar effect to the Material as {\bfseries{Alpha}}.~\newline
+The equation for {\bfseries{Premultiply}} also allows areas of the transparent Material with an alpha value of 0 to have an additive blend effect. This can help reduce artifacts that may appear at the edge of the overlap between opaque and transparent pixels.~\newline
+~\newline
+Premultiply equation\+:~\newline
+{\itshape Output\+RGBA} = {\itshape Source\+RGB} + {\itshape Destination\+RGB} \&\#215; (1 \&\#8722; {\itshape Source\+Alpha})    \\\cline{1-2}
+\&\#160;\&\#160;\&\#160;\&\#160;Additive   &~\newline
+{\itshape Additive blending mode.}~\newline
+~\newline
+{\bfseries{Additive}} adds the color values of the Materials together to create the blend effect. The alpha value determines the strength of the source Material\textquotesingle{}s color before the blend is calculated.~\newline
+This mode lets you use the \doxylink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe4da8ababb5b180f91a96b1c5f6e66e8_preserve-specular}{Preserve Specular Lighting} property.~\newline
+~\newline
+Additive equation\+:~\newline
+{\itshape Output\+RGBA} = ({\itshape Source\+RGB} \&\#215; {\itshape Source\+Alpha}) + {\itshape Destination\+RGB}    \\\cline{1-2}
+\&\#160;\&\#160;\&\#160;\&\#160;Multiply   &~\newline
+{\itshape Multiply blending mode.}~\newline
+~\newline
+{\bfseries{Multiply}} multiplies the color of the Material with the color behind the surface. This creates a darker effect, like when you look through colored glass.~\newline
+This mode uses the Material’s alpha value to adjust how much the colors blend. An alpha value of 1 results in unadjusted multiplication of the colors while lower values blend the colors towards white.~\newline
+~\newline
+Multiply equation\+:~\newline
+{\itshape Output\+RGBA} = {\itshape Source\+RGB} \&\#215; {\itshape Destination\+RGB} \label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe4da8ababb5b180f91a96b1c5f6e66e8_preserve-specular}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe4da8ababb5b180f91a96b1c5f6e66e8_preserve-specular}%
+    \\\cline{1-2}
+{\bfseries{Preserve Specular Lighting}}   &Indicates whether \doxylink{namespace_unity}{Unity} preserves specular highlights on a Game\+Object or not. This applies even when your surface is transparent which means that only the reflected light is visible.~\newline
+~\newline
+This property only appears when the {\bfseries{Surface Type}} is set to Transparent and {\bfseries{Blending Mode}} is set to either Alpha or Additive.~\newline
+~\newline
+~\newline
+{\itshape Material with {\bfseries{Preserve Specular Lighting}} disabled.}~\newline
+~\newline
+~\newline
+{\itshape Material with {\bfseries{Preserve Specular Lighting}} enabled.}    \\\cline{1-2}
+{\bfseries{Render Face}}   &Use this drop-\/down to determine which sides of your geometry to render.~\newline
+{\bfseries{Front Face}} renders the front face of your geometry and \href{https://docs.unity3d.com/Manual/SL-CullAndDepth.html}{\texttt{ culls}} the back face. This is the default setting. ~\newline
+{\bfseries{Back Face}} renders the back face of your geometry and culls the front face. ~\newline
+{\bfseries{Both}} makes URP render both faces of the geometry. This is good for small, flat objects, like leaves, where you might want both sides visible.    \\\cline{1-2}
+{\bfseries{Alpha Clipping}}   &Makes your Material act like a \href{https://docs.unity3d.com/Manual/StandardShaderMaterialParameterRenderingMode.html}{\texttt{ Cutout}} Shader. Use this to create a transparent effect with hard edges between the opaque and transparent areas. For example, to create blades of grass. To achieve this effect, URP does not render alpha values below the specified {\bfseries{Threshold}}, which appears when you enable {\bfseries{Alpha Clipping}}. You can set the {\bfseries{Threshold}} by moving the slider, which accepts values from 0 to 1. All values above your threshold are fully opaque, and all values below your threshold are invisible. For example, a threshold of 0.\+1 means that URP doesn\textquotesingle{}t render alpha values below 0.\+1. The default value is 0.\+5.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe4da8ababb5b180f91a96b1c5f6e66e8_autotoc_md2518}{}\doxysubsection{\texorpdfstring{Surface Inputs}{Surface Inputs}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe4da8ababb5b180f91a96b1c5f6e66e8_autotoc_md2518}
+The {\bfseries{Surface Inputs}} describe the surface itself. For example, you can use these properties to make your surface look wet, dry, rough, or smooth.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\bfseries{Base Map}}   &Adds color to the surface, also known as the diffuse map. To assign a Texture to the {\bfseries{Base Map}} setting, click the object picker next to it. This opens the Asset Browser, where you can select from the Textures in your Project. Alternatively, you can use the \href{https://docs.unity3d.com/Manual/EditingValueProperties.html}{\texttt{ color picker}}. The color next to the setting shows the tint on top of your assigned Texture. To assign another tint, you can click this color swatch. If you select {\bfseries{Transparent}} or {\bfseries{Alpha Clipping}} under {\bfseries{Surface Options}}, your Material uses the Texture’s alpha channel or color.    \\\cline{1-2}
+{\bfseries{Specular Map}}   &Controls the color of your specular highlights from direct lighting, for example \href{https://docs.unity3d.com/Manual/Lighting.html}{\texttt{ Directional, Point, and Spot lights}}. To assign a Texture to the {\bfseries{Specular Map}} setting, click the object picker next to it. This opens the Asset Browser, where you can select from the textures in your Project. Alternatively, you can use the \href{https://docs.unity3d.com/Manual/EditingValueProperties.html}{\texttt{ color picker}}. ~\newline
+In {\bfseries{Source}}, you can select a Texture in your Project to act as a source for the smoothness. By default, the source is the Alpha channel for this Texture. ~\newline
+You can use the {\bfseries{Smoothness}} slider to control the spread of highlights on the surface. 0 gives a wide, rough highlight. 1 gives a small, sharp highlight like glass. Values in between produce semi-\/glossy looks. For example, 0.\+5 produces a plastic-\/like glossiness.    \\\cline{1-2}
+{\bfseries{Normal Map}}   &Adds a normal map to the surface. With a \href{https://docs.unity3d.com/Manual/StandardShaderMaterialParameterNormalMap.html?}{\texttt{ normal map}}, you can add surface details like bumps, scratches and grooves. To add the map, click the object picker next to it. The normal map picks up ambient lighting in the environment.    \\\cline{1-2}
+{\bfseries{Emission}}   &Makes the surface look like it emits lights. When enabled, the {\bfseries{Emission Map}} and {\bfseries{Emission Color}} settings appear.~\newline
+To assign an {\bfseries{Emission Map}}, click the object picture next to it. This opens the Asset Browser, where you can select from the textures in your Project.~\newline
+For {\bfseries{Emission Color}}, you can use the \href{https://docs.unity3d.com/Manual/EditingValueProperties.html}{\texttt{ color picker}} to assign a tint on top of the color. This can be more than 100\% white, which is useful for effects like lava, that shines brighter than white while still being another color.~\newline
+If you have not assigned an {\bfseries{Emission Map}}, the {\bfseries{Emission}} setting only uses the tint you’ve assigned in {\bfseries{Emission Color}}.~\newline
+If you do not enable {\bfseries{Emission}}, URP sets the emission to black and does not calculate emission.    \\\cline{1-2}
+{\bfseries{Tiling}}   &A 2D multiplier value that scales the Texture to fit across a mesh according to the U and V axes. This is good for surfaces like floors and walls. The default value is 1, which means no scaling. Set a higher value to make the Texture repeat across your mesh. Set a lower value to stretch the Texture. Try different values until you reach your desired effect.    \\\cline{1-2}
+{\bfseries{Offset}}   &The 2D offset that positions the Texture on the mesh. To adjust the position on your mesh, move the Texture across the U or V axes.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe4da8ababb5b180f91a96b1c5f6e66e8_autotoc_md2519}{}\doxysubsection{\texorpdfstring{Advanced}{Advanced}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doe4da8ababb5b180f91a96b1c5f6e66e8_autotoc_md2519}
+The {\bfseries{Advanced}} settings affect the underlying calculations of your rendering. They do not have a visible effect on your surface.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Property   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\bfseries{Specular Highlights}}   &Enable this to allow your Material to have specular highlights from direct lighting, for example \href{https://docs.unity3d.com/Manual/Lighting.html}{\texttt{ Directional, Point, and Spot lights}}. This means that your Material reflects the shine from these light sources. Disable this to leave out these highlight calculations, so your Shader renders faster. By default, this feature is enabled.    \\\cline{1-2}
+{\bfseries{Enable GPU Instancing}}   &Makes URP render meshes with the same geometry and Material in one batch, when possible. This makes rendering faster. URP cannot render Meshes in one batch if they have different Materials or if the hardware does not support GPU instancing.    \\\cline{1-2}
+{\bfseries{Sorting Priority}}   &Use this slider to determine the chronological rendering order for a Material. URP renders Materials with lower values first. You can use this to reduce overdraw on devices by making the pipeline render Materials in front of other Materials first, so it doesn\textquotesingle{}t have to render overlapping areas twice. This works similarly to the \href{https://docs.unity3d.com/ScriptReference/Material-renderQueue.html}{\texttt{ render queue}} in the built-\/in \doxylink{namespace_unity}{Unity} render pipeline.   \\\cline{1-2}
+\end{longtabu}

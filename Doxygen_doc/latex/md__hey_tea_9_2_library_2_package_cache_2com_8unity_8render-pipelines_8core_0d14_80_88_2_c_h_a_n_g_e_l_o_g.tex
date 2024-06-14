@@ -1,0 +1,464 @@
+\chapter{Changelog}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g}\index{Changelog@{Changelog}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1674}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1674}%
+All notable changes to this package will be documented in this file.
+
+The format is based on \href{http://keepachangelog.com/en/1.0.0/}{\texttt{ Keep a Changelog}} and this project adheres to \href{http://semver.org/spec/v2.0.0.html}{\texttt{ Semantic Versioning}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1675}{}\doxysection{\texorpdfstring{\mbox{[}Unreleased\mbox{]}}{\mbox{[}Unreleased\mbox{]}}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1675}
+Version Updated The version number for this package has increased due to a version update of a related graphics package.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1676}{}\doxysection{\texorpdfstring{\mbox{[}14.\+0.\+7\mbox{]} -\/ 2023-\/05-\/23}{\mbox{[}14.\+0.\+7\mbox{]} -\/ 2023-\/05-\/23}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1676}
+This version is compatible with \doxylink{namespace_unity}{Unity} 2022.\+2.\+22f1.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1677}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1677}
+
+\begin{DoxyItemize}
+\item Fixed Decal Projector Editor fields so they are now saved when editing a prefab.
+\item Revert Property for animation curves on Volume Components
+\item Fixed an IES Importer issue producing incorrect results.
+\item Crash on keywords\+::\+Local\+Keyword\+State\+::\+Reset\+With\+Space when shader contains Grab Pass.
+\item Fixed SRPs not being able to build using mode -\/nographics and -\/batchmode, since lens flare global texture prevents this from happening.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1678}{}\doxysection{\texorpdfstring{\mbox{[}14.\+0.\+6\mbox{]} -\/ 2023-\/03-\/24}{\mbox{[}14.\+0.\+6\mbox{]} -\/ 2023-\/03-\/24}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1678}
+This version is compatible with \doxylink{namespace_unity}{Unity} 2022.\+2.\+13f1.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1679}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1679}
+
+\begin{DoxyItemize}
+\item Fixed a Render Graph bug where culled passes would be delegated to releasing a resource, resulting in unwanted leaking.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1680}{}\doxysection{\texorpdfstring{\mbox{[}14.\+0.\+5\mbox{]} -\/ 2022-\/12-\/12}{\mbox{[}14.\+0.\+5\mbox{]} -\/ 2022-\/12-\/12}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1680}
+This version is compatible with \doxylink{namespace_unity}{Unity} 2022.\+2.\+4f1.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1681}{}\doxysubsection{\texorpdfstring{Changed}{Changed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1681}
+
+\begin{DoxyItemize}
+\item Allow Volume\+Component Bool\+Parameter UI to display enabled/disabled dropdown instead of checkboxes.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1682}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1682}
+
+\begin{DoxyItemize}
+\item Fixed Light Editor didn\textquotesingle{}t apply changes to Serialized\+Object.
+\item Added Local mode to fit Probe Volumes to scene.
+\item Fixed recalculating of apv probe positions.
+\item Fixed virtual offset pushing probes outside of geometry.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1683}{}\doxysection{\texorpdfstring{\mbox{[}14.\+0.\+4\mbox{]} -\/ 2022-\/11-\/04}{\mbox{[}14.\+0.\+4\mbox{]} -\/ 2022-\/11-\/04}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1683}
+This version is compatible with \doxylink{namespace_unity}{Unity} 2022.\+2.\+2f1.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1684}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1684}
+
+\begin{DoxyItemize}
+\item Extension method to fetch the Render Pipeline assets from a Build\+Target.
+\item New XRSystem API to allow SRPs override the XR built-\/in stereo matrices.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1685}{}\doxysubsection{\texorpdfstring{Changed}{Changed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1685}
+
+\begin{DoxyItemize}
+\item Improved performance of APV baking.
+\item Allow setting order for panels on the rendering debugger.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1686}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1686}
+
+\begin{DoxyItemize}
+\item Fixed the reset of APV volume placement when using multi selection.
+\item Fixed an issue so that APV dilated data not being written back to disk.
+\item Fixed realtime subdivision so it culls empty cells.
+\item Hid the warning on the reflection probe if you disable APV.
+\item Fixed so that data isn\textquotesingle{}t cleared for probes to be dilated into, to avoid bright colored splotches.
+\item Fixed probes so that the max distance between then are respected.
+\item Fixed uninitialized memory for virtual offset.
+\item Fixed NaN when you bake high intensity lights.
+\item Fixed the APV touchup volume test so it uses OBB instead of AABB.
+\item Fixed null reference when you enable the Camera in a project with multiple SRPs installed.
+\item Volume Component Editor Foldouts states are now stored by type instead of by position.
+\item Fixed Serialized\+Object\+Not\+Creatable\+Exception on Volume Component Editors.
+\item Fixed null reference exception when settings null Render Pipeline Global settings on the Settings provider.
+\item Fixed swapping Volume Component in a Volume profile with mixed pipeline Volume Components.
+\item Default Volume Profile can now be recovered when it is being deleted from the project folder.
+\item Fixed editor drawer for Value tuples in the Rendering Debugger.
+\item Fixed an issue where Free\+Camera would print an error when using old Input\+System.
+\item Fixed missing subdivision label when looking at APV realtime subdivision preview.
+\item Fixed shadow cascade editor so the snatches now appear and the gradient appearance is improved.
+\item Fixed global probe volumes not fitting to all objects.
+\item Fixed dropdowns for multiple editors.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1687}{}\doxysection{\texorpdfstring{\mbox{[}14.\+0.\+3\mbox{]} -\/ 2021-\/05-\/09}{\mbox{[}14.\+0.\+3\mbox{]} -\/ 2021-\/05-\/09}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1687}
+This version is compatible with \doxylink{namespace_unity}{Unity} 2022.\+2.\+0b15.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1688}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1688}
+
+\begin{DoxyItemize}
+\item Added Shader Stripping Watcher so you get notifications when a Shader Variant is stripped.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1689}{}\doxysection{\texorpdfstring{\mbox{[}14.\+0.\+2\mbox{]} -\/ 2021-\/02-\/04}{\mbox{[}14.\+0.\+2\mbox{]} -\/ 2021-\/02-\/04}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1689}
+This version is compatible with \doxylink{namespace_unity}{Unity} 2022.\+2.\+0a14.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1690}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1690}
+
+\begin{DoxyItemize}
+\item Added new extension {\ttfamily Try\+Remove\+Elements\+In\+Range} to remove a range of elements from a {\ttfamily IList}.
+\item Added error on Resource\+Reloader when attempting to use \mbox{[}Reload\+Group\mbox{]} on Scriptable\+Object.
+\item Added Screen Coordinates Override shader utilities.
+\item Added API to blend between baking states for Probe Volumes.
+\item Aded explicit control over scenario blending factor and a debug mode for visualization.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1691}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1691}
+
+\begin{DoxyItemize}
+\item Fixed texture gather macros for GLCore and moved them from target 4.\+6 to target 4.\+5.
+\item Fixed cubemap array macros for GLCore.
+\item Fixed regression on Resource\+Reloader due to change for supporting built-\/in resources.
+\item Fixed issue with debug markers in \doxylink{namespace_unity}{Unity} Profiler in deep profiler mode
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1692}{}\doxysection{\texorpdfstring{\mbox{[}14.\+0.\+1\mbox{]} -\/ 2021-\/12-\/07}{\mbox{[}14.\+0.\+1\mbox{]} -\/ 2021-\/12-\/07}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1692}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1693}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1693}
+
+\begin{DoxyItemize}
+\item Linear version of function that sets FSR RCAS shader constants
+\item {\ttfamily Debug\+UI.\+Object\+Popup\+Field} to render a list of {\ttfamily Unity\+Engine.\+Objects} as a popup on the Rendering Debugger.
+\item Add probe volume influence weight parameter
+\item Added support for multiple Baking States to Prove Volumes.
+\item Hidding Volume Components not available for the current pipeline on the Volume Profile Inspector.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1694}{}\doxysubsection{\texorpdfstring{Changed}{Changed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1694}
+
+\begin{DoxyItemize}
+\item Volume Component editor are now specified by {\ttfamily Custom\+Editor\+Attribute} instead of {\ttfamily Volume\+Component\+Editor\+Attribute}.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1695}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1695}
+
+\begin{DoxyItemize}
+\item The Volume Panel on the Rendering Debugger was not corretly showing cameras when they were added or deleted.
+\item Fixed issue in Dynamic\+Resolution\+Handler when camera request was turned off at runtime, the Scalable\+Buffer\+Manager would leak state and not unset DRS state (case 1383093).
+\item Fixed undo in for {\ttfamily Debug\+UI.\+Enum\+Fields} on the rendering debugger. (case 1386964)
+\item Fixed {\ttfamily Debug\+UI.\+Enum} fields collapsing their parent {\ttfamily Debug\+UI.\+Foldout}
+\item Fixed IES profile importer handling of overflow (outside 0-\/1 range) of attenutation splines values.
+\item Fixed issue with Probe Volume Baking window incorrectly displaying the icon for probe volumes in scenes that don\textquotesingle{}t contain probe volumes.
+\item Fixed unnecessary memory allocation inside FSR\textquotesingle{}s RCAS shader constants helper function.
+\item Fixed the issue with the special Turkish i, when looking for the m\+\_\+\+Is\+Global property in Volume\+Editor. (case 1276892)
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1696}{}\doxysection{\texorpdfstring{\mbox{[}14.\+0.\+0\mbox{]} -\/ 2021-\/11-\/17}{\mbox{[}14.\+0.\+0\mbox{]} -\/ 2021-\/11-\/17}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1696}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1697}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1697}
+
+\begin{DoxyItemize}
+\item Context menu on Volume Parameters to restore them to their default values.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1698}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1698}
+
+\begin{DoxyItemize}
+\item Fixed XR support in Core\+Utils.\+Draw\+Fullscreen function.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1699}{}\doxysubsection{\texorpdfstring{Changed}{Changed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1699}
+
+\begin{DoxyItemize}
+\item Removed FSR\+\_\+\+ENABLE\+\_\+16\+BIT option from FSRCommon.\+hlsl. The 16-\/bit FSR implementation is now automatically enabled when supported by the target platform.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1700}{}\doxysection{\texorpdfstring{\mbox{[}13.\+1.\+2\mbox{]} -\/ 2021-\/11-\/05}{\mbox{[}13.\+1.\+2\mbox{]} -\/ 2021-\/11-\/05}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1700}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1701}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1701}
+
+\begin{DoxyItemize}
+\item Added function to allocate RTHandles using {\ttfamily Render\+Texture\+Descriptor}.
+\item Added {\ttfamily vr\+Usage} support for RTHandles allocation.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1702}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1702}
+
+\begin{DoxyItemize}
+\item Fixed issue when changing volume profiles at runtime with a script (case 1364256).
+\item Fixed XR support in Core\+Utils.\+Draw\+Fullscreen function.
+\item Fixed an issue causing Render Graph execution errors after a random amount of time.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1703}{}\doxysection{\texorpdfstring{\mbox{[}13.\+1.\+1\mbox{]} -\/ 2021-\/10-\/04}{\mbox{[}13.\+1.\+1\mbox{]} -\/ 2021-\/10-\/04}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1703}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1704}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1704}
+
+\begin{DoxyItemize}
+\item Added support for high performant unsafe (uint only) Radix, Merge and Insertion sort algorithms on Core\+Unsafe\+Utils.
+\item Added Debug\+Frame\+Timing class that can be used by render pipelines to display CPU/\+GPU frame timings and bottlenecks in Rendering Debugger.
+\item Added new Debug\+UI widget types\+: Progress\+Bar\+Value and Value\+Tuple
+\item Added common support code for FSR.
+\item Added new {\ttfamily Render\+Pipeline\+Global\+Settings\+Provider} to help adding a settings panel for editing global settings.
+\item Added blending for curves in post processing volumes.
+\item New extension for Render Pipeline Global Settings for shader variants settings -\/\texorpdfstring{$>$}{>} {\ttfamily IShader\+Variants\+Settings}.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1705}{}\doxysection{\texorpdfstring{\mbox{[}13.\+1.\+0\mbox{]} -\/ 2021-\/09-\/24}{\mbox{[}13.\+1.\+0\mbox{]} -\/ 2021-\/09-\/24}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1705}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1706}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1706}
+
+\begin{DoxyItemize}
+\item Debug Panels Framework See {\ttfamily IDebug\+Display\+Settings\+Query}.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1707}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1707}
+
+\begin{DoxyItemize}
+\item Fixed keyword and float property upgrading in Speed\+Tree8\+Material\+Upgrader
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1708}{}\doxysection{\texorpdfstring{\mbox{[}13.\+0.\+0\mbox{]} -\/ 2021-\/09-\/01}{\mbox{[}13.\+0.\+0\mbox{]} -\/ 2021-\/09-\/01}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1708}
+Version Updated The version number for this package has increased due to a version update of a related graphics package.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1709}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1709}
+
+\begin{DoxyItemize}
+\item New {\ttfamily IVolume\+Debug\+Settings} interface and {\ttfamily Volume\+Debug\+Settings\texorpdfstring{$<$}{<}T\texorpdfstring{$>$}{>}} class that stores the information for the Volumes Debug Panel.
+\item Added AMD Fidelity\+FX shaders which were originally in HDRP
+\item Added support for high performant unsafe (uint only) Radix, Merge and Insertion sort algorithms on Core\+Unsafe\+Utils.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1710}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1710}
+
+\begin{DoxyItemize}
+\item Fixed black pixel issue in AMD Fidelity\+FX RCAS implementation
+\item Fixed a critical issue on android devices \& lens flares. Accidentally creating a 16 bit texture was causing gpus not supporting them to fail.
+\item Fixed serialization of Debug\+State\+Flags, the internal Enum was not being serialized.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1711}{}\doxysection{\texorpdfstring{\mbox{[}12.\+0.\+0\mbox{]} -\/ 2021-\/01-\/11}{\mbox{[}12.\+0.\+0\mbox{]} -\/ 2021-\/01-\/11}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1711}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1712}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1712}
+
+\begin{DoxyItemize}
+\item Support for the Play\+Station 5 platform has been added.
+\item Support for additional properties for Volume Components without custom editor
+\item Added Volume\+Component\+Menu\+For\+Render\+Pipeline\+Attribute to specify a volume component only for certain Render\+Pipelines.
+\item Calculating correct rt\+Handle\+Scale by considering the possible pixel rounding when DRS is on
+\item Support for the Play\+Station 5 platform has been added.
+\item Support for the Xbox\+Series platform has been added.
+\item Added Editor window that allow showing an icon to browse the documentation
+\item New method Draw\+Headers for Volume\+Components\+Editors
+\item Unification of Material Editor Headers Scopes
+\item New API functions with no side effects in Dynamic\+Resolution\+Handler, to retrieve resolved drs scale and to apply DRS on a size.
+\item Added helper for Volumes (Enable All Overrides, Disable All Overrides, Remove All Overrides).
+\item Added a blitter utility class. Moved from HDRP to RP core.
+\item Added a realtime 2D texture atlas utility classes. Moved from HDRP to RP core.
+\item New methods on Core\+Editor\+Drawers, to allow adding a label on a group before rendering the internal drawers
+\item Method to generate a Texture2D of 1x1 with a plain color
+\item Red, Green, Blue Texture2D on Core\+Editor\+Styles
+\item New API in Dynamic\+Resolution\+Handler to handle multicamera rendering for hardware mode. Changing cameras and resetting scaling per camera should be safe.
+\item Added Speed\+Tree8\+Material\+Upgrader, which provides utilities for upgrading and importing Speed\+Tree 8 assets to scriptable render pipelines.
+\item Adding documentation links to Light Sections
+\item Support for Lens Flare Data Driven (from images and Procedural shapes), on HDRP
+\item New SRPLens\+Flare\+Data Asset
+\item Adding documentation links to Light Sections.
+\item Added sampling noise to probe volume sampling position to hide seams between subdivision levels.
+\item Added Debug\+UI.\+Foldout.\+is\+Header property to allow creating full-\/width header foldouts in Rendering Debugger.
+\item Added Debug\+UI.\+Flags.\+Is\+Hidden to allow conditional display of widgets in Rendering Debugger.
+\item Added "{}\+Expand/\+Collapse All"{} buttons to Rendering Debugger window menu.
+\item Added mouse \& touch input support for Rendering Debugger runtime UI, and fix problems when Input\+System package is used.
+\item Add automatic spaces to enum display names used in Rendering Debugger and add support for Inspector\+Name\+Attribute.
+\item Adding new API functions inside Dynamic\+Resolution\+Handler to get mip bias. This allows dynamic resolution scaling applying a bias on the frame to improve on texture sampling detail.
+\item Added a reminder if the data of probe volume might be obsolete.
+\item Added new API function inside Dynamic\+Resolution\+Handler and new settings in Global\+Dynamic\+Resolution\+Settings to control low res transparency thresholds. This should help visuals when the screen percentage is too low.
+\item Added common include file for meta pass functionality (case 1211436)
+\item Added Overridable\+Property\+Scope (for Volume\+Component\+Editor child class only) to handle the Additional Property, the override checkbox and disable display and decorator attributes in one scope.
+\item Added Indent\+Level\+Scope (for Volume\+Component\+Editor child class only) to handle indentation of the field and the checkbox.
+\item Added an option to change the visibilty of the Volumes Gizmos (Solid, Wireframe, Everything), available at Preferences \texorpdfstring{$>$}{>} \doxylink{namespace_core}{Core} Render Pipeline
+\item Added class for drawing shadow cascades {\ttfamily Unity\+Editor.\+Rendering.\+Shadow\+Cascade\+GUI.\+Draw\+Shadow\+Cascades}.
+\item Added UNITY\+\_\+\+PREV\+\_\+\+MATRIX\+\_\+M and UNITY\+\_\+\+PREV\+\_\+\+MATRIX\+\_\+\+I\+\_\+M shader macros to support instanced motion vector rendering
+\item Added new API to customize the rt\+Handle\+Properties of a particular RTHandle. This is a temporary work around to assist with viewport setup of Custom post process when dealing with DLSS or TAAU
+\item Added {\ttfamily IAdditional\+Data} interface to identify the additional datas on the core package.
+\item Added new API to draw color temperature for Lights.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1713}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1713}
+
+\begin{DoxyItemize}
+\item Help boxes with fix buttons do not crop the label.
+\item Fixed missing warning UI about Projector component being unsupported (case 1300327).
+\item Fixed the display name of a Volume Parameter when is defined the attribute Inspector\+Name
+\item Calculating correct rt\+Handle\+Scale by considering the possible pixel rounding when DRS is on
+\item Problem on domain reload of Volume Parameter Ranges and UI values
+\item Fixed Right Align of additional properties on Volume Components Editors
+\item Fixed normal bias field of reference volume being wrong until the profile UI was displayed.
+\item Fixed L2 for Probe Volumes.
+\item When adding Overrides to the Volume Profile, only show Volume Components from the current Pipeline.
+\item Fixed assertion on compression of L1 coefficients for Probe Volume.
+\item Explicit half precision not working even when Unified Shader Precision Model is enabled.
+\item Fixed ACES filter artefact due to half float error on some mobile platforms.
+\item Fixed issue displaying a warning of different probe reference volume profiles even when they are equivalent.
+\item Fixed missing increment/decrement controls from Debug\+UIInt\+Field \& Debug\+UIUInt\+Field widget prefabs.
+\item Fixed IES Importer related to new API on core.
+\item Fixed a large, visible stretch ratio in a Lens\+Flare Image thumbnail.
+\item Fixed Undo from script refreshing thumbnail.
+\item Fixed cropped thumbnail for Image with non-\/uniform scale and rotation
+\item Skip wind calculations for Speed Tree 8 when wind vector is zero (case 1343002)
+\item Fixed memory leak when changing SRP pipeline settings, and having the player in pause mode.
+\item Fixed alignment in Volume Components
+\item Virtual Texturing fallback texture sampling code correctly honors the enable\+Global\+Mip\+Bias when virtual texturing is disabled.
+\item Fixed Light\+Anchor too much error message, became a Help\+Box on the Inspector.
+\item Fixed library function Surface\+Gradient\+From\+Triplanar\+Projection to match the mapping convention used in Sample\+UVMapping\+Normal\+Internal.\+hlsl and fix its description.
+\item Fixed Volume Gizmo size when rescaling parent Game\+Object
+\item Fixed rotation issue now all flare rotate on positive direction (1348570)
+\item Fixed error when change Lens Flare Element Count followed by undo (1346894)
+\item Fixed Lens Flare Thumbnails
+\item Fixed Lens Flare \textquotesingle{}radial\+Screen\+Attenuation\+Curve invisible\textquotesingle{}
+\item Fixed Lens Flare rotation for Curve Distribution
+\item Fixed potentially conflicting runtime Rendering Debugger UI command by adding an option to disable runtime UI altogether (1345783).
+\item Fixed Lens Flare position for celestial at very far camera distances. It now locks correctly into the celestial position regardless of camera distance (1363291)
+\item Fixed issues caused by automatically added Event\+System component, required to support Rendering Debugger Runtime UI input. (1361901)
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1714}{}\doxysubsection{\texorpdfstring{Changed}{Changed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1714}
+
+\begin{DoxyItemize}
+\item Improved the warning messages for Volumes and their Colliders.
+\item Changed Window/\+Render Pipeline/\+Render Pipeline Debug to Window/\+Analysis/\+Rendering Debugger
+\item Changed Window/\+Render Pipeline/\+Look Dev to Window/\+Analysis/\+Look Dev
+\item Changed Window/\+Render Pipeline/\+Render Graph Viewer to Window/\+Analysis/\+Render Graph Viewer
+\item Changed Window/\+Render Pipeline/\+Graphics Compositor to Window/\+Rendering/\+Graphics Compositor
+\item Volume Gizmo Color setting is now under Colors-\/\texorpdfstring{$>$}{>}Scene-\/\texorpdfstring{$>$}{>}Volume Gizmo
+\item Volume Gizmo alpha changed from 0.\+5 to 0.\+125
+\item Moved Edit/\+Render Pipeline/\+Generate Shader Includes to Edit/\+Rendering/\+Generate Shader Includes
+\item Moved Assets/\+Create/\+Look\+Dev/\+Environment Library to Assets/\+Create/\+Rendering/\+Environment Library (Look Dev)
+\item Changed Nintendo Switch specific half float fixes in color conversion routines to all platforms.
+\item Improved load asset time for probe volumes.
+\item Clear\+Flag.\+Depth does not implicitely clear stencil anymore. Clear\+Flag.\+Stencil added.
+\item The RTHandle\+System no longer requires a specific number of sample for MSAA textures. Number of samples can be chosen independently for all textures.
+\item Platform Shader\+Library API headers now have a new macro layer for 2d texture sampling macros. This layer starts with PLATFORM\+\_\+\+SAMPLE2D definition, and it gives the possibility of injecting sampling behavior on a render pipeline level. For example\+: being able to a global mip bias for temporal upscalers.
+\item Update icon for IES, Light\+Anchor and Lens\+Flare
+\item Lens\+Flare (SRP) can be now disabled per element
+\item Lens\+Flare (SRP) tooltips now refer to meters.
+\item Serialize the Probe Volume asset as binary to improve footprint on disk and loading speed.
+\item Lens\+Flare Element editor now have Thumbnail preview
+\item Improved Integrate\+LDCharlie() to use uniform stratified sampling for faster convergence towards the ground truth
+\item Dynamic\+Resolution\+Handler.\+Get\+Scaled\+Size function now clamps, and never allows to return a size greater than its input.
+\item Removed DYNAMIC\+\_\+\+RESOLUTION snippet on lens flare common shader. Its not necessary any more on HDRP, which simplifies the shader.
+\item Made occlusion Radius for lens flares in directional lights, be independant of the camera\textquotesingle{}s far plane.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1715}{}\doxysection{\texorpdfstring{\mbox{[}11.\+0.\+0\mbox{]} -\/ 2020-\/10-\/21}{\mbox{[}11.\+0.\+0\mbox{]} -\/ 2020-\/10-\/21}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1715}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1716}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1716}
+
+\begin{DoxyItemize}
+\item Fixed the default background color for previews to use the original color.
+\item Fixed spacing between property fields on the Volume Component Editors.
+\item Fixed ALL/\+NONE to maintain the state on the Volume Component Editors.
+\item Fixed the selection of the Additional properties from ALL/\+NONE when the option "{}\+Show additional properties"{} is disabled
+\item Fixed ACES tonemaping for Nintendo Switch by forcing some shader color conversion functions to full float precision.
+\item Fixed a bug in Free\+Camera which would only provide a speed boost for the first frame when pressing the Shfit key.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1717}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1717}
+
+\begin{DoxyItemize}
+\item New View Lighting Tool, a component which allow to setup light in the camera space
+\item New function in Geometry\+Tools.\+hlsl to calculate triangle edge and full triangle culling.
+\item Several utils functions to access Spherical\+Harmonics\+L2 in a more verbose and intuitive fashion.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1718}{}\doxysection{\texorpdfstring{\mbox{[}10.\+2.\+0\mbox{]} -\/ 2020-\/10-\/19}{\mbox{[}10.\+2.\+0\mbox{]} -\/ 2020-\/10-\/19}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1718}
+Version Updated The version number for this package has increased due to a version update of a related graphics package.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1719}{}\doxysection{\texorpdfstring{\mbox{[}10.\+1.\+0\mbox{]} -\/ 2020-\/10-\/12}{\mbox{[}10.\+1.\+0\mbox{]} -\/ 2020-\/10-\/12}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1719}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1720}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1720}
+
+\begin{DoxyItemize}
+\item Added context options "{}\+Move to Top"{}, "{}\+Move to Bottom"{}, "{}\+Expand All"{} and "{}\+Collapse All"{} for volume components.
+\item Added the support of input system V2
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1721}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1721}
+
+\begin{DoxyItemize}
+\item Fixed the scene view to scale correctly when hardware dynamic resolution is enabled (case 1158661)
+\item Fixed game view artifacts on resizing when hardware dynamic resolution was enabled
+\item Fixed issue that caused {\ttfamily UNITY\+\_\+\+REVERSED\+\_\+Z} and {\ttfamily UNITY\+\_\+\+UV\+\_\+\+STARTS\+\_\+\+AT\+\_\+\+TOP} being defined in platforms that don\textquotesingle{}t support it.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1722}{}\doxysubsection{\texorpdfstring{Changed}{Changed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1722}
+
+\begin{DoxyItemize}
+\item Look\+Dev menu item entry is now disabled if the current pipeline does not support it.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1723}{}\doxysection{\texorpdfstring{\mbox{[}10.\+0.\+0\mbox{]} -\/ 2019-\/06-\/10}{\mbox{[}10.\+0.\+0\mbox{]} -\/ 2019-\/06-\/10}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1723}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1724}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1724}
+
+\begin{DoxyItemize}
+\item Add rough version of Contextual\+Menu\+Dispatcher to solve conflict amongst SRP.
+\item Add api documentation for Texture\+Combiner.
+\item Add tooltips in Look\+Dev\textquotesingle{}s toolbar.
+\item Add XRGraphics\+Automated\+Tests helper class.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1725}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1725}
+
+\begin{DoxyItemize}
+\item Fixed compile errors for platforms with no VR support
+\item Replaced reference to Lightweight Render Pipeline by Universal Render Pipeline in the package description
+\item Fixed Ligh\+Probes when using Look\+Dev.
+\item Fix Look\+Dev minimal window size.
+\item Fix object rotation at instentiation to keep the one in prefab or used in hierarchy.
+\item Fixed shader compile errors when trying to use tessellation shaders with Play\+Station VR on PS4.
+\item Fixed shader compile errors about LODDithering\+Transition not being supported in GLES2.
+\item Fix {\ttfamily Wave\+Is\+First\+Lane()} to ignore helper lanes in fragment shaders on PS4.
+\item Fixed a bug where \doxylink{namespace_unity}{Unity} would crash if you tried to remove a Camera component from a Game\+Object using the Inspector window, while other components dependended on the Camera component.
+\item Fixed errors due to the debug menu when enabling the new input system.
+\item Fix Look\+Dev FPS manipulation in view
+\item Fix Look\+Dev zoom being stuck when going near camera pivot position
+\item Fix Look\+Dev manipulation in view non responsive if directly using an HDRI
+\item Fix Look\+Dev behaviour when user delete the Environment\+Library asset
+\item Fix Look\+Dev Sun\+Position button position
+\item Fix Look\+Dev Environment\+Library tab when asset is deleted
+\item Fix Look\+Dev used Cubemap when asset is deleted
+\item Fixed the definition of {\ttfamily rcp()} for GLES2.
+\item Fixed copy/pasting of Volume Components when loading a new scene
+\item Fix Look\+Dev issue when adding a Game\+Object containing a Volume into the Look\+Dev\textquotesingle{}s view.
+\item Fixed duplicated entry for com.\+unity.\+modules.\+xr in the runtime asmdef file
+\item Fixed the texture curve being destroyed from another thread than main (case 1211754)
+\item Fixed unreachable code in Texture\+XR.\+use\+Tex\+Array
+\item Fixed GC pressure caused by {\ttfamily Volume\+Parameter\texorpdfstring{$<$}{<}T\texorpdfstring{$>$}{>}.Get\+Hash\+Code()}
+\item Fixed issue when Look\+Dev window is opened and the Core\+RP Package is updated to a newer version.
+\item Fix Look\+Dev\textquotesingle{}s camera button layout.
+\item Fix Look\+Dev\textquotesingle{}s layout vanishing on domain reload.
+\item Fixed issue with the shader Transform\+World\+To\+HClip\+Dir function computing the wrong result.
+\item Fixed division by zero in {\ttfamily V\+\_\+\+Smith\+Joint\+GGX} function.
+\item Fixed null reference exception in Look\+Dev when setting the SRP to one not implementing Look\+Dev (case 1245086)
+\item Fix Look\+Dev\textquotesingle{}s undo/redo on Environment\+Library (case 1234725)
+\item Fix a compil error on Open\+GL ES2 in directional lightmap sampling shader code
+\item Fix hierarchicalbox gizmo outside facing check in symetry or homothety mode no longer move the center
+\item Fix artifacts on Adreno 630 GPUs when using ACES Tonemapping
+\item Fixed a null ref in the volume component list when there is no volume components in the project.
+\item Fixed issue with volume manager trying to access a null volume.
+\item HLSL codegen will work with C\# file using both the {\ttfamily Generate\+HLSL} and C\# 7 features.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1726}{}\doxysubsection{\texorpdfstring{Changed}{Changed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1726}
+
+\begin{DoxyItemize}
+\item Restored usage of ENABLE\+\_\+\+VR to fix compilation errors on some platforms.
+\item Only call Set\+Dirty on an object when actually modifying it in SRP updater utility
+\item Set depth\+Slice to -\/1 by default on Set\+Render\+Target() to clear all slices of Texture2\+DArray by default.
+\item Resource\+Reloader will now add additional Invalid\+Import check while it cannot load due to Asset\+Database not available.
+\item Replaced calls to deprecated Player\+Settings.\+virtual\+Reality\+Supported property.
+\item Enable RWTexture2D, RWTexture2\+DArray, RWTexture3D in gles 3.\+1
+\item Updated macros to be compatible with the new shader preprocessor.
+\item Updated shaders to be compatible with \doxylink{namespace_microsoft}{Microsoft}\textquotesingle{}s DXC.
+\item Changed Command\+Buffer\+Pool.\+Get() to create an unnamed Command\+Buffer. (No profiling markers)
+\item Deprecating Volume\+Component\+Deprecad, using Hide\+In\+Inspector or Obsolete instead
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1727}{}\doxysection{\texorpdfstring{\mbox{[}7.\+1.\+1\mbox{]} -\/ 2019-\/09-\/05}{\mbox{[}7.\+1.\+1\mbox{]} -\/ 2019-\/09-\/05}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1727}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1728}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1728}
+
+\begin{DoxyItemize}
+\item Add separated debug mode in Look\+Dev.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1729}{}\doxysubsection{\texorpdfstring{Changed}{Changed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1729}
+
+\begin{DoxyItemize}
+\item Replaced usage of ENABLE\+\_\+\+VR in XRGraphics.\+cs by a version define (ENABLE\+\_\+\+VR\+\_\+\+MODULE) based on the presence of the built-\/in VR module
+\item {\ttfamily Resource\+Reloader} now works on non-\/public fields.
+\item Removed {\ttfamily normalize} from {\ttfamily Unpack\+Normal\+RGB} to match {\ttfamily Unpack\+Normal\+AG}.
+\item Fixed shadow routines compilation errors when "{}real"{} type is a typedef on "{}half"{}.
+\item Removed debug menu in non development build.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1730}{}\doxysection{\texorpdfstring{\mbox{[}7.\+0.\+1\mbox{]} -\/ 2019-\/07-\/25}{\mbox{[}7.\+0.\+1\mbox{]} -\/ 2019-\/07-\/25}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1730}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1731}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1731}
+
+\begin{DoxyItemize}
+\item Fixed a precision issue with the ACES tonemapper on mobile platforms.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1732}{}\doxysection{\texorpdfstring{\mbox{[}7.\+0.\+0\mbox{]} -\/ 2019-\/07-\/17}{\mbox{[}7.\+0.\+0\mbox{]} -\/ 2019-\/07-\/17}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1732}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1733}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1733}
+
+\begin{DoxyItemize}
+\item First experimental version of the Look\+Dev. Works with all SRP. Only branched on HDRP at the moment.
+\item Look\+Dev out of experimental
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1734}{}\doxysection{\texorpdfstring{\mbox{[}6.\+7.\+0-\/preview\mbox{]} -\/ 2019-\/05-\/16}{\mbox{[}6.\+7.\+0-\/preview\mbox{]} -\/ 2019-\/05-\/16}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1734}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1735}{}\doxysection{\texorpdfstring{\mbox{[}6.\+6.\+0\mbox{]} -\/ 2019-\/04-\/01}{\mbox{[}6.\+6.\+0\mbox{]} -\/ 2019-\/04-\/01}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1735}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1736}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1736}
+
+\begin{DoxyItemize}
+\item Fixed compile errors in XRGraphics.\+cs when ENABLE\+\_\+\+VR is not defined
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1737}{}\doxysection{\texorpdfstring{\mbox{[}6.\+5.\+0\mbox{]} -\/ 2019-\/03-\/07}{\mbox{[}6.\+5.\+0\mbox{]} -\/ 2019-\/03-\/07}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1737}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1738}{}\doxysection{\texorpdfstring{\mbox{[}6.\+4.\+0\mbox{]} -\/ 2019-\/02-\/21}{\mbox{[}6.\+4.\+0\mbox{]} -\/ 2019-\/02-\/21}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1738}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1739}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1739}
+
+\begin{DoxyItemize}
+\item Enabled support for CBUFFER on Open\+GL \doxylink{namespace_core}{Core} and Open\+GL ES 3 backends.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1740}{}\doxysection{\texorpdfstring{\mbox{[}6.\+3.\+0\mbox{]} -\/ 2019-\/02-\/18}{\mbox{[}6.\+3.\+0\mbox{]} -\/ 2019-\/02-\/18}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1740}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1741}{}\doxysection{\texorpdfstring{\mbox{[}6.\+2.\+0\mbox{]} -\/ 2019-\/02-\/15}{\mbox{[}6.\+2.\+0\mbox{]} -\/ 2019-\/02-\/15}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1741}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1742}{}\doxysection{\texorpdfstring{\mbox{[}6.\+1.\+0\mbox{]} -\/ 2019-\/02-\/13}{\mbox{[}6.\+1.\+0\mbox{]} -\/ 2019-\/02-\/13}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1742}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1743}{}\doxysection{\texorpdfstring{\mbox{[}6.\+0.\+0\mbox{]} -\/ 2019-\/02-\/23}{\mbox{[}6.\+0.\+0\mbox{]} -\/ 2019-\/02-\/23}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1743}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1744}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1744}
+
+\begin{DoxyItemize}
+\item Fixed a typo in ERROR\+\_\+\+ON\+\_\+\+UNSUPPORTED\+\_\+\+FUNCTION() that was causing the shader compiler to run out of memory in GLES2. \mbox{[}Case 1104271\mbox{]} (\href{https://issuetracker.unity3d.com/issues/mobile-os-restarts-because-of-high-memory-usage-when-compiling-shaders-for-opengles2}{\texttt{ https\+://issuetracker.\+unity3d.\+com/issues/mobile-\/os-\/restarts-\/because-\/of-\/high-\/memory-\/usage-\/when-\/compiling-\/shaders-\/for-\/opengles2}})
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1745}{}\doxysection{\texorpdfstring{\mbox{[}5.\+2.\+0\mbox{]} -\/ 2018-\/11-\/27}{\mbox{[}5.\+2.\+0\mbox{]} -\/ 2018-\/11-\/27}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1745}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1746}{}\doxysection{\texorpdfstring{\mbox{[}5.\+1.\+0\mbox{]} -\/ 2018-\/11-\/19}{\mbox{[}5.\+1.\+0\mbox{]} -\/ 2018-\/11-\/19}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1746}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1747}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1747}
+
+\begin{DoxyItemize}
+\item Added a define for determining if any instancing path is taken.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1748}{}\doxysubsection{\texorpdfstring{Changed}{Changed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1748}
+
+\begin{DoxyItemize}
+\item The \doxylink{namespace_core}{Core} SRP package is no longer in preview.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1749}{}\doxysection{\texorpdfstring{\mbox{[}5.\+0.\+0-\/preview\mbox{]} -\/ 2018-\/10-\/18}{\mbox{[}5.\+0.\+0-\/preview\mbox{]} -\/ 2018-\/10-\/18}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1749}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1750}{}\doxysubsection{\texorpdfstring{Changed}{Changed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1750}
+
+\begin{DoxyItemize}
+\item XRGraphic\+Config has been changed from a read-\/write control of XRSettings to XRGraphics, a read-\/only accessor to XRSettings. This improves consistency of XR behavior between the legacy render pipeline and SRP.
+\item XRGraphics members have been renamed to match XRSettings, and XRGraphics has been modified to only contain accessors potentially useful to SRP
+\item You can now have up to 16 additional shadow-\/casting lights. 
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1751}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1751}
+
+\begin{DoxyItemize}
+\item LWRP no longer executes shadow passes when there are no visible shadow casters in a Scene. Previously, this made the Scene render as too dark, overall.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1752}{}\doxysection{\texorpdfstring{\mbox{[}4.\+0.\+0-\/preview\mbox{]} -\/ 2018-\/09-\/28}{\mbox{[}4.\+0.\+0-\/preview\mbox{]} -\/ 2018-\/09-\/28}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1752}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1753}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1753}
+
+\begin{DoxyItemize}
+\item Space transform functions are now defined in {\ttfamily Shader\+Library/\+Space\+Transforms.\+hlsl}. 
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1754}{}\doxysubsection{\texorpdfstring{Changed}{Changed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1754}
+
+\begin{DoxyItemize}
+\item Removed setting shader inclue path via old API, use package shader include paths
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1755}{}\doxysection{\texorpdfstring{\mbox{[}3.\+3.\+0\mbox{]} -\/ 2018-\/01-\/01}{\mbox{[}3.\+3.\+0\mbox{]} -\/ 2018-\/01-\/01}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1755}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1756}{}\doxysection{\texorpdfstring{\mbox{[}3.\+2.\+0\mbox{]} -\/ 2018-\/01-\/01}{\mbox{[}3.\+2.\+0\mbox{]} -\/ 2018-\/01-\/01}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1756}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1757}{}\doxysection{\texorpdfstring{\mbox{[}3.\+1.\+0\mbox{]} -\/ 2018-\/01-\/01}{\mbox{[}3.\+1.\+0\mbox{]} -\/ 2018-\/01-\/01}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1757}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1758}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1758}
+
+\begin{DoxyItemize}
+\item Add PCSS shadow filter
+\item Added \doxylink{namespace_core}{Core} Edit\+Mode tests
+\item Added \doxylink{namespace_core}{Core} unsafe utilities
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1759}{}\doxysubsection{\texorpdfstring{Improvements}{Improvements}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1759}
+
+\begin{DoxyItemize}
+\item Improved volume UI \& styling
+\item Fixed Core\+Utils.\+Quick\+Sort infinite loop when two elements in the list are equals.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1760}{}\doxysubsection{\texorpdfstring{Changed}{Changed}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8core_0d14_80_88_2_c_h_a_n_g_e_l_o_g_autotoc_md1760}
+
+\begin{DoxyItemize}
+\item Moved root files into folders for easier maintenance 
+\end{DoxyItemize}

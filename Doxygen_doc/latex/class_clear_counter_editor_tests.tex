@@ -1,0 +1,131 @@
+\doxysection{Clear\+Counter\+Editor\+Tests Class Reference}
+\hypertarget{class_clear_counter_editor_tests}{}\label{class_clear_counter_editor_tests}\index{ClearCounterEditorTests@{ClearCounterEditorTests}}
+
+
+Unit tests for the \doxylink{class_clear_counter}{Clear\+Counter} class.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_clear_counter_editor_tests_ac6d722d883073074cc547be0dd9202b3}{Setup}} ()
+\begin{DoxyCompactList}\small\item\em Sets up the test environment before each test. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_clear_counter_editor_tests_a94656efbd171b7cae626a08407b7bd6b}{Clear\+Counter\+Has\+Nothing\+\_\+\+Player\+Has\+Hey\+Tea\+Object}} (Hey\+Tea\+Object\+SO.\+Milk\+Tea\+Material\+Type material\+Type)
+\begin{DoxyCompactList}\small\item\em \mbox{[}TC0101\mbox{]} Tests the scenario where the \doxylink{class_clear_counter}{Clear\+Counter} has nothing, but the \doxylink{class_player}{Player} has a \doxylink{class_hey_tea_object}{Hey\+Tea\+Object(basic\+Add, fruit, none, untreat)}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_clear_counter_editor_tests_a9f0f17bc1ba47d69fe5dc9eb44c7a139}{Clear\+Counter\+Has\+Hey\+Tea\+Object\+\_\+\+Player\+Has\+Nothing}} (Hey\+Tea\+Object\+SO.\+Milk\+Tea\+Material\+Type material\+Type)
+\begin{DoxyCompactList}\small\item\em \mbox{[}TC0102\mbox{]} Tests the scenario where the \doxylink{class_clear_counter}{Clear\+Counter} has a \doxylink{class_hey_tea_object}{Hey\+Tea\+Object}, but the \doxylink{class_player}{Player} has nothing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_clear_counter_editor_tests_adda2bb0f02d47a1d445293e7d7931310}{Clear\+Counter\+\_\+\+Player\+Has\+Nothing}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{[}TC0103\mbox{]} Tests the scenario where both the \doxylink{class_clear_counter}{Clear\+Counter} and the \doxylink{class_player}{Player} have nothing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_clear_counter_editor_tests_a044bc32bd66ab6fa77d2d68e66078b43}{Both\+Clear\+Counter\+And\+Player\+Hold\+Food}} (Hey\+Tea\+Object\+SO.\+Milk\+Tea\+Material\+Type player\+Material\+Type, Hey\+Tea\+Object\+SO.\+Milk\+Tea\+Material\+Type counter\+Material\+Type)
+\begin{DoxyCompactList}\small\item\em \mbox{[}TC0104\mbox{]} Tests the scenario where both the \doxylink{class_clear_counter}{Clear\+Counter} and the \doxylink{class_player}{Player} hold Hey\+Tea\+Objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_clear_counter_editor_tests_a2bda3b4854b53ecb3d100489305b0f85}{Tear\+Down}} ()
+\begin{DoxyCompactList}\small\item\em Tears down the test environment after each test. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Unit tests for the \doxylink{class_clear_counter}{Clear\+Counter} class. 
+
+@detials Class contains unit tests for various interaction scenarios involving the \doxylink{class_clear_counter}{Clear\+Counter} class, such as transferring \doxylink{class_hey_tea_object}{Hey\+Tea\+Object} between the \doxylink{class_player}{Player} and the \doxylink{class_clear_counter}{Clear\+Counter}, and ensuring correct state changes.
+
+\begin{DoxyNote}{Note}
+milk\+Tea\+Material\+Type contains six types\+: tea\+Base, basic\+Add, ingredients, fruit, none, un treat. \doxylink{class_hey_tea_object}{Hey\+Tea\+Object} includes the objects contained in tea\+Base, basic\+Add, ingredients, fruit, none, un treat.
+\begin{DoxyItemize}
+\item tea\+Base\+: tea, milk, milktea
+\item basic\+Add\+: sugar, ice
+\item ingredients\+: red bean cooked, pearl cooked
+\item fruit\+: orange slice, grape slice, strawberry slice
+\item none\+: pot, cup
+\item un treat\+: bagged pearl, bagged red bean, bagged sugar, grape, orange, strawberry 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_clear_counter_editor_tests_a044bc32bd66ab6fa77d2d68e66078b43}\index{ClearCounterEditorTests@{ClearCounterEditorTests}!BothClearCounterAndPlayerHoldFood@{BothClearCounterAndPlayerHoldFood}}
+\index{BothClearCounterAndPlayerHoldFood@{BothClearCounterAndPlayerHoldFood}!ClearCounterEditorTests@{ClearCounterEditorTests}}
+\doxysubsubsection{\texorpdfstring{BothClearCounterAndPlayerHoldFood()}{BothClearCounterAndPlayerHoldFood()}}
+{\footnotesize\ttfamily \label{class_clear_counter_editor_tests_a044bc32bd66ab6fa77d2d68e66078b43} 
+void Clear\+Counter\+Editor\+Tests.\+Both\+Clear\+Counter\+And\+Player\+Hold\+Food (\begin{DoxyParamCaption}\item[{Hey\+Tea\+Object\+SO.\+Milk\+Tea\+Material\+Type}]{player\+Material\+Type}{, }\item[{Hey\+Tea\+Object\+SO.\+Milk\+Tea\+Material\+Type}]{counter\+Material\+Type}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{[}TC0104\mbox{]} Tests the scenario where both the \doxylink{class_clear_counter}{Clear\+Counter} and the \doxylink{class_player}{Player} hold Hey\+Tea\+Objects. 
+
+This test case checks that nothing changes when both the \doxylink{class_clear_counter}{Clear\+Counter} and the \doxylink{class_player}{Player} have Hey\+Tea\+Objects(except pot or cup).
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Material\+Type} & The type of the \doxylink{class_hey_tea_object}{Hey\+Tea\+Object} held by the \doxylink{class_player}{Player}. \\
+\hline
+{\em counter\+Material\+Type} & The type of the \doxylink{class_hey_tea_object}{Hey\+Tea\+Object} held by the \doxylink{class_clear_counter}{Clear\+Counter}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_clear_counter_editor_tests_adda2bb0f02d47a1d445293e7d7931310}\index{ClearCounterEditorTests@{ClearCounterEditorTests}!ClearCounter\_PlayerHasNothing@{ClearCounter\_PlayerHasNothing}}
+\index{ClearCounter\_PlayerHasNothing@{ClearCounter\_PlayerHasNothing}!ClearCounterEditorTests@{ClearCounterEditorTests}}
+\doxysubsubsection{\texorpdfstring{ClearCounter\_PlayerHasNothing()}{ClearCounter\_PlayerHasNothing()}}
+{\footnotesize\ttfamily \label{class_clear_counter_editor_tests_adda2bb0f02d47a1d445293e7d7931310} 
+void Clear\+Counter\+Editor\+Tests.\+Clear\+Counter\+\_\+\+Player\+Has\+Nothing (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{[}TC0103\mbox{]} Tests the scenario where both the \doxylink{class_clear_counter}{Clear\+Counter} and the \doxylink{class_player}{Player} have nothing. 
+
+This test case checks that nothing changes when both the \doxylink{class_clear_counter}{Clear\+Counter} and the \doxylink{class_player}{Player} have no Hey\+Tea\+Objects. \Hypertarget{class_clear_counter_editor_tests_a9f0f17bc1ba47d69fe5dc9eb44c7a139}\index{ClearCounterEditorTests@{ClearCounterEditorTests}!ClearCounterHasHeyTeaObject\_PlayerHasNothing@{ClearCounterHasHeyTeaObject\_PlayerHasNothing}}
+\index{ClearCounterHasHeyTeaObject\_PlayerHasNothing@{ClearCounterHasHeyTeaObject\_PlayerHasNothing}!ClearCounterEditorTests@{ClearCounterEditorTests}}
+\doxysubsubsection{\texorpdfstring{ClearCounterHasHeyTeaObject\_PlayerHasNothing()}{ClearCounterHasHeyTeaObject\_PlayerHasNothing()}}
+{\footnotesize\ttfamily \label{class_clear_counter_editor_tests_a9f0f17bc1ba47d69fe5dc9eb44c7a139} 
+void Clear\+Counter\+Editor\+Tests.\+Clear\+Counter\+Has\+Hey\+Tea\+Object\+\_\+\+Player\+Has\+Nothing (\begin{DoxyParamCaption}\item[{Hey\+Tea\+Object\+SO.\+Milk\+Tea\+Material\+Type}]{material\+Type}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{[}TC0102\mbox{]} Tests the scenario where the \doxylink{class_clear_counter}{Clear\+Counter} has a \doxylink{class_hey_tea_object}{Hey\+Tea\+Object}, but the \doxylink{class_player}{Player} has nothing. 
+
+This test case checks if the \doxylink{class_player}{Player} correctly takes the \doxylink{class_hey_tea_object}{Hey\+Tea\+Object} from the \doxylink{class_clear_counter}{Clear\+Counter}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em material\+Type} & The type of the \doxylink{class_hey_tea_object}{Hey\+Tea\+Object} held by the \doxylink{class_clear_counter}{Clear\+Counter}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_clear_counter_editor_tests_a94656efbd171b7cae626a08407b7bd6b}\index{ClearCounterEditorTests@{ClearCounterEditorTests}!ClearCounterHasNothing\_PlayerHasHeyTeaObject@{ClearCounterHasNothing\_PlayerHasHeyTeaObject}}
+\index{ClearCounterHasNothing\_PlayerHasHeyTeaObject@{ClearCounterHasNothing\_PlayerHasHeyTeaObject}!ClearCounterEditorTests@{ClearCounterEditorTests}}
+\doxysubsubsection{\texorpdfstring{ClearCounterHasNothing\_PlayerHasHeyTeaObject()}{ClearCounterHasNothing\_PlayerHasHeyTeaObject()}}
+{\footnotesize\ttfamily \label{class_clear_counter_editor_tests_a94656efbd171b7cae626a08407b7bd6b} 
+void Clear\+Counter\+Editor\+Tests.\+Clear\+Counter\+Has\+Nothing\+\_\+\+Player\+Has\+Hey\+Tea\+Object (\begin{DoxyParamCaption}\item[{Hey\+Tea\+Object\+SO.\+Milk\+Tea\+Material\+Type}]{material\+Type}{}\end{DoxyParamCaption})}
+
+
+
+\mbox{[}TC0101\mbox{]} Tests the scenario where the \doxylink{class_clear_counter}{Clear\+Counter} has nothing, but the \doxylink{class_player}{Player} has a \doxylink{class_hey_tea_object}{Hey\+Tea\+Object(basic\+Add, fruit, none, untreat)}. 
+
+This test case checks if the \doxylink{class_clear_counter}{Clear\+Counter} correctly takes the \doxylink{class_hey_tea_object}{Hey\+Tea\+Object} from the \doxylink{class_player}{Player}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em material\+Type} & The type of the \doxylink{class_hey_tea_object}{Hey\+Tea\+Object} held by the \doxylink{class_player}{Player}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_clear_counter_editor_tests_ac6d722d883073074cc547be0dd9202b3}\index{ClearCounterEditorTests@{ClearCounterEditorTests}!Setup@{Setup}}
+\index{Setup@{Setup}!ClearCounterEditorTests@{ClearCounterEditorTests}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}}
+{\footnotesize\ttfamily \label{class_clear_counter_editor_tests_ac6d722d883073074cc547be0dd9202b3} 
+void Clear\+Counter\+Editor\+Tests.\+Setup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Sets up the test environment before each test. 
+
+@detials This method initializes the \doxylink{class_clear_counter}{Clear\+Counter}, \doxylink{class_player}{Player}, \doxylink{class_hey_tea_object}{Hey\+Tea\+Object} instances, and their corresponding Scriptable\+Objects. \Hypertarget{class_clear_counter_editor_tests_a2bda3b4854b53ecb3d100489305b0f85}\index{ClearCounterEditorTests@{ClearCounterEditorTests}!TearDown@{TearDown}}
+\index{TearDown@{TearDown}!ClearCounterEditorTests@{ClearCounterEditorTests}}
+\doxysubsubsection{\texorpdfstring{TearDown()}{TearDown()}}
+{\footnotesize\ttfamily \label{class_clear_counter_editor_tests_a2bda3b4854b53ecb3d100489305b0f85} 
+void Clear\+Counter\+Editor\+Tests.\+Tear\+Down (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Tears down the test environment after each test. 
+
+This method destroys the \doxylink{class_clear_counter}{Clear\+Counter}, \doxylink{class_player}{Player}, and \doxylink{class_hey_tea_object}{Hey\+Tea\+Object} instances to clean up after each test. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Tests/\+Editor\+Tests/Clear\+Counter\+Editor\+Tests.\+cs\end{DoxyCompactItemize}

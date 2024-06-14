@@ -1,0 +1,210 @@
+\doxysection{Cinemachine.\+Cinemachine3rd\+Person\+Follow Class Reference}
+\hypertarget{class_cinemachine_1_1_cinemachine3rd_person_follow}{}\label{class_cinemachine_1_1_cinemachine3rd_person_follow}\index{Cinemachine.Cinemachine3rdPersonFollow@{Cinemachine.Cinemachine3rdPersonFollow}}
+
+
+Third-\/person follower, with complex pivoting\+: horizontal about the origin, vertical about the shoulder. ~\newline
+  
+
+
+Inheritance diagram for Cinemachine.\+Cinemachine3rd\+Person\+Follow\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_cinemachine_1_1_cinemachine3rd_person_follow}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine3rd_person_follow_afb2aef3afa5304b900c2a12fb7e4bdc5}{Get\+Max\+Damp\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Report maximum damping time needed for this component. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine3rd_person_follow_a17c93538c31ada4d8da085ee92c62313}{Mutate\+Camera\+State}} (ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} cur\+State, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Orients the camera to match the Follow target\textquotesingle{}s orientation. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine3rd_person_follow_a84a30b8cb5fef441370827d2f86f0f77}{On\+Target\+Object\+Warped}} (Transform target, Vector3 position\+Delta)
+\begin{DoxyCompactList}\small\item\em This is called to notify the us that a target got warped, so that we can update its internal state to make the camera also warp seamlessy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine3rd_person_follow_ae0129b91fd0037ef13e00ab68dd01575}{Get\+Rig\+Positions}} (out Vector3 root, out Vector3 shoulder, out Vector3 hand)
+\begin{DoxyCompactList}\small\item\em Internal use only. Public for the inspector gizmo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base}{Cinemachine.\+Cinemachine\+Component\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_aacf2cbdefb4d8fd09dabb01ec65f2fbd}{Pre\+Pipeline\+Mutate\+Camera\+State}} (ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} cur\+State, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Override this to do such things as offset the Referece\+Look\+At. Base class implementation does nothing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_a9dea4262821631006faf71feb3df050f}{Mutate\+Camera\+State}} (ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} cur\+State, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Mutates the camera state. This state will later be applied to the camera. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_ab61a5ef5a8ae5713705a46a4091fa3c2}{On\+Transition\+From\+Camera}} (\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} from\+Cam, Vector3 world\+Up, float delta\+Time, ref \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_virtual_camera_base_1_1_transition_params}{Cinemachine\+Virtual\+Camera\+Base.\+Transition\+Params}} transition\+Params)
+\begin{DoxyCompactList}\small\item\em Notification that this virtual camera is going live. Base class implementation does nothing. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_a2c1673f15b1bd3ff4d05c3e763ee6ee4}{Force\+Camera\+Position}} (Vector3 pos, Quaternion rot)
+\begin{DoxyCompactList}\small\item\em Force the virtual camera to assume a given position and orientation. ~\newline
+ Procedural placement then takes over. Base class implementation does nothing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine3rd_person_follow_a5cca49298af06d5eb7628d72f316e07c}\label{class_cinemachine_1_1_cinemachine3rd_person_follow_a5cca49298af06d5eb7628d72f316e07c} 
+Vector3 {\bfseries Damping}
+\begin{DoxyCompactList}\small\item\em How responsively the camera tracks the target. Each axis (camera-\/local) can have its own setting. Value is the approximate time it takes the camera to catch up to the target\textquotesingle{}s new position. Smaller values give a more rigid effect, larger values give a squishier one. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine3rd_person_follow_a399a16f2b5e840042ab53f10af5f6a0f}\label{class_cinemachine_1_1_cinemachine3rd_person_follow_a399a16f2b5e840042ab53f10af5f6a0f} 
+Vector3 {\bfseries Shoulder\+Offset}
+\begin{DoxyCompactList}\small\item\em Position of the shoulder pivot relative to the Follow target origin. ~\newline
+ This offset is in target-\/local space. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine3rd_person_follow_a17115403d41af7698e80b3aeb86c5088}\label{class_cinemachine_1_1_cinemachine3rd_person_follow_a17115403d41af7698e80b3aeb86c5088} 
+float {\bfseries Vertical\+Arm\+Length}
+\begin{DoxyCompactList}\small\item\em Vertical offset of the hand in relation to the shoulder. ~\newline
+ Arm length will affect the follow target\textquotesingle{}s screen position when the camera rotates vertically. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine3rd_person_follow_ab7c76361d80c12c916af7e5b8f68468a}\label{class_cinemachine_1_1_cinemachine3rd_person_follow_ab7c76361d80c12c916af7e5b8f68468a} 
+float {\bfseries Camera\+Side}
+\begin{DoxyCompactList}\small\item\em Specifies which shoulder (left, right, or in-\/between) the camera is on. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine3rd_person_follow_a1524a65c568e7bd5b81cd91b35b7b685}\label{class_cinemachine_1_1_cinemachine3rd_person_follow_a1524a65c568e7bd5b81cd91b35b7b685} 
+float {\bfseries Camera\+Distance}
+\begin{DoxyCompactList}\small\item\em How far behind the hand the camera will be placed. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine3rd_person_follow_a5f0d442dd84329412cb47dcfea848706}\label{class_cinemachine_1_1_cinemachine3rd_person_follow_a5f0d442dd84329412cb47dcfea848706} 
+Layer\+Mask {\bfseries Camera\+Collision\+Filter}
+\begin{DoxyCompactList}\small\item\em Camera will avoid obstacles on these layers. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine3rd_person_follow_abc75d4cc7f0c3d8f4b1e6299fa7caeea}\label{class_cinemachine_1_1_cinemachine3rd_person_follow_abc75d4cc7f0c3d8f4b1e6299fa7caeea} 
+string {\bfseries Ignore\+Tag} = string.\+Empty
+\begin{DoxyCompactList}\small\item\em Obstacles with this tag will be ignored. It is a good idea to set this field to the target\textquotesingle{}s tag. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine3rd_person_follow_ad75951e10f748725a585f72b9d70be52}\label{class_cinemachine_1_1_cinemachine3rd_person_follow_ad75951e10f748725a585f72b9d70be52} 
+float {\bfseries Camera\+Radius}
+\begin{DoxyCompactList}\small\item\em Specifies how close the camera can get to obstacles. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine3rd_person_follow_a36a56cb7bc3ed469b4d6a569fead6358}\label{class_cinemachine_1_1_cinemachine3rd_person_follow_a36a56cb7bc3ed469b4d6a569fead6358} 
+float {\bfseries Damping\+Into\+Collision}
+\begin{DoxyCompactList}\small\item\em How gradually the camera moves to correct for occlusions. ~\newline
+ Higher numbers will move the camera more gradually. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine3rd_person_follow_a2869367c5f8995d687a1ec66207d430d}\label{class_cinemachine_1_1_cinemachine3rd_person_follow_a2869367c5f8995d687a1ec66207d430d} 
+float {\bfseries Damping\+From\+Collision}
+\begin{DoxyCompactList}\small\item\em How gradually the camera returns to its normal position after having been corrected by the built-\/in collision resolution system. Higher numbers will move the camera more gradually back to normal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine3rd_person_follow_adfa6fe6eb7631d81768736ae5694a949}\label{class_cinemachine_1_1_cinemachine3rd_person_follow_adfa6fe6eb7631d81768736ae5694a949} 
+override bool {\bfseries Is\+Valid}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if component is enabled and has a Follow target defined. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine3rd_person_follow_abd813b9522d91c6032079cf898e2a7a0}\label{class_cinemachine_1_1_cinemachine3rd_person_follow_abd813b9522d91c6032079cf898e2a7a0} 
+override \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}} {\bfseries Stage}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{namespace_cinemachine}{Cinemachine} Pipeline stage that this component implements. Always returns the Aim stage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base}{Cinemachine.\+Cinemachine\+Component\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} {\bfseries Virtual\+Camera}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the associated \doxylink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}. \end{DoxyCompactList}\item 
+Transform {\bfseries Follow\+Target}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the owner vcam\textquotesingle{}s Follow target. \end{DoxyCompactList}\item 
+Transform {\bfseries Look\+At\+Target}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the owner vcam\textquotesingle{}s Look\+At target. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}} {\bfseries Abstract\+Follow\+Target\+Group}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get Follow target as \doxylink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}, or null if target is not a group. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}} {\bfseries Follow\+Target\+Group}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get Follow target as \doxylink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}, or null if target is not a \doxylink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}. \end{DoxyCompactList}\item 
+Vector3 {\bfseries Follow\+Target\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the position of the Follow target. Special handling\+: If the Follow target is a Virtual\+Camera, returns the vcam State\textquotesingle{}s position, not the transform\textquotesingle{}s position. \end{DoxyCompactList}\item 
+Quaternion {\bfseries Follow\+Target\+Rotation}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the rotation of the Follow target. Special handling\+: If the Follow target is a Virtual\+Camera, returns the vcam State\textquotesingle{}s rotation, not the transform\textquotesingle{}s rotation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}} {\bfseries Abstract\+Look\+At\+Target\+Group}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get Look\+At target as \doxylink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}, or null if target is not a group. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}} {\bfseries Look\+At\+Target\+Group}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get Look\+At target as \doxylink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}, or null if target is not a \doxylink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}. \end{DoxyCompactList}\item 
+Vector3 {\bfseries Look\+At\+Target\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the position of the Look\+At target. Special handling\+: If the Look\+At target is a Virtual\+Camera, returns the vcam State\textquotesingle{}s position, not the transform\textquotesingle{}s position. \end{DoxyCompactList}\item 
+Quaternion {\bfseries Look\+At\+Target\+Rotation}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the rotation of the Look\+At target. Special handling\+: If the Look\+At target is a Virtual\+Camera, returns the vcam State\textquotesingle{}s rotation, not the transform\textquotesingle{}s rotation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} {\bfseries Vcam\+State}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the owner vcam\textquotesingle{}s \doxylink{struct_cinemachine_1_1_camera_state}{Camera\+State}. \end{DoxyCompactList}\item 
+bool {\bfseries Is\+Valid}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if this object is enabled and set up to produce results. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}} {\bfseries Stage}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em What part of the pipeline this fits into. \end{DoxyCompactList}\item 
+virtual bool {\bfseries Body\+Applies\+After\+Aim}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Special for Body Stage compoments that want to be applied after Aim stage because they use the aim as inout for the procedural placement. \end{DoxyCompactList}\item 
+virtual bool {\bfseries Requires\+User\+Input}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Components that require user input should implement this and return true. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base}{Cinemachine.\+Cinemachine\+Component\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+const float {\bfseries Epsilon} = Utility.\+Unity\+Vector\+Extensions.\+Epsilon
+\begin{DoxyCompactList}\small\item\em Useful constant for very small floats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Third-\/person follower, with complex pivoting\+: horizontal about the origin, vertical about the shoulder. ~\newline
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine3rd_person_follow_afb2aef3afa5304b900c2a12fb7e4bdc5}\index{Cinemachine.Cinemachine3rdPersonFollow@{Cinemachine.Cinemachine3rdPersonFollow}!GetMaxDampTime@{GetMaxDampTime}}
+\index{GetMaxDampTime@{GetMaxDampTime}!Cinemachine.Cinemachine3rdPersonFollow@{Cinemachine.Cinemachine3rdPersonFollow}}
+\doxysubsubsection{\texorpdfstring{GetMaxDampTime()}{GetMaxDampTime()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine3rd_person_follow_afb2aef3afa5304b900c2a12fb7e4bdc5} 
+override float Cinemachine.\+Cinemachine3rd\+Person\+Follow.\+Get\+Max\+Damp\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Report maximum damping time needed for this component. 
+
+\begin{DoxyReturn}{Returns}
+Highest damping setting in this component
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_ab91f25cc642560ac98f89542be500153}{Cinemachine.\+Cinemachine\+Component\+Base}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine3rd_person_follow_ae0129b91fd0037ef13e00ab68dd01575}\index{Cinemachine.Cinemachine3rdPersonFollow@{Cinemachine.Cinemachine3rdPersonFollow}!GetRigPositions@{GetRigPositions}}
+\index{GetRigPositions@{GetRigPositions}!Cinemachine.Cinemachine3rdPersonFollow@{Cinemachine.Cinemachine3rdPersonFollow}}
+\doxysubsubsection{\texorpdfstring{GetRigPositions()}{GetRigPositions()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine3rd_person_follow_ae0129b91fd0037ef13e00ab68dd01575} 
+void Cinemachine.\+Cinemachine3rd\+Person\+Follow.\+Get\+Rig\+Positions (\begin{DoxyParamCaption}\item[{out Vector3}]{root}{, }\item[{out Vector3}]{shoulder}{, }\item[{out Vector3}]{hand}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Internal use only. Public for the inspector gizmo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Root of the rig.\\
+\hline
+{\em shoulder} & Shoulder of the rig.\\
+\hline
+{\em hand} & Hand of the rig.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cinemachine_1_1_cinemachine3rd_person_follow_a17c93538c31ada4d8da085ee92c62313}\index{Cinemachine.Cinemachine3rdPersonFollow@{Cinemachine.Cinemachine3rdPersonFollow}!MutateCameraState@{MutateCameraState}}
+\index{MutateCameraState@{MutateCameraState}!Cinemachine.Cinemachine3rdPersonFollow@{Cinemachine.Cinemachine3rdPersonFollow}}
+\doxysubsubsection{\texorpdfstring{MutateCameraState()}{MutateCameraState()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine3rd_person_follow_a17c93538c31ada4d8da085ee92c62313} 
+override void Cinemachine.\+Cinemachine3rd\+Person\+Follow.\+Mutate\+Camera\+State (\begin{DoxyParamCaption}\item[{ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}}}]{cur\+State}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Orients the camera to match the Follow target\textquotesingle{}s orientation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cur\+State} & The current camera state\\
+\hline
+{\em delta\+Time} & Elapsed time since last frame, for damping calculations. ~\newline
+ If negative, previous state is reset.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cinemachine_1_1_cinemachine3rd_person_follow_a84a30b8cb5fef441370827d2f86f0f77}\index{Cinemachine.Cinemachine3rdPersonFollow@{Cinemachine.Cinemachine3rdPersonFollow}!OnTargetObjectWarped@{OnTargetObjectWarped}}
+\index{OnTargetObjectWarped@{OnTargetObjectWarped}!Cinemachine.Cinemachine3rdPersonFollow@{Cinemachine.Cinemachine3rdPersonFollow}}
+\doxysubsubsection{\texorpdfstring{OnTargetObjectWarped()}{OnTargetObjectWarped()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine3rd_person_follow_a84a30b8cb5fef441370827d2f86f0f77} 
+override void Cinemachine.\+Cinemachine3rd\+Person\+Follow.\+On\+Target\+Object\+Warped (\begin{DoxyParamCaption}\item[{Transform}]{target}{, }\item[{Vector3}]{position\+Delta}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+This is called to notify the us that a target got warped, so that we can update its internal state to make the camera also warp seamlessy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The object that was warped\\
+\hline
+{\em position\+Delta} & The amount the target\textquotesingle{}s position changed\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_abfd9cdc5dfa5520f0553553b35e88fd5}{Cinemachine.\+Cinemachine\+Component\+Base}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Components/Cinemachine3rd\+Person\+Follow.\+cs\end{DoxyCompactItemize}

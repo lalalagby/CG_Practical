@@ -1,0 +1,46 @@
+\doxysection{Unity\+Editor.\+U2\+D.\+Sprites.\+Sprite\+Data\+Provider\+Factories Class Reference}
+\hypertarget{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_data_provider_factories}{}\label{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_data_provider_factories}\index{UnityEditor.U2D.Sprites.SpriteDataProviderFactories@{UnityEditor.U2D.Sprites.SpriteDataProviderFactories}}
+
+
+Utility class that collects methods with Sprite\+Data\+Provider\+Factory\+Attribute and Sprite\+Data\+Provider\+Asset\+Path\+Provider\+Attribute.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_data_provider_factories_a6cdc65d3c22bdf8126e7a5aa4ee30a82}\label{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_data_provider_factories_a6cdc65d3c22bdf8126e7a5aa4ee30a82} 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em Initialized and collect methods with Sprite\+Data\+Provider\+Factory\+Attribute and Sprite\+Data\+Provider\+Asset\+Path\+Provider\+Attribute. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider}{ISprite\+Editor\+Data\+Provider}} \mbox{\hyperlink{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_data_provider_factories_a521ee48a6c17b8fb2049765ac70c69f7}{Get\+Sprite\+Editor\+Data\+Provider\+From\+Object}} (Unity\+Engine.\+Object obj)
+\begin{DoxyCompactList}\small\item\em Given a Unity\+Engine.\+Object, determine the \doxylink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider}{ISprite\+Editor\+Data\+Provider} associate with the object by going going through the methods with Sprite\+Data\+Provider\+Factory\+Attribute. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Utility class that collects methods with Sprite\+Data\+Provider\+Factory\+Attribute and Sprite\+Data\+Provider\+Asset\+Path\+Provider\+Attribute. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_data_provider_factories_a521ee48a6c17b8fb2049765ac70c69f7}\index{UnityEditor.U2D.Sprites.SpriteDataProviderFactories@{UnityEditor.U2D.Sprites.SpriteDataProviderFactories}!GetSpriteEditorDataProviderFromObject@{GetSpriteEditorDataProviderFromObject}}
+\index{GetSpriteEditorDataProviderFromObject@{GetSpriteEditorDataProviderFromObject}!UnityEditor.U2D.Sprites.SpriteDataProviderFactories@{UnityEditor.U2D.Sprites.SpriteDataProviderFactories}}
+\doxysubsubsection{\texorpdfstring{GetSpriteEditorDataProviderFromObject()}{GetSpriteEditorDataProviderFromObject()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_data_provider_factories_a521ee48a6c17b8fb2049765ac70c69f7} 
+\mbox{\hyperlink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider}{ISprite\+Editor\+Data\+Provider}} Unity\+Editor.\+U2\+D.\+Sprites.\+Sprite\+Data\+Provider\+Factories.\+Get\+Sprite\+Editor\+Data\+Provider\+From\+Object (\begin{DoxyParamCaption}\item[{Unity\+Engine.\+Object}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Given a Unity\+Engine.\+Object, determine the \doxylink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider}{ISprite\+Editor\+Data\+Provider} associate with the object by going going through the methods with Sprite\+Data\+Provider\+Factory\+Attribute. 
+
+When none of the methods is able to provide \doxylink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider}{ISprite\+Editor\+Data\+Provider} for the object, the method will try to cast the Asset\+Importer of the object to \doxylink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider}{ISprite\+Editor\+Data\+Provider}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The Unity\+Engine.\+Object to query.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \doxylink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider}{ISprite\+Editor\+Data\+Provider} associated with the object.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+2d.\+sprite@1.\+0.\+0/\+Editor/\+Sprite\+Editor/Sprite\+Editor\+Window.\+cs\end{DoxyCompactItemize}

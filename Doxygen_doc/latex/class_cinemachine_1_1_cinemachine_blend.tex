@@ -1,0 +1,124 @@
+\doxysection{Cinemachine.\+Cinemachine\+Blend Class Reference}
+\hypertarget{class_cinemachine_1_1_cinemachine_blend}{}\label{class_cinemachine_1_1_cinemachine_blend}\index{Cinemachine.CinemachineBlend@{Cinemachine.CinemachineBlend}}
+
+
+Describes a blend between 2 \doxylink{namespace_cinemachine}{Cinemachine} Virtual Cameras, and holds the current state of the blend.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_blend_a5070de10879bbcfcc25c0c4cf717a33e}{Uses}} (\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} cam)
+\begin{DoxyCompactList}\small\item\em Does the blend use a specific \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera? \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_blend_aefd2f7223b3376b8ce8f689a43fbb7e0}{Cinemachine\+Blend}} (\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} a, \mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} b, Animation\+Curve curve, float duration, float t)
+\begin{DoxyCompactList}\small\item\em Construct a blend. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_blend_a54dce650a2f6258e14fa7d0db58e27f7}{Update\+Camera\+State}} (Vector3 world\+Up, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Make sure the source cameras get updated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_blend_af4ae996146cded162c39f17e27a70101}\label{class_cinemachine_1_1_cinemachine_blend_af4ae996146cded162c39f17e27a70101} 
+\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} {\bfseries CamA}
+\begin{DoxyCompactList}\small\item\em First camera in the blend. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_blend_a94b4465dad41b95d9fbe18e7203e63c2}\label{class_cinemachine_1_1_cinemachine_blend_a94b4465dad41b95d9fbe18e7203e63c2} 
+\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} {\bfseries CamB}
+\begin{DoxyCompactList}\small\item\em Second camera in the blend. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_blend_a9b3f3ff6025d17f7d3ee44a16797fa8a}\label{class_cinemachine_1_1_cinemachine_blend_a9b3f3ff6025d17f7d3ee44a16797fa8a} 
+Animation\+Curve {\bfseries Blend\+Curve}
+\begin{DoxyCompactList}\small\item\em The curve that describes the way the blend transitions over time from the first camera to the second. X-\/axis is normalized time (0...1) over which the blend takes place and Y axis is blend weight (0..1) \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_blend_a07886770c371313b175eaf01895882b1}\label{class_cinemachine_1_1_cinemachine_blend_a07886770c371313b175eaf01895882b1} 
+float {\bfseries Time\+In\+Blend}
+\begin{DoxyCompactList}\small\item\em The current time relative to the start of the blend. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_blend_a1eafc68397e7bdf152c8bf4a91b3545b}\label{class_cinemachine_1_1_cinemachine_blend_a1eafc68397e7bdf152c8bf4a91b3545b} 
+float {\bfseries Duration}
+\begin{DoxyCompactList}\small\item\em Duration in seconds of the blend. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_blend_a27278784057ddbfbaecf3cd3998dd050}\label{class_cinemachine_1_1_cinemachine_blend_a27278784057ddbfbaecf3cd3998dd050} 
+float {\bfseries Blend\+Weight}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The current weight of the blend. This is an evaluation of the Blend\+Curve at the current time relative to the start of the blend. 0 means camA, 1 means camB. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_blend_a236885e84716395922936044c203eabb}\label{class_cinemachine_1_1_cinemachine_blend_a236885e84716395922936044c203eabb} 
+bool {\bfseries Is\+Valid}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Validity test for the blend. True if either camera is defined. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_blend_a51cc9e7f4d7f13851cc149d5f5bfd2d6}\label{class_cinemachine_1_1_cinemachine_blend_a51cc9e7f4d7f13851cc149d5f5bfd2d6} 
+bool {\bfseries Is\+Complete}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the time relative to the start of the blend is greater than or equal to the blend duration. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_blend_a0ae81b151493774e4304e7a08627a70a}\label{class_cinemachine_1_1_cinemachine_blend_a0ae81b151493774e4304e7a08627a70a} 
+string {\bfseries Description}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Text description of the blend, for debugging. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_blend_aad8a7590ea0e89212d5368e7a8f21153}\label{class_cinemachine_1_1_cinemachine_blend_aad8a7590ea0e89212d5368e7a8f21153} 
+\mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} {\bfseries State}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Compute the blended \doxylink{struct_cinemachine_1_1_camera_state}{Camera\+State} for the current time in the blend. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Describes a blend between 2 \doxylink{namespace_cinemachine}{Cinemachine} Virtual Cameras, and holds the current state of the blend. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_blend_aefd2f7223b3376b8ce8f689a43fbb7e0}\index{Cinemachine.CinemachineBlend@{Cinemachine.CinemachineBlend}!CinemachineBlend@{CinemachineBlend}}
+\index{CinemachineBlend@{CinemachineBlend}!Cinemachine.CinemachineBlend@{Cinemachine.CinemachineBlend}}
+\doxysubsubsection{\texorpdfstring{CinemachineBlend()}{CinemachineBlend()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_blend_aefd2f7223b3376b8ce8f689a43fbb7e0} 
+Cinemachine.\+Cinemachine\+Blend.\+Cinemachine\+Blend (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}}}]{a}{, }\item[{\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}}}]{b}{, }\item[{Animation\+Curve}]{curve}{, }\item[{float}]{duration}{, }\item[{float}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a blend. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First camera\\
+\hline
+{\em b} & Second camera\\
+\hline
+{\em curve} & Blend curve\\
+\hline
+{\em duration} & Duration of the blend, in seconds\\
+\hline
+{\em t} & Current time in blend, relative to the start of the blend\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_blend_a54dce650a2f6258e14fa7d0db58e27f7}\index{Cinemachine.CinemachineBlend@{Cinemachine.CinemachineBlend}!UpdateCameraState@{UpdateCameraState}}
+\index{UpdateCameraState@{UpdateCameraState}!Cinemachine.CinemachineBlend@{Cinemachine.CinemachineBlend}}
+\doxysubsubsection{\texorpdfstring{UpdateCameraState()}{UpdateCameraState()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_blend_a54dce650a2f6258e14fa7d0db58e27f7} 
+void Cinemachine.\+Cinemachine\+Blend.\+Update\+Camera\+State (\begin{DoxyParamCaption}\item[{Vector3}]{world\+Up}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Make sure the source cameras get updated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world\+Up} & Default world up. Individual vcams may modify this\\
+\hline
+{\em delta\+Time} & Time increment used for calculating time-\/based behaviours (e.\+g. damping)\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cinemachine_1_1_cinemachine_blend_a5070de10879bbcfcc25c0c4cf717a33e}\index{Cinemachine.CinemachineBlend@{Cinemachine.CinemachineBlend}!Uses@{Uses}}
+\index{Uses@{Uses}!Cinemachine.CinemachineBlend@{Cinemachine.CinemachineBlend}}
+\doxysubsubsection{\texorpdfstring{Uses()}{Uses()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_blend_a5070de10879bbcfcc25c0c4cf717a33e} 
+bool Cinemachine.\+Cinemachine\+Blend.\+Uses (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}}}]{cam}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Does the blend use a specific \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera? 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cam} & The camera to test\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the camera is involved in the blend
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Core/Cinemachine\+Blend.\+cs\end{DoxyCompactItemize}

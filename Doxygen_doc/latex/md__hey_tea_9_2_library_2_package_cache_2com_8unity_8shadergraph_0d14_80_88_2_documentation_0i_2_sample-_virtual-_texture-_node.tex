@@ -1,0 +1,86 @@
+\chapter{Sample Virtual Texture Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_sample-_virtual-_texture-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_sample-_virtual-_texture-_node}\index{Sample Virtual Texture Node@{Sample Virtual Texture Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_sample-_virtual-_texture-_node_autotoc_md3786}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_sample-_virtual-_texture-_node_autotoc_md3786}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_sample-_virtual-_texture-_node_autotoc_md3787}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_sample-_virtual-_texture-_node_autotoc_md3787}
+\doxylink{namespace_samples}{Samples} a \href{Property-Types.md\#virtual-texture}{\texttt{ Virtual Texture}} and returns up to four Vector 4 color values for use in the shader. You can use the UV input to override the UV coordinate. The Sample Virtual Texture node takes one UV coordinate as the input, and uses that UV coordinate to sample all of the textures in the Virtual Texture.
+
+If you want to use the Sample Virtual Texture node to sample normal maps, navigate to each layer that you want to sample as a normal map, open the {\bfseries{Layer Type}} drop-\/down menu, and select {\bfseries{Normal}}.
+
+By default, you can only use this node in the fragment shader stage. For more information about how to use this node, or how to configure it for use in the vertex shader stage, see \href{https://docs.unity3d.com/2020.1/Documentation/Manual/svt-use-in-shader-graph.html}{\texttt{ Using Streaming Virtual Texturing in Shader Graph}}.
+
+If you disable Virtual Texturing in your project, this node works the same way as the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_sample-_texture-2_d-_node}{Sample 2D Texture Node}{0}, and performs standard 2D sampling on each texture.
+
+You must connect a Sample Virtual Texture node to a Virtual Texture property for the Shader Graph Asset to compile. If you don\textquotesingle{}t connect the node to a property, an error appears, indicating that the node requires a connection.
+
+For information about Streaming Virtual Texturing, see \href{https://docs.unity3d.com/2020.1/Documentation/Manual/svt-streaming-virtual-texturing.html}{\texttt{ Streaming Virtual Texturing}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_sample-_virtual-_texture-_node_autotoc_md3788}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_sample-_virtual-_texture-_node_autotoc_md3788}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+UV   &Input   &Vector 2   &UV   &The UV coordinate.    \\\cline{1-5}
+VT   &Input   &Virtual Texture   &None   &The Virtual Texture to sample. Must be connected to a Virtual Texture property.    \\\cline{1-5}
+Out   &Output   &Vector 4   &None   &The output value of layer 1 as RGBA.    \\\cline{1-5}
+Out2   &Output   &Vector 4   &None   &The output of layer 2 as RGBA.    \\\cline{1-5}
+Out3   &Output   &Vector 4   &None   &The output of layer 3 as RGBA.    \\\cline{1-5}
+Out4   &Output   &Vector 4   &None   &The output of layer 4 as RGBA.   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_sample-_virtual-_texture-_node_autotoc_md3789}{}\doxysection{\texorpdfstring{Settings}{Settings}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_sample-_virtual-_texture-_node_autotoc_md3789}
+The Sample Virtual Texture node has several settings available for you to specify its behavior. These settings work in combination with any scripts you might have set up in your project. To view the settings, select the node with the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_internal-_inspector}{Graph Inspector}{0} open. For more information, see \href{https://docs.unity3d.com/2020.1/Documentation/Manual/svt-streaming-virtual-texturing.html}{\texttt{ Streaming Virtual Texturing}}.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endhead
+Lod Mode   &Dropdown   &Automatic, Lod Level, Lod Bias, Derivatives   &Sets the specific Lod mode to use when sampling the textures.    \\\cline{1-4}
+Quality   &Dropdown   &Low, High   &Sets the quality mode to use when sampling the textures.    \\\cline{1-4}
+Automatic Streaming   &Toggle   &Enabled/\+Disabled   &Determines whether the node uses automatic streaming or manual streaming.    \\\cline{1-4}
+Enable Global Mip Bias   &Toggle   &Enabled/\+Disabled   &Enables the global mipmap bias that \doxylink{namespace_unity}{Unity} automatically imposes at runtime. \doxylink{namespace_unity}{Unity} sets this bias during certain dynamic resolution scaling algorithms to improve detail reconstruction.    \\\cline{1-4}
+Layer 1 Type   &Dropdown   &Default, Normal   &The texture type of layer 1.    \\\cline{1-4}
+Layer 2 Type   &Dropdown   &Default, Normal   &The texture type of layer 2.    \\\cline{1-4}
+Layer 3 Type   &Dropdown   &Default, Normal   &The texture type of layer 3. This option only appears if the Virtual Texture has at least 3 layers.    \\\cline{1-4}
+Layer 4 Type   &Dropdown   &Default, Normal   &The texture type of layer 4. This option only appears if the Virtual Texture has at least 4 layers.   \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_sample-_virtual-_texture-_node_autotoc_md3790}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_sample-_virtual-_texture-_node_autotoc_md3790}
+The following example code represents one possible outcome of this node.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float4\ SampleVirtualTexture(float2\ uv,\ VTPropertyWithTextureType\ vtProperty,\ out\ float4\ Layer0)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ VtInputParameters\ vtParams;}
+\DoxyCodeLine{\ \ \ \ vtParams.uv\ =\ uv;}
+\DoxyCodeLine{\ \ \ \ vtParams.lodOrOffset\ =\ 0.0f;}
+\DoxyCodeLine{\ \ \ \ vtParams.dx\ =\ 0.0f;}
+\DoxyCodeLine{\ \ \ \ vtParams.dy\ =\ 0.0f;}
+\DoxyCodeLine{\ \ \ \ vtParams.addressMode\ =\ VtAddressMode\_Wrap;}
+\DoxyCodeLine{\ \ \ \ vtParams.filterMode\ =\ VtFilter\_Anisotropic;}
+\DoxyCodeLine{\ \ \ \ vtParams.levelMode\ =\ VtLevel\_Automatic;}
+\DoxyCodeLine{\ \ \ \ vtParams.uvMode\ =\ VtUvSpace\_Regular;}
+\DoxyCodeLine{\ \ \ \ vtParams.sampleQuality\ =\ VtSampleQuality\_High;}
+\DoxyCodeLine{\ \ \ \ \#if\ defined(SHADER\_STAGE\_RAY\_TRACING)}
+\DoxyCodeLine{\ \ \ \ if\ (vtParams.levelMode\ ==\ VtLevel\_Automatic\ ||\ vtParams.levelMode\ ==\ VtLevel\_Bias)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ vtParams.levelMode\ =\ VtLevel\_Lod;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ vtParams.lodOrOffset\ =\ 0.0f;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \#endif}
+\DoxyCodeLine{\ \ \ \ StackInfo\ info\ =\ PrepareVT(vtProperty.vtProperty,\ vtParams);}
+\DoxyCodeLine{\ \ \ \ Layer0\ =\ SampleVTLayerWithTextureType(vtProperty,\ vtParams,\ info,\ 0);}
+\DoxyCodeLine{\ \ \ \ return\ GetResolveOutput(info);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

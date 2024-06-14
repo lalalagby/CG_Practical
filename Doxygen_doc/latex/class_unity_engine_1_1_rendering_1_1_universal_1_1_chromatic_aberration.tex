@@ -1,0 +1,120 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Universal.\+Chromatic\+Aberration Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_chromatic_aberration}{}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_chromatic_aberration}\index{UnityEngine.Rendering.Universal.ChromaticAberration@{UnityEngine.Rendering.Universal.ChromaticAberration}}
+
+
+A volume component that holds settings for the Chromatic Aberration effect.  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Universal.\+Chromatic\+Aberration\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.427746cm]{class_unity_engine_1_1_rendering_1_1_universal_1_1_chromatic_aberration}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_chromatic_aberration_a31b9d09ae42ef60d7d7aa206475426e2}{Is\+Active}} ()
+\begin{DoxyCompactList}\small\item\em Tells if the post process needs to be rendered or not.
+
+\begin{DoxyReturn}{Returns}
+True if the component is active, otherwise false.
+\end{DoxyReturn}
+ \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_chromatic_aberration_a1ef3e0e376e59f64c682d222f7df2335}{Is\+Tile\+Compatible}} ()
+\begin{DoxyCompactList}\small\item\em Tells if the post process can run the effect on-\/tile or if it needs a full pass.
+
+\begin{DoxyReturn}{Returns}
+True if it can run on-\/tile, otherwise false.
+\end{DoxyReturn}
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Unity\+Engine.\+Rendering.\+Volume\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_a9d4f76f7cb2a843be7e947ee7cd9fd86}{Override}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component}} state, float interp\+Factor)
+\begin{DoxyCompactList}\small\item\em Interpolates a \doxylink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component} with this component by an interpolation factor and puts the result back into the given \doxylink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_a28e604e4bea241b469d10eaf0d7aca05}{Set\+All\+Overrides\+To}} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets the state of all the overrides on this component to a given value. \end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_ae2bbeaecf77f5806e9a2b6407037356c}{Get\+Hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em A custom hashing function that \doxylink{namespace_unity}{Unity} uses to compare the state of parameters. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_a54586fce4a8f74cea39827af82cd873c}{Any\+Properties\+Is\+Overridden}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if any of the volume properites has been overridden. \end{DoxyCompactList}\item 
+void {\bfseries Release} ()
+\begin{DoxyCompactList}\small\item\em Releases all the allocated resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_chromatic_aberration_a50a77e83cb2bbde483164f30d976bf12}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_chromatic_aberration_a50a77e83cb2bbde483164f30d976bf12} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}} {\bfseries intensity} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_clamped_float_parameter}{Clamped\+Float\+Parameter}}(0f, 0f, 1f)
+\begin{DoxyCompactList}\small\item\em Controls the strength of the chromatic aberration effect. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Unity\+Engine.\+Rendering.\+Volume\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries active} = true
+\begin{DoxyCompactList}\small\item\em The active state of the set of parameters defined in this class. You can use this to quickly turn on or off all the overrides at once. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Unity\+Engine.\+Rendering.\+Volume\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_ab69d6656bb7f4922fb99724f562e6215}{On\+Enable}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity}{Unity} calls this method when it loads the class. \end{DoxyCompactList}\item 
+virtual void {\bfseries On\+Disable} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity}{Unity} calls this method when the object goes out of scope. \end{DoxyCompactList}\item 
+virtual void {\bfseries On\+Destroy} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity}{Unity} calls this method before the object is destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Unity\+Engine.\+Rendering.\+Volume\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries display\+Name} = "{}"{}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The name displayed in the component header. If you do not set a name, \doxylink{namespace_unity}{Unity} generates one from the class name automatically. \end{DoxyCompactList}\item 
+Read\+Only\+Collection$<$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}} $>$ {\bfseries parameters}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A read-\/only collection of all the \doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}s defined in this class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A volume component that holds settings for the Chromatic Aberration effect. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_chromatic_aberration_a31b9d09ae42ef60d7d7aa206475426e2}\index{UnityEngine.Rendering.Universal.ChromaticAberration@{UnityEngine.Rendering.Universal.ChromaticAberration}!IsActive@{IsActive}}
+\index{IsActive@{IsActive}!UnityEngine.Rendering.Universal.ChromaticAberration@{UnityEngine.Rendering.Universal.ChromaticAberration}}
+\doxysubsubsection{\texorpdfstring{IsActive()}{IsActive()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_chromatic_aberration_a31b9d09ae42ef60d7d7aa206475426e2} 
+bool Unity\+Engine.\+Rendering.\+Universal.\+Chromatic\+Aberration.\+Is\+Active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Tells if the post process needs to be rendered or not.
+
+\begin{DoxyReturn}{Returns}
+True if the component is active, otherwise false.
+\end{DoxyReturn}
+ 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_universal_1_1_i_post_process_component_a8723bf5375b789d8c1c43ad9a6fd2acf}{Unity\+Engine.\+Rendering.\+Universal.\+IPost\+Process\+Component}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_chromatic_aberration_a1ef3e0e376e59f64c682d222f7df2335}\index{UnityEngine.Rendering.Universal.ChromaticAberration@{UnityEngine.Rendering.Universal.ChromaticAberration}!IsTileCompatible@{IsTileCompatible}}
+\index{IsTileCompatible@{IsTileCompatible}!UnityEngine.Rendering.Universal.ChromaticAberration@{UnityEngine.Rendering.Universal.ChromaticAberration}}
+\doxysubsubsection{\texorpdfstring{IsTileCompatible()}{IsTileCompatible()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_chromatic_aberration_a1ef3e0e376e59f64c682d222f7df2335} 
+bool Unity\+Engine.\+Rendering.\+Universal.\+Chromatic\+Aberration.\+Is\+Tile\+Compatible (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Tells if the post process can run the effect on-\/tile or if it needs a full pass.
+
+\begin{DoxyReturn}{Returns}
+True if it can run on-\/tile, otherwise false.
+\end{DoxyReturn}
+ 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_universal_1_1_i_post_process_component_a60383c6e1861a6ae97c3df772b711dbb}{Unity\+Engine.\+Rendering.\+Universal.\+IPost\+Process\+Component}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/\+Overrides/Chromatic\+Aberration.\+cs\end{DoxyCompactItemize}

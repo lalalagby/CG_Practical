@@ -1,0 +1,93 @@
+\chapter{Fresnel Equation Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fresnel-_equation-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fresnel-_equation-_node}\index{Fresnel Equation Node@{Fresnel Equation Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fresnel-_equation-_node_autotoc_md3275}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fresnel-_equation-_node_autotoc_md3275}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fresnel-_equation-_node_autotoc_md3276}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fresnel-_equation-_node_autotoc_md3276}
+The Fresnel Equation Node adds equations that affect Material interactions to the Fresnel Component. You can select an equation in the {\bfseries{Mode}} dropdown.
+
+You can find Numerical values of refractive indices at \href{https://refractiveindex.info/}{\texttt{ refractiveindex.\+info}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fresnel-_equation-_node_autotoc_md3277}{}\doxysection{\texorpdfstring{Ports (Schlick)}{Ports (Schlick)}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fresnel-_equation-_node_autotoc_md3277}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+f0   &Input   &Vector\{1, 2, 3\}   &None   &Represente the reflection of the surface when we face typically 0.\+02-\/0.\+08 for a dielectric material.    \\\cline{1-5}
+Dot\+Vector   &Input   &Float   &None   &The dot product between the normal and the surface.    \\\cline{1-5}
+Fresnel   &Output   &same as f0   &None   &Fresnel coefficient, which describe the amount of light reflected or transmitted.   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fresnel-_equation-_node_autotoc_md3278}{}\doxysection{\texorpdfstring{Ports (Dielectric)}{Ports (Dielectric)}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fresnel-_equation-_node_autotoc_md3278}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+IOR Source   &Input   &Vector   &None   &The refractive index of the medium the light source originates in.    \\\cline{1-5}
+IOR Medium   &Input   &Vector   &None   &The refractive index of the medium that the light refracts into.    \\\cline{1-5}
+Dot\+Vector   &Input   &Float   &None   &The dot product between the normal and the surface.    \\\cline{1-5}
+Fresnel   &Output   &same as f0   &None   &The fresnel coefficient, which describe the amount of light reflected or transmitted.   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fresnel-_equation-_node_autotoc_md3279}{}\doxysection{\texorpdfstring{Ports (Dielectric\+Generic)}{Ports (Dielectric\+Generic)}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fresnel-_equation-_node_autotoc_md3279}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+IOR Source   &Input   &Vector   &None   &The refractive index of the medium the light source originates in.    \\\cline{1-5}
+IOR Medium   &Input   &Vector   &None   &The refractive index of the medium that the light refracts into.    \\\cline{1-5}
+IOR MediumK   &Input   &Vector   &None   &The refractive index Medium (imaginary part), or the medium causing the refraction.    \\\cline{1-5}
+Dot\+Vector   &Input   &Float   &None   &The dot product between the normal and the surface.    \\\cline{1-5}
+Fresnel   &Output   &same as f0   &None   &Fresnel coefficient, which describe the amount of light reflected or transmitted.   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fresnel-_equation-_node_autotoc_md3280}{}\doxysection{\texorpdfstring{Controls}{Controls}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fresnel-_equation-_node_autotoc_md3280}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endhead
+Mode   &Dropdown   &\multicolumn{2}{l|}{\&\#8226; {\bfseries{Schlick}}\+: This mode produces an approximation based on \href{https://en.wikipedia.org/wiki/Schlick\%27s_approximation}{\texttt{ Schlick\textquotesingle{}s Approximation}}. Use the Schlick mode for interactions between air and dielectric materials. ~\newline
+\&\#8226; {\bfseries{Dielectric}}\+: Use this mode for interactions between two dielectric Materials. For example, air to glass, glass to water, or water to air.~\newline
+\&\#8226; {\bfseries{Dielectric\+Generic}}\+: This mode computes a \href{https://seblagarde.wordpress.com/2013/04/29/memo-on-fresnel-equations}{\texttt{ Fresnel equation}} for interactions between a dielectric and a metal. For example, clear-\/coat-\/ to metal, glass to metal, or water to metal. ~\newline
+{\bfseries{Note\+:}} if the {\bfseries{IORMediumK}} value is 0, {\bfseries{Dielectric\+Generic}} behaves in the same way as the {\bfseries{Dielectric}} mode.   }\\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fresnel-_equation-_node_autotoc_md3281}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_fresnel-_equation-_node_autotoc_md3281}
+The following example code represents one possible outcome of this node.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_FresnelEquation\_Schlick(out\ float\ Fresnel,\ float\ cos0,\ float\ f0)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Fresnel\ =\ F\_Schlick(f0,\ cos0);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{void\ Unity\_FresnelEquation\_Dielectric(out\ float3\ Fresnel,\ float\ cos0,\ float3\ iorSource,\ float3\ iorMedium)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ FresnelValue\ =\ F\_FresnelDielectric(iorMedium/iorSource,\ cos0);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{void\ Unity\_FresnelEquation\_DielectricGeneric(out\ float3\ Fresnel,\ float\ cos0,\ float3\ iorSource,\ float3\ iorMedium,\ float3\ iorMediumK)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ FresnelValue\ =\ F\_FresnelConductor(iorMedium/iorSource,\ iorMediumK/iorSource,\ cos0);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

@@ -1,0 +1,140 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Profiling\+Sampler Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_profiling_sampler}{}\label{class_unity_engine_1_1_rendering_1_1_profiling_sampler}\index{UnityEngine.Rendering.ProfilingSampler@{UnityEngine.Rendering.ProfilingSampler}}
+
+
+Wrapper around CPU and GPU profiling samplers. Use this along \doxylink{struct_unity_engine_1_1_rendering_1_1_profiling_scope}{Profiling\+Scope} to profile a piece of code.  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Profiling\+Sampler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_rendering_1_1_profiling_sampler}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_profiling_sampler_aff20db50ea10975d8eb1aca6caa3ff68}{Profiling\+Sampler}} (string \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_profiling_sampler_a0ab8067675a4d1ce2966c25a81198013}{name}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_profiling_sampler_a4bfb99db9deda9888bd966adc9fc5f47}{Begin}} (Command\+Buffer cmd)
+\begin{DoxyCompactList}\small\item\em Begin the profiling block. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_profiling_sampler_a587baab2a55e91871484a9409b74e1f7}{End}} (Command\+Buffer cmd)
+\begin{DoxyCompactList}\small\item\em End the profiling block. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_profiling_sampler}{Profiling\+Sampler}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_profiling_sampler_a0526092aa4f6e8ec7ba402fb655a4e4e}{Get$<$ TEnum $>$}} (TEnum marker)
+\begin{DoxyCompactList}\small\item\em Get the sampler for the corresponding enumeration value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_profiling_sampler_a0ab8067675a4d1ce2966c25a81198013}\label{class_unity_engine_1_1_rendering_1_1_profiling_sampler_a0ab8067675a4d1ce2966c25a81198013} 
+string {\bfseries name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Name of the Profiling Sampler. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_profiling_sampler_aedebaaf06ca391c9de94a9e3ba124214}\label{class_unity_engine_1_1_rendering_1_1_profiling_sampler_aedebaaf06ca391c9de94a9e3ba124214} 
+bool {\bfseries enable\+Recording}\hspace{0.3cm}{\ttfamily  \mbox{[}set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Set to true to enable recording of profiling sampler timings. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_profiling_sampler_a6a75fed4f3670b2c35636ad2eb85d31a}\label{class_unity_engine_1_1_rendering_1_1_profiling_sampler_a6a75fed4f3670b2c35636ad2eb85d31a} 
+float {\bfseries gpu\+Elapsed\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em GPU Elapsed time in milliseconds. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_profiling_sampler_a5d662335ec12f4a7f32690ee8b2e106d}\label{class_unity_engine_1_1_rendering_1_1_profiling_sampler_a5d662335ec12f4a7f32690ee8b2e106d} 
+int {\bfseries gpu\+Sample\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Number of times the Profiling Sampler has hit on the GPU. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_profiling_sampler_a60325204782ebcc2cebde8198d4ea8f1}\label{class_unity_engine_1_1_rendering_1_1_profiling_sampler_a60325204782ebcc2cebde8198d4ea8f1} 
+float {\bfseries cpu\+Elapsed\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em CPU Elapsed time in milliseconds (Command Buffer execution). \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_profiling_sampler_a2c08e1754246ec9204495ce015838009}\label{class_unity_engine_1_1_rendering_1_1_profiling_sampler_a2c08e1754246ec9204495ce015838009} 
+int {\bfseries cpu\+Sample\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Number of times the Profiling Sampler has hit on the CPU in the command buffer. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_profiling_sampler_a9378d432ff29f428c33e0ce783e5775b}\label{class_unity_engine_1_1_rendering_1_1_profiling_sampler_a9378d432ff29f428c33e0ce783e5775b} 
+float {\bfseries inline\+Cpu\+Elapsed\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em CPU Elapsed time in milliseconds (Direct execution). \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_profiling_sampler_a90f0dd5e8bd7a6ac54daa2b79722c6e2}\label{class_unity_engine_1_1_rendering_1_1_profiling_sampler_a90f0dd5e8bd7a6ac54daa2b79722c6e2} 
+int {\bfseries inline\+Cpu\+Sample\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Number of times the Profiling Sampler has hit on the CPU. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Wrapper around CPU and GPU profiling samplers. Use this along \doxylink{struct_unity_engine_1_1_rendering_1_1_profiling_scope}{Profiling\+Scope} to profile a piece of code. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_profiling_sampler_aff20db50ea10975d8eb1aca6caa3ff68}\index{UnityEngine.Rendering.ProfilingSampler@{UnityEngine.Rendering.ProfilingSampler}!ProfilingSampler@{ProfilingSampler}}
+\index{ProfilingSampler@{ProfilingSampler}!UnityEngine.Rendering.ProfilingSampler@{UnityEngine.Rendering.ProfilingSampler}}
+\doxysubsubsection{\texorpdfstring{ProfilingSampler()}{ProfilingSampler()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_profiling_sampler_aff20db50ea10975d8eb1aca6caa3ff68} 
+Unity\+Engine.\+Rendering.\+Profiling\+Sampler.\+Profiling\+Sampler (\begin{DoxyParamCaption}\item[{string}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the profiling sampler.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_profiling_sampler_a4bfb99db9deda9888bd966adc9fc5f47}\index{UnityEngine.Rendering.ProfilingSampler@{UnityEngine.Rendering.ProfilingSampler}!Begin@{Begin}}
+\index{Begin@{Begin}!UnityEngine.Rendering.ProfilingSampler@{UnityEngine.Rendering.ProfilingSampler}}
+\doxysubsubsection{\texorpdfstring{Begin()}{Begin()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_profiling_sampler_a4bfb99db9deda9888bd966adc9fc5f47} 
+void Unity\+Engine.\+Rendering.\+Profiling\+Sampler.\+Begin (\begin{DoxyParamCaption}\item[{Command\+Buffer}]{cmd}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Begin the profiling block. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & Command buffer used by the profiling block.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_profiling_sampler_a587baab2a55e91871484a9409b74e1f7}\index{UnityEngine.Rendering.ProfilingSampler@{UnityEngine.Rendering.ProfilingSampler}!End@{End}}
+\index{End@{End}!UnityEngine.Rendering.ProfilingSampler@{UnityEngine.Rendering.ProfilingSampler}}
+\doxysubsubsection{\texorpdfstring{End()}{End()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_profiling_sampler_a587baab2a55e91871484a9409b74e1f7} 
+void Unity\+Engine.\+Rendering.\+Profiling\+Sampler.\+End (\begin{DoxyParamCaption}\item[{Command\+Buffer}]{cmd}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+End the profiling block. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & Command buffer used by the profiling block.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_profiling_sampler_a0526092aa4f6e8ec7ba402fb655a4e4e}\index{UnityEngine.Rendering.ProfilingSampler@{UnityEngine.Rendering.ProfilingSampler}!Get$<$ TEnum $>$@{Get$<$ TEnum $>$}}
+\index{Get$<$ TEnum $>$@{Get$<$ TEnum $>$}!UnityEngine.Rendering.ProfilingSampler@{UnityEngine.Rendering.ProfilingSampler}}
+\doxysubsubsection{\texorpdfstring{Get$<$ TEnum $>$()}{Get< TEnum >()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_profiling_sampler_a0526092aa4f6e8ec7ba402fb655a4e4e} 
+static \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_profiling_sampler}{Profiling\+Sampler}} Unity\+Engine.\+Rendering.\+Profiling\+Sampler.\+Get$<$ TEnum $>$ (\begin{DoxyParamCaption}\item[{TEnum}]{marker}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the sampler for the corresponding enumeration value. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TEnum} & Type of the enumeration.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em marker} & Enumeration value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The profiling sampler for the given enumeration value.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TEnum} : {\em Enum}]\end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Debugging/Profiling\+Scope.\+cs\end{DoxyCompactItemize}

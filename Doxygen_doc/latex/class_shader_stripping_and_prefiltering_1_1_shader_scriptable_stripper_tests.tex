@@ -1,0 +1,153 @@
+\doxysection{Shader\+Stripping\+And\+Prefiltering.\+Shader\+Scriptable\+Stripper\+Tests Class Reference}
+\hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests}{}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests}\index{ShaderStrippingAndPrefiltering.ShaderScriptableStripperTests@{ShaderStrippingAndPrefiltering.ShaderScriptableStripperTests}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries Test\+Stripping\+Data}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a59edfeb73e1f9a51abb19d88cb1bb4c9}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a59edfeb73e1f9a51abb19d88cb1bb4c9} 
+void {\bfseries Test\+Strip\+Unused\+Shaders} (string shader\+Name, bool expected\+No\+Features, bool expected\+With\+Deferred\+Shading)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_afa3869be73e409d39fc63ee290bb0d55}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_afa3869be73e409d39fc63ee290bb0d55} 
+void {\bfseries Test\+Strip\+Unused\+Shaders\+\_\+\+Deferred} (Shader shader, bool expected\+No\+Features, bool expected\+With\+Deferred\+Shading)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_af35a34d1af9fc0e37b6ff365f898d0ac}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_af35a34d1af9fc0e37b6ff365f898d0ac} 
+void {\bfseries Test\+Strip\+Unused\+Pass} (string shader\+Name)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_af6865616ce47a179e57dba5694b817a1}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_af6865616ce47a179e57dba5694b817a1} 
+void {\bfseries Test\+Strip\+Unused\+Pass\+\_\+2D} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a932bb19aaa859c85370077a21dcaa337}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a932bb19aaa859c85370077a21dcaa337} 
+void {\bfseries Test\+Strip\+Unused\+Pass\+\_\+\+Shadow\+Caster} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_ac57f36128d7c7ee668c596e480490e1e}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_ac57f36128d7c7ee668c596e480490e1e} 
+void {\bfseries Test\+Strip\+Unused\+Pass\+\_\+\+Decals} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a973ad1f27a5e05883801e657d7b412ac}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a973ad1f27a5e05883801e657d7b412ac} 
+void {\bfseries Test\+Strip\+Invalid\+Variants} (string shader\+Name, bool expected\+Terrain\+Holes, bool expected\+Terrain\+Holes\+With\+Alpha\+Test\+On, bool expected\+Soft\+Shadows)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_ae392703add82391c7df4a9c812685205}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_ae392703add82391c7df4a9c812685205} 
+void {\bfseries Test\+Strip\+Invalid\+Variants\+\_\+\+HDR} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_abf2ee577a434ba45a5a41129de87d712}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_abf2ee577a434ba45a5a41129de87d712} 
+void {\bfseries Strip\+Invalid\+Variants\+\_\+\+Terrain\+Holes} (Shader shader, bool expected\+Terrain\+Holes, bool expected\+Terrain\+Holes\+With\+Alpha\+Test\+On)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a7cb08491d7905f0ce004ae2d1703710e}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a7cb08491d7905f0ce004ae2d1703710e} 
+void {\bfseries Test\+Strip\+Invalid\+Variants\+\_\+\+Shadows} (Shader shader, bool expected\+Soft\+Shadows)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_ad5d9c2102ade236532afb7150453f314}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_ad5d9c2102ade236532afb7150453f314} 
+void {\bfseries Test\+Strip\+Unsupported\+Variants} (string shader\+Name, bool expected\+Dir\+Lightmap, bool expected\+Lightmap\+Probes, bool expected\+Editor\+Vizualization)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a845babcdeaa57ab362a9e8735134e28e}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a845babcdeaa57ab362a9e8735134e28e} 
+void {\bfseries Strip\+Unsupported\+Variants\+\_\+\+Directional\+Lightmap} (Shader shader, bool expected\+Dir\+Lightmap)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a840f444eadab70c119b98d9cc59bdd76}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a840f444eadab70c119b98d9cc59bdd76} 
+void {\bfseries Strip\+Unsupported\+Variants\+\_\+\+Editor\+Visualization} (Shader shader, bool expected\+Editor\+Vizualization)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a3d2246d52712e39478427456559cb0f8}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a3d2246d52712e39478427456559cb0f8} 
+void {\bfseries Test\+Strip\+Unused\+Features} (string shader\+Name)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a7bc24050167db206ced6000ffc2c9561}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a7bc24050167db206ced6000ffc2c9561} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+Debug\+Display} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_adb47da9ff32743407f3025762fae6310}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_adb47da9ff32743407f3025762fae6310} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+Data\+Driven\+Lens\+Flare} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a875f7208ef5338e4543e236a9a6b1940}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a875f7208ef5338e4543e236a9a6b1940} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+Screen\+Coord\+Override} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a173bb9b8a0cad9a4a67c4cd405b3aaec}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a173bb9b8a0cad9a4a67c4cd405b3aaec} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+Punctual\+Light\+Shadows} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a95605413ff4c54f179a2159976c072a3}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a95605413ff4c54f179a2159976c072a3} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+Foveated\+Rendering} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a11ed3f6484bdee40bffdec53d185cd1b}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a11ed3f6484bdee40bffdec53d185cd1b} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+SHAuto} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a5f8a517aacd5bfa620dce6b39bc7fc29}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a5f8a517aacd5bfa620dce6b39bc7fc29} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+Deferred\+Rendering} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_aaaa00a41cadbd4ad77d0f50a73f42d15}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_aaaa00a41cadbd4ad77d0f50a73f42d15} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+Main\+Light\+Shadows} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_aef42576f2c21ed3418fd356c91166cb0}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_aef42576f2c21ed3418fd356c91166cb0} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+Additional\+Light\+Shadows} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a44d0992c73cd66e0d2955605b51ac1e5}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a44d0992c73cd66e0d2955605b51ac1e5} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+Mixed\+Lighting} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a287a44fe894f8a42ac84e67a771ef741}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a287a44fe894f8a42ac84e67a771ef741} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+Soft\+Shadows} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_aa83b3978213dbfd278b3ae33cc1ea79d}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_aa83b3978213dbfd278b3ae33cc1ea79d} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+HDRGrading} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_af2e85790bbf61772351767602790143d}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_af2e85790bbf61772351767602790143d} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+Use\+Fast\+SRGBLinear\+Conversion} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a157c3278e66e2e171efad54ffd54e477}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a157c3278e66e2e171efad54ffd54e477} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+Light\+Layers} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a6515f434ae17ea95db2d51c0fc922c2d}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a6515f434ae17ea95db2d51c0fc922c2d} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+Render\+Pass\+Enabled} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_ae7035d12b63edba6af76f8607af3ab75}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_ae7035d12b63edba6af76f8607af3ab75} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+Reflection\+Probes} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a761157ff38726f2ed0337dd53525324f}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a761157ff38726f2ed0337dd53525324f} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+Forward\+Plus} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a6e1233298774c83a5d3ecd66f41de650}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a6e1233298774c83a5d3ecd66f41de650} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+Additional\+Lights} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_ae3278b257a9ebab17ac7b0058a87ba3e}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_ae3278b257a9ebab17ac7b0058a87ba3e} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+Screen\+Space\+Occlusion} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a5e926ac9394ea67d43fe67f3c1d46b6b}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a5e926ac9394ea67d43fe67f3c1d46b6b} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+Decals\+Dbuffer} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_af7281e19f21149171c88233f1ede7f52}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_af7281e19f21149171c88233f1ede7f52} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+Decals\+Normal\+Blend} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a488ebd63fcc9de62ff4ea711d636cbfb}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a488ebd63fcc9de62ff4ea711d636cbfb} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+Decal\+Layers} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a606b69b21926b22dd852c7d2c2ac2761}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a606b69b21926b22dd852c7d2c2ac2761} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+Write\+Rendering\+Layers} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a398d336214163767b813f7a39db7c6c2}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a398d336214163767b813f7a39db7c6c2} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+Accurate\+Gbuffer\+Normals} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a9586e1af5e94adf787efce83b7354abf}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a9586e1af5e94adf787efce83b7354abf} 
+void {\bfseries Test\+Strip\+Unused\+Features\+\_\+\+Light\+Cookies} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a0ac37acd22e90bc4d9b7954f77222c01}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a0ac37acd22e90bc4d9b7954f77222c01} 
+void {\bfseries Test\+Strip\+Volume\+Features} (string shader\+Name)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a6f1c09c46af246c0fc747e51d59fa4b2}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a6f1c09c46af246c0fc747e51d59fa4b2} 
+void {\bfseries Test\+Strip\+Volume\+Features\+\_\+\+Uber\+Post\+Shader} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a523e26338ac36163eabaf5ad8ed18a6b}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a523e26338ac36163eabaf5ad8ed18a6b} 
+void {\bfseries Test\+Strip\+Volume\+Features\+\_\+\+Bokeh\+Depth\+Of\+Field\+Shader} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a094fca58185c72f0809186b8518b1615}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a094fca58185c72f0809186b8518b1615} 
+void {\bfseries Test\+Strip\+Volume\+Features\+\_\+\+Gaussian\+Depth\+Of\+Field\+Shader} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a83e65484fb14d05ff51d961bef14ebba}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a83e65484fb14d05ff51d961bef14ebba} 
+void {\bfseries Test\+Strip\+Volume\+Features\+\_\+\+Camera\+Motion\+Blur\+Shader} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a683be9be8823280ce4627be9f7d02724}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a683be9be8823280ce4627be9f7d02724} 
+void {\bfseries Test\+Strip\+Volume\+Features\+\_\+\+Panini\+Projection\+Shader} (Shader shader)
+\item 
+\Hypertarget{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a110da4a5aa9a9dd0adf70936996707bf}\label{class_shader_stripping_and_prefiltering_1_1_shader_scriptable_stripper_tests_a110da4a5aa9a9dd0adf70936996707bf} 
+void {\bfseries Test\+Strip\+Volume\+Features\+\_\+\+Bloom\+Shader} (Shader shader)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Tests/\+Editor/Shader\+Scriptable\+Stripper\+Tests.\+cs\end{DoxyCompactItemize}

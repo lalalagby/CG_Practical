@@ -1,0 +1,36 @@
+\chapter{Evaluate Water Simulation Displacement}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2de1915ee03a3255285d13debef98ef57}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2de1915ee03a3255285d13debef98ef57}\index{Evaluate Water Simulation Displacement@{Evaluate Water Simulation Displacement}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2de1915ee03a3255285d13debef98ef57_autotoc_md3209}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2de1915ee03a3255285d13debef98ef57_autotoc_md3209}%
+ This node calculates water surface displacement.
+
+The High Definition Render Pipeline (HDRP) uses this node in the default water shader graph. See the HDRP documentation for more information about \href{https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@14.0/manual/WaterSystem.html}{\texttt{ the Water System}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2de1915ee03a3255285d13debef98ef57_autotoc_md3210}{}\doxysection{\texorpdfstring{Render pipeline compatibility}{Render pipeline compatibility}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2de1915ee03a3255285d13debef98ef57_autotoc_md3210}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Node}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Universal Render Pipeline (URP)}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{High Definition Render Pipeline (HDRP)}}    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Node}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Universal Render Pipeline (URP)}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{High Definition Render Pipeline (HDRP)}}    }\\\cline{1-3}
+\endhead
+{\bfseries{Evaluate Water Simulation Displacement}}   &No   &Yes   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2de1915ee03a3255285d13debef98ef57_autotoc_md3211}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2de1915ee03a3255285d13debef98ef57_autotoc_md3211}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Direction}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Direction}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-4}
+\endhead
+{\bfseries{Position\+WS}}   &Input   &Vector3   &The position of the water surface vertex in world space.    \\\cline{1-4}
+{\bfseries{Bands\+Multiplier}}   &Input   &Vector4   &The amount to dampen displacement for each water band. Bands are different wave frequencies that create swells, agitations or ripples on the water.    \\\cline{1-4}
+{\bfseries{Displacement}}   &Output   &Vector3   &The vertical and horizontal displacement of the water.    \\\cline{1-4}
+{\bfseries{Low\+Frequency\+Height}}   &Output   &Float   &The vertical displacement of the water surface. This doesn\textquotesingle{}t include ripples.    \\\cline{1-4}
+{\bfseries{SSSMask}}   &Output   &Float   &Mask that defines where the water surface has subsurface scattering.   \\\cline{1-4}
+\end{longtabu}

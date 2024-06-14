@@ -1,0 +1,44 @@
+\chapter{Motion Blur}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doaa46dc21e25ec0285513513fcd03eb27}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doaa46dc21e25ec0285513513fcd03eb27}\index{Motion Blur@{Motion Blur}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doaa46dc21e25ec0285513513fcd03eb27_autotoc_md2304}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doaa46dc21e25ec0285513513fcd03eb27_autotoc_md2304}%
+  ~\newline
+{\itshape Scene with Motion Blur effect turned off.}
+
+ ~\newline
+{\itshape Scene with Motion Blur effect turned on.}
+
+The Motion Blur effect simulates the blur that occurs in an image when a real-\/world camera films objects moving faster than the camera’s exposure time. This is usually due to rapidly moving objects, or a long exposure time.
+
+Universal Render Pipeline (URP) only blurs camera motions.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doaa46dc21e25ec0285513513fcd03eb27_autotoc_md2305}{}\doxysection{\texorpdfstring{Using Motion Blur}{Using Motion Blur}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doaa46dc21e25ec0285513513fcd03eb27_autotoc_md2305}
+{\bfseries{Motion Blur}} uses the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_volumes}{Volume}{0} system, so to enable and modify {\bfseries{Motion Blur}} properties, you must add a {\bfseries{Motion Blur}} override to a \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_volumes}{Volume}{0} in your Scene. To add {\bfseries{Motion Blur}} to a Volume\+:
+
+
+\begin{DoxyEnumerate}
+\item In the Scene or Hierarchy view, select a Game\+Object that contains a Volume component to view it in the Inspector.
+\item In the Inspector, navigate to {\bfseries{Add Override \texorpdfstring{$>$}{>} Post-\/processing}}, and click on {\bfseries{Motion Blur}}. URP now applies {\bfseries{Motion Blur}} to any Camera this Volume affects.
+\end{DoxyEnumerate}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doaa46dc21e25ec0285513513fcd03eb27_autotoc_md2306}{}\doxysection{\texorpdfstring{Properties}{Properties}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doaa46dc21e25ec0285513513fcd03eb27_autotoc_md2306}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Quality}}   &Set the quality of the effect. Lower presets give better performance, but at a lower visual quality.    \\\cline{1-2}
+{\bfseries{Intensity}}   &Set the strength of the motion blur filter to a value from 0 to 1. Higher values give a stronger blur effect, but can cause lower performance, depending on the {\bfseries{Clamp}} parameter.    \\\cline{1-2}
+{\bfseries{Clamp}}   &Set the maximum length that the velocity resulting from Camera rotation can have. This limits the blur at high velocity, to avoid excessive performance costs. The value is measured as a fraction of the screen\textquotesingle{}s full resolution. The value range is 0 to 0.\+2. The default value is 0.\+05.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doaa46dc21e25ec0285513513fcd03eb27_autotoc_md2307}{}\doxysection{\texorpdfstring{Troubleshooting performance issues}{Troubleshooting performance issues}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_doaa46dc21e25ec0285513513fcd03eb27_autotoc_md2307}
+To decrease the performance impact of Motion Blur, you can\+:
+
+
+\begin{DoxyItemize}
+\item Reduce the {\bfseries{Quality}}. A lower quality setting gives higher performance but may exhibit more visual artifacts.
+\item Decrease the {\bfseries{Clamp}} to reduce the maximum velocity that \doxylink{namespace_unity}{Unity} takes into account. Lower values give higher performance. 
+\end{DoxyItemize}

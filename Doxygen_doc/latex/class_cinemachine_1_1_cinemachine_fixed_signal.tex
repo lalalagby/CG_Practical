@@ -1,0 +1,100 @@
+\doxysection{Cinemachine.\+Cinemachine\+Fixed\+Signal Class Reference}
+\hypertarget{class_cinemachine_1_1_cinemachine_fixed_signal}{}\label{class_cinemachine_1_1_cinemachine_fixed_signal}\index{Cinemachine.CinemachineFixedSignal@{Cinemachine.CinemachineFixedSignal}}
+
+
+A definition of an impulse signal that gets propagated to listeners.  
+
+
+Inheritance diagram for Cinemachine.\+Cinemachine\+Fixed\+Signal\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_cinemachine_1_1_cinemachine_fixed_signal}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_fixed_signal_aff4703564dad78aec2e35b49cf988161}{Get\+Signal}} (float time\+Since\+Signal\+Start, out Vector3 pos, out Quaternion rot)
+\begin{DoxyCompactList}\small\item\em Get the raw signal at this time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_cinemachine_1_1_signal_source_asset}{Cinemachine.\+Signal\+Source\+Asset}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_signal_source_asset_ad722a9e7558a3afc2a29b3a2d6edbe9e}{Get\+Signal}} (float time\+Since\+Signal\+Start, out Vector3 pos, out Quaternion rot)
+\begin{DoxyCompactList}\small\item\em Get the signal value at a given time relative to signal start. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_fixed_signal_acf5fd3007a72d8cf5be4efd59f5268f0}\label{class_cinemachine_1_1_cinemachine_fixed_signal_acf5fd3007a72d8cf5be4efd59f5268f0} 
+Animation\+Curve {\bfseries m\+\_\+\+XCurve}
+\begin{DoxyCompactList}\small\item\em The raw signal shape along the X axis. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_fixed_signal_a6fbfe9ea0a33be79507ffbb97c4df03c}\label{class_cinemachine_1_1_cinemachine_fixed_signal_a6fbfe9ea0a33be79507ffbb97c4df03c} 
+Animation\+Curve {\bfseries m\+\_\+\+YCurve}
+\begin{DoxyCompactList}\small\item\em The raw signal shape along the Y axis. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_fixed_signal_a7d4eda07137642c3dcdfc47e48578d2a}\label{class_cinemachine_1_1_cinemachine_fixed_signal_a7d4eda07137642c3dcdfc47e48578d2a} 
+Animation\+Curve {\bfseries m\+\_\+\+ZCurve}
+\begin{DoxyCompactList}\small\item\em The raw signal shape along the Z axis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+override float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_fixed_signal_a17f4a9ac14eb43a9d54f5f7bc918bdd2}{Signal\+Duration}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the length on seconds of the signal. ~\newline
+ Returns 0 for signals of indeterminate length. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_cinemachine_1_1_signal_source_asset}{Cinemachine.\+Signal\+Source\+Asset}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_cinemachine_1_1_signal_source_asset_a904baf814029785113af15b376fce2eb}{Signal\+Duration}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the length on seconds of the signal. ~\newline
+ Returns 0 for signals of indeterminate length. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_cinemachine_1_1_i_signal_source6_d}{Cinemachine.\+ISignal\+Source6D}}}
+
+
+\doxysubsection{Detailed Description}
+A definition of an impulse signal that gets propagated to listeners. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_fixed_signal_aff4703564dad78aec2e35b49cf988161}\index{Cinemachine.CinemachineFixedSignal@{Cinemachine.CinemachineFixedSignal}!GetSignal@{GetSignal}}
+\index{GetSignal@{GetSignal}!Cinemachine.CinemachineFixedSignal@{Cinemachine.CinemachineFixedSignal}}
+\doxysubsubsection{\texorpdfstring{GetSignal()}{GetSignal()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_fixed_signal_aff4703564dad78aec2e35b49cf988161} 
+override void Cinemachine.\+Cinemachine\+Fixed\+Signal.\+Get\+Signal (\begin{DoxyParamCaption}\item[{float}]{time\+Since\+Signal\+Start}{, }\item[{out Vector3}]{pos}{, }\item[{out Quaternion}]{rot}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the raw signal at this time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+Since\+Signal\+Start} & The time since in seconds since the start of the signal\\
+\hline
+{\em pos} & The position impulse signal\\
+\hline
+{\em rot} & The rotation impulse signal\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_cinemachine_1_1_i_signal_source6_d_a4e48db052ca839b54f5bf86702bd2038}{Cinemachine.\+ISignal\+Source6D}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_fixed_signal_a17f4a9ac14eb43a9d54f5f7bc918bdd2}\index{Cinemachine.CinemachineFixedSignal@{Cinemachine.CinemachineFixedSignal}!SignalDuration@{SignalDuration}}
+\index{SignalDuration@{SignalDuration}!Cinemachine.CinemachineFixedSignal@{Cinemachine.CinemachineFixedSignal}}
+\doxysubsubsection{\texorpdfstring{SignalDuration}{SignalDuration}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_fixed_signal_a17f4a9ac14eb43a9d54f5f7bc918bdd2} 
+override float Cinemachine.\+Cinemachine\+Fixed\+Signal.\+Signal\+Duration\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the length on seconds of the signal. ~\newline
+ Returns 0 for signals of indeterminate length. 
+
+
+
+Implements \mbox{\hyperlink{interface_cinemachine_1_1_i_signal_source6_d_a890f230a79ab909042c4d6b3fcd8e422}{Cinemachine.\+ISignal\+Source6D}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Impulse/Cinemachine\+Fixed\+Signal.\+cs\end{DoxyCompactItemize}

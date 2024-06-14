@@ -1,0 +1,62 @@
+\chapter{Setting Cinemachine Brain properties}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_brain_properties}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_brain_properties}\index{Setting Cinemachine Brain properties@{Setting Cinemachine Brain properties}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_brain_properties_autotoc_md660}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_brain_properties_autotoc_md660}%
+ The \doxylink{namespace_cinemachine}{Cinemachine} Brain is a component in the \doxylink{namespace_unity}{Unity} camera itself. \doxylink{namespace_cinemachine}{Cinemachine} Brain monitors all active Virtual Cameras in the Scene. It chooses the next Virtual Camera to control the \doxylink{namespace_unity}{Unity} camera. It also controls the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_blending}{cut or blend}{0} from the current Virtual Camera to the next.
+
+To add a \doxylink{namespace_cinemachine}{Cinemachine} Brain component to a \doxylink{namespace_unity}{Unity} camera, do {\bfseries{one}} of the following\+:
+
+
+\begin{DoxyItemize}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_set_up_v_cam}{Add a Virtual Camera}{0}, or other \doxylink{namespace_cinemachine}{Cinemachine} object, to your Scene. \doxylink{namespace_unity}{Unity} adds a \doxylink{namespace_cinemachine}{Cinemachine} Brain component to the \doxylink{namespace_unity}{Unity} camera for you if there isn’t one already.
+\item \href{https://docs.unity3d.com/Manual/UsingComponents.html}{\texttt{ Add}} a \doxylink{namespace_cinemachine}{Cinemachine} Brain component to the \doxylink{namespace_unity}{Unity} camera yourself.
+\end{DoxyItemize}
+
+{\bfseries{Tip}}\+: You can also control Virtual Cameras from \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_timeline}{Timeline}{0}. \doxylink{namespace_timeline}{Timeline} overrides the decisions that \doxylink{namespace_cinemachine}{Cinemachine} Brain makes.
+
+\doxylink{namespace_cinemachine}{Cinemachine} Brain holds the following key properties\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Blend Settings}}\+: A list that defines how to blend from one Virtual Camera to another. For example, add an item to the list for a 4 second blend from vcam1 to vcam2 then add another item for a 1 second blend from vcam2 back to vcam1. If a blend between two cameras isn’t defined, \doxylink{namespace_cinemachine}{Cinemachine} Brain uses its default blend.
+\item {\bfseries{Layer Filter}}\+: \doxylink{namespace_cinemachine}{Cinemachine} Brain uses only those Virtual Cameras that pass the culling mask of the \doxylink{namespace_unity}{Unity} camera. You can set up \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_multiple_cameras}{split-\/screen environments}{0} by using the culling mask to filter layers.
+\item {\bfseries{Event Dispatching}}\+: \doxylink{namespace_cinemachine}{Cinemachine} Brain fires events when it changes shot. It fires an event when a Virtual Camera goes live. It also fires an event when it cuts from one Virtual Camera to another. Use the latter event to reset temporal post effects.
+\end{DoxyItemize}
+
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_brain_properties_autotoc_md661}{}\doxysection{\texorpdfstring{Properties\+:}{Properties\+:}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_brain_properties_autotoc_md661}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }}&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\multicolumn{2}{|l|}{\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }}&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-3}
+\endhead
+\multicolumn{2}{|l|}{{\bfseries{Show Debug Text}}   }&Check to display a textual summary of the live Virtual Camera and blend in the view.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Show Camera Frustum}}   }&Check to display the frustum of the camera in the Scene view.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Ignore Time Scale}}   }&Check to make the Virtual Cameras respond in real time to user input and damping, even if the game is running in slow motion.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{World Up Override}}   }&The Y axis of the specified Game\+Object defines the worldspace up vector for Virtual Cameras. Use this property in top-\/down game environments. Set to None to use the worldspace Y axis. Setting this appropriately is important to avoid gimbal-\/lock in extreme up/down conditions.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Update Method}}   }&When to update the position and rotation of the Virtual Cameras.    \\\cline{1-3}
+&{\itshape Fixed Update}   &Synchronize Virtual Camera update with the Physics module, in Fixed\+Update.    \\\cline{1-3}
+&{\itshape Late Update}   &In Mono\+Behaviour Late\+Update.    \\\cline{1-3}
+&{\itshape Smart Update}   &Update each virtual camera according to how its target is updated. This is the recommended setting.    \\\cline{1-3}
+&{\itshape Manual Update}   &Virtual Cameras do not update automatically. You must explicitly call {\ttfamily brain.\+Manual\+Update()} at an appropriate time in your game loop. This should be after any camera Look\+At or Follow targets have moved. This is an advanced feature.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Blend Update Method}}   }&When to resolve the blends and update the main camera.    \\\cline{1-3}
+&{\itshape Late Update}   &In Mono\+Behaviour Late\+Update. This is the recommended setting.    \\\cline{1-3}
+&{\itshape Fixed Update}   &Use this setting only if your Update Method is Fixed\+Update and you see judder when blending.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Default Blend}}   }&The blend to use when you haven’t explicitly defined a blend between two Virtual Cameras.    \\\cline{1-3}
+&{\itshape Cut}   &Zero-\/length blend.    \\\cline{1-3}
+&{\itshape Ease In Out}   &S-\/shaped curve, giving a gentle and smooth transition.    \\\cline{1-3}
+&{\itshape Ease In}   &Linear out of the outgoing shot, and easy into the incoming.    \\\cline{1-3}
+&{\itshape Ease Out}   &Easy out of the outgoing shot, and linear into the incoming.    \\\cline{1-3}
+&{\itshape Hard In}   &Easy out of the outgoing, and hard into the incoming.    \\\cline{1-3}
+&{\itshape Hard Out}   &Hard out of the outgoing, and easy into the incoming.    \\\cline{1-3}
+&{\itshape Linear}   &Linear blend. Mechanical-\/looking.    \\\cline{1-3}
+&{\itshape Custom}   &Custom blend curve. Draw the curve you want.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Custom Blends}}   }&The asset that contains custom settings for blends between specific Virtual Cameras in your Scene.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Create Asset}}   }&Create an asset containing a \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_blending}{list of custom blends}{0} between Virtual Cameras.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Camera Cut Event}}   }&This event fires when a Virtual Camera goes live and there is no blend.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Camera Activated Event}}   }&This event fires when a Virtual Camera goes live. If a blend is involved, then the event fires on the first frame of the blend.   \\\cline{1-3}
+\end{longtabu}

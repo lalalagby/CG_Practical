@@ -1,0 +1,23 @@
+\chapter{nodes-\/sample-\/mip-\/bias-\/sample-\/mode-\/table}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2eaa272624ad352081ef6294d1cc656b0}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2eaa272624ad352081ef6294d1cc656b0}\index{nodes-\/sample-\/mip-\/bias-\/sample-\/mode-\/table@{nodes-\/sample-\/mip-\/bias-\/sample-\/mode-\/table}}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2eaa272624ad352081ef6294d1cc656b0_autotoc_md3921}{}\doxysubsection{\texorpdfstring{autotoc\+\_\+md3921}{autotoc\+\_\+md3921}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2eaa272624ad352081ef6294d1cc656b0_autotoc_md3921}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2eaa272624ad352081ef6294d1cc656b0_autotoc_md3922}{}\doxysubsection{\texorpdfstring{title\+: nodes-\/sample-\/mip-\/bias-\/sample-\/mode-\/table.\+md}{title\+: nodes-\/sample-\/mip-\/bias-\/sample-\/mode-\/table.\+md}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2eaa272624ad352081ef6294d1cc656b0_autotoc_md3922}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}} }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}} }&\multicolumn{2}{l|}{\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }}\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}} }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}} }&\multicolumn{2}{l|}{\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }}\\\cline{1-4}
+\endhead
+\multirow{3}{*}{{\bfseries{Use Global Mip Bias}} }&\multirow{3}{*}{Toggle }&\multicolumn{2}{l|}{Enable {\bfseries{Use Global Mip Bias}} to use the render pipeline\textquotesingle{}s Global Mip Bias. This bias adjusts the percentage of texture information taken from a specific mip when sampling. For more information on mip bias, see \href{https://docs.unity3d.com/Documentation/Manual/texture-mipmaps-introduction.html}{\texttt{ Mipmaps introduction}} in the \doxylink{namespace_unity}{Unity} User Manual.  }\\\cline{3-4}
+&&{\bfseries{Enabled}} &Shader Graph uses the render pipeline\textquotesingle{}s Global Mip Bias to adjust the texture information taken when sampling.  \\\cline{3-4}
+&&{\bfseries{Disabled}} &Shader Graph doesn\textquotesingle{}t use the render pipeline\textquotesingle{}s Global Mip Bias to adjust texture information when sampling.  \\\cline{1-4}
+\multirow{5}{*}{{\bfseries{Mip Sampling Mode}} }&\multirow{5}{*}{Dropdown }&\multicolumn{2}{l|}{Choose the sampling mode to use to calculate the mip level of the texture.  }\\\cline{3-4}
+&&{\bfseries{Standard}} &The render pipeline calculates and automatically selects the mip for the texture.  \\\cline{3-4}
+&&{\bfseries{LOD}} &The render pipeline lets you set an explicit mip for the texture on the node. The texture will always use this mip, regardless of the DDX or DDY calculations between pixels. Set the Mip Sampling Mode to {\bfseries{LOD}} to connect the node to a Block node in the Vertex Context. For more information on Block nodes and Contexts, see \href{Master-Stack.md}{\texttt{ Master Stack}}.  \\\cline{3-4}
+&&{\bfseries{Gradient}} &The render pipeline lets you set the DDX and DDY values to use for its mip calculation, instead of using the values calculated from the texture\textquotesingle{}s UV coordinates. For more information on DDX and DDY values, see \href{https://docs.unity3d.com/Documentation/Manual/texture-mipmaps-introduction.html}{\texttt{ Mipmaps introduction}} in the User Manual.  \\\cline{3-4}
+&&{\bfseries{Bias}} &The render pipeline lets you set a bias to adjust the calculated mip for a texture up or down. Negative values bias the mip to a higher resolution. Positive values bias the mip to a lower resolution. The render pipeline can add this value to the value of the Global Mip Bias, or use this value instead of its Global Mip Bias. For more information on mip bias, see \href{https://docs.unity3d.com/Documentation/Manual/texture-mipmaps-introduction.html}{\texttt{ Mipmaps introduction}} in the User Manual.   \\\cline{1-4}
+\end{longtabu}

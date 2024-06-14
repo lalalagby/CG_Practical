@@ -1,0 +1,35 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Utilities.\+Vector3\+Magnitude\+Comparer Struct Reference}
+\hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_vector3_magnitude_comparer}{}\label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_vector3_magnitude_comparer}\index{UnityEngine.InputSystem.Utilities.Vector3MagnitudeComparer@{UnityEngine.InputSystem.Utilities.Vector3MagnitudeComparer}}
+
+
+Compare two Vector3 by magnitude.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Utilities.\+Vector3\+Magnitude\+Comparer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_vector3_magnitude_comparer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_vector3_magnitude_comparer_a98b73194775c98e56ce7a28f39d7a80a}\label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_vector3_magnitude_comparer_a98b73194775c98e56ce7a28f39d7a80a} 
+int {\bfseries Compare} (Vector3 x, Vector3 y)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Compare two Vector3 by magnitude. 
+
+
+\begin{DoxyCode}{0}
+
+\end{DoxyCode}
+ public class Composite\+With\+Vector3\+Part \+: \doxylink{class_unity_engine_1_1_input_system_1_1_input_binding_composite}{Input\+Binding\+Composite}\texorpdfstring{$<$}{<}Vector3\texorpdfstring{$>$}{>} \{ \mbox{[}\doxylink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}(layout = "{}\+Vector3"{})\mbox{]} public int part;
+
+public override Vector3 Read\+Value(ref Input\+Binding\+Composite\+Context context) \{ // Return the Vector3 with the greatest magnitude. return context.\+Read\+Value\texorpdfstring{$<$}{<}Vector3, \doxylink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_vector2_magnitude_comparer}{Vector2\+Magnitude\+Comparer}\texorpdfstring{$>$}{>}(part); \} \} 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Utilities/Comparers.\+cs\end{DoxyCompactItemize}

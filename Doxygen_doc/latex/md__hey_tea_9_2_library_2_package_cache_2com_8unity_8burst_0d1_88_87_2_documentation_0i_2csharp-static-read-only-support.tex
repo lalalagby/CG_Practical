@@ -1,0 +1,40 @@
+\chapter{Static read-\/only fields and static constructor support}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-static-read-only-support}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-static-read-only-support}\index{Static read-\/only fields and static constructor support@{Static read-\/only fields and static constructor support}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-static-read-only-support_autotoc_md356}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-static-read-only-support_autotoc_md356}%
+ \doxylink{namespace_burst}{Burst} evaluates all static fields and all static constructors at compile time. It evaluates all the static fields and the static constructors for a given struct together.
+
+When there is a static field that isn\textquotesingle{}t read-\/only in a Burst-\/compiled struct, a compilation error happens. This is because \doxylink{namespace_burst}{Burst} only supports read-\/only static fields.
+
+When \doxylink{namespace_burst}{Burst} fails to evaluate any static field or static constructor, all fields and constructors fail for that struct.
+
+When compile-\/time evaluation fails, \doxylink{namespace_burst}{Burst} falls back to compiling all static initialization code into an initialization function that it calls once at runtime. This means that your code needs to be \doxylink{namespace_burst}{Burst} compatible, or it will fail compilation if it fails compile-\/time evaluation.
+
+An exception to this is that there\textquotesingle{}s limited support for initializing static read-\/only array fields as long as they\textquotesingle{}re initialized from either an array constructor or from static data\+:
+\begin{DoxyItemize}
+\item {\ttfamily static readonly int\mbox{[}\mbox{]} My\+Array0 = \{ 1, 2, 3, .. \};}
+\item {\ttfamily static readonly int\mbox{[}\mbox{]} My\+Array1 = new int\mbox{[}10\mbox{]};}
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-static-read-only-support_autotoc_md357}{}\doxysection{\texorpdfstring{Language support}{Language support}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2csharp-static-read-only-support_autotoc_md357}
+\doxylink{namespace_burst}{Burst} doesn\textquotesingle{}t support calling external functions and function pointers.
+
+It supports using the following base language with static read-\/only fields and constructors\+:
+
+
+\begin{DoxyItemize}
+\item Managed arrays
+\item Strings
+\item Limited intrinsic support\+:
+\begin{DoxyItemize}
+\item {\ttfamily Unity.\+Burst.\+Burst\+Compiler.\+Is\+Enabled}
+\item {\ttfamily Unity.\+Burst.\+Burst\+Runtime.\+Get\+Hash\+Code32}
+\item {\ttfamily Unity.\+Burst.\+Burst\+Runtime.\+Get\+Hash\+Code64}
+\item Vector type construction
+\end{DoxyItemize}
+\item Limited intrinsic assertion support\+:
+\begin{DoxyItemize}
+\item {\ttfamily Unity\+Engine.\+Debug.\+Assert}
+\item {\ttfamily NUnit.\+Framework.\+Assert.\+Are\+Equal}
+\item {\ttfamily NUnit.\+Framework.\+Assert.\+Are\+Not\+Equal}
+\end{DoxyItemize}
+\item Simple throw patterns. Any exceptions thrown during evaluation become compiler errors. 
+\end{DoxyItemize}

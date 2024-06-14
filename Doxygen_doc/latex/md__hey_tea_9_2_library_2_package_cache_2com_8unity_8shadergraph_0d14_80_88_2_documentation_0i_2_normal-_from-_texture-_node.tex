@@ -1,0 +1,47 @@
+\chapter{Normal From Texture Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_normal-_from-_texture-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_normal-_from-_texture-_node}\index{Normal From Texture Node@{Normal From Texture Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_normal-_from-_texture-_node_autotoc_md3536}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_normal-_from-_texture-_node_autotoc_md3536}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_normal-_from-_texture-_node_autotoc_md3537}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_normal-_from-_texture-_node_autotoc_md3537}
+Converts a height map defined by input {\bfseries{Texture}} into a normal map. UV values and sampler state can be defined by inputs {\bfseries{UV}} and {\bfseries{Sampler}} respectively. If nothing is connected to these ports they will use default values from the inputs. See \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_port-_bindings}{Port Bindings}{0} for more information.
+
+The strength of the created normal map can be defined by inputs {\bfseries{Offset}} and {\bfseries{Strength}}, where {\bfseries{Offset}} defines the maximum distance of a normal detail and {\bfseries{Strength}} acts as a multiplier to the result.
+
+If you experience texture sampling errors while using this node in a graph which includes Custom Function Nodes or Sub Graphs, you can resolve them by upgrading to version 10.\+3 or later.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_normal-_from-_texture-_node_autotoc_md3538}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_normal-_from-_texture-_node_autotoc_md3538}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+Texture   &Input   &Texture   &None   &Height map    \\\cline{1-5}
+UV   &Input   &Vector 2   &UV   &Texture coordinates    \\\cline{1-5}
+Sampler   &Input   &Sampler State   &None   &Sampler for {\bfseries{Texture}}    \\\cline{1-5}
+Offset   &Input   &Float   &None   &Amount to offset samples    \\\cline{1-5}
+Strength   &Input   &Float   &None   &Strength multiplier    \\\cline{1-5}
+Out   &Output   &Vector 3   &None   &Output value   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_normal-_from-_texture-_node_autotoc_md3539}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_normal-_from-_texture-_node_autotoc_md3539}
+The following example code represents one possible outcome of this node.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_NormalFromTexture\_float(Texture\ texture,\ SamplerState\ Sampler,\ float2\ UV,\ float\ Offset,\ float\ Strength,\ out\ float3\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Offset\ =\ pow(Offset,\ 3)\ *\ 0.1;}
+\DoxyCodeLine{\ \ \ \ float2\ offsetU\ =\ float2(UV.x\ +\ Offset,\ UV.y);}
+\DoxyCodeLine{\ \ \ \ float2\ offsetV\ =\ float2(UV.x,\ UV.y\ +\ Offset);}
+\DoxyCodeLine{\ \ \ \ float\ normalSample\ =\ Texture.Sample(Sampler,\ UV);}
+\DoxyCodeLine{\ \ \ \ float\ uSample\ =\ Texture.Sample(Sampler,\ offsetU);}
+\DoxyCodeLine{\ \ \ \ float\ vSample\ =\ Texture.Sample(Sampler,\ offsetV);}
+\DoxyCodeLine{\ \ \ \ float3\ va\ =\ float3(1,\ 0,\ (uSample\ -\/\ normalSample)\ *\ Strength);}
+\DoxyCodeLine{\ \ \ \ float3\ vb\ =\ float3(0,\ 1,\ (vSample\ -\/\ normalSample)\ *\ Strength);}
+\DoxyCodeLine{\ \ \ \ Out\ =\ normalize(cross(va,\ vb));}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

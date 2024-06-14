@@ -1,0 +1,636 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Input\+Settings Class Reference}
+\hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings}{}\label{class_unity_engine_1_1_input_system_1_1_input_settings}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}
+
+
+Project-\/wide input settings.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Input\+Settings\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_input_system_1_1_input_settings}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_a4a5105a8ac1e356da9293a836c3e7e81}{Update\+Mode}} \{ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_a4a5105a8ac1e356da9293a836c3e7e81a33181a0cbf027c7942421f6069aa9656}{Process\+Events\+In\+Dynamic\+Update}} = 1
+, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_a4a5105a8ac1e356da9293a836c3e7e81a8a88b8a1229fbf64af5f16c1c3ff71a9}{Process\+Events\+In\+Fixed\+Update}}
+, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_a4a5105a8ac1e356da9293a836c3e7e81a382abc4f6ba58c13b65b1a6a48e0dc56}{Process\+Events\+Manually}}
+ \}
+\begin{DoxyCompactList}\small\item\em How the input system should update. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_ad5b03540dad36f1f717f7d4103f6d8dd}{Background\+Behavior}} \{ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_ad5b03540dad36f1f717f7d4103f6d8ddaf35bc631d6d647cb6d4f29c6063ea608}{Reset\+And\+Disable\+Non\+Background\+Devices}} = 0
+, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_ad5b03540dad36f1f717f7d4103f6d8dda96638d2f06372ee39e50cdcd1e18f3c0}{Reset\+And\+Disable\+All\+Devices}} = 1
+, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_ad5b03540dad36f1f717f7d4103f6d8dda19bbb2e41edd39c1a4d8d2dc2aca6eb6}{Ignore\+Focus}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Determines how the applications behaves when running in the background. See \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a11467cec652b53340f93f7a788dac2d5}{background\+Behavior}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_a68fe47b120c4682bd07fc54650359f7c}{Editor\+Input\+Behavior\+In\+Play\+Mode}} \{ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_a68fe47b120c4682bd07fc54650359f7ca2df5df0e8309d299690ea787ccae7ba1}{Pointers\+And\+Keyboards\+Respect\+Game\+View\+Focus}}
+, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_a68fe47b120c4682bd07fc54650359f7ca071189b94fd7da70cd02cc7a6d00b881}{All\+Devices\+Respect\+Game\+View\+Focus}}
+, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_a68fe47b120c4682bd07fc54650359f7caa043cf0e57ef2f6fd8b9453f1e4006a5}{All\+Device\+Input\+Always\+Goes\+To\+Game\+View}}
+ \}
+\begin{DoxyCompactList}\small\item\em Determines how player focus is handled with respect to input when we are in play mode in the editor. See \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a92a36004e55e36001de4663d29d68094}{Input\+Settings.\+editor\+Input\+Behavior\+In\+Play\+Mode}. The setting does not have an effect when the editor is not in play mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_a7f3e9ca553317d1d892ed5f5690bf4d4}{Set\+Internal\+Feature\+Flag}} (string feature\+Name, bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable or disable an internal feature by its name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_a4a5105a8ac1e356da9293a836c3e7e81}{Update\+Mode}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_ab7d15182096158aaf407f0b7e9aed8ae}{update\+Mode}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Allows you to control how the input system handles updates. In other words, how and when pending input events are processed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_a16ce2abf20723dc7a71b8e4ecff0e154}{compensate\+For\+Screen\+Orientation}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If true, sensors that deliver rotation values on handheld devices will automatically adjust rotations when the screen orientation changes. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_ab2d57f969372bb35fe1d2ee72b60d27b}{filter\+Noise\+On\+Current}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Currently\+: Option is deprecated and has no influence on the system. Filtering on noise is always enabled. Previously\+: Whether to not make a device {\ttfamily .current} (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_device_a0a98203c32eb180ab8b7c862dc27635c}{Input\+Device.\+Make\+Current}) when there is only noise in the input. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_accd284544ee5bf7f2adb6e753282a423}{default\+Deadzone\+Min}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Default value used when nothing is set explicitly on \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_stick_deadzone_processor_a22b3f6d3af8da761506ca3ff01cbf3ad}{Stick\+Deadzone\+Processor.\+min} or \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_a2de9a092dc4d3d808207e4cc14bb6637}{Axis\+Deadzone\+Processor.\+min}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_a6f0ab44f1678705a772178d2959d847e}{default\+Deadzone\+Max}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Default value used when nothing is set explicitly on Stick\+Deadzone\+Processor.\+max or \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_aabd1df6081e38695f80bcbfd72ef43a4}{Axis\+Deadzone\+Processor.\+max}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}{default\+Button\+Press\+Point}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The default value threshold for when a button is considered pressed. Used if no explicit thresholds are set on parameters such as \doxylink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control_aee05d5892d3fdf8a59888815420c29b6}{Controls.\+Button\+Control.\+press\+Point} or \doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_press_interaction_a754f87d03a1df1e494e728bcf787bcf8}{Interactions.\+Press\+Interaction.\+press\+Point}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_af3a44c9e9f7da82060f87892168e73bd}{button\+Release\+Threshold}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The percentage of \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}{default\+Button\+Press\+Point} at which a button that was pressed is considered released again. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_aae374a18c8d36614e3263522b9c0bc80}{default\+Tap\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Default time (in seconds) within which a press and release has to occur for it to be registered as a "{}tap"{}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_ab474c89c52e2b360a028979b54c17ffe}{default\+Slow\+Tap\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Allows you to specify the default minimum duration required of a press-\/and-\/release interaction to evaluate to a slow-\/tap-\/interaction. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_a3f68fe5bfec0cb9b3a6185193084a19c}{default\+Hold\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Allows you to specify the default minimum duration required of a press-\/and-\/release interaction to evaluate to a hold-\/interaction. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_ae8a46aacf184ae15d1f237f2a252822c}{tap\+Radius}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Allows you to specify the default maximum radius that a touch contact may be moved from its origin to evaluate to a tap-\/interaction. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_a7bdd69e877469fdfa0fa11f12a65803d}{multi\+Tap\+Delay\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Allows you to specify the maximum duration that may pass between taps in order to evaluate to a multi-\/tap-\/interaction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_ad5b03540dad36f1f717f7d4103f6d8dd}{Background\+Behavior}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_a11467cec652b53340f93f7a788dac2d5}{background\+Behavior}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em When {\ttfamily Application.\+run\+In\+Background} is true, this property determines what happens when application focus changes (see \href{https://docs.unity3d.com/ScriptReference/Application-isFocused.html}{\texttt{ Application.\+is\+Focused}}) changes and how we handle input while running the background. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_a68fe47b120c4682bd07fc54650359f7c}{Editor\+Input\+Behavior\+In\+Play\+Mode}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_a92a36004e55e36001de4663d29d68094}{editor\+Input\+Behavior\+In\+Play\+Mode}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Determines how player focus is handled in the editor with respect to input. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_aab9775f260f986ef5d1c5a379158d8bd}{max\+Event\+Bytes\+Per\+Update}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Upper limit on the amount of bytes worth of Input\+Events processed in a single Input\+System.\+Update. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_adb83e0c2bfbee688b5fce1fb0035acb4}{max\+Queued\+Events\+Per\+Update}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Upper limit on the number of Input\+Events that can be queued within one Input\+System.\+Update. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ string $>$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_aa104b89e505dd3c8d30feab6b27c1b42}{supported\+Devices}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of device layouts used by the project. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_a124628ad485190bdf76862cbae6ea911}{disable\+Redundant\+Events\+Merging}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Disables merging of redundant input events (at the moment, only mouse events). Disable it if you want to get all events. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_a069a0609e7175ded8372ebe1475f99ae}{shortcut\+Keys\+Consume\+Input}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Improves shortcut key support by making composite controls consume control input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Project-\/wide input settings. 
+
+Several aspects of the input system can be customized to tailor how the system functions to the specific needs of a project. These settings are collected in this class. There is one global settings object active at any one time. It can be accessed and set through Input\+System.\+settings.
+
+Changing a setting on the object takes effect immediately. It also triggers the Input\+System.\+on\+Settings\+Change callback. 
+
+\begin{DoxySeeAlso}{See also}
+Input\+System.\+settings, Input\+System.\+on\+Settings\+Change
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_ad5b03540dad36f1f717f7d4103f6d8dd}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!BackgroundBehavior@{BackgroundBehavior}}
+\index{BackgroundBehavior@{BackgroundBehavior}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}
+\doxysubsubsection{\texorpdfstring{BackgroundBehavior}{BackgroundBehavior}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_settings_ad5b03540dad36f1f717f7d4103f6d8dd} 
+enum \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_ad5b03540dad36f1f717f7d4103f6d8dd}{Unity\+Engine.\+Input\+System.\+Input\+Settings.\+Background\+Behavior}}}
+
+
+
+Determines how the applications behaves when running in the background. See \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a11467cec652b53340f93f7a788dac2d5}{background\+Behavior}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a11467cec652b53340f93f7a788dac2d5}{background\+Behavior}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a92a36004e55e36001de4663d29d68094}{Input\+Settings.\+editor\+Input\+Behavior\+In\+Play\+Mode}
+
+
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ResetAndDisableNonBackgroundDevices@{ResetAndDisableNonBackgroundDevices}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!ResetAndDisableNonBackgroundDevices@{ResetAndDisableNonBackgroundDevices}}}\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_ad5b03540dad36f1f717f7d4103f6d8ddaf35bc631d6d647cb6d4f29c6063ea608}\label{class_unity_engine_1_1_input_system_1_1_input_settings_ad5b03540dad36f1f717f7d4103f6d8dd} 
+Reset\+And\+Disable\+Non\+Background\+Devices&When the application loses focus, issue a Input\+System.\+Reset\+Device call on every \doxylink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device} that is not marked as \doxylink{class_unity_engine_1_1_input_system_1_1_input_device_acecc008067d46ee9a1db3cf059f6c709}{Input\+Device.\+can\+Run\+In\+Background} and then disable the device (see Input\+System.\+Disable\+Device and \doxylink{class_unity_engine_1_1_input_system_1_1_input_device_a11b982f33c9ccecd0cbf73501e363e8f}{Input\+Device.\+enabled}). Devices that \doxylink{class_unity_engine_1_1_input_system_1_1_input_device_acecc008067d46ee9a1db3cf059f6c709}{Input\+Device.\+can\+Run\+In\+Background} will not be touched and will keep running as is. In effect, this setting will "{}soft-\/reset"{} all devices that cannot receive input while the application does not have focus. That is, it will reset all controls that are not marked as \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_control_layout_1_1_control_item_a60f4e5350e3075c9044005219f445983}{Input\+Control\+Layout.\+Control\+Item.\+dont\+Reset} to their default state.
+
+When the application comes back into focus, all devices that have been reset and disabled will be re-\/enabled and a synchronization request (see Request\+Sync\+Command) will be sent to each device.
+
+Devices that are added while the application is running in the background are treated like devices that were already present when losing focus. That is, if they cannot run in the background, they will be disabled until focus comes back.
+
+Note that the resets will cancel \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}s that are in progress from controls on devices that are being reset. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ResetAndDisableAllDevices@{ResetAndDisableAllDevices}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!ResetAndDisableAllDevices@{ResetAndDisableAllDevices}}}\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_ad5b03540dad36f1f717f7d4103f6d8dda96638d2f06372ee39e50cdcd1e18f3c0}\label{class_unity_engine_1_1_input_system_1_1_input_settings_ad5b03540dad36f1f717f7d4103f6d8dd} 
+Reset\+And\+Disable\+All\+Devices&Like \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_ad5b03540dad36f1f717f7d4103f6d8ddaf35bc631d6d647cb6d4f29c6063ea608}{Reset\+And\+Disable\+Non\+Background\+Devices} but instead treat all devices as having \doxylink{class_unity_engine_1_1_input_system_1_1_input_device_acecc008067d46ee9a1db3cf059f6c709}{Input\+Device.\+can\+Run\+In\+Background} return false. This effectively means that all input is silenced while the application is running in the background. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IgnoreFocus@{IgnoreFocus}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!IgnoreFocus@{IgnoreFocus}}}\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_ad5b03540dad36f1f717f7d4103f6d8dda19bbb2e41edd39c1a4d8d2dc2aca6eb6}\label{class_unity_engine_1_1_input_system_1_1_input_settings_ad5b03540dad36f1f717f7d4103f6d8dd} 
+Ignore\+Focus&Ignore all changes in focus and leave devices untouched. This also disables focus checks in UI.\+Input\+System\+UIInput\+Module. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_a68fe47b120c4682bd07fc54650359f7c}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!EditorInputBehaviorInPlayMode@{EditorInputBehaviorInPlayMode}}
+\index{EditorInputBehaviorInPlayMode@{EditorInputBehaviorInPlayMode}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}
+\doxysubsubsection{\texorpdfstring{EditorInputBehaviorInPlayMode}{EditorInputBehaviorInPlayMode}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_settings_a68fe47b120c4682bd07fc54650359f7c} 
+enum \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_a68fe47b120c4682bd07fc54650359f7c}{Unity\+Engine.\+Input\+System.\+Input\+Settings.\+Editor\+Input\+Behavior\+In\+Play\+Mode}}}
+
+
+
+Determines how player focus is handled with respect to input when we are in play mode in the editor. See \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a92a36004e55e36001de4663d29d68094}{Input\+Settings.\+editor\+Input\+Behavior\+In\+Play\+Mode}. The setting does not have an effect when the editor is not in play mode. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PointersAndKeyboardsRespectGameViewFocus@{PointersAndKeyboardsRespectGameViewFocus}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!PointersAndKeyboardsRespectGameViewFocus@{PointersAndKeyboardsRespectGameViewFocus}}}\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_a68fe47b120c4682bd07fc54650359f7ca2df5df0e8309d299690ea787ccae7ba1}\label{class_unity_engine_1_1_input_system_1_1_input_settings_a68fe47b120c4682bd07fc54650359f7c} 
+Pointers\+And\+Keyboards\+Respect\+Game\+View\+Focus&When the game view does not have focus, input from \doxylink{class_unity_engine_1_1_input_system_1_1_pointer}{Pointer} devices (such as \doxylink{class_unity_engine_1_1_input_system_1_1_mouse}{Mouse} and \doxylink{class_unity_engine_1_1_input_system_1_1_touchscreen}{Touchscreen}) is routed to the editor and not visible in player code. Input from devices such as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad}{Gamepad}s will continue to go to the game regardless of which {\ttfamily Editor\+Window} is focused. This is the default. It makes sure that the devices that are used with the editor \doxylink{namespace_unity_engine_1_1_u_i}{UI} respect {\ttfamily Editor\+Window} focus and thus do not lead to accidental inputs affecting the game. While at the same time letting all other input get through to the game. It does, however, mean that no other {\ttfamily Editor\+Window} can tap input from these devices (such as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad}{Gamepad}s and \doxylink{namespace_unity_engine_1_1_input_system_1_1_h_i_d}{HID}s). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AllDevicesRespectGameViewFocus@{AllDevicesRespectGameViewFocus}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!AllDevicesRespectGameViewFocus@{AllDevicesRespectGameViewFocus}}}\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_a68fe47b120c4682bd07fc54650359f7ca071189b94fd7da70cd02cc7a6d00b881}\label{class_unity_engine_1_1_input_system_1_1_input_settings_a68fe47b120c4682bd07fc54650359f7c} 
+All\+Devices\+Respect\+Game\+View\+Focus&When the game view does not have focus, all input is routed to the editor (and thus {\ttfamily Editor\+Window}s). No input is received in the game regardless of the type of device generating it. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AllDeviceInputAlwaysGoesToGameView@{AllDeviceInputAlwaysGoesToGameView}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!AllDeviceInputAlwaysGoesToGameView@{AllDeviceInputAlwaysGoesToGameView}}}\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_a68fe47b120c4682bd07fc54650359f7caa043cf0e57ef2f6fd8b9453f1e4006a5}\label{class_unity_engine_1_1_input_system_1_1_input_settings_a68fe47b120c4682bd07fc54650359f7c} 
+All\+Device\+Input\+Always\+Goes\+To\+Game\+View&All input is going to the game at all times. This most closely aligns input behavior in the editor with that in players. \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a11467cec652b53340f93f7a788dac2d5}{background\+Behavior} will be respected as in the player and devices may thus be disabled in the runtime based on Game View focus. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_a4a5105a8ac1e356da9293a836c3e7e81}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!UpdateMode@{UpdateMode}}
+\index{UpdateMode@{UpdateMode}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}
+\doxysubsubsection{\texorpdfstring{UpdateMode}{UpdateMode}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_settings_a4a5105a8ac1e356da9293a836c3e7e81} 
+enum \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_a4a5105a8ac1e356da9293a836c3e7e81}{Unity\+Engine.\+Input\+System.\+Input\+Settings.\+Update\+Mode}}}
+
+
+
+How the input system should update. 
+
+By default, the input system will run event processing as part of the player loop. In the default configuration, the processing will happens once before every every dynamic update (\href{https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html}{\texttt{ Update}}), i.\+e. \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a4a5105a8ac1e356da9293a836c3e7e81a33181a0cbf027c7942421f6069aa9656}{Process\+Events\+In\+Dynamic\+Update} is the default behavior.
+
+There are two types of updates not governed by Update\+Mode. One is Input\+Update\+Type.\+Editor which will always be enabled in the editor and govern input updates for Unity\+Editor.\+Editor\+Windows in sync to Unity\+Editor.\+Editor\+Application.\+update.
+
+The other update type is Input\+Update\+Type.\+Before\+Render. This type of update is enabled and disabled automatically in response to whether devices are present requiring this type of update (\doxylink{class_unity_engine_1_1_input_system_1_1_input_device_a8582d897119e1524b4f695447afbc6c1}{Input\+Device.\+update\+Before\+Render}). This update does not consume extra state. 
+
+\begin{DoxySeeAlso}{See also}
+Input\+System.\+Update, \doxylink{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789}{Input\+Update\+Type}
+
+
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ProcessEventsInDynamicUpdate@{ProcessEventsInDynamicUpdate}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!ProcessEventsInDynamicUpdate@{ProcessEventsInDynamicUpdate}}}\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_a4a5105a8ac1e356da9293a836c3e7e81a33181a0cbf027c7942421f6069aa9656}\label{class_unity_engine_1_1_input_system_1_1_input_settings_a4a5105a8ac1e356da9293a836c3e7e81} 
+Process\+Events\+In\+Dynamic\+Update&Automatically run input updates right before every \href{https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html}{\texttt{ Update}}. In this mode, no processing happens specifically for fixed updates. Querying input state in \href{https://docs.unity3d.com/ScriptReference/MonoBehaviour.FixedUpdate.html}{\texttt{ Fixed\+Update}} will result in errors being logged in the editor and in development builds. In release player builds, the value of the dynamic update state is returned. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ProcessEventsInFixedUpdate@{ProcessEventsInFixedUpdate}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!ProcessEventsInFixedUpdate@{ProcessEventsInFixedUpdate}}}\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_a4a5105a8ac1e356da9293a836c3e7e81a8a88b8a1229fbf64af5f16c1c3ff71a9}\label{class_unity_engine_1_1_input_system_1_1_input_settings_a4a5105a8ac1e356da9293a836c3e7e81} 
+Process\+Events\+In\+Fixed\+Update&Automatically input run updates right before every \href{https://docs.unity3d.com/ScriptReference/MonoBehaviour.FixedUpdate.html}{\texttt{ Fixed\+Update}}. In this mode, no processing happens specifically for dynamic updates. Querying input state in \href{https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html}{\texttt{ Update}} will result in errors being logged in the editor and in development builds. In release player builds, the value of the fixed update state is returned. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ProcessEventsManually@{ProcessEventsManually}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!ProcessEventsManually@{ProcessEventsManually}}}\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_a4a5105a8ac1e356da9293a836c3e7e81a382abc4f6ba58c13b65b1a6a48e0dc56}\label{class_unity_engine_1_1_input_system_1_1_input_settings_a4a5105a8ac1e356da9293a836c3e7e81} 
+Process\+Events\+Manually&Do not run updates automatically. In this mode, Input\+System.\+Update must be called manually to update input. This mode is most useful for placing input updates in the frame explicitly at an exact location.
+
+Note that failing to call Input\+System.\+Update may result in a lot of events accumulating or some input getting lost. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_a7f3e9ca553317d1d892ed5f5690bf4d4}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!SetInternalFeatureFlag@{SetInternalFeatureFlag}}
+\index{SetInternalFeatureFlag@{SetInternalFeatureFlag}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}
+\doxysubsubsection{\texorpdfstring{SetInternalFeatureFlag()}{SetInternalFeatureFlag()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_settings_a7f3e9ca553317d1d892ed5f5690bf4d4} 
+void Unity\+Engine.\+Input\+System.\+Input\+Settings.\+Set\+Internal\+Feature\+Flag (\begin{DoxyParamCaption}\item[{string}]{feature\+Name}{, }\item[{bool}]{enabled}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enable or disable an internal feature by its name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em feature\+Name} & Name of the feature.\\
+\hline
+{\em enabled} & Whether to enable or disable the feature.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & {\itshape feature\+Name}  is {\ttfamily null} or empty.\\
+\hline
+\end{DoxyExceptions}
+
+
+This method is intended for experimental features. These must be enabled/disabled from code. Setting or unsetting a feature flag will not be persisted in an {\ttfamily .inputsettings} file. 
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_a11467cec652b53340f93f7a788dac2d5}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!backgroundBehavior@{backgroundBehavior}}
+\index{backgroundBehavior@{backgroundBehavior}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}
+\doxysubsubsection{\texorpdfstring{backgroundBehavior}{backgroundBehavior}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_settings_a11467cec652b53340f93f7a788dac2d5} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_ad5b03540dad36f1f717f7d4103f6d8dd}{Background\+Behavior}} Unity\+Engine.\+Input\+System.\+Input\+Settings.\+background\+Behavior\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+When {\ttfamily Application.\+run\+In\+Background} is true, this property determines what happens when application focus changes (see \href{https://docs.unity3d.com/ScriptReference/Application-isFocused.html}{\texttt{ Application.\+is\+Focused}}) changes and how we handle input while running the background. 
+
+What to do with input while not having focus. Set to \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_ad5b03540dad36f1f717f7d4103f6d8ddaf35bc631d6d647cb6d4f29c6063ea608}{Background\+Behavior.\+Reset\+And\+Disable\+Non\+Background\+Devices} by default.
+
+If {\ttfamily Application.\+run\+In\+Background} is false, the value of this property is ignored. In that case, nothing happens when focus is lost. However, when focus is regained, Input\+System.\+Try\+Sync\+Device is called on all devices.
+
+Note that in the editor as well as in development standalone players, {\ttfamily Application.\+run\+In\+Background} will effectively always be turned on. The editor keeps the player loop running regardless of Game View focus for as long as the editor is active and in play mode and development players will implicitly turn on the setting during the build process. 
+
+\begin{DoxySeeAlso}{See also}
+Input\+System.\+Reset\+Device, Input\+System.\+Enable\+Device, \doxylink{class_unity_engine_1_1_input_system_1_1_input_device_acecc008067d46ee9a1db3cf059f6c709}{Input\+Device.\+can\+Run\+In\+Background}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a92a36004e55e36001de4663d29d68094}{editor\+Input\+Behavior\+In\+Play\+Mode}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_af3a44c9e9f7da82060f87892168e73bd}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!buttonReleaseThreshold@{buttonReleaseThreshold}}
+\index{buttonReleaseThreshold@{buttonReleaseThreshold}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}
+\doxysubsubsection{\texorpdfstring{buttonReleaseThreshold}{buttonReleaseThreshold}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_settings_af3a44c9e9f7da82060f87892168e73bd} 
+float Unity\+Engine.\+Input\+System.\+Input\+Settings.\+button\+Release\+Threshold\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The percentage of \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}{default\+Button\+Press\+Point} at which a button that was pressed is considered released again. 
+
+This setting helps avoid flickering around the button press point by introducing something akin to a "{}dead zone"{} below \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}{default\+Button\+Press\+Point}. Once a button has been pressed to a magnitude of at least \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}{default\+Button\+Press\+Point}, it is considered pressed and keeps being considered pressed until its magnitude falls back to a value of or below \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_af3a44c9e9f7da82060f87892168e73bd}{button\+Release\+Threshold} percent of \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}{default\+Button\+Press\+Point}.
+
+This is a percentage rather than a fixed value so it allows computing release points even when the press point has been customized. If, for example, a \doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_press_interaction}{Interactions.\+Press\+Interaction} sets a custom \doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_press_interaction_a754f87d03a1df1e494e728bcf787bcf8}{Interactions.\+Press\+Interaction.\+press\+Point}, the respective release point can still be computed from the percentage set here. \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_a16ce2abf20723dc7a71b8e4ecff0e154}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!compensateForScreenOrientation@{compensateForScreenOrientation}}
+\index{compensateForScreenOrientation@{compensateForScreenOrientation}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}
+\doxysubsubsection{\texorpdfstring{compensateForScreenOrientation}{compensateForScreenOrientation}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_settings_a16ce2abf20723dc7a71b8e4ecff0e154} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Settings.\+compensate\+For\+Screen\+Orientation\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+If true, sensors that deliver rotation values on handheld devices will automatically adjust rotations when the screen orientation changes. 
+
+This is enabled by default.
+
+If enabled, rotation values will be rotated around Z. In Screen\+Orientation.\+Portrait, values remain unchanged. In Screen\+Orientation.\+Portrait\+Upside\+Down, they will be rotated by 180 degrees. In Screen\+Orientation.\+Landscape\+Left by 90 degrees, and in Screen\+Orientation.\+Landscape\+Right by 270 degrees.
+
+Sensors affected by this setting are \doxylink{class_unity_engine_1_1_input_system_1_1_accelerometer}{Accelerometer}, Compass, and \doxylink{class_unity_engine_1_1_input_system_1_1_gyroscope}{Gyroscope}. 
+
+\begin{DoxySeeAlso}{See also}
+Compensate\+Direction\+Processor
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!defaultButtonPressPoint@{defaultButtonPressPoint}}
+\index{defaultButtonPressPoint@{defaultButtonPressPoint}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}
+\doxysubsubsection{\texorpdfstring{defaultButtonPressPoint}{defaultButtonPressPoint}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee} 
+float Unity\+Engine.\+Input\+System.\+Input\+Settings.\+default\+Button\+Press\+Point\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The default value threshold for when a button is considered pressed. Used if no explicit thresholds are set on parameters such as \doxylink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control_aee05d5892d3fdf8a59888815420c29b6}{Controls.\+Button\+Control.\+press\+Point} or \doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_press_interaction_a754f87d03a1df1e494e728bcf787bcf8}{Interactions.\+Press\+Interaction.\+press\+Point}. 
+
+Default button press threshold.
+
+In the input system, each button constitutes a full floating-\/point value. Pure toggle buttons, such as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a55b57fe1d0a61c4fe2e671284ec2ab3b}{Gamepad.\+button\+South} for example, will simply alternate between 0 (not pressed) and 1 (pressed). However, buttons may also have ranges, such as \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_aa787a7b08b5a89ac03de5266a5f9a5d6}{Gamepad.\+left\+Trigger} for example. When used in a context where a clear distinction between pressed and not pressed is required, we need a value beyond which we consider the button pressed.
+
+By setting this property, the default value for this can be configured. If a button has a value equal to or greater than the button press point, it is considered pressed.
+
+The default value is 0.\+5.
+
+Any value will implicitly be clamped to {\ttfamily 0.\+0001f} as allowing a value of 0 would cause all buttons in their default state to already be pressed.
+
+Lowering the button press point will make triggers feel more like hair-\/triggers (akin to using the hair-\/trigger feature on Xbox Elite controllers). However, it may make using the directional buttons (i.\+e. \doxylink{class_unity_engine_1_1_input_system_1_1_controls_1_1_stick_control_a8eead7497ff7ca10a99ae1f843d907d8}{Controls.\+Stick\+Control.\+up} etc) be fickle as solely moving in only one direction with sticks isn\textquotesingle{}t easy. To counteract that, the button press points on the stick buttons can be raised.
+
+Another solution is to simply lower the press points on the triggers specifically.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{InputSystem.RegisterLayoutOverride(\textcolor{stringliteral}{@"{}}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \{}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ "{}"{}name"{}"{}\ :\ "{}"{}HairTriggers"{}"{},}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ "{}"{}extend"{}"{}\ :\ "{}"{}Gamepad"{}"{},}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ "{}"{}controls"{}"{}\ [}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \{\ "{}"{}name"{}"{}\ :\ "{}"{}leftTrigger"{}"{},\ "{}"{}parameters"{}"{}\ :\ "{}"{}pressPoint=0.1"{}"{}\ \},}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \{\ "{}"{}name"{}"{}\ :\ "{}"{}rightTrigger"{}"{},\ "{}"{}parameters"{}"{}\ :\ "{}"{}pressPoint=0.1"{}"{}\ \}}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ ]}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \}}}
+\DoxyCodeLine{\textcolor{stringliteral}{"{}});}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_af3a44c9e9f7da82060f87892168e73bd}{button\+Release\+Threshold}, \doxylink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control_aee05d5892d3fdf8a59888815420c29b6}{Controls.\+Button\+Control.\+press\+Point}, \doxylink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control_ae5ef74d2a1fd9b7c2b2d6290931e32c5}{Controls.\+Button\+Control.\+is\+Pressed}, \doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_press_interaction_a754f87d03a1df1e494e728bcf787bcf8}{Interactions.\+Press\+Interaction.\+press\+Point}, \doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_tap_interaction_afcfc9d6cc069b19d7c5f69cea8970296}{Interactions.\+Tap\+Interaction.\+press\+Point}, \doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_slow_tap_interaction_ad077637d95085cdeaf40bbeb69161368}{Interactions.\+Slow\+Tap\+Interaction.\+press\+Point}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a608311f5bc7a49dbdd01e7a9952cb3ba}{Input\+Binding\+Composite\+Context.\+Read\+Value\+As\+Button}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_a6f0ab44f1678705a772178d2959d847e}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!defaultDeadzoneMax@{defaultDeadzoneMax}}
+\index{defaultDeadzoneMax@{defaultDeadzoneMax}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}
+\doxysubsubsection{\texorpdfstring{defaultDeadzoneMax}{defaultDeadzoneMax}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_settings_a6f0ab44f1678705a772178d2959d847e} 
+float Unity\+Engine.\+Input\+System.\+Input\+Settings.\+default\+Deadzone\+Max\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Default value used when nothing is set explicitly on Stick\+Deadzone\+Processor.\+max or \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_aabd1df6081e38695f80bcbfd72ef43a4}{Axis\+Deadzone\+Processor.\+max}. 
+
+Default upper limit for deadzones.
+
+"{}\+Deadzones"{} refer to limits established for the range of values accepted as input on a control. If the value for the control falls outside the range, i.\+e. below the given minimum or above the given maximum, the value is clamped to the respective limit.
+
+This property configures the default upper bound of the value range.
+
+Note that deadzones will by default re-\/normalize values after clamping. This means that inputs at the lower and upper end are dropped and that the range in-\/between is re-\/normalized to \mbox{[}0..1\mbox{]}.
+
+Note that deadzones preserve the sign of inputs. This means that both the upper and the lower deadzone bound extend to both the positive and the negative range. For example, a deadzone max of 0.\+95 will clamp values of \texorpdfstring{$>$}{>}0.\+95 and \texorpdfstring{$<$}{<}-\/0.\+95.
+
+The most common example of where deadzones are used are the sticks on gamepads, i.\+e. \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a9f608a9e12af3301fb2d704e072ea024}{Gamepad.\+left\+Stick} and \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a24a1a82fd0aab986f8e7e141dab4035f}{Gamepad.\+right\+Stick}. Sticks will usually be wobbly to some extent (just how wobbly varies greatly between different types of controllers -- which means that often deadzones need to be configured on a per-\/device type basis). Using deadzones, stick motion at the extreme ends of the spectrum can be filtered out and noise in these areas can effectively be eliminated this way.
+
+The default value for this property is 0.\+925. 
+
+\begin{DoxySeeAlso}{See also}
+Stick\+Deadzone\+Processor, Axis\+Deadzone\+Processor
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_accd284544ee5bf7f2adb6e753282a423}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!defaultDeadzoneMin@{defaultDeadzoneMin}}
+\index{defaultDeadzoneMin@{defaultDeadzoneMin}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}
+\doxysubsubsection{\texorpdfstring{defaultDeadzoneMin}{defaultDeadzoneMin}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_settings_accd284544ee5bf7f2adb6e753282a423} 
+float Unity\+Engine.\+Input\+System.\+Input\+Settings.\+default\+Deadzone\+Min\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Default value used when nothing is set explicitly on \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_stick_deadzone_processor_a22b3f6d3af8da761506ca3ff01cbf3ad}{Stick\+Deadzone\+Processor.\+min} or \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_axis_deadzone_processor_a2de9a092dc4d3d808207e4cc14bb6637}{Axis\+Deadzone\+Processor.\+min}. 
+
+Default lower limit for deadzones.
+
+"{}\+Deadzones"{} refer to limits established for the range of values accepted as input on a control. If the value for the control falls outside the range, i.\+e. below the given minimum or above the given maximum, the value is clamped to the respective limit.
+
+This property configures the default lower bound of the value range.
+
+Note that deadzones will by default re-\/normalize values after clamping. This means that inputs at the lower and upper end are dropped and that the range in-\/between is re-\/normalized to \mbox{[}0..1\mbox{]}.
+
+Note that deadzones preserve the sign of inputs. This means that both the upper and the lower deadzone bound extend to both the positive and the negative range. For example, a deadzone min of 0.\+1 will clamp values between -\/0.\+1 and +0.\+1.
+
+The most common example of where deadzones are used are the sticks on gamepads, i.\+e. \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a9f608a9e12af3301fb2d704e072ea024}{Gamepad.\+left\+Stick} and \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a24a1a82fd0aab986f8e7e141dab4035f}{Gamepad.\+right\+Stick}. Sticks will usually be wobbly to some extent (just how wobbly varies greatly between different types of controllers -- which means that often deadzones need to be configured on a per-\/device type basis). Using deadzones, stick motion at the extreme ends of the spectrum can be filtered out and noise in these areas can effectively be eliminated this way.
+
+The default value for this property is 0.\+125. 
+
+\begin{DoxySeeAlso}{See also}
+Stick\+Deadzone\+Processor, Axis\+Deadzone\+Processor
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_a3f68fe5bfec0cb9b3a6185193084a19c}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!defaultHoldTime@{defaultHoldTime}}
+\index{defaultHoldTime@{defaultHoldTime}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}
+\doxysubsubsection{\texorpdfstring{defaultHoldTime}{defaultHoldTime}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_settings_a3f68fe5bfec0cb9b3a6185193084a19c} 
+float Unity\+Engine.\+Input\+System.\+Input\+Settings.\+default\+Hold\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Allows you to specify the default minimum duration required of a press-\/and-\/release interaction to evaluate to a hold-\/interaction. 
+
+The default minimum duration that the button-\/like input control must remain in pressed state for the interaction to evaluate to a hold-\/interaction.
+
+A hold-\/interaction is considered as a press-\/and-\/release sequence on a button-\/like input control. This property determines the lower bound of the duration that must elapse between the button being pressed and released again. If the delay between press and release is less than this duration, the input does not qualify as a hold-\/interaction.
+
+The default hold time is 0.\+4 seconds. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_hold_interaction}{Interactions.\+Hold\+Interaction}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_ab474c89c52e2b360a028979b54c17ffe}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!defaultSlowTapTime@{defaultSlowTapTime}}
+\index{defaultSlowTapTime@{defaultSlowTapTime}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}
+\doxysubsubsection{\texorpdfstring{defaultSlowTapTime}{defaultSlowTapTime}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_settings_ab474c89c52e2b360a028979b54c17ffe} 
+float Unity\+Engine.\+Input\+System.\+Input\+Settings.\+default\+Slow\+Tap\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Allows you to specify the default minimum duration required of a press-\/and-\/release interaction to evaluate to a slow-\/tap-\/interaction. 
+
+The default minimum duration that the button-\/like input control must remain in pressed state for the interaction to evaluate to a slow-\/tap-\/interaction.
+
+A slow-\/tap-\/interaction is considered as a press-\/and-\/release sequence on a button-\/like input control. This property determines the lower bound of the duration that must elapse between the button being pressed and released again. If the delay between press and release is less than this duration, the input does not qualify as a slow-\/tap-\/interaction.
+
+The default slow-\/tap time is 0.\+5 seconds. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_slow_tap_interaction}{Interactions.\+Slow\+Tap\+Interaction}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_aae374a18c8d36614e3263522b9c0bc80}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!defaultTapTime@{defaultTapTime}}
+\index{defaultTapTime@{defaultTapTime}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}
+\doxysubsubsection{\texorpdfstring{defaultTapTime}{defaultTapTime}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_settings_aae374a18c8d36614e3263522b9c0bc80} 
+float Unity\+Engine.\+Input\+System.\+Input\+Settings.\+default\+Tap\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Default time (in seconds) within which a press and release has to occur for it to be registered as a "{}tap"{}. 
+
+Default upper limit on press durations for them to register as taps.
+
+A tap is considered as a quick press-\/and-\/release on a button-\/like input control. This property determines just how quick the press-\/and-\/release has to be, i.\+e. what the maximum time is that can elapse between the button being pressed and released again. If the delay between press and release is greater than this time, the input does not qualify as a tap.
+
+The default tap time is 0.\+2 seconds. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_tap_interaction}{Interactions.\+Tap\+Interaction}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_a124628ad485190bdf76862cbae6ea911}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!disableRedundantEventsMerging@{disableRedundantEventsMerging}}
+\index{disableRedundantEventsMerging@{disableRedundantEventsMerging}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}
+\doxysubsubsection{\texorpdfstring{disableRedundantEventsMerging}{disableRedundantEventsMerging}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_settings_a124628ad485190bdf76862cbae6ea911} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Settings.\+disable\+Redundant\+Events\+Merging\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Disables merging of redundant input events (at the moment, only mouse events). Disable it if you want to get all events. 
+
+When using a high frequency mouse, the number of mouse move events in each frame can be very large, which can have a negative effect on performance. To help with this, merging events can be used which coalesces consecutive mouse move events into a single input action update.
+
+For example, if there are one hundred mouse events, but they are all position updates with no clicks, and there is an input action callback handler for the mouse position, that callback handler will only be called one time in the current frame. Delta and scroll values for the mouse will still be accumulated across all mouse events. \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_a92a36004e55e36001de4663d29d68094}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!editorInputBehaviorInPlayMode@{editorInputBehaviorInPlayMode}}
+\index{editorInputBehaviorInPlayMode@{editorInputBehaviorInPlayMode}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}
+\doxysubsubsection{\texorpdfstring{editorInputBehaviorInPlayMode}{editorInputBehaviorInPlayMode}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_settings_a92a36004e55e36001de4663d29d68094} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_a68fe47b120c4682bd07fc54650359f7c}{Editor\+Input\+Behavior\+In\+Play\+Mode}} Unity\+Engine.\+Input\+System.\+Input\+Settings.\+editor\+Input\+Behavior\+In\+Play\+Mode\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Determines how player focus is handled in the editor with respect to input. 
+
+This setting only has an effect while in play mode (see \href{https://docs.unity3d.com/ScriptReference/Application-isPlaying.html}{\texttt{ Application.\+is\+Playing}}). While not in play mode, all input is invariably routed to the editor.
+
+The editor generally treats Game View focus as equivalent to application focus (see \href{https://docs.unity3d.com/ScriptReference/Application-isFocused.html}{\texttt{ Application.\+is\+Focused}}). In other words, as long as any Game View has focus, the player is considered to have input focus. As soon as focus is transferred to a non-\/\+Game View {\ttfamily Editor\+Window} or the editor as a whole loses focus, the player is considered to have lost input focus.
+
+However, unlike in built players, the editor will keep running the player loop while in play mode regardless of whether a Game View is focused or not. This essentially equates to \href{https://docs.unity3d.com/ScriptReference/Application-runInBackground.html}{\texttt{ Application.\+run\+In\+Background}} always being true in the editor.
+
+To accommodate this behavior, this setting determines where input is routed while the player loop is running with no Game View being focused. As such, it also dictates which input reaches the editor (if any) while the game is playing. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a11467cec652b53340f93f7a788dac2d5}{background\+Behavior}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_ab2d57f969372bb35fe1d2ee72b60d27b}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!filterNoiseOnCurrent@{filterNoiseOnCurrent}}
+\index{filterNoiseOnCurrent@{filterNoiseOnCurrent}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}
+\doxysubsubsection{\texorpdfstring{filterNoiseOnCurrent}{filterNoiseOnCurrent}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_settings_ab2d57f969372bb35fe1d2ee72b60d27b} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Settings.\+filter\+Noise\+On\+Current\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Currently\+: Option is deprecated and has no influence on the system. Filtering on noise is always enabled. Previously\+: Whether to not make a device {\ttfamily .current} (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_device_a0a98203c32eb180ab8b7c862dc27635c}{Input\+Device.\+Make\+Current}) when there is only noise in the input. 
+
+We add extra processing every time input is received on a device that is considered noisy. These devices are those that have at least one control that is marked as \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_afa5a8531d7c9a030e8e484560a59fe6f}{Input\+Control.\+noisy}. A good example is the PS4 controller which has a gyroscope sensor built into the device. Whereas sticks and buttons on the device require user interaction to produce non-\/default values, the gyro will produce varying values even if the device just sits there without user interaction.
+
+Without noise filtering, a PS4 controller will thus continually make itself current as it will send a continuous stream of input even when not actively used by the player. By toggling this property on, each input event will be run through a noise mask. Only if state has changed outside of memory areas marked as noise will the input be considered valid user interaction and the device will be made current. Note that in this process, the system does {\itshape not} determine whether non-\/noisy controls on the device have actually changed value. All the system establishes is whether such controls have changed {\itshape state}. However, processing such as for deadzones may cause values to not effectively change even though the non-\/noisy state of the device has changed. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_device_a0a98203c32eb180ab8b7c862dc27635c}{Input\+Device.\+Make\+Current}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_afa5a8531d7c9a030e8e484560a59fe6f}{Input\+Control.\+noisy}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_aab9775f260f986ef5d1c5a379158d8bd}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!maxEventBytesPerUpdate@{maxEventBytesPerUpdate}}
+\index{maxEventBytesPerUpdate@{maxEventBytesPerUpdate}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}
+\doxysubsubsection{\texorpdfstring{maxEventBytesPerUpdate}{maxEventBytesPerUpdate}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_settings_aab9775f260f986ef5d1c5a379158d8bd} 
+int Unity\+Engine.\+Input\+System.\+Input\+Settings.\+max\+Event\+Bytes\+Per\+Update\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Upper limit on the amount of bytes worth of Input\+Events processed in a single Input\+System.\+Update. 
+
+This setting establishes a bound on the amount of input event data processed in a single update and thus limits throughput allowed for input. This prevents long stalls from leading to long delays in input processing.
+
+When the limit is exceeded, all events remaining in the buffer are thrown away (the Input\+Event\+Buffer is reset) and an error is logged. After that, the current update will abort and early out.
+
+Setting this property to 0 or a negative value will disable the limit.
+
+The default value is 5MB. 
+
+\begin{DoxySeeAlso}{See also}
+Input\+System.\+Update
+
+
+\end{DoxySeeAlso}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_a7e8414b480a0eda7ec1c4cd9aca0b2e5}{Input\+Event.\+size\+In\+Bytes} \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_adb83e0c2bfbee688b5fce1fb0035acb4}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!maxQueuedEventsPerUpdate@{maxQueuedEventsPerUpdate}}
+\index{maxQueuedEventsPerUpdate@{maxQueuedEventsPerUpdate}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}
+\doxysubsubsection{\texorpdfstring{maxQueuedEventsPerUpdate}{maxQueuedEventsPerUpdate}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_settings_adb83e0c2bfbee688b5fce1fb0035acb4} 
+int Unity\+Engine.\+Input\+System.\+Input\+Settings.\+max\+Queued\+Events\+Per\+Update\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Upper limit on the number of Input\+Events that can be queued within one Input\+System.\+Update. 
+
+This settings establishes an upper limit on the number of events that can be queued using Input\+System.\+Queue\+Event during a single update. This prevents infinite loops where an action callback queues an event that causes the action callback to be called again which queues an event...
+
+Note that this limit only applies while the input system is updating. There is no limit on the number of events that can be queued outside of this time, but those will be queued into the next frame where the \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_aab9775f260f986ef5d1c5a379158d8bd}{max\+Event\+Bytes\+Per\+Update} setting will apply.
+
+The default value is 1000. \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_a7bdd69e877469fdfa0fa11f12a65803d}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!multiTapDelayTime@{multiTapDelayTime}}
+\index{multiTapDelayTime@{multiTapDelayTime}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}
+\doxysubsubsection{\texorpdfstring{multiTapDelayTime}{multiTapDelayTime}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_settings_a7bdd69e877469fdfa0fa11f12a65803d} 
+float Unity\+Engine.\+Input\+System.\+Input\+Settings.\+multi\+Tap\+Delay\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Allows you to specify the maximum duration that may pass between taps in order to evaluate to a multi-\/tap-\/interaction. 
+
+The default maximum duration (in seconds) that may pass between taps in order to evaluate to a multi-\/tap-\/interaction.
+
+A multi-\/tap interaction is considered as multiple press-\/and-\/release sequences. This property defines the maximum duration that may pass between these press-\/and-\/release sequences. If consecutive taps (press-\/and-\/release sequences) occur with a inter-\/sequence duration exceeding this property, the interaction do not qualify as a multi-\/tap-\/interaction.
+
+The default multi-\/tap delay time is 0.\+75 seconds. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_aae374a18c8d36614e3263522b9c0bc80}{default\+Tap\+Time}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_a069a0609e7175ded8372ebe1475f99ae}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!shortcutKeysConsumeInput@{shortcutKeysConsumeInput}}
+\index{shortcutKeysConsumeInput@{shortcutKeysConsumeInput}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}
+\doxysubsubsection{\texorpdfstring{shortcutKeysConsumeInput}{shortcutKeysConsumeInput}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_settings_a069a0609e7175ded8372ebe1475f99ae} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Settings.\+shortcut\+Keys\+Consume\+Input\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Improves shortcut key support by making composite controls consume control input. 
+
+Actions are exclusively triggered and will consume/block other actions sharing the same input. E.\+g. when pressing the \textquotesingle{}Shift+B\textquotesingle{} keys, the associated action would trigger but any action bound to just the \textquotesingle{}B\textquotesingle{} key would be prevented from triggering at the same time. Please note that enabling this will cause actions with composite bindings to consume input and block any other actions which are enabled and sharing the same controls. Input consumption is performed in priority order, with the action containing the greatest number of bindings checked first. Therefore actions requiring fewer keypresses will not be triggered if an action using more keypresses is triggered and has overlapping controls. This works for shortcut keys, however in other cases this might not give the desired result, especially where there are actions with the exact same number of composite controls, in which case it is non-\/deterministic which action will be triggered. These conflicts may occur even between actions which belong to different Action Maps e.\+g. if using an UIInput\+Module with the Arrow Keys bound to the Navigate Action in the \doxylink{namespace_unity_engine_1_1_u_i}{UI} Action Map, this would interfere with other Action Maps using those keys. However conflicts would not occur between actions which belong to different Action Assets. \Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_aa104b89e505dd3c8d30feab6b27c1b42}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!supportedDevices@{supportedDevices}}
+\index{supportedDevices@{supportedDevices}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}
+\doxysubsubsection{\texorpdfstring{supportedDevices}{supportedDevices}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_settings_aa104b89e505dd3c8d30feab6b27c1b42} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$string$>$ Unity\+Engine.\+Input\+System.\+Input\+Settings.\+supported\+Devices\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+List of device layouts used by the project. 
+
+This would usually be one of the high-\/level abstract device layouts. For example, for a game that supports touch, gamepad, and keyboard\&mouse, the list would be {\ttfamily \{ "{}\+Touchscreen"{}, "{}\+Gamepad"{}, "{}\+Mouse"{}, "{}\+Keyboard"{} \}}. However, nothing prevents the the user from adding something a lot more specific. A game that can only be played with a \doxylink{namespace_unity_engine_1_1_input_system_1_1_dual_shock}{Dual\+Shock} controller could make this list just be {\ttfamily \{ "{}\+Dual\+Shock\+Gamepad"{} \}}, for example.
+
+In the editor, we use the information to filter what we display to the user by automatically filtering out irrelevant controls in the control picker and such.
+
+The information is also used when a new device is discovered. If the device is not listed as supported by the project, it is ignored.
+
+The list is empty by default. An empty list indicates that no restrictions are placed on what devices are supported. In this editor, this means that all possible devices and controls are shown. 
+
+\begin{DoxySeeAlso}{See also}
+Input\+Control\+Layout
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_ae8a46aacf184ae15d1f237f2a252822c}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!tapRadius@{tapRadius}}
+\index{tapRadius@{tapRadius}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}
+\doxysubsubsection{\texorpdfstring{tapRadius}{tapRadius}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_settings_ae8a46aacf184ae15d1f237f2a252822c} 
+float Unity\+Engine.\+Input\+System.\+Input\+Settings.\+tap\+Radius\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Allows you to specify the default maximum radius that a touch contact may be moved from its origin to evaluate to a tap-\/interaction. 
+
+The default maximum radius (in pixels) that a touch contact may be moved from its origin to evaluate to a tap-\/interaction.
+
+A tap-\/interaction or slow-\/tap-\/interaction is considered as a press-\/and-\/release sequence. If the associated touch contact is moved a distance equal or greater to the value of this setting, the input sequence do not qualify as a tap-\/interaction.
+
+The default tap-\/radius is 5 pixels. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_tap_interaction}{Interactions.\+Tap\+Interaction}, \doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_slow_tap_interaction}{Interactions.\+Slow\+Tap\+Interaction}, \doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_multi_tap_interaction}{Interactions.\+Multi\+Tap\+Interaction}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_settings_ab7d15182096158aaf407f0b7e9aed8ae}\index{UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}!updateMode@{updateMode}}
+\index{updateMode@{updateMode}!UnityEngine.InputSystem.InputSettings@{UnityEngine.InputSystem.InputSettings}}
+\doxysubsubsection{\texorpdfstring{updateMode}{updateMode}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_input_settings_ab7d15182096158aaf407f0b7e9aed8ae} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings_a4a5105a8ac1e356da9293a836c3e7e81}{Update\+Mode}} Unity\+Engine.\+Input\+System.\+Input\+Settings.\+update\+Mode\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Allows you to control how the input system handles updates. In other words, how and when pending input events are processed. 
+
+When to run input updates.
+
+By default, input updates will automatically be triggered as part of the player loop. If {\ttfamily update\+Mode} is set to \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a4a5105a8ac1e356da9293a836c3e7e81a33181a0cbf027c7942421f6069aa9656}{Update\+Mode.\+Process\+Events\+In\+Dynamic\+Update} (the default), then right at the beginning of a dynamic update (i.\+e. before all {\ttfamily Mono\+Behaviour.\+Update} methods are called), input is processed. And if {\ttfamily update\+Mode} is set to \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a4a5105a8ac1e356da9293a836c3e7e81a8a88b8a1229fbf64af5f16c1c3ff71a9}{Update\+Mode.\+Process\+Events\+In\+Fixed\+Update}, then right at the beginning of each fixed update (i.\+e. before all {\ttfamily Mono\+Behaviour.\+Fixed\+Update} methods are called), input is processed.
+
+Additionally, if there are devices that need updates right before rendering (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_device_a8582d897119e1524b4f695447afbc6c1}{Input\+Device.\+update\+Before\+Render}), an extra update will be run right before rendering. This special update will only consume input on devices that have \doxylink{class_unity_engine_1_1_input_system_1_1_input_device_a8582d897119e1524b4f695447afbc6c1}{Input\+Device.\+update\+Before\+Render} set to {\ttfamily true}.
+
+You can run updates manually using Input\+System.\+Update. Doing so outside of tests is only recommended, however, if {\ttfamily update\+Mode} is set to \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a4a5105a8ac1e356da9293a836c3e7e81a382abc4f6ba58c13b65b1a6a48e0dc56}{Update\+Mode.\+Process\+Events\+Manually} (in which case it is actually required for input to be processed at all).
+
+Note that in the editor, input updates will also run before each editor update (i.\+e. as part of {\ttfamily Editor\+Application.\+update}). \doxylink{class_player}{Player} and editor input state are kept separate, though, so any input consumed in editor updates will not be visible in player updates and vice versa. 
+
+\begin{DoxySeeAlso}{See also}
+Input\+System.\+Update
+
+
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/Input\+Settings.\+cs\end{DoxyCompactItemize}

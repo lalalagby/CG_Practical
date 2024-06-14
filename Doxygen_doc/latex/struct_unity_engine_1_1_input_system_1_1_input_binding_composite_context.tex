@@ -1,0 +1,351 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Input\+Binding\+Composite\+Context Struct Reference}
+\hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{}\label{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}\index{UnityEngine.InputSystem.InputBindingCompositeContext@{UnityEngine.InputSystem.InputBindingCompositeContext}}
+
+
+Contextual data made available when processing values of composite bindings.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_1_1_part_binding}{Part\+Binding}}
+\begin{DoxyCompactList}\small\item\em Information about a control bound to a part of a composite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a52e99bae9accbf5f5d85bcb432425647}\label{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a52e99bae9accbf5f5d85bcb432425647} 
+float {\bfseries Evaluate\+Magnitude} (int part\+Number)
+\item 
+unsafe TValue \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a9f4ead868f13e7d175b1244c5a180b13}{Read\+Value$<$ TValue $>$}} (int part\+Number)
+\begin{DoxyCompactList}\small\item\em Read the value of the giving part binding. \end{DoxyCompactList}\item 
+unsafe TValue \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a3d49f3da637e24608545dd00b319cc60}{Read\+Value$<$ TValue $>$}} (int part\+Number, out \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} source\+Control)
+\begin{DoxyCompactList}\small\item\em Same as \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a9f4ead868f13e7d175b1244c5a180b13}{Read\+Value$<$\+TValue$>$(int)} but also return the control from which the value was read. \end{DoxyCompactList}\item 
+unsafe TValue \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_ae2acf37a03df15776e87289318ee302c}{Read\+Value$<$ TValue, TComparer $>$}} (int part\+Number, TComparer comparer=default)
+\begin{DoxyCompactList}\small\item\em Read the value of the given part bindings and use the given {\itshape comparer}  to determine which value to return if multiple controls are bound to the part. \end{DoxyCompactList}\item 
+unsafe TValue \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a03c0eee059e0627b5d2f731856d4c727}{Read\+Value$<$ TValue, TComparer $>$}} (int part\+Number, out \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} source\+Control, TComparer comparer=default)
+\begin{DoxyCompactList}\small\item\em Like \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_ae2acf37a03df15776e87289318ee302c}{Read\+Value$<$\+TValue,\+TComparer$>$(int,\+TComparer)} but also return the control from which the value has ultimately been read. \end{DoxyCompactList}\item 
+unsafe bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a608311f5bc7a49dbdd01e7a9952cb3ba}{Read\+Value\+As\+Button}} (int part\+Number)
+\begin{DoxyCompactList}\small\item\em Like \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a9f4ead868f13e7d175b1244c5a180b13}{Read\+Value$<$\+TValue$>$(int)} but treat bound controls as buttons. This means that custom \doxylink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control_aee05d5892d3fdf8a59888815420c29b6}{Controls.\+Button\+Control.\+press\+Point} are respected and that floating-\/point values from non-\/\+Button\+Controls will be compared to \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}{Input\+Settings.\+default\+Button\+Press\+Point}. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_aa48172c148172c74c5cddc6fd70b5ad2}\label{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_aa48172c148172c74c5cddc6fd70b5ad2} 
+unsafe void {\bfseries Read\+Value} (int part\+Number, void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size)
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a69dba65c86304b7e88eca96d566a64c0}\label{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a69dba65c86304b7e88eca96d566a64c0} 
+object {\bfseries Read\+Value\+As\+Object} (int part\+Number)
+\item 
+double \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_acfad2019ec620dcff0fa94c5e2293701}{Get\+Press\+Time}} (int part\+Number)
+\begin{DoxyCompactList}\small\item\em Return the timestamp (see \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_aecd74f290d3607a00f3eb34d9bf93366}{Low\+Level.\+Input\+Event.\+time}) for when the given binding part crossed the button press threshold (see \doxylink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control_aee05d5892d3fdf8a59888815420c29b6}{Controls.\+Button\+Control.\+press\+Point}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerable$<$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_1_1_part_binding}{Part\+Binding}} $>$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a4639e35d69022e2bec28ddafbeeafedb}{controls}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enumerate all the controls that are part of the composite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contextual data made available when processing values of composite bindings. 
+
+An instance of this struct is passed to \doxylink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a2c23901dcc819e76109feadf9171fad0}{Input\+Binding\+Composite$<$\+TValue$>$.\+Read\+Value(ref Input\+Binding\+Composite\+Context)}. Use it to access contextual data such as the value for individual part bindings.
+
+Note that an instance of this struct should never be held on to past the duration of the call to {\ttfamily Read\+Value}. The data it retrieves is only valid during the callback. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_binding_composite}{Input\+Binding\+Composite}, Input\+Binding\+Composite$<$\+TValue$>$, \doxylink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a2c23901dcc819e76109feadf9171fad0}{Input\+Binding\+Composite$<$\+TValue$>$.\+Read\+Value(ref Input\+Binding\+Composite\+Context)}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_acfad2019ec620dcff0fa94c5e2293701}\index{UnityEngine.InputSystem.InputBindingCompositeContext@{UnityEngine.InputSystem.InputBindingCompositeContext}!GetPressTime@{GetPressTime}}
+\index{GetPressTime@{GetPressTime}!UnityEngine.InputSystem.InputBindingCompositeContext@{UnityEngine.InputSystem.InputBindingCompositeContext}}
+\doxysubsubsection{\texorpdfstring{GetPressTime()}{GetPressTime()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_acfad2019ec620dcff0fa94c5e2293701} 
+double Unity\+Engine.\+Input\+System.\+Input\+Binding\+Composite\+Context.\+Get\+Press\+Time (\begin{DoxyParamCaption}\item[{int}]{part\+Number}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the timestamp (see \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_aecd74f290d3607a00f3eb34d9bf93366}{Low\+Level.\+Input\+Event.\+time}) for when the given binding part crossed the button press threshold (see \doxylink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control_aee05d5892d3fdf8a59888815420c29b6}{Controls.\+Button\+Control.\+press\+Point}). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em part\+Number} & Number of the part to read. This is assigned automatically by the input system and should be treated as an opaque identifier.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the time at which the given part binding moved into "{}press"{} state or 0 if there\textquotesingle{}s current no press.
+\end{DoxyReturn}
+
+
+If the given part has more than a single binding and/or more than a single bound control, the {\itshape earliest} press time is returned. \Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a9f4ead868f13e7d175b1244c5a180b13}\index{UnityEngine.InputSystem.InputBindingCompositeContext@{UnityEngine.InputSystem.InputBindingCompositeContext}!ReadValue$<$ TValue $>$@{ReadValue$<$ TValue $>$}}
+\index{ReadValue$<$ TValue $>$@{ReadValue$<$ TValue $>$}!UnityEngine.InputSystem.InputBindingCompositeContext@{UnityEngine.InputSystem.InputBindingCompositeContext}}
+\doxysubsubsection{\texorpdfstring{ReadValue$<$ TValue $>$()}{ReadValue< TValue >()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a9f4ead868f13e7d175b1244c5a180b13} 
+unsafe TValue Unity\+Engine.\+Input\+System.\+Input\+Binding\+Composite\+Context.\+Read\+Value$<$ TValue $>$ (\begin{DoxyParamCaption}\item[{int}]{part\+Number}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Read the value of the giving part binding. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em part\+Number} & Number of the part to read. This is assigned automatically by the input system and should be treated as an opaque identifier. See the example below.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TValue} & Type of value to read. This must match the value type expected from controls bound to the part.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The value read from the part bindings.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & The given {\itshape TValue}  value type does not match the actual value type of the control(s) bound to the part.\\
+\hline
+\end{DoxyExceptions}
+
+
+If no control is bound to the given part, the return value will always be {\ttfamily default(\+TValue)}. If a single control is bound to the part, the value will be that of the control. If multiple controls are bound to a part, the return value will be that greatest one according to {\ttfamily IComparable} implemented by {\itshape TValue} .
+
+Note that this method only works with values that are {\ttfamily IComparable}. To read a value type that is not {\ttfamily IComparable} or to supply a custom comparer, use \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_ae2acf37a03df15776e87289318ee302c}{Read\+Value$<$\+TValue,\+TComparer$>$(int,\+TComparer)}.
+
+If an invalid {\itshape part\+Number}  is supplied, the return value will simply be {\ttfamily default(\+TValue)}. No exception is thrown.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyComposite\ :\ InputBindingComposite<float>}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Defines\ a\ "{}part"{}\ binding\ for\ the\ composite.\ Each\ part\ can\ be}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ bound\ to\ arbitrary\ many\ times\ (including\ not\ at\ all).\ The\ "{}layout"{}}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ property\ of\ the\ attribute\ we\ supply\ determines\ what\ kind\ of}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ control\ is\ expected\ to\ be\ bound\ to\ the\ part.}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ When\ initializing\ a\ composite\ instance,\ the\ input\ system\ will}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ automatically\ assign\ part\ numbers\ and\ store\ them\ in\ the\ fields}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ we\ define\ here.}}
+\DoxyCodeLine{\ \ \ \ [InputControl(layout\ =\ \textcolor{stringliteral}{"{}Button"{}})]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ firstPart;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Defines\ a\ second\ part.}}
+\DoxyCodeLine{\ \ \ \ [InputControl(layout\ =\ \textcolor{stringliteral}{"{}Vector2"{}})]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ secondPart;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{float}\ ReadValue(ref\ InputBindingCompositeContext\ context)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Read\ the\ button.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ firstValue\ =\ context.ReadValue<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Read\ the\ vector.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ secondValue\ =\ context.ReadValue<Vector2>();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Perform\ some\ computation\ based\ on\ the\ inputs.\ Here,\ we\ just}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ scale\ the\ vector\ by\ the\ value\ we\ got\ from\ the\ button.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ secondValue\ *\ firstValue;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_ae2acf37a03df15776e87289318ee302c}{Read\+Value$<$\+TValue,\+TComparer$>$(int,\+TComparer)}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a2130e1c517844e5ae729eba1cd798c94}{Input\+Control$<$\+TValue$>$.\+Read\+Value}
+
+
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TValue} : {\em struct}]\item[{\em TValue} : {\em IComparable$<$TValue$>$}]\end{description}
+\end{Desc}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a3d49f3da637e24608545dd00b319cc60}\index{UnityEngine.InputSystem.InputBindingCompositeContext@{UnityEngine.InputSystem.InputBindingCompositeContext}!ReadValue$<$ TValue $>$@{ReadValue$<$ TValue $>$}}
+\index{ReadValue$<$ TValue $>$@{ReadValue$<$ TValue $>$}!UnityEngine.InputSystem.InputBindingCompositeContext@{UnityEngine.InputSystem.InputBindingCompositeContext}}
+\doxysubsubsection{\texorpdfstring{ReadValue$<$ TValue $>$()}{ReadValue< TValue >()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a3d49f3da637e24608545dd00b319cc60} 
+unsafe TValue Unity\+Engine.\+Input\+System.\+Input\+Binding\+Composite\+Context.\+Read\+Value$<$ TValue $>$ (\begin{DoxyParamCaption}\item[{int}]{part\+Number}{, }\item[{out \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}}]{source\+Control}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Same as \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a9f4ead868f13e7d175b1244c5a180b13}{Read\+Value$<$\+TValue$>$(int)} but also return the control from which the value was read. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em part\+Number} & Number of the part to read. This is assigned automatically by the input system and should be treated as an opaque identifier.\\
+\hline
+{\em source\+Control} & Receives the \doxylink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control} from which the value was read. If multiple controls are bound to the given part, this is the control whose value was ultimately selected. Will be set to {\ttfamily null} if {\itshape part\+Number}  is not a valid part or if no controls are bound to the part.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TValue} & Type of value to read. This must match the value type expected from controls bound to the part.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The value read from the part bindings.
+\end{DoxyReturn}
+
+
+Like \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a9f4ead868f13e7d175b1244c5a180b13}{Read\+Value$<$\+TValue$>$(int)}, this method relies on using {\ttfamily IComparable} implemented by {\itshape TValue}  to determine the greatest value if multiple controls are bound to the specified part. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a9f4ead868f13e7d175b1244c5a180b13}{Read\+Value$<$\+TValue$>$(int)}
+
+
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TValue} : {\em struct}]\item[{\em TValue} : {\em IComparable$<$TValue$>$}]\end{description}
+\end{Desc}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a03c0eee059e0627b5d2f731856d4c727}\index{UnityEngine.InputSystem.InputBindingCompositeContext@{UnityEngine.InputSystem.InputBindingCompositeContext}!ReadValue$<$ TValue, TComparer $>$@{ReadValue$<$ TValue, TComparer $>$}}
+\index{ReadValue$<$ TValue, TComparer $>$@{ReadValue$<$ TValue, TComparer $>$}!UnityEngine.InputSystem.InputBindingCompositeContext@{UnityEngine.InputSystem.InputBindingCompositeContext}}
+\doxysubsubsection{\texorpdfstring{ReadValue$<$ TValue, TComparer $>$()}{ReadValue< TValue, TComparer >()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a03c0eee059e0627b5d2f731856d4c727} 
+unsafe TValue Unity\+Engine.\+Input\+System.\+Input\+Binding\+Composite\+Context.\+Read\+Value$<$ TValue, TComparer $>$ (\begin{DoxyParamCaption}\item[{int}]{part\+Number}{, }\item[{out \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}}]{source\+Control}{, }\item[{TComparer}]{comparer}{ = {\ttfamily default}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Like \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_ae2acf37a03df15776e87289318ee302c}{Read\+Value$<$\+TValue,\+TComparer$>$(int,\+TComparer)} but also return the control from which the value has ultimately been read. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em part\+Number} & Number of the part to read. This is assigned automatically by the input system and should be treated as an opaque identifier.\\
+\hline
+{\em source\+Control} & Receives the \doxylink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control} from which the value was read. If multiple controls are bound to the given part, this is the control whose value was ultimately selected. Will be set to {\ttfamily null} if {\itshape part\+Number}  is not a valid part or if no controls are bound to the part.\\
+\hline
+{\em comparer} & Instance of {\itshape TComparer}  for comparing multiple values.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TValue} & Type of value to read. This must match the value type expected from controls bound to the part.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The value read from the part bindings.
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TComparer} & Comparer to use if multiple controls are bound to the given part. All values will be compared using {\ttfamily TComparer.\+Compare} and the greatest value will be returned.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The value read from the part bindings.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TValue} : {\em struct}]\item[{\em TComparer} : {\em IComparer$<$TValue$>$}]\end{description}
+\end{Desc}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_ae2acf37a03df15776e87289318ee302c}\index{UnityEngine.InputSystem.InputBindingCompositeContext@{UnityEngine.InputSystem.InputBindingCompositeContext}!ReadValue$<$ TValue, TComparer $>$@{ReadValue$<$ TValue, TComparer $>$}}
+\index{ReadValue$<$ TValue, TComparer $>$@{ReadValue$<$ TValue, TComparer $>$}!UnityEngine.InputSystem.InputBindingCompositeContext@{UnityEngine.InputSystem.InputBindingCompositeContext}}
+\doxysubsubsection{\texorpdfstring{ReadValue$<$ TValue, TComparer $>$()}{ReadValue< TValue, TComparer >()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_ae2acf37a03df15776e87289318ee302c} 
+unsafe TValue Unity\+Engine.\+Input\+System.\+Input\+Binding\+Composite\+Context.\+Read\+Value$<$ TValue, TComparer $>$ (\begin{DoxyParamCaption}\item[{int}]{part\+Number}{, }\item[{TComparer}]{comparer}{ = {\ttfamily default}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Read the value of the given part bindings and use the given {\itshape comparer}  to determine which value to return if multiple controls are bound to the part. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em part\+Number} & Number of the part to read. This is assigned automatically by the input system and should be treated as an opaque identifier.\\
+\hline
+{\em comparer} & Instance of {\itshape TComparer}  for comparing multiple values.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TValue} & Type of value to read. This must match the value type expected from controls bound to the part.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The value read from the part bindings.
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TComparer} & Comparer to use if multiple controls are bound to the given part. All values will be compared using {\ttfamily TComparer.\+Compare} and the greatest value will be returned.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The value read from the part bindings.
+\end{DoxyReturn}
+
+
+This method is a useful alternative to \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a9f4ead868f13e7d175b1244c5a180b13}{Read\+Value$<$\+TValue$>$(int)} for value types that do not implement {\ttfamily IComparable} or when the default comparison behavior is undesirable.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }CompositeWithVector2Part\ :\ InputBindingComposite<Vector2>}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ [InputControl(layout\ =\ \textcolor{stringliteral}{"{}Vector2"{}})]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ part;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ Vector2\ ReadValue(ref\ InputBindingCompositeContext\ context)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Return\ the\ Vector3\ with\ the\ greatest\ magnitude.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ context.ReadValue<Vector2,\ Vector2MagnitudeComparer>(part);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_vector2_magnitude_comparer}{Utilities.\+Vector2\+Magnitude\+Comparer}, \doxylink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_vector3_magnitude_comparer}{Utilities.\+Vector3\+Magnitude\+Comparer}
+
+
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TValue} : {\em struct}]\item[{\em TComparer} : {\em IComparer$<$TValue$>$}]\end{description}
+\end{Desc}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a608311f5bc7a49dbdd01e7a9952cb3ba}\index{UnityEngine.InputSystem.InputBindingCompositeContext@{UnityEngine.InputSystem.InputBindingCompositeContext}!ReadValueAsButton@{ReadValueAsButton}}
+\index{ReadValueAsButton@{ReadValueAsButton}!UnityEngine.InputSystem.InputBindingCompositeContext@{UnityEngine.InputSystem.InputBindingCompositeContext}}
+\doxysubsubsection{\texorpdfstring{ReadValueAsButton()}{ReadValueAsButton()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a608311f5bc7a49dbdd01e7a9952cb3ba} 
+unsafe bool Unity\+Engine.\+Input\+System.\+Input\+Binding\+Composite\+Context.\+Read\+Value\+As\+Button (\begin{DoxyParamCaption}\item[{int}]{part\+Number}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Like \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a9f4ead868f13e7d175b1244c5a180b13}{Read\+Value$<$\+TValue$>$(int)} but treat bound controls as buttons. This means that custom \doxylink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control_aee05d5892d3fdf8a59888815420c29b6}{Controls.\+Button\+Control.\+press\+Point} are respected and that floating-\/point values from non-\/\+Button\+Controls will be compared to \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}{Input\+Settings.\+default\+Button\+Press\+Point}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em part\+Number} & Number of the part to read. This is assigned automatically by the input system and should be treated as an opaque identifier.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if any button bound to the part is pressed.
+\end{DoxyReturn}
+
+
+This method expects all controls bound to the part to be of type {\ttfamily \doxylink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}\texorpdfstring{$<$}{<}float\texorpdfstring{$>$}{>}}.
+
+This method is different from just calling \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a9f4ead868f13e7d175b1244c5a180b13}{Read\+Value$<$\+TValue$>$(int)} with a {\ttfamily float} parameter and comparing the result to \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}{Input\+Settings.\+default\+Button\+Press\+Point} in that custom press points set on individual Button\+Controls will be respected. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_controls_1_1_button_control}{Controls.\+Button\+Control}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}{Input\+Settings.\+default\+Button\+Press\+Point}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a4639e35d69022e2bec28ddafbeeafedb}\index{UnityEngine.InputSystem.InputBindingCompositeContext@{UnityEngine.InputSystem.InputBindingCompositeContext}!controls@{controls}}
+\index{controls@{controls}!UnityEngine.InputSystem.InputBindingCompositeContext@{UnityEngine.InputSystem.InputBindingCompositeContext}}
+\doxysubsubsection{\texorpdfstring{controls}{controls}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_a4639e35d69022e2bec28ddafbeeafedb} 
+IEnumerable$<$\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context_1_1_part_binding}{Part\+Binding}}$>$ Unity\+Engine.\+Input\+System.\+Input\+Binding\+Composite\+Context.\+controls\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Enumerate all the controls that are part of the composite. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_binding_composite_a55e91ef05e6821b154f4d89bcede5adf}{Input\+Binding\+Composite.\+Finish\+Setup}
+
+
+\end{DoxySeeAlso}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Actions/Input\+Binding\+Composite\+Context.\+cs\end{DoxyCompactItemize}

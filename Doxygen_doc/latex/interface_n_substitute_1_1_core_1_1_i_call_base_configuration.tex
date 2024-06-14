@@ -1,0 +1,89 @@
+\doxysection{NSubstitute.\+Core.\+ICall\+Base\+Configuration Interface Reference}
+\hypertarget{interface_n_substitute_1_1_core_1_1_i_call_base_configuration}{}\label{interface_n_substitute_1_1_core_1_1_i_call_base_configuration}\index{NSubstitute.Core.ICallBaseConfiguration@{NSubstitute.Core.ICallBaseConfiguration}}
+Inheritance diagram for NSubstitute.\+Core.\+ICall\+Base\+Configuration\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_n_substitute_1_1_core_1_1_i_call_base_configuration}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_base_configuration_a06555165628f175cf593a571efa2d26f}{Exclude}} (\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_specification}{ICall\+Specification}} call\+Specification)
+\begin{DoxyCompactList}\small\item\em Specifies whether base method should be always ignored for the matching call. If method is both explicitly excluded and included, base method is {\itshape not} called. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_base_configuration_acad823907141f3e328dc8ad7183049f8}{Include}} (\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_specification}{ICall\+Specification}} call\+Specification)
+\begin{DoxyCompactList}\small\item\em Specifies whether base method should be called for the matching call. If method is both explicitly excluded and included, base method is {\itshape not} called. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_base_configuration_ad82a9837781fde7f885dac3c4ac92a7b}{Should\+Call\+Base}} (\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call}{ICall}} call)
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_tests}{Tests} whether base method should be called for the call given the existing configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_base_configuration_a5734e0bde3a7723f0cb6f0fa1b4e9f02}{Call\+Base\+By\+Default}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets or sets whether base method should be called by default. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_n_substitute_1_1_core_1_1_i_call_base_configuration_a06555165628f175cf593a571efa2d26f}\index{NSubstitute.Core.ICallBaseConfiguration@{NSubstitute.Core.ICallBaseConfiguration}!Exclude@{Exclude}}
+\index{Exclude@{Exclude}!NSubstitute.Core.ICallBaseConfiguration@{NSubstitute.Core.ICallBaseConfiguration}}
+\doxysubsubsection{\texorpdfstring{Exclude()}{Exclude()}}
+{\footnotesize\ttfamily \label{interface_n_substitute_1_1_core_1_1_i_call_base_configuration_a06555165628f175cf593a571efa2d26f} 
+void NSubstitute.\+Core.\+ICall\+Base\+Configuration.\+Exclude (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_specification}{ICall\+Specification}}}]{call\+Specification}{}\end{DoxyParamCaption})}
+
+
+
+Specifies whether base method should be always ignored for the matching call. If method is both explicitly excluded and included, base method is {\itshape not} called. 
+
+
+
+Implemented in \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_call_base_configuration_ad8ae034328d9b4632bc67f9fc628adb1}{NSubstitute.\+Core.\+Call\+Base\+Configuration}}.
+
+\Hypertarget{interface_n_substitute_1_1_core_1_1_i_call_base_configuration_acad823907141f3e328dc8ad7183049f8}\index{NSubstitute.Core.ICallBaseConfiguration@{NSubstitute.Core.ICallBaseConfiguration}!Include@{Include}}
+\index{Include@{Include}!NSubstitute.Core.ICallBaseConfiguration@{NSubstitute.Core.ICallBaseConfiguration}}
+\doxysubsubsection{\texorpdfstring{Include()}{Include()}}
+{\footnotesize\ttfamily \label{interface_n_substitute_1_1_core_1_1_i_call_base_configuration_acad823907141f3e328dc8ad7183049f8} 
+void NSubstitute.\+Core.\+ICall\+Base\+Configuration.\+Include (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call_specification}{ICall\+Specification}}}]{call\+Specification}{}\end{DoxyParamCaption})}
+
+
+
+Specifies whether base method should be called for the matching call. If method is both explicitly excluded and included, base method is {\itshape not} called. 
+
+
+
+Implemented in \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_call_base_configuration_a18ba79875e6dbe21c043a5d2298a4f3e}{NSubstitute.\+Core.\+Call\+Base\+Configuration}}.
+
+\Hypertarget{interface_n_substitute_1_1_core_1_1_i_call_base_configuration_ad82a9837781fde7f885dac3c4ac92a7b}\index{NSubstitute.Core.ICallBaseConfiguration@{NSubstitute.Core.ICallBaseConfiguration}!ShouldCallBase@{ShouldCallBase}}
+\index{ShouldCallBase@{ShouldCallBase}!NSubstitute.Core.ICallBaseConfiguration@{NSubstitute.Core.ICallBaseConfiguration}}
+\doxysubsubsection{\texorpdfstring{ShouldCallBase()}{ShouldCallBase()}}
+{\footnotesize\ttfamily \label{interface_n_substitute_1_1_core_1_1_i_call_base_configuration_ad82a9837781fde7f885dac3c4ac92a7b} 
+bool NSubstitute.\+Core.\+ICall\+Base\+Configuration.\+Should\+Call\+Base (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_n_substitute_1_1_core_1_1_i_call}{ICall}}}]{call}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{namespace_tests}{Tests} whether base method should be called for the call given the existing configuration. 
+
+
+
+Implemented in \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_call_base_configuration_a4d45ee994528280631af8cb05f25386e}{NSubstitute.\+Core.\+Call\+Base\+Configuration}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{interface_n_substitute_1_1_core_1_1_i_call_base_configuration_a5734e0bde3a7723f0cb6f0fa1b4e9f02}\index{NSubstitute.Core.ICallBaseConfiguration@{NSubstitute.Core.ICallBaseConfiguration}!CallBaseByDefault@{CallBaseByDefault}}
+\index{CallBaseByDefault@{CallBaseByDefault}!NSubstitute.Core.ICallBaseConfiguration@{NSubstitute.Core.ICallBaseConfiguration}}
+\doxysubsubsection{\texorpdfstring{CallBaseByDefault}{CallBaseByDefault}}
+{\footnotesize\ttfamily \label{interface_n_substitute_1_1_core_1_1_i_call_base_configuration_a5734e0bde3a7723f0cb6f0fa1b4e9f02} 
+bool NSubstitute.\+Core.\+ICall\+Base\+Configuration.\+Call\+Base\+By\+Default\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets or sets whether base method should be called by default. 
+
+
+
+Implemented in \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_call_base_configuration_af70a7d5550bae449a4a17876a52250dc}{NSubstitute.\+Core.\+Call\+Base\+Configuration}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/net.\+tnrd.\+nsubstitute@449712b25a/\+Runtime/\+Core/ICall\+Base\+Configuration.\+cs\end{DoxyCompactItemize}

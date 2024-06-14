@@ -1,0 +1,222 @@
+\doxysection{Cinemachine.\+Cinemachine\+Tracked\+Dolly Class Reference}
+\hypertarget{class_cinemachine_1_1_cinemachine_tracked_dolly}{}\label{class_cinemachine_1_1_cinemachine_tracked_dolly}\index{Cinemachine.CinemachineTrackedDolly@{Cinemachine.CinemachineTrackedDolly}}
+
+
+A \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera Body component that constrains camera motion to a \doxylink{class_cinemachine_1_1_cinemachine_path}{Cinemachine\+Path}. The camera can move along the path.  
+
+
+Inheritance diagram for Cinemachine.\+Cinemachine\+Tracked\+Dolly\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_cinemachine_1_1_cinemachine_tracked_dolly}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_tracked_dolly_1_1_auto_dolly}{Auto\+Dolly}}
+\begin{DoxyCompactList}\small\item\em Controls how automatic dollying occurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_tracked_dolly_a5314aa15b42b2053c324061aeb2f368b}{Camera\+Up\+Mode}} \{ \newline
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_tracked_dolly_a5314aa15b42b2053c324061aeb2f368ba7a1920d61156abc05a60135aefe8bc67}{Default}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_tracked_dolly_a5314aa15b42b2053c324061aeb2f368baac70412e939d72a9234cdebb1af5867b}{Path}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_tracked_dolly_a5314aa15b42b2053c324061aeb2f368ba9b46806748810ea10219eb49d8d3e7c6}{Path\+No\+Roll}}
+, \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_tracked_dolly_a5314aa15b42b2053c324061aeb2f368ba23a0d6103e6eb8265ec3203088db3c9c}{Follow\+Target}}
+, \newline
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_tracked_dolly_a5314aa15b42b2053c324061aeb2f368ba47f4b6ba39b9ed9e4e42ee844b3d0663}{Follow\+Target\+No\+Roll}}
+ \}
+\begin{DoxyCompactList}\small\item\em Different ways to set the camera\textquotesingle{}s up vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override float \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_tracked_dolly_a85ad320923e0e77301a723e57b34198e}{Get\+Max\+Damp\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Report maximum damping time needed for this component. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_tracked_dolly_a6f50dcdaea1f4de2cc64f24502f559e4}{Mutate\+Camera\+State}} (ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} cur\+State, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Positions the virtual camera according to the transposer rules. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base}{Cinemachine.\+Cinemachine\+Component\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_aacf2cbdefb4d8fd09dabb01ec65f2fbd}{Pre\+Pipeline\+Mutate\+Camera\+State}} (ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} cur\+State, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Override this to do such things as offset the Referece\+Look\+At. Base class implementation does nothing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_a9dea4262821631006faf71feb3df050f}{Mutate\+Camera\+State}} (ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} cur\+State, float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Mutates the camera state. This state will later be applied to the camera. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_ab61a5ef5a8ae5713705a46a4091fa3c2}{On\+Transition\+From\+Camera}} (\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_camera}{ICinemachine\+Camera}} from\+Cam, Vector3 world\+Up, float delta\+Time, ref \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_virtual_camera_base_1_1_transition_params}{Cinemachine\+Virtual\+Camera\+Base.\+Transition\+Params}} transition\+Params)
+\begin{DoxyCompactList}\small\item\em Notification that this virtual camera is going live. Base class implementation does nothing. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_abfd9cdc5dfa5520f0553553b35e88fd5}{On\+Target\+Object\+Warped}} (Transform target, Vector3 position\+Delta)
+\begin{DoxyCompactList}\small\item\em This is called to notify the component that a target got warped, so that the component can update its internal state to make the camera also warp seamlessy. Base class implementation does nothing. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_a2c1673f15b1bd3ff4d05c3e763ee6ee4}{Force\+Camera\+Position}} (Vector3 pos, Quaternion rot)
+\begin{DoxyCompactList}\small\item\em Force the virtual camera to assume a given position and orientation. ~\newline
+ Procedural placement then takes over. Base class implementation does nothing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_tracked_dolly_a2005409e353b7274dfe783af04a008d6}\label{class_cinemachine_1_1_cinemachine_tracked_dolly_a2005409e353b7274dfe783af04a008d6} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base}{Cinemachine\+Path\+Base}} {\bfseries m\+\_\+\+Path}
+\begin{DoxyCompactList}\small\item\em The path to which the camera will be constrained. This must be non-\/null. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_tracked_dolly_a784421a5b3adb4ce0661701bcb5650b7}\label{class_cinemachine_1_1_cinemachine_tracked_dolly_a784421a5b3adb4ce0661701bcb5650b7} 
+float {\bfseries m\+\_\+\+Path\+Position}
+\begin{DoxyCompactList}\small\item\em The position along the path at which the camera will be placed. This can be animated directly, or set automatically by the Auto-\/\+Dolly feature to get as close as possible to the Follow target. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_tracked_dolly_a5aae28ee862fe200b55bf31ee7174b39}\label{class_cinemachine_1_1_cinemachine_tracked_dolly_a5aae28ee862fe200b55bf31ee7174b39} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69e}{Cinemachine\+Path\+Base.\+Position\+Units}} {\bfseries m\+\_\+\+Position\+Units} = \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_path_base_ad3c407adc1855df3b0d912d61b69c69ea57b6e5dee6587ea54ef9ccc4050fee97}{Cinemachine\+Path\+Base.\+Position\+Units.\+Path\+Units}}
+\begin{DoxyCompactList}\small\item\em How to interpret the Path Position. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_tracked_dolly_a92beb903b853fabaf01a5874f8def96a}\label{class_cinemachine_1_1_cinemachine_tracked_dolly_a92beb903b853fabaf01a5874f8def96a} 
+Vector3 {\bfseries m\+\_\+\+Path\+Offset} = Vector3.\+zero
+\begin{DoxyCompactList}\small\item\em Where to put the camera realtive to the path postion. X is perpendicular to the path, Y is up, and Z is parallel to the path. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_tracked_dolly_a10a92734c9cc21bd6261f5937edda2a0}\label{class_cinemachine_1_1_cinemachine_tracked_dolly_a10a92734c9cc21bd6261f5937edda2a0} 
+float {\bfseries m\+\_\+\+XDamping} = 0f
+\begin{DoxyCompactList}\small\item\em How aggressively the camera tries to maintain the offset perpendicular to the path. Small numbers are more responsive, rapidly translating the camera to keep the target\textquotesingle{}s x-\/axis offset. Larger numbers give a more heavy slowly responding camera. Using different settings per axis can yield a wide range of camera behaviors. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_tracked_dolly_ad44cbb50ade6afa6d9684b5fd29bf5c7}\label{class_cinemachine_1_1_cinemachine_tracked_dolly_ad44cbb50ade6afa6d9684b5fd29bf5c7} 
+float {\bfseries m\+\_\+\+YDamping} = 0f
+\begin{DoxyCompactList}\small\item\em How aggressively the camera tries to maintain the offset in the path-\/local up direction. Small numbers are more responsive, rapidly translating the camera to keep the target\textquotesingle{}s y-\/axis offset. Larger numbers give a more heavy slowly responding camera. Using different settings per axis can yield a wide range of camera behaviors. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_tracked_dolly_aeca59dd97f085485751b5ac433609b85}\label{class_cinemachine_1_1_cinemachine_tracked_dolly_aeca59dd97f085485751b5ac433609b85} 
+float {\bfseries m\+\_\+\+ZDamping} = 1f
+\begin{DoxyCompactList}\small\item\em How aggressively the camera tries to maintain the offset parallel to the path. Small numbers are more responsive, rapidly translating the camera to keep the target\textquotesingle{}s z-\/axis offset. Larger numbers give a more heavy slowly responding camera. Using different settings per axis can yield a wide range of camera behaviors. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_tracked_dolly_ad57274d844b7ce168c6ac2b6ba175a21}\label{class_cinemachine_1_1_cinemachine_tracked_dolly_ad57274d844b7ce168c6ac2b6ba175a21} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_tracked_dolly_a5314aa15b42b2053c324061aeb2f368b}{Camera\+Up\+Mode}} {\bfseries m\+\_\+\+Camera\+Up} = \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_tracked_dolly_a5314aa15b42b2053c324061aeb2f368ba7a1920d61156abc05a60135aefe8bc67}{Camera\+Up\+Mode.\+Default}}
+\begin{DoxyCompactList}\small\item\em How to set the virtual camera\textquotesingle{}s Up vector. This will affect the screen composition. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_tracked_dolly_ab38b2a9f39ffed59e731004e823618a2}\label{class_cinemachine_1_1_cinemachine_tracked_dolly_ab38b2a9f39ffed59e731004e823618a2} 
+float {\bfseries m\+\_\+\+Pitch\+Damping} = 0
+\begin{DoxyCompactList}\small\item\em "{}How aggressively the camera tries to track the target rotation\textquotesingle{}s X angle. Small numbers are more responsive. Larger numbers give a more heavy slowly responding camera. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_tracked_dolly_a236cc72a4a7411e4563723842f52bfee}\label{class_cinemachine_1_1_cinemachine_tracked_dolly_a236cc72a4a7411e4563723842f52bfee} 
+float {\bfseries m\+\_\+\+Yaw\+Damping} = 0
+\begin{DoxyCompactList}\small\item\em How aggressively the camera tries to track the target rotation\textquotesingle{}s Y angle. Small numbers are more responsive. Larger numbers give a more heavy slowly responding camera. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_tracked_dolly_ad5b4df15448d6a142764495e16ea4872}\label{class_cinemachine_1_1_cinemachine_tracked_dolly_ad5b4df15448d6a142764495e16ea4872} 
+float {\bfseries m\+\_\+\+Roll\+Damping} = 0f
+\begin{DoxyCompactList}\small\item\em How aggressively the camera tries to track the target rotation\textquotesingle{}s Z angle. Small numbers are more responsive. Larger numbers give a more heavy slowly responding camera. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_tracked_dolly_a756a4498629bd77b6dd328bc9dd826fe}\label{class_cinemachine_1_1_cinemachine_tracked_dolly_a756a4498629bd77b6dd328bc9dd826fe} 
+\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_tracked_dolly_1_1_auto_dolly}{Auto\+Dolly}} {\bfseries m\+\_\+\+Auto\+Dolly} = new \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_tracked_dolly_1_1_auto_dolly}{Auto\+Dolly}}(false, 0, 2, 5)
+\begin{DoxyCompactList}\small\item\em Controls how automatic dollying occurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_tracked_dolly_a174667636410d1f196a8e508d8507d3f}\label{class_cinemachine_1_1_cinemachine_tracked_dolly_a174667636410d1f196a8e508d8507d3f} 
+override bool {\bfseries Is\+Valid}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if component is enabled and has a path. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_tracked_dolly_a226ee01c720a6c43c4593d3f05d1a945}\label{class_cinemachine_1_1_cinemachine_tracked_dolly_a226ee01c720a6c43c4593d3f05d1a945} 
+override \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}} {\bfseries Stage}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{namespace_cinemachine}{Cinemachine} Pipeline stage that this component implements. Always returns the Body stage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base}{Cinemachine.\+Cinemachine\+Component\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}} {\bfseries Virtual\+Camera}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the associated \doxylink{class_cinemachine_1_1_cinemachine_virtual_camera_base}{Cinemachine\+Virtual\+Camera\+Base}. \end{DoxyCompactList}\item 
+Transform {\bfseries Follow\+Target}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the owner vcam\textquotesingle{}s Follow target. \end{DoxyCompactList}\item 
+Transform {\bfseries Look\+At\+Target}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the owner vcam\textquotesingle{}s Look\+At target. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}} {\bfseries Abstract\+Follow\+Target\+Group}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get Follow target as \doxylink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}, or null if target is not a group. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}} {\bfseries Follow\+Target\+Group}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get Follow target as \doxylink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}, or null if target is not a \doxylink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}. \end{DoxyCompactList}\item 
+Vector3 {\bfseries Follow\+Target\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the position of the Follow target. Special handling\+: If the Follow target is a Virtual\+Camera, returns the vcam State\textquotesingle{}s position, not the transform\textquotesingle{}s position. \end{DoxyCompactList}\item 
+Quaternion {\bfseries Follow\+Target\+Rotation}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the rotation of the Follow target. Special handling\+: If the Follow target is a Virtual\+Camera, returns the vcam State\textquotesingle{}s rotation, not the transform\textquotesingle{}s rotation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}} {\bfseries Abstract\+Look\+At\+Target\+Group}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get Look\+At target as \doxylink{interface_cinemachine_1_1_i_cinemachine_target_group}{ICinemachine\+Target\+Group}, or null if target is not a group. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}} {\bfseries Look\+At\+Target\+Group}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get Look\+At target as \doxylink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}, or null if target is not a \doxylink{class_cinemachine_1_1_cinemachine_target_group}{Cinemachine\+Target\+Group}. \end{DoxyCompactList}\item 
+Vector3 {\bfseries Look\+At\+Target\+Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the position of the Look\+At target. Special handling\+: If the Look\+At target is a Virtual\+Camera, returns the vcam State\textquotesingle{}s position, not the transform\textquotesingle{}s position. \end{DoxyCompactList}\item 
+Quaternion {\bfseries Look\+At\+Target\+Rotation}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the rotation of the Look\+At target. Special handling\+: If the Look\+At target is a Virtual\+Camera, returns the vcam State\textquotesingle{}s rotation, not the transform\textquotesingle{}s rotation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}} {\bfseries Vcam\+State}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the owner vcam\textquotesingle{}s \doxylink{struct_cinemachine_1_1_camera_state}{Camera\+State}. \end{DoxyCompactList}\item 
+bool {\bfseries Is\+Valid}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if this object is enabled and set up to produce results. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_core_acb9b463f929a2369b694c532f89cece3}{Cinemachine\+Core.\+Stage}} {\bfseries Stage}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em What part of the pipeline this fits into. \end{DoxyCompactList}\item 
+virtual bool {\bfseries Body\+Applies\+After\+Aim}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Special for Body Stage compoments that want to be applied after Aim stage because they use the aim as inout for the procedural placement. \end{DoxyCompactList}\item 
+virtual bool {\bfseries Requires\+User\+Input}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Components that require user input should implement this and return true. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base}{Cinemachine.\+Cinemachine\+Component\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+const float {\bfseries Epsilon} = Utility.\+Unity\+Vector\+Extensions.\+Epsilon
+\begin{DoxyCompactList}\small\item\em Useful constant for very small floats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A \doxylink{namespace_cinemachine}{Cinemachine} Virtual Camera Body component that constrains camera motion to a \doxylink{class_cinemachine_1_1_cinemachine_path}{Cinemachine\+Path}. The camera can move along the path. 
+
+This behaviour can operate in two modes\+: manual positioning, and Auto-\/\+Dolly positioning. In Manual mode, the camera\textquotesingle{}s position is specified by animating the Path Position field. In Auto-\/\+Dolly mode, the Path Position field is animated automatically every frame by finding the position on the path that\textquotesingle{}s closest to the virtual camera\textquotesingle{}s Follow target. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_tracked_dolly_a5314aa15b42b2053c324061aeb2f368b}\index{Cinemachine.CinemachineTrackedDolly@{Cinemachine.CinemachineTrackedDolly}!CameraUpMode@{CameraUpMode}}
+\index{CameraUpMode@{CameraUpMode}!Cinemachine.CinemachineTrackedDolly@{Cinemachine.CinemachineTrackedDolly}}
+\doxysubsubsection{\texorpdfstring{CameraUpMode}{CameraUpMode}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_tracked_dolly_a5314aa15b42b2053c324061aeb2f368b} 
+enum \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_tracked_dolly_a5314aa15b42b2053c324061aeb2f368b}{Cinemachine.\+Cinemachine\+Tracked\+Dolly.\+Camera\+Up\+Mode}}}
+
+
+
+Different ways to set the camera\textquotesingle{}s up vector. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Default@{Default}!Cinemachine.CinemachineTrackedDolly@{Cinemachine.CinemachineTrackedDolly}}\index{Cinemachine.CinemachineTrackedDolly@{Cinemachine.CinemachineTrackedDolly}!Default@{Default}}}\Hypertarget{class_cinemachine_1_1_cinemachine_tracked_dolly_a5314aa15b42b2053c324061aeb2f368ba7a1920d61156abc05a60135aefe8bc67}\label{class_cinemachine_1_1_cinemachine_tracked_dolly_a5314aa15b42b2053c324061aeb2f368b} 
+Default&Leave the camera\textquotesingle{}s up vector alone. It will be set according to the Brain\textquotesingle{}s World\+Up. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Path@{Path}!Cinemachine.CinemachineTrackedDolly@{Cinemachine.CinemachineTrackedDolly}}\index{Cinemachine.CinemachineTrackedDolly@{Cinemachine.CinemachineTrackedDolly}!Path@{Path}}}\Hypertarget{class_cinemachine_1_1_cinemachine_tracked_dolly_a5314aa15b42b2053c324061aeb2f368baac70412e939d72a9234cdebb1af5867b}\label{class_cinemachine_1_1_cinemachine_tracked_dolly_a5314aa15b42b2053c324061aeb2f368b} 
+Path&Take the up vector from the path\textquotesingle{}s up vector at the current point. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PathNoRoll@{PathNoRoll}!Cinemachine.CinemachineTrackedDolly@{Cinemachine.CinemachineTrackedDolly}}\index{Cinemachine.CinemachineTrackedDolly@{Cinemachine.CinemachineTrackedDolly}!PathNoRoll@{PathNoRoll}}}\Hypertarget{class_cinemachine_1_1_cinemachine_tracked_dolly_a5314aa15b42b2053c324061aeb2f368ba9b46806748810ea10219eb49d8d3e7c6}\label{class_cinemachine_1_1_cinemachine_tracked_dolly_a5314aa15b42b2053c324061aeb2f368b} 
+Path\+No\+Roll&Take the up vector from the path\textquotesingle{}s up vector at the current point, but with the roll zeroed out. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FollowTarget@{FollowTarget}!Cinemachine.CinemachineTrackedDolly@{Cinemachine.CinemachineTrackedDolly}}\index{Cinemachine.CinemachineTrackedDolly@{Cinemachine.CinemachineTrackedDolly}!FollowTarget@{FollowTarget}}}\Hypertarget{class_cinemachine_1_1_cinemachine_tracked_dolly_a5314aa15b42b2053c324061aeb2f368ba23a0d6103e6eb8265ec3203088db3c9c}\label{class_cinemachine_1_1_cinemachine_tracked_dolly_a5314aa15b42b2053c324061aeb2f368b} 
+Follow\+Target&Take the up vector from the Follow target\textquotesingle{}s up vector. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FollowTargetNoRoll@{FollowTargetNoRoll}!Cinemachine.CinemachineTrackedDolly@{Cinemachine.CinemachineTrackedDolly}}\index{Cinemachine.CinemachineTrackedDolly@{Cinemachine.CinemachineTrackedDolly}!FollowTargetNoRoll@{FollowTargetNoRoll}}}\Hypertarget{class_cinemachine_1_1_cinemachine_tracked_dolly_a5314aa15b42b2053c324061aeb2f368ba47f4b6ba39b9ed9e4e42ee844b3d0663}\label{class_cinemachine_1_1_cinemachine_tracked_dolly_a5314aa15b42b2053c324061aeb2f368b} 
+Follow\+Target\+No\+Roll&Take the up vector from the Follow target\textquotesingle{}s up vector, but with the roll zeroed out. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cinemachine_1_1_cinemachine_tracked_dolly_a85ad320923e0e77301a723e57b34198e}\index{Cinemachine.CinemachineTrackedDolly@{Cinemachine.CinemachineTrackedDolly}!GetMaxDampTime@{GetMaxDampTime}}
+\index{GetMaxDampTime@{GetMaxDampTime}!Cinemachine.CinemachineTrackedDolly@{Cinemachine.CinemachineTrackedDolly}}
+\doxysubsubsection{\texorpdfstring{GetMaxDampTime()}{GetMaxDampTime()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_tracked_dolly_a85ad320923e0e77301a723e57b34198e} 
+override float Cinemachine.\+Cinemachine\+Tracked\+Dolly.\+Get\+Max\+Damp\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Report maximum damping time needed for this component. 
+
+\begin{DoxyReturn}{Returns}
+Highest damping setting in this component
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_component_base_ab91f25cc642560ac98f89542be500153}{Cinemachine.\+Cinemachine\+Component\+Base}}.
+
+\Hypertarget{class_cinemachine_1_1_cinemachine_tracked_dolly_a6f50dcdaea1f4de2cc64f24502f559e4}\index{Cinemachine.CinemachineTrackedDolly@{Cinemachine.CinemachineTrackedDolly}!MutateCameraState@{MutateCameraState}}
+\index{MutateCameraState@{MutateCameraState}!Cinemachine.CinemachineTrackedDolly@{Cinemachine.CinemachineTrackedDolly}}
+\doxysubsubsection{\texorpdfstring{MutateCameraState()}{MutateCameraState()}}
+{\footnotesize\ttfamily \label{class_cinemachine_1_1_cinemachine_tracked_dolly_a6f50dcdaea1f4de2cc64f24502f559e4} 
+override void Cinemachine.\+Cinemachine\+Tracked\+Dolly.\+Mutate\+Camera\+State (\begin{DoxyParamCaption}\item[{ref \mbox{\hyperlink{struct_cinemachine_1_1_camera_state}{Camera\+State}}}]{cur\+State}{, }\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Positions the virtual camera according to the transposer rules. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cur\+State} & The current camera state\\
+\hline
+{\em delta\+Time} & Used for damping. If less that 0, no damping is done.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Components/Cinemachine\+Tracked\+Dolly.\+cs\end{DoxyCompactItemize}

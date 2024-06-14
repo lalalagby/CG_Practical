@@ -1,0 +1,50 @@
+\chapter{Custom Interpolators}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_custom-_interpolators}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_custom-_interpolators}\index{Custom Interpolators@{Custom Interpolators}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_custom-_interpolators_autotoc_md3116}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_custom-_interpolators_autotoc_md3116}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_custom-_interpolators_autotoc_md3117}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_custom-_interpolators_autotoc_md3117}
+The Custom Interpolator feature provides fine-\/grained control over the specific calculations Shader Graph uses to bring data from the vertex stage to the pixel stage.
+
+There are two target audiences for Custom Interpolators\+:
+
+
+\begin{DoxyItemize}
+\item Technical Directors and Lead Technical Artists setting up environments for their teams.
+\item \doxylink{namespace_graphics}{Graphics} programmers helping artists to optimize content performance.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_custom-_interpolators_autotoc_md3118}{}\doxysection{\texorpdfstring{Supported data types}{Supported data types}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_custom-_interpolators_autotoc_md3118}
+Custom interpolators support float, vec2, vec3, and vec4 options.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_custom-_interpolators_autotoc_md3119}{}\doxysection{\texorpdfstring{Channel limits}{Channel limits}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_custom-_interpolators_autotoc_md3119}
+The Custom Interpolator feature supports a maximum of 32 channels. A channel is equivalent to four floats. Each float is an interpolator variable. Different platforms and GPUs have different interpolator variable limits. Exceeding the interpolator limitations of your target platform prevents your shaders from compiling. For detailed information about the number of interpolators supported by common interfaces, see the \doxylink{namespace_unity}{Unity} documentation on \href{https://docs.unity3d.com/Manual/SL-ShaderSemantics.html}{\texttt{ Shader semantics}}, and view the section {\bfseries{Interpolator count limits}}. Test your Custom Interpolators on your target configuration to ensure that your content compiles properly. Technical directors can set warnings and errors to help their team members avoid creating graphs with too many channels to be compatible with their target pipeline, platform, or GPU. See {\bfseries{Creating channel warnings and errors}} below.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_custom-_interpolators_autotoc_md3120}{}\doxysection{\texorpdfstring{How to use}{How to use}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_custom-_interpolators_autotoc_md3120}
+To use this feature, create a Custom Interpolator block in the Vertex context of the Master Stack and set a name and a data type. Create a vertex node to write data to that interpolator. Use the interpolator in your graph, then connect your graph to the relevant block in the Fragment context. These instructions include a contextual example illustrating the process of using a Custom Interpolator to fetch per-\/vertex data from a texture. To read the HLSL you use to replicate this behavior with the Built In Render Pipeline, see the \doxylink{namespace_unity}{Unity} documentation on \href{https://docs.unity3d.com/Manual/SL-ShaderSemantics.html}{\texttt{ Shader semantics}} and view the section {\bfseries{Vertex ID\+: SV\+\_\+\+Vertex\+ID}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_custom-_interpolators_autotoc_md3121}{}\doxysubsection{\texorpdfstring{Creating channel warnings and errors}{Creating channel warnings and errors}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_custom-_interpolators_autotoc_md3121}
+It is not possible to limit the number of channels a user can create in a Shader Graph. However, it is possible to create alerts to let users know when they are close to or exceeding a certain number of channels. The {\bfseries{Warning Threshold}} lets users know that they are approaching the channel limit, and the {\bfseries{Error Threshold}} informs them if they have reached or surpassed that limit. The {\bfseries{Warning Threshold}} value must be between 8 and 32 channels. The {\bfseries{Error Threshold}} value must be higher than the {\bfseries{Warning Threshold}}, and has a minimum value of 8 channels. To configure these parameters, go to the \doxylink{namespace_unity}{Unity} Editor \href{https://docs.unity3d.com/Manual/comp-ManagerGroup.html}{\texttt{ Project Settings}} menu and open the {\bfseries{Custom Interpolator Channel Settings}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_custom-_interpolators_autotoc_md3122}{}\doxysubsection{\texorpdfstring{Adding a Custom Interpolator block to the Master Stack}{Adding a Custom Interpolator block to the Master Stack}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_custom-_interpolators_autotoc_md3122}
+ 
+
+
+\begin{DoxyEnumerate}
+\item Right-\/click in the {\bfseries{Vertex}} contex to create a block node.
+\item Select {\bfseries{Custom Interpolator}}.
+\item Select a data type.
+\item Enter a name for this interpolator.
+\end{DoxyEnumerate}
+
+In the illustrated example, you use the Vector 4 (vec4) data type.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_custom-_interpolators_autotoc_md3123}{}\doxysubsection{\texorpdfstring{Writing data to the interpolator}{Writing data to the interpolator}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_custom-_interpolators_autotoc_md3123}
+
+
+
+\begin{DoxyEnumerate}
+\item Right-\/click in your graph to create a node.
+\item Select the type {\bfseries{Vertex ID}}.
+\item Connect this node to the Custom Interpolator block.
+\end{DoxyEnumerate}
+
+In the example, you write Vertex ID values from your graph into the Custom Interpolator.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_custom-_interpolators_autotoc_md3124}{}\doxysubsection{\texorpdfstring{Reading data from the interpolator}{Reading data from the interpolator}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_custom-_interpolators_autotoc_md3124}
+
+\begin{DoxyEnumerate}
+\item Right-\/click in your graph to create a node.
+\item Select {\bfseries{Custom Interpolator}}.
+\item Connect the Custom Interpolator node to the relevant block in the Fragment context.
+
+
+\end{DoxyEnumerate}
+
+In this example, you connect to the {\bfseries{Base Color}} block in order to pass the Vertex ID from the vertex shader to the fragment shader and use it as color output.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_custom-_interpolators_autotoc_md3125}{}\doxysubsection{\texorpdfstring{Deleting the block from the Master Stack}{Deleting the block from the Master Stack}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_custom-_interpolators_autotoc_md3125}
+If you delete a Custom Interpolator which is associated with nodes that are still in your graph, \doxylink{namespace_unity}{Unity} displays an alert. If you want to keep using these nodes, you can create a new Custom Interpolator and associate them with it. This prevents the alert from appearing. 

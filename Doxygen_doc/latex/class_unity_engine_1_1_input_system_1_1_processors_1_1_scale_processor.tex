@@ -1,0 +1,98 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Processors.\+Scale\+Processor Class Reference}
+\hypertarget{class_unity_engine_1_1_input_system_1_1_processors_1_1_scale_processor}{}\label{class_unity_engine_1_1_input_system_1_1_processors_1_1_scale_processor}\index{UnityEngine.InputSystem.Processors.ScaleProcessor@{UnityEngine.InputSystem.Processors.ScaleProcessor}}
+
+
+Scale a float value by a constant factor.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Processors.\+Scale\+Processor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_input_system_1_1_processors_1_1_scale_processor}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override float \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_processors_1_1_scale_processor_aaf91e52fb2f9d1c242f42e195fb84588}{Process}} (float value, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\begin{DoxyCompactList}\small\item\em Scale the given {\itshape value}  by \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_scale_processor_a8d795687f53c19522ee187526ad65ef9}{factor}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_processors_1_1_scale_processor_a478fac538d6896ab34d28b70a3e8eb00}\label{class_unity_engine_1_1_input_system_1_1_processors_1_1_scale_processor_a478fac538d6896ab34d28b70a3e8eb00} 
+override string {\bfseries To\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor}{Unity\+Engine.\+Input\+System.\+Input\+Processor$<$ float $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+object \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_a7762d91b35f73fc86ac113d932c63d9d}{Process\+As\+Object}} (object value, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\begin{DoxyCompactList}\small\item\em Process an input value, given as an object, and return the processed value as an object. \end{DoxyCompactList}\item 
+override object {\bfseries Process\+As\+Object} (object value, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\item 
+unsafe void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_aad6626f4dc89adb27730b40b03a6e6a7}{Process}} (void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\begin{DoxyCompactList}\small\item\em Process an input value stored in the given memory buffer. \end{DoxyCompactList}\item 
+TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_a2601fec536ab556a5cdc97cb90ee9751}{Process}} (TValue value, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\begin{DoxyCompactList}\small\item\em Process the given value and return the result. \end{DoxyCompactList}\item 
+override unsafe void {\bfseries Process} (void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_processors_1_1_scale_processor_a8d795687f53c19522ee187526ad65ef9}\label{class_unity_engine_1_1_input_system_1_1_processors_1_1_scale_processor_a8d795687f53c19522ee187526ad65ef9} 
+float {\bfseries factor} = 1
+\begin{DoxyCompactList}\small\item\em Scale factor to apply to incoming input values. Defaults to 1 (no scaling). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor}{Unity\+Engine.\+Input\+System.\+Input\+Processor$<$ float $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4}\label{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4} 
+enum \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4}{Caching\+Policy}} 
+\begin{DoxyCompactList}\small\item\em Caching policy regarding usage of return value from processors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor}{Unity\+Engine.\+Input\+System.\+Input\+Processor$<$ float $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4}{Caching\+Policy}} {\bfseries caching\+Policy}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Caching policy of the processor. Override this property to provide a different value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Scale a float value by a constant factor. 
+
+This processor is registered (see Input\+System.\+Register\+Processor$<$\+T$>$) under the name "{}scale"{}.
+
+
+\begin{DoxyCode}{0}
+
+\end{DoxyCode}
+ // Bind to left trigger on the gamepad such that its values are scaled by a factor of 2. new \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}(binding\+: "{}<\+Gamepad>/left\+Trigger"{}, processors\+: "{}scale(factor=2)"{}); 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_scale_vector2_processor}{Scale\+Vector2\+Processor}, \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_scale_vector3_processor}{Scale\+Vector3\+Processor}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_processors_1_1_scale_processor_aaf91e52fb2f9d1c242f42e195fb84588}\index{UnityEngine.InputSystem.Processors.ScaleProcessor@{UnityEngine.InputSystem.Processors.ScaleProcessor}!Process@{Process}}
+\index{Process@{Process}!UnityEngine.InputSystem.Processors.ScaleProcessor@{UnityEngine.InputSystem.Processors.ScaleProcessor}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_processors_1_1_scale_processor_aaf91e52fb2f9d1c242f42e195fb84588} 
+override float Unity\+Engine.\+Input\+System.\+Processors.\+Scale\+Processor.\+Process (\begin{DoxyParamCaption}\item[{float}]{value}{, }\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}}]{control}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Scale the given {\itshape value}  by \doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_scale_processor_a8d795687f53c19522ee187526ad65ef9}{factor}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Input value.\\
+\hline
+{\em control} & Ignored.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Scaled value.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Controls/\+Processors/Scale\+Processor.\+cs\end{DoxyCompactItemize}

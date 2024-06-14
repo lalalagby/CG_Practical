@@ -1,0 +1,158 @@
+\doxysection{Unity.\+Visual\+Scripting.\+Implementation\+Inspector\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_unity_1_1_visual_scripting_1_1_implementation_inspector}{}\label{class_unity_1_1_visual_scripting_1_1_implementation_inspector}\index{Unity.VisualScripting.ImplementationInspector$<$ T $>$@{Unity.VisualScripting.ImplementationInspector$<$ T $>$}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Implementation\+Inspector\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_1_1_visual_scripting_1_1_implementation_inspector}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Styles}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_implementation_inspector_a07ecafbe807d4298e6cc6e190480d88a}\label{class_unity_1_1_visual_scripting_1_1_implementation_inspector_a07ecafbe807d4298e6cc6e190480d88a} 
+{\bfseries Implementation\+Inspector} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} metadata)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector}{Unity.\+Visual\+Scripting.\+Inspector}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Initialize} ()
+\item 
+virtual void {\bfseries Dispose} ()
+\item 
+void {\bfseries Draw} (Rect position, GUIContent label=null)
+\item 
+void {\bfseries Set\+Height\+Dirty} ()
+\item 
+float {\bfseries Get\+Cached\+Height} (float width, GUIContent label, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector}{Inspector}} parent\+Inspector)
+\item 
+Rect {\bfseries Get\+Layout\+Position} (GUIContent label=null, float scrollbar\+Trigger=14, Rect\+Offset offset=null)
+\item 
+void {\bfseries Draw\+Layout} (GUIContent label=null, float scrollbar\+Trigger=14, Rect\+Offset offset=null)
+\item 
+virtual float {\bfseries Get\+Adaptive\+Width} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_implementation_inspector_a12606b2229c1c61a3eac45329e3a50d7}\label{class_unity_1_1_visual_scripting_1_1_implementation_inspector_a12606b2229c1c61a3eac45329e3a50d7} 
+override float {\bfseries Get\+Height} (float width, GUIContent label)
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_implementation_inspector_acaa5201ccc67a3311a2f5851c410ba24}\label{class_unity_1_1_visual_scripting_1_1_implementation_inspector_acaa5201ccc67a3311a2f5851c410ba24} 
+override void {\bfseries On\+GUI} (Rect position, GUIContent label)
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_implementation_inspector_af1f1a8719175201095fbbe43fb33b49d}\label{class_unity_1_1_visual_scripting_1_1_implementation_inspector_af1f1a8719175201095fbbe43fb33b49d} 
+virtual \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_fuzzy_option_tree}{IFuzzy\+Option\+Tree}} {\bfseries Get\+Implementation\+Options} ()
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_implementation_inspector_a98014d8c90372ed22fffcc56cd2072c8}\label{class_unity_1_1_visual_scripting_1_1_implementation_inspector_a98014d8c90372ed22fffcc56cd2072c8} 
+virtual T {\bfseries Create\+Implementation} (object option)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector}{Unity.\+Visual\+Scripting.\+Inspector}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Inspector} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} metadata)
+\item 
+float {\bfseries Get\+Height} (float width, GUIContent label)
+\item 
+virtual bool {\bfseries Skip\+Event} (Event e, Rect position)
+\item 
+void {\bfseries On\+GUI} (Rect position, GUIContent label)
+\item 
+virtual void {\bfseries On\+Editor\+Pref\+GUI} (Rect position, GUIContent label)
+\item 
+void {\bfseries Begin\+Profiling} (string name)
+\item 
+void {\bfseries End\+Profiling} (string name)
+\item 
+void {\bfseries Reset\+Profiling} (string name)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_implementation_inspector_abbd063a03874fe44c3682d7fa67a9dbe}\label{class_unity_1_1_visual_scripting_1_1_implementation_inspector_abbd063a03874fe44c3682d7fa67a9dbe} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} {\bfseries implementation\+Metadata}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_implementation_inspector_aabb35ddf1eb65be03baf291eb92e8b9b}\label{class_unity_1_1_visual_scripting_1_1_implementation_inspector_aabb35ddf1eb65be03baf291eb92e8b9b} 
+virtual GUIContent {\bfseries null\+Selector\+Label} = new GUIContent("{}(Nothing)"{})\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_implementation_inspector_aaff67f5d7597df123a228e0374b55df0}\label{class_unity_1_1_visual_scripting_1_1_implementation_inspector_aaff67f5d7597df123a228e0374b55df0} 
+virtual GUIContent {\bfseries selector\+Label}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_implementation_inspector_a88e8f7f27a398e2994bf0a1a5fbe85e9}\label{class_unity_1_1_visual_scripting_1_1_implementation_inspector_a88e8f7f27a398e2994bf0a1a5fbe85e9} 
+virtual \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_editor_texture}{Editor\+Texture}} {\bfseries type\+Selector\+Icon}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_implementation_inspector_a5fcb8c48c8e8cf91b1868b9c0692cda3}\label{class_unity_1_1_visual_scripting_1_1_implementation_inspector_a5fcb8c48c8e8cf91b1868b9c0692cda3} 
+static float {\bfseries compact\+Selector\+Subtracted\+Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector}{Unity.\+Visual\+Scripting.\+Inspector}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} {\bfseries metadata}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+virtual bool {\bfseries safe}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static bool {\bfseries profile}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+virtual bool {\bfseries indent}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries is\+Height\+Dirty}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+virtual bool {\bfseries cache\+Height}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries wide\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+float {\bfseries full}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+float {\bfseries half}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+virtual float {\bfseries wide\+Mode\+Threshold}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static Event {\bfseries e}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_override_stack}{Override\+Stack}}$<$ bool $>$ {\bfseries expand\+Tooltip} = new \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_override_stack}{Override\+Stack}}$<$bool$>$(false)\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_override_stack}{Override\+Stack}}$<$ bool $>$ {\bfseries adaptive\+Width} = new \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_override_stack}{Override\+Stack}}$<$bool$>$(false)\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_override_stack}{Override\+Stack}}$<$ GUIStyle $>$ {\bfseries default\+Label\+Style} = new \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_override_stack}{Override\+Stack}}$<$GUIStyle$>$(null)\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector}{Unity.\+Visual\+Scripting.\+Inspector}}}
+\begin{DoxyCompactItemize}
+\item 
+static bool {\bfseries On\+Open\+VFX} (int instance\+ID, int line)
+\item 
+static GUIContent {\bfseries Process\+Label} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} metadata, GUIContent label)
+\item 
+static GUIStyle {\bfseries Process\+Label\+Style} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} metadata, GUIStyle label\+Style)
+\item 
+static float {\bfseries Width\+Without\+Label} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} metadata, float width, GUIContent label=null)
+\item 
+static float {\bfseries Height\+With\+Label} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} metadata, float width, float height, GUIContent label=null, GUIStyle label\+Style=null)
+\item 
+static Rect {\bfseries Prefix\+Label} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} metadata, Rect position, GUIContent label=null, GUIStyle style=null)
+\item 
+static void {\bfseries Begin\+Block} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} metadata, Rect position)
+\item 
+static Rect {\bfseries Begin\+Labeled\+Block} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} metadata, Rect position, GUIContent label=null, GUIStyle label\+Style=null)
+\item 
+static bool {\bfseries End\+Block} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} metadata)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector}{Unity.\+Visual\+Scripting.\+Inspector}}}
+\begin{DoxyCompactItemize}
+\item 
+static Rect {\bfseries Reclaim\+Implementation\+Selector} (Rect position)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector}{Unity.\+Visual\+Scripting.\+Inspector}}}
+\begin{DoxyCompactItemize}
+\item 
+float {\bfseries y}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+8.\+0/\+Editor/\+Visual\+Scripting.\+Core/\+Inspection/Implementation\+Inspector.\+cs\end{DoxyCompactItemize}

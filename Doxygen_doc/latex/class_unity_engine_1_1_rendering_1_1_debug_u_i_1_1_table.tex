@@ -1,0 +1,203 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Table Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_table}{}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_table}\index{UnityEngine.Rendering.DebugUI.Table@{UnityEngine.Rendering.DebugUI.Table}}
+
+
+Array \doxylink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_container}{Container}.  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Debug\+UI.\+Table\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_table}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_table_1_1_row}{Row}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_table_1_1_row}{Row} \doxylink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_container}{Container}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_table_a10d80a744245691b13e1eab42efe973f}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_table_a10d80a744245691b13e1eab42efe973f} 
+{\bfseries Table} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_table_a95aff0c3f2258bd2d084ae2e91ab8f8a}{Set\+Column\+Visibility}} (int index, bool visible)
+\begin{DoxyCompactList}\small\item\em Set column visibility. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_table_a9ff3c94fb38d2f0aa2471dc3976ebddb}{Get\+Column\+Visibility}} (int index)
+\begin{DoxyCompactList}\small\item\em Get column visibility. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_container}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Container}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Container} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_container_ad2ec54bb8854eff361a8a1c4ba9d4a6f}{Container}} (string id)
+\begin{DoxyCompactList}\small\item\em Constructor for a container without header. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_container_af7b876f1d3ccf8f90e1fc96f909b00f0}{Container}} (string \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_aec34c7feace4bc665f6bb7ce0fa2035a}{display\+Name}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_observable_list}{Observable\+List}}$<$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Widget}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_container_ac31dc05ea3f022e1063908cd1849fafa}{children}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_container_a3f409ad108c18dc0a5c54dab3458f4df}{Get\+Hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Returns the hash code of the widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Widget}}}
+\begin{DoxyCompactItemize}
+\item 
+override int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_a38fb7031b499496ecec8143573276a77}{Get\+Hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Returns the hash code of the widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_table_a54dc14f527e4f2164f217ff0aead9d2d}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_table_a54dc14f527e4f2164f217ff0aead9d2d} 
+bool {\bfseries is\+Read\+Only} = false
+\begin{DoxyCompactList}\small\item\em True if the table is read only. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Widget}}}
+\begin{DoxyCompactItemize}
+\item 
+Func$<$ bool $>$ {\bfseries is\+Hidden\+Callback}
+\begin{DoxyCompactList}\small\item\em Optional delegate that can be used to conditionally hide widgets at runtime (e.\+g. due to state of other widgets). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_table_a11729d397fe7b5d0b2d91d7c40120cff}{On\+Item\+Added}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_observable_list}{Observable\+List}}$<$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Widget}} $>$ sender, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_list_changed_event_args}{List\+Changed\+Event\+Args}}$<$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Widget}} $>$ e)
+\begin{DoxyCompactList}\small\item\em Method called when a children is added. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_table_a1426b329362f7c3197b166c090851b04}{On\+Item\+Removed}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_observable_list}{Observable\+List}}$<$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Widget}} $>$ sender, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_list_changed_event_args}{List\+Changed\+Event\+Args}}$<$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Widget}} $>$ e)
+\begin{DoxyCompactList}\small\item\em Method called when a children is removed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_table_a488a6a992d224fbd48699136fa3bda5c}\label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_table_a488a6a992d224fbd48699136fa3bda5c} 
+bool\mbox{[}$\,$\mbox{]} {\bfseries Visible\+Columns}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The visible columns. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_container}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Container}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_observable_list}{Observable\+List}}$<$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Widget}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_container_ac31dc05ea3f022e1063908cd1849fafa}{children}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em List of children. \end{DoxyCompactList}\item 
+override \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_panel}{Panel}} {\bfseries panel}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_panel}{Panel} the container is attached to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Widget}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_panel}{Panel}} {\bfseries panel}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Panels containing the widget. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_i_container}{IContainer}} {\bfseries parent}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Parent container. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_a53965df570fd5fa92e5ac8820bd20063}{Flags}} {\bfseries flags}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Flags for the widget. \end{DoxyCompactList}\item 
+string {\bfseries display\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Display name. \end{DoxyCompactList}\item 
+string {\bfseries tooltip}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Tooltip. \end{DoxyCompactList}\item 
+string {\bfseries query\+Path}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Path of the widget. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Editor\+Only}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the widget is Editor only. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Runtime\+Only}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the widget is Runtime only. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Inactive\+In\+Editor}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the widget is inactive in the editor (i.\+e. widget is runtime only and the application is not \textquotesingle{}Playing\textquotesingle{}). \end{DoxyCompactList}\item 
+bool {\bfseries is\+Hidden}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If \doxylink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_adf0c8caaccfd67c981baf81aa469dd5b}{should\+Hide\+Delegate} has been set and returns true, the widget is hidden from the \doxylink{namespace_unity_engine_1_1_rendering_1_1_u_i}{UI}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget_1_1_name_and_tooltip}{Name\+And\+Tooltip}} {\bfseries name\+And\+Tooltip}\hspace{0.3cm}{\ttfamily  \mbox{[}set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Helper setter to allow more compact initialization of widgets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_i_container}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+IContainer}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_i_container_ae927e311c552bda201d3d1bffdbf3401}{display\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Display name of the container. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_i_container_a057e0c643a7f169c623bc44d14f233fa}{query\+Path}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Path of the container. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Widget}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_panel}{Panel}} {\bfseries m\+\_\+\+Panel}
+\begin{DoxyCompactList}\small\item\em Panels containing the widget. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_i_container}{IContainer}} {\bfseries m\+\_\+\+Parent}
+\begin{DoxyCompactList}\small\item\em Parent container. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Array \doxylink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_container}{Container}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_table_a9ff3c94fb38d2f0aa2471dc3976ebddb}\index{UnityEngine.Rendering.DebugUI.Table@{UnityEngine.Rendering.DebugUI.Table}!GetColumnVisibility@{GetColumnVisibility}}
+\index{GetColumnVisibility@{GetColumnVisibility}!UnityEngine.Rendering.DebugUI.Table@{UnityEngine.Rendering.DebugUI.Table}}
+\doxysubsubsection{\texorpdfstring{GetColumnVisibility()}{GetColumnVisibility()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_table_a9ff3c94fb38d2f0aa2471dc3976ebddb} 
+bool Unity\+Engine.\+Rendering.\+Debug\+UI.\+Table.\+Get\+Column\+Visibility (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get column visibility. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the column.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the column is visible.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_table_a11729d397fe7b5d0b2d91d7c40120cff}\index{UnityEngine.Rendering.DebugUI.Table@{UnityEngine.Rendering.DebugUI.Table}!OnItemAdded@{OnItemAdded}}
+\index{OnItemAdded@{OnItemAdded}!UnityEngine.Rendering.DebugUI.Table@{UnityEngine.Rendering.DebugUI.Table}}
+\doxysubsubsection{\texorpdfstring{OnItemAdded()}{OnItemAdded()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_table_a11729d397fe7b5d0b2d91d7c40120cff} 
+override void Unity\+Engine.\+Rendering.\+Debug\+UI.\+Table.\+On\+Item\+Added (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_observable_list}{Observable\+List}}$<$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Widget}} $>$}]{sender}{, }\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_list_changed_event_args}{List\+Changed\+Event\+Args}}$<$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Widget}} $>$}]{e}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Method called when a children is added. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender widget.\\
+\hline
+{\em e} & List of added children.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_container_a4bc4538f6fb54807d7cac98c0889298a}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Container}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_table_a1426b329362f7c3197b166c090851b04}\index{UnityEngine.Rendering.DebugUI.Table@{UnityEngine.Rendering.DebugUI.Table}!OnItemRemoved@{OnItemRemoved}}
+\index{OnItemRemoved@{OnItemRemoved}!UnityEngine.Rendering.DebugUI.Table@{UnityEngine.Rendering.DebugUI.Table}}
+\doxysubsubsection{\texorpdfstring{OnItemRemoved()}{OnItemRemoved()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_table_a1426b329362f7c3197b166c090851b04} 
+override void Unity\+Engine.\+Rendering.\+Debug\+UI.\+Table.\+On\+Item\+Removed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_observable_list}{Observable\+List}}$<$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Widget}} $>$}]{sender}{, }\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_list_changed_event_args}{List\+Changed\+Event\+Args}}$<$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_widget}{Widget}} $>$}]{e}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Method called when a children is removed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender widget.\\
+\hline
+{\em e} & List of removed children.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_container_a332d0d84ea1b79bd8ab81f145627b693}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Container}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_table_a95aff0c3f2258bd2d084ae2e91ab8f8a}\index{UnityEngine.Rendering.DebugUI.Table@{UnityEngine.Rendering.DebugUI.Table}!SetColumnVisibility@{SetColumnVisibility}}
+\index{SetColumnVisibility@{SetColumnVisibility}!UnityEngine.Rendering.DebugUI.Table@{UnityEngine.Rendering.DebugUI.Table}}
+\doxysubsubsection{\texorpdfstring{SetColumnVisibility()}{SetColumnVisibility()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_table_a95aff0c3f2258bd2d084ae2e91ab8f8a} 
+void Unity\+Engine.\+Rendering.\+Debug\+UI.\+Table.\+Set\+Column\+Visibility (\begin{DoxyParamCaption}\item[{int}]{index}{, }\item[{bool}]{visible}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set column visibility. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of the column.\\
+\hline
+{\em visible} & True if the column should be visible.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Debugging/Debug\+UI.\+Containers.\+cs\end{DoxyCompactItemize}

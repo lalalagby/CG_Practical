@@ -1,0 +1,150 @@
+\chapter{Loop vectorization}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2optimization-loop-vectorization}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2optimization-loop-vectorization}\index{Loop vectorization@{Loop vectorization}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2optimization-loop-vectorization_autotoc_md423}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2optimization-loop-vectorization_autotoc_md423}%
+ \doxylink{namespace_burst}{Burst} uses \href{https://llvm.org/docs/Vectorizers.html\#loop-vectorizer}{\texttt{ loop vectorization}} to improve the performance of your code. It uses this technique to loop over multiple values at the same time, rather than looping over single values at a time, which speeds up the performance of your code. For example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{[MethodImpl(MethodImplOptions.NoInlining)]}
+\DoxyCodeLine{private\ static\ unsafe\ void\ Bar([NoAlias]\ int*\ a,\ [NoAlias]\ int*\ b,\ int\ count)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ for\ (var\ i\ =\ 0;\ i\ <\ count;\ i++)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ a[i]\ +=\ b[i];}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{public\ static\ unsafe\ void\ Foo(int\ count)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ var\ a\ =\ stackalloc\ int[count];}
+\DoxyCodeLine{\ \ \ \ var\ b\ =\ stackalloc\ int[count];}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ Bar(a,\ b,\ count);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\doxylink{namespace_burst}{Burst} converts the scalar loop in {\ttfamily Bar} into a vectorized loop. Then, instead of looping over a single value at a time, it generates code that loops over multiple values at the same time, which produces faster code.
+
+This is the {\ttfamily x64} assembly \doxylink{namespace_burst}{Burst} generates for {\ttfamily AVX2} for the loop in {\ttfamily Bar} above\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ 86asm}
+\DoxyCodeLine{.LBB1\_4:}
+\DoxyCodeLine{\ \ \ \ vmovdqu\ \ \ \ ymm0,\ ymmword\ ptr\ [rdx\ +\ 4*rax]}
+\DoxyCodeLine{\ \ \ \ vmovdqu\ \ \ \ ymm1,\ ymmword\ ptr\ [rdx\ +\ 4*rax\ +\ 32]}
+\DoxyCodeLine{\ \ \ \ vmovdqu\ \ \ \ ymm2,\ ymmword\ ptr\ [rdx\ +\ 4*rax\ +\ 64]}
+\DoxyCodeLine{\ \ \ \ vmovdqu\ \ \ \ ymm3,\ ymmword\ ptr\ [rdx\ +\ 4*rax\ +\ 96]}
+\DoxyCodeLine{\ \ \ \ vpaddd\ \ \ \ \ ymm0,\ ymm0,\ ymmword\ ptr\ [rcx\ +\ 4*rax]}
+\DoxyCodeLine{\ \ \ \ vpaddd\ \ \ \ \ ymm1,\ ymm1,\ ymmword\ ptr\ [rcx\ +\ 4*rax\ +\ 32]}
+\DoxyCodeLine{\ \ \ \ vpaddd\ \ \ \ \ ymm2,\ ymm2,\ ymmword\ ptr\ [rcx\ +\ 4*rax\ +\ 64]}
+\DoxyCodeLine{\ \ \ \ vpaddd\ \ \ \ \ ymm3,\ ymm3,\ ymmword\ ptr\ [rcx\ +\ 4*rax\ +\ 96]}
+\DoxyCodeLine{\ \ \ \ vmovdqu\ \ \ \ ymmword\ ptr\ [rcx\ +\ 4*rax],\ ymm0}
+\DoxyCodeLine{\ \ \ \ vmovdqu\ \ \ \ ymmword\ ptr\ [rcx\ +\ 4*rax\ +\ 32],\ ymm1}
+\DoxyCodeLine{\ \ \ \ vmovdqu\ \ \ \ ymmword\ ptr\ [rcx\ +\ 4*rax\ +\ 64],\ ymm2}
+\DoxyCodeLine{\ \ \ \ vmovdqu\ \ \ \ ymmword\ ptr\ [rcx\ +\ 4*rax\ +\ 96],\ ymm3}
+\DoxyCodeLine{\ \ \ \ add\ \ \ \ \ \ \ \ rax,\ 32}
+\DoxyCodeLine{\ \ \ \ cmp\ \ \ \ \ \ \ \ r8,\ rax}
+\DoxyCodeLine{\ \ \ \ jne\ \ \ \ \ \ \ \ .LBB1\_4}
+
+\end{DoxyCode}
+
+
+\doxylink{namespace_burst}{Burst} has unrolled and vectorized the loop into four {\ttfamily vpaddd} instructions, which calculate eight integer additions each, for a total of 32 integer additions per loop iteration.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2optimization-loop-vectorization_autotoc_md424}{}\doxysection{\texorpdfstring{Loop vectorization intrinsics}{Loop vectorization intrinsics}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2optimization-loop-vectorization_autotoc_md424}
+\doxylink{namespace_burst}{Burst} includes experimental intrinsics to express loop vectorization assumptions\+: {\ttfamily Loop.\+Expect\+Vectorized} and {\ttfamily Loop.\+Expect\+Not\+Vectorized}. \doxylink{namespace_burst}{Burst} then validates the loop vectorization at compile-\/time. This is useful in a situation where you might break the auto vectorization. For example, if you introduce a branch to the code\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{[MethodImpl(MethodImplOptions.NoInlining)]}
+\DoxyCodeLine{private\ static\ unsafe\ void\ Bar([NoAlias]\ int*\ a,\ [NoAlias]\ int*\ b,\ int\ count)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ for\ (var\ i\ =\ 0;\ i\ <\ count;\ i++)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (a[i]\ >\ b[i])}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ break;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ a[i]\ +=\ b[i];}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+This changes the assembly to the following\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ 86asm}
+\DoxyCodeLine{.LBB1\_3:}
+\DoxyCodeLine{\ \ \ \ mov\ \ \ \ \ \ \ \ r9d,\ dword\ ptr\ [rcx\ +\ 4*r10]}
+\DoxyCodeLine{\ \ \ \ mov\ \ \ \ \ \ \ \ eax,\ dword\ ptr\ [rdx\ +\ 4*r10]}
+\DoxyCodeLine{\ \ \ \ cmp\ \ \ \ \ \ \ \ r9d,\ eax}
+\DoxyCodeLine{\ \ \ \ jg\ \ \ \ \ \ \ \ .LBB1\_4}
+\DoxyCodeLine{\ \ \ \ add\ \ \ \ \ \ \ \ eax,\ r9d}
+\DoxyCodeLine{\ \ \ \ mov\ \ \ \ \ \ \ \ dword\ ptr\ [rcx\ +\ 4*r10],\ eax}
+\DoxyCodeLine{\ \ \ \ inc\ \ \ \ \ \ \ \ r10}
+\DoxyCodeLine{\ \ \ \ cmp\ \ \ \ \ \ \ \ r8,\ r10}
+\DoxyCodeLine{\ \ \ \ jne\ \ \ \ \ \ \ \ .LBB1\_3}
+
+\end{DoxyCode}
+
+
+This isn\textquotesingle{}t ideal because the loop is scalar and only has 1 integer addition per loop iteration. It can be difficult to spot this happening in your code, so use the experimental intrinsics {\ttfamily Loop.\+Expect\+Vectorized} and {\ttfamily Loop.\+Expect\+Not\+Vectorized} to express loop vectorization assumptions. \doxylink{namespace_burst}{Burst} then validates the loop vectorization at compile-\/time.
+
+Because the intrinsics are experimental, you need to use the {\ttfamily UNITY\+\_\+\+BURST\+\_\+\+EXPERIMENTAL\+\_\+\+LOOP\+\_\+\+INTRINSICS} preprocessor define to enable them.
+
+The following example shows the original {\ttfamily Bar} example with the {\ttfamily Loop.\+Expect\+Vectorized} intrinsic\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{[MethodImpl(MethodImplOptions.NoInlining)]}
+\DoxyCodeLine{private\ static\ unsafe\ void\ Bar([NoAlias]\ int*\ a,\ [NoAlias]\ int*\ b,\ int\ count)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ for\ (var\ i\ =\ 0;\ i\ <\ count;\ i++)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Unity.Burst.CompilerServices.Loop.ExpectVectorized();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ a[i]\ +=\ b[i];}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\doxylink{namespace_burst}{Burst} then validates at compile-\/time whether the loop is vectorized. If the loop isn\textquotesingle{}t vectorized, \doxylink{namespace_burst}{Burst} emits a compiler error. The following example produces an error\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{[MethodImpl(MethodImplOptions.NoInlining)]}
+\DoxyCodeLine{private\ static\ unsafe\ void\ Bar([NoAlias]\ int*\ a,\ [NoAlias]\ int*\ b,\ int\ count)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ for\ (var\ i\ =\ 0;\ i\ <\ count;\ i++)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Unity.Burst.CompilerServices.Loop.ExpectVectorized();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (a[i]\ >\ b[i])}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ break;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ a[i]\ +=\ b[i];}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\doxylink{namespace_burst}{Burst} emits the following error at compile-\/time\+:
+
+\texorpdfstring{$>$}{>}Loop\+Intrinsics.\+cs(6,9)\+: \doxylink{namespace_burst}{Burst} error BC1321\+: The loop is not vectorized where it was expected that it is vectorized.
+
+\texorpdfstring{$>$}{>}\mbox{[}!\+IMPORTANT\mbox{]} \texorpdfstring{$>$}{>}These intrinsics don\textquotesingle{}t work inside {\ttfamily if} statements. \doxylink{namespace_burst}{Burst} doesn\textquotesingle{}t prevent this from happening, so you won\textquotesingle{}t see a compile-\/time error for this. 

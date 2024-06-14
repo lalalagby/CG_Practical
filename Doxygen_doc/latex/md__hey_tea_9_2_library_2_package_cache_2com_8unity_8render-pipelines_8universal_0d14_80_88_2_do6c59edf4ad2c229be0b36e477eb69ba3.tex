@@ -1,0 +1,67 @@
+\chapter{Bloom}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do6c59edf4ad2c229be0b36e477eb69ba3}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do6c59edf4ad2c229be0b36e477eb69ba3}\index{Bloom@{Bloom}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do6c59edf4ad2c229be0b36e477eb69ba3_autotoc_md2271}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do6c59edf4ad2c229be0b36e477eb69ba3_autotoc_md2271}%
+  ~\newline
+{\itshape Scene with Bloom effect turned off.}
+
+ ~\newline
+{\itshape Scene with Bloom effect turned on.}
+
+The Bloom effect creates fringes of light extending from the borders of bright areas in an image. This creates the illusion of extremely bright light overwhelming the Camera.
+
+The Bloom effect also has a {\bfseries{Lens Dirt}} feature, which you can use to apply a full-\/screen layer of smudges or dust to diffract the Bloom effect.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do6c59edf4ad2c229be0b36e477eb69ba3_autotoc_md2272}{}\doxysection{\texorpdfstring{Using Bloom}{Using Bloom}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do6c59edf4ad2c229be0b36e477eb69ba3_autotoc_md2272}
+{\bfseries{Bloom}} uses the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_documentation_0i_2_volumes}{Volume}{0} system, so to enable and modify {\bfseries{Bloom}} properties, you must add a {\bfseries{Bloom}} override to a \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do5d8e84fb42b2bb0720761c155081d9b4}{Volume}{0} in your Scene.
+
+To add {\bfseries{Bloom}} to a Volume\+:
+
+
+\begin{DoxyEnumerate}
+\item In the Scene or Hierarchy view, select a Game\+Object that contains a Volume component to view it in the Inspector.
+\item In the Inspector, navigate to {\bfseries{Add Override}} \texorpdfstring{$>$}{>} {\bfseries{Post-\/processing}}, and click on {\bfseries{Bloom}}. Universal Render Pipeline applies {\bfseries{Bloom}} to any Camera this Volume affects.
+\end{DoxyEnumerate}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do6c59edf4ad2c229be0b36e477eb69ba3_autotoc_md2273}{}\doxysection{\texorpdfstring{Properties}{Properties}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do6c59edf4ad2c229be0b36e477eb69ba3_autotoc_md2273}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do6c59edf4ad2c229be0b36e477eb69ba3_autotoc_md2274}{}\doxysubsection{\texorpdfstring{Bloom}{Bloom}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do6c59edf4ad2c229be0b36e477eb69ba3_autotoc_md2274}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Threshold}}   &Set the gamma space brightness value at which URP applies Bloom. URP does not apply Bloom to any pixels in the Scene that have a brightness lower than this value. The minimum value is 0, where nothing is filtered. The default value is 0.\+9. There is no maximum value.    \\\cline{1-2}
+{\bfseries{Intensity}}   &Set the strength of the Bloom filter, in a range from 0 to 1. The default is 0, which means that the Bloom effect is disabled.    \\\cline{1-2}
+{\bfseries{Scatter}}   &Set the radius of the bloom effect in a range from 0 to 1. Higher values give a larger radius. The default value is 0.\+7.    \\\cline{1-2}
+{\bfseries{Tint}}   &Use the color picker to select a color for the Bloom effect to tint to.    \\\cline{1-2}
+{\bfseries{Clamp}}   &Set the maximum intensity that \doxylink{namespace_unity}{Unity} uses to calculate Bloom. If pixels in your Scene are more intense than this, URP renders them at their current intensity, but uses this intensity value for the purposes of Bloom calculations. The default value is 65472.    \\\cline{1-2}
+{\bfseries{High Quality Filtering}}   &Enable this to use high quality sampling. This reduces flickering and improves the overall smoothness, but is more resource-\/intensive and can affect performance.    \\\cline{1-2}
+{\bfseries{Downscale}}   &Set the initial resolution scale for the effect. The lower this value is, the fewer system resources the initial blur effect consumes.    \\\cline{1-2}
+{\bfseries{Max Iterations}}   &The size of the rendered image determines the number of iterations. Use this setting to define the maximum number of iterations. Decreasing this value reduces processing load and increases performance, especially on mobile devices with high DPI screens. The default value is 6.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do6c59edf4ad2c229be0b36e477eb69ba3_autotoc_md2275}{}\doxysubsection{\texorpdfstring{Lens Dirt}{Lens Dirt}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do6c59edf4ad2c229be0b36e477eb69ba3_autotoc_md2275}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Texture}}   &Assign a Texture to apply the effect of dirt (such as smudges or dust) to the lens.    \\\cline{1-2}
+{\bfseries{Intensity}}   &Set the strength of the {\bfseries{Lens Dirt}} effect.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do6c59edf4ad2c229be0b36e477eb69ba3_autotoc_md2276}{}\doxysection{\texorpdfstring{Troubleshooting performance issues}{Troubleshooting performance issues}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8render-pipelines_8universal_0d14_80_88_2_do6c59edf4ad2c229be0b36e477eb69ba3_autotoc_md2276}
+There are multiple ways to improve the performance impact of Bloom. Listed in order of effectiveness, you can\+:
+
+
+\begin{DoxyEnumerate}
+\item Disable {\bfseries{High Quality Filtering}}. Bloom then uses bilinear filtering instead of bicubic. This reduces the overall smoothness of the Bloom effect, but greatly improves performance, especially on lower-\/end hardware and platforms. In some extreme cases, you might see blocky graphical artifacts in your Scene.
+\item Set {\bfseries{Downscale}} to {\bfseries{Quarter}} starting resolution to make the initial cost of Bloom much lower.
+\item Use a lower resolution {\bfseries{Lens Dirt}} Texture to reduce memory pressure and speed up blending across volumes. 
+\end{DoxyEnumerate}

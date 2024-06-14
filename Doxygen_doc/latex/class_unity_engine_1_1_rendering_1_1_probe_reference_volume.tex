@@ -1,0 +1,266 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Probe\+Reference\+Volume Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume}{}\label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume}\index{UnityEngine.Rendering.ProbeReferenceVolume@{UnityEngine.Rendering.ProbeReferenceVolume}}
+
+
+The reference volume for the Probe \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} system. This defines the structure in which volume assets are loaded into. There must be only one, hence why it follow a singleton pattern.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Blending\+Cell\+Info}
+\item 
+class {\bfseries Cell}
+\item 
+class {\bfseries Cell\+Info}
+\item 
+class {\bfseries Cell\+Instanced\+Debug\+Probes}
+\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_probe_reference_volume_1_1_extra_data_action_input}{Extra\+Data\+Action\+Input}}
+\begin{DoxyCompactList}\small\item\em The input to the retrieve\+Extra\+Data\+Action action. \end{DoxyCompactList}\item 
+struct {\bfseries Ref\+Vol\+Transform}
+\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_probe_reference_volume_1_1_runtime_resources}{Runtime\+Resources}}
+\begin{DoxyCompactList}\small\item\em The resources that are bound to the runtime shaders for sampling Adaptive Probe \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} data. \end{DoxyCompactList}\item 
+struct {\bfseries Volume}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_aec87a10c2ac9847be4d1fc28f34ccea0}{Blend\+Lighting\+Scenario}} (string other\+Scenario, float blending\+Factor)
+\begin{DoxyCompactList}\small\item\em Allows smooth transitions between two lighting scenarios. This only affects the runtime data used for lighting. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_af2648831f5231e05d8ce20568ddd4f9f}{Initialize}} (in \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_probe_volume_system_parameters}{Probe\+Volume\+System\+Parameters}} parameters)
+\begin{DoxyCompactList}\small\item\em Initialize the Probe \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a677a8894705fbe7e651333c8781a02f2}{Set\+Enable\+State\+From\+SRP}} (bool srp\+Enables\+PV)
+\begin{DoxyCompactList}\small\item\em Communicate to the Probe \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} system whether the SRP enables Probe \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume}. It is important to keep in mind that this is not used by the system for anything else but book-\/keeping, the SRP is still responsible to disable anything Probe volume related on SRP side. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a3ec19f27902a314f084aca82069ca744}\label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a3ec19f27902a314f084aca82069ca744} 
+void {\bfseries Cleanup} ()
+\begin{DoxyCompactList}\small\item\em Cleanup the Probe \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} system. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_aa5272544e262bdac230714c558e5f9c8}{Get\+Video\+Memory\+Cost}} ()
+\begin{DoxyCompactList}\small\item\em Get approximate video memory impact, in bytes, of the system. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_aaf131b0e65132b6f6774afcd0c545669}\label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_aaf131b0e65132b6f6774afcd0c545669} 
+void {\bfseries Perform\+Pending\+Operations} ()
+\begin{DoxyCompactList}\small\item\em Perform all the operations that are relative to changing the content or characteristics of the probe reference volume. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_probe_reference_volume_1_1_runtime_resources}{Runtime\+Resources}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a86dd1f9b3a247df5a463927a9e76da05}{Get\+Runtime\+Resources}} ()
+\begin{DoxyCompactList}\small\item\em Get the resources that are bound to the runtime shaders for sampling Adaptive Probe \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a5850aaad9f47252dcb5160821d051be7}{Data\+Has\+Been\+Loaded}} ()
+\begin{DoxyCompactList}\small\item\em Returns whether any brick data has been loaded. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a7fd062fe1731c95d95f8ca4843a0ebc7}{Update\+Constant\+Buffer}} (Command\+Buffer cmd, \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_probe_volume_shading_parameters}{Probe\+Volume\+Shading\+Parameters}} parameters)
+\begin{DoxyCompactList}\small\item\em Update the constant buffer used by Probe Volumes in shaders. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a9ae8bed4f722e85753d10b8c8d090d25}{Render\+Debug}} (Camera camera)
+\begin{DoxyCompactList}\small\item\em Render Probe \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} related debug. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a91f425f7119ecc9c5a5c4de7e2d3fa18}{Set\+Number\+Of\+Cells\+Loaded\+Per\+Frame}} (int number\+Of\+Cells)
+\begin{DoxyCompactList}\small\item\em Set the number of cells that are loaded per frame when needed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_af2a48a1fd0b3d66ee48e94d310660b7c}{Update\+Cell\+Streaming}} (Command\+Buffer cmd, Camera camera)
+\begin{DoxyCompactList}\small\item\em Updates the cell streaming for a Camera \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_ae5f38e03a1aaa3dcca92662e79f010ea}\label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_ae5f38e03a1aaa3dcca92662e79f010ea} 
+Action$<$ \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_probe_reference_volume_1_1_extra_data_action_input}{Extra\+Data\+Action\+Input}} $>$ {\bfseries retrieve\+Extra\+Data\+Action}
+\begin{DoxyCompactList}\small\item\em An action that is used by the SRP to retrieve extra data that was baked together with the bake. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_aa2802d1f381299342a7a45195dfa1b2f}\label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_aa2802d1f381299342a7a45195dfa1b2f} 
+Action {\bfseries checks\+During\+Bake\+Action} = null
+\begin{DoxyCompactList}\small\item\em An action that is used by the SRP to perform checks every frame during baking. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a15ee5f2bdcd11fb7e3a15e3572f30ad1}\label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a15ee5f2bdcd11fb7e3a15e3572f30ad1} 
+static readonly string {\bfseries k\+\_\+\+Debug\+Panel\+Name} = "{}Probe Volume"{}
+\begin{DoxyCompactList}\small\item\em Name of debug panel for Probe \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_ad00cab7b9481c429bef5aec09dcc65e6}\label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_ad00cab7b9481c429bef5aec09dcc65e6} 
+bool {\bfseries is\+Initialized}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Is Probe \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} initialized. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a220b75d9af567d21549311682b58b2be}\label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a220b75d9af567d21549311682b58b2be} 
+int {\bfseries number\+Of\+Cells\+Blended\+Per\+Frame}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Maximum number of cells that are blended per frame. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a779be849e1c062240ef41d8d4b06afb8}\label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a779be849e1c062240ef41d8d4b06afb8} 
+float {\bfseries turnover\+Rate}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Percentage of cells loaded in the blending pool that can be replaced by out of date cells. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_aaf8eec2b366a4264a7f6e09550055cf3}\label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_aaf8eec2b366a4264a7f6e09550055cf3} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a3b70347dac25fe8d846b36c66ac890a2}{Probe\+Volume\+SHBands}} {\bfseries sh\+Bands}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The \doxylink{namespace_unity_engine_1_1_rendering_a3b70347dac25fe8d846b36c66ac890a2}{Probe\+Volume\+SHBands} \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_af7bc16e7f38011dd6c460026298f8d87}\label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_af7bc16e7f38011dd6c460026298f8d87} 
+string {\bfseries lighting\+Scenario}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The active lighting scenario. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a1b527ad89b1fa39d63ea51ed2e1a58d8}\label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a1b527ad89b1fa39d63ea51ed2e1a58d8} 
+float {\bfseries scenario\+Blending\+Factor}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The blending factor currently used to blend probe data. A value of 0 means blending is not active. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a9c417d38978e80e00130fa258ad3642a}\label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a9c417d38978e80e00130fa258ad3642a} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_ae8fdcd447a623ce0568f23843ff1f443}{Probe\+Volume\+Texture\+Memory\+Budget}} {\bfseries memory\+Budget}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the memory budget for the Probe \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} system. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a32475f1b86037563fe5bcaa07cc6875b}\label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a32475f1b86037563fe5bcaa07cc6875b} 
+float {\bfseries probe\+Volumes\+Weight}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Global probe volumes weight. Allows for fading out probe volumes influence falling back to ambient probe. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_acecb2143c5d3d147fc9a2e6175db4cfd}\label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_acecb2143c5d3d147fc9a2e6175db4cfd} 
+static \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_probe_reference_volume}{Probe\+Reference\+Volume}} {\bfseries instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the instance of the probe reference volume (singleton). \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a1237c714f19c888b3844314c3cd394cd}\label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a1237c714f19c888b3844314c3cd394cd} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a1f4d1dce2a5a025519f66545ce6bb4f6acb5feb1b7314637725a2e73bdc9f7295}{Color}}\mbox{[}$\,$\mbox{]} {\bfseries subdivision\+Debug\+Colors} = new \mbox{\hyperlink{namespace_unity_engine_1_1_rendering_a1f4d1dce2a5a025519f66545ce6bb4f6acb5feb1b7314637725a2e73bdc9f7295}{Color}}\mbox{[}Probe\+Brick\+Index.\+k\+Max\+Subdivision\+Levels\mbox{]}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Colors that can be used for debug visualization of the brick structure subdivision. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The reference volume for the Probe \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} system. This defines the structure in which volume assets are loaded into. There must be only one, hence why it follow a singleton pattern. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_aec87a10c2ac9847be4d1fc28f34ccea0}\index{UnityEngine.Rendering.ProbeReferenceVolume@{UnityEngine.Rendering.ProbeReferenceVolume}!BlendLightingScenario@{BlendLightingScenario}}
+\index{BlendLightingScenario@{BlendLightingScenario}!UnityEngine.Rendering.ProbeReferenceVolume@{UnityEngine.Rendering.ProbeReferenceVolume}}
+\doxysubsubsection{\texorpdfstring{BlendLightingScenario()}{BlendLightingScenario()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_aec87a10c2ac9847be4d1fc28f34ccea0} 
+void Unity\+Engine.\+Rendering.\+Probe\+Reference\+Volume.\+Blend\+Lighting\+Scenario (\begin{DoxyParamCaption}\item[{string}]{other\+Scenario}{, }\item[{float}]{blending\+Factor}{}\end{DoxyParamCaption})}
+
+
+
+Allows smooth transitions between two lighting scenarios. This only affects the runtime data used for lighting. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other\+Scenario} & The name of the scenario to load.\\
+\hline
+{\em blending\+Factor} & The factor used to interpolate between the active scenario and other\+Scenario. Accepted values range from 0 to 1 and will progressively blend from the active scenario to other\+Scenario.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a5850aaad9f47252dcb5160821d051be7}\index{UnityEngine.Rendering.ProbeReferenceVolume@{UnityEngine.Rendering.ProbeReferenceVolume}!DataHasBeenLoaded@{DataHasBeenLoaded}}
+\index{DataHasBeenLoaded@{DataHasBeenLoaded}!UnityEngine.Rendering.ProbeReferenceVolume@{UnityEngine.Rendering.ProbeReferenceVolume}}
+\doxysubsubsection{\texorpdfstring{DataHasBeenLoaded()}{DataHasBeenLoaded()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a5850aaad9f47252dcb5160821d051be7} 
+bool Unity\+Engine.\+Rendering.\+Probe\+Reference\+Volume.\+Data\+Has\+Been\+Loaded (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns whether any brick data has been loaded. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a86dd1f9b3a247df5a463927a9e76da05}\index{UnityEngine.Rendering.ProbeReferenceVolume@{UnityEngine.Rendering.ProbeReferenceVolume}!GetRuntimeResources@{GetRuntimeResources}}
+\index{GetRuntimeResources@{GetRuntimeResources}!UnityEngine.Rendering.ProbeReferenceVolume@{UnityEngine.Rendering.ProbeReferenceVolume}}
+\doxysubsubsection{\texorpdfstring{GetRuntimeResources()}{GetRuntimeResources()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a86dd1f9b3a247df5a463927a9e76da05} 
+\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_probe_reference_volume_1_1_runtime_resources}{Runtime\+Resources}} Unity\+Engine.\+Rendering.\+Probe\+Reference\+Volume.\+Get\+Runtime\+Resources (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the resources that are bound to the runtime shaders for sampling Adaptive Probe \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} data. 
+
+\begin{DoxyReturn}{Returns}
+The resources to bind to runtime shaders.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_aa5272544e262bdac230714c558e5f9c8}\index{UnityEngine.Rendering.ProbeReferenceVolume@{UnityEngine.Rendering.ProbeReferenceVolume}!GetVideoMemoryCost@{GetVideoMemoryCost}}
+\index{GetVideoMemoryCost@{GetVideoMemoryCost}!UnityEngine.Rendering.ProbeReferenceVolume@{UnityEngine.Rendering.ProbeReferenceVolume}}
+\doxysubsubsection{\texorpdfstring{GetVideoMemoryCost()}{GetVideoMemoryCost()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_aa5272544e262bdac230714c558e5f9c8} 
+int Unity\+Engine.\+Rendering.\+Probe\+Reference\+Volume.\+Get\+Video\+Memory\+Cost (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get approximate video memory impact, in bytes, of the system. 
+
+\begin{DoxyReturn}{Returns}
+An approximation of the video memory impact, in bytes, of the system
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_af2648831f5231e05d8ce20568ddd4f9f}\index{UnityEngine.Rendering.ProbeReferenceVolume@{UnityEngine.Rendering.ProbeReferenceVolume}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!UnityEngine.Rendering.ProbeReferenceVolume@{UnityEngine.Rendering.ProbeReferenceVolume}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_af2648831f5231e05d8ce20568ddd4f9f} 
+void Unity\+Engine.\+Rendering.\+Probe\+Reference\+Volume.\+Initialize (\begin{DoxyParamCaption}\item[{in \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_probe_volume_system_parameters}{Probe\+Volume\+System\+Parameters}}}]{parameters}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialize the Probe \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameters} & Initialization parameters.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a9ae8bed4f722e85753d10b8c8d090d25}\index{UnityEngine.Rendering.ProbeReferenceVolume@{UnityEngine.Rendering.ProbeReferenceVolume}!RenderDebug@{RenderDebug}}
+\index{RenderDebug@{RenderDebug}!UnityEngine.Rendering.ProbeReferenceVolume@{UnityEngine.Rendering.ProbeReferenceVolume}}
+\doxysubsubsection{\texorpdfstring{RenderDebug()}{RenderDebug()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a9ae8bed4f722e85753d10b8c8d090d25} 
+void Unity\+Engine.\+Rendering.\+Probe\+Reference\+Volume.\+Render\+Debug (\begin{DoxyParamCaption}\item[{Camera}]{camera}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Render Probe \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} related debug. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & The Camera\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a677a8894705fbe7e651333c8781a02f2}\index{UnityEngine.Rendering.ProbeReferenceVolume@{UnityEngine.Rendering.ProbeReferenceVolume}!SetEnableStateFromSRP@{SetEnableStateFromSRP}}
+\index{SetEnableStateFromSRP@{SetEnableStateFromSRP}!UnityEngine.Rendering.ProbeReferenceVolume@{UnityEngine.Rendering.ProbeReferenceVolume}}
+\doxysubsubsection{\texorpdfstring{SetEnableStateFromSRP()}{SetEnableStateFromSRP()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a677a8894705fbe7e651333c8781a02f2} 
+void Unity\+Engine.\+Rendering.\+Probe\+Reference\+Volume.\+Set\+Enable\+State\+From\+SRP (\begin{DoxyParamCaption}\item[{bool}]{srp\+Enables\+PV}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Communicate to the Probe \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} system whether the SRP enables Probe \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume}. It is important to keep in mind that this is not used by the system for anything else but book-\/keeping, the SRP is still responsible to disable anything Probe volume related on SRP side. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em srp\+Enables\+PV} & The value of the new enabled\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a91f425f7119ecc9c5a5c4de7e2d3fa18}\index{UnityEngine.Rendering.ProbeReferenceVolume@{UnityEngine.Rendering.ProbeReferenceVolume}!SetNumberOfCellsLoadedPerFrame@{SetNumberOfCellsLoadedPerFrame}}
+\index{SetNumberOfCellsLoadedPerFrame@{SetNumberOfCellsLoadedPerFrame}!UnityEngine.Rendering.ProbeReferenceVolume@{UnityEngine.Rendering.ProbeReferenceVolume}}
+\doxysubsubsection{\texorpdfstring{SetNumberOfCellsLoadedPerFrame()}{SetNumberOfCellsLoadedPerFrame()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a91f425f7119ecc9c5a5c4de7e2d3fa18} 
+void Unity\+Engine.\+Rendering.\+Probe\+Reference\+Volume.\+Set\+Number\+Of\+Cells\+Loaded\+Per\+Frame (\begin{DoxyParamCaption}\item[{int}]{number\+Of\+Cells}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the number of cells that are loaded per frame when needed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number\+Of\+Cells} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_af2a48a1fd0b3d66ee48e94d310660b7c}\index{UnityEngine.Rendering.ProbeReferenceVolume@{UnityEngine.Rendering.ProbeReferenceVolume}!UpdateCellStreaming@{UpdateCellStreaming}}
+\index{UpdateCellStreaming@{UpdateCellStreaming}!UnityEngine.Rendering.ProbeReferenceVolume@{UnityEngine.Rendering.ProbeReferenceVolume}}
+\doxysubsubsection{\texorpdfstring{UpdateCellStreaming()}{UpdateCellStreaming()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_af2a48a1fd0b3d66ee48e94d310660b7c} 
+void Unity\+Engine.\+Rendering.\+Probe\+Reference\+Volume.\+Update\+Cell\+Streaming (\begin{DoxyParamCaption}\item[{Command\+Buffer}]{cmd}{, }\item[{Camera}]{camera}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the cell streaming for a Camera 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & The Command\+Buffer\\
+\hline
+{\em camera} & The Camera\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a7fd062fe1731c95d95f8ca4843a0ebc7}\index{UnityEngine.Rendering.ProbeReferenceVolume@{UnityEngine.Rendering.ProbeReferenceVolume}!UpdateConstantBuffer@{UpdateConstantBuffer}}
+\index{UpdateConstantBuffer@{UpdateConstantBuffer}!UnityEngine.Rendering.ProbeReferenceVolume@{UnityEngine.Rendering.ProbeReferenceVolume}}
+\doxysubsubsection{\texorpdfstring{UpdateConstantBuffer()}{UpdateConstantBuffer()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_probe_reference_volume_a7fd062fe1731c95d95f8ca4843a0ebc7} 
+void Unity\+Engine.\+Rendering.\+Probe\+Reference\+Volume.\+Update\+Constant\+Buffer (\begin{DoxyParamCaption}\item[{Command\+Buffer}]{cmd}{, }\item[{\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_probe_volume_shading_parameters}{Probe\+Volume\+Shading\+Parameters}}}]{parameters}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Update the constant buffer used by Probe Volumes in shaders. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & A command buffer used to perform the data update.\\
+\hline
+{\em parameters} & Parameters to be used when sampling the probe volume.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Lighting/\+Probe\+Volume/Probe\+Reference\+Volume.\+cs\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Lighting/\+Probe\+Volume/Probe\+Reference\+Volume.\+Debug.\+cs\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Lighting/\+Probe\+Volume/Probe\+Reference\+Volume.\+Streaming.\+cs\end{DoxyCompactItemize}

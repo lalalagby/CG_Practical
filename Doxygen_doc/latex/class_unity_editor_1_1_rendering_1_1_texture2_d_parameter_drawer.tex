@@ -1,0 +1,48 @@
+\doxysection{Unity\+Editor.\+Rendering.\+Texture2\+DParameter\+Drawer Class Reference}
+\hypertarget{class_unity_editor_1_1_rendering_1_1_texture2_d_parameter_drawer}{}\label{class_unity_editor_1_1_rendering_1_1_texture2_d_parameter_drawer}\index{UnityEditor.Rendering.Texture2DParameterDrawer@{UnityEditor.Rendering.Texture2DParameterDrawer}}
+Inheritance diagram for Unity\+Editor.\+Rendering.\+Texture2\+DParameter\+Drawer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_rendering_1_1_texture2_d_parameter_drawer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override bool \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_texture2_d_parameter_drawer_ab9be12f3941f8be4b74183ff1691ffd3}{On\+GUI}} (\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_serialized_data_parameter}{Serialized\+Data\+Parameter}} parameter, GUIContent title)
+\begin{DoxyCompactList}\small\item\em Draws the parameter in the editor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_volume_parameter_drawer}{Unity\+Editor.\+Rendering.\+Volume\+Parameter\+Drawer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_volume_parameter_drawer_ac9c9a9e4d7fc41f80c8edc06926f95c5}{Is\+Auto\+Property}} ()
+\begin{DoxyCompactList}\small\item\em Override this and return {\ttfamily false} if you want to customize the position of the override checkbox. If you don\textquotesingle{}t, \doxylink{namespace_unity}{Unity} automatically draws the checkbox and puts the property content in a horizontal scope. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_volume_parameter_drawer_ab83ae1eb38018d325b9eda38cc711f46}{On\+GUI}} (\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_serialized_data_parameter}{Serialized\+Data\+Parameter}} parameter, GUIContent title)
+\begin{DoxyCompactList}\small\item\em Draws the parameter in the editor. If the input parameter is invalid you should return {\ttfamily false} so that \doxylink{namespace_unity}{Unity} displays the default editor for this parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_texture2_d_parameter_drawer_ab9be12f3941f8be4b74183ff1691ffd3}\index{UnityEditor.Rendering.Texture2DParameterDrawer@{UnityEditor.Rendering.Texture2DParameterDrawer}!OnGUI@{OnGUI}}
+\index{OnGUI@{OnGUI}!UnityEditor.Rendering.Texture2DParameterDrawer@{UnityEditor.Rendering.Texture2DParameterDrawer}}
+\doxysubsubsection{\texorpdfstring{OnGUI()}{OnGUI()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_texture2_d_parameter_drawer_ab9be12f3941f8be4b74183ff1691ffd3} 
+override bool Unity\+Editor.\+Rendering.\+Texture2\+DParameter\+Drawer.\+On\+GUI (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_serialized_data_parameter}{Serialized\+Data\+Parameter}}}]{parameter}{, }\item[{GUIContent}]{title}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Draws the parameter in the editor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & The parameter to draw.\\
+\hline
+{\em title} & The label and tooltip of the parameter.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the input parameter is valid, {\ttfamily false} otherwise
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Editor/\+Volume/\+Drawers/Texture\+Parameter\+Drawer.\+cs\end{DoxyCompactItemize}

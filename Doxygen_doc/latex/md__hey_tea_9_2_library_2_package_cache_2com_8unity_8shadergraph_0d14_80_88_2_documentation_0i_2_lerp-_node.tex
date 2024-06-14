@@ -1,0 +1,35 @@
+\chapter{Lerp Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_lerp-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_lerp-_node}\index{Lerp Node@{Lerp Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_lerp-_node_autotoc_md3418}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_lerp-_node_autotoc_md3418}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_lerp-_node_autotoc_md3419}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_lerp-_node_autotoc_md3419}
+Returns the result of linearly interpolating between input {\bfseries{A}} and input {\bfseries{B}} by input {\bfseries{T}}.
+
+For example, when the value of input {\bfseries{T}} is 0 the return value is equal to the value of input {\bfseries{A}}, when it is 1 the return value is equal to the value of input {\bfseries{B}} and when it is 0.\+5 the return value is the midpoint of the two inputs {\bfseries{A}} and {\bfseries{B}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_lerp-_node_autotoc_md3420}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_lerp-_node_autotoc_md3420}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endhead
+A   &Input   &Dynamic Vector   &First input value    \\\cline{1-4}
+B   &Input   &Dynamic Vector   &Second input value    \\\cline{1-4}
+T   &Input   &Dynamic Vector   &Time value    \\\cline{1-4}
+Out   &Output   &Dynamic Vector   &Output value   \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_lerp-_node_autotoc_md3421}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_lerp-_node_autotoc_md3421}
+The following example code represents one possible outcome of this node.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Lerp\_float4(float4\ A,\ float4\ B,\ float4\ T,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(A,\ B,\ T);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

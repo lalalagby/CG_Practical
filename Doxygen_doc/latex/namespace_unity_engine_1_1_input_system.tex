@@ -1,0 +1,1474 @@
+\doxysection{Unity\+Engine.\+Input\+System Namespace Reference}
+\hypertarget{namespace_unity_engine_1_1_input_system}{}\label{namespace_unity_engine_1_1_input_system}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_accelerometer}{Accelerometer}}
+\begin{DoxyCompactList}\small\item\em Input device representing an accelerometer sensor. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_ambient_temperature_sensor}{Ambient\+Temperature\+Sensor}}
+\begin{DoxyCompactList}\small\item\em Input device representing the ambient air temperature measured by the device playing the content. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_attitude_sensor}{Attitude\+Sensor}}
+\begin{DoxyCompactList}\small\item\em Input device representing an attitude sensor. \end{DoxyCompactList}\item 
+class {\bfseries Common\+Usages}
+\begin{DoxyCompactList}\small\item\em A collection of common usage string values as reported by \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a09e4b347afac3558d9dbe4c4919457b8}{Input\+Control.\+usages}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_default_input_actions}{Default\+Input\+Actions}}
+\begin{DoxyCompactList}\small\item\em A default \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action} setup. \end{DoxyCompactList}\item 
+struct {\bfseries Dynamic\+Bitfield}
+\begin{DoxyCompactList}\small\item\em Struct replacement for System.\+Collections.\+Bitfield. \end{DoxyCompactList}\item 
+class {\bfseries Fast\+Keyboard}
+\item 
+class {\bfseries Fast\+Mouse}
+\item 
+class {\bfseries Fast\+Touchscreen}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gamepad}{Gamepad}}
+\begin{DoxyCompactList}\small\item\em An Xbox-\/style gamepad with two sticks, a D-\/\+Pad, four face buttons, two triggers, two shoulder buttons, and two menu buttons that usually sit in the midsection of the gamepad. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gravity_sensor}{Gravity\+Sensor}}
+\begin{DoxyCompactList}\small\item\em Input device representing a gravity sensor. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_gyroscope}{Gyroscope}}
+\begin{DoxyCompactList}\small\item\em Input device representing a gyroscope sensor. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_humidity_sensor}{Humidity\+Sensor}}
+\begin{DoxyCompactList}\small\item\em Input device representing the ambient air humidity measured by the device playing the content. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection}{IInput\+Action\+Collection}}
+\begin{DoxyCompactList}\small\item\em A collection of input actions (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}). \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection2}{IInput\+Action\+Collection2}}
+\begin{DoxyCompactList}\small\item\em An extended version of \doxylink{interface_unity_engine_1_1_input_system_1_1_i_input_action_collection}{IInput\+Action\+Collection}. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_interaction}{IInput\+Interaction}}
+\begin{DoxyCompactList}\small\item\em Interface for interaction patterns that drive actions. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}}
+\begin{DoxyCompactList}\small\item\em A named input signal that can flexibly decide which input data to tap. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset}}
+\begin{DoxyCompactList}\small\item\em An asset that contains action maps and control schemes. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map}}
+\begin{DoxyCompactList}\small\item\em A mechanism for collecting a series of input actions (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}) and treating them as a group. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property}{Input\+Action\+Property}}
+\begin{DoxyCompactList}\small\item\em A serializable property type that can either reference an action externally defined in an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset} or define a new action directly on the property. \end{DoxyCompactList}\item 
+class {\bfseries Input\+Action\+Rebinding\+Extensions}
+\begin{DoxyCompactList}\small\item\em Extensions to help with dynamically rebinding \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}s in various ways. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action_reference}{Input\+Action\+Reference}}
+\begin{DoxyCompactList}\small\item\em References a specific \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action} in an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map} stored inside an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset}. \end{DoxyCompactList}\item 
+class {\bfseries Input\+Action\+Setup\+Extensions}
+\begin{DoxyCompactList}\small\item\em Methods to change the setup of \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{Input\+Action\+Map}, and \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset} objects. \end{DoxyCompactList}\item 
+class {\bfseries Input\+Action\+State}
+\begin{DoxyCompactList}\small\item\em Dynamic execution state of one or more \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{action maps} and all the actions they contain. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding}{Input\+Binding}}
+\begin{DoxyCompactList}\small\item\em A mapping of controls to an action. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_binding_composite}{Input\+Binding\+Composite}}
+\begin{DoxyCompactList}\small\item\em A binding that synthesizes a value from from several component bindings. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_binding_composite_context}{Input\+Binding\+Composite\+Context}}
+\begin{DoxyCompactList}\small\item\em Contextual data made available when processing values of composite bindings. \end{DoxyCompactList}\item 
+struct {\bfseries Input\+Binding\+Resolver}
+\begin{DoxyCompactList}\small\item\em Heart of the binding resolution machinery. Consumes lists of bindings and spits out out a list of resolved bindings together with their needed execution state. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}
+\begin{DoxyCompactList}\small\item\em A typed and named source of input values in a hierarchy of controls. \end{DoxyCompactList}\item 
+class {\bfseries Input\+Control\+Extensions}
+\begin{DoxyCompactList}\small\item\em Various extension methods for \doxylink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}. Mostly low-\/level routines. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_list}{Input\+Control\+List}}
+\begin{DoxyCompactList}\small\item\em Keep a list of \doxylink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}s without allocating managed memory. \end{DoxyCompactList}\item 
+class {\bfseries Input\+Control\+Path}
+\begin{DoxyCompactList}\small\item\em Functions for working with control path specs (like "{}/gamepad/\texorpdfstring{$\ast$}{*}stick"{}). \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme}}
+\begin{DoxyCompactList}\small\item\em A named set of zero or more device requirements along with an associated binding group. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}}
+\begin{DoxyCompactList}\small\item\em Represents an input device which is always the root of a hierarchy of \doxylink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control} instances. \end{DoxyCompactList}\item 
+class {\bfseries Input\+Extensions}
+\begin{DoxyCompactList}\small\item\em Various useful extension methods. \end{DoxyCompactList}\item 
+class {\bfseries Input\+Feature\+Names}
+\item 
+class {\bfseries Input\+Interaction}
+\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context}{Input\+Interaction\+Context}}
+\begin{DoxyCompactList}\small\item\em Information passed to \doxylink{}{interactions} when their associated controls trigger. \end{DoxyCompactList}\item 
+class {\bfseries Input\+Manager}
+\begin{DoxyCompactList}\small\item\em Hub of the input system. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor}{Input\+Processor}}
+\begin{DoxyCompactList}\small\item\em A processor that conditions/transforms input values. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_recorder}{Input\+Recorder}}
+\begin{DoxyCompactList}\small\item\em A wrapper component around Input\+Event\+Trace that provides an easy interface for recording input from a Game\+Object. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_remoting}{Input\+Remoting}}
+\begin{DoxyCompactList}\small\item\em Makes the activity and data of an Input\+Manager observable in message form. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_settings}{Input\+Settings}}
+\begin{DoxyCompactList}\small\item\em Project-\/wide input settings. \end{DoxyCompactList}\item 
+class {\bfseries Input\+System}
+\begin{DoxyCompactList}\small\item\em This is the central hub for the input system. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_test_fixture}{Input\+Test\+Fixture}}
+\begin{DoxyCompactList}\small\item\em A test fixture for writing tests that use the input system. Can be derived from or simply instantiated from another test fixture. \end{DoxyCompactList}\item 
+class {\bfseries Input\+Test\+Runtime}
+\begin{DoxyCompactList}\small\item\em An implementation of IInput\+Runtime for use during tests. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_value}{Input\+Value}}
+\begin{DoxyCompactList}\small\item\em Wraps around values provided by input actions. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_joystick}{Joystick}}
+\begin{DoxyCompactList}\small\item\em A joystick with an arbitrary number of buttons and axes. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_keyboard}{Keyboard}}
+\begin{DoxyCompactList}\small\item\em Represents a standard, physical PC-\/type keyboard. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_light_sensor}{Light\+Sensor}}
+\begin{DoxyCompactList}\small\item\em Input device representing the ambient light measured by the device playing the content. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_linear_acceleration_sensor}{Linear\+Acceleration\+Sensor}}
+\begin{DoxyCompactList}\small\item\em Input device representing linear acceleration affecting the device playing the content. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_magnetic_field_sensor}{Magnetic\+Field\+Sensor}}
+\begin{DoxyCompactList}\small\item\em Input device representing the magnetic field affecting the device playing the content. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_mouse}{Mouse}}
+\begin{DoxyCompactList}\small\item\em An input device representing a mouse. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_pen}{Pen}}
+\begin{DoxyCompactList}\small\item\em Represents a pen/stylus input device. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input}{Player\+Input}}
+\begin{DoxyCompactList}\small\item\em Represents a separate player in the game complete with a set of actions exclusive to the player and a set of paired device. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_manager}{Player\+Input\+Manager}}
+\begin{DoxyCompactList}\small\item\em Manages joining and leaving of players. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_pointer}{Pointer}}
+\begin{DoxyCompactList}\small\item\em Base class for pointer-\/style devices moving on a 2D screen. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_pressure_sensor}{Pressure\+Sensor}}
+\begin{DoxyCompactList}\small\item\em Input device representing the atmospheric pressure measured by the device playing the content. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_proximity_sensor}{Proximity\+Sensor}}
+\begin{DoxyCompactList}\small\item\em Input device representing the proximity of the device playing the content to the user. \end{DoxyCompactList}\item 
+class {\bfseries Remote\+Input\+Player\+Connection}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_sensor}{Sensor}}
+\begin{DoxyCompactList}\small\item\em Base class representing any sensor kind of input device. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_step_counter}{Step\+Counter}}
+\begin{DoxyCompactList}\small\item\em Input device representing the foot steps taken by the user as measured by the device playing the content. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_touchscreen}{Touchscreen}}
+\begin{DoxyCompactList}\small\item\em A multi-\/touch surface. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_tracked_device}{Tracked\+Device}}
+\begin{DoxyCompactList}\small\item\em An input device that has its orientation and position in space tracked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespace_unity_engine_1_1_input_system_a7ac82a23dde83f103ec9484dd9e80e17}\label{namespace_unity_engine_1_1_input_system_a7ac82a23dde83f103ec9484dd9e80e17} 
+using {\bfseries Input\+Action\+Listener} = Action$<$\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context}{Input\+Action.\+Callback\+Context}}$>$
+\item 
+\Hypertarget{namespace_unity_engine_1_1_input_system_a4156c22e900a8e70b8554d620cc3d8ec}\label{namespace_unity_engine_1_1_input_system_a4156c22e900a8e70b8554d620cc3d8ec} 
+using {\bfseries Device\+Change\+Listener} = Action$<$\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}}, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448b}{Input\+Device\+Change}}$>$
+\item 
+\Hypertarget{namespace_unity_engine_1_1_input_system_a7aa2291968229f27559f9475071f4d5f}\label{namespace_unity_engine_1_1_input_system_a7aa2291968229f27559f9475071f4d5f} 
+using {\bfseries Device\+State\+Change\+Listener} = Action$<$\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}}, \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr}{Input\+Event\+Ptr}}$>$
+\item 
+\Hypertarget{namespace_unity_engine_1_1_input_system_aa62d9ace9419c8564d922e0207b1631f}\label{namespace_unity_engine_1_1_input_system_aa62d9ace9419c8564d922e0207b1631f} 
+using {\bfseries Layout\+Change\+Listener} = Action$<$string, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_af63f75df3dbe5c508491b7e9fb629f44}{Input\+Control\+Layout\+Change}}$>$
+\item 
+\Hypertarget{namespace_unity_engine_1_1_input_system_a5d7436664375eda981876b1feaf63d44}\label{namespace_unity_engine_1_1_input_system_a5d7436664375eda981876b1feaf63d44} 
+using {\bfseries Event\+Listener} = Action$<$\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr}{Input\+Event\+Ptr}}, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}}$>$
+\item 
+\Hypertarget{namespace_unity_engine_1_1_input_system_adc2b0be88f5e1de272edb33edcb98d80}\label{namespace_unity_engine_1_1_input_system_adc2b0be88f5e1de272edb33edcb98d80} 
+using {\bfseries Update\+Listener} = Action
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7}{Input\+Action\+Change}} \{ \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7a66319e570905ae2dbb429b4ef2819462}{Action\+Enabled}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7a8afd9143780e61ac4214468c0275a68d}{Action\+Disabled}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7a66b1852760a43a0d5db8e1c595d3f8b9}{Action\+Map\+Enabled}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7a3d8f6ce4758da7971fa63609f2ac6f86}{Action\+Map\+Disabled}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7a077150502bb258622d8d79ab4cb17131}{Action\+Started}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7a1152fa99b7e43c41b469732c8b7dc528}{Action\+Performed}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7a56f7ab7a201747a4ff4f0cfb94aacece}{Action\+Canceled}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7a099b3d2411383771d413e3ba0410f7de}{Bound\+Controls\+About\+To\+Change}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7abb68ea5e5c1f0b8448887e76fc02f4cd}{Bound\+Controls\+Changed}}
+ \}
+\begin{DoxyCompactList}\small\item\em Indicates what type of change related to an \doxylink{}{input action} occurred. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182}{Input\+Action\+Phase}} \{ \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182ab9f5c797ebbf55adccdd8539a65a0241}{Disabled}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a5706de961fb376d701be6e7762d8b09c}{Waiting}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Started}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Performed}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a0e22fe7d45f8e5632a4abf369b24e29c}{Canceled}}
+ \}
+\begin{DoxyCompactList}\small\item\em Trigger phase of an Input\+Action. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94b}{Input\+Action\+Type}} \{ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Value}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}{Button}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94bae1ff6a7360e99cb46db6bb5d3ff8e2eb}{Pass\+Through}}
+ \}
+\begin{DoxyCompactList}\small\item\em Determines the behavior with which an Input\+Action triggers. \end{DoxyCompactList}\item 
+\Hypertarget{namespace_unity_engine_1_1_input_system_af63f75df3dbe5c508491b7e9fb629f44}\label{namespace_unity_engine_1_1_input_system_af63f75df3dbe5c508491b7e9fb629f44} 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_af63f75df3dbe5c508491b7e9fb629f44}{Input\+Control\+Layout\+Change}} \{ {\bfseries Added}
+, {\bfseries Removed}
+, {\bfseries Replaced}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum used to identity the change type for the Input\+System.\+on\+Layout\+Change event. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448b}{Input\+Device\+Change}} \{ \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448baf29ddbfb905eb2593fdcdfb243f9af85}{Added}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448ba93f07b720ebf7d1246512569761a5804}{Removed}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448baef70e46fd3bbc21e3e1f0b6815e750c0}{Disconnected}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448ba90715a403fdd7565d025428b03f5b693}{Reconnected}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448ba00d23a76e43b46dae9ec7aa9dcbebb32}{Enabled}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448bab9f5c797ebbf55adccdd8539a65a0241}{Disabled}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448ba1c49d571f9d59cf999198884684eb1b3}{Usage\+Changed}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448ba31e4c3ad63d178cb96c2a70ea23cbaf5}{Configuration\+Changed}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448ba109e0d0bf2b42091e997ddc4d49bab8d}{Soft\+Reset}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448ba9d31379a0302def25480e5a19522c67d}{Hard\+Reset}}
+, {\bfseries Destroyed}
+ \}
+\begin{DoxyCompactList}\small\item\em Indicates what type of change related to an \doxylink{}{input device} occurred. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496}{Key}} \{ \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a6adf97f83acf6453d4a6a4b1070f3754}{None}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ad511f8439ecde36647437fbba67a4394}{Space}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496af1851d5600eae616ee802a31ac74701b}{Enter}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a5c6ba25104401c9ee0650230fc6ba413}{Tab}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a242f46f77c7bc68feb14704514de1079}{Backquote}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ac48e929b2b1eabba2ba036884433345e}{Quote}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a9806fa37a3ecd39bf637c203aa011ed0}{Semicolon}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a58be47db9455679e6a44df2eff9c9fa6}{Comma}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a1901606ea069a83dc7beea17881ef95a}{Period}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a358cfe58715d680d9ab09f82e4010cbc}{Slash}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496af6c6379402dce27659f7cffee6bc1f00}{Backslash}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a481c09f513474b2d31ba5c2992947b17}{Left\+Bracket}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a455364d8991395f71ef9ccc5cc449e5c}{Right\+Bracket}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a453fb623e752c5993f65bc410fd74fe5}{Minus}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a0ccb67e7eaae09d9e4078d161eeca100}{Equals}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a7fc56270e7a70fa81a5935b72eacbe29}{A}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a9d5ed678fe57bcca610140957afab571}{B}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a0d61f8370cad1d412f80b84d143e1257}{C}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496af623e75af30e62bbd73d6df5b50bb7b5}{D}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a3a3ea00cfc35332cedf6e5e9a32e94da}{E}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a800618943025315f869e4e1f09471012}{F}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496adfcf28d0734569a6a693bc8194de62bf}{G}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ac1d9f50f86825a1a2302ec2449c17196}{H}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496add7536794b63bf90eccfd37f9b147d7f}{I}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496aff44570aca8241914870afbc310cdb85}{J}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496aa5f3c6a11b03839d46af9fb43c97c188}{K}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ad20caec3b48a1eef164cb4ca81ba2587}{L}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a69691c7bdcc3ce6d5d8a1361f22d04ac}{M}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a8d9c307cb7f3c4a32822a51922d1ceaa}{N}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496af186217753c37b9b9f958d906208506e}{O}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a44c29edb103a2872f519ad0c9a0fdaaa}{P}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496af09564c9ca56850d4cd6b3319e541aee}{Q}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ae1e1d3d40573127e9ee0480caf1283d6}{R}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a5dbc98dcc983a70728bd082d1a47546e}{S}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ab9ece18c950afbfa6b0fdbfa4ff731d3}{T}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a4c614360da93c0a041b22e537de151eb}{U}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a5206560a306a2e085a437fd258eb57ce}{V}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a61e9c06ea9a85a5088a499df6458d276}{W}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a02129bb861061d1a052c592e2dc6b383}{X}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a57cec4137b614c87cb4e24a3d003a3e0}{Y}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a21c2e59531c8710156d34a3c30ac81d5}{Z}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ac647d7209f3ef9f82891363b26f02a13}{Digit1}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a766d094a630e902377cd00c5cc0bd0e3}{Digit2}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a1cefd11ad3a0329d5e5679ba52810ccf}{Digit3}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a28e2847bf0377d78cf40d17c2f01a891}{Digit4}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ae6bc224dc918dbbfe9d19354c500db1f}{Digit5}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a21660c9364731e16a259fe6668580c4e}{Digit6}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a81d5745c4198bf83761e4e7beea0cea8}{Digit7}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ade5fd0dcf1793076a0b24b7db4bb749f}{Digit8}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496aa9296fb8a66948e9094d45022b8212ca}{Digit9}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a0ba647eb1cee9c214a77a54dca147d9c}{Digit0}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a982621712db76f723b7bb88b631dc64d}{Left\+Shift}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a317d4a7487ee62605713987d4a037f83}{Right\+Shift}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a96f9c4eb595a467d02e35c723f63ebf7}{Left\+Alt}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ad88bad98046b623323aa6ca28eefa6d5}{Right\+Alt}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a571dc3ee993d6e9a33bdc851be52b995}{Alt\+Gr}} = Right\+Alt
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496af2be247d68aadad6e9ba07db1885cd1c}{Left\+Ctrl}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496af298b75d2207818c0459c063a21fd172}{Right\+Ctrl}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496aaa2a0b23772bf0233112aaed3bcd1656}{Left\+Meta}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a63d6690468ed218fe6a016bcb485767b}{Right\+Meta}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496aa59f3372c0ea0ef081cab58e097cfe13}{Left\+Windows}} = Left\+Meta
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a27b8f99931fa7ed354ba428be0dda0cb}{Right\+Windows}} = Right\+Meta
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a59876ee28a5bbb2b9beb9e72f970ec0e}{Left\+Apple}} = Left\+Meta
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a221b5c9630e81ba6580fc5bc0ebe7350}{Right\+Apple}} = Right\+Meta
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a8dac2f53f69eb1bce11b7f781d8302ce}{Left\+Command}} = Left\+Meta
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a55084b884f99d51519566315fe31d180}{Right\+Command}} = Right\+Meta
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a765b5c592d27653eb7102ee719640108}{Context\+Menu}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a013ec032d3460d4be4431c6ab1f8f224}{Escape}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a1a45924fabe821ad288bd081b0bbf93b}{Left\+Arrow}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a026be376ee5c529a3d0a35866d1242ad}{Right\+Arrow}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a0b513090f0a012194da83d5515882b13}{Up\+Arrow}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a0a3f89b5a028cc88370ad5a49dfab276}{Down\+Arrow}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496acd7d13ceea728b08555f7c818cfb13ef}{Backspace}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496aee3677bcca83ece9384b01e43952bf33}{Page\+Down}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a9b869c510c75c5827ac82e49d4340927}{Page\+Up}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a8cf04a9734132302f96da8e113e80ce5}{Home}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a87557f11575c0ad78e4e28abedc13b6e}{End}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496aa458be0f08b7e4ff3c0f633c100176c0}{Insert}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496af2a6c498fb90ee345d997f888fce3b18}{Delete}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a8d0f4171170104d094d8b6d4f8bf49e6}{Caps\+Lock}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496acf6cc0261135c6d163fd4305375773d2}{Num\+Lock}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496abf54024481cd2ad6bbb9ae44b7312472}{Print\+Screen}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a7d7902d5e2998e4fb2b8694a2de4ff65}{Scroll\+Lock}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a105b296a83f9c105355403f3332af50f}{Pause}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a49d8361832bab5aa5c7a56623862e95e}{Numpad\+Enter}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ab582ce65eec2e991f25b15018972a331}{Numpad\+Divide}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a3a144014ebb167532263bd99b76c72b3}{Numpad\+Multiply}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496aa8ce91fccd1f82a1df5d379178db2301}{Numpad\+Plus}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496afaa5b4e9d867f8e56e0188e8ba8eb279}{Numpad\+Minus}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a78793098755f8a5946242dc0fba9a141}{Numpad\+Period}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ac7d238e2e1ee45502d5be70067fd8e18}{Numpad\+Equals}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a1b1118fbe9aecd479f93d37449578365}{Numpad0}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ac8e841f6b917061dd15aedb19a80cb77}{Numpad1}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496af7303042267ef3576930c1f4cd79348a}{Numpad2}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a5e23a433a108a85788894b705ec11cdd}{Numpad3}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a50b622a0442de23f15effc7fc46f3892}{Numpad4}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a6252c5b171a2982612e31042b953f558}{Numpad5}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a4d9afa3da3cc40661d50a925dd3010ad}{Numpad6}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a4314bbf1a297c4b03a5246a71c9c93b6}{Numpad7}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a8bf3a062ba0e0fa6ef21508d15e7820e}{Numpad8}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a15f7ca721fe2b648a34d498084f70919}{Numpad9}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ae1dffc8709f31a4987c8a88334107e89}{F1}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496afe5c3684dce76cdd9f7f42430868aa74}{F2}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a4b6bf4b531770872d4328ce69bef5627}{F3}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ae7e0e72401a9f2718ed0f39f2861d702}{F4}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a37f438df6a6d5ba4c17ef8ca58562f00}{F5}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a1faf42f2823f184eb2c9f0dffe5d73f2}{F6}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a47489eb597b7db34caa24b1fc78fc839}{F7}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a4787509ad9f9d747a81a30e9dde3d4a7}{F8}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a892a245e287c163080b23db737d3c4c9}{F9}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ab213ce22ca6ad4eda8db82966b9b6e5a}{F10}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a643b0662422d1d0dffa3fca2e2bf28a8}{F11}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ae902674982fc99aa343cdd94da7476c3}{F12}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a5d10d9ba08484cc98db597129105ae0b}{OEM1}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496af696f4fa11199f0d6f3d94cbfbc0d50a}{OEM2}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a8d1a3a1e3f48a0bfc6f45b19f28e4f92}{OEM3}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a90ee7c5b26a134944453e4b6b15bafc3}{OEM4}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496acb925d18edf01a969faec98ab23cc61d}{OEM5}}
+, {\bfseries IMESelected}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration of key codes. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59d}{Pen\+Button}} \{ \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59da12ae2a12586001e30745cb0457586ae3}{Tip}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59da1432aab1d005218c17376fbee5b3c894}{Eraser}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59da69a77d96b0023c81d1aa54a62b6777a7}{Barrel\+First}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59dad94f501abda96fb7fb3e8f2460ed4d2e}{Barrel\+Second}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59da8b4cdb56f3d73fa2b3a22d06dcfdf52a}{In\+Range}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59da59db2c4b1401f84dcc7d2dd9fda32fff}{Barrel\+Third}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59da341a566a209ad7bc9d432f6adf5c39e4}{Barrel\+Fourth}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59dad713029d5255e5025a95e694b72f4ca4}{Barrel1}} = Barrel\+First
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59daf4b1d25f720aa275c7e752b35993cab4}{Barrel2}} = Barrel\+Second
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59da0853fed471e37aaa428849f724103eed}{Barrel3}} = Barrel\+Third
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59da533658d8caed26f27df77ef9556e27c1}{Barrel4}} = Barrel\+Fourth
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration of buttons on a Pen. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a586a6521911c62d23469e51a336d29db}{Touch\+Phase}} \{ \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a586a6521911c62d23469e51a336d29dba6adf97f83acf6453d4a6a4b1070f3754}{None}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a586a6521911c62d23469e51a336d29dba7b81520329371177ede3ccbc307bc85d}{Began}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a586a6521911c62d23469e51a336d29dba95bfdefaaf01553cbf21ccd942855c69}{Moved}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a586a6521911c62d23469e51a336d29dba0157fbb99be9622bdaa6e544270c0622}{Ended}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a586a6521911c62d23469e51a336d29dba0e22fe7d45f8e5632a4abf369b24e29c}{Canceled}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a586a6521911c62d23469e51a336d29dba5146a957bfa51752bd6020691fda598e}{Stationary}}
+ \}
+\begin{DoxyCompactList}\small\item\em Indicates where in its lifecycle a given touch is. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a796c76b3780bf45a3f9701158d83e199}{Player\+Join\+Behavior}} \{ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a796c76b3780bf45a3f9701158d83e199a47e6d1178d6fd89b4e8538418d573bbd}{Join\+Players\+When\+Button\+Is\+Pressed}}
+, {\bfseries Join\+Players\+When\+Join\+Action\+Is\+Triggered}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a796c76b3780bf45a3f9701158d83e199a4df39dccf7bae6f57242f89888f3967c}{Join\+Players\+Manually}}
+ \}
+\begin{DoxyCompactList}\small\item\em Determines how Player\+Input\+Manager joins new players. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ada6c6990c08ec51f071b15c38295208a}{Player\+Notifications}} \{ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ada6c6990c08ec51f071b15c38295208aac1a6cc628d22efbf4e40b3efbb92289b}{Send\+Messages}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ada6c6990c08ec51f071b15c38295208aa67a8a6d97e082d3a5515e8cadec50ba9}{Broadcast\+Messages}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ada6c6990c08ec51f071b15c38295208aadd94afa5bf5eb0f3d9b5d743ab558494}{Invoke\+Unity\+Events}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ada6c6990c08ec51f071b15c38295208aad7284b8d3d1dc75f30062929a4d9e635}{Invoke\+CSharp\+Events}}
+ \}
+\begin{DoxyCompactList}\small\item\em Determines how the triggering of an action or other input-\/related events are relayed to other Game\+Objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!InputActionChange@{InputActionChange}}
+\index{InputActionChange@{InputActionChange}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}
+\doxysubsubsection{\texorpdfstring{InputActionChange}{InputActionChange}}
+{\footnotesize\ttfamily \label{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7} 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7}{Unity\+Engine.\+Input\+System.\+Input\+Action\+Change}}}
+
+
+
+Indicates what type of change related to an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{input action} occurred. 
+
+\begin{DoxySeeAlso}{See also}
+Input\+System.\+on\+Action\+Change
+
+
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ActionEnabled@{ActionEnabled}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!ActionEnabled@{ActionEnabled}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7a66319e570905ae2dbb429b4ef2819462}\label{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7} 
+Action\+Enabled&An individual action was enabled. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_abc6ff7728cbf947406b3c426cf82437f}{Input\+Action.\+Enable}
+
+
+\end{DoxySeeAlso}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ActionDisabled@{ActionDisabled}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!ActionDisabled@{ActionDisabled}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7a8afd9143780e61ac4214468c0275a68d}\label{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7} 
+Action\+Disabled&An individual action was disabled. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a301a6f1f456e71eee25363f62861ff93}{Input\+Action.\+Disable}
+
+
+\end{DoxySeeAlso}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ActionMapEnabled@{ActionMapEnabled}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!ActionMapEnabled@{ActionMapEnabled}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7a66b1852760a43a0d5db8e1c595d3f8b9}\label{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7} 
+Action\+Map\+Enabled&An \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{action map} was enabled. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map_a1070fcb5a4631ca6c0212fb28a19644f}{Input\+Action\+Map.\+Enable}
+
+
+\end{DoxySeeAlso}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ActionMapDisabled@{ActionMapDisabled}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!ActionMapDisabled@{ActionMapDisabled}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7a3d8f6ce4758da7971fa63609f2ac6f86}\label{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7} 
+Action\+Map\+Disabled&An \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map}{action map} was disabled. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_map_a215d9741eaf7205b3ad4ac865efae047}{Input\+Action\+Map.\+Disable}
+
+
+\end{DoxySeeAlso}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ActionStarted@{ActionStarted}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!ActionStarted@{ActionStarted}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7a077150502bb258622d8d79ab4cb17131}\label{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7} 
+Action\+Started&An \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action} was started. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a5fecf2acd129fa0922452ecf32527cdd}{Input\+Action.\+started}, \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Input\+Action\+Phase.\+Started}
+
+
+\end{DoxySeeAlso}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ActionPerformed@{ActionPerformed}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!ActionPerformed@{ActionPerformed}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7a1152fa99b7e43c41b469732c8b7dc528}\label{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7} 
+Action\+Performed&An \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action} was performed. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a11c046d8fb911d300e30e67827222c1f}{Input\+Action.\+performed}, \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Input\+Action\+Phase.\+Performed}
+
+
+\end{DoxySeeAlso}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ActionCanceled@{ActionCanceled}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!ActionCanceled@{ActionCanceled}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7a56f7ab7a201747a4ff4f0cfb94aacece}\label{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7} 
+Action\+Canceled&An \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action} was canceled. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a905374d6d7af6dc57a54acfa22018976}{Input\+Action.\+canceled}, \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a0e22fe7d45f8e5632a4abf369b24e29c}{Input\+Action\+Phase.\+Canceled}
+
+
+\end{DoxySeeAlso}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BoundControlsAboutToChange@{BoundControlsAboutToChange}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!BoundControlsAboutToChange@{BoundControlsAboutToChange}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7a099b3d2411383771d413e3ba0410f7de}\label{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7} 
+Bound\+Controls\+About\+To\+Change&Bindings on an action or set of actions are about to be re-\/resolved. This is called while \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a8e3f5d3329be13ca8474314137045af4}{Input\+Action.\+controls} for actions are still untouched and thus still reflect the old binding state of each action. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a8e3f5d3329be13ca8474314137045af4}{Input\+Action.\+controls}
+
+
+\end{DoxySeeAlso}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BoundControlsChanged@{BoundControlsChanged}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!BoundControlsChanged@{BoundControlsChanged}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7abb68ea5e5c1f0b8448887e76fc02f4cd}\label{namespace_unity_engine_1_1_input_system_a71a0bbccbb83c4d0c1e92eb0f1e403d7} 
+Bound\+Controls\+Changed&Bindings on an action or set of actions have been resolved. This is called after \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a8e3f5d3329be13ca8474314137045af4}{Input\+Action.\+controls} have been updated. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a8e3f5d3329be13ca8474314137045af4}{Input\+Action.\+controls}
+
+
+\end{DoxySeeAlso}
+\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!InputActionPhase@{InputActionPhase}}
+\index{InputActionPhase@{InputActionPhase}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}
+\doxysubsubsection{\texorpdfstring{InputActionPhase}{InputActionPhase}}
+{\footnotesize\ttfamily \label{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182} 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182}{Unity\+Engine.\+Input\+System.\+Input\+Action\+Phase}}}
+
+
+
+Trigger phase of an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}. 
+
+Actions can be triggered in steps. For example, a \doxylink{}{\textquotesingle{}slow tap\textquotesingle{}} will put an action into \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Started} phase when a button the action is bound to is pressed. At that point, however, the action still has to wait for the expiration of a timer in order to make it a \textquotesingle{}slow tap\textquotesingle{}. If the button is release before the timer expires, the action will be \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a0e22fe7d45f8e5632a4abf369b24e29c}{Canceled} whereas if the button is held long enough, the action will be \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Performed}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a86bd545c9dfe1fb0200e296c44389e57}{Input\+Action.\+phase}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context_a335edfa46754b0cef03dafa87f579372}{Input\+Action.\+Callback\+Context.\+phase}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a5fecf2acd129fa0922452ecf32527cdd}{Input\+Action.\+started}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a11c046d8fb911d300e30e67827222c1f}{Input\+Action.\+performed}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a905374d6d7af6dc57a54acfa22018976}{Input\+Action.\+canceled}
+
+
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Disabled@{Disabled}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Disabled@{Disabled}}}\Hypertarget{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182ab9f5c797ebbf55adccdd8539a65a0241}\label{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182} 
+Disabled&The action is not enabled. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Waiting@{Waiting}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Waiting@{Waiting}}}\Hypertarget{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a5706de961fb376d701be6e7762d8b09c}\label{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182} 
+Waiting&The action is enabled and waiting for input on its associated controls. This is the phase that an action goes back to once it has been \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Performed} or \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a0e22fe7d45f8e5632a4abf369b24e29c}{Canceled}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Started@{Started}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Started@{Started}}}\Hypertarget{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}\label{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182} 
+Started&An associated control has been actuated such that it may lead to the action being triggered. Will lead to \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a5fecf2acd129fa0922452ecf32527cdd}{Input\+Action.\+started} getting called. This phase will only be invoked if there are interactions on the respective control binding. Without any interactions, an action will go straight from \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a5706de961fb376d701be6e7762d8b09c}{Waiting} into \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Performed} and back into \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a5706de961fb376d701be6e7762d8b09c}{Waiting} whenever an associated control changes value.
+
+An example of an interaction that uses the \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Started} phase is Slow\+Tap\+Interaction. When the button it is bound to is pressed, the associated action goes into the \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Started} phase. At this point, the interaction does not yet know whether the button press will result in just a tap or will indeed result in slow tap. If the button is released before the time it takes to recognize a slow tap, then the action will go to \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a0e22fe7d45f8e5632a4abf369b24e29c}{Canceled} and then back to \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a5706de961fb376d701be6e7762d8b09c}{Waiting}. If, however, the button is held long enough for it to qualify as a slow tap, the action will progress to \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Performed} and then go back to \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a5706de961fb376d701be6e7762d8b09c}{Waiting}.
+
+\doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Started} can be useful for \doxylink{namespace_unity_engine_1_1_u_i}{UI} feedback. For example, in a game where the weapon can be charged, \doxylink{namespace_unity_engine_1_1_u_i}{UI} feedback can be initiated when the action is \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Started}.
+
+
+\begin{DoxyCode}{1}
+\DoxyCodeLine{fireAction.started\ +=}
+\DoxyCodeLine{\ \ \ \ ctx\ =>}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ctx.interaction\ is\ SlowTapInteraction)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ weaponCharging\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ weaponChargeStartTime\ =\ ctx.time;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{fireAction.canceled\ +=}
+\DoxyCodeLine{\ \ \ \ ctx\ =>}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ weaponCharging\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{fireAction.performed\ +=}
+\DoxyCodeLine{\ \ \ \ ctx\ =>}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Fire();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ weaponCharging\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+ 
+
+By default, an action is started as soon as a control moves away from its default value. This is the case for both \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}{Input\+Action\+Type.\+Button} actions (which, however, does not yet have to mean that the button press threshold has been reached; see \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}{Input\+Settings.\+default\+Button\+Press\+Point}) and \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Input\+Action\+Type.\+Value} actions. \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94bae1ff6a7360e99cb46db6bb5d3ff8e2eb}{Input\+Action\+Type.\+Pass\+Through} does not use the {\ttfamily Started} phase and instead goes straight to \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Performed}.
+
+For \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Input\+Action\+Type.\+Value} actions, {\ttfamily Started} will immediately be followed by \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Performed}.
+
+Note that interactions (see \doxylink{interface_unity_engine_1_1_input_system_1_1_i_input_interaction}{IInput\+Interaction}) can alter how an action does or does not progress through the phases. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Performed@{Performed}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Performed@{Performed}}}\Hypertarget{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}\label{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182} 
+Performed&The action has been performed. Leads to \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a11c046d8fb911d300e30e67827222c1f}{Input\+Action.\+performed} getting called. By default, a \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}{Input\+Action\+Type.\+Button} action performs when a control crosses the button press threshold (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}{Input\+Settings.\+default\+Button\+Press\+Point}), a \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Input\+Action\+Type.\+Value} action performs on any value change that isn\textquotesingle{}t the default value, and a \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94bae1ff6a7360e99cb46db6bb5d3ff8e2eb}{Input\+Action\+Type.\+Pass\+Through} action performs on any value change including going back to the default value.
+
+Note that interactions (see \doxylink{interface_unity_engine_1_1_input_system_1_1_i_input_interaction}{IInput\+Interaction}) can alter how an action does or does not progress through the phases.
+
+For a given action, finding out whether it was performed in the current frame can be done with \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a1968a212ee4e88950b4f1f15043a9d42}{Input\+Action.\+Was\+Performed\+This\+Frame}.
+
+
+\begin{DoxyCode}{1}
+\DoxyCodeLine{action.WasPerformedThisFrame();}
+
+\end{DoxyCode}
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Canceled@{Canceled}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Canceled@{Canceled}}}\Hypertarget{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a0e22fe7d45f8e5632a4abf369b24e29c}\label{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182} 
+Canceled&The action has stopped. Leads to \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a905374d6d7af6dc57a54acfa22018976}{Input\+Action.\+canceled} getting called. By default, a \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}{Input\+Action\+Type.\+Button} action cancels when a control falls back below the button press threshold (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a1b76d39721e19a8b3314d485f9781eee}{Input\+Settings.\+default\+Button\+Press\+Point}) and a \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Input\+Action\+Type.\+Value} action cancels when a control moves back to its default value. A \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94bae1ff6a7360e99cb46db6bb5d3ff8e2eb}{Input\+Action\+Type.\+Pass\+Through} action does not generally cancel based on input on its controls.
+
+An action will also get canceled when it is disabled while in progress (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a301a6f1f456e71eee25363f62861ff93}{Input\+Action.\+Disable}). Also, when an \doxylink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device} that is
+
+Note that interactions (see \doxylink{interface_unity_engine_1_1_input_system_1_1_i_input_interaction}{IInput\+Interaction}) can alter how an action does or does not progress through the phases. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94b}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!InputActionType@{InputActionType}}
+\index{InputActionType@{InputActionType}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}
+\doxysubsubsection{\texorpdfstring{InputActionType}{InputActionType}}
+{\footnotesize\ttfamily \label{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94b} 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94b}{Unity\+Engine.\+Input\+System.\+Input\+Action\+Type}}}
+
+
+
+Determines the behavior with which an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action} triggers. 
+
+While all actions essentially function the same way, there are differences in how an action will react to changes in values on the controls it is bound to.
+
+The most straightforward type of behavior is \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94bae1ff6a7360e99cb46db6bb5d3ff8e2eb}{Pass\+Through} which does not expect any kind of value change pattern but simply triggers the action on every single value change. A pass-\/through action will not use \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a5fecf2acd129fa0922452ecf32527cdd}{Input\+Action.\+started} or \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a905374d6d7af6dc57a54acfa22018976}{Input\+Action.\+canceled} except on bindings that have an interaction added to them. Pass-\/through actions are most useful for sourcing input from arbitrary many controls and simply piping all input through without much processing on the side of the action.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ An\ action\ that\ triggers\ every\ time\ any\ button\ on\ the\ gamepad\ is}}
+\DoxyCodeLine{\textcolor{comment}{//\ pressed\ or\ released.}}
+\DoxyCodeLine{var\ action\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{InputAction}}(}
+\DoxyCodeLine{\ \ \ \ type:\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94b}{InputActionType}}.\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94bae1ff6a7360e99cb46db6bb5d3ff8e2eb}{PassThrough}},}
+\DoxyCodeLine{\ \ \ \ binding:\ \textcolor{stringliteral}{"{}<Gamepad>/<Button>"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{action.performed\ +=}
+\DoxyCodeLine{\ \ \ \ ctx\ =>}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ button\ =\ (ButtonControl)ctx.control;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (button.wasPressedThisFrame)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}Button\ \{ctx.control\}\ was\ pressed"{}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (button.wasReleasedThisFrame)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}Button\ \{ctx.control\}\ was\ released"{}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ NOTE:\ We\ may\ get\ calls\ here\ in\ which\ neither\ the\ if\ nor\ the\ else}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ clause\ are\ true\ here.\ A\ button\ like\ the\ gamepad\ left\ and\ right}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ triggers,\ for\ example,\ do\ not\ just\ have\ a\ binary\ on/off\ state}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ but\ rather\ a\ [0..1]\ value\ range.}}
+\DoxyCodeLine{\ \ \ \ \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{action.Enable();}
+
+\end{DoxyCode}
+ 
+
+Note that pass-\/through actions do not perform any kind of disambiguation of input which makes them great for just forwarding input from any connected controls but makes them a poor choice when only one input should be generated from however many connected controls there are. For more details, see \href{../manual/ActionBindings.html\#conflicting-inputs}{\texttt{ here}}.
+
+The other two behavior types are \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}{Button} and \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Value}.
+
+A \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Value} action starts (\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a5fecf2acd129fa0922452ecf32527cdd}{Input\+Action.\+started}) as soon as its input moves away from its default value. After that it immediately performs (\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a11c046d8fb911d300e30e67827222c1f}{Input\+Action.\+performed}) and every time the input changes value it performs again except if the input moves back to the default value -- in which case the action cancels (\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a905374d6d7af6dc57a54acfa22018976}{Input\+Action.\+canceled}).
+
+Also, unlike both \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}{Button} and \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94bae1ff6a7360e99cb46db6bb5d3ff8e2eb}{Pass\+Through} actions, \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Value} actions perform what\textquotesingle{}s called "{}initial state check"{} on the first input update after the action was enabled. What this does is check controls bound to the action and if they are already actuated (that is, at non-\/default value), the action will immediately be started and performed. What this means in practice is that when a value action is bound to, say, the left stick on a gamepad and the stick is already moved out of its resting position, then the action will immediately trigger instead of first requiring the stick to be moved slightly.
+
+\doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}{Button} and \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94bae1ff6a7360e99cb46db6bb5d3ff8e2eb}{Pass\+Through} actions, on the other hand, perform no such initial state check. For buttons, for example, this means that if a button is already pressed when an action is enabled, it first has to be released and then pressed again for the action to be triggered.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ An\ action\ that\ starts\ when\ the\ left\ stick\ on\ the\ gamepad\ is\ actuated}}
+\DoxyCodeLine{\textcolor{comment}{//\ and\ stops\ when\ the\ stick\ is\ released.}}
+\DoxyCodeLine{var\ action\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{InputAction}}(}
+\DoxyCodeLine{\ \ \ \ type:\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94b}{InputActionType}}.\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Value}},}
+\DoxyCodeLine{\ \ \ \ binding:\ \textcolor{stringliteral}{"{}<Gamepad>/leftStick"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{action.started\ +=}
+\DoxyCodeLine{\ \ \ \ ctx\ =>}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Debug.Log(\textcolor{stringliteral}{"{}-\/-\/-\/\ Stick\ Starts\ -\/-\/-\/"{}});}
+\DoxyCodeLine{\ \ \ \ \};}
+\DoxyCodeLine{action.performed\ +=}
+\DoxyCodeLine{\ \ \ \ ctx\ =>}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Debug.Log(\textcolor{stringliteral}{"{}Stick\ Value:\ "{}}\ +\ ctx.ReadValue<Vector2D>();}
+\DoxyCodeLine{\ \ \ \ \};}
+\DoxyCodeLine{action.canceled\ +=}
+\DoxyCodeLine{\ \ \ \ ctx\ =>}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Debug.Log(\textcolor{stringliteral}{"{}\#\ Stick\ Released"{}});}
+\DoxyCodeLine{\ \ \ \ \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{action.Enable();}
+
+\end{DoxyCode}
+ 
+
+A \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}{Button} action essentially operates like a \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Value} action except that it does not perform an initial state check.
+
+One final noteworthy difference of both \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}{Button} and \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Value} compared to \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94bae1ff6a7360e99cb46db6bb5d3ff8e2eb}{Pass\+Through} is that both of them perform what is referred to as "{}disambiguation"{} when multiple actions are bound to the control. \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94bae1ff6a7360e99cb46db6bb5d3ff8e2eb}{Pass\+Through} does not care how many controls are bound to the action -- it simply passes every input through as is, no matter where it comes from.
+
+\doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}{Button} and \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Value}, on the other hand, will treat input differently if it is coming from several sources at the same time. Note that this can only happen when there are multiple controls bound to a single actions -- either by a single binding resolving to more than one control (e.\+g. {\ttfamily "{}\texorpdfstring{$\ast$}{*}/\{\+Primary\+Action\}"{}}) or by multiple bindings all targeting the same action and being active at the same time. If only a single control is bound to an action, then the disambiguation code is automatically bypassed.
+
+Disambiguation works the following way\+: when an action has not yet been started, it will react to the first input that has a non-\/default value. Once it receives such an input, it will start tracking the source of that input. While the action is in-\/progress, if it receives input from a source other than the control it is currently tracking, it will check whether the input has a greater magnitude (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Input\+Control.\+Evaluate\+Magnitude()}) than the control the action is already tracking. If so, the action will switch from its current control to the control with the stronger input.
+
+Note that this process does also works in reverse. When the control currently driving the action lowers its value below that of another control that is also actuated and bound to the action, the action will switch to that control.
+
+Put simply, a \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}{Button} or \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Value} action bound to multiple controls will always track the control with the strongest input. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a4034bbebc91379913a9da5600a8a3491}{Input\+Action.\+type}
+
+
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Value@{Value}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Value@{Value}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}\label{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94b} 
+Value&An action that reads a single value from its connected sources. If multiple bindings actuate at the same time, performs disambiguation (see ) to detect the highest value contributor at any one time. A value action starts (\doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Input\+Action\+Phase.\+Started}) and then performs (\doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Input\+Action\+Phase.\+Performed}) as soon as a bound control changes to a non-\/default value. For example, if an action is bound to \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad_a9f608a9e12af3301fb2d704e072ea024}{Gamepad.\+left\+Stick} and the stick moves from (0,0) to (0.\+5,0.\+5), the action starts and performs.
+
+After being started, the action will perform on every value change that is not the default value. In the example here, if the stick goes to (0.\+75,0.\+75) and then to (1,1), the action will perform twice.
+
+Finally, if the control value changes back to the default value, the action is canceled (\doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a0e22fe7d45f8e5632a4abf369b24e29c}{Input\+Action\+Phase.\+Canceled}). Meaning that if the stick moves back to (0,0), \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a905374d6d7af6dc57a54acfa22018976}{Input\+Action.\+canceled} will be triggered. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Button@{Button}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Button@{Button}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba87b7760f14fbff78d8819291f36ab9a0}\label{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94b} 
+Button&An action that acts as a trigger. A button action has a defined trigger point that corresponds to \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Input\+Action\+Phase.\+Performed}. After being performed, the action goes back to waiting state to await the next triggering.
+
+Note that a button action may still use \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Input\+Action\+Phase.\+Started} and does not necessarily trigger immediately on input. For example, if \doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_hold_interaction}{Interactions.\+Hold\+Interaction} is used, the action will start as soon as a bound button crosses its press threshold but will not trigger until the button is held for the set hold duration (\doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_hold_interaction_a2fc9b6379f01847976a2b4247620ee44}{Interactions.\+Hold\+Interaction.\+duration}).
+
+Irrespective of which type an action is set to, it is possible to find out whether it was or is considered pressed and/or released using \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a4ba2a7836129d30d4996714c3e3f871d}{Input\+Action.\+Is\+Pressed}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a7776c9dbaab7db1f49493c6e7e8c4fbb}{Input\+Action.\+Was\+Pressed\+This\+Frame}, and \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_aa0aa02b5124108b0fd9ecc74e919ee9b}{Input\+Action.\+Was\+Released\+This\+Frame}.
+
+
+\begin{DoxyCode}{1}
+\DoxyCodeLine{action.IsPressed();}
+\DoxyCodeLine{action.WasPressedThisFrame();}
+\DoxyCodeLine{action.WasReleasedThisFrame();}
+
+\end{DoxyCode}
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PassThrough@{PassThrough}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!PassThrough@{PassThrough}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94bae1ff6a7360e99cb46db6bb5d3ff8e2eb}\label{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94b} 
+Pass\+Through&An action that has no specific type of behavior and instead acts as a simple pass-\/through for any value change on any bound control. In effect, this turns an action from a single value producer into a mere input "{}sink"{}. This is in some ways similar to \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Value}. However, there are two key differences.
+
+For one, the action will not perform any disambiguation when bound to multiple controls concurrently. This means that if, for example, the action is bound to both the left and the right stick on a \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad}{Gamepad}, and the left stick goes to (0.\+5,0.\+5) and the right stick then goes to (0.\+25,0.\+25), the action will perform twice yielding a value of (0.\+5,0.\+5) first and a value of (0.\+25, 0.\+25) next. This is different from \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Value} where upon actuation to (0.\+5,0.\+5), the left stick would get to drive the action and the actuation of the right stick would be ignored as it does not exceed the magnitude of the actuation on the left stick.
+
+The second key difference is that only \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Input\+Action\+Phase.\+Performed} is used and will get triggered on every value change regardless of what the value is. This is different from \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Value} where the action will trigger \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Input\+Action\+Phase.\+Started} when moving away from its default value and will trigger \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a0e22fe7d45f8e5632a4abf369b24e29c}{Input\+Action\+Phase.\+Canceled} when going back to the default value.
+
+Note that a pass-\/through action my still get cancelled and thus see \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a905374d6d7af6dc57a54acfa22018976}{Input\+Action.\+canceled} getting called. This happens when a factor other than input on a device causes an action in progress to be cancelled. An example of this is when an action is disabled (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a301a6f1f456e71eee25363f62861ff93}{Input\+Action.\+Disable}) or when focus is lost (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a11467cec652b53340f93f7a788dac2d5}{Input\+Settings.\+background\+Behavior}) and a device connection to an action is reset (see Input\+System.\+Reset\+Device).
+
+Also note that for a pass-\/through action, calling \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a49b189fd9d09cc28efd17c08a17eeb0c}{Input\+Action.\+Read\+Value$<$\+TValue$>$} is often not very useful as it will only return the value of the very last control that fed into the action. For pass-\/through actions, it is usually best to listen to \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a11c046d8fb911d300e30e67827222c1f}{Input\+Action.\+performed} in order to be notified about every single value change. Where this is not necessary, it is generally better to employ a \doxylink{namespace_unity_engine_1_1_input_system_a0d0d044aae0aef15123e2f31f11ea94ba689202409e48743b914713f96d93947c}{Value} action instead. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448b}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!InputDeviceChange@{InputDeviceChange}}
+\index{InputDeviceChange@{InputDeviceChange}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}
+\doxysubsubsection{\texorpdfstring{InputDeviceChange}{InputDeviceChange}}
+{\footnotesize\ttfamily \label{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448b} 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448b}{Unity\+Engine.\+Input\+System.\+Input\+Device\+Change}}}
+
+
+
+Indicates what type of change related to an \doxylink{class_unity_engine_1_1_input_system_1_1_input_device}{input device} occurred. 
+
+Use Input\+System.\+on\+Device\+Change to receive notifications about changes to the input device setup in the system.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{InputSystem.onDeviceChange\ +=}
+\DoxyCodeLine{\ \ \ \ (device,\ change)\ =>}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (change)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448b}{InputDeviceChange}}.Added:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}Device\ \{device\}\ was\ added"{}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448b}{InputDeviceChange}}.Removed:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}Device\ \{device\}\ was\ removed"{}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \};}
+
+\end{DoxyCode}
+ \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Added@{Added}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Added@{Added}}}\Hypertarget{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448baf29ddbfb905eb2593fdcdfb243f9af85}\label{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448b} 
+Added&A new device was added to the system. This is triggered {\itshape after} the device has already been added, i.\+e. it already appears on Input\+System.\+devices. See also Input\+System.\+Add\+Device$<$\+TDevice$>$(string) and \doxylink{class_unity_engine_1_1_input_system_1_1_input_device_a4ff5e7586f91a321108317341566d4eb}{Input\+Device.\+added}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Removed@{Removed}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Removed@{Removed}}}\Hypertarget{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448ba93f07b720ebf7d1246512569761a5804}\label{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448b} 
+Removed&An existing device was removed from the system. This is triggered {\itshape after} the device has already been removed, i.\+e. it already has been cleared from Input\+System.\+devices. Other than when a device is removed programmatically, this happens when a device is unplugged from the system. Subsequent to the notification, the system will remove the \doxylink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device} instance from its list and remove the device\textquotesingle{}s recorded input state.
+
+See also Input\+System.\+Remove\+Device. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Disconnected@{Disconnected}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Disconnected@{Disconnected}}}\Hypertarget{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448baef70e46fd3bbc21e3e1f0b6815e750c0}\label{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448b} 
+Disconnected&A device reported by the IInput\+Runtime was Removed but was retained by the system as \doxylink{a9f5d9d99f14508ac94dce553c192a0c6}{disconnected}. See also Input\+System.\+disconnected\+Devices. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Reconnected@{Reconnected}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Reconnected@{Reconnected}}}\Hypertarget{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448ba90715a403fdd7565d025428b03f5b693}\label{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448b} 
+Reconnected&A device that was previously retained as \doxylink{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448baef70e46fd3bbc21e3e1f0b6815e750c0}{Disconnected} has been re-\/discovered and has been Added to the system again. See also Input\+System.\+disconnected\+Devices. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Enabled@{Enabled}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Enabled@{Enabled}}}\Hypertarget{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448ba00d23a76e43b46dae9ec7aa9dcbebb32}\label{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448b} 
+Enabled&An existing device was re-\/enabled after having been \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182ab9f5c797ebbf55adccdd8539a65a0241}{Disabled}. See also Input\+System.\+Enable\+Device and \doxylink{class_unity_engine_1_1_input_system_1_1_input_device_a11b982f33c9ccecd0cbf73501e363e8f}{Input\+Device.\+enabled}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Disabled@{Disabled}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Disabled@{Disabled}}}\Hypertarget{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448bab9f5c797ebbf55adccdd8539a65a0241}\label{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448b} 
+Disabled&An existing device was disabled. See also Input\+System.\+Disable\+Device and \doxylink{class_unity_engine_1_1_input_system_1_1_input_device_a11b982f33c9ccecd0cbf73501e363e8f}{Input\+Device.\+enabled}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UsageChanged@{UsageChanged}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!UsageChanged@{UsageChanged}}}\Hypertarget{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448ba1c49d571f9d59cf999198884684eb1b3}\label{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448b} 
+Usage\+Changed&The usages on a device have changed. This may signal, for example, that what was the right hand \doxylink{namespace_unity_engine_1_1_input_system_1_1_x_r}{XR} controller before is now the left hand controller.
+
+See also Input\+System.\+Set\+Device\+Usage(\+Input\+Device,string) and \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a09e4b347afac3558d9dbe4c4919457b8}{Input\+Control.\+usages}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ConfigurationChanged@{ConfigurationChanged}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!ConfigurationChanged@{ConfigurationChanged}}}\Hypertarget{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448ba31e4c3ad63d178cb96c2a70ea23cbaf5}\label{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448b} 
+Configuration\+Changed&The configuration of a device has changed. This may signal, for example, that the layout used by the keyboard has changed or that, on a console, a gamepad has changed which player ID(s) it is assigned to.
+
+See also Device\+Configuration\+Event and Input\+System.\+Queue\+Config\+Change\+Event. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SoftReset@{SoftReset}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!SoftReset@{SoftReset}}}\Hypertarget{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448ba109e0d0bf2b42091e997ddc4d49bab8d}\label{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448b} 
+Soft\+Reset&Device is being "{}soft"{} reset but in a way that excludes \doxylink{struct_unity_engine_1_1_input_system_1_1_layouts_1_1_input_control_layout_1_1_control_item_a60f4e5350e3075c9044005219f445983}{Layouts.\+Input\+Control\+Layout.\+Control\+Item.\+dont\+Reset} controls such as mouse positions. This can happen during application focus changes (see \doxylink{class_unity_engine_1_1_input_system_1_1_input_settings_a11467cec652b53340f93f7a788dac2d5}{Input\+Settings.\+background\+Behavior}) or when Input\+System.\+Reset\+Device is called explicitly. This notification is sent before the actual reset happens. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HardReset@{HardReset}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!HardReset@{HardReset}}}\Hypertarget{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448ba9d31379a0302def25480e5a19522c67d}\label{namespace_unity_engine_1_1_input_system_acda9a431e89857409b86e7d7969a448b} 
+Hard\+Reset&Device is being "{}hard"{} reset, i.\+e. every control is reset to its default value. This happens only when explicitly forced through Input\+System.\+Reset\+Device. This notification is sent before the actual reset happens. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Key@{Key}}
+\index{Key@{Key}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}
+\doxysubsubsection{\texorpdfstring{Key}{Key}}
+{\footnotesize\ttfamily \label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496}{Unity\+Engine.\+Input\+System.\+Key}}}
+
+
+
+Enumeration of key codes. 
+
+Named according to the US keyboard layout which is used as a reference layout. Note, however, that keys are identified by physical location, not by the characters they generate. This means, for example, that \doxylink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a7fc56270e7a70fa81a5935b72eacbe29}{A} is always the key to the right of \doxylink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a8d0f4171170104d094d8b6d4f8bf49e6}{Caps\+Lock}, regardless of which key (if any) produces the "{}a"{} character on the current keyboard layout.
+
+To find the text character (if any) generated by a key according to the currently active keyboard layout, use the \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_ac31c2a2f570e527aacc86ee8060e2ecc}{Input\+Control.\+display\+Name} property of Key\+Control.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Look\ up\ key\ by\ key\ code.}}
+\DoxyCodeLine{var\ aKey\ =\ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_keyboard}{Keyboard}}.\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_keyboard_a717a64099f4ec7e9290aacea35a21ade}{current}}[\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496}{Key}}.A];}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Find\ out\ which\ text\ is\ produced\ by\ the\ key.}}
+\DoxyCodeLine{Debug.Log(\$\textcolor{stringliteral}{"{}The\ '\{aKey.keyCode\}'\ key\ produces\ '\{aKey.displayName\}'\ as\ text\ input"{}});}
+
+\end{DoxyCode}
+ \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!None@{None}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a6adf97f83acf6453d4a6a4b1070f3754}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+None&Invalid key. Does not represent a key on the keyboard and is only used to have a default for the Key enumeration not represent any specific key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Space@{Space}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Space@{Space}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ad511f8439ecde36647437fbba67a4394}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Space&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a29e179bc8d284cf71be6847ca6ae77f3}{Keyboard.\+space\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Enter@{Enter}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Enter@{Enter}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496af1851d5600eae616ee802a31ac74701b}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Enter&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a9ddd764306f7b7786b36b7eb625bf837}{Keyboard.\+enter\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Tab@{Tab}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Tab@{Tab}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a5c6ba25104401c9ee0650230fc6ba413}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Tab&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_ae78964d2a54558a557751dd72641aa0d}{Keyboard.\+tab\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Backquote@{Backquote}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Backquote@{Backquote}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a242f46f77c7bc68feb14704514de1079}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Backquote&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a99816e5708ab773110a2664c94094428}{Keyboard.\+backquote\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Quote@{Quote}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Quote@{Quote}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ac48e929b2b1eabba2ba036884433345e}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Quote&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a05fe0d94be1181190a2fa5a5366209bd}{Keyboard.\+quote\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Semicolon@{Semicolon}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Semicolon@{Semicolon}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a9806fa37a3ecd39bf637c203aa011ed0}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Semicolon&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a6d451ae58716851d96f1877aff8a523d}{Keyboard.\+semicolon\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Comma@{Comma}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Comma@{Comma}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a58be47db9455679e6a44df2eff9c9fa6}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Comma&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_ae7ed961a3e113f89576e030e7e16d6db}{Keyboard.\+comma\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Period@{Period}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Period@{Period}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a1901606ea069a83dc7beea17881ef95a}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Period&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_aa78f98cd27c138b975c5650b70b53a8c}{Keyboard.\+period\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Slash@{Slash}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Slash@{Slash}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a358cfe58715d680d9ab09f82e4010cbc}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Slash&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a8a6f93534d24218b70222c5b81bd92e7}{Keyboard.\+slash\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Backslash@{Backslash}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Backslash@{Backslash}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496af6c6379402dce27659f7cffee6bc1f00}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Backslash&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a643efbc7aec68349b0496488eae853d2}{Keyboard.\+backslash\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LeftBracket@{LeftBracket}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!LeftBracket@{LeftBracket}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a481c09f513474b2d31ba5c2992947b17}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Left\+Bracket&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a438d2657d5b0f0eca45e005833f65cdb}{Keyboard.\+left\+Bracket\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RightBracket@{RightBracket}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!RightBracket@{RightBracket}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a455364d8991395f71ef9ccc5cc449e5c}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Right\+Bracket&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a7d9f80c23f1fcb027f3401df5d421cc1}{Keyboard.\+right\+Bracket\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Minus@{Minus}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Minus@{Minus}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a453fb623e752c5993f65bc410fd74fe5}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Minus&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a5dc2c37cbd069d715b112a95fa51140a}{Keyboard.\+minus\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Equals@{Equals}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Equals@{Equals}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a0ccb67e7eaae09d9e4078d161eeca100}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Equals&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a81ae802849c8d43882aecaf8039a4515}{Keyboard.\+equals\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A@{A}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!A@{A}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a7fc56270e7a70fa81a5935b72eacbe29}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+A&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a22795ccd0f14149b6fc6c418ed0c3c00}{Keyboard.\+a\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B@{B}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!B@{B}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a9d5ed678fe57bcca610140957afab571}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+B&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a3404aea04969825bd361196e8a44da13}{Keyboard.\+b\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C@{C}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!C@{C}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a0d61f8370cad1d412f80b84d143e1257}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+C&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_ae05f5ef1d6a2b2fdd55d9852baf48660}{Keyboard.\+c\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D@{D}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!D@{D}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496af623e75af30e62bbd73d6df5b50bb7b5}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+D&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_acc5f823a68139f637c9083b3df67f14e}{Keyboard.\+d\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E@{E}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!E@{E}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a3a3ea00cfc35332cedf6e5e9a32e94da}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+E&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_ab8cd8ca1b45777cd2b9074425829efa7}{Keyboard.\+e\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F@{F}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!F@{F}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a800618943025315f869e4e1f09471012}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+F&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_aa291ba2087717beb7355d9392111e61e}{Keyboard.\+f\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G@{G}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!G@{G}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496adfcf28d0734569a6a693bc8194de62bf}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+G&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a19d612c103ee573fc2f77b43bec32278}{Keyboard.\+g\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H@{H}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!H@{H}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ac1d9f50f86825a1a2302ec2449c17196}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+H&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_ad6da30cd82465f3b5473f00a83da6509}{Keyboard.\+h\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I@{I}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!I@{I}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496add7536794b63bf90eccfd37f9b147d7f}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+I&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_ad0a28f9e4641bbc820fb3abc76bdd799}{Keyboard.\+i\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{J@{J}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!J@{J}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496aff44570aca8241914870afbc310cdb85}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+J&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a610848f9efe88badbbe4dc4a9afc2877}{Keyboard.\+j\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K@{K}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!K@{K}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496aa5f3c6a11b03839d46af9fb43c97c188}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+K&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a3aad778176229f4fd53b6a2619222d32}{Keyboard.\+k\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L@{L}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!L@{L}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ad20caec3b48a1eef164cb4ca81ba2587}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+L&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_aa57bb3ab5331a07a125d15ce75d83b2d}{Keyboard.\+l\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M@{M}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!M@{M}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a69691c7bdcc3ce6d5d8a1361f22d04ac}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+M&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a4d903ceac678c565fc3ca9d03365baf6}{Keyboard.\+m\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N@{N}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!N@{N}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a8d9c307cb7f3c4a32822a51922d1ceaa}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+N&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_aee11adb562b0f2bdfa520d34a8b43a55}{Keyboard.\+n\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O@{O}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!O@{O}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496af186217753c37b9b9f958d906208506e}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+O&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_adb1affec6aa1cf1107c593586a0ffb68}{Keyboard.\+o\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P@{P}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!P@{P}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a44c29edb103a2872f519ad0c9a0fdaaa}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+P&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a1e48f7fd93762df538cde78bb7048f85}{Keyboard.\+p\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Q@{Q}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Q@{Q}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496af09564c9ca56850d4cd6b3319e541aee}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Q&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a722f0d57c661616a5777750887a40924}{Keyboard.\+q\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R@{R}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!R@{R}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ae1e1d3d40573127e9ee0480caf1283d6}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+R&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_aa35b245834cc6a4589feb5f7b2ed60db}{Keyboard.\+r\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S@{S}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!S@{S}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a5dbc98dcc983a70728bd082d1a47546e}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+S&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a2c69eee407de4bf708d859e85d64f6c4}{Keyboard.\+s\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T@{T}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!T@{T}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ab9ece18c950afbfa6b0fdbfa4ff731d3}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+T&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a14042e4d3da1a4b77d2b121fa507be47}{Keyboard.\+t\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U@{U}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!U@{U}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a4c614360da93c0a041b22e537de151eb}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+U&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a51e18ced53d385792acfb99570964f50}{Keyboard.\+u\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V@{V}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!V@{V}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a5206560a306a2e085a437fd258eb57ce}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+V&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a28134083faab1a5f7338373d6d85ece0}{Keyboard.\+v\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{W@{W}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!W@{W}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a61e9c06ea9a85a5088a499df6458d276}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+W&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a52dde69188842c7b8b9c2a57dedee642}{Keyboard.\+w\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X@{X}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!X@{X}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a02129bb861061d1a052c592e2dc6b383}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+X&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_afab0af063c3afe1ab6efc64b5e648c35}{Keyboard.\+x\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Y@{Y}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Y@{Y}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a57cec4137b614c87cb4e24a3d003a3e0}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Y&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a8a08e81324fcf98ceb451e7a11927778}{Keyboard.\+y\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Z@{Z}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Z@{Z}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a21c2e59531c8710156d34a3c30ac81d5}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Z&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a0f0a210fbecc6999f20a3319599d4017}{Keyboard.\+z\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Digit1@{Digit1}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Digit1@{Digit1}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ac647d7209f3ef9f82891363b26f02a13}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Digit1&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_aa19853596018600be989089314c78d80}{Keyboard.\+digit1\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Digit2@{Digit2}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Digit2@{Digit2}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a766d094a630e902377cd00c5cc0bd0e3}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Digit2&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_aafced73133a47c08da7504c6f0d83fd4}{Keyboard.\+digit2\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Digit3@{Digit3}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Digit3@{Digit3}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a1cefd11ad3a0329d5e5679ba52810ccf}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Digit3&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a64051b969b450dc4619daaac1b93d773}{Keyboard.\+digit3\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Digit4@{Digit4}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Digit4@{Digit4}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a28e2847bf0377d78cf40d17c2f01a891}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Digit4&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a569c91b8602b0e4d3f1c9fcaf24a1d03}{Keyboard.\+digit4\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Digit5@{Digit5}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Digit5@{Digit5}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ae6bc224dc918dbbfe9d19354c500db1f}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Digit5&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_aeb7692819ee039834cabefd584f7f38c}{Keyboard.\+digit5\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Digit6@{Digit6}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Digit6@{Digit6}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a21660c9364731e16a259fe6668580c4e}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Digit6&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_af6960797aa0ec2395de71dfda988e07f}{Keyboard.\+digit6\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Digit7@{Digit7}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Digit7@{Digit7}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a81d5745c4198bf83761e4e7beea0cea8}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Digit7&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a074e5d22044494c81eb16cf4916a52d6}{Keyboard.\+digit7\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Digit8@{Digit8}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Digit8@{Digit8}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ade5fd0dcf1793076a0b24b7db4bb749f}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Digit8&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a87c661a4848117282fa5211a07ecbf7f}{Keyboard.\+digit8\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Digit9@{Digit9}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Digit9@{Digit9}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496aa9296fb8a66948e9094d45022b8212ca}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Digit9&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a7c2b640aa14f1be872859947d448e4c2}{Keyboard.\+digit9\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Digit0@{Digit0}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Digit0@{Digit0}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a0ba647eb1cee9c214a77a54dca147d9c}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Digit0&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a824b171b5f7807bcece549fe4ba2e026}{Keyboard.\+digit0\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LeftShift@{LeftShift}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!LeftShift@{LeftShift}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a982621712db76f723b7bb88b631dc64d}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Left\+Shift&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a14b18f92b1905190ccd5dd0fdeff27ec}{Keyboard.\+left\+Shift\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RightShift@{RightShift}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!RightShift@{RightShift}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a317d4a7487ee62605713987d4a037f83}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Right\+Shift&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a268ca324b74d0ca3d6c4c0950c11d44c}{Keyboard.\+right\+Shift\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LeftAlt@{LeftAlt}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!LeftAlt@{LeftAlt}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a96f9c4eb595a467d02e35c723f63ebf7}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Left\+Alt&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_ace3b55df6eb8bb3dc1d66162376fc9f1}{Keyboard.\+left\+Alt\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RightAlt@{RightAlt}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!RightAlt@{RightAlt}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ad88bad98046b623323aa6ca28eefa6d5}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Right\+Alt&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a74e093e4d743d3c7101357083a6b84c1}{Keyboard.\+right\+Alt\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AltGr@{AltGr}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!AltGr@{AltGr}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a571dc3ee993d6e9a33bdc851be52b995}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Alt\+Gr&Same as \doxylink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ad88bad98046b623323aa6ca28eefa6d5}{Right\+Alt}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LeftCtrl@{LeftCtrl}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!LeftCtrl@{LeftCtrl}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496af2be247d68aadad6e9ba07db1885cd1c}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Left\+Ctrl&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a40457202f2907449117f9a70a23c1ae5}{Keyboard.\+left\+Ctrl\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RightCtrl@{RightCtrl}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!RightCtrl@{RightCtrl}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496af298b75d2207818c0459c063a21fd172}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Right\+Ctrl&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a223045f61be01ad629f0fef0130a9fef}{Keyboard.\+right\+Ctrl\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LeftMeta@{LeftMeta}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!LeftMeta@{LeftMeta}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496aaa2a0b23772bf0233112aaed3bcd1656}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Left\+Meta&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a443e2406f1fd1462a73215204690b5bf}{Keyboard.\+left\+Meta\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RightMeta@{RightMeta}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!RightMeta@{RightMeta}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a63d6690468ed218fe6a016bcb485767b}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Right\+Meta&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_ab6e8dec07330601980d1f9f45303e09f}{Keyboard.\+right\+Meta\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LeftWindows@{LeftWindows}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!LeftWindows@{LeftWindows}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496aa59f3372c0ea0ef081cab58e097cfe13}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Left\+Windows&Same as \doxylink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496aaa2a0b23772bf0233112aaed3bcd1656}{Left\+Meta}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RightWindows@{RightWindows}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!RightWindows@{RightWindows}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a27b8f99931fa7ed354ba428be0dda0cb}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Right\+Windows&Same as \doxylink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a63d6690468ed218fe6a016bcb485767b}{Right\+Meta}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LeftApple@{LeftApple}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!LeftApple@{LeftApple}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a59876ee28a5bbb2b9beb9e72f970ec0e}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Left\+Apple&Same as \doxylink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496aaa2a0b23772bf0233112aaed3bcd1656}{Left\+Meta}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RightApple@{RightApple}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!RightApple@{RightApple}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a221b5c9630e81ba6580fc5bc0ebe7350}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Right\+Apple&Same as \doxylink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a63d6690468ed218fe6a016bcb485767b}{Right\+Meta}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LeftCommand@{LeftCommand}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!LeftCommand@{LeftCommand}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a8dac2f53f69eb1bce11b7f781d8302ce}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Left\+Command&Same as \doxylink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496aaa2a0b23772bf0233112aaed3bcd1656}{Left\+Meta}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RightCommand@{RightCommand}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!RightCommand@{RightCommand}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a55084b884f99d51519566315fe31d180}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Right\+Command&Same as \doxylink{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a63d6690468ed218fe6a016bcb485767b}{Right\+Meta}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ContextMenu@{ContextMenu}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!ContextMenu@{ContextMenu}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a765b5c592d27653eb7102ee719640108}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Context\+Menu&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_ae0d613ecd31edd8dc3cb2458464a2cd1}{Keyboard.\+context\+Menu\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Escape@{Escape}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Escape@{Escape}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a013ec032d3460d4be4431c6ab1f8f224}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Escape&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a2d4e20b10d04ed2605538cacb430afb4}{Keyboard.\+escape\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LeftArrow@{LeftArrow}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!LeftArrow@{LeftArrow}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a1a45924fabe821ad288bd081b0bbf93b}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Left\+Arrow&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a3a912fd08fd93011121122b0d207401f}{Keyboard.\+left\+Arrow\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RightArrow@{RightArrow}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!RightArrow@{RightArrow}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a026be376ee5c529a3d0a35866d1242ad}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Right\+Arrow&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a9a7e7912a921e4c8e0fdd4fdef0e1d27}{Keyboard.\+right\+Arrow\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UpArrow@{UpArrow}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!UpArrow@{UpArrow}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a0b513090f0a012194da83d5515882b13}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Up\+Arrow&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a8cc090927b05ddd57cc5d46df285d814}{Keyboard.\+up\+Arrow\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DownArrow@{DownArrow}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!DownArrow@{DownArrow}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a0a3f89b5a028cc88370ad5a49dfab276}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Down\+Arrow&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a449ce962ad6c3ffc5dc874815ff0c3f5}{Keyboard.\+down\+Arrow\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Backspace@{Backspace}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Backspace@{Backspace}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496acd7d13ceea728b08555f7c818cfb13ef}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Backspace&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a634b04fa351ab14ad09a4d37c997f368}{Keyboard.\+backspace\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PageDown@{PageDown}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!PageDown@{PageDown}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496aee3677bcca83ece9384b01e43952bf33}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Page\+Down&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_ae902bd919d45d02f5d6d7f3dcc31e004}{Keyboard.\+page\+Down\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PageUp@{PageUp}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!PageUp@{PageUp}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a9b869c510c75c5827ac82e49d4340927}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Page\+Up&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a3ce23f31c436f8a945fb52e9735d7f25}{Keyboard.\+page\+Up\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Home@{Home}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Home@{Home}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a8cf04a9734132302f96da8e113e80ce5}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Home&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_ab7298c3325c496b5e7d54be26edc5bee}{Keyboard.\+home\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{End@{End}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!End@{End}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a87557f11575c0ad78e4e28abedc13b6e}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+End&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_aeb6a370fd56cb72b59c51c7faf4bee8f}{Keyboard.\+end\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Insert@{Insert}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Insert@{Insert}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496aa458be0f08b7e4ff3c0f633c100176c0}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Insert&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a5ec426e698c4b9f9631030c6f63763e2}{Keyboard.\+insert\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Delete@{Delete}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Delete@{Delete}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496af2a6c498fb90ee345d997f888fce3b18}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Delete&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_ae6d5a9320450ca108ebddbaff51546d7}{Keyboard.\+delete\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CapsLock@{CapsLock}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!CapsLock@{CapsLock}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a8d0f4171170104d094d8b6d4f8bf49e6}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Caps\+Lock&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_ae6095f9bfe153b7e8bd6991fde29cdf1}{Keyboard.\+caps\+Lock\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NumLock@{NumLock}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!NumLock@{NumLock}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496acf6cc0261135c6d163fd4305375773d2}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Num\+Lock&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_ac2cc0b25ff5af0caff170beea0e0ca43}{Keyboard.\+num\+Lock\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PrintScreen@{PrintScreen}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!PrintScreen@{PrintScreen}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496abf54024481cd2ad6bbb9ae44b7312472}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Print\+Screen&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_ab56901d83bf7bfb00eb45e38b4f0ec3d}{Keyboard.\+print\+Screen\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ScrollLock@{ScrollLock}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!ScrollLock@{ScrollLock}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a7d7902d5e2998e4fb2b8694a2de4ff65}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Scroll\+Lock&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a97bcd8c70934af27c8fa7ca472b7c3c4}{Keyboard.\+scroll\+Lock\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Pause@{Pause}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Pause@{Pause}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a105b296a83f9c105355403f3332af50f}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Pause&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a00d9ad5408c11488d0e883dbb3c1d7d3}{Keyboard.\+pause\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NumpadEnter@{NumpadEnter}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!NumpadEnter@{NumpadEnter}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a49d8361832bab5aa5c7a56623862e95e}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Numpad\+Enter&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a93e380c69db50295a221a6a4c6b6e30c}{Keyboard.\+numpad\+Enter\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NumpadDivide@{NumpadDivide}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!NumpadDivide@{NumpadDivide}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ab582ce65eec2e991f25b15018972a331}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Numpad\+Divide&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_ac3afe6175142987a6a08ea5cb12cfe36}{Keyboard.\+numpad\+Divide\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NumpadMultiply@{NumpadMultiply}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!NumpadMultiply@{NumpadMultiply}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a3a144014ebb167532263bd99b76c72b3}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Numpad\+Multiply&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a079ea433f7e57d634ecb769b0a4646b7}{Keyboard.\+numpad\+Multiply\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NumpadPlus@{NumpadPlus}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!NumpadPlus@{NumpadPlus}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496aa8ce91fccd1f82a1df5d379178db2301}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Numpad\+Plus&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_afe282ae0b872ea1ada51bb8f53486cb4}{Keyboard.\+numpad\+Plus\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NumpadMinus@{NumpadMinus}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!NumpadMinus@{NumpadMinus}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496afaa5b4e9d867f8e56e0188e8ba8eb279}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Numpad\+Minus&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_afcf0f04c3ed8e138331f7e91acd2ab2e}{Keyboard.\+numpad\+Minus\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NumpadPeriod@{NumpadPeriod}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!NumpadPeriod@{NumpadPeriod}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a78793098755f8a5946242dc0fba9a141}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Numpad\+Period&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a95916fc9538d4978ff74ea0832e29cbe}{Keyboard.\+numpad\+Period\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NumpadEquals@{NumpadEquals}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!NumpadEquals@{NumpadEquals}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ac7d238e2e1ee45502d5be70067fd8e18}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Numpad\+Equals&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a38e0f9d666486917778eded978e8931f}{Keyboard.\+numpad\+Equals\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Numpad0@{Numpad0}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Numpad0@{Numpad0}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a1b1118fbe9aecd479f93d37449578365}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Numpad0&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a77b7f9bf9a8c089267deaed2b4e2b982}{Keyboard.\+numpad0\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Numpad1@{Numpad1}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Numpad1@{Numpad1}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ac8e841f6b917061dd15aedb19a80cb77}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Numpad1&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a5b0a5f21ac63668dddb351a3c6f5ad5c}{Keyboard.\+numpad1\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Numpad2@{Numpad2}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Numpad2@{Numpad2}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496af7303042267ef3576930c1f4cd79348a}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Numpad2&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a0fcadb2dfd68b97d4f2be8540f4e624c}{Keyboard.\+numpad2\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Numpad3@{Numpad3}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Numpad3@{Numpad3}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a5e23a433a108a85788894b705ec11cdd}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Numpad3&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a3d38ca2243bcd621e87bb63abbcc62be}{Keyboard.\+numpad3\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Numpad4@{Numpad4}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Numpad4@{Numpad4}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a50b622a0442de23f15effc7fc46f3892}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Numpad4&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a371f6a8f215da712ccae0790da7013a8}{Keyboard.\+numpad4\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Numpad5@{Numpad5}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Numpad5@{Numpad5}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a6252c5b171a2982612e31042b953f558}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Numpad5&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a31a204531e762bd1f6b43a3e1e3ed4d9}{Keyboard.\+numpad5\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Numpad6@{Numpad6}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Numpad6@{Numpad6}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a4d9afa3da3cc40661d50a925dd3010ad}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Numpad6&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_ab9befd934158f8866189d2c8ab1c4b1a}{Keyboard.\+numpad6\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Numpad7@{Numpad7}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Numpad7@{Numpad7}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a4314bbf1a297c4b03a5246a71c9c93b6}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Numpad7&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a1f074257d90b30b041171186b66e4dbf}{Keyboard.\+numpad7\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Numpad8@{Numpad8}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Numpad8@{Numpad8}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a8bf3a062ba0e0fa6ef21508d15e7820e}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Numpad8&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a8c39080e6ee2e9e739e7c66c1edfae4d}{Keyboard.\+numpad8\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Numpad9@{Numpad9}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Numpad9@{Numpad9}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a15f7ca721fe2b648a34d498084f70919}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+Numpad9&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a8a8fcc382f3e3dbcec51999ee5faaf3a}{Keyboard.\+numpad9\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F1@{F1}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!F1@{F1}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ae1dffc8709f31a4987c8a88334107e89}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+F1&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_afb5989716dc1b2f74212c2030881ea77}{Keyboard.\+f1\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F2@{F2}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!F2@{F2}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496afe5c3684dce76cdd9f7f42430868aa74}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+F2&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a0d563e7bf5d4408c5bbc2dce935e9b68}{Keyboard.\+f2\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F3@{F3}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!F3@{F3}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a4b6bf4b531770872d4328ce69bef5627}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+F3&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a0ff183d491e5a33255f7cb1cb5480e10}{Keyboard.\+f3\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F4@{F4}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!F4@{F4}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ae7e0e72401a9f2718ed0f39f2861d702}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+F4&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_ac3024d40de56e74b3fb20149d1fad556}{Keyboard.\+f4\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F5@{F5}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!F5@{F5}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a37f438df6a6d5ba4c17ef8ca58562f00}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+F5&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a297e4e4c73c8731750dfe35517785ce4}{Keyboard.\+f5\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F6@{F6}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!F6@{F6}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a1faf42f2823f184eb2c9f0dffe5d73f2}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+F6&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_aec2651c7647e83e60d56b80ea13f0345}{Keyboard.\+f6\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F7@{F7}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!F7@{F7}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a47489eb597b7db34caa24b1fc78fc839}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+F7&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a3846a29163ae2f38d9c169bc9a361c95}{Keyboard.\+f7\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F8@{F8}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!F8@{F8}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a4787509ad9f9d747a81a30e9dde3d4a7}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+F8&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a87949fd4eb750514602de099c3a47879}{Keyboard.\+f8\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F9@{F9}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!F9@{F9}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a892a245e287c163080b23db737d3c4c9}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+F9&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_acf805def79e1fb2f2dadab1771d85088}{Keyboard.\+f9\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F10@{F10}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!F10@{F10}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ab213ce22ca6ad4eda8db82966b9b6e5a}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+F10&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_aab07ca1b0de7dbafe7df6145113e7c52}{Keyboard.\+f10\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F11@{F11}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!F11@{F11}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a643b0662422d1d0dffa3fca2e2bf28a8}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+F11&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_af11fad1a3eb172f4b193a705b8646b28}{Keyboard.\+f11\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F12@{F12}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!F12@{F12}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496ae902674982fc99aa343cdd94da7476c3}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+F12&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_ab4156415b1ad0bbc3878fd5e844234b9}{Keyboard.\+f12\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OEM1@{OEM1}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!OEM1@{OEM1}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a5d10d9ba08484cc98db597129105ae0b}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+OEM1&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a46f40ef41d4b690354f4d3d481446c07}{Keyboard.\+oem1\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OEM2@{OEM2}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!OEM2@{OEM2}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496af696f4fa11199f0d6f3d94cbfbc0d50a}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+OEM2&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a7e3e5a12f84f9573aedd66bf5f484234}{Keyboard.\+oem2\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OEM3@{OEM3}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!OEM3@{OEM3}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a8d1a3a1e3f48a0bfc6f45b19f28e4f92}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+OEM3&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_ae4de31d0eab0e78e328ed2fe9c23922d}{Keyboard.\+oem3\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OEM4@{OEM4}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!OEM4@{OEM4}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496a90ee7c5b26a134944453e4b6b15bafc3}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+OEM4&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a95b9a1b23742d866774d3a7197e65197}{Keyboard.\+oem4\+Key}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OEM5@{OEM5}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!OEM5@{OEM5}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496acb925d18edf01a969faec98ab23cc61d}\label{namespace_unity_engine_1_1_input_system_ad8a6cae0143584257f5a72d1842ea496} 
+OEM5&The \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard_a81f79d7825971aa43c06f97881be4f3c}{Keyboard.\+oem5\+Key}. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59d}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!PenButton@{PenButton}}
+\index{PenButton@{PenButton}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}
+\doxysubsubsection{\texorpdfstring{PenButton}{PenButton}}
+{\footnotesize\ttfamily \label{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59d} 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59d}{Unity\+Engine.\+Input\+System.\+Pen\+Button}}}
+
+
+
+Enumeration of buttons on a \doxylink{class_unity_engine_1_1_input_system_1_1_pen}{Pen}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Tip@{Tip}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Tip@{Tip}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59da12ae2a12586001e30745cb0457586ae3}\label{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59d} 
+Tip&Button at the tip of a pen. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_pen_a7bc41fffe708b50158754be538ad0bc0}{Pen.\+tip}
+
+
+\end{DoxySeeAlso}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Eraser@{Eraser}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Eraser@{Eraser}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59da1432aab1d005218c17376fbee5b3c894}\label{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59d} 
+Eraser&Button located end of pen opposite to \doxylink{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59da12ae2a12586001e30745cb0457586ae3}{Tip}. Pens do not necessarily have an eraser. If a pen doesn\textquotesingle{}t, the respective button does nothing and will always be unpressed. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_pen_a57335f8cf5ef90f042623c4c7fa14ca5}{Pen.\+eraser}
+
+
+\end{DoxySeeAlso}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BarrelFirst@{BarrelFirst}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!BarrelFirst@{BarrelFirst}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59da69a77d96b0023c81d1aa54a62b6777a7}\label{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59d} 
+Barrel\+First&First button on the side of the pen. \doxylink{class_unity_engine_1_1_input_system_1_1_pen_affd04fe40d4afc648eda4fd1ed8a945d}{Pen.\+first\+Barrel\+Button} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BarrelSecond@{BarrelSecond}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!BarrelSecond@{BarrelSecond}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59dad94f501abda96fb7fb3e8f2460ed4d2e}\label{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59d} 
+Barrel\+Second&Second button on the side of the pen. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_pen_a929404dfce57b783bb776362f1af3772}{Pen.\+second\+Barrel\+Button}
+
+
+\end{DoxySeeAlso}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InRange@{InRange}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!InRange@{InRange}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59da8b4cdb56f3d73fa2b3a22d06dcfdf52a}\label{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59d} 
+In\+Range&Artificial button that indicates whether the pen is in detection range or not. Range detection may not be supported by a pen/tablet. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_pen_a38f345ceec10163dd792f4554d0e9622}{Pen.\+in\+Range}
+
+
+\end{DoxySeeAlso}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BarrelThird@{BarrelThird}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!BarrelThird@{BarrelThird}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59da59db2c4b1401f84dcc7d2dd9fda32fff}\label{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59d} 
+Barrel\+Third&Third button on the side of the pen. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_pen_a503403d022e503955f23644d2259a746}{Pen.\+third\+Barrel\+Button}
+
+
+\end{DoxySeeAlso}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BarrelFourth@{BarrelFourth}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!BarrelFourth@{BarrelFourth}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59da341a566a209ad7bc9d432f6adf5c39e4}\label{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59d} 
+Barrel\+Fourth&Fourth button on the side of the pen. \doxylink{class_unity_engine_1_1_input_system_1_1_pen_a258ceb7bd9662e2eb9f6d9347aeb3514}{Pen.\+fourth\+Barrel\+Button} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Barrel1@{Barrel1}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Barrel1@{Barrel1}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59dad713029d5255e5025a95e694b72f4ca4}\label{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59d} 
+Barrel1&Synonym for \doxylink{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59da69a77d96b0023c81d1aa54a62b6777a7}{Barrel\+First}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Barrel2@{Barrel2}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Barrel2@{Barrel2}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59daf4b1d25f720aa275c7e752b35993cab4}\label{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59d} 
+Barrel2&Synonym for \doxylink{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59dad94f501abda96fb7fb3e8f2460ed4d2e}{Barrel\+Second}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Barrel3@{Barrel3}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Barrel3@{Barrel3}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59da0853fed471e37aaa428849f724103eed}\label{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59d} 
+Barrel3&Synonym for \doxylink{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59da59db2c4b1401f84dcc7d2dd9fda32fff}{Barrel\+Third}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Barrel4@{Barrel4}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Barrel4@{Barrel4}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59da533658d8caed26f27df77ef9556e27c1}\label{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59d} 
+Barrel4&Synonym for \doxylink{namespace_unity_engine_1_1_input_system_a0c0a856c297c10f51b19802d2153b59da341a566a209ad7bc9d432f6adf5c39e4}{Barrel\+Fourth}. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespace_unity_engine_1_1_input_system_a796c76b3780bf45a3f9701158d83e199}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!PlayerJoinBehavior@{PlayerJoinBehavior}}
+\index{PlayerJoinBehavior@{PlayerJoinBehavior}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}
+\doxysubsubsection{\texorpdfstring{PlayerJoinBehavior}{PlayerJoinBehavior}}
+{\footnotesize\ttfamily \label{namespace_unity_engine_1_1_input_system_a796c76b3780bf45a3f9701158d83e199} 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a796c76b3780bf45a3f9701158d83e199}{Unity\+Engine.\+Input\+System.\+Player\+Join\+Behavior}}}
+
+
+
+Determines how \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager}{Player\+Input\+Manager} joins new players. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager}{Player\+Input\+Manager}, \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a411817b2b1f04a8314c67af882d8ebb0}{Player\+Input\+Manager.\+join\+Behavior}
+
+
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{JoinPlayersWhenButtonIsPressed@{JoinPlayersWhenButtonIsPressed}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!JoinPlayersWhenButtonIsPressed@{JoinPlayersWhenButtonIsPressed}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a796c76b3780bf45a3f9701158d83e199a47e6d1178d6fd89b4e8538418d573bbd}\label{namespace_unity_engine_1_1_input_system_a796c76b3780bf45a3f9701158d83e199} 
+Join\+Players\+When\+Button\+Is\+Pressed&Listen for button presses on devices that are not paired to any player. If they occur and joining is allowed, join a new player using the device the button was pressed on. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{JoinPlayersManually@{JoinPlayersManually}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!JoinPlayersManually@{JoinPlayersManually}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a796c76b3780bf45a3f9701158d83e199a4df39dccf7bae6f57242f89888f3967c}\label{namespace_unity_engine_1_1_input_system_a796c76b3780bf45a3f9701158d83e199} 
+Join\+Players\+Manually&Do not join players automatically. Call Player\+Input\+Manager.\+Join\+Player\+From\+UI or \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_ae230bfc7d301a1eccf746bee63f25955}{Player\+Input\+Manager.\+Join\+Player\+From\+Action} explicitly in order to join new players. Alternatively, just create Game\+Objects with \doxylink{class_unity_engine_1_1_input_system_1_1_player_input}{Player\+Input} components directly and they will be joined automatically. This behavior also allows implementing more sophisticated device pairing mechanisms when multiple devices are involved. While initial engagement required by \doxylink{namespace_unity_engine_1_1_input_system_a796c76b3780bf45a3f9701158d83e199a47e6d1178d6fd89b4e8538418d573bbd}{Join\+Players\+When\+Button\+Is\+Pressed} or Join\+Players\+When\+Join\+Action\+Is\+Triggered allows pairing a single device reliably to a player, additional devices that may be required by a control scheme will still get paired automatically out of the pool of available devices. This means that, for example, if a given player joins by clicking a mouse button ... \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespace_unity_engine_1_1_input_system_ada6c6990c08ec51f071b15c38295208a}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!PlayerNotifications@{PlayerNotifications}}
+\index{PlayerNotifications@{PlayerNotifications}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}
+\doxysubsubsection{\texorpdfstring{PlayerNotifications}{PlayerNotifications}}
+{\footnotesize\ttfamily \label{namespace_unity_engine_1_1_input_system_ada6c6990c08ec51f071b15c38295208a} 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ada6c6990c08ec51f071b15c38295208a}{Unity\+Engine.\+Input\+System.\+Player\+Notifications}}}
+
+
+
+Determines how the triggering of an action or other input-\/related events are relayed to other Game\+Objects. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SendMessages@{SendMessages}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!SendMessages@{SendMessages}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ada6c6990c08ec51f071b15c38295208aac1a6cc628d22efbf4e40b3efbb92289b}\label{namespace_unity_engine_1_1_input_system_ada6c6990c08ec51f071b15c38295208a} 
+Send\+Messages&Use Game\+Object.\+Send\+Message(string,object) to send a message to the Game\+Object that \doxylink{class_unity_engine_1_1_input_system_1_1_player_input}{Player\+Input} belongs to. The message name will be the name of the action (e.\+g. "{}\+Jump"{}; it will not include the action map name), and the object will be the \doxylink{class_unity_engine_1_1_input_system_1_1_player_input}{Player\+Input} on which the action was triggered.
+
+If the notification is for an action that was triggered, Send\+Message\+Options will be Send\+Message\+Options.\+Require\+Receiver (i.\+e. an error will be logged if there is no corresponding method). Otherwise it will be Send\+Message\+Options.\+Dont\+Require\+Receiver. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BroadcastMessages@{BroadcastMessages}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!BroadcastMessages@{BroadcastMessages}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ada6c6990c08ec51f071b15c38295208aa67a8a6d97e082d3a5515e8cadec50ba9}\label{namespace_unity_engine_1_1_input_system_ada6c6990c08ec51f071b15c38295208a} 
+Broadcast\+Messages&Like \doxylink{namespace_unity_engine_1_1_input_system_ada6c6990c08ec51f071b15c38295208aac1a6cc628d22efbf4e40b3efbb92289b}{Send\+Messages} but instead of using Game\+Object.\+Send\+Message(string,object), use Game\+Object.\+Broadcast\+Message(string,object). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InvokeUnityEvents@{InvokeUnityEvents}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!InvokeUnityEvents@{InvokeUnityEvents}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ada6c6990c08ec51f071b15c38295208aadd94afa5bf5eb0f3d9b5d743ab558494}\label{namespace_unity_engine_1_1_input_system_ada6c6990c08ec51f071b15c38295208a} 
+Invoke\+Unity\+Events&Have a separate \href{https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html}{\texttt{ Unity\+Event}} for each notification. Allows wiring up target methods to invoke such that the connection is persisted in \doxylink{namespace_unity}{Unity} serialized data. See \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_a9fe71cd547535944ae1ff7f191e3b094}{Player\+Input.\+action\+Events} and related callbacks such as \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_a1a9f72e8126924f6c8ac495206a43400}{Player\+Input.\+controls\+Changed\+Event}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InvokeCSharpEvents@{InvokeCSharpEvents}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!InvokeCSharpEvents@{InvokeCSharpEvents}}}\Hypertarget{namespace_unity_engine_1_1_input_system_ada6c6990c08ec51f071b15c38295208aad7284b8d3d1dc75f30062929a4d9e635}\label{namespace_unity_engine_1_1_input_system_ada6c6990c08ec51f071b15c38295208a} 
+Invoke\+CSharp\+Events&Use plain C\# callbacks. TODO\+: Kill \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespace_unity_engine_1_1_input_system_a586a6521911c62d23469e51a336d29db}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!TouchPhase@{TouchPhase}}
+\index{TouchPhase@{TouchPhase}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}
+\doxysubsubsection{\texorpdfstring{TouchPhase}{TouchPhase}}
+{\footnotesize\ttfamily \label{namespace_unity_engine_1_1_input_system_a586a6521911c62d23469e51a336d29db} 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a586a6521911c62d23469e51a336d29db}{Unity\+Engine.\+Input\+System.\+Touch\+Phase}}}
+
+
+
+Indicates where in its lifecycle a given touch is. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!None@{None}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a586a6521911c62d23469e51a336d29dba6adf97f83acf6453d4a6a4b1070f3754}\label{namespace_unity_engine_1_1_input_system_a586a6521911c62d23469e51a336d29db} 
+None&No activity has been registered on the touch yet. REVIEW\+: Why have a separate None instead of just making this equivalent to either Ended or Canceled?
+
+A given touch state will generally not go back to None once there has been input for it. Meaning that it generally indicates a default-\/initialized touch record. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Began@{Began}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Began@{Began}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a586a6521911c62d23469e51a336d29dba7b81520329371177ede3ccbc307bc85d}\label{namespace_unity_engine_1_1_input_system_a586a6521911c62d23469e51a336d29db} 
+Began&A touch has just begun, i.\+e. a finger has touched the screen.. Only the first touch input in any given touch will have this phase. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Moved@{Moved}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Moved@{Moved}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a586a6521911c62d23469e51a336d29dba95bfdefaaf01553cbf21ccd942855c69}\label{namespace_unity_engine_1_1_input_system_a586a6521911c62d23469e51a336d29db} 
+Moved&An ongoing touch has changed position. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ended@{Ended}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Ended@{Ended}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a586a6521911c62d23469e51a336d29dba0157fbb99be9622bdaa6e544270c0622}\label{namespace_unity_engine_1_1_input_system_a586a6521911c62d23469e51a336d29db} 
+Ended&An ongoing touch has just ended, i.\+e. the respective finger has been lifted off of the screen. Only the last touch input in a given touch will have this phase. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Canceled@{Canceled}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Canceled@{Canceled}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a586a6521911c62d23469e51a336d29dba0e22fe7d45f8e5632a4abf369b24e29c}\label{namespace_unity_engine_1_1_input_system_a586a6521911c62d23469e51a336d29db} 
+Canceled&An ongoing touch has been cancelled, i.\+e. ended in a way other than through user interaction. This happens, for example, if focus is moved away from the application while the touch is ongoing. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Stationary@{Stationary}!UnityEngine.InputSystem@{UnityEngine.InputSystem}}\index{UnityEngine.InputSystem@{UnityEngine.InputSystem}!Stationary@{Stationary}}}\Hypertarget{namespace_unity_engine_1_1_input_system_a586a6521911c62d23469e51a336d29dba5146a957bfa51752bd6020691fda598e}\label{namespace_unity_engine_1_1_input_system_a586a6521911c62d23469e51a336d29db} 
+Stationary&An ongoing touch has not been moved (not received any input) in a frame. This phase is not used by \doxylink{class_unity_engine_1_1_input_system_1_1_touchscreen}{Touchscreen}. This means that Touch\+Control will not generally return this value for \doxylink{class_unity_engine_1_1_input_system_1_1_controls_1_1_touch_control_ae10105e977a25050c71bdad2f78203c6}{Touch\+Control.\+phase}. It is, however, used by \doxylink{struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch}{Unity\+Engine.\+Input\+System.\+Enhanced\+Touch.\+Touch}. \\
+\hline
+
+\end{DoxyEnumFields}

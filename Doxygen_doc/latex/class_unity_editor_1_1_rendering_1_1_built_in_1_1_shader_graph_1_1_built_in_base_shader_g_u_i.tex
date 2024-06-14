@@ -1,0 +1,104 @@
+\doxysection{Unity\+Editor.\+Rendering.\+Built\+In.\+Shader\+Graph.\+Built\+In\+Base\+Shader\+GUI Class Reference}
+\hypertarget{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i}{}\label{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i}\index{UnityEditor.Rendering.BuiltIn.ShaderGraph.BuiltInBaseShaderGUI@{UnityEditor.Rendering.BuiltIn.ShaderGraph.BuiltInBaseShaderGUI}}
+Inheritance diagram for Unity\+Editor.\+Rendering.\+Built\+In.\+Shader\+Graph.\+Built\+In\+Base\+Shader\+GUI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.164948cm]{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_1_1_styles}{Styles}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_aed44f2293b1e4569e2e8aeadbf42c64f}\label{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_aed44f2293b1e4569e2e8aeadbf42c64f} 
+enum {\bfseries Surface\+Type} \{ {\bfseries Opaque}
+, {\bfseries Transparent}
+ \}
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_a4cb4448af75e4509d1fe9379bcbfcbf6}\label{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_a4cb4448af75e4509d1fe9379bcbfcbf6} 
+enum {\bfseries Blend\+Mode} \{ {\bfseries Alpha}
+, {\bfseries Premultiply}
+, {\bfseries Additive}
+, {\bfseries Multiply}
+ \}
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_ad60a6ecc3bc0ef133589eeda2a6fe5ae}\label{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_ad60a6ecc3bc0ef133589eeda2a6fe5ae} 
+enum {\bfseries Render\+Face} \{ {\bfseries Front} = 2
+, {\bfseries Back} = 1
+, {\bfseries Both} = 0
+ \}
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_a9ffa004271df7f2bf5698861481852b9}\label{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_a9ffa004271df7f2bf5698861481852b9} 
+enum {\bfseries Queue\+Control} \{ {\bfseries Auto} = 0
+, {\bfseries User\+Override} = 1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_a05a08325df375011b01f681bc4fe6a09}\label{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_a05a08325df375011b01f681bc4fe6a09} 
+override void {\bfseries On\+GUI} (Material\+Editor material\+Editor, Material\+Property\mbox{[}$\,$\mbox{]} properties)
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_a24af9eb2b782ebdc6c2121fccc173318}\label{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_a24af9eb2b782ebdc6c2121fccc173318} 
+virtual void {\bfseries On\+Open\+GUI} (Material material, Material\+Editor material\+Editor, Material\+Property\mbox{[}$\,$\mbox{]} properties)
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_a94fb7a6ffbc6c7228877d297df3b19dd}\label{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_a94fb7a6ffbc6c7228877d297df3b19dd} 
+override void {\bfseries Assign\+New\+Shader\+To\+Material} (Material material, Shader old\+Shader, Shader new\+Shader)
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_a5a27b21f8300ec83bb017cc56c718b3b}\label{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_a5a27b21f8300ec83bb017cc56c718b3b} 
+override void {\bfseries Validate\+Material} (Material material)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_a59e735978fdec8e050d9151de66acd80}\label{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_a59e735978fdec8e050d9151de66acd80} 
+static void {\bfseries Setup\+Surface} (Material material)
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_a90c7b01ab31372013590333cb8fc9c86}\label{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_a90c7b01ab31372013590333cb8fc9c86} 
+static void {\bfseries Do\+Popup} (GUIContent label, Material\+Editor material\+Editor, Material\+Property property, string\mbox{[}$\,$\mbox{]} options)
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_af5c7096cf935b0b50af055ab91ece5d1}\label{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_af5c7096cf935b0b50af055ab91ece5d1} 
+static void {\bfseries Do\+Int\+Popup} (GUIContent label, Material\+Editor material\+Editor, Material\+Property property, string\mbox{[}$\,$\mbox{]} options, int\mbox{[}$\,$\mbox{]} option\+Values)
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_aa16f3229f34d936e24321750ba489b0f}\label{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_aa16f3229f34d936e24321750ba489b0f} 
+static void {\bfseries Draw\+Float\+Toggle\+Property} (GUIContent styles, Material\+Property prop)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_a0d8f9ad73ad92a37d68107aa29a221c4}\label{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_a0d8f9ad73ad92a37d68107aa29a221c4} 
+bool {\bfseries m\+\_\+\+First\+Time\+Apply} = true
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_aef020cf220400986a97be4a4be802aa1}\label{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_aef020cf220400986a97be4a4be802aa1} 
+enum {\bfseries Expandable} \{ {\bfseries Surface\+Options} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0
+, {\bfseries Surface\+Inputs} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 1
+, {\bfseries Advanced} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 2
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_ac1de0160c7bd80e1ed760b2bef6fb0f5}\label{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_ac1de0160c7bd80e1ed760b2bef6fb0f5} 
+virtual void {\bfseries Draw\+Surface\+Options} (Material material)
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_aab4fe193422a53ff73cf633d55e45525}\label{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_aab4fe193422a53ff73cf633d55e45525} 
+virtual void {\bfseries Draw\+Surface\+Inputs} (Material material)
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_a56faa8e18c4ab569137551fee2adbb02}\label{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_a56faa8e18c4ab569137551fee2adbb02} 
+virtual void {\bfseries Draw\+Advanced\+Options} (Material material)
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_a93d17cdaf358cab1884c004a10e64929}\label{class_unity_editor_1_1_rendering_1_1_built_in_1_1_shader_graph_1_1_built_in_base_shader_g_u_i_a93d17cdaf358cab1884c004a10e64929} 
+void {\bfseries Draw\+Queue\+Offset\+Field} (Material\+Editor material\+Editor, Material material, Material\+Property\mbox{[}$\,$\mbox{]} properties)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+shadergraph@14.\+0.\+8/\+Editor/\+Generation/\+Targets/\+Built\+In/\+Editor/\+Shader\+GUI/Base\+Shader\+GUI.\+cs\end{DoxyCompactItemize}

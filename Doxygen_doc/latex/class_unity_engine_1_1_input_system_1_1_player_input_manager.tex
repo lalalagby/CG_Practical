@@ -1,0 +1,342 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Player\+Input\+Manager Class Reference}
+\hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager}{}\label{class_unity_engine_1_1_input_system_1_1_player_input_manager}\index{UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}}
+
+
+Manages joining and leaving of players.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Player\+Input\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_input_system_1_1_player_input_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_manager_1_1_player_joined_event}{Player\+Joined\+Event}}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_manager_1_1_player_left_event}{Player\+Left\+Event}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a92f309d6357ac416b1bc16d4dc96ad9b}{Enable\+Joining}} ()
+\begin{DoxyCompactList}\small\item\em Allow players to join the game based on \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a411817b2b1f04a8314c67af882d8ebb0}{join\+Behavior}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a78860b8e2b8b43877d4e47c678cf726a}{Disable\+Joining}} ()
+\begin{DoxyCompactList}\small\item\em Inhibit players from joining the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_manager_ae230bfc7d301a1eccf746bee63f25955}{Join\+Player\+From\+Action}} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context}{Input\+Action.\+Callback\+Context}} context)
+\begin{DoxyCompactList}\small\item\em Join a new player based on input received through an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager_ac4b8772d33ae96c53c86d59e95759476}\label{class_unity_engine_1_1_input_system_1_1_player_input_manager_ac4b8772d33ae96c53c86d59e95759476} 
+void {\bfseries Join\+Player\+From\+Action\+If\+Not\+Already\+Joined} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context}{Input\+Action.\+Callback\+Context}} context)
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input}{Player\+Input}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_manager_ad1601a14a5ff68625ca0b1cc5f7a2842}{Join\+Player}} (int player\+Index=-\/1, int split\+Screen\+Index=-\/1, string control\+Scheme=null, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}} pair\+With\+Device=null)
+\begin{DoxyCompactList}\small\item\em Spawn a new player from \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a3f2c8178079e721359611d8ace0641bb}{player\+Prefab}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input}{Player\+Input}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a2c72542515a4e058850c65ab792e9ac8}{Join\+Player}} (int player\+Index=-\/1, int split\+Screen\+Index=-\/1, string control\+Scheme=null, params \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}}\mbox{[}$\,$\mbox{]} pair\+With\+Devices)
+\begin{DoxyCompactList}\small\item\em Spawn a new player from \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a3f2c8178079e721359611d8ace0641bb}{player\+Prefab}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager_adbe5f8cbcd998c36b9d907675a21f025}\label{class_unity_engine_1_1_input_system_1_1_player_input_manager_adbe5f8cbcd998c36b9d907675a21f025} 
+const string {\bfseries Player\+Joined\+Message} = "{}On\+Player\+Joined"{}
+\begin{DoxyCompactList}\small\item\em Name of the message that is sent when a player joins the game. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager_a5611f087ed973ae7853abd86f4dbcb74}\label{class_unity_engine_1_1_input_system_1_1_player_input_manager_a5611f087ed973ae7853abd86f4dbcb74} 
+const string {\bfseries Player\+Left\+Message} = "{}On\+Player\+Left"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a0216b112d8f99837cc41fe2ec5a3ca90}{split\+Screen}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If enabled, each player will automatically be assigned a portion of the available screen area. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a0057043ca47a51f807f7a8752f0a5e41}{maintain\+Aspect\+Ratio\+In\+Split\+Screen}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a0216b112d8f99837cc41fe2ec5a3ca90}{split\+Screen} is enabled, this property determines whether subdividing the screen is allowed to produce screen areas that have an aspect ratio different from the screen resolution. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a277767d400b5fcbf8ffc78b4561a6b9b}{fixed\+Number\+Of\+Split\+Screens}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a0216b112d8f99837cc41fe2ec5a3ca90}{split\+Screen} is enabled, this property determines how many screen divisions there will be. \end{DoxyCompactList}\item 
+Rect \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_manager_af9a4c3f9edaa2397f06dfe37e36bbc44}{split\+Screen\+Area}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The normalized screen rectangle available for allocating player split-\/screens into. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a4bdc384049ab18fd074ac11e1afdb005}{player\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The current number of active players. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_manager_af00f644dedab36a26a3ec148d7818e75}{max\+Player\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Maximum number of players allowed concurrently in the game. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_manager_abfe072c89bf293c1bd7ef1cbb504779e}{joining\+Enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether new players can currently join. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a796c76b3780bf45a3f9701158d83e199}{Player\+Join\+Behavior}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a411817b2b1f04a8314c67af882d8ebb0}{join\+Behavior}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Determines the mechanism by which players can join when joining is enabled (\doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_abfe072c89bf293c1bd7ef1cbb504779e}{joining\+Enabled}). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property}{Input\+Action\+Property}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_manager_aa8072c7328e58c0b447d23c48b787a4f}{join\+Action}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The input action that a player must trigger to join the game. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager_adb2f2f0495d86b8e159ed86808dc300b}\label{class_unity_engine_1_1_input_system_1_1_player_input_manager_adb2f2f0495d86b8e159ed86808dc300b} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_ada6c6990c08ec51f071b15c38295208a}{Player\+Notifications}} {\bfseries notification\+Behavior}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager_a469cd7146ced569f2ced52261ca45f17}\label{class_unity_engine_1_1_input_system_1_1_player_input_manager_a469cd7146ced569f2ced52261ca45f17} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_manager_1_1_player_joined_event}{Player\+Joined\+Event}} {\bfseries player\+Joined\+Event}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager_a984d79e9ad34f4bc2a5a3df1c27c696b}\label{class_unity_engine_1_1_input_system_1_1_player_input_manager_a984d79e9ad34f4bc2a5a3df1c27c696b} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_manager_1_1_player_left_event}{Player\+Left\+Event}} {\bfseries player\+Left\+Event}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Game\+Object \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a3f2c8178079e721359611d8ace0641bb}{player\+Prefab}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Reference to the prefab that the manager will instantiate when players join. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_manager}{Player\+Input\+Manager}} \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_manager_afd72d04b452fa1aa4a4166634acb2860}{instance}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Singleton instance of the manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager_a5aa1379e9d7a303f9256575447243edb}\label{class_unity_engine_1_1_input_system_1_1_player_input_manager_a5aa1379e9d7a303f9256575447243edb} 
+Action$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input}{Player\+Input}} $>$ {\bfseries on\+Player\+Joined}\hspace{0.3cm}{\ttfamily  \mbox{[}add, remove\mbox{]}}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager_a7fc646350ceaf7b808f462c4e2632c2d}\label{class_unity_engine_1_1_input_system_1_1_player_input_manager_a7fc646350ceaf7b808f462c4e2632c2d} 
+Action$<$ \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input}{Player\+Input}} $>$ {\bfseries on\+Player\+Left}\hspace{0.3cm}{\ttfamily  \mbox{[}add, remove\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages joining and leaving of players. 
+
+This is a singleton component. Only one instance is meant to be active in a game at any one time. To retrieve the current instance, use \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_afd72d04b452fa1aa4a4166634acb2860}{instance}.
+
+Note that a \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager}{Player\+Input\+Manager} is not strictly required to have multiple \doxylink{class_unity_engine_1_1_input_system_1_1_player_input}{Player\+Input} components. What \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager}{Player\+Input\+Manager} provides is the implementation of specific player join mechanisms (\doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a411817b2b1f04a8314c67af882d8ebb0}{join\+Behavior}) as well as automatic assignment of split-\/screen areas (\doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a0216b112d8f99837cc41fe2ec5a3ca90}{split\+Screen}). However, you can always implement your own custom logic instead and simply instantiate multiple Game\+Objects with \doxylink{class_unity_engine_1_1_input_system_1_1_player_input}{Player\+Input} yourself. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager_a78860b8e2b8b43877d4e47c678cf726a}\index{UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}!DisableJoining@{DisableJoining}}
+\index{DisableJoining@{DisableJoining}!UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}}
+\doxysubsubsection{\texorpdfstring{DisableJoining()}{DisableJoining()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_player_input_manager_a78860b8e2b8b43877d4e47c678cf726a} 
+void Unity\+Engine.\+Input\+System.\+Player\+Input\+Manager.\+Disable\+Joining (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inhibit players from joining the game. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a92f309d6357ac416b1bc16d4dc96ad9b}{Enable\+Joining}, \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_abfe072c89bf293c1bd7ef1cbb504779e}{joining\+Enabled}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager_a92f309d6357ac416b1bc16d4dc96ad9b}\index{UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}!EnableJoining@{EnableJoining}}
+\index{EnableJoining@{EnableJoining}!UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}}
+\doxysubsubsection{\texorpdfstring{EnableJoining()}{EnableJoining()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_player_input_manager_a92f309d6357ac416b1bc16d4dc96ad9b} 
+void Unity\+Engine.\+Input\+System.\+Player\+Input\+Manager.\+Enable\+Joining (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Allow players to join the game based on \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a411817b2b1f04a8314c67af882d8ebb0}{join\+Behavior}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a78860b8e2b8b43877d4e47c678cf726a}{Disable\+Joining}, \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_abfe072c89bf293c1bd7ef1cbb504779e}{joining\+Enabled}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager_ad1601a14a5ff68625ca0b1cc5f7a2842}\index{UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}!JoinPlayer@{JoinPlayer}}
+\index{JoinPlayer@{JoinPlayer}!UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}}
+\doxysubsubsection{\texorpdfstring{JoinPlayer()}{JoinPlayer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_player_input_manager_ad1601a14a5ff68625ca0b1cc5f7a2842} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input}{Player\+Input}} Unity\+Engine.\+Input\+System.\+Player\+Input\+Manager.\+Join\+Player (\begin{DoxyParamCaption}\item[{int}]{player\+Index}{ = {\ttfamily -\/1}, }\item[{int}]{split\+Screen\+Index}{ = {\ttfamily -\/1}, }\item[{string}]{control\+Scheme}{ = {\ttfamily null}, }\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}}}]{pair\+With\+Device}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Spawn a new player from \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a3f2c8178079e721359611d8ace0641bb}{player\+Prefab}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Index} & Optional explicit \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_a0329c3768a5fa0002a0fbf60adf77b6f}{Player\+Input.\+player\+Index} to assign to the player. Must be unique within \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_abe687a04e529fb907da450c512dac90b}{Player\+Input.\+all}. If not supplied, a player index will be assigned automatically (smallest unused index will be used).\\
+\hline
+{\em split\+Screen\+Index} & Optional \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_a6304911dc7d378b3f26e3037c4766809}{Player\+Input.\+split\+Screen\+Index}. If supplied, this assigns a split-\/screen area to the player. For example, a split-\/screen index of \\
+\hline
+{\em control\+Scheme} & Control scheme to activate on the player (optional). If not supplied, a control scheme will be selected based on {\itshape pair\+With\+Device} . If no device is given either, the first control scheme that matches the currently available unpaired devices (see \doxylink{struct_unity_engine_1_1_input_system_1_1_users_1_1_input_user_a58ca5efe1c1eb78830b8850e02f84715}{Input\+User.\+Get\+Unpaired\+Input\+Devices()}) is used.\\
+\hline
+{\em pair\+With\+Device} & Device to pair to the player. Also determines which control scheme to use if {\itshape control\+Scheme}  is not given.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The newly instantiated player or {\ttfamily null} if joining failed.
+\end{DoxyReturn}
+
+
+Joining must be enabled (see \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_abfe072c89bf293c1bd7ef1cbb504779e}{joining\+Enabled}) or the method will fail.
+
+To pair multiple devices, use Join\+Player(int,int,string,\+Input\+Device\mbox{[}$\,$\mbox{]}). \Hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager_a2c72542515a4e058850c65ab792e9ac8}\index{UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}!JoinPlayer@{JoinPlayer}}
+\index{JoinPlayer@{JoinPlayer}!UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}}
+\doxysubsubsection{\texorpdfstring{JoinPlayer()}{JoinPlayer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_player_input_manager_a2c72542515a4e058850c65ab792e9ac8} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input}{Player\+Input}} Unity\+Engine.\+Input\+System.\+Player\+Input\+Manager.\+Join\+Player (\begin{DoxyParamCaption}\item[{int}]{player\+Index}{ = {\ttfamily -\/1}, }\item[{int}]{split\+Screen\+Index}{ = {\ttfamily -\/1}, }\item[{string}]{control\+Scheme}{ = {\ttfamily null}, }\item[{params \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}}\mbox{[}$\,$\mbox{]}}]{pair\+With\+Devices}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Spawn a new player from \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a3f2c8178079e721359611d8ace0641bb}{player\+Prefab}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Index} & Optional explicit \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_a0329c3768a5fa0002a0fbf60adf77b6f}{Player\+Input.\+player\+Index} to assign to the player. Must be unique within \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_abe687a04e529fb907da450c512dac90b}{Player\+Input.\+all}. If not supplied, a player index will be assigned automatically (smallest unused index will be used).\\
+\hline
+{\em split\+Screen\+Index} & Optional \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_a6304911dc7d378b3f26e3037c4766809}{Player\+Input.\+split\+Screen\+Index}. If supplied, this assigns a split-\/screen area to the player. For example, a split-\/screen index of \\
+\hline
+{\em control\+Scheme} & Control scheme to activate on the player (optional). If not supplied, a control scheme will be selected based on {\itshape pair\+With\+Devices} . If no device is given either, the first control scheme that matches the currently available unpaired devices (see \doxylink{struct_unity_engine_1_1_input_system_1_1_users_1_1_input_user_a58ca5efe1c1eb78830b8850e02f84715}{Input\+User.\+Get\+Unpaired\+Input\+Devices()}) is used.\\
+\hline
+{\em pair\+With\+Devices} & Devices to pair to the player. Also determines which control scheme to use if {\itshape control\+Scheme}  is not given.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The newly instantiated player or {\ttfamily null} if joining failed.
+\end{DoxyReturn}
+
+
+Joining must be enabled (see \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_abfe072c89bf293c1bd7ef1cbb504779e}{joining\+Enabled}) or the method will fail. \Hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager_ae230bfc7d301a1eccf746bee63f25955}\index{UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}!JoinPlayerFromAction@{JoinPlayerFromAction}}
+\index{JoinPlayerFromAction@{JoinPlayerFromAction}!UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}}
+\doxysubsubsection{\texorpdfstring{JoinPlayerFromAction()}{JoinPlayerFromAction()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_player_input_manager_ae230bfc7d301a1eccf746bee63f25955} 
+void Unity\+Engine.\+Input\+System.\+Player\+Input\+Manager.\+Join\+Player\+From\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context}{Input\+Action.\+Callback\+Context}}}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Join a new player based on input received through an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager_a277767d400b5fcbf8ffc78b4561a6b9b}\index{UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}!fixedNumberOfSplitScreens@{fixedNumberOfSplitScreens}}
+\index{fixedNumberOfSplitScreens@{fixedNumberOfSplitScreens}!UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}}
+\doxysubsubsection{\texorpdfstring{fixedNumberOfSplitScreens}{fixedNumberOfSplitScreens}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_player_input_manager_a277767d400b5fcbf8ffc78b4561a6b9b} 
+int Unity\+Engine.\+Input\+System.\+Player\+Input\+Manager.\+fixed\+Number\+Of\+Split\+Screens\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+If \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a0216b112d8f99837cc41fe2ec5a3ca90}{split\+Screen} is enabled, this property determines how many screen divisions there will be. 
+
+This is only used if \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a0216b112d8f99837cc41fe2ec5a3ca90}{split\+Screen} is true.
+
+By default this is set to -\/1 which means the screen will automatically be divided to best fit the current number of players i.\+e. the highest player index in \doxylink{class_unity_engine_1_1_input_system_1_1_player_input}{Player\+Input} \Hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager_afd72d04b452fa1aa4a4166634acb2860}\index{UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}!instance@{instance}}
+\index{instance@{instance}!UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_player_input_manager_afd72d04b452fa1aa4a4166634acb2860} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_player_input_manager}{Player\+Input\+Manager}} Unity\+Engine.\+Input\+System.\+Player\+Input\+Manager.\+instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+Singleton instance of the manager. 
+
+Singleton instance or null.\Hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager_aa8072c7328e58c0b447d23c48b787a4f}\index{UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}!joinAction@{joinAction}}
+\index{joinAction@{joinAction}!UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}}
+\doxysubsubsection{\texorpdfstring{joinAction}{joinAction}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_player_input_manager_aa8072c7328e58c0b447d23c48b787a4f} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_property}{Input\+Action\+Property}} Unity\+Engine.\+Input\+System.\+Player\+Input\+Manager.\+join\+Action\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The input action that a player must trigger to join the game. 
+
+If the join action is a reference to an existing input action, it will be cloned when the \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager}{Player\+Input\+Manager} is enabled. This avoids the situation where the join action can become disabled after the first user joins which can happen when the join action is the same as a player in-\/game action. When a player joins, input bindings from devices other than the device they joined with are disabled. If the join action had a binding for keyboard and one for gamepad for example, and the first player joined using the keyboard, the expectation is that the next player could still join by pressing the gamepad join button. Without the cloning behavior, the gamepad input would have been disabled.
+
+For more details about joining behavior, see \doxylink{class_unity_engine_1_1_input_system_1_1_player_input}{Player\+Input}. \Hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager_a411817b2b1f04a8314c67af882d8ebb0}\index{UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}!joinBehavior@{joinBehavior}}
+\index{joinBehavior@{joinBehavior}!UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}}
+\doxysubsubsection{\texorpdfstring{joinBehavior}{joinBehavior}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_player_input_manager_a411817b2b1f04a8314c67af882d8ebb0} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_a796c76b3780bf45a3f9701158d83e199}{Player\+Join\+Behavior}} Unity\+Engine.\+Input\+System.\+Player\+Input\+Manager.\+join\+Behavior\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Determines the mechanism by which players can join when joining is enabled (\doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_abfe072c89bf293c1bd7ef1cbb504779e}{joining\+Enabled}). 
+
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager_abfe072c89bf293c1bd7ef1cbb504779e}\index{UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}!joiningEnabled@{joiningEnabled}}
+\index{joiningEnabled@{joiningEnabled}!UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}}
+\doxysubsubsection{\texorpdfstring{joiningEnabled}{joiningEnabled}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_player_input_manager_abfe072c89bf293c1bd7ef1cbb504779e} 
+bool Unity\+Engine.\+Input\+System.\+Player\+Input\+Manager.\+joining\+Enabled\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Whether new players can currently join. 
+
+While this is true, new players can join via the mechanism determined by \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a411817b2b1f04a8314c67af882d8ebb0}{join\+Behavior}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a92f309d6357ac416b1bc16d4dc96ad9b}{Enable\+Joining}, \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a78860b8e2b8b43877d4e47c678cf726a}{Disable\+Joining}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager_a0057043ca47a51f807f7a8752f0a5e41}\index{UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}!maintainAspectRatioInSplitScreen@{maintainAspectRatioInSplitScreen}}
+\index{maintainAspectRatioInSplitScreen@{maintainAspectRatioInSplitScreen}!UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}}
+\doxysubsubsection{\texorpdfstring{maintainAspectRatioInSplitScreen}{maintainAspectRatioInSplitScreen}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_player_input_manager_a0057043ca47a51f807f7a8752f0a5e41} 
+bool Unity\+Engine.\+Input\+System.\+Player\+Input\+Manager.\+maintain\+Aspect\+Ratio\+In\+Split\+Screen\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+If \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a0216b112d8f99837cc41fe2ec5a3ca90}{split\+Screen} is enabled, this property determines whether subdividing the screen is allowed to produce screen areas that have an aspect ratio different from the screen resolution. 
+
+REVIEW\+: we probably need support for filling unused screen areas automatically
+
+By default, when \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a0216b112d8f99837cc41fe2ec5a3ca90}{split\+Screen} is enabled, the manager will add or remove screen subdivisions in steps of two. This means that when, for example, the second player is added, the screen will be subdivided into a left and a right screen area; the left one allocated to the first player and the right one allocated to the second player.
+
+This behavior makes optimal use of screen real estate but will result in screen areas that have aspect ratios different from the screen resolution. If this is not acceptable, this property can be set to true to enforce split-\/screen to only create screen areas that have the same aspect ratio of the screen.
+
+This results in the screen being subdivided more aggressively. When, for example, a second player is added, the screen will immediately be divided into a four-\/way split-\/screen setup with the lower two screen areas not being used.
+
+This property is irrelevant if \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a277767d400b5fcbf8ffc78b4561a6b9b}{fixed\+Number\+Of\+Split\+Screens} is used. \Hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager_af00f644dedab36a26a3ec148d7818e75}\index{UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}!maxPlayerCount@{maxPlayerCount}}
+\index{maxPlayerCount@{maxPlayerCount}!UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}}
+\doxysubsubsection{\texorpdfstring{maxPlayerCount}{maxPlayerCount}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_player_input_manager_af00f644dedab36a26a3ec148d7818e75} 
+int Unity\+Engine.\+Input\+System.\+Player\+Input\+Manager.\+max\+Player\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Maximum number of players allowed concurrently in the game. 
+
+FIXME\+: this needs to be settable
+
+If this limit is reached, joining is turned off automatically.
+
+By default this is set to -\/1. Any negative value deactivates the player limit and allows arbitrary many players to join. \Hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager_a4bdc384049ab18fd074ac11e1afdb005}\index{UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}!playerCount@{playerCount}}
+\index{playerCount@{playerCount}!UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}}
+\doxysubsubsection{\texorpdfstring{playerCount}{playerCount}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_player_input_manager_a4bdc384049ab18fd074ac11e1afdb005} 
+int Unity\+Engine.\+Input\+System.\+Player\+Input\+Manager.\+player\+Count\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The current number of active players. 
+
+This count corresponds to all \doxylink{class_unity_engine_1_1_input_system_1_1_player_input}{Player\+Input} instances that are currently enabled. \Hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager_a3f2c8178079e721359611d8ace0641bb}\index{UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}!playerPrefab@{playerPrefab}}
+\index{playerPrefab@{playerPrefab}!UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}}
+\doxysubsubsection{\texorpdfstring{playerPrefab}{playerPrefab}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_player_input_manager_a3f2c8178079e721359611d8ace0641bb} 
+Game\+Object Unity\+Engine.\+Input\+System.\+Player\+Input\+Manager.\+player\+Prefab\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Reference to the prefab that the manager will instantiate when players join. 
+
+Prefab to instantiate for new players.\Hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager_a0216b112d8f99837cc41fe2ec5a3ca90}\index{UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}!splitScreen@{splitScreen}}
+\index{splitScreen@{splitScreen}!UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}}
+\doxysubsubsection{\texorpdfstring{splitScreen}{splitScreen}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_player_input_manager_a0216b112d8f99837cc41fe2ec5a3ca90} 
+bool Unity\+Engine.\+Input\+System.\+Player\+Input\+Manager.\+split\+Screen\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+If enabled, each player will automatically be assigned a portion of the available screen area. 
+
+For this to work, each \doxylink{class_unity_engine_1_1_input_system_1_1_player_input}{Player\+Input} component must have an associated Camera object through \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_ab9a2a50b891c1a3b550221879cbcbe0e}{Player\+Input.\+camera}.
+
+Note that as player join, the screen may be increasingly subdivided and players may see their previous screen area getting resized. \Hypertarget{class_unity_engine_1_1_input_system_1_1_player_input_manager_af9a4c3f9edaa2397f06dfe37e36bbc44}\index{UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}!splitScreenArea@{splitScreenArea}}
+\index{splitScreenArea@{splitScreenArea}!UnityEngine.InputSystem.PlayerInputManager@{UnityEngine.InputSystem.PlayerInputManager}}
+\doxysubsubsection{\texorpdfstring{splitScreenArea}{splitScreenArea}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_player_input_manager_af9a4c3f9edaa2397f06dfe37e36bbc44} 
+Rect Unity\+Engine.\+Input\+System.\+Player\+Input\+Manager.\+split\+Screen\+Area\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The normalized screen rectangle available for allocating player split-\/screens into. 
+
+This is only used if \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager_a0216b112d8f99837cc41fe2ec5a3ca90}{split\+Screen} is true.
+
+By default it is set to {\ttfamily (0,0,1,1)}, i.\+e. the entire screen area will be used for player screens. If, for example, part of the screen should display a UI/information shared by all players, this property can be used to cut off the area and not have it used by \doxylink{class_unity_engine_1_1_input_system_1_1_player_input_manager}{Player\+Input\+Manager}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Plugins/\+Player\+Input/Player\+Input\+Manager.\+cs\end{DoxyCompactItemize}

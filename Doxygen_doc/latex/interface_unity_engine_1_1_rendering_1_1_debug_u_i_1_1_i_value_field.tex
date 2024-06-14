@@ -1,0 +1,91 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Debug\+UI.\+IValue\+Field Interface Reference}
+\hypertarget{interface_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_i_value_field}{}\label{interface_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_i_value_field}\index{UnityEngine.Rendering.DebugUI.IValueField@{UnityEngine.Rendering.DebugUI.IValueField}}
+
+
+Any widget that implements this will be considered for serialization (only if the setter is set and thus is not read-\/only)  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Debug\+UI.\+IValue\+Field\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.716475cm]{interface_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_i_value_field}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+object \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_i_value_field_a272591df3863ef5aabb9bfe21df80f12}{Get\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Return the value of the field. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_i_value_field_afe4d629766490b55e1f5e99425895777}{Set\+Value}} (object value)
+\begin{DoxyCompactList}\small\item\em Set the value of the field. \end{DoxyCompactList}\item 
+object \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_i_value_field_acfa3ce0141c8654ba874eec5022cbe93}{Validate\+Value}} (object value)
+\begin{DoxyCompactList}\small\item\em Function used to validate the value when setting it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Any widget that implements this will be considered for serialization (only if the setter is set and thus is not read-\/only) 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_i_value_field_a272591df3863ef5aabb9bfe21df80f12}\index{UnityEngine.Rendering.DebugUI.IValueField@{UnityEngine.Rendering.DebugUI.IValueField}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!UnityEngine.Rendering.DebugUI.IValueField@{UnityEngine.Rendering.DebugUI.IValueField}}
+\doxysubsubsection{\texorpdfstring{GetValue()}{GetValue()}}
+{\footnotesize\ttfamily \label{interface_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_i_value_field_a272591df3863ef5aabb9bfe21df80f12} 
+object Unity\+Engine.\+Rendering.\+Debug\+UI.\+IValue\+Field.\+Get\+Value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Return the value of the field. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_value}{Value} of the field.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_field_ac598cfe5609c41e8d014a73cc5b9effa}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Field$<$ T $>$}}, and \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_foldout_a3fe6ef571bb57eeaca1b9b736d8dd1c0}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Foldout}}.
+
+\Hypertarget{interface_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_i_value_field_afe4d629766490b55e1f5e99425895777}\index{UnityEngine.Rendering.DebugUI.IValueField@{UnityEngine.Rendering.DebugUI.IValueField}!SetValue@{SetValue}}
+\index{SetValue@{SetValue}!UnityEngine.Rendering.DebugUI.IValueField@{UnityEngine.Rendering.DebugUI.IValueField}}
+\doxysubsubsection{\texorpdfstring{SetValue()}{SetValue()}}
+{\footnotesize\ttfamily \label{interface_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_i_value_field_afe4d629766490b55e1f5e99425895777} 
+void Unity\+Engine.\+Rendering.\+Debug\+UI.\+IValue\+Field.\+Set\+Value (\begin{DoxyParamCaption}\item[{object}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Set the value of the field. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Input value.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_field_af6074bfc4d8edcce53eaddd390aa4ceb}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Field$<$ T $>$}}, and \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_foldout_a8e64067c72db8b5d3a2ed64f84556b79}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Foldout}}.
+
+\Hypertarget{interface_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_i_value_field_acfa3ce0141c8654ba874eec5022cbe93}\index{UnityEngine.Rendering.DebugUI.IValueField@{UnityEngine.Rendering.DebugUI.IValueField}!ValidateValue@{ValidateValue}}
+\index{ValidateValue@{ValidateValue}!UnityEngine.Rendering.DebugUI.IValueField@{UnityEngine.Rendering.DebugUI.IValueField}}
+\doxysubsubsection{\texorpdfstring{ValidateValue()}{ValidateValue()}}
+{\footnotesize\ttfamily \label{interface_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_i_value_field_acfa3ce0141c8654ba874eec5022cbe93} 
+object Unity\+Engine.\+Rendering.\+Debug\+UI.\+IValue\+Field.\+Validate\+Value (\begin{DoxyParamCaption}\item[{object}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Function used to validate the value when setting it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_debug_u_i_1_1_foldout_a9590caf20a75d2ab5881b26b307b4b60}{Unity\+Engine.\+Rendering.\+Debug\+UI.\+Foldout}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Debugging/Debug\+UI.\+cs\end{DoxyCompactItemize}

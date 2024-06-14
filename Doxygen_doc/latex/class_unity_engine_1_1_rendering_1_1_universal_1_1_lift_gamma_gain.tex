@@ -1,0 +1,126 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Universal.\+Lift\+Gamma\+Gain Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_lift_gamma_gain}{}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_lift_gamma_gain}\index{UnityEngine.Rendering.Universal.LiftGammaGain@{UnityEngine.Rendering.Universal.LiftGammaGain}}
+
+
+A volume component that holds settings for the Split Toning effect.  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Universal.\+Lift\+Gamma\+Gain\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.427746cm]{class_unity_engine_1_1_rendering_1_1_universal_1_1_lift_gamma_gain}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_lift_gamma_gain_a1959fc47614e538f7a426a8002efa433}{Is\+Active}} ()
+\begin{DoxyCompactList}\small\item\em Tells if the post process needs to be rendered or not.
+
+\begin{DoxyReturn}{Returns}
+True if the component is active, otherwise false.
+\end{DoxyReturn}
+ \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_lift_gamma_gain_ac8b260eb946f33442a8311cf1d9e2235}{Is\+Tile\+Compatible}} ()
+\begin{DoxyCompactList}\small\item\em Tells if the post process can run the effect on-\/tile or if it needs a full pass.
+
+\begin{DoxyReturn}{Returns}
+True if it can run on-\/tile, otherwise false.
+\end{DoxyReturn}
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Unity\+Engine.\+Rendering.\+Volume\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_a9d4f76f7cb2a843be7e947ee7cd9fd86}{Override}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component}} state, float interp\+Factor)
+\begin{DoxyCompactList}\small\item\em Interpolates a \doxylink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component} with this component by an interpolation factor and puts the result back into the given \doxylink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_a28e604e4bea241b469d10eaf0d7aca05}{Set\+All\+Overrides\+To}} (bool state)
+\begin{DoxyCompactList}\small\item\em Sets the state of all the overrides on this component to a given value. \end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_ae2bbeaecf77f5806e9a2b6407037356c}{Get\+Hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em A custom hashing function that \doxylink{namespace_unity}{Unity} uses to compare the state of parameters. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_a54586fce4a8f74cea39827af82cd873c}{Any\+Properties\+Is\+Overridden}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if any of the volume properites has been overridden. \end{DoxyCompactList}\item 
+void {\bfseries Release} ()
+\begin{DoxyCompactList}\small\item\em Releases all the allocated resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_lift_gamma_gain_acb4b2f1fe02ef1ce20bc85d30b10bb9e}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_lift_gamma_gain_acb4b2f1fe02ef1ce20bc85d30b10bb9e} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_vector4_parameter}{Vector4\+Parameter}} {\bfseries lift} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_vector4_parameter}{Vector4\+Parameter}}(new Vector4(1f, 1f, 1f, 0f))
+\begin{DoxyCompactList}\small\item\em Use this to control and apply a hue to the dark tones. This has a more exaggerated effect on shadows. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_lift_gamma_gain_a716b55b154104ddca3b086babdad9647}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_lift_gamma_gain_a716b55b154104ddca3b086babdad9647} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_vector4_parameter}{Vector4\+Parameter}} {\bfseries gamma} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_vector4_parameter}{Vector4\+Parameter}}(new Vector4(1f, 1f, 1f, 0f))
+\begin{DoxyCompactList}\small\item\em Use this to control and apply a hue to the mid-\/range tones with a power function. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_lift_gamma_gain_aedf5ad2b0fa451c8a78ddfaa19d2f1a4}\label{class_unity_engine_1_1_rendering_1_1_universal_1_1_lift_gamma_gain_aedf5ad2b0fa451c8a78ddfaa19d2f1a4} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_vector4_parameter}{Vector4\+Parameter}} {\bfseries gain} = new \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_vector4_parameter}{Vector4\+Parameter}}(new Vector4(1f, 1f, 1f, 0f))
+\begin{DoxyCompactList}\small\item\em Use this to increase and apply a hue to the signal and make highlights brighter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Unity\+Engine.\+Rendering.\+Volume\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries active} = true
+\begin{DoxyCompactList}\small\item\em The active state of the set of parameters defined in this class. You can use this to quickly turn on or off all the overrides at once. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Unity\+Engine.\+Rendering.\+Volume\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component_ab69d6656bb7f4922fb99724f562e6215}{On\+Enable}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity}{Unity} calls this method when it loads the class. \end{DoxyCompactList}\item 
+virtual void {\bfseries On\+Disable} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity}{Unity} calls this method when the object goes out of scope. \end{DoxyCompactList}\item 
+virtual void {\bfseries On\+Destroy} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{namespace_unity}{Unity} calls this method before the object is destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_component}{Unity\+Engine.\+Rendering.\+Volume\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries display\+Name} = "{}"{}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The name displayed in the component header. If you do not set a name, \doxylink{namespace_unity}{Unity} generates one from the class name automatically. \end{DoxyCompactList}\item 
+Read\+Only\+Collection$<$ \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}} $>$ {\bfseries parameters}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A read-\/only collection of all the \doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}s defined in this class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A volume component that holds settings for the Split Toning effect. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_lift_gamma_gain_a1959fc47614e538f7a426a8002efa433}\index{UnityEngine.Rendering.Universal.LiftGammaGain@{UnityEngine.Rendering.Universal.LiftGammaGain}!IsActive@{IsActive}}
+\index{IsActive@{IsActive}!UnityEngine.Rendering.Universal.LiftGammaGain@{UnityEngine.Rendering.Universal.LiftGammaGain}}
+\doxysubsubsection{\texorpdfstring{IsActive()}{IsActive()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_lift_gamma_gain_a1959fc47614e538f7a426a8002efa433} 
+bool Unity\+Engine.\+Rendering.\+Universal.\+Lift\+Gamma\+Gain.\+Is\+Active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tells if the post process needs to be rendered or not.
+
+\begin{DoxyReturn}{Returns}
+True if the component is active, otherwise false.
+\end{DoxyReturn}
+ 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_universal_1_1_i_post_process_component_a8723bf5375b789d8c1c43ad9a6fd2acf}{Unity\+Engine.\+Rendering.\+Universal.\+IPost\+Process\+Component}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_universal_1_1_lift_gamma_gain_ac8b260eb946f33442a8311cf1d9e2235}\index{UnityEngine.Rendering.Universal.LiftGammaGain@{UnityEngine.Rendering.Universal.LiftGammaGain}!IsTileCompatible@{IsTileCompatible}}
+\index{IsTileCompatible@{IsTileCompatible}!UnityEngine.Rendering.Universal.LiftGammaGain@{UnityEngine.Rendering.Universal.LiftGammaGain}}
+\doxysubsubsection{\texorpdfstring{IsTileCompatible()}{IsTileCompatible()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_universal_1_1_lift_gamma_gain_ac8b260eb946f33442a8311cf1d9e2235} 
+bool Unity\+Engine.\+Rendering.\+Universal.\+Lift\+Gamma\+Gain.\+Is\+Tile\+Compatible (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Tells if the post process can run the effect on-\/tile or if it needs a full pass.
+
+\begin{DoxyReturn}{Returns}
+True if it can run on-\/tile, otherwise false.
+\end{DoxyReturn}
+ 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_universal_1_1_i_post_process_component_a60383c6e1861a6ae97c3df772b711dbb}{Unity\+Engine.\+Rendering.\+Universal.\+IPost\+Process\+Component}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/\+Overrides/Lift\+Gamma\+Gain.\+cs\end{DoxyCompactItemize}

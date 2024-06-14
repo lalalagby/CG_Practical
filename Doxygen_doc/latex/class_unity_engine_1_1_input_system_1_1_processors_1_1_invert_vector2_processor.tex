@@ -1,0 +1,103 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Processors.\+Invert\+Vector2\+Processor Class Reference}
+\hypertarget{class_unity_engine_1_1_input_system_1_1_processors_1_1_invert_vector2_processor}{}\label{class_unity_engine_1_1_input_system_1_1_processors_1_1_invert_vector2_processor}\index{UnityEngine.InputSystem.Processors.InvertVector2Processor@{UnityEngine.InputSystem.Processors.InvertVector2Processor}}
+
+
+Inverts the {\ttfamily x} and/or {\ttfamily y} channel of a {\ttfamily Vector2}.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Processors.\+Invert\+Vector2\+Processor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_input_system_1_1_processors_1_1_invert_vector2_processor}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override Vector2 \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_processors_1_1_invert_vector2_processor_a643541cc588099809deb9da1553e844d}{Process}} (Vector2 value, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\begin{DoxyCompactList}\small\item\em Invert the {\ttfamily x} and/or {\ttfamily y} channel of the given {\itshape value} . \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_processors_1_1_invert_vector2_processor_ac3fb77b02a71284fc3861018dfa15a5c}\label{class_unity_engine_1_1_input_system_1_1_processors_1_1_invert_vector2_processor_ac3fb77b02a71284fc3861018dfa15a5c} 
+override string {\bfseries To\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor}{Unity\+Engine.\+Input\+System.\+Input\+Processor$<$ Vector2 $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+object \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_a7762d91b35f73fc86ac113d932c63d9d}{Process\+As\+Object}} (object value, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\begin{DoxyCompactList}\small\item\em Process an input value, given as an object, and return the processed value as an object. \end{DoxyCompactList}\item 
+override object {\bfseries Process\+As\+Object} (object value, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\item 
+unsafe void \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_aad6626f4dc89adb27730b40b03a6e6a7}{Process}} (void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\begin{DoxyCompactList}\small\item\em Process an input value stored in the given memory buffer. \end{DoxyCompactList}\item 
+TValue \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_a2601fec536ab556a5cdc97cb90ee9751}{Process}} (TValue value, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\begin{DoxyCompactList}\small\item\em Process the given value and return the result. \end{DoxyCompactList}\item 
+override unsafe void {\bfseries Process} (void \texorpdfstring{$\ast$}{*}buffer, int buffer\+Size, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_processors_1_1_invert_vector2_processor_a297b111773e13f6d0d18cdd0f34ead7f}\label{class_unity_engine_1_1_input_system_1_1_processors_1_1_invert_vector2_processor_a297b111773e13f6d0d18cdd0f34ead7f} 
+bool {\bfseries invertX} = true
+\begin{DoxyCompactList}\small\item\em If true, the {\ttfamily x} channel of the {\ttfamily Vector2} input value is inverted. True by default. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_processors_1_1_invert_vector2_processor_a317be7d5421f15a7742c4fd56220633e}\label{class_unity_engine_1_1_input_system_1_1_processors_1_1_invert_vector2_processor_a317be7d5421f15a7742c4fd56220633e} 
+bool {\bfseries invertY} = true
+\begin{DoxyCompactList}\small\item\em If true, the {\ttfamily y} channel of the {\ttfamily Vector2} input value is inverted. True by default. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor}{Unity\+Engine.\+Input\+System.\+Input\+Processor$<$ Vector2 $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4}\label{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4} 
+enum \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4}{Caching\+Policy}} 
+\begin{DoxyCompactList}\small\item\em Caching policy regarding usage of return value from processors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor}{Unity\+Engine.\+Input\+System.\+Input\+Processor$<$ Vector2 $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_processor_a9b5e79d60f62a8c8a5040d96fe207fa4}{Caching\+Policy}} {\bfseries caching\+Policy}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Caching policy of the processor. Override this property to provide a different value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Inverts the {\ttfamily x} and/or {\ttfamily y} channel of a {\ttfamily Vector2}. 
+
+This process is registered (see Input\+System.\+Register\+Processor$<$\+T$>$ as "{}invert\+Vector2"{} by default.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Bind\ to\ the\ left\ stick\ on\ the\ gamepad\ such\ that\ its\ Y\ channel\ is\ inverted.}}
+\DoxyCodeLine{\textcolor{keyword}{new}\ InputAction(binding:\ \textcolor{stringliteral}{"{}<Gamepad>/leftStick"{}},\ processors=\textcolor{stringliteral}{"{}invertVector2(invertY,invertX=false)"{}});}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_processors_1_1_invert_vector3_processor}{Invert\+Vector3\+Processor}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_input_system_1_1_processors_1_1_invert_vector2_processor_a643541cc588099809deb9da1553e844d}\index{UnityEngine.InputSystem.Processors.InvertVector2Processor@{UnityEngine.InputSystem.Processors.InvertVector2Processor}!Process@{Process}}
+\index{Process@{Process}!UnityEngine.InputSystem.Processors.InvertVector2Processor@{UnityEngine.InputSystem.Processors.InvertVector2Processor}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_input_system_1_1_processors_1_1_invert_vector2_processor_a643541cc588099809deb9da1553e844d} 
+override Vector2 Unity\+Engine.\+Input\+System.\+Processors.\+Invert\+Vector2\+Processor.\+Process (\begin{DoxyParamCaption}\item[{Vector2}]{value}{, }\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}}]{control}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Invert the {\ttfamily x} and/or {\ttfamily y} channel of the given {\itshape value} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Input value.\\
+\hline
+{\em control} & Ignored.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector2 with inverted channels.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Controls/\+Processors/Invert\+Vector2\+Processor.\+cs\end{DoxyCompactItemize}

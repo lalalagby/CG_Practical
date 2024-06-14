@@ -1,0 +1,194 @@
+\doxysection{Unity\+Engine.\+Rendering.\+RTHandle Class Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle}{}\label{class_unity_engine_1_1_rendering_1_1_r_t_handle}\index{UnityEngine.Rendering.RTHandle@{UnityEngine.Rendering.RTHandle}}
+
+
+A \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} is a Render\+Texture that scales automatically with the camera size. This allows proper reutilization of Render\+Texture memory when different cameras with various sizes are used during rendering. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle_system}{RTHandle\+System}
+
+
+\end{DoxySeeAlso}
+ 
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle_a4d750846a7b66269bf2daf8d7387700d}{Set\+Custom\+Handle\+Properties}} (in \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_r_t_handle_properties}{RTHandle\+Properties}} properties)
+\begin{DoxyCompactList}\small\item\em By default, rt\+Handle\+Properties gets the global state of scalers against the global reference mode. This method lets the current \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} use a local custom \doxylink{struct_unity_engine_1_1_rendering_1_1_r_t_handle_properties}{RTHandle\+Properties}. This function is being used by scalers such as TAAU and DLSS, which require to have a different resolution for color (independent of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle_system}{RTHandle\+System}). \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_a2010162ee53ddaa5a753e216d9d96d5d}\label{class_unity_engine_1_1_rendering_1_1_r_t_handle_a2010162ee53ddaa5a753e216d9d96d5d} 
+void {\bfseries Clear\+Custom\+Handle\+Properties} ()
+\begin{DoxyCompactList}\small\item\em Method that clears any custom handle property being set. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle_aeb4fb12b1a11358075299fa613c76239}{Get\+Instance\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Get the Instance ID of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_a54dcb7d7d149714fa8d80c9f68046f12}\label{class_unity_engine_1_1_rendering_1_1_r_t_handle_a54dcb7d7d149714fa8d80c9f68046f12} 
+void {\bfseries Release} ()
+\begin{DoxyCompactList}\small\item\em Release the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}. \end{DoxyCompactList}\item 
+Vector2\+Int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle_ae328bc0ae75120161ba05c5c50e77ae1}{Get\+Scaled\+Size}} (Vector2\+Int ref\+Size)
+\begin{DoxyCompactList}\small\item\em Return the input size, scaled by the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} scale factor. \end{DoxyCompactList}\item 
+Vector2\+Int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle_a10312798bd894d7b5fc45a62c0db778c}{Get\+Scaled\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Return the scaled size of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static implicit \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle_a1e31f1a184b95cdf87d3cb8c9840b20f}{operator Render\+Target\+Identifier}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} handle)
+\begin{DoxyCompactList}\small\item\em Implicit conversion operator to Render\+Target\+Identifier. \end{DoxyCompactList}\item 
+static implicit \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle_a54be2e9127fbc36b11049362d4526b24}{operator Texture}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} handle)
+\begin{DoxyCompactList}\small\item\em Implicit conversion operator to Texture. \end{DoxyCompactList}\item 
+static implicit \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle_a3b0b825a0f98af45a48ece5378feb615}{operator Render\+Texture}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}} handle)
+\begin{DoxyCompactList}\small\item\em Implicit conversion operator to Render\+Texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_a042927a756d4db1216f065e48dd9d55c}\label{class_unity_engine_1_1_rendering_1_1_r_t_handle_a042927a756d4db1216f065e48dd9d55c} 
+Vector2 {\bfseries scale\+Factor}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Scale factor applied to the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} reference size. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_a84a2671be7864c9191be8ba1046d83bd}\label{class_unity_engine_1_1_rendering_1_1_r_t_handle_a84a2671be7864c9191be8ba1046d83bd} 
+bool {\bfseries use\+Scaling}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} uses automatic scaling. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_a99354f91c1e7cf4b01c931a582cc843a}\label{class_unity_engine_1_1_rendering_1_1_r_t_handle_a99354f91c1e7cf4b01c931a582cc843a} 
+Vector2\+Int {\bfseries reference\+Size}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Reference size of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} \doxylink{namespace_system}{System} associated with the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_a558321fcf0ae751a04e2117259c3aa11}\label{class_unity_engine_1_1_rendering_1_1_r_t_handle_a558321fcf0ae751a04e2117259c3aa11} 
+\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_r_t_handle_properties}{RTHandle\+Properties}} {\bfseries rt\+Handle\+Properties}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Current properties of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} \doxylink{namespace_system}{System}. If a custom property has been set through Set\+Custom\+Handle\+Properties method, it will be used that one instead. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_a810420dcc00f42513ad760062f886095}\label{class_unity_engine_1_1_rendering_1_1_r_t_handle_a810420dcc00f42513ad760062f886095} 
+Render\+Texture {\bfseries rt}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Render\+Texture associated with the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_a8321dd19f6b427d6281cc670eef9cbf6}\label{class_unity_engine_1_1_rendering_1_1_r_t_handle_a8321dd19f6b427d6281cc670eef9cbf6} 
+Render\+Target\+Identifier {\bfseries name\+ID}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Render\+Target\+Identifier associated with the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_a37011f9b9dd05dcfaa85bf937b936a4d}\label{class_unity_engine_1_1_rendering_1_1_r_t_handle_a37011f9b9dd05dcfaa85bf937b936a4d} 
+string {\bfseries name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Name of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_a5dfb3245ecf84e88389994e800f91445}\label{class_unity_engine_1_1_rendering_1_1_r_t_handle_a5dfb3245ecf84e88389994e800f91445} 
+bool {\bfseries is\+MSAAEnabled}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true is MSAA is enabled, false otherwise. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} is a Render\+Texture that scales automatically with the camera size. This allows proper reutilization of Render\+Texture memory when different cameras with various sizes are used during rendering. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle_system}{RTHandle\+System}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_aeb4fb12b1a11358075299fa613c76239}\index{UnityEngine.Rendering.RTHandle@{UnityEngine.Rendering.RTHandle}!GetInstanceID@{GetInstanceID}}
+\index{GetInstanceID@{GetInstanceID}!UnityEngine.Rendering.RTHandle@{UnityEngine.Rendering.RTHandle}}
+\doxysubsubsection{\texorpdfstring{GetInstanceID()}{GetInstanceID()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_r_t_handle_aeb4fb12b1a11358075299fa613c76239} 
+int Unity\+Engine.\+Rendering.\+RTHandle.\+Get\+Instance\+ID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Instance ID of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}. 
+
+\begin{DoxyReturn}{Returns}
+The \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} Instance ID.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_a10312798bd894d7b5fc45a62c0db778c}\index{UnityEngine.Rendering.RTHandle@{UnityEngine.Rendering.RTHandle}!GetScaledSize@{GetScaledSize}}
+\index{GetScaledSize@{GetScaledSize}!UnityEngine.Rendering.RTHandle@{UnityEngine.Rendering.RTHandle}}
+\doxysubsubsection{\texorpdfstring{GetScaledSize()}{GetScaledSize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_r_t_handle_a10312798bd894d7b5fc45a62c0db778c} 
+Vector2\+Int Unity\+Engine.\+Rendering.\+RTHandle.\+Get\+Scaled\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the scaled size of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}. 
+
+\begin{DoxyReturn}{Returns}
+The scaled size of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_ae328bc0ae75120161ba05c5c50e77ae1}\index{UnityEngine.Rendering.RTHandle@{UnityEngine.Rendering.RTHandle}!GetScaledSize@{GetScaledSize}}
+\index{GetScaledSize@{GetScaledSize}!UnityEngine.Rendering.RTHandle@{UnityEngine.Rendering.RTHandle}}
+\doxysubsubsection{\texorpdfstring{GetScaledSize()}{GetScaledSize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_r_t_handle_ae328bc0ae75120161ba05c5c50e77ae1} 
+Vector2\+Int Unity\+Engine.\+Rendering.\+RTHandle.\+Get\+Scaled\+Size (\begin{DoxyParamCaption}\item[{Vector2\+Int}]{ref\+Size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the input size, scaled by the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} scale factor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ref\+Size} & Input size\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Input size scaled by the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} scale factor.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_a1e31f1a184b95cdf87d3cb8c9840b20f}\index{UnityEngine.Rendering.RTHandle@{UnityEngine.Rendering.RTHandle}!operator RenderTargetIdentifier@{operator RenderTargetIdentifier}}
+\index{operator RenderTargetIdentifier@{operator RenderTargetIdentifier}!UnityEngine.Rendering.RTHandle@{UnityEngine.Rendering.RTHandle}}
+\doxysubsubsection{\texorpdfstring{operator RenderTargetIdentifier()}{operator RenderTargetIdentifier()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_r_t_handle_a1e31f1a184b95cdf87d3cb8c9840b20f} 
+static implicit Unity\+Engine.\+Rendering.\+RTHandle.\+operator Render\+Target\+Identifier (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}}}]{handle}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Implicit conversion operator to Render\+Target\+Identifier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Input \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Render\+Target\+Identifier representation of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_a3b0b825a0f98af45a48ece5378feb615}\index{UnityEngine.Rendering.RTHandle@{UnityEngine.Rendering.RTHandle}!operator RenderTexture@{operator RenderTexture}}
+\index{operator RenderTexture@{operator RenderTexture}!UnityEngine.Rendering.RTHandle@{UnityEngine.Rendering.RTHandle}}
+\doxysubsubsection{\texorpdfstring{operator RenderTexture()}{operator RenderTexture()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_r_t_handle_a3b0b825a0f98af45a48ece5378feb615} 
+static implicit Unity\+Engine.\+Rendering.\+RTHandle.\+operator Render\+Texture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}}}]{handle}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Implicit conversion operator to Render\+Texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Input \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Render\+Texture representation of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_a54be2e9127fbc36b11049362d4526b24}\index{UnityEngine.Rendering.RTHandle@{UnityEngine.Rendering.RTHandle}!operator Texture@{operator Texture}}
+\index{operator Texture@{operator Texture}!UnityEngine.Rendering.RTHandle@{UnityEngine.Rendering.RTHandle}}
+\doxysubsubsection{\texorpdfstring{operator Texture()}{operator Texture()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_r_t_handle_a54be2e9127fbc36b11049362d4526b24} 
+static implicit Unity\+Engine.\+Rendering.\+RTHandle.\+operator Texture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}}}]{handle}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Implicit conversion operator to Texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Input \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Texture representation of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle}.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_r_t_handle_a4d750846a7b66269bf2daf8d7387700d}\index{UnityEngine.Rendering.RTHandle@{UnityEngine.Rendering.RTHandle}!SetCustomHandleProperties@{SetCustomHandleProperties}}
+\index{SetCustomHandleProperties@{SetCustomHandleProperties}!UnityEngine.Rendering.RTHandle@{UnityEngine.Rendering.RTHandle}}
+\doxysubsubsection{\texorpdfstring{SetCustomHandleProperties()}{SetCustomHandleProperties()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_r_t_handle_a4d750846a7b66269bf2daf8d7387700d} 
+void Unity\+Engine.\+Rendering.\+RTHandle.\+Set\+Custom\+Handle\+Properties (\begin{DoxyParamCaption}\item[{in \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_r_t_handle_properties}{RTHandle\+Properties}}}]{properties}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+By default, rt\+Handle\+Properties gets the global state of scalers against the global reference mode. This method lets the current \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle}{RTHandle} use a local custom \doxylink{struct_unity_engine_1_1_rendering_1_1_r_t_handle_properties}{RTHandle\+Properties}. This function is being used by scalers such as TAAU and DLSS, which require to have a different resolution for color (independent of the \doxylink{class_unity_engine_1_1_rendering_1_1_r_t_handle_system}{RTHandle\+System}). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em properties} & Properties to set.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Textures/RTHandle.\+cs\end{DoxyCompactItemize}

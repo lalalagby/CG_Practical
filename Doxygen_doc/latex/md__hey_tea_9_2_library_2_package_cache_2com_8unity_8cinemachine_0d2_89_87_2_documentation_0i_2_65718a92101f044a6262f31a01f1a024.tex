@@ -1,0 +1,34 @@
+\chapter{Noise properties}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_65718a92101f044a6262f31a01f1a024}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_65718a92101f044a6262f31a01f1a024}\index{Noise properties@{Noise properties}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_65718a92101f044a6262f31a01f1a024_autotoc_md738}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_65718a92101f044a6262f31a01f1a024_autotoc_md738}%
+ Use Noise properties in a Virtual Camera to simulate camera shake. \doxylink{namespace_cinemachine}{Cinemachine} includes a {\bfseries{Basic Multi Channel Perlin}} component, which adds Perlin noise to the movement of the Virtual Camera. {\bfseries{Perlin noise}} is a technique to compute random movement with a natural behavior.
+
+
+
+The Basic Multi Channel Perlin component applies a noise profile. A noise profile is an Asset that defines the behavior of noise over time. \doxylink{namespace_cinemachine}{Cinemachine} includes a few noise profile assets. You can \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_noise_profiles}{edit these and create your own}{0}.
+
+To apply noise\+:
+
+
+\begin{DoxyEnumerate}
+\item Select your Virtual Camera in the \href{https://docs.unity3d.com/Manual/UsingTheSceneView.html}{\texttt{ Scene}} view or \href{https://docs.unity3d.com/Manual/Hierarchy.html}{\texttt{ Hierarchy}} window.
+\item In the \href{https://docs.unity3d.com/Manual/UsingTheInspector.html}{\texttt{ Inspector}}, use the {\bfseries{Noise}} drop-\/down menu to choose {\bfseries{Basic Multi Channel Perlin}}.
+\item In {\bfseries{Noise Profile}}, choose an existing profile asset or \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_noise_profiles}{create your own profile}{0}.
+\item Use {\bfseries{Amplitude Gain}} and {\bfseries{Frequency Gain}} to fine-\/tune the noise.
+\end{DoxyEnumerate}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_65718a92101f044a6262f31a01f1a024_autotoc_md739}{}\doxysection{\texorpdfstring{Properties}{Properties}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_65718a92101f044a6262f31a01f1a024_autotoc_md739}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Noise Profile}}   &The noise profile asset to use.    \\\cline{1-2}
+{\bfseries{Amplitude Gain}}   &Gain to apply to the amplitudes defined in the noise profile. Use 1 to use the amplitudes defined in the noise profile. Setting this to 0 mutes the noise. Tip\+: Animate this property to ramp the noise effect up and down.    \\\cline{1-2}
+{\bfseries{Frequency Gain}}   &Factor to apply to the frequencies defined in the noise profile. Use 1 to use the frequencies defined in the noise profile. Use larger values to shake the camera more rapidly. Tip\+: Animate this property to ramp the noise effect up and down.    \\\cline{1-2}
+{\bfseries{Pivot Offset}}   &When rotating the camera, offset the camera\textquotesingle{}s pivot by the indicated x, y, and z distance when applying rotational noise. This generates some positional variation that corresponds to the rotation noise.   \\\cline{1-2}
+\end{longtabu}

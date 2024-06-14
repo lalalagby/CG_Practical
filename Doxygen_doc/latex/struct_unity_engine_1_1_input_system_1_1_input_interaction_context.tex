@@ -1,0 +1,434 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Input\+Interaction\+Context Struct Reference}
+\hypertarget{struct_unity_engine_1_1_input_system_1_1_input_interaction_context}{}\label{struct_unity_engine_1_1_input_system_1_1_input_interaction_context}\index{UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}}
+
+
+Information passed to \doxylink{}{interactions} when their associated controls trigger.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a1902fe9630270bcc062b668b15539ec6}{Compute\+Magnitude}} ()
+\begin{DoxyCompactList}\small\item\em Compute the current level of control actuation. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_ab3d2733d170e8642ec973029d4825950}{Control\+Is\+Actuated}} (float threshold=0)
+\begin{DoxyCompactList}\small\item\em Return true if the control that triggered the interaction has been actuated beyond the given threshold. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_ac7e1fd7757b79512fbdd9e653e0f6863}{Started}} ()
+\begin{DoxyCompactList}\small\item\em Mark the interaction has having begun. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_abbbb05e7e1377a65b6d72cda1722ee99}\label{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_abbbb05e7e1377a65b6d72cda1722ee99} 
+void {\bfseries Performed} ()
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a8f5611ece8544879b35ff9867de19f0e}\label{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a8f5611ece8544879b35ff9867de19f0e} 
+void {\bfseries Performed\+And\+Stay\+Started} ()
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_aa4925986eb9ddbc24bd865e0a4b03b09}\label{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_aa4925986eb9ddbc24bd865e0a4b03b09} 
+void {\bfseries Performed\+And\+Stay\+Performed} ()
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_aa11a43bcc0d084692ed800e1dd9f2f0a}\label{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_aa11a43bcc0d084692ed800e1dd9f2f0a} 
+void {\bfseries Canceled} ()
+\item 
+void \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_af4e347e159306a358b5a3a1a521e8f30}{Waiting}} ()
+\begin{DoxyCompactList}\small\item\em Put the interaction back into \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a5706de961fb376d701be6e7762d8b09c}{Input\+Action\+Phase.\+Waiting} state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a8a8595a9420e215d62d8b2c6606cf955}{Set\+Timeout}} (float seconds)
+\begin{DoxyCompactList}\small\item\em Start a timeout that triggers within {\itshape seconds} . \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a5284a68e9a6129992bc31890d5d173cc}{Set\+Total\+Timeout\+Completion\+Time}} (float seconds)
+\begin{DoxyCompactList}\small\item\em Override the default timeout value used by \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a5d2970b93407d558ab7de5806599dce7}{Input\+Action.\+Get\+Timeout\+Completion\+Percentage}. \end{DoxyCompactList}\item 
+TValue \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_af6dbcf4b6468b5f00098a77d99b4aab0}{Read\+Value$<$ TValue $>$}} ()
+\begin{DoxyCompactList}\small\item\em Read the value of the binding that triggered processing of the interaction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a030558da8a764d2bd16e9b2814fcb9f4}{action}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The action associated with the binding. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a9cdf56e18796f267d47087308ba69acf}{control}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The bound control that changed its state to trigger the binding associated with the interaction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182}{Input\+Action\+Phase}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a715e18b87810afc144c5e4574e29d89d}{phase}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The phase the interaction is currently in. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a9752508769909e27c056c492de97b3e4}{time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Time stamp of the input event that caused \doxylink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a9cdf56e18796f267d47087308ba69acf}{control} to trigger a change in the state of \doxylink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a030558da8a764d2bd16e9b2814fcb9f4}{action}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a424ffe8a46b09f3ef95176646956961c}{start\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Timestamp of the Input\+Event that caused the interaction to transition to \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Input\+Action\+Phase.\+Started}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a5a9844ca8becf4a564318c7788d9d17d}{timer\+Has\+Expired}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the interaction\textquotesingle{}s \doxylink{interface_unity_engine_1_1_input_system_1_1_i_input_interaction_a370c2206944d112654d3c03cbb684257}{IInput\+Interaction.\+Process} method has been called because a timer set by \doxylink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a8a8595a9420e215d62d8b2c6606cf955}{Set\+Timeout} has expired. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_ad5dc4c4ad2884682335feea2b5c886e3}{is\+Waiting}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the interaction is waiting for input. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_ad8d2093c52035734032df4a71d76275e}{is\+Started}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the interaction has been started. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Information passed to \doxylink{}{interactions} when their associated controls trigger. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{interface_unity_engine_1_1_input_system_1_1_i_input_interaction_a370c2206944d112654d3c03cbb684257}{IInput\+Interaction.\+Process}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a1902fe9630270bcc062b668b15539ec6}\index{UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}!ComputeMagnitude@{ComputeMagnitude}}
+\index{ComputeMagnitude@{ComputeMagnitude}!UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}}
+\doxysubsubsection{\texorpdfstring{ComputeMagnitude()}{ComputeMagnitude()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a1902fe9630270bcc062b668b15539ec6} 
+float Unity\+Engine.\+Input\+System.\+Input\+Interaction\+Context.\+Compute\+Magnitude (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compute the current level of control actuation. 
+
+\begin{DoxyReturn}{Returns}
+The current level of control actuation (usually \mbox{[}0..1\mbox{]}) or -\/1 if the control is actuated but does not support computing magnitudes.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_ab3d2733d170e8642ec973029d4825950}{Control\+Is\+Actuated}, \doxylink{class_unity_engine_1_1_input_system_1_1_input_control_a5c3a30406c52cd811f35931b15aa1d5c}{Input\+Control.\+Evaluate\+Magnitude()}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_ab3d2733d170e8642ec973029d4825950}\index{UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}!ControlIsActuated@{ControlIsActuated}}
+\index{ControlIsActuated@{ControlIsActuated}!UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}}
+\doxysubsubsection{\texorpdfstring{ControlIsActuated()}{ControlIsActuated()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_ab3d2733d170e8642ec973029d4825950} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Interaction\+Context.\+Control\+Is\+Actuated (\begin{DoxyParamCaption}\item[{float}]{threshold}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return true if the control that triggered the interaction has been actuated beyond the given threshold. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em threshold} & Threshold that must be reached for the control to be considered actuated. If this is zero, the threshold must be exceeded. If it is any positive value, the value must be at least matched.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the trigger control is actuated.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Input\+Control\+Extensions.\+Is\+Actuated, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a1902fe9630270bcc062b668b15539ec6}{Compute\+Magnitude}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_af6dbcf4b6468b5f00098a77d99b4aab0}\index{UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}!ReadValue$<$ TValue $>$@{ReadValue$<$ TValue $>$}}
+\index{ReadValue$<$ TValue $>$@{ReadValue$<$ TValue $>$}!UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}}
+\doxysubsubsection{\texorpdfstring{ReadValue$<$ TValue $>$()}{ReadValue< TValue >()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_af6dbcf4b6468b5f00098a77d99b4aab0} 
+TValue Unity\+Engine.\+Input\+System.\+Input\+Interaction\+Context.\+Read\+Value$<$ TValue $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Read the value of the binding that triggered processing of the interaction. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TValue} & Type of value to read from the binding. Must match the value type of the control or composite in effect for the binding.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+Value read from the binding.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TValue} : {\em struct}]\end{description}
+\end{Desc}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a8a8595a9420e215d62d8b2c6606cf955}\index{UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}!SetTimeout@{SetTimeout}}
+\index{SetTimeout@{SetTimeout}!UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}}
+\doxysubsubsection{\texorpdfstring{SetTimeout()}{SetTimeout()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a8a8595a9420e215d62d8b2c6606cf955} 
+void Unity\+Engine.\+Input\+System.\+Input\+Interaction\+Context.\+Set\+Timeout (\begin{DoxyParamCaption}\item[{float}]{seconds}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Start a timeout that triggers within {\itshape seconds} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seconds} & Number of seconds before the timeout is triggered.\\
+\hline
+\end{DoxyParams}
+
+
+An interaction might wait a set amount of time for something to happen and then do something depending on whether it did or did not happen. By calling this method, a timeout is installed such that in the input update that the timer expires in, the interaction\textquotesingle{}s \doxylink{interface_unity_engine_1_1_input_system_1_1_i_input_interaction_a370c2206944d112654d3c03cbb684257}{IInput\+Interaction.\+Process} method is called with \doxylink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a5a9844ca8becf4a564318c7788d9d17d}{timer\+Has\+Expired} being true.
+
+Changing the phase of the interaction while a timeout is running will implicitly cancel the timeout.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Let's\ say\ we're\ writing\ a\ Process()\ method\ for\ an\ interaction\ that,}}
+\DoxyCodeLine{\textcolor{comment}{//\ after\ a\ control\ has\ been\ actuated,\ waits\ for\ 1\ second\ for\ it\ to\ be}}
+\DoxyCodeLine{\textcolor{comment}{//\ released\ again.\ If\ that\ happens,\ the\ interaction\ performs.\ If\ not,}}
+\DoxyCodeLine{\textcolor{comment}{//\ it\ cancels.}}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Process(ref\ InputInteractionContext\ context)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ timerHasExpired\ will\ be\ true\ if\ we\ get\ called\ when\ our\ timeout}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ has\ expired.}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (context.timerHasExpired)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ user\ did\ not\ release\ the\ control\ quickly\ enough.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Our\ interaction\ is\ not\ successful,\ so\ cancel.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ context.Canceled();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (context.ControlIsActuated())}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!context.isStarted)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ control\ has\ been\ actuated.\ We\ want\ to\ give\ the\ user\ a\ max}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ of\ 1\ second\ to\ release\ it.\ So\ we\ start\ the\ interaction\ now\ and\ then}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ set\ the\ timeout.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ context.Started();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ context.SetTimeout(1);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Control\ has\ been\ released.\ If\ we're\ currently\ waiting\ for\ a\ release,}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ it\ has\ come\ in\ time\ before\ out\ timeout\ expired.\ In\ other\ words,\ the}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ interaction\ has\ been\ successfully\ performed.\ We\ call\ Performed()}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ which\ implicitly\ removes\ our\ ongoing\ timeout.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (context.isStarted)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ context.Performed();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a5a9844ca8becf4a564318c7788d9d17d}{timer\+Has\+Expired}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a5284a68e9a6129992bc31890d5d173cc}\index{UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}!SetTotalTimeoutCompletionTime@{SetTotalTimeoutCompletionTime}}
+\index{SetTotalTimeoutCompletionTime@{SetTotalTimeoutCompletionTime}!UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}}
+\doxysubsubsection{\texorpdfstring{SetTotalTimeoutCompletionTime()}{SetTotalTimeoutCompletionTime()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a5284a68e9a6129992bc31890d5d173cc} 
+void Unity\+Engine.\+Input\+System.\+Input\+Interaction\+Context.\+Set\+Total\+Timeout\+Completion\+Time (\begin{DoxyParamCaption}\item[{float}]{seconds}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Override the default timeout value used by \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a5d2970b93407d558ab7de5806599dce7}{Input\+Action.\+Get\+Timeout\+Completion\+Percentage}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seconds} & Amount of total successive timeouts TODO\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+By default, timeout completion will be entirely determine by the timeout that is currently running, if any. However, some interactions (such as \doxylink{class_unity_engine_1_1_input_system_1_1_interactions_1_1_multi_tap_interaction}{Interactions.\+Multi\+Tap\+Interaction}) will have to run multiple timeouts in succession. Thus, completion of a single timeout is not the same as completion of the interaction.
+
+You can use this method to account for this.
+
+Whenever a timeout completes, the timeout duration will automatically be accumulated towards the total timeout completion time.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Let's\ say\ we're\ starting\ our\ first\ timeout\ and\ we\ know\ that\ we\ will\ run\ three\ timeouts}}
+\DoxyCodeLine{\textcolor{comment}{//\ in\ succession\ of\ 2\ seconds\ each.\ By\ calling\ SetTotalTimeoutCompletionTime(),\ we\ can\ account\ for\ this.}}
+\DoxyCodeLine{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a5284a68e9a6129992bc31890d5d173cc}{SetTotalTimeoutCompletionTime}}(3\ *\ 2);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Start\ the\ first\ timeout.\ When\ this\ timeout\ expires,\ it\ will\ automatically}}
+\DoxyCodeLine{\textcolor{comment}{//\ count\ one\ second\ towards\ the\ total\ timeout\ completion\ time.}}
+\DoxyCodeLine{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a8a8595a9420e215d62d8b2c6606cf955}{SetTimeout}}(2);}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a5d2970b93407d558ab7de5806599dce7}{Input\+Action.\+Get\+Timeout\+Completion\+Percentage}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_ac7e1fd7757b79512fbdd9e653e0f6863}\index{UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}!Started@{Started}}
+\index{Started@{Started}!UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}}
+\doxysubsubsection{\texorpdfstring{Started()}{Started()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_ac7e1fd7757b79512fbdd9e653e0f6863} 
+void Unity\+Engine.\+Input\+System.\+Input\+Interaction\+Context.\+Started (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Mark the interaction has having begun. 
+
+Note that this affects the current interaction only. There may be multiple interactions on a binding and arbitrary many interactions may concurrently be in started state. However, only one interaction (usually the one that starts first) is allowed to drive the action\textquotesingle{}s state as a whole. If an interaction that is currently driving an action is canceled, however, the next interaction in the list that has been started will take over and continue driving the action.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyInteraction\ :\ IInputInteraction<float>}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Process(ref\ IInputInteractionContext\ context)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (context.isWaiting\ \&amp;\&amp;\ context.ControlIsActuated())}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ We've\ waited\ for\ input\ and\ got\ it.\ Start\ the\ interaction.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ context.Started();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (context.isStarted\ \&amp;\&amp;\ !context.ControlIsActuated())}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Interaction\ has\ been\ completed.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ context.Performed();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Reset()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ No\ reset\ code\ needed.\ We're\ not\ keeping\ any\ state\ locally\ in\ the\ interaction.}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_af4e347e159306a358b5a3a1a521e8f30}\index{UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}!Waiting@{Waiting}}
+\index{Waiting@{Waiting}!UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}}
+\doxysubsubsection{\texorpdfstring{Waiting()}{Waiting()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_af4e347e159306a358b5a3a1a521e8f30} 
+void Unity\+Engine.\+Input\+System.\+Input\+Interaction\+Context.\+Waiting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Put the interaction back into \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a5706de961fb376d701be6e7762d8b09c}{Input\+Action\+Phase.\+Waiting} state. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a86bd545c9dfe1fb0200e296c44389e57}{Input\+Action.\+phase}, \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182}{Input\+Action\+Phase}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_ac7e1fd7757b79512fbdd9e653e0f6863}{Started}, Performed, Canceled
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a030558da8a764d2bd16e9b2814fcb9f4}\index{UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}!action@{action}}
+\index{action@{action}!UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}}
+\doxysubsubsection{\texorpdfstring{action}{action}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a030558da8a764d2bd16e9b2814fcb9f4} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} Unity\+Engine.\+Input\+System.\+Input\+Interaction\+Context.\+action\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The action associated with the binding. 
+
+If the binding is not associated with an action, this is {\ttfamily null}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a83005305665b72fa6dadd5a105613495}{Input\+Binding.\+action}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a9cdf56e18796f267d47087308ba69acf}\index{UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}!control@{control}}
+\index{control@{control}!UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}}
+\doxysubsubsection{\texorpdfstring{control}{control}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a9cdf56e18796f267d47087308ba69acf} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} Unity\+Engine.\+Input\+System.\+Input\+Interaction\+Context.\+control\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The bound control that changed its state to trigger the binding associated with the interaction. 
+
+In case the binding associated with the interaction is a composite, this is one of the controls that are part of the composite. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a0776a05b5acf2b545496b95b4f556e9d}{Input\+Binding.\+path}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_ad8d2093c52035734032df4a71d76275e}\index{UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}!isStarted@{isStarted}}
+\index{isStarted@{isStarted}!UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}}
+\doxysubsubsection{\texorpdfstring{isStarted}{isStarted}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_ad8d2093c52035734032df4a71d76275e} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Interaction\+Context.\+is\+Started\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+True if the interaction has been started. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Input\+Action\+Phase.\+Started}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_ac7e1fd7757b79512fbdd9e653e0f6863}{Started}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_ad5dc4c4ad2884682335feea2b5c886e3}\index{UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}!isWaiting@{isWaiting}}
+\index{isWaiting@{isWaiting}!UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}}
+\doxysubsubsection{\texorpdfstring{isWaiting}{isWaiting}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_ad5dc4c4ad2884682335feea2b5c886e3} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Interaction\+Context.\+is\+Waiting\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+True if the interaction is waiting for input. 
+
+By default, an interaction will return this this phase after every time it has been performed (\doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a916b54ec8bd2d9be03994b6486310ed3}{Input\+Action\+Phase.\+Performed}). This can be changed by using Performed\+And\+Stay\+Started or Performed\+And\+Stay\+Performed. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a5706de961fb376d701be6e7762d8b09c}{Input\+Action\+Phase.\+Waiting}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a715e18b87810afc144c5e4574e29d89d}\index{UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}!phase@{phase}}
+\index{phase@{phase}!UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}}
+\doxysubsubsection{\texorpdfstring{phase}{phase}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a715e18b87810afc144c5e4574e29d89d} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182}{Input\+Action\+Phase}} Unity\+Engine.\+Input\+System.\+Input\+Interaction\+Context.\+phase\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The phase the interaction is currently in. 
+
+Each interaction on a binding has its own phase independent of the action the binding is applied to. If an interaction gets to "{}drive"{} an action at a particular point in time, its phase will determine the phase of the action. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a86bd545c9dfe1fb0200e296c44389e57}{Input\+Action.\+phase}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_ac7e1fd7757b79512fbdd9e653e0f6863}{Started}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_af4e347e159306a358b5a3a1a521e8f30}{Waiting}, Performed, Canceled
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a424ffe8a46b09f3ef95176646956961c}\index{UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}!startTime@{startTime}}
+\index{startTime@{startTime}!UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}}
+\doxysubsubsection{\texorpdfstring{startTime}{startTime}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a424ffe8a46b09f3ef95176646956961c} 
+double Unity\+Engine.\+Input\+System.\+Input\+Interaction\+Context.\+start\+Time\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Timestamp of the Input\+Event that caused the interaction to transition to \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Input\+Action\+Phase.\+Started}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_aecd74f290d3607a00f3eb34d9bf93366}{Input\+Event.\+time}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a9752508769909e27c056c492de97b3e4}\index{UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}!time@{time}}
+\index{time@{time}!UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a9752508769909e27c056c492de97b3e4} 
+double Unity\+Engine.\+Input\+System.\+Input\+Interaction\+Context.\+time\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Time stamp of the input event that caused \doxylink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a9cdf56e18796f267d47087308ba69acf}{control} to trigger a change in the state of \doxylink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a030558da8a764d2bd16e9b2814fcb9f4}{action}. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_aecd74f290d3607a00f3eb34d9bf93366}{Input\+Event.\+time}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a5a9844ca8becf4a564318c7788d9d17d}\index{UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}!timerHasExpired@{timerHasExpired}}
+\index{timerHasExpired@{timerHasExpired}!UnityEngine.InputSystem.InputInteractionContext@{UnityEngine.InputSystem.InputInteractionContext}}
+\doxysubsubsection{\texorpdfstring{timerHasExpired}{timerHasExpired}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a5a9844ca8becf4a564318c7788d9d17d} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Interaction\+Context.\+timer\+Has\+Expired\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether the interaction\textquotesingle{}s \doxylink{interface_unity_engine_1_1_input_system_1_1_i_input_interaction_a370c2206944d112654d3c03cbb684257}{IInput\+Interaction.\+Process} method has been called because a timer set by \doxylink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a8a8595a9420e215d62d8b2c6606cf955}{Set\+Timeout} has expired. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_interaction_context_a8a8595a9420e215d62d8b2c6606cf955}{Set\+Timeout}
+
+
+\end{DoxySeeAlso}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Actions/Input\+Interaction\+Context.\+cs\end{DoxyCompactItemize}

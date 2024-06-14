@@ -1,0 +1,34 @@
+\chapter{Noise Sine Wave Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_noise-_sine-_wave-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_noise-_sine-_wave-_node}\index{Noise Sine Wave Node@{Noise Sine Wave Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_noise-_sine-_wave-_node_autotoc_md3522}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_noise-_sine-_wave-_node_autotoc_md3522}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_noise-_sine-_wave-_node_autotoc_md3523}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_noise-_sine-_wave-_node_autotoc_md3523}
+Returns the sine of the value of input {\bfseries{In}}. For variance, psuedo-\/random noise is added to the amplitude of the sine wave, within a range determined by input {\bfseries{Min Max}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_noise-_sine-_wave-_node_autotoc_md3524}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_noise-_sine-_wave-_node_autotoc_md3524}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endhead
+In   &Input   &Dynamic Vector   &Input value    \\\cline{1-4}
+Min Max   &Input   &Vector 2   &Minimum and Maximum values for noise intensity    \\\cline{1-4}
+Out   &Output   &Dynamic Vector   &Output value   \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_noise-_sine-_wave-_node_autotoc_md3525}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_noise-_sine-_wave-_node_autotoc_md3525}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_NoiseSineWave\_float4(float4\ In,\ float2\ MinMax,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ float\ sinIn\ =\ sin(In);}
+\DoxyCodeLine{\ \ \ \ float\ sinInOffset\ =\ sin(In\ +\ 1.0);}
+\DoxyCodeLine{\ \ \ \ float\ randomno\ =\ \ frac(sin((sinIn\ -\/\ sinInOffset)\ *\ (12.9898\ +\ 78.233))*43758.5453);}
+\DoxyCodeLine{\ \ \ \ float\ noise\ =\ lerp(MinMax.x,\ MinMax.y,\ randomno);}
+\DoxyCodeLine{\ \ \ \ Out\ =\ sinIn\ +\ noise;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

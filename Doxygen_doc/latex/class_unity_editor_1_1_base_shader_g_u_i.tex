@@ -1,0 +1,706 @@
+\doxysection{Unity\+Editor.\+Base\+Shader\+GUI Class Reference}
+\hypertarget{class_unity_editor_1_1_base_shader_g_u_i}{}\label{class_unity_editor_1_1_base_shader_g_u_i}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+
+
+The base class for shader GUI in URP.  
+
+
+Inheritance diagram for Unity\+Editor.\+Base\+Shader\+GUI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_editor_1_1_base_shader_g_u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_1_1_styles}{Styles}}
+\begin{DoxyCompactList}\small\item\em Container for the text and tooltips used to display the shader. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a707a72d1e776922262bc917d7a94e7a2}{Surface\+Type}} \{ \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a707a72d1e776922262bc917d7a94e7a2afaa90538de35640e4b1e31ccf35b6eb5}{Opaque}}
+, \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a707a72d1e776922262bc917d7a94e7a2a3d971943089a3388c01fb297a32d9ba7}{Transparent}}
+ \}
+\begin{DoxyCompactList}\small\item\em The surface type for your object. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_aab7ea324629f0cee5b26abc37f5eb913}{Blend\+Mode}} \{ \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_aab7ea324629f0cee5b26abc37f5eb913a6132295fcf5570fb8b0a944ef322a598}{Alpha}}
+, \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_aab7ea324629f0cee5b26abc37f5eb913aa50753605fc5e7d59b79eb5fbf6bc301}{Premultiply}}
+, \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_aab7ea324629f0cee5b26abc37f5eb913a3f7b3d8ee7bf0d542bd50821c083888f}{Additive}}
+, \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_aab7ea324629f0cee5b26abc37f5eb913ae257376d913f3b53cbb4a9b19d770648}{Multiply}}
+ \}
+\begin{DoxyCompactList}\small\item\em The blend mode for your material. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a279a824f1d01bb3603c43cd2c15e446d}{Smoothness\+Source}} \{ \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a279a824f1d01bb3603c43cd2c15e446dab5bb774e2a3ba0212913da2bdd713284}{Specular\+Alpha}}
+, \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a279a824f1d01bb3603c43cd2c15e446dad89dd149ccf168738ec77b1d1b54a5d3}{Base\+Alpha}}
+ \}
+\begin{DoxyCompactList}\small\item\em Options to select the texture channel where the smoothness value is stored. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_abee9ddf19abd9c5d8dbd8bba30d9fe30}{Render\+Face}} \{ \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_abee9ddf19abd9c5d8dbd8bba30d9fe30a5835bab1ade0060909e31a06af2e2cde}{Front}} = 2
+, \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_abee9ddf19abd9c5d8dbd8bba30d9fe30a0557fa923dcee4d0f86b1409f5c2167f}{Back}} = 1
+, \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_abee9ddf19abd9c5d8dbd8bba30d9fe30a130c5b3473c57faa76e2a1c54e26f88e}{Both}} = 0
+ \}
+\begin{DoxyCompactList}\small\item\em The face options to render your geometry. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a727cf78ff59b826a86fe1c0bfc75b6e3}{Queue\+Control}} \{ \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a727cf78ff59b826a86fe1c0bfc75b6e3a06b9281e396db002010bde1de57262eb}{Auto}} = 0
+, \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a727cf78ff59b826a86fe1c0bfc75b6e3a391b53d596d4f62d0d570d111bbb4e1f}{User\+Override}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em The options for controlling the render queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a58e77d958a07ae70b3a43dc6d82d2eb5}{Material\+Changed}} (Material material)
+\begin{DoxyCompactList}\small\item\em Called when a material has been changed. This function has been deprecated and has been renamed to Validate\+Material. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a7648db585a6ee67da5dc1246b863e4ed}{Find\+Properties}} (Material\+Property\mbox{[}$\,$\mbox{]} properties)
+\begin{DoxyCompactList}\small\item\em Finds all the properties used in the Base Shader GUI. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_ae4959efd68e230b5b27a2da8562047dc}\label{class_unity_editor_1_1_base_shader_g_u_i_ae4959efd68e230b5b27a2da8562047dc} 
+override void {\bfseries On\+GUI} (Material\+Editor material\+Editor\+In, Material\+Property\mbox{[}$\,$\mbox{]} properties)
+\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a48eaa24fd1f8bf2788314c6760c6040a}{On\+Open\+GUI}} (Material material, Material\+Editor \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_ac4750be7bc4031485e4185a200ce54c0}{material\+Editor}})
+\begin{DoxyCompactList}\small\item\em Draws the GUI for the material. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a2006f10aebe2962c408607e929c0ec15}{Shader\+Properties\+GUI}} (Material material)
+\begin{DoxyCompactList}\small\item\em Draws the shader properties GUI. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a02ede78fa534439587eb44a839c9dad3}{Draw\+Surface\+Options}} (Material material)
+\begin{DoxyCompactList}\small\item\em Draws the surface options GUI. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_abe6faed388f137b1eb2eb776ddf9b4a6}{Draw\+Surface\+Inputs}} (Material material)
+\begin{DoxyCompactList}\small\item\em Draws the surface inputs GUI. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a555f7b7af083833723f8cbd45ef4bf2e}{Draw\+Advanced\+Options}} (Material material)
+\begin{DoxyCompactList}\small\item\em Draws the advanced options GUI. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a71445c0e90a63df19c8d74cb7ee976ed}{Fill\+Additional\+Foldouts}} (\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_header_scope_list}{Material\+Header\+Scope\+List}} material\+Scopes\+List)
+\begin{DoxyCompactList}\small\item\em Draws additional foldouts. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_ac19ceb18e6d8571c5e00fb22f436f6c4}{Draw\+Base\+Properties}} (Material material)
+\begin{DoxyCompactList}\small\item\em Draws the base properties GUI. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a699ab09ec370bb8416b11155d25ce1e8}{Assign\+New\+Shader\+To\+Material}} (Material material, Shader old\+Shader, Shader new\+Shader)
+\begin{DoxyCompactList}\small\item\em Assigns a new shader to the material. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a00282bf34be75386eda45a0507557b9a}{Do\+Popup}} (GUIContent label, Material\+Property property, string\mbox{[}$\,$\mbox{]} options)
+\begin{DoxyCompactList}\small\item\em Helper function to draw a popup. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a7ea8ac9602e2a19ed3b813c2834cccd5}{Draw\+Normal\+Area}} (Material\+Editor \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_ac4750be7bc4031485e4185a200ce54c0}{material\+Editor}}, Material\+Property bump\+Map, Material\+Property bump\+Map\+Scale=null)
+\begin{DoxyCompactList}\small\item\em Draws the GUI for the normal area. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a5042edffde94b081aff56e6b4277e618}{Set\+Material\+Keywords}} (Material material, Action$<$ Material $>$ shading\+Model\+Func=null, Action$<$ Material $>$ shader\+Func=null)
+\begin{DoxyCompactList}\small\item\em Sets up the keywords for the material and shader. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_aae2a4c0df51b4ce68729074ffd67cb42}{Setup\+Material\+Blend\+Mode}} (Material material)
+\begin{DoxyCompactList}\small\item\em Sets up the blend mode. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a1ee6247ba25449435f14a7ff8855b2c8}{Two\+Float\+Single\+Line}} (GUIContent title, Material\+Property prop1, GUIContent prop1\+Label, Material\+Property prop2, GUIContent prop2\+Label, Material\+Editor \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_ac4750be7bc4031485e4185a200ce54c0}{material\+Editor}}, float label\+Width=30f)
+\begin{DoxyCompactList}\small\item\em Helper function to draw two float variables in one lines. \end{DoxyCompactList}\item 
+static Rect \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a198603447707f1159a0d618fe3811cc6}{Texture\+Color\+Props}} (Material\+Editor \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_ac4750be7bc4031485e4185a200ce54c0}{material\+Editor}}, GUIContent label, Material\+Property texture\+Prop, Material\+Property color\+Prop, bool hdr=false)
+\begin{DoxyCompactList}\small\item\em Helper function to show texture and color properties. \end{DoxyCompactList}\item 
+static new Material\+Property \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a0380aa7bcde905c33507d41d51599b29}{Find\+Property}} (string property\+Name, Material\+Property\mbox{[}$\,$\mbox{]} properties)
+\begin{DoxyCompactList}\small\item\em Searches and tries to find a property in an array of properties. \end{DoxyCompactList}\item 
+static new Material\+Property \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a96cdab294a3365dd7a4ade223d51c937}{Find\+Property}} (string property\+Name, Material\+Property\mbox{[}$\,$\mbox{]} properties, bool property\+Is\+Mandatory)
+\begin{DoxyCompactList}\small\item\em Searches and tries to find a property in an array of properties. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a92f0cf052c5e72f56818559d4cedd90e}\label{class_unity_editor_1_1_base_shader_g_u_i_a92f0cf052c5e72f56818559d4cedd90e} 
+bool {\bfseries m\+\_\+\+First\+Time\+Apply} = true
+\begin{DoxyCompactList}\small\item\em Used to sure that needed setup (ie keywords/render queue) are set up when switching some existing material to a universal shader. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a19c9561b89110dcd2d36298168e7c709}{Expandable}} \{ \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a19c9561b89110dcd2d36298168e7c709add13ac7b96592d268255f25a08feb257}{Surface\+Options}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0
+, \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a19c9561b89110dcd2d36298168e7c709a32b392a8c8596901c669243cc5bb8fa6}{Surface\+Inputs}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 1
+, \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a19c9561b89110dcd2d36298168e7c709a9b6545e4cea9b4ad4979d41bb9170e2b}{Advanced}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 2
+, \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a19c9561b89110dcd2d36298168e7c709a3ec365dd533ddb7ef3d1c111186ce872}{Details}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 3
+ \}
+\begin{DoxyCompactList}\small\item\em Flags for the foldouts used in the base shader GUI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a673e2fd49613daaeb91327ea08900d68}\label{class_unity_editor_1_1_base_shader_g_u_i_a673e2fd49613daaeb91327ea08900d68} 
+void {\bfseries Draw\+Queue\+Offset\+Field} ()
+\begin{DoxyCompactList}\small\item\em Draws the queue offset field. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a3118beec4b439a982b13cc3a5134f145}{Draw\+Emission\+Properties}} (Material material, bool keyword)
+\begin{DoxyCompactList}\small\item\em Draws the emission properties. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_ac88167a095ac599bc065e306869ae2f6}{Draw\+Tile\+Offset}} (Material\+Editor \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_ac4750be7bc4031485e4185a200ce54c0}{material\+Editor}}, Material\+Property texture\+Prop)
+\begin{DoxyCompactList}\small\item\em Draws the tile offset GUI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_ac4750be7bc4031485e4185a200ce54c0}\label{class_unity_editor_1_1_base_shader_g_u_i_ac4750be7bc4031485e4185a200ce54c0} 
+Material\+Editor {\bfseries material\+Editor}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The editor for the material. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_aa64c7ffeb3b05c3cdd9db9cd8dda01dd}\label{class_unity_editor_1_1_base_shader_g_u_i_aa64c7ffeb3b05c3cdd9db9cd8dda01dd} 
+Material\+Property {\bfseries surface\+Type\+Prop}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Material\+Property for surface type. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a194a5dd3d79f930de226c1e60c429a7d}\label{class_unity_editor_1_1_base_shader_g_u_i_a194a5dd3d79f930de226c1e60c429a7d} 
+Material\+Property {\bfseries blend\+Mode\+Prop}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Material\+Property for the blend mode. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a95415578173bcb306ee6935492bb8e0f}\label{class_unity_editor_1_1_base_shader_g_u_i_a95415578173bcb306ee6935492bb8e0f} 
+Material\+Property {\bfseries preserve\+Spec\+Prop}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Material\+Property for preserve specular. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_ad09c666c190f6367bdd635ff13ab24df}\label{class_unity_editor_1_1_base_shader_g_u_i_ad09c666c190f6367bdd635ff13ab24df} 
+Material\+Property {\bfseries culling\+Prop}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Material\+Property for cull mode. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_ad304cea3563f0c9630f3c7ffb17fc4f5}\label{class_unity_editor_1_1_base_shader_g_u_i_ad304cea3563f0c9630f3c7ffb17fc4f5} 
+Material\+Property {\bfseries ztest\+Prop}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Material\+Property for z\+Test. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a80029411f31e603bdedaeb3662a81d23}\label{class_unity_editor_1_1_base_shader_g_u_i_a80029411f31e603bdedaeb3662a81d23} 
+Material\+Property {\bfseries zwrite\+Prop}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Material\+Property for z\+Write. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a050b2ff082f44d5d7a22727b891f6563}\label{class_unity_editor_1_1_base_shader_g_u_i_a050b2ff082f44d5d7a22727b891f6563} 
+Material\+Property {\bfseries alpha\+Clip\+Prop}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Material\+Property for alpha clip. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_ab626e5251b76f4abc27941dbb56ab1b4}\label{class_unity_editor_1_1_base_shader_g_u_i_ab626e5251b76f4abc27941dbb56ab1b4} 
+Material\+Property {\bfseries alpha\+Cutoff\+Prop}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Material\+Property for alpha cutoff. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a38d3d9bba7019070cf3f2983d6f676bf}\label{class_unity_editor_1_1_base_shader_g_u_i_a38d3d9bba7019070cf3f2983d6f676bf} 
+Material\+Property {\bfseries cast\+Shadows\+Prop}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Material\+Property for cast shadows. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_ab5c090d3124fefbafb5708c4be4da477}\label{class_unity_editor_1_1_base_shader_g_u_i_ab5c090d3124fefbafb5708c4be4da477} 
+Material\+Property {\bfseries receive\+Shadows\+Prop}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Material\+Property for receive shadows. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a1e578809a124759e8dfe480c13729ec9}\label{class_unity_editor_1_1_base_shader_g_u_i_a1e578809a124759e8dfe480c13729ec9} 
+Material\+Property {\bfseries base\+Map\+Prop}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Material\+Property for base map. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a260562465d57f6bd68175b371b1c5292}\label{class_unity_editor_1_1_base_shader_g_u_i_a260562465d57f6bd68175b371b1c5292} 
+Material\+Property {\bfseries base\+Color\+Prop}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Material\+Property for base color. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a347f19077d6582e5efd9fbdb894b5964}\label{class_unity_editor_1_1_base_shader_g_u_i_a347f19077d6582e5efd9fbdb894b5964} 
+Material\+Property {\bfseries emission\+Map\+Prop}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Material\+Property for emission map. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_aab068a8da39709be4f660c60d3745edb}\label{class_unity_editor_1_1_base_shader_g_u_i_aab068a8da39709be4f660c60d3745edb} 
+Material\+Property {\bfseries emission\+Color\+Prop}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Material\+Property for emission color. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_aa5a042951b9a83c6158b1ccfc8168ace}\label{class_unity_editor_1_1_base_shader_g_u_i_aa5a042951b9a83c6158b1ccfc8168ace} 
+Material\+Property {\bfseries queue\+Offset\+Prop}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Material\+Property for queue offset. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_ae91279550bc225ccdd6992d90c927fd2}\label{class_unity_editor_1_1_base_shader_g_u_i_ae91279550bc225ccdd6992d90c927fd2} 
+Material\+Property {\bfseries queue\+Control\+Prop}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Material\+Property for queue control. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a1ea504afbe207902aee1b1678039480c}\label{class_unity_editor_1_1_base_shader_g_u_i_a1ea504afbe207902aee1b1678039480c} 
+virtual uint {\bfseries material\+Filter}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Filter for the surface options, surface inputs, details and advanced foldouts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The base class for shader GUI in URP. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_aab7ea324629f0cee5b26abc37f5eb913}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!BlendMode@{BlendMode}}
+\index{BlendMode@{BlendMode}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{BlendMode}{BlendMode}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_aab7ea324629f0cee5b26abc37f5eb913} 
+enum \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_aab7ea324629f0cee5b26abc37f5eb913}{Unity\+Editor.\+Base\+Shader\+GUI.\+Blend\+Mode}}}
+
+
+
+The blend mode for your material. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Alpha@{Alpha}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!Alpha@{Alpha}}}\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_aab7ea324629f0cee5b26abc37f5eb913a6132295fcf5570fb8b0a944ef322a598}\label{class_unity_editor_1_1_base_shader_g_u_i_aab7ea324629f0cee5b26abc37f5eb913} 
+Alpha&Use this for alpha blend mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Premultiply@{Premultiply}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!Premultiply@{Premultiply}}}\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_aab7ea324629f0cee5b26abc37f5eb913aa50753605fc5e7d59b79eb5fbf6bc301}\label{class_unity_editor_1_1_base_shader_g_u_i_aab7ea324629f0cee5b26abc37f5eb913} 
+Premultiply&Use this for premultiply blend mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Additive@{Additive}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!Additive@{Additive}}}\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_aab7ea324629f0cee5b26abc37f5eb913a3f7b3d8ee7bf0d542bd50821c083888f}\label{class_unity_editor_1_1_base_shader_g_u_i_aab7ea324629f0cee5b26abc37f5eb913} 
+Additive&Use this for additive blend mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Multiply@{Multiply}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!Multiply@{Multiply}}}\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_aab7ea324629f0cee5b26abc37f5eb913ae257376d913f3b53cbb4a9b19d770648}\label{class_unity_editor_1_1_base_shader_g_u_i_aab7ea324629f0cee5b26abc37f5eb913} 
+Multiply&Use this for multiply blend mode. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a19c9561b89110dcd2d36298168e7c709}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!Expandable@{Expandable}}
+\index{Expandable@{Expandable}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{Expandable}{Expandable}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_a19c9561b89110dcd2d36298168e7c709} 
+enum \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a19c9561b89110dcd2d36298168e7c709}{Unity\+Editor.\+Base\+Shader\+GUI.\+Expandable}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Flags for the foldouts used in the base shader GUI. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SurfaceOptions@{SurfaceOptions}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!SurfaceOptions@{SurfaceOptions}}}\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a19c9561b89110dcd2d36298168e7c709add13ac7b96592d268255f25a08feb257}\label{class_unity_editor_1_1_base_shader_g_u_i_a19c9561b89110dcd2d36298168e7c709} 
+Surface\+Options&Use this for surface options foldout. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SurfaceInputs@{SurfaceInputs}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!SurfaceInputs@{SurfaceInputs}}}\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a19c9561b89110dcd2d36298168e7c709a32b392a8c8596901c669243cc5bb8fa6}\label{class_unity_editor_1_1_base_shader_g_u_i_a19c9561b89110dcd2d36298168e7c709} 
+Surface\+Inputs&Use this for surface input foldout. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Advanced@{Advanced}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!Advanced@{Advanced}}}\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a19c9561b89110dcd2d36298168e7c709a9b6545e4cea9b4ad4979d41bb9170e2b}\label{class_unity_editor_1_1_base_shader_g_u_i_a19c9561b89110dcd2d36298168e7c709} 
+Advanced&Use this for advanced foldout. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Details@{Details}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!Details@{Details}}}\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a19c9561b89110dcd2d36298168e7c709a3ec365dd533ddb7ef3d1c111186ce872}\label{class_unity_editor_1_1_base_shader_g_u_i_a19c9561b89110dcd2d36298168e7c709} 
+Details&Use this for additional details foldout. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a727cf78ff59b826a86fe1c0bfc75b6e3}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!QueueControl@{QueueControl}}
+\index{QueueControl@{QueueControl}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{QueueControl}{QueueControl}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_a727cf78ff59b826a86fe1c0bfc75b6e3} 
+enum \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a727cf78ff59b826a86fe1c0bfc75b6e3}{Unity\+Editor.\+Base\+Shader\+GUI.\+Queue\+Control}}}
+
+
+
+The options for controlling the render queue. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Auto@{Auto}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!Auto@{Auto}}}\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a727cf78ff59b826a86fe1c0bfc75b6e3a06b9281e396db002010bde1de57262eb}\label{class_unity_editor_1_1_base_shader_g_u_i_a727cf78ff59b826a86fe1c0bfc75b6e3} 
+Auto&Use this to select automatic behavior. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UserOverride@{UserOverride}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!UserOverride@{UserOverride}}}\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a727cf78ff59b826a86fe1c0bfc75b6e3a391b53d596d4f62d0d570d111bbb4e1f}\label{class_unity_editor_1_1_base_shader_g_u_i_a727cf78ff59b826a86fe1c0bfc75b6e3} 
+User\+Override&Use this for explicitly selecting a render queue. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_abee9ddf19abd9c5d8dbd8bba30d9fe30}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!RenderFace@{RenderFace}}
+\index{RenderFace@{RenderFace}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{RenderFace}{RenderFace}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_abee9ddf19abd9c5d8dbd8bba30d9fe30} 
+enum \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_abee9ddf19abd9c5d8dbd8bba30d9fe30}{Unity\+Editor.\+Base\+Shader\+GUI.\+Render\+Face}}}
+
+
+
+The face options to render your geometry. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Front@{Front}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!Front@{Front}}}\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_abee9ddf19abd9c5d8dbd8bba30d9fe30a5835bab1ade0060909e31a06af2e2cde}\label{class_unity_editor_1_1_base_shader_g_u_i_abee9ddf19abd9c5d8dbd8bba30d9fe30} 
+Front&Use this to render only front face. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Back@{Back}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!Back@{Back}}}\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_abee9ddf19abd9c5d8dbd8bba30d9fe30a0557fa923dcee4d0f86b1409f5c2167f}\label{class_unity_editor_1_1_base_shader_g_u_i_abee9ddf19abd9c5d8dbd8bba30d9fe30} 
+Back&Use this to render only back face. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Both@{Both}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!Both@{Both}}}\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_abee9ddf19abd9c5d8dbd8bba30d9fe30a130c5b3473c57faa76e2a1c54e26f88e}\label{class_unity_editor_1_1_base_shader_g_u_i_abee9ddf19abd9c5d8dbd8bba30d9fe30} 
+Both&Use this to render both faces. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a279a824f1d01bb3603c43cd2c15e446d}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!SmoothnessSource@{SmoothnessSource}}
+\index{SmoothnessSource@{SmoothnessSource}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{SmoothnessSource}{SmoothnessSource}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_a279a824f1d01bb3603c43cd2c15e446d} 
+enum \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a279a824f1d01bb3603c43cd2c15e446d}{Unity\+Editor.\+Base\+Shader\+GUI.\+Smoothness\+Source}}}
+
+
+
+Options to select the texture channel where the smoothness value is stored. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SpecularAlpha@{SpecularAlpha}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!SpecularAlpha@{SpecularAlpha}}}\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a279a824f1d01bb3603c43cd2c15e446dab5bb774e2a3ba0212913da2bdd713284}\label{class_unity_editor_1_1_base_shader_g_u_i_a279a824f1d01bb3603c43cd2c15e446d} 
+Specular\+Alpha&Use this when smoothness is stored in the alpha channel of the specular map. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BaseAlpha@{BaseAlpha}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!BaseAlpha@{BaseAlpha}}}\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a279a824f1d01bb3603c43cd2c15e446dad89dd149ccf168738ec77b1d1b54a5d3}\label{class_unity_editor_1_1_base_shader_g_u_i_a279a824f1d01bb3603c43cd2c15e446d} 
+Base\+Alpha&Use this when smoothness is stored in the alpha channel of the base map. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a707a72d1e776922262bc917d7a94e7a2}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!SurfaceType@{SurfaceType}}
+\index{SurfaceType@{SurfaceType}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{SurfaceType}{SurfaceType}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_a707a72d1e776922262bc917d7a94e7a2} 
+enum \mbox{\hyperlink{class_unity_editor_1_1_base_shader_g_u_i_a707a72d1e776922262bc917d7a94e7a2}{Unity\+Editor.\+Base\+Shader\+GUI.\+Surface\+Type}}}
+
+
+
+The surface type for your object. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Opaque@{Opaque}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!Opaque@{Opaque}}}\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a707a72d1e776922262bc917d7a94e7a2afaa90538de35640e4b1e31ccf35b6eb5}\label{class_unity_editor_1_1_base_shader_g_u_i_a707a72d1e776922262bc917d7a94e7a2} 
+Opaque&Use this for opaque surfaces. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Transparent@{Transparent}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!Transparent@{Transparent}}}\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a707a72d1e776922262bc917d7a94e7a2a3d971943089a3388c01fb297a32d9ba7}\label{class_unity_editor_1_1_base_shader_g_u_i_a707a72d1e776922262bc917d7a94e7a2} 
+Transparent&Use this for transparent surfaces. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a699ab09ec370bb8416b11155d25ce1e8}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!AssignNewShaderToMaterial@{AssignNewShaderToMaterial}}
+\index{AssignNewShaderToMaterial@{AssignNewShaderToMaterial}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{AssignNewShaderToMaterial()}{AssignNewShaderToMaterial()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_a699ab09ec370bb8416b11155d25ce1e8} 
+override void Unity\+Editor.\+Base\+Shader\+GUI.\+Assign\+New\+Shader\+To\+Material (\begin{DoxyParamCaption}\item[{Material}]{material}{, }\item[{Shader}]{old\+Shader}{, }\item[{Shader}]{new\+Shader}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Assigns a new shader to the material. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & The material to use.\\
+\hline
+{\em old\+Shader} & The old shader.\\
+\hline
+{\em new\+Shader} & The new shader to replace.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a00282bf34be75386eda45a0507557b9a}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!DoPopup@{DoPopup}}
+\index{DoPopup@{DoPopup}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{DoPopup()}{DoPopup()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_a00282bf34be75386eda45a0507557b9a} 
+void Unity\+Editor.\+Base\+Shader\+GUI.\+Do\+Popup (\begin{DoxyParamCaption}\item[{GUIContent}]{label}{, }\item[{Material\+Property}]{property}{, }\item[{string\mbox{[}$\,$\mbox{]}}]{options}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Helper function to draw a popup. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em label} & The label to use.\\
+\hline
+{\em property} & The property to display.\\
+\hline
+{\em options} & The options available.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a555f7b7af083833723f8cbd45ef4bf2e}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!DrawAdvancedOptions@{DrawAdvancedOptions}}
+\index{DrawAdvancedOptions@{DrawAdvancedOptions}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{DrawAdvancedOptions()}{DrawAdvancedOptions()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_a555f7b7af083833723f8cbd45ef4bf2e} 
+virtual void Unity\+Editor.\+Base\+Shader\+GUI.\+Draw\+Advanced\+Options (\begin{DoxyParamCaption}\item[{Material}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Draws the advanced options GUI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & The material to use.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_lit_g_u_i_a31b0afe01094ab02112da53e8830cb1d}{Unity\+Editor.\+Shader\+Graph\+Lit\+GUI}}, and \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_unlit_g_u_i_a23224b73146cc5d69db7500506d1eb9a}{Unity\+Editor.\+Shader\+Graph\+Unlit\+GUI}}.
+
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_ac19ceb18e6d8571c5e00fb22f436f6c4}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!DrawBaseProperties@{DrawBaseProperties}}
+\index{DrawBaseProperties@{DrawBaseProperties}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{DrawBaseProperties()}{DrawBaseProperties()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_ac19ceb18e6d8571c5e00fb22f436f6c4} 
+virtual void Unity\+Editor.\+Base\+Shader\+GUI.\+Draw\+Base\+Properties (\begin{DoxyParamCaption}\item[{Material}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Draws the base properties GUI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & The material to use.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a3118beec4b439a982b13cc3a5134f145}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!DrawEmissionProperties@{DrawEmissionProperties}}
+\index{DrawEmissionProperties@{DrawEmissionProperties}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{DrawEmissionProperties()}{DrawEmissionProperties()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_a3118beec4b439a982b13cc3a5134f145} 
+virtual void Unity\+Editor.\+Base\+Shader\+GUI.\+Draw\+Emission\+Properties (\begin{DoxyParamCaption}\item[{Material}]{material}{, }\item[{bool}]{keyword}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Draws the emission properties. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & The material to use.\\
+\hline
+{\em keyword} & The keyword used for emission.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a7ea8ac9602e2a19ed3b813c2834cccd5}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!DrawNormalArea@{DrawNormalArea}}
+\index{DrawNormalArea@{DrawNormalArea}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{DrawNormalArea()}{DrawNormalArea()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_a7ea8ac9602e2a19ed3b813c2834cccd5} 
+static void Unity\+Editor.\+Base\+Shader\+GUI.\+Draw\+Normal\+Area (\begin{DoxyParamCaption}\item[{Material\+Editor}]{material\+Editor}{, }\item[{Material\+Property}]{bump\+Map}{, }\item[{Material\+Property}]{bump\+Map\+Scale}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Draws the GUI for the normal area. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material\+Editor} & The material editor to use.\\
+\hline
+{\em bump\+Map} & The normal map property.\\
+\hline
+{\em bump\+Map\+Scale} & The normal map scale property.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_abe6faed388f137b1eb2eb776ddf9b4a6}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!DrawSurfaceInputs@{DrawSurfaceInputs}}
+\index{DrawSurfaceInputs@{DrawSurfaceInputs}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{DrawSurfaceInputs()}{DrawSurfaceInputs()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_abe6faed388f137b1eb2eb776ddf9b4a6} 
+virtual void Unity\+Editor.\+Base\+Shader\+GUI.\+Draw\+Surface\+Inputs (\begin{DoxyParamCaption}\item[{Material}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Draws the surface inputs GUI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & The material to use.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_lit_g_u_i_a79df3438e402327994b8264478943136}{Unity\+Editor.\+Shader\+Graph\+Lit\+GUI}}, and \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_unlit_g_u_i_a4956b9964c4c613f47c0d2fd90684e38}{Unity\+Editor.\+Shader\+Graph\+Unlit\+GUI}}.
+
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a02ede78fa534439587eb44a839c9dad3}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!DrawSurfaceOptions@{DrawSurfaceOptions}}
+\index{DrawSurfaceOptions@{DrawSurfaceOptions}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{DrawSurfaceOptions()}{DrawSurfaceOptions()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_a02ede78fa534439587eb44a839c9dad3} 
+virtual void Unity\+Editor.\+Base\+Shader\+GUI.\+Draw\+Surface\+Options (\begin{DoxyParamCaption}\item[{Material}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Draws the surface options GUI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & The material to use.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_lit_g_u_i_a41b2c7bf2e784a4979ec7687be34e9d1}{Unity\+Editor.\+Shader\+Graph\+Lit\+GUI}}.
+
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_ac88167a095ac599bc065e306869ae2f6}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!DrawTileOffset@{DrawTileOffset}}
+\index{DrawTileOffset@{DrawTileOffset}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{DrawTileOffset()}{DrawTileOffset()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_ac88167a095ac599bc065e306869ae2f6} 
+static void Unity\+Editor.\+Base\+Shader\+GUI.\+Draw\+Tile\+Offset (\begin{DoxyParamCaption}\item[{Material\+Editor}]{material\+Editor}{, }\item[{Material\+Property}]{texture\+Prop}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Draws the tile offset GUI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material\+Editor} & The material editor to use.\\
+\hline
+{\em texture\+Prop} & The texture property.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a71445c0e90a63df19c8d74cb7ee976ed}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!FillAdditionalFoldouts@{FillAdditionalFoldouts}}
+\index{FillAdditionalFoldouts@{FillAdditionalFoldouts}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{FillAdditionalFoldouts()}{FillAdditionalFoldouts()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_a71445c0e90a63df19c8d74cb7ee976ed} 
+virtual void Unity\+Editor.\+Base\+Shader\+GUI.\+Fill\+Additional\+Foldouts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_material_header_scope_list}{Material\+Header\+Scope\+List}}}]{material\+Scopes\+List}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Draws additional foldouts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material\+Scopes\+List} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a7648db585a6ee67da5dc1246b863e4ed}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!FindProperties@{FindProperties}}
+\index{FindProperties@{FindProperties}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{FindProperties()}{FindProperties()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_a7648db585a6ee67da5dc1246b863e4ed} 
+virtual void Unity\+Editor.\+Base\+Shader\+GUI.\+Find\+Properties (\begin{DoxyParamCaption}\item[{Material\+Property\mbox{[}$\,$\mbox{]}}]{properties}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Finds all the properties used in the Base Shader GUI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em properties} & Array of properties to search in.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_lit_g_u_i_affb40bf132502c2f7216017c434a45cb}{Unity\+Editor.\+Shader\+Graph\+Lit\+GUI}}, and \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_unlit_g_u_i_a3016daff444561163077fb083ba8cf04}{Unity\+Editor.\+Shader\+Graph\+Unlit\+GUI}}.
+
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a0380aa7bcde905c33507d41d51599b29}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!FindProperty@{FindProperty}}
+\index{FindProperty@{FindProperty}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{FindProperty()}{FindProperty()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_a0380aa7bcde905c33507d41d51599b29} 
+static new Material\+Property Unity\+Editor.\+Base\+Shader\+GUI.\+Find\+Property (\begin{DoxyParamCaption}\item[{string}]{property\+Name}{, }\item[{Material\+Property\mbox{[}$\,$\mbox{]}}]{properties}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Searches and tries to find a property in an array of properties. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & The property to find.\\
+\hline
+{\em properties} & Array of properties to search in.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Material\+Property instance for the property.
+\end{DoxyReturn}
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a96cdab294a3365dd7a4ade223d51c937}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!FindProperty@{FindProperty}}
+\index{FindProperty@{FindProperty}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{FindProperty()}{FindProperty()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_a96cdab294a3365dd7a4ade223d51c937} 
+static new Material\+Property Unity\+Editor.\+Base\+Shader\+GUI.\+Find\+Property (\begin{DoxyParamCaption}\item[{string}]{property\+Name}{, }\item[{Material\+Property\mbox{[}$\,$\mbox{]}}]{properties}{, }\item[{bool}]{property\+Is\+Mandatory}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Searches and tries to find a property in an array of properties. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em property\+Name} & The property to find.\\
+\hline
+{\em properties} & Array of properties to search in.\\
+\hline
+{\em property\+Is\+Mandatory} & Should throw exception if property is not found\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Material\+Property instance for the property.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a58e77d958a07ae70b3a43dc6d82d2eb5}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!MaterialChanged@{MaterialChanged}}
+\index{MaterialChanged@{MaterialChanged}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{MaterialChanged()}{MaterialChanged()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_a58e77d958a07ae70b3a43dc6d82d2eb5} 
+virtual void Unity\+Editor.\+Base\+Shader\+GUI.\+Material\+Changed (\begin{DoxyParamCaption}\item[{Material}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Called when a material has been changed. This function has been deprecated and has been renamed to Validate\+Material. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & The material that has been changed.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a48eaa24fd1f8bf2788314c6760c6040a}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!OnOpenGUI@{OnOpenGUI}}
+\index{OnOpenGUI@{OnOpenGUI}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{OnOpenGUI()}{OnOpenGUI()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_a48eaa24fd1f8bf2788314c6760c6040a} 
+virtual void Unity\+Editor.\+Base\+Shader\+GUI.\+On\+Open\+GUI (\begin{DoxyParamCaption}\item[{Material}]{material}{, }\item[{Material\+Editor}]{material\+Editor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Draws the GUI for the material. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & The material to use.\\
+\hline
+{\em material\+Editor} & The material editor to use.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a5042edffde94b081aff56e6b4277e618}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!SetMaterialKeywords@{SetMaterialKeywords}}
+\index{SetMaterialKeywords@{SetMaterialKeywords}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{SetMaterialKeywords()}{SetMaterialKeywords()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_a5042edffde94b081aff56e6b4277e618} 
+static void Unity\+Editor.\+Base\+Shader\+GUI.\+Set\+Material\+Keywords (\begin{DoxyParamCaption}\item[{Material}]{material}{, }\item[{Action$<$ Material $>$}]{shading\+Model\+Func}{ = {\ttfamily null}, }\item[{Action$<$ Material $>$}]{shader\+Func}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Sets up the keywords for the material and shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & The material to use.\\
+\hline
+{\em shading\+Model\+Func} & Function to set shading models.\\
+\hline
+{\em shader\+Func} & Function to set some extra shader parameters.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_aae2a4c0df51b4ce68729074ffd67cb42}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!SetupMaterialBlendMode@{SetupMaterialBlendMode}}
+\index{SetupMaterialBlendMode@{SetupMaterialBlendMode}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{SetupMaterialBlendMode()}{SetupMaterialBlendMode()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_aae2a4c0df51b4ce68729074ffd67cb42} 
+static void Unity\+Editor.\+Base\+Shader\+GUI.\+Setup\+Material\+Blend\+Mode (\begin{DoxyParamCaption}\item[{Material}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Sets up the blend mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & The material to use.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a2006f10aebe2962c408607e929c0ec15}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!ShaderPropertiesGUI@{ShaderPropertiesGUI}}
+\index{ShaderPropertiesGUI@{ShaderPropertiesGUI}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{ShaderPropertiesGUI()}{ShaderPropertiesGUI()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_a2006f10aebe2962c408607e929c0ec15} 
+void Unity\+Editor.\+Base\+Shader\+GUI.\+Shader\+Properties\+GUI (\begin{DoxyParamCaption}\item[{Material}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Draws the shader properties GUI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material} & The material to use.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a198603447707f1159a0d618fe3811cc6}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!TextureColorProps@{TextureColorProps}}
+\index{TextureColorProps@{TextureColorProps}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{TextureColorProps()}{TextureColorProps()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_a198603447707f1159a0d618fe3811cc6} 
+static Rect Unity\+Editor.\+Base\+Shader\+GUI.\+Texture\+Color\+Props (\begin{DoxyParamCaption}\item[{Material\+Editor}]{material\+Editor}{, }\item[{GUIContent}]{label}{, }\item[{Material\+Property}]{texture\+Prop}{, }\item[{Material\+Property}]{color\+Prop}{, }\item[{bool}]{hdr}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Helper function to show texture and color properties. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em material\+Editor} & The material editor to use.\\
+\hline
+{\em label} & The label to use.\\
+\hline
+{\em texture\+Prop} & The texture property.\\
+\hline
+{\em color\+Prop} & The color property.\\
+\hline
+{\em hdr} & Marks whether this is a HDR texture or not.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_unity_editor_1_1_base_shader_g_u_i_a1ee6247ba25449435f14a7ff8855b2c8}\index{UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}!TwoFloatSingleLine@{TwoFloatSingleLine}}
+\index{TwoFloatSingleLine@{TwoFloatSingleLine}!UnityEditor.BaseShaderGUI@{UnityEditor.BaseShaderGUI}}
+\doxysubsubsection{\texorpdfstring{TwoFloatSingleLine()}{TwoFloatSingleLine()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_base_shader_g_u_i_a1ee6247ba25449435f14a7ff8855b2c8} 
+static void Unity\+Editor.\+Base\+Shader\+GUI.\+Two\+Float\+Single\+Line (\begin{DoxyParamCaption}\item[{GUIContent}]{title}{, }\item[{Material\+Property}]{prop1}{, }\item[{GUIContent}]{prop1\+Label}{, }\item[{Material\+Property}]{prop2}{, }\item[{GUIContent}]{prop2\+Label}{, }\item[{Material\+Editor}]{material\+Editor}{, }\item[{float}]{label\+Width}{ = {\ttfamily 30f}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Helper function to draw two float variables in one lines. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & The title to use.\\
+\hline
+{\em prop1} & The property for the first float.\\
+\hline
+{\em prop1\+Label} & The label for the first float.\\
+\hline
+{\em prop2} & The property for the second float.\\
+\hline
+{\em prop2\+Label} & The label for the second float.\\
+\hline
+{\em material\+Editor} & The material editor to use.\\
+\hline
+{\em label\+Width} & The width of the labels.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Editor/\+Shader\+GUI/Base\+Shader\+GUI.\+cs\end{DoxyCompactItemize}

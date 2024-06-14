@@ -1,0 +1,65 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Universal.\+IPost\+Process\+Component Interface Reference}
+\hypertarget{interface_unity_engine_1_1_rendering_1_1_universal_1_1_i_post_process_component}{}\label{interface_unity_engine_1_1_rendering_1_1_universal_1_1_i_post_process_component}\index{UnityEngine.Rendering.Universal.IPostProcessComponent@{UnityEngine.Rendering.Universal.IPostProcessComponent}}
+
+
+Implement this interface on every post process volumes.  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Universal.\+IPost\+Process\+Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{interface_unity_engine_1_1_rendering_1_1_universal_1_1_i_post_process_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_universal_1_1_i_post_process_component_a8723bf5375b789d8c1c43ad9a6fd2acf}{Is\+Active}} ()
+\begin{DoxyCompactList}\small\item\em Tells if the post process needs to be rendered or not. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_unity_engine_1_1_rendering_1_1_universal_1_1_i_post_process_component_a60383c6e1861a6ae97c3df772b711dbb}{Is\+Tile\+Compatible}} ()
+\begin{DoxyCompactList}\small\item\em Tells if the post process can run the effect on-\/tile or if it needs a full pass. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implement this interface on every post process volumes. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_unity_engine_1_1_rendering_1_1_universal_1_1_i_post_process_component_a8723bf5375b789d8c1c43ad9a6fd2acf}\index{UnityEngine.Rendering.Universal.IPostProcessComponent@{UnityEngine.Rendering.Universal.IPostProcessComponent}!IsActive@{IsActive}}
+\index{IsActive@{IsActive}!UnityEngine.Rendering.Universal.IPostProcessComponent@{UnityEngine.Rendering.Universal.IPostProcessComponent}}
+\doxysubsubsection{\texorpdfstring{IsActive()}{IsActive()}}
+{\footnotesize\ttfamily \label{interface_unity_engine_1_1_rendering_1_1_universal_1_1_i_post_process_component_a8723bf5375b789d8c1c43ad9a6fd2acf} 
+bool Unity\+Engine.\+Rendering.\+Universal.\+IPost\+Process\+Component.\+Is\+Active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Tells if the post process needs to be rendered or not. 
+
+\begin{DoxyReturn}{Returns}
+True if the component is active, otherwise false.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_a9119d96317fe1fff38b9543610ba15d9}{Unity\+Engine.\+Rendering.\+Universal.\+Bloom}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_aa17cf7b5f6224e47075949f933b72782}{Unity\+Engine.\+Rendering.\+Universal.\+Channel\+Mixer}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_chromatic_aberration_a31b9d09ae42ef60d7d7aa206475426e2}{Unity\+Engine.\+Rendering.\+Universal.\+Chromatic\+Aberration}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_color_adjustments_ae7f00cfd2614e7b05fd86767fa0b51e8}{Unity\+Engine.\+Rendering.\+Universal.\+Color\+Adjustments}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_color_curves_a100941b329a6c8c86adcb38d03468680}{Unity\+Engine.\+Rendering.\+Universal.\+Color\+Curves}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_color_lookup_a6c1ea2efb6cae736d0941f0cc3753910}{Unity\+Engine.\+Rendering.\+Universal.\+Color\+Lookup}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_a764d8a04e840ec731df13e992251ce8e}{Unity\+Engine.\+Rendering.\+Universal.\+Depth\+Of\+Field}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_film_grain_a369127e42fbdcb3d6ed9f53595d667cb}{Unity\+Engine.\+Rendering.\+Universal.\+Film\+Grain}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_lens_distortion_a6fe4a6dd013df02b4148f9a87cc5b7f2}{Unity\+Engine.\+Rendering.\+Universal.\+Lens\+Distortion}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_lift_gamma_gain_a1959fc47614e538f7a426a8002efa433}{Unity\+Engine.\+Rendering.\+Universal.\+Lift\+Gamma\+Gain}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_motion_blur_ac4984e023ea9ada8e6a5c5fc057ed7ce}{Unity\+Engine.\+Rendering.\+Universal.\+Motion\+Blur}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_panini_projection_a4d3bcbaaff7e790715160d1130107058}{Unity\+Engine.\+Rendering.\+Universal.\+Panini\+Projection}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_shadows_midtones_highlights_a47f5daed6a91076ec0624e5a23802990}{Unity\+Engine.\+Rendering.\+Universal.\+Shadows\+Midtones\+Highlights}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_split_toning_a596757b930340a1e1b7cb9a388a030f1}{Unity\+Engine.\+Rendering.\+Universal.\+Split\+Toning}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_tonemapping_aa8cd89e4cf0942a572368cfe6eb82ce9}{Unity\+Engine.\+Rendering.\+Universal.\+Tonemapping}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_vignette_a58b8bef012c38a495421a8b435a22c67}{Unity\+Engine.\+Rendering.\+Universal.\+Vignette}}, and \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_white_balance_aa88510afbf0373a4696a0c068df49b6b}{Unity\+Engine.\+Rendering.\+Universal.\+White\+Balance}}.
+
+\Hypertarget{interface_unity_engine_1_1_rendering_1_1_universal_1_1_i_post_process_component_a60383c6e1861a6ae97c3df772b711dbb}\index{UnityEngine.Rendering.Universal.IPostProcessComponent@{UnityEngine.Rendering.Universal.IPostProcessComponent}!IsTileCompatible@{IsTileCompatible}}
+\index{IsTileCompatible@{IsTileCompatible}!UnityEngine.Rendering.Universal.IPostProcessComponent@{UnityEngine.Rendering.Universal.IPostProcessComponent}}
+\doxysubsubsection{\texorpdfstring{IsTileCompatible()}{IsTileCompatible()}}
+{\footnotesize\ttfamily \label{interface_unity_engine_1_1_rendering_1_1_universal_1_1_i_post_process_component_a60383c6e1861a6ae97c3df772b711dbb} 
+bool Unity\+Engine.\+Rendering.\+Universal.\+IPost\+Process\+Component.\+Is\+Tile\+Compatible (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Tells if the post process can run the effect on-\/tile or if it needs a full pass. 
+
+\begin{DoxyReturn}{Returns}
+True if it can run on-\/tile, otherwise false.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_bloom_a4c0c149c2b5b4da168f9b083ea31785b}{Unity\+Engine.\+Rendering.\+Universal.\+Bloom}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_channel_mixer_a66855572d8dc5718ac4f3c24c8ce7bfd}{Unity\+Engine.\+Rendering.\+Universal.\+Channel\+Mixer}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_chromatic_aberration_a1ef3e0e376e59f64c682d222f7df2335}{Unity\+Engine.\+Rendering.\+Universal.\+Chromatic\+Aberration}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_color_adjustments_ae7e2fe0236bc8a0bd1887b61d4bae9d1}{Unity\+Engine.\+Rendering.\+Universal.\+Color\+Adjustments}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_color_curves_a3b6288ac0a4b80b8e921a0a8f88f39aa}{Unity\+Engine.\+Rendering.\+Universal.\+Color\+Curves}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_color_lookup_aace62b260219052349e2aaa4c22c6c0c}{Unity\+Engine.\+Rendering.\+Universal.\+Color\+Lookup}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_depth_of_field_adcca8b5f731f2ebf4f1cfc84917fdefb}{Unity\+Engine.\+Rendering.\+Universal.\+Depth\+Of\+Field}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_film_grain_ac01ac44fdb6dfee98e1e103911261db0}{Unity\+Engine.\+Rendering.\+Universal.\+Film\+Grain}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_lens_distortion_a77c8bc2527c45905166b1b93b60a1992}{Unity\+Engine.\+Rendering.\+Universal.\+Lens\+Distortion}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_lift_gamma_gain_ac8b260eb946f33442a8311cf1d9e2235}{Unity\+Engine.\+Rendering.\+Universal.\+Lift\+Gamma\+Gain}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_motion_blur_a2808cf24003c17192ac29f4a69a3d86c}{Unity\+Engine.\+Rendering.\+Universal.\+Motion\+Blur}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_panini_projection_a7dacceeb7342b133bf0e5f1ea1c7288c}{Unity\+Engine.\+Rendering.\+Universal.\+Panini\+Projection}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_shadows_midtones_highlights_a8ff33a971b488b64fa7c4d42cf43634e}{Unity\+Engine.\+Rendering.\+Universal.\+Shadows\+Midtones\+Highlights}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_split_toning_a2d2580db2b1092f0bd20e81b74fb63e2}{Unity\+Engine.\+Rendering.\+Universal.\+Split\+Toning}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_tonemapping_a6fc8e9b23fda9595f58a503710b7aed1}{Unity\+Engine.\+Rendering.\+Universal.\+Tonemapping}}, \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_vignette_aa425e84cd301a650000205f023421800}{Unity\+Engine.\+Rendering.\+Universal.\+Vignette}}, and \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_universal_1_1_white_balance_ad418f6faa7a12d13cca751a4e49b1d9c}{Unity\+Engine.\+Rendering.\+Universal.\+White\+Balance}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+universal@14.\+0.\+8/\+Runtime/\+Passes/Post\+Process\+Pass.\+cs\end{DoxyCompactItemize}

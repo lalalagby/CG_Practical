@@ -1,0 +1,173 @@
+\doxysection{Unity\+Editor.\+Rendering.\+Temperature\+Slider Class Reference}
+\hypertarget{class_unity_editor_1_1_rendering_1_1_temperature_slider}{}\label{class_unity_editor_1_1_rendering_1_1_temperature_slider}\index{UnityEditor.Rendering.TemperatureSlider@{UnityEditor.Rendering.TemperatureSlider}}
+
+
+Formats the provided descriptor into a temperature unit slider with contextual slider markers, tooltips, and icons.  
+
+
+Inheritance diagram for Unity\+Editor.\+Rendering.\+Temperature\+Slider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_rendering_1_1_temperature_slider}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_temperature_slider_a5867d2c605b5371dbb150105fd4e00e4}{Temperature\+Slider}} (\mbox{\hyperlink{struct_unity_editor_1_1_rendering_1_1_light_unit_slider_u_i_descriptor}{Light\+Unit\+Slider\+UIDescriptor}} descriptor)
+\begin{DoxyCompactList}\small\item\em Constructs the temperature slider. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_temperature_slider_a0bc2cb7cb1442073164cab429d343256}{Setup}} (Light\+Editor.\+Settings settings)
+\begin{DoxyCompactList}\small\item\em Setups the light editor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_light_unit_slider}{Unity\+Editor.\+Rendering.\+Light\+Unit\+Slider}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_light_unit_slider_aebb0d9ad2590e48c8f5b46af65ef8d1e}{Light\+Unit\+Slider}} (\mbox{\hyperlink{struct_unity_editor_1_1_rendering_1_1_light_unit_slider_u_i_descriptor}{Light\+Unit\+Slider\+UIDescriptor}} descriptor)
+\begin{DoxyCompactList}\small\item\em Constructor with a \doxylink{struct_unity_editor_1_1_rendering_1_1_light_unit_slider_u_i_descriptor}{Light\+Unit\+Slider\+UIDescriptor} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_light_unit_slider_aa9b794cc8dbdbcb71aafb5ca7d983a61}{Set\+Serialized\+Object}} (Serialized\+Object serialized)
+\begin{DoxyCompactList}\small\item\em Modifies the Serialized\+Object for this Light slider. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_light_unit_slider_a6888f2c0c68e6bdb7c2f42379b8cf279}{Draw}} (Rect rect, Serialized\+Property value, ref float float\+Value)
+\begin{DoxyCompactList}\small\item\em Draws the slider in a given Rect \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_temperature_slider_aa11c950037bb6ea13f2b8d97b21065d6}\label{class_unity_editor_1_1_rendering_1_1_temperature_slider_aa11c950037bb6ea13f2b8d97b21065d6} 
+float {\bfseries Value\+To\+Slider} (float x)
+\item 
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_temperature_slider_a94a480af4481b75acd1f09d9a1cb8306}\label{class_unity_editor_1_1_rendering_1_1_temperature_slider_a94a480af4481b75acd1f09d9a1cb8306} 
+float {\bfseries Slider\+To\+Value} (float x)
+\item 
+override float \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_temperature_slider_a5d67a69531cd341fd6e91a8babac62d1}{Get\+Position\+On\+Slider}} (float value, Vector2 value\+Range)
+\begin{DoxyCompactList}\small\item\em Maps a light unit value onto the slider. Keeps in sync placement of markers and tooltips with the slider power. Override this in case of non-\/linear slider. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_temperature_slider_accf95c742307cc34c9ab4e57a7289e81}{Set\+Value\+To\+Preset}} (Serialized\+Property value, \mbox{\hyperlink{struct_unity_editor_1_1_rendering_1_1_light_unit_slider_u_i_range}{Light\+Unit\+Slider\+UIRange}} preset)
+\begin{DoxyCompactList}\small\item\em The serialized property for color temperature is stored in the build-\/in light editor, and we need to use this object to apply the update. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_temperature_slider_abd7b7bb1fa26af29fa04e6b4fcec8eab}{Do\+Slider}} (Rect rect, ref float value, Vector2 slider\+Range)
+\begin{DoxyCompactList}\small\item\em Draws the slider. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_light_unit_slider}{Unity\+Editor.\+Rendering.\+Light\+Unit\+Slider}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual GUIContent \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_light_unit_slider_aab8f7391e6949382a9ae31c122ca6f11}{Get\+Light\+Unit\+Tooltip}} (string base\+Tooltip, float value, string unit)
+\begin{DoxyCompactList}\small\item\em Gets the tooltip. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_light_unit_slider_a4dfd51531aea6b0df841184ae723fcab}{Do\+Slider}} (Rect rect, ref float value, Vector2 slider\+Range, Vector2 \+\_\+)
+\begin{DoxyCompactList}\small\item\em Draws the slider. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_light_unit_slider_aac807452372207b657f1899e63ac1cfc}{Get\+Position\+On\+Slider}} (float value)
+\begin{DoxyCompactList}\small\item\em Maps a light unit value onto the slider. Keeps in sync placement of markers and tooltips with the slider power. Override this in case of non-\/linear slider. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_light_unit_slider}{Unity\+Editor.\+Rendering.\+Light\+Unit\+Slider}}}
+\begin{DoxyCompactItemize}
+\item 
+Serialized\+Object {\bfseries m\+\_\+\+Serialized\+Object}
+\begin{DoxyCompactList}\small\item\em The Serialized\+Object that contains a Light \end{DoxyCompactList}\item 
+readonly \mbox{\hyperlink{struct_unity_editor_1_1_rendering_1_1_light_unit_slider_u_i_descriptor}{Light\+Unit\+Slider\+UIDescriptor}} {\bfseries m\+\_\+\+Descriptor}
+\begin{DoxyCompactList}\small\item\em The \doxylink{struct_unity_editor_1_1_rendering_1_1_light_unit_slider_u_i_descriptor}{Light\+Unit\+Slider\+UIDescriptor} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Formats the provided descriptor into a temperature unit slider with contextual slider markers, tooltips, and icons. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_temperature_slider_a5867d2c605b5371dbb150105fd4e00e4}\index{UnityEditor.Rendering.TemperatureSlider@{UnityEditor.Rendering.TemperatureSlider}!TemperatureSlider@{TemperatureSlider}}
+\index{TemperatureSlider@{TemperatureSlider}!UnityEditor.Rendering.TemperatureSlider@{UnityEditor.Rendering.TemperatureSlider}}
+\doxysubsubsection{\texorpdfstring{TemperatureSlider()}{TemperatureSlider()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_temperature_slider_a5867d2c605b5371dbb150105fd4e00e4} 
+Unity\+Editor.\+Rendering.\+Temperature\+Slider.\+Temperature\+Slider (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_editor_1_1_rendering_1_1_light_unit_slider_u_i_descriptor}{Light\+Unit\+Slider\+UIDescriptor}}}]{descriptor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs the temperature slider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em descriptor} & The descriptor\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_temperature_slider_abd7b7bb1fa26af29fa04e6b4fcec8eab}\index{UnityEditor.Rendering.TemperatureSlider@{UnityEditor.Rendering.TemperatureSlider}!DoSlider@{DoSlider}}
+\index{DoSlider@{DoSlider}!UnityEditor.Rendering.TemperatureSlider@{UnityEditor.Rendering.TemperatureSlider}}
+\doxysubsubsection{\texorpdfstring{DoSlider()}{DoSlider()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_temperature_slider_abd7b7bb1fa26af29fa04e6b4fcec8eab} 
+override void Unity\+Editor.\+Rendering.\+Temperature\+Slider.\+Do\+Slider (\begin{DoxyParamCaption}\item[{Rect}]{rect}{, }\item[{ref float}]{value}{, }\item[{Vector2}]{slider\+Range}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Draws the slider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rect} & The Rect to draw the slider.\\
+\hline
+{\em value} & The current value, and also returns the modified value.\\
+\hline
+{\em slider\+Range} & The ranges of the slider.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_light_unit_slider_af418841806810b5472aa5c707f234de0}{Unity\+Editor.\+Rendering.\+Light\+Unit\+Slider}}.
+
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_temperature_slider_a5d67a69531cd341fd6e91a8babac62d1}\index{UnityEditor.Rendering.TemperatureSlider@{UnityEditor.Rendering.TemperatureSlider}!GetPositionOnSlider@{GetPositionOnSlider}}
+\index{GetPositionOnSlider@{GetPositionOnSlider}!UnityEditor.Rendering.TemperatureSlider@{UnityEditor.Rendering.TemperatureSlider}}
+\doxysubsubsection{\texorpdfstring{GetPositionOnSlider()}{GetPositionOnSlider()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_temperature_slider_a5d67a69531cd341fd6e91a8babac62d1} 
+override float Unity\+Editor.\+Rendering.\+Temperature\+Slider.\+Get\+Position\+On\+Slider (\begin{DoxyParamCaption}\item[{float}]{value}{, }\item[{Vector2}]{value\+Range}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Maps a light unit value onto the slider. Keeps in sync placement of markers and tooltips with the slider power. Override this in case of non-\/linear slider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to get the position at\\
+\hline
+{\em value\+Range} & The ranges of the values\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The position
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_light_unit_slider_a952f9e0eefa7d9a720c3ff33781c50db}{Unity\+Editor.\+Rendering.\+Light\+Unit\+Slider}}.
+
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_temperature_slider_a0bc2cb7cb1442073164cab429d343256}\index{UnityEditor.Rendering.TemperatureSlider@{UnityEditor.Rendering.TemperatureSlider}!Setup@{Setup}}
+\index{Setup@{Setup}!UnityEditor.Rendering.TemperatureSlider@{UnityEditor.Rendering.TemperatureSlider}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_temperature_slider_a0bc2cb7cb1442073164cab429d343256} 
+void Unity\+Editor.\+Rendering.\+Temperature\+Slider.\+Setup (\begin{DoxyParamCaption}\item[{Light\+Editor.\+Settings}]{settings}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setups the light editor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & The light editor from the light\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_editor_1_1_rendering_1_1_temperature_slider_accf95c742307cc34c9ab4e57a7289e81}\index{UnityEditor.Rendering.TemperatureSlider@{UnityEditor.Rendering.TemperatureSlider}!SetValueToPreset@{SetValueToPreset}}
+\index{SetValueToPreset@{SetValueToPreset}!UnityEditor.Rendering.TemperatureSlider@{UnityEditor.Rendering.TemperatureSlider}}
+\doxysubsubsection{\texorpdfstring{SetValueToPreset()}{SetValueToPreset()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_rendering_1_1_temperature_slider_accf95c742307cc34c9ab4e57a7289e81} 
+override void Unity\+Editor.\+Rendering.\+Temperature\+Slider.\+Set\+Value\+To\+Preset (\begin{DoxyParamCaption}\item[{Serialized\+Property}]{value}{, }\item[{\mbox{\hyperlink{struct_unity_editor_1_1_rendering_1_1_light_unit_slider_u_i_range}{Light\+Unit\+Slider\+UIRange}}}]{preset}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+The serialized property for color temperature is stored in the build-\/in light editor, and we need to use this object to apply the update. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to update\\
+\hline
+{\em preset} & The preset range\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_rendering_1_1_light_unit_slider_a788e22e642106d7dcd7618e599f3ec3e}{Unity\+Editor.\+Rendering.\+Light\+Unit\+Slider}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Editor/\+Lighting/\+Light\+Unit/Temperature\+Slider.\+cs\end{DoxyCompactItemize}

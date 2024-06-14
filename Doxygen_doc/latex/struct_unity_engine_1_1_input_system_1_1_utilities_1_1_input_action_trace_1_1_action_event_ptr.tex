@@ -1,0 +1,159 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Utilities.\+Input\+Action\+Trace.\+Action\+Event\+Ptr Struct Reference}
+\hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr}{}\label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr}\index{UnityEngine.InputSystem.Utilities.InputActionTrace.ActionEventPtr@{UnityEngine.InputSystem.Utilities.InputActionTrace.ActionEventPtr}}
+
+
+A wrapper around Action\+Event that automatically translates all the information in events into their high-\/level representations.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+object \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_a63899bda785a87e0e3a2990e4da2780a}{Read\+Value\+As\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Reads the value associated with this event as an {\ttfamily object}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_a0048d6febfa541c9f5432a4301520721}{Read\+Value}} (void \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_aed8c3a090d91d5d5cd0bf64a2307d7dd}{buffer}}, int buffer\+Size)
+\begin{DoxyCompactList}\small\item\em Reads the value associated with this event into the contiguous memory buffer defined by {\ttfamily \mbox{[}buffer, buffer + buffer\+Size)}. \end{DoxyCompactList}\item 
+TValue \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_ada8532bd63852532aaac80dcbbf7c43f}{Read\+Value$<$ TValue $>$}} ()
+\begin{DoxyCompactList}\small\item\em Reads the value associated with this event as an object of type {\itshape TValue} . \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_aba71a7aca9671e89fccb4b07893a245d}\label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_aba71a7aca9671e89fccb4b07893a245d} 
+override string {\bfseries To\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_ae2b8a7246e51e5ba7d85c38ea2719b26}\label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_ae2b8a7246e51e5ba7d85c38ea2719b26} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action}} {\bfseries action}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The \doxylink{class_unity_engine_1_1_input_system_1_1_input_action}{Input\+Action} associated with this action event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182}{Input\+Action\+Phase}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_a693c4d1ad1e88b2c3c63dcb811698b11}{phase}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182}{Input\+Action\+Phase} associated with this action event. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_a19bdd751bcb157606e149a8ac0e3fd60}\label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_a19bdd751bcb157606e149a8ac0e3fd60} 
+\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} {\bfseries control}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The \doxylink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control} instance associated with this action event. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_a3d785d64bfccc70d8548af389f1a08df}\label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_a3d785d64bfccc70d8548af389f1a08df} 
+\mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_i_input_interaction}{IInput\+Interaction}} {\bfseries interaction}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The \doxylink{interface_unity_engine_1_1_input_system_1_1_i_input_interaction}{IInput\+Interaction} instance associated with this action event if applicable, or {\ttfamily null} if the action event is not associated with an input interaction. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_ab478948168e7b961b6ae71e5a455f1ee}{time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The time, in seconds since your game or app started, that the event occurred. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_af93f98ac4738b1652cab05b899c258ce}\label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_af93f98ac4738b1652cab05b899c258ce} 
+double {\bfseries start\+Time}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The time, in seconds since your game or app started, that the \doxylink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_a693c4d1ad1e88b2c3c63dcb811698b11}{phase} transitioned into \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Input\+Action\+Phase.\+Started}. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_a4ffed46fdd7d12f6b318b6d3d15ea399}\label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_a4ffed46fdd7d12f6b318b6d3d15ea399} 
+double {\bfseries duration}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The duration, in seconds, that has elapsed between when this event was generated and when the action \doxylink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_a693c4d1ad1e88b2c3c63dcb811698b11}{phase} transitioned to \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182a8428552d86c0d262a542a528af490afa}{Input\+Action\+Phase.\+Started} and has remained active. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_a33a87428a77d913b68e0268db4ef9179}\label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_a33a87428a77d913b68e0268db4ef9179} 
+int {\bfseries value\+Size\+In\+Bytes}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The size, in bytes, of the value associated with this action event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A wrapper around Action\+Event that automatically translates all the information in events into their high-\/level representations. 
+
+For example, instead of returning \doxylink{}{control indices}, it automatically resolves and returns the respective \doxylink{}{controls}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_a0048d6febfa541c9f5432a4301520721}\index{UnityEngine.InputSystem.Utilities.InputActionTrace.ActionEventPtr@{UnityEngine.InputSystem.Utilities.InputActionTrace.ActionEventPtr}!ReadValue@{ReadValue}}
+\index{ReadValue@{ReadValue}!UnityEngine.InputSystem.Utilities.InputActionTrace.ActionEventPtr@{UnityEngine.InputSystem.Utilities.InputActionTrace.ActionEventPtr}}
+\doxysubsubsection{\texorpdfstring{ReadValue()}{ReadValue()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_a0048d6febfa541c9f5432a4301520721} 
+void Unity\+Engine.\+Input\+System.\+Utilities.\+Input\+Action\+Trace.\+Action\+Event\+Ptr.\+Read\+Value (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{buffer}{, }\item[{int}]{buffer\+Size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads the value associated with this event into the contiguous memory buffer defined by {\ttfamily \mbox{[}buffer, buffer + buffer\+Size)}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & \doxylink{class_unity_engine_1_1_input_system_1_1_pointer}{Pointer} to the contiguous memory buffer to write value data to.\\
+\hline
+{\em buffer\+Size} & The size, in bytes, of the contiguous buffer pointed to by {\itshape buffer} .\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Null\+Reference\+Exception} & If {\itshape buffer}  is {\ttfamily null}.\\
+\hline
+{\em Argument\+Exception} & If the given {\itshape buffer\+Size}  is less than the number of bytes required to write the event value to {\itshape buffer} .\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_a63899bda785a87e0e3a2990e4da2780a}{Read\+Value\+As\+Object}, \doxylink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_ada8532bd63852532aaac80dcbbf7c43f}{Read\+Value$<$\+TValue$>$}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_ada8532bd63852532aaac80dcbbf7c43f}\index{UnityEngine.InputSystem.Utilities.InputActionTrace.ActionEventPtr@{UnityEngine.InputSystem.Utilities.InputActionTrace.ActionEventPtr}!ReadValue$<$ TValue $>$@{ReadValue$<$ TValue $>$}}
+\index{ReadValue$<$ TValue $>$@{ReadValue$<$ TValue $>$}!UnityEngine.InputSystem.Utilities.InputActionTrace.ActionEventPtr@{UnityEngine.InputSystem.Utilities.InputActionTrace.ActionEventPtr}}
+\doxysubsubsection{\texorpdfstring{ReadValue$<$ TValue $>$()}{ReadValue< TValue >()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_ada8532bd63852532aaac80dcbbf7c43f} 
+TValue \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_a0048d6febfa541c9f5432a4301520721}{Unity\+Engine.\+Input\+System.\+Utilities.\+Input\+Action\+Trace.\+Action\+Event\+Ptr.\+Read\+Value}}$<$ TValue $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads the value associated with this event as an object of type {\itshape TValue} . 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TValue} & The event value type to be used.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+Object of type {\itshape TValue} .
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & In case the size of {\itshape TValue}  does not match the size of the value associated with this event.\\
+\hline
+\end{DoxyExceptions}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TValue} : {\em struct}]\end{description}
+\end{Desc}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_a63899bda785a87e0e3a2990e4da2780a}\index{UnityEngine.InputSystem.Utilities.InputActionTrace.ActionEventPtr@{UnityEngine.InputSystem.Utilities.InputActionTrace.ActionEventPtr}!ReadValueAsObject@{ReadValueAsObject}}
+\index{ReadValueAsObject@{ReadValueAsObject}!UnityEngine.InputSystem.Utilities.InputActionTrace.ActionEventPtr@{UnityEngine.InputSystem.Utilities.InputActionTrace.ActionEventPtr}}
+\doxysubsubsection{\texorpdfstring{ReadValueAsObject()}{ReadValueAsObject()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_a63899bda785a87e0e3a2990e4da2780a} 
+object Unity\+Engine.\+Input\+System.\+Utilities.\+Input\+Action\+Trace.\+Action\+Event\+Ptr.\+Read\+Value\+As\+Object (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads the value associated with this event as an {\ttfamily object}. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily object} representing the value of this action event.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Read\+Only\+Array$<$\+TValue$>$, \doxylink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_a0048d6febfa541c9f5432a4301520721}{Read\+Value(void\texorpdfstring{$\ast$}{*}, int)}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_a693c4d1ad1e88b2c3c63dcb811698b11}\index{UnityEngine.InputSystem.Utilities.InputActionTrace.ActionEventPtr@{UnityEngine.InputSystem.Utilities.InputActionTrace.ActionEventPtr}!phase@{phase}}
+\index{phase@{phase}!UnityEngine.InputSystem.Utilities.InputActionTrace.ActionEventPtr@{UnityEngine.InputSystem.Utilities.InputActionTrace.ActionEventPtr}}
+\doxysubsubsection{\texorpdfstring{phase}{phase}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_a693c4d1ad1e88b2c3c63dcb811698b11} 
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182}{Input\+Action\+Phase}} Unity\+Engine.\+Input\+System.\+Utilities.\+Input\+Action\+Trace.\+Action\+Event\+Ptr.\+phase\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The \doxylink{namespace_unity_engine_1_1_input_system_aecc012480a29c4b720a87b8465f34182}{Input\+Action\+Phase} associated with this action event. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_a86bd545c9dfe1fb0200e296c44389e57}{Input\+Action.\+phase}, \doxylink{struct_unity_engine_1_1_input_system_1_1_input_action_1_1_callback_context_a335edfa46754b0cef03dafa87f579372}{Input\+Action.\+Callback\+Context.\+phase}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_ab478948168e7b961b6ae71e5a455f1ee}\index{UnityEngine.InputSystem.Utilities.InputActionTrace.ActionEventPtr@{UnityEngine.InputSystem.Utilities.InputActionTrace.ActionEventPtr}!time@{time}}
+\index{time@{time}!UnityEngine.InputSystem.Utilities.InputActionTrace.ActionEventPtr@{UnityEngine.InputSystem.Utilities.InputActionTrace.ActionEventPtr}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_input_action_trace_1_1_action_event_ptr_ab478948168e7b961b6ae71e5a455f1ee} 
+double Unity\+Engine.\+Input\+System.\+Utilities.\+Input\+Action\+Trace.\+Action\+Event\+Ptr.\+time\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The time, in seconds since your game or app started, that the event occurred. 
+
+Times are in seconds and progress linearly in real-\/time. The timeline is the same as for Time.\+realtime\+Since\+Startup. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Actions/Input\+Action\+Trace.\+cs\end{DoxyCompactItemize}

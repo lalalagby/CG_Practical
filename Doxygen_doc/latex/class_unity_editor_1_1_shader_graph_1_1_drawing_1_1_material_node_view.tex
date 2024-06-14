@@ -1,0 +1,228 @@
+\doxysection{Unity\+Editor.\+Shader\+Graph.\+Drawing.\+Material\+Node\+View Class Reference}
+\hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view}{}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view}\index{UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}}
+Inheritance diagram for Unity\+Editor.\+Shader\+Graph.\+Drawing.\+Material\+Node\+View\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.750000cm]{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a9048804ee851aa3339a25261f03ae630}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a9048804ee851aa3339a25261f03ae630} 
+void {\bfseries Initialize} (\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_abstract_material_node}{Abstract\+Material\+Node}} in\+Node, \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_preview_manager}{Preview\+Manager}} preview\+Manager, IEdge\+Connector\+Listener connector\+Listener, \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_graph_view}{Material\+Graph\+View}} graph\+View)
+\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_abb2ee607d6e08c809bd32ffa8d8d1c8a}{Find\+Port}} (\mbox{\hyperlink{struct_unity_editor_1_1_graphing_1_1_slot_reference}{Slot\+Reference}} slot\+Ref, out \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_shader_port}{Shader\+Port}} port)
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a01217a6099d295a913f482c49a3fed32}{Attach\+Message}} (string err\+String, Shader\+Compiler\+Message\+Severity severity)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a84f8756a7c2dab8f0ceebabfd19e84b4}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a84f8756a7c2dab8f0ceebabfd19e84b4} 
+void {\bfseries Set\+Active} (bool state)
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_afcb06a6e374e6f5c4f11616f528ad4b8}{Clear\+Message}} ()
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_aa6379ef7d0a0893bbd92c998bb4a3c55}{Update\+Dropdown\+Entries}} ()
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a2ffb051ae0c409d46c6d6347bbf1e699}{Set\+Color}} (Color color)
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a6ea302c7eb51f71a12725b2f296d5f14}{Reset\+Color}} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a8f12fb1dd4bff27e8379c4a9ac3d89d0}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a8f12fb1dd4bff27e8379c4a9ac3d89d0} 
+Color {\bfseries Get\+Color} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_aeaf304480c34a7ccc5d9eb6a26b4607c}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_aeaf304480c34a7ccc5d9eb6a26b4607c} 
+override void {\bfseries Build\+Contextual\+Menu} (Contextual\+Menu\+Populate\+Event evt)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a0ed6692091ff1548ed1a436778122845}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a0ed6692091ff1548ed1a436778122845} 
+string {\bfseries Sanitize\+Name} (string name)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a581099492e9bbfcf39240580c54f9e5a}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a581099492e9bbfcf39240580c54f9e5a} 
+void {\bfseries Show\+Generated\+Code} (Dropdown\+Menu\+Action action)
+\item 
+object \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_ab62c4f4688a58bf04e4cae93543fd5aa}{Get\+Object\+To\+Inspect}} ()
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a9f98226a6b8a5aacc83f5d0bd30ab890}{Supply\+Data\+To\+Property\+Drawer}} (\mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_drawing_1_1_i_property_drawer}{IProperty\+Drawer}} property\+Drawer, Action inspector\+Update\+Delegate)
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_afb270f0d32049449110111966a57aff7}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_afb270f0d32049449110111966a57aff7} 
+bool {\bfseries Can\+Toggle\+Node\+Expanded} ()
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a441272eed919f2e4a694964146ffa6dc}{On\+Modified}} (Modification\+Scope scope)
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a4845d4f2a086189588875f8b5aa78e44}{Update\+Port\+Input\+Types}} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_aaf01b7fc5c91cbd62078376137951d08}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_aaf01b7fc5c91cbd62078376137951d08} 
+void {\bfseries Dispose} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_add5ccef38444bfa3c512e18ba7dcb90e}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_add5ccef38444bfa3c512e18ba7dcb90e} 
+override void {\bfseries Toggle\+Collapse} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a2a37541c897158fc3a8bae5fe2dc8790}{inspector\+Title}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Visual\+Element \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_ac3d7da0b4551b610436205838befc391}{color\+Element}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Node \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a21ec8a723bc76a9fa5f91607cf2a0953}{gv\+Node}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_abstract_material_node}{Abstract\+Material\+Node}} \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_aa78fb5b84bf1cb46c6b95a0ffad47ccc}{node}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_ab65ae3cf9506c216d7b0e93cd9aed810}\label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_ab65ae3cf9506c216d7b0e93cd9aed810} 
+override bool {\bfseries expanded}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_i_shader_node_view}{Unity\+Editor.\+Shader\+Graph.\+IShader\+Node\+View}}}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_drawing_1_1_i_inspectable}{Unity\+Editor.\+Shader\+Graph.\+Drawing.\+IInspectable}}}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a01217a6099d295a913f482c49a3fed32}\index{UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}!AttachMessage@{AttachMessage}}
+\index{AttachMessage@{AttachMessage}!UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}}
+\doxysubsubsection{\texorpdfstring{AttachMessage()}{AttachMessage()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a01217a6099d295a913f482c49a3fed32} 
+void Unity\+Editor.\+Shader\+Graph.\+Drawing.\+Material\+Node\+View.\+Attach\+Message (\begin{DoxyParamCaption}\item[{string}]{err\+String}{, }\item[{Shader\+Compiler\+Message\+Severity}]{severity}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_i_shader_node_view}{Unity\+Editor.\+Shader\+Graph.\+IShader\+Node\+View}}.
+
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_afcb06a6e374e6f5c4f11616f528ad4b8}\index{UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}!ClearMessage@{ClearMessage}}
+\index{ClearMessage@{ClearMessage}!UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}}
+\doxysubsubsection{\texorpdfstring{ClearMessage()}{ClearMessage()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_afcb06a6e374e6f5c4f11616f528ad4b8} 
+void Unity\+Editor.\+Shader\+Graph.\+Drawing.\+Material\+Node\+View.\+Clear\+Message (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_i_shader_node_view}{Unity\+Editor.\+Shader\+Graph.\+IShader\+Node\+View}}.
+
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_abb2ee607d6e08c809bd32ffa8d8d1c8a}\index{UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}!FindPort@{FindPort}}
+\index{FindPort@{FindPort}!UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}}
+\doxysubsubsection{\texorpdfstring{FindPort()}{FindPort()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_abb2ee607d6e08c809bd32ffa8d8d1c8a} 
+bool Unity\+Editor.\+Shader\+Graph.\+Drawing.\+Material\+Node\+View.\+Find\+Port (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_editor_1_1_graphing_1_1_slot_reference}{Slot\+Reference}}}]{slot\+Ref}{, }\item[{out \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_shader_port}{Shader\+Port}}}]{port}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_i_shader_node_view}{Unity\+Editor.\+Shader\+Graph.\+IShader\+Node\+View}}.
+
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_ab62c4f4688a58bf04e4cae93543fd5aa}\index{UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}!GetObjectToInspect@{GetObjectToInspect}}
+\index{GetObjectToInspect@{GetObjectToInspect}!UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}}
+\doxysubsubsection{\texorpdfstring{GetObjectToInspect()}{GetObjectToInspect()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_ab62c4f4688a58bf04e4cae93543fd5aa} 
+object Unity\+Editor.\+Shader\+Graph.\+Drawing.\+Material\+Node\+View.\+Get\+Object\+To\+Inspect (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_drawing_1_1_i_inspectable}{Unity\+Editor.\+Shader\+Graph.\+Drawing.\+IInspectable}}.
+
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a441272eed919f2e4a694964146ffa6dc}\index{UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}!OnModified@{OnModified}}
+\index{OnModified@{OnModified}!UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}}
+\doxysubsubsection{\texorpdfstring{OnModified()}{OnModified()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a441272eed919f2e4a694964146ffa6dc} 
+void Unity\+Editor.\+Shader\+Graph.\+Drawing.\+Material\+Node\+View.\+On\+Modified (\begin{DoxyParamCaption}\item[{Modification\+Scope}]{scope}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_i_shader_node_view}{Unity\+Editor.\+Shader\+Graph.\+IShader\+Node\+View}}.
+
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a6ea302c7eb51f71a12725b2f296d5f14}\index{UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}!ResetColor@{ResetColor}}
+\index{ResetColor@{ResetColor}!UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}}
+\doxysubsubsection{\texorpdfstring{ResetColor()}{ResetColor()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a6ea302c7eb51f71a12725b2f296d5f14} 
+void Unity\+Editor.\+Shader\+Graph.\+Drawing.\+Material\+Node\+View.\+Reset\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_i_shader_node_view}{Unity\+Editor.\+Shader\+Graph.\+IShader\+Node\+View}}.
+
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a2ffb051ae0c409d46c6d6347bbf1e699}\index{UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}!SetColor@{SetColor}}
+\index{SetColor@{SetColor}!UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}}
+\doxysubsubsection{\texorpdfstring{SetColor()}{SetColor()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a2ffb051ae0c409d46c6d6347bbf1e699} 
+void Unity\+Editor.\+Shader\+Graph.\+Drawing.\+Material\+Node\+View.\+Set\+Color (\begin{DoxyParamCaption}\item[{Color}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_i_shader_node_view}{Unity\+Editor.\+Shader\+Graph.\+IShader\+Node\+View}}.
+
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a9f98226a6b8a5aacc83f5d0bd30ab890}\index{UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}!SupplyDataToPropertyDrawer@{SupplyDataToPropertyDrawer}}
+\index{SupplyDataToPropertyDrawer@{SupplyDataToPropertyDrawer}!UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}}
+\doxysubsubsection{\texorpdfstring{SupplyDataToPropertyDrawer()}{SupplyDataToPropertyDrawer()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a9f98226a6b8a5aacc83f5d0bd30ab890} 
+void Unity\+Editor.\+Shader\+Graph.\+Drawing.\+Material\+Node\+View.\+Supply\+Data\+To\+Property\+Drawer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_drawing_1_1_i_property_drawer}{IProperty\+Drawer}}}]{property\+Drawer}{, }\item[{Action}]{inspector\+Update\+Delegate}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_drawing_1_1_i_inspectable}{Unity\+Editor.\+Shader\+Graph.\+Drawing.\+IInspectable}}.
+
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_aa6379ef7d0a0893bbd92c998bb4a3c55}\index{UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}!UpdateDropdownEntries@{UpdateDropdownEntries}}
+\index{UpdateDropdownEntries@{UpdateDropdownEntries}!UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}}
+\doxysubsubsection{\texorpdfstring{UpdateDropdownEntries()}{UpdateDropdownEntries()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_aa6379ef7d0a0893bbd92c998bb4a3c55} 
+void Unity\+Editor.\+Shader\+Graph.\+Drawing.\+Material\+Node\+View.\+Update\+Dropdown\+Entries (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_i_shader_node_view}{Unity\+Editor.\+Shader\+Graph.\+IShader\+Node\+View}}.
+
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a4845d4f2a086189588875f8b5aa78e44}\index{UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}!UpdatePortInputTypes@{UpdatePortInputTypes}}
+\index{UpdatePortInputTypes@{UpdatePortInputTypes}!UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}}
+\doxysubsubsection{\texorpdfstring{UpdatePortInputTypes()}{UpdatePortInputTypes()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a4845d4f2a086189588875f8b5aa78e44} 
+void Unity\+Editor.\+Shader\+Graph.\+Drawing.\+Material\+Node\+View.\+Update\+Port\+Input\+Types (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_i_shader_node_view}{Unity\+Editor.\+Shader\+Graph.\+IShader\+Node\+View}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_ac3d7da0b4551b610436205838befc391}\index{UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}!colorElement@{colorElement}}
+\index{colorElement@{colorElement}!UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}}
+\doxysubsubsection{\texorpdfstring{colorElement}{colorElement}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_ac3d7da0b4551b610436205838befc391} 
+Visual\+Element Unity\+Editor.\+Shader\+Graph.\+Drawing.\+Material\+Node\+View.\+color\+Element\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_i_shader_node_view}{Unity\+Editor.\+Shader\+Graph.\+IShader\+Node\+View}}.
+
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a21ec8a723bc76a9fa5f91607cf2a0953}\index{UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}!gvNode@{gvNode}}
+\index{gvNode@{gvNode}!UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}}
+\doxysubsubsection{\texorpdfstring{gvNode}{gvNode}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a21ec8a723bc76a9fa5f91607cf2a0953} 
+Node Unity\+Editor.\+Shader\+Graph.\+Drawing.\+Material\+Node\+View.\+gv\+Node\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_i_shader_node_view}{Unity\+Editor.\+Shader\+Graph.\+IShader\+Node\+View}}.
+
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a2a37541c897158fc3a8bae5fe2dc8790}\index{UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}!inspectorTitle@{inspectorTitle}}
+\index{inspectorTitle@{inspectorTitle}!UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}}
+\doxysubsubsection{\texorpdfstring{inspectorTitle}{inspectorTitle}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_a2a37541c897158fc3a8bae5fe2dc8790} 
+string Unity\+Editor.\+Shader\+Graph.\+Drawing.\+Material\+Node\+View.\+inspector\+Title\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_drawing_1_1_i_inspectable}{Unity\+Editor.\+Shader\+Graph.\+Drawing.\+IInspectable}}.
+
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_aa78fb5b84bf1cb46c6b95a0ffad47ccc}\index{UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}!node@{node}}
+\index{node@{node}!UnityEditor.ShaderGraph.Drawing.MaterialNodeView@{UnityEditor.ShaderGraph.Drawing.MaterialNodeView}}
+\doxysubsubsection{\texorpdfstring{node}{node}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_shader_graph_1_1_drawing_1_1_material_node_view_aa78fb5b84bf1cb46c6b95a0ffad47ccc} 
+\mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_abstract_material_node}{Abstract\+Material\+Node}} Unity\+Editor.\+Shader\+Graph.\+Drawing.\+Material\+Node\+View.\+node\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_shader_graph_1_1_i_shader_node_view}{Unity\+Editor.\+Shader\+Graph.\+IShader\+Node\+View}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+shadergraph@14.\+0.\+8/\+Editor/\+Drawing/\+Views/Material\+Node\+View.\+cs\end{DoxyCompactItemize}

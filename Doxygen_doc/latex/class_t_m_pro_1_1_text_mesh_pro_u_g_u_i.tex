@@ -1,0 +1,1514 @@
+\doxysection{TMPro.\+Text\+Mesh\+Pro\+UGUI Class Reference}
+\hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i}{}\label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+Inheritance diagram for TMPro.\+Text\+Mesh\+Pro\+UGUI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.731707cm]{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a2a8879e4aa818ad1338e1cbf2ca31b6d}{Calculate\+Layout\+Input\+Horizontal}} ()
+\begin{DoxyCompactList}\small\item\em Function called by \doxylink{namespace_unity}{Unity} when the horizontal layout needs to be recalculated. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a5d1d50b2bf96c764e4decc60c0b5762c}{Calculate\+Layout\+Input\+Vertical}} ()
+\begin{DoxyCompactList}\small\item\em Function called by \doxylink{namespace_unity}{Unity} when the vertical layout needs to be recalculated. \end{DoxyCompactList}\item 
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_acc18f45edf09f79d04d6a9e461633d7c}\label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_acc18f45edf09f79d04d6a9e461633d7c} 
+override void {\bfseries Set\+Vertices\+Dirty} ()
+\item 
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a662b65a09b65317f716297d4377e27a7}\label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a662b65a09b65317f716297d4377e27a7} 
+override void {\bfseries Set\+Layout\+Dirty} ()
+\item 
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_af75e3f762ed8c445cc4ad100903b5cf1}\label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_af75e3f762ed8c445cc4ad100903b5cf1} 
+override void {\bfseries Set\+Material\+Dirty} ()
+\item 
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a749eb1a6e9aa2f277b07a01f14483cc3}\label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a749eb1a6e9aa2f277b07a01f14483cc3} 
+override void {\bfseries Set\+All\+Dirty} ()
+\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a963457c98b96eb2387dd43d40a7dcc57}{Rebuild}} (\mbox{\hyperlink{namespace_unity_engine_1_1_u_i_a76b804cb1978e6dc1162615deaa710e9}{Canvas\+Update}} update)
+\item 
+override Material \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_ad9e0ee518fca96a5879709f7e2c378f1}{Get\+Modified\+Material}} (Material base\+Material)
+\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_ada791339448a5b531f1bf276108b2b8c}{Recalculate\+Clipping}} ()
+\begin{DoxyCompactList}\small\item\em Method called when the state of a parent changes. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_aa56357c3d3127f3a3662889ec65118f4}{Cull}} (Rect clip\+Rect, bool valid\+Rect)
+\begin{DoxyCompactList}\small\item\em Method called when Stencil Mask needs to be updated on this element and parents. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a7a55d8c0461e66d88ab71cd27bea397f}{Update\+Mesh\+Padding}} ()
+\begin{DoxyCompactList}\small\item\em Function to be used to force recomputing of character padding when Shader / Material properties have been changed via script. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a6d4c78ad7fcebc7cd040a2ce85dce2d8}{Force\+Mesh\+Update}} (bool ignore\+Active\+State=false, bool force\+Text\+Reparsing=false)
+\begin{DoxyCompactList}\small\item\em Function to force regeneration of the text object before its normal process time. This is useful when changes to the text object properties need to be applied immediately. \end{DoxyCompactList}\item 
+override \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_info}{TMP\+\_\+\+Text\+Info}} \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a8232388d078ad69a9ea241fa15bd2fab}{Get\+Text\+Info}} (string \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a26baff8fa62785bfae462ffc3c7d3e78}{text}})
+\begin{DoxyCompactList}\small\item\em Function used to evaluate the length of a text string. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a2b3b3a1a8d320d9f39751e7f05b1b2be}{Clear\+Mesh}} ()
+\begin{DoxyCompactList}\small\item\em Function to clear the geometry of the Primary and Sub Text objects. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a111121630f131c81af75f55f31e392e2}{Update\+Geometry}} (Mesh \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a0c6c3fd5daff551039308552d0e9fa3c}{mesh}}, int index)
+\begin{DoxyCompactList}\small\item\em Function to update the geometry of the main and sub text objects. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a2fb671e18fda5d2e996ed13347fefffa}{Update\+Vertex\+Data}} (\mbox{\hyperlink{namespace_t_m_pro_a517464fab2ef7ff5b9658d2acaf49a57}{TMP\+\_\+\+Vertex\+Data\+Update\+Flags}} flags)
+\begin{DoxyCompactList}\small\item\em Function to upload the updated vertex data and renderer. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a3f32882137aab111603158a4452bc53b}{Update\+Vertex\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Function to upload the updated vertex data and renderer. \end{DoxyCompactList}\item 
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_ac38b46e6697cbc9e1f8ba43350e97469}\label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_ac38b46e6697cbc9e1f8ba43350e97469} 
+void {\bfseries Update\+Font\+Asset} ()
+\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a585823ae58e0b54f1497ced737567a03}{Compute\+Margin\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Update the margin width and height. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text}{TMPro.\+TMP\+\_\+\+Text}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a4b55ef60875f30db737601cf3c14d551}{Set\+Vertices}} (Vector3\mbox{[}$\,$\mbox{]} vertices)
+\begin{DoxyCompactList}\small\item\em Function to push a new set of vertices to the mesh. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a5474bd0b012d30fca4ad365a4e8e0a4d}{Cross\+Fade\+Color}} (Color target\+Color, float duration, bool ignore\+Time\+Scale, bool use\+Alpha)
+\begin{DoxyCompactList}\small\item\em Tweens the Canvas\+Renderer color associated with this Graphic. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a543340c801ac45054c80221f3c5cecba}{Cross\+Fade\+Alpha}} (float \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_aca56e662ce122bb749faa1b044f29a57}{alpha}}, float duration, bool ignore\+Time\+Scale)
+\begin{DoxyCompactList}\small\item\em Tweens the alpha of the Canvas\+Renderer color associated with this Graphic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_ae8e4d858e160b5a8ac8a2c2dc658561a}{Set\+Text}} (string source\+Text, bool sync\+Text\+Input\+Box=true)
+\begin{DoxyCompactList}\small\item\em This function is the same as using the text property to set the text. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_abfa8885816cd2b8bc72ea8c043faec50}{Set\+Text}} (string source\+Text, float arg0)
+\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_aba22f7f67f863cf9ba3cdcbf83033586}{Set\+Text}} (string source\+Text, float arg0, float arg1)
+\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_abb62c67eb917682087104b399286bfa1}{Set\+Text}} (string source\+Text, float arg0, float arg1, float arg2)
+\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a33344154f42925d8f6d584b5af25b1c3}{Set\+Text}} (string source\+Text, float arg0, float arg1, float arg2, float arg3)
+\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a3839e82f7dc9a9f60018cfdae59e8f0f}{Set\+Text}} (string source\+Text, float arg0, float arg1, float arg2, float arg3, float arg4)
+\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a83de808f4af8280b9c91f5776389c94a}{Set\+Text}} (string source\+Text, float arg0, float arg1, float arg2, float arg3, float arg4, float arg5)
+\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_ab9c675805764f0722ff409f1d446dd65}{Set\+Text}} (string source\+Text, float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, float arg6)
+\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a9ff1f4fb5fddac4fbf44fd7ec564fe7b}{Set\+Text}} (string source\+Text, float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, float arg6, float arg7)
+\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a973ea8b3b19436e3ecc6beeea5b32d88}{Set\+Text}} (String\+Builder source\+Text)
+\begin{DoxyCompactList}\small\item\em Set the text using a String\+Builder object as the source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a9a6a9ff002343f9fc22ccd79225548b5}{Set\+Text}} (char\mbox{[}$\,$\mbox{]} source\+Text)
+\begin{DoxyCompactList}\small\item\em Set the text using a char array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_ad8f048c990cbd96793bbc9a2a3974818}{Set\+Text}} (char\mbox{[}$\,$\mbox{]} source\+Text, int start, int length)
+\begin{DoxyCompactList}\small\item\em Set the text using a char array and specifying the starting character index and length. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a3a9c8337c13ec0b01a256657b60f995d}{Set\+Char\+Array}} (char\mbox{[}$\,$\mbox{]} source\+Text)
+\begin{DoxyCompactList}\small\item\em Set the text using a char array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_ab92527193dad910ee30c957c5dcd7a16}{Set\+Char\+Array}} (char\mbox{[}$\,$\mbox{]} source\+Text, int start, int length)
+\begin{DoxyCompactList}\small\item\em Set the text using a char array and specifying the starting character index and length. \end{DoxyCompactList}\item 
+Vector2 \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a9d3dbcb6ccf3ef97454b5ec89725eccb}{Get\+Preferred\+Values}} ()
+\begin{DoxyCompactList}\small\item\em Function to Calculate the Preferred Width and Height of the text object. \end{DoxyCompactList}\item 
+Vector2 \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a214f876e2c3bbcfde711d95e4c79b821}{Get\+Preferred\+Values}} (float width, float height)
+\begin{DoxyCompactList}\small\item\em Function to Calculate the Preferred Width and Height of the text object given the provided width and height. \end{DoxyCompactList}\item 
+Vector2 \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a039a0f623414b9972e2e123a81ddc003}{Get\+Preferred\+Values}} (string \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a26baff8fa62785bfae462ffc3c7d3e78}{text}})
+\begin{DoxyCompactList}\small\item\em Function to Calculate the Preferred Width and Height of the text object given a certain string. \end{DoxyCompactList}\item 
+Vector2 \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a5bad2f9a6312f25cc94280a90b61f864}{Get\+Preferred\+Values}} (string \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a26baff8fa62785bfae462ffc3c7d3e78}{text}}, float width, float height)
+\begin{DoxyCompactList}\small\item\em Function to Calculate the Preferred Width and Height of the text object given a certain string and size of text container. \end{DoxyCompactList}\item 
+Vector2 \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_aac1235e0778a66ae1cf9c174196171c5}{Get\+Rendered\+Values}} ()
+\begin{DoxyCompactList}\small\item\em Method returning the rendered width and height of the text object. \end{DoxyCompactList}\item 
+Vector2 \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a47a974ab674a361f2351ff8bf7e0da22}{Get\+Rendered\+Values}} (bool only\+Visible\+Characters)
+\item 
+virtual void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_af3f756ddaf2d3f82ddddb27b6f66a15f}{Clear\+Mesh}} (bool upload\+Geometry)
+\begin{DoxyCompactList}\small\item\em Function to clear the geometry of the Primary and Sub Text objects. \end{DoxyCompactList}\item 
+virtual string \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a0cdf3acfceafe3443a2851dea9db0bb8}{Get\+Parsed\+Text}} ()
+\begin{DoxyCompactList}\small\item\em Function which returns the text after it has been parsed and rich text tags removed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic}{Unity\+Engine.\+UI.\+Maskable\+Graphic}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_ad434089f656a3d6944a6172391698e03}{Set\+Clip\+Rect}} (Rect clip\+Rect, bool valid\+Rect)
+\begin{DoxyCompactList}\small\item\em See \doxylink{interface_unity_engine_1_1_u_i_1_1_i_clippable_a25f8414c2b30a258594c13f208eca25e}{IClippable.\+Set\+Clip\+Rect}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_a7d529345c46cba834558aeab469007ad}{Set\+Clip\+Softness}} (Vector2 clip\+Softness)
+\begin{DoxyCompactList}\small\item\em Set the clip softness for the \doxylink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{IClippable}. \end{DoxyCompactList}\item 
+virtual void {\bfseries Parent\+Mask\+State\+Changed} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_a661cf20be729e50931e4b72766259931}{Recalculate\+Masking}} ()
+\begin{DoxyCompactList}\small\item\em See \doxylink{interface_unity_engine_1_1_u_i_1_1_i_maskable_ac4c881d2938635807e3c3e4449959d14}{IMaskable.\+Recalculate\+Masking}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_ab4ae70c3573369f058130f459a4df34d}\label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_ab4ae70c3573369f058130f459a4df34d} 
+override void {\bfseries Update\+Material} ()
+\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_aaab93e2d40e730d419c60310f0b55605}{Internal\+Cross\+Fade\+Color}} (Color target\+Color, float duration, bool ignore\+Time\+Scale, bool use\+Alpha)
+\begin{DoxyCompactList}\small\item\em Tweens the Canvas\+Renderer color associated with this Graphic. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a198b9bf0fea8a41b2c76259db7f5baff}{Internal\+Cross\+Fade\+Alpha}} (float \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_aca56e662ce122bb749faa1b044f29a57}{alpha}}, float duration, bool ignore\+Time\+Scale)
+\begin{DoxyCompactList}\small\item\em Tweens the alpha of the Canvas\+Renderer color associated with this Graphic. \end{DoxyCompactList}\item 
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a68396208120ce895ce53db26b8779c35}\label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a68396208120ce895ce53db26b8779c35} 
+override void {\bfseries Awake} ()
+\item 
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_aa7530af860a3f8775e4b0abe97275478}\label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_aa7530af860a3f8775e4b0abe97275478} 
+override void {\bfseries On\+Enable} ()
+\item 
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_aff61001f3c6f4c13de8208a487e7061a}\label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_aff61001f3c6f4c13de8208a487e7061a} 
+override void {\bfseries On\+Disable} ()
+\item 
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a48779da83c94351d0994aac6461bda96}\label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a48779da83c94351d0994aac6461bda96} 
+override void {\bfseries On\+Destroy} ()
+\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_aedbf6c9aaf6c104ac7c81e85d99498b4}{Load\+Font\+Asset}} ()
+\begin{DoxyCompactList}\small\item\em Method which derived classes need to override to load Font Assets. \end{DoxyCompactList}\item 
+override Material \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a51ff5f00ca136e0cb8c8865bb6e6ede9}{Get\+Material}} (Material mat)
+\begin{DoxyCompactList}\small\item\em Function called internally when a new material is assigned via the font\+Material property. \end{DoxyCompactList}\item 
+override Material\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a9aa332d87cf676f233ff75c8443aff1a}{Get\+Materials}} (Material\mbox{[}$\,$\mbox{]} mats)
+\begin{DoxyCompactList}\small\item\em Method returning instances of the materials used by the text object. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a37642717b05a3ef8cb0eaa004b2f00bc}{Set\+Shared\+Material}} (Material mat)
+\begin{DoxyCompactList}\small\item\em Function called internally when a new shared material is assigned via the font\+Shared\+Material property. \end{DoxyCompactList}\item 
+override Material\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_aece3c4629f22272369454f77accd8dbd}{Get\+Shared\+Materials}} ()
+\begin{DoxyCompactList}\small\item\em Method returning an array containing the materials used by the text object. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a9ca66d291221a6ee6a9aeaf7944a647d}{Set\+Shared\+Materials}} (Material\mbox{[}$\,$\mbox{]} materials)
+\begin{DoxyCompactList}\small\item\em Method used to assign new materials to the text and sub text objects. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a2f3dda7925344d1798b83d85e8c81361}{Set\+Outline\+Thickness}} (float thickness)
+\begin{DoxyCompactList}\small\item\em Function called internally to set the outline thickness property of the material. This will results in an instance of the material. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_ab485c4e2bf309a9485360a19de950fa2}{Set\+Face\+Color}} (Color32 \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_af874b3b1f2d1565c68e0c3ad9f79e5c4}{color}})
+\begin{DoxyCompactList}\small\item\em Function called internally to set the face color of the material. This will results in an instance of the material. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_ab6bfded8873a3c3aea4639932ec6f4b7}{Set\+Outline\+Color}} (Color32 \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_af874b3b1f2d1565c68e0c3ad9f79e5c4}{color}})
+\begin{DoxyCompactList}\small\item\em Function called internally to set the outline color of the material. This will results in an instance of the material. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a764d47b0d54909e0e981e6ab50e95191}{Set\+Shader\+Depth}} ()
+\begin{DoxyCompactList}\small\item\em Set the Render Queue and ZTest mode on the current material. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a1042bb0fdc0289c8d159570b9ee3bb5e}{Set\+Culling}} ()
+\begin{DoxyCompactList}\small\item\em Set the culling mode on the material. \end{DoxyCompactList}\item 
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a3dbf1232fa23263480cb91202b8bb0d8}\label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a3dbf1232fa23263480cb91202b8bb0d8} 
+override void {\bfseries On\+Did\+Apply\+Animation\+Properties} ()
+\item 
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_af06e3849f8cdb350ef904848487afe31}\label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_af06e3849f8cdb350ef904848487afe31} 
+override void {\bfseries On\+Canvas\+Hierarchy\+Changed} ()
+\item 
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a2234b62a5f2bf5fe521e811c5ec4441a}\label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a2234b62a5f2bf5fe521e811c5ec4441a} 
+override void {\bfseries On\+Transform\+Parent\+Changed} ()
+\item 
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a734589d21ffb7d2ef913b96173b0f432}\label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a734589d21ffb7d2ef913b96173b0f432} 
+override void {\bfseries On\+Rect\+Transform\+Dimensions\+Change} ()
+\item 
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_aaaecdfcf8651816c94084873e48c0b4c}\label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_aaaecdfcf8651816c94084873e48c0b4c} 
+virtual void {\bfseries Generate\+Text\+Mesh} ()
+\begin{DoxyCompactList}\small\item\em This is the main function that is responsible for creating / displaying the text. \end{DoxyCompactList}\item 
+override Vector3\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_ae66c4b8d29e8168cdf94197a6323baa2}{Get\+Text\+Container\+Local\+Corners}} ()
+\begin{DoxyCompactList}\small\item\em Method to return the local corners of the Text Container or Rect\+Transform. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a955de616cf76ff0886112394b6289d85}{Set\+Active\+Sub\+Meshes}} (bool state)
+\begin{DoxyCompactList}\small\item\em Method to Enable or Disable child Sub\+Mesh objects. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a81bcb90df1634077ddd2dd754efb73c1}{Destroy\+Sub\+Mesh\+Objects}} ()
+\begin{DoxyCompactList}\small\item\em Destroy Sub Mesh Objects. \end{DoxyCompactList}\item 
+override Bounds \mbox{\hyperlink{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_aec6bee5f25f07eaeeefaa5f6cd6ad35c}{Get\+Compound\+Bounds}} ()
+\begin{DoxyCompactList}\small\item\em Method returning the compound bounds of the text object and child sub objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text}{TMPro.\+TMP\+\_\+\+Text}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a7ce68525afb782cd0d6b3f1a13633c0c}{Set\+Font\+Base\+Material}} (Material mat)
+\begin{DoxyCompactList}\small\item\em Function called internally when assigning a new base material. \end{DoxyCompactList}\item 
+virtual Material \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a427ecf798a6c03dd9f3230b3ceaf1f61}{Create\+Material\+Instance}} (Material source)
+\begin{DoxyCompactList}\small\item\em Method to set the materials of the text and sub text objects. \end{DoxyCompactList}\item 
+void {\bfseries Set\+Vertex\+Color\+Gradient} (\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___color_gradient}{TMP\+\_\+\+Color\+Gradient}} gradient)
+\item 
+void {\bfseries Set\+Text\+Sorting\+Order} (Vertex\+Sorting\+Order order)
+\begin{DoxyCompactList}\small\item\em Function to control the sorting of the geometry of the text object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_ae2ef03960db59b16eaa50cf1198cb1db}{Set\+Text\+Sorting\+Order}} (int\mbox{[}$\,$\mbox{]} order)
+\begin{DoxyCompactList}\small\item\em Function to sort the geometry of the text object in accordance to the provided order. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a7182ea72ca6b396af6cae05cee59243d}{Get\+Padding\+For\+Material}} ()
+\begin{DoxyCompactList}\small\item\em Get the padding value for the currently assigned material. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a1c51fe580e2440116d1de1280b9d189f}{Get\+Padding\+For\+Material}} (Material mat)
+\begin{DoxyCompactList}\small\item\em Get the padding value for the given material. \end{DoxyCompactList}\item 
+void {\bfseries Parse\+Input\+Text} ()
+\begin{DoxyCompactList}\small\item\em Method to parse the input text based on its source. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_abb5c80b9a45b89007024c857593e12c8}{Get\+Preferred\+Width}} ()
+\begin{DoxyCompactList}\small\item\em Method to calculate the preferred width of a text object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a754e5a230232f1ed55615e55a3ed32ad}{Get\+Preferred\+Height}} ()
+\begin{DoxyCompactList}\small\item\em Method to calculate the preferred height of a text object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_aab9263cb25a2af2ef736c9e2d0f63e40}{Get\+Rendered\+Width}} (bool only\+Visible\+Characters)
+\begin{DoxyCompactList}\small\item\em Method returning the rendered width of the text object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_ac94f45240acb3ae89c3c2a70437030ce}{Get\+Rendered\+Height}} (bool only\+Visible\+Characters)
+\begin{DoxyCompactList}\small\item\em Method returning the rendered height of the text object. \end{DoxyCompactList}\item 
+virtual Vector2 \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_acc9b0abc219f02c05f5badfd0e649094}{Calculate\+Preferred\+Values}} (ref float \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a87683b2b2c721200b2822d16c0ce3dee}{font\+Size}}, Vector2 margin\+Size, bool is\+Text\+Auto\+Sizing\+Enabled, bool is\+Word\+Wrapping\+Enabled)
+\begin{DoxyCompactList}\small\item\em Method to calculate the preferred width and height of the text object. \end{DoxyCompactList}\item 
+Bounds \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a283ef3decc85a36d428cbc270647dde6}{Get\+Text\+Bounds}} ()
+\begin{DoxyCompactList}\small\item\em Method which returns the bounds of the text object;. \end{DoxyCompactList}\item 
+Bounds \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a06813292362ae8e0c09c214dca0b570a}{Get\+Text\+Bounds}} (bool only\+Visible\+Characters)
+\begin{DoxyCompactList}\small\item\em Method which returns the bounds of the text object;. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a423bcbf346f99fef8d457316729c95da}{Adjust\+Line\+Offset}} (int start\+Index, int end\+Index, float offset)
+\begin{DoxyCompactList}\small\item\em Method to adjust line spacing as a result of using different fonts or font point size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_ab4057d4bf48b3f95e69bd3146a9fc50e}{Resize\+Line\+Extents}} (int size)
+\begin{DoxyCompactList}\small\item\em Function to increase the size of the Line \doxylink{struct_t_m_pro_1_1_extents}{Extents} Array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a510aea8e56ba991e636c22d52c88def1}{Insert\+New\+Line}} (int i, float base\+Scale, float current\+Element\+Scale, float current\+Em\+Scale, float glyph\+Adjustment, float bold\+Spacing\+Adjustment, float character\+Spacing\+Adjustment, float width, float line\+Gap, ref bool is\+Max\+Visible\+Descender\+Set, ref float max\+Visible\+Descender)
+\begin{DoxyCompactList}\small\item\em Function used in conjunction with Get\+Text\+Info to figure out Array allocations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_af4575fb91d41221be3bd2764a356eda1}{Save\+Word\+Wrapping\+State}} (ref \mbox{\hyperlink{struct_t_m_pro_1_1_word_wrap_state}{Word\+Wrap\+State}} state, int index, int count)
+\begin{DoxyCompactList}\small\item\em Save the State of various variables used in the mesh creation loop in conjunction with Word Wrapping. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a0555e7043aed6e3db5ef6113eac2fa77}{Restore\+Word\+Wrapping\+State}} (ref \mbox{\hyperlink{struct_t_m_pro_1_1_word_wrap_state}{Word\+Wrap\+State}} state)
+\begin{DoxyCompactList}\small\item\em Restore the State of various variables used in the mesh creation loop. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_ac62ca7572491147ae78efdbbab12c953}{Save\+Glyph\+Vertex\+Info}} (float padding, float style\+\_\+padding, Color32 vertex\+Color)
+\begin{DoxyCompactList}\small\item\em Store vertex information for each character. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_ab4339f4e5cc87fd75ef8a52106ede97e}{Save\+Sprite\+Vertex\+Info}} (Color32 vertex\+Color)
+\begin{DoxyCompactList}\small\item\em Store vertex information for each sprite. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a08f26a6f0ccce1042dc32f8a392f4c25}{Fill\+Character\+Vertex\+Buffers}} (int i, int index\+\_\+\+X4)
+\begin{DoxyCompactList}\small\item\em Store vertex attributes into the appropriate \doxylink{struct_t_m_pro_1_1_t_m_p___mesh_info}{TMP\+\_\+\+Mesh\+Info}. \end{DoxyCompactList}\item 
+virtual void {\bfseries Fill\+Character\+Vertex\+Buffers} (int i, int index\+\_\+\+X4, bool is\+Volumetric)
+\item 
+virtual void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a6f919375c12a3e03f3ded228043e9513}{Fill\+Sprite\+Vertex\+Buffers}} (int i, int index\+\_\+\+X4)
+\begin{DoxyCompactList}\small\item\em Fill Vertex Buffers for Sprites. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a735c1a7bbfc899272bc80bb9175720cc}{Draw\+Underline\+Mesh}} (Vector3 start, Vector3 end, ref int index, float start\+Scale, float end\+Scale, float max\+Scale, float sdf\+Scale, Color32 underline\+Color)
+\begin{DoxyCompactList}\small\item\em Method to add the underline geometry. \end{DoxyCompactList}\item 
+virtual void {\bfseries Draw\+Text\+Highlight} (Vector3 start, Vector3 end, ref int index, Color32 highlight\+Color)
+\item 
+void {\bfseries Load\+Default\+Settings} ()
+\begin{DoxyCompactList}\small\item\em Internal function used to load the default settings of text objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a17ad19c4cf9c5ad4485b208eb0a37bf2}{Get\+Special\+Characters}} (\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}} font\+Asset)
+\begin{DoxyCompactList}\small\item\em Method used to find and cache references to the Underline and Ellipsis characters. \end{DoxyCompactList}\item 
+void {\bfseries Get\+Ellipsis\+Special\+Character} (\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}} font\+Asset)
+\item 
+void {\bfseries Get\+Underline\+Special\+Character} (\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}} font\+Asset)
+\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_aff29421747c4ff78a5d345bf7f35cb88}{Replace\+Tag\+With\+Character}} (int\mbox{[}$\,$\mbox{]} chars, int insertion\+Index, int tag\+Length, char c)
+\begin{DoxyCompactList}\small\item\em Replace a given number of characters (tag) in the array with a new character and shift subsequent characters in the array. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}} \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a473e6fb93717c196a1d7d3c4670557a2}{Get\+Font\+Asset\+For\+Weight}} (int \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a6eda6785b14ba6634e8bcc42b6e066ba}{font\+Weight}})
+\item 
+Vector2 \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_ab3678ea5e10c2193b87d1ee79f8ef5c3}{Pack\+UV}} (float x, float y, float scale)
+\begin{DoxyCompactList}\small\item\em Function to pack scale information in the UV2 Channel. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_adff52c0fb7ca30e42a9a9c6eb4799c15}{Pack\+UV}} (float x, float y)
+\item 
+int \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a2c888ce3a21999d51131753730cac678}{Hex\+To\+Int}} (char hex)
+\begin{DoxyCompactList}\small\item\em Function to pack scale information in the UV2 Channel. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_ac300ce0327de1c0807c6617496b367cb}{Get\+UTF16}} (string \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a26baff8fa62785bfae462ffc3c7d3e78}{text}}, int i)
+\begin{DoxyCompactList}\small\item\em Convert UTF-\/16 Hex to Char. \end{DoxyCompactList}\item 
+int {\bfseries Get\+UTF16} (int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a26baff8fa62785bfae462ffc3c7d3e78}{text}}, int i)
+\item 
+int \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a0cfc7cb7ac6ce49e764d26bc9c3ffcee}{Get\+UTF16}} (String\+Builder \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a26baff8fa62785bfae462ffc3c7d3e78}{text}}, int i)
+\begin{DoxyCompactList}\small\item\em Convert UTF-\/16 Hex to Char. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_add381cfff574155b2b44eddc9fedd883}{Get\+UTF32}} (string \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a26baff8fa62785bfae462ffc3c7d3e78}{text}}, int i)
+\begin{DoxyCompactList}\small\item\em Convert UTF-\/32 Hex to Char. \end{DoxyCompactList}\item 
+int {\bfseries Get\+UTF32} (int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a26baff8fa62785bfae462ffc3c7d3e78}{text}}, int i)
+\item 
+int \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a6045beb3d2ffa3d3ff56b6b68d5a99fd}{Get\+UTF32}} (String\+Builder \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a26baff8fa62785bfae462ffc3c7d3e78}{text}}, int i)
+\begin{DoxyCompactList}\small\item\em Convert UTF-\/32 Hex to Char. \end{DoxyCompactList}\item 
+Color32 \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a455f31609db404fc228b7208b97a3a74}{Hex\+Chars\+To\+Color}} (char\mbox{[}$\,$\mbox{]} hex\+Chars, int tag\+Count)
+\begin{DoxyCompactList}\small\item\em Method to convert Hex color values to Color32. \end{DoxyCompactList}\item 
+Color32 \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_ad2767b714fe3dab5354427dc493a3563}{Hex\+Chars\+To\+Color}} (char\mbox{[}$\,$\mbox{]} hex\+Chars, int start\+Index, int length)
+\begin{DoxyCompactList}\small\item\em Method to convert Hex Color values to Color32. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a939a6f39042a1079067970d796eeee6f}{Convert\+To\+Float}} (char\mbox{[}$\,$\mbox{]} chars, int start\+Index, int length)
+\begin{DoxyCompactList}\small\item\em Extracts a float value from char\mbox{[}\mbox{]} assuming we know the position of the start, end and decimal point. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_aceafbcdcf06016920f9288d01c93fb36}{Convert\+To\+Float}} (char\mbox{[}$\,$\mbox{]} chars, int start\+Index, int length, out int last\+Index)
+\begin{DoxyCompactList}\small\item\em Extracts a float value from char\mbox{[}\mbox{]} given a start index and length. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic}{Unity\+Engine.\+UI.\+Maskable\+Graphic}}}
+\begin{DoxyCompactItemize}
+\item 
+override void {\bfseries On\+Enable} ()
+\item 
+override void {\bfseries On\+Disable} ()
+\item 
+override void {\bfseries On\+Transform\+Parent\+Changed} ()
+\item 
+override void {\bfseries On\+Canvas\+Hierarchy\+Changed} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a9dbdd3c243c1c77725a9d97ef99ee457}\label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a9dbdd3c243c1c77725a9d97ef99ee457} 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sub_mesh_u_i}{TMP\+\_\+\+Sub\+Mesh\+UI}}\mbox{[}$\,$\mbox{]} {\bfseries m\+\_\+sub\+Text\+Objects} = new \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sub_mesh_u_i}{TMP\+\_\+\+Sub\+Mesh\+UI}}\mbox{[}8\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text}{TMPro.\+TMP\+\_\+\+Text}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries m\+\_\+text}
+\item 
+\mbox{\hyperlink{interface_t_m_pro_1_1_i_text_preprocessor}{IText\+Preprocessor}} {\bfseries m\+\_\+\+Text\+Preprocessor}
+\item 
+bool {\bfseries m\+\_\+is\+Right\+To\+Left} = false
+\item 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}} {\bfseries m\+\_\+font\+Asset}
+\item 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}} {\bfseries m\+\_\+current\+Font\+Asset}
+\item 
+bool {\bfseries m\+\_\+is\+SDFShader}
+\item 
+Material {\bfseries m\+\_\+shared\+Material}
+\item 
+Material {\bfseries m\+\_\+current\+Material}
+\item 
+int {\bfseries m\+\_\+current\+Material\+Index}
+\item 
+Material\mbox{[}$\,$\mbox{]} {\bfseries m\+\_\+font\+Shared\+Materials}
+\item 
+Material {\bfseries m\+\_\+font\+Material}
+\item 
+Material\mbox{[}$\,$\mbox{]} {\bfseries m\+\_\+font\+Materials}
+\item 
+bool {\bfseries m\+\_\+is\+Material\+Dirty}
+\item 
+Color32 {\bfseries m\+\_\+font\+Color32} = Color.\+white
+\item 
+Color {\bfseries m\+\_\+font\+Color} = Color.\+white
+\item 
+Color32 {\bfseries m\+\_\+underline\+Color} = s\+\_\+color\+White
+\item 
+Color32 {\bfseries m\+\_\+strikethrough\+Color} = s\+\_\+color\+White
+\item 
+bool {\bfseries m\+\_\+enable\+Vertex\+Gradient}
+\item 
+Color\+Mode {\bfseries m\+\_\+color\+Mode} = Color\+Mode.\+Four\+Corners\+Gradient
+\item 
+\mbox{\hyperlink{struct_t_m_pro_1_1_vertex_gradient}{Vertex\+Gradient}} {\bfseries m\+\_\+font\+Color\+Gradient} = new \mbox{\hyperlink{struct_t_m_pro_1_1_vertex_gradient}{Vertex\+Gradient}}(Color.\+white)
+\item 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___color_gradient}{TMP\+\_\+\+Color\+Gradient}} {\bfseries m\+\_\+font\+Color\+Gradient\+Preset}
+\item 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset}{TMP\+\_\+\+Sprite\+Asset}} {\bfseries m\+\_\+sprite\+Asset}
+\item 
+bool {\bfseries m\+\_\+tint\+All\+Sprites}
+\item 
+bool {\bfseries m\+\_\+tint\+Sprite}
+\item 
+Color32 {\bfseries m\+\_\+sprite\+Color}
+\item 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___style_sheet}{TMP\+\_\+\+Style\+Sheet}} {\bfseries m\+\_\+\+Style\+Sheet}
+\item 
+int {\bfseries m\+\_\+\+Text\+Style\+Hash\+Code}
+\item 
+bool {\bfseries m\+\_\+override\+Html\+Colors} = false
+\item 
+Color32 {\bfseries m\+\_\+face\+Color} = Color.\+white
+\item 
+Color32 {\bfseries m\+\_\+outline\+Color} = Color.\+black
+\item 
+float {\bfseries m\+\_\+outline\+Width} = 0.\+0f
+\item 
+float {\bfseries m\+\_\+font\+Size} = -\/99
+\item 
+float {\bfseries m\+\_\+current\+Font\+Size}
+\item 
+float {\bfseries m\+\_\+font\+Size\+Base} = 36
+\item 
+\mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$ float $>$ {\bfseries m\+\_\+size\+Stack} = new \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$float$>$(16)
+\item 
+Font\+Weight {\bfseries m\+\_\+font\+Weight} = Font\+Weight.\+Regular
+\item 
+Font\+Weight {\bfseries m\+\_\+\+Font\+Weight\+Internal} = Font\+Weight.\+Regular
+\item 
+\mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$ Font\+Weight $>$ {\bfseries m\+\_\+\+Font\+Weight\+Stack} = new \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$Font\+Weight$>$(8)
+\item 
+bool {\bfseries m\+\_\+enable\+Auto\+Sizing}
+\item 
+float {\bfseries m\+\_\+max\+Font\+Size}
+\item 
+float {\bfseries m\+\_\+min\+Font\+Size}
+\item 
+int {\bfseries m\+\_\+\+Auto\+Size\+Iteration\+Count}
+\item 
+int {\bfseries m\+\_\+\+Auto\+Size\+Max\+Iteration\+Count} = 100
+\item 
+bool {\bfseries m\+\_\+\+Is\+Auto\+Size\+Point\+Size\+Set}
+\item 
+float {\bfseries m\+\_\+font\+Size\+Min} = 0
+\item 
+float {\bfseries m\+\_\+font\+Size\+Max} = 0
+\item 
+Font\+Styles {\bfseries m\+\_\+font\+Style} = Font\+Styles.\+Normal
+\item 
+Font\+Styles {\bfseries m\+\_\+\+Font\+Style\+Internal} = Font\+Styles.\+Normal
+\item 
+\mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___font_style_stack}{TMP\+\_\+\+Font\+Style\+Stack}} {\bfseries m\+\_\+font\+Style\+Stack}
+\item 
+bool {\bfseries m\+\_\+is\+Using\+Bold} = false
+\item 
+\mbox{\hyperlink{namespace_t_m_pro_a48bf77c46bd71c8b9748573d436953d1}{Horizontal\+Alignment\+Options}} {\bfseries m\+\_\+\+Horizontal\+Alignment} = Horizontal\+Alignment\+Options.\+Left
+\item 
+\mbox{\hyperlink{namespace_t_m_pro_a338a80617042b3c70d3ede20fe5ae80b}{Vertical\+Alignment\+Options}} {\bfseries m\+\_\+\+Vertical\+Alignment} = Vertical\+Alignment\+Options.\+Top
+\item 
+Text\+Alignment\+Options {\bfseries m\+\_\+text\+Alignment} = Text\+Alignment\+Options.\+Converted
+\item 
+\mbox{\hyperlink{namespace_t_m_pro_a48bf77c46bd71c8b9748573d436953d1}{Horizontal\+Alignment\+Options}} {\bfseries m\+\_\+line\+Justification}
+\item 
+\mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$ \mbox{\hyperlink{namespace_t_m_pro_a48bf77c46bd71c8b9748573d436953d1}{Horizontal\+Alignment\+Options}} $>$ {\bfseries m\+\_\+line\+Justification\+Stack} = new \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$\mbox{\hyperlink{namespace_t_m_pro_a48bf77c46bd71c8b9748573d436953d1}{Horizontal\+Alignment\+Options}}$>$(new \mbox{\hyperlink{namespace_t_m_pro_a48bf77c46bd71c8b9748573d436953d1}{Horizontal\+Alignment\+Options}}\mbox{[}16\mbox{]})
+\item 
+Vector3\mbox{[}$\,$\mbox{]} {\bfseries m\+\_\+text\+Container\+Local\+Corners} = new Vector3\mbox{[}4\mbox{]}
+\item 
+float {\bfseries m\+\_\+character\+Spacing} = 0
+\item 
+float {\bfseries m\+\_\+c\+Spacing} = 0
+\item 
+float {\bfseries m\+\_\+mono\+Spacing} = 0
+\item 
+float {\bfseries m\+\_\+word\+Spacing} = 0
+\item 
+float {\bfseries m\+\_\+line\+Spacing} = 0
+\item 
+float {\bfseries m\+\_\+line\+Spacing\+Delta} = 0
+\item 
+float {\bfseries m\+\_\+line\+Height} = TMP\+\_\+\+Math.\+FLOAT\+\_\+\+UNSET
+\item 
+bool {\bfseries m\+\_\+\+Is\+Driven\+Line\+Spacing}
+\item 
+float {\bfseries m\+\_\+line\+Spacing\+Max} = 0
+\item 
+float {\bfseries m\+\_\+paragraph\+Spacing} = 0
+\item 
+float {\bfseries m\+\_\+char\+Width\+Max\+Adj} = 0f
+\item 
+float {\bfseries m\+\_\+char\+Width\+Adj\+Delta} = 0
+\item 
+bool {\bfseries m\+\_\+enable\+Word\+Wrapping} = false
+\item 
+bool {\bfseries m\+\_\+is\+Character\+Wrapping\+Enabled} = false
+\item 
+bool {\bfseries m\+\_\+is\+Non\+Breaking\+Space} = false
+\item 
+bool {\bfseries m\+\_\+is\+Ignoring\+Alignment}
+\item 
+float {\bfseries m\+\_\+word\+Wrapping\+Ratios} = 0.\+4f
+\item 
+Text\+Overflow\+Modes {\bfseries m\+\_\+overflow\+Mode} = Text\+Overflow\+Modes.\+Overflow
+\item 
+int {\bfseries m\+\_\+first\+Overflow\+Character\+Index} = -\/1
+\item 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text}{TMP\+\_\+\+Text}} {\bfseries m\+\_\+linked\+Text\+Component}
+\item 
+bool {\bfseries m\+\_\+is\+Text\+Truncated}
+\item 
+bool {\bfseries m\+\_\+enable\+Kerning}
+\item 
+float {\bfseries m\+\_\+\+Glyph\+Horizontal\+Advance\+Adjustment}
+\item 
+bool {\bfseries m\+\_\+enable\+Extra\+Padding} = false
+\item 
+bool {\bfseries check\+Padding\+Required}
+\item 
+bool {\bfseries m\+\_\+is\+Rich\+Text} = true
+\item 
+bool {\bfseries m\+\_\+parse\+Ctrl\+Characters} = true
+\item 
+bool {\bfseries m\+\_\+is\+Overlay} = false
+\item 
+bool {\bfseries m\+\_\+is\+Orthographic} = false
+\item 
+bool {\bfseries m\+\_\+is\+Culling\+Enabled} = false
+\item 
+bool {\bfseries m\+\_\+is\+Masking\+Enabled}
+\item 
+bool {\bfseries is\+Mask\+Update\+Required}
+\item 
+bool {\bfseries m\+\_\+ignore\+Culling} = true
+\item 
+Texture\+Mapping\+Options {\bfseries m\+\_\+horizontal\+Mapping} = Texture\+Mapping\+Options.\+Character
+\item 
+Texture\+Mapping\+Options {\bfseries m\+\_\+vertical\+Mapping} = Texture\+Mapping\+Options.\+Character
+\item 
+float {\bfseries m\+\_\+uv\+Line\+Offset} = 0.\+0f
+\item 
+\mbox{\hyperlink{namespace_t_m_pro_ac5a571bdd8e4873a73f2c05b62feff0e}{Text\+Render\+Flags}} {\bfseries m\+\_\+render\+Mode} = Text\+Render\+Flags.\+Render
+\item 
+Vertex\+Sorting\+Order {\bfseries m\+\_\+geometry\+Sorting\+Order}
+\item 
+bool {\bfseries m\+\_\+\+Is\+Text\+Object\+Scale\+Static}
+\item 
+bool {\bfseries m\+\_\+\+Vertex\+Buffer\+Auto\+Size\+Reduction} = false
+\item 
+int {\bfseries m\+\_\+first\+Visible\+Character}
+\item 
+int {\bfseries m\+\_\+max\+Visible\+Characters} = 99999
+\item 
+int {\bfseries m\+\_\+max\+Visible\+Words} = 99999
+\item 
+int {\bfseries m\+\_\+max\+Visible\+Lines} = 99999
+\item 
+bool {\bfseries m\+\_\+use\+Max\+Visible\+Descender} = true
+\item 
+int {\bfseries m\+\_\+page\+To\+Display} = 1
+\item 
+bool {\bfseries m\+\_\+is\+New\+Page} = false
+\item 
+Vector4 {\bfseries m\+\_\+margin} = new Vector4(0, 0, 0, 0)
+\item 
+float {\bfseries m\+\_\+margin\+Left}
+\item 
+float {\bfseries m\+\_\+margin\+Right}
+\item 
+float {\bfseries m\+\_\+margin\+Width}
+\item 
+float {\bfseries m\+\_\+margin\+Height}
+\item 
+float {\bfseries m\+\_\+width} = -\/1
+\item 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_info}{TMP\+\_\+\+Text\+Info}} {\bfseries m\+\_\+text\+Info}
+\item 
+bool {\bfseries m\+\_\+have\+Properties\+Changed}
+\item 
+bool {\bfseries m\+\_\+is\+Using\+Legacy\+Animation\+Component}
+\item 
+Transform {\bfseries m\+\_\+transform}
+\item 
+Rect\+Transform {\bfseries m\+\_\+rect\+Transform}
+\item 
+Vector2 {\bfseries m\+\_\+\+Previous\+Rect\+Transform\+Size}
+\begin{DoxyCompactList}\small\item\em Used to track potential changes in Rect\+Transform size to allow us to ignore On\+Rect\+Transform\+Dimensions\+Change getting called due to rounding errors when using Stretch Anchors. \end{DoxyCompactList}\item 
+Vector2 {\bfseries m\+\_\+\+Previous\+Pivot\+Position}
+\begin{DoxyCompactList}\small\item\em Used to track potential changes in pivot position to allow us to ignore On\+Rect\+Transform\+Dimensions\+Change getting called due to rounding errors when using Stretch Anchors. \end{DoxyCompactList}\item 
+bool {\bfseries m\+\_\+auto\+Size\+Text\+Container}
+\item 
+Mesh {\bfseries m\+\_\+mesh}
+\item 
+bool {\bfseries m\+\_\+is\+Volumetric\+Text}
+\item 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_animator}{TMP\+\_\+\+Sprite\+Animator}} {\bfseries m\+\_\+sprite\+Animator}
+\item 
+float {\bfseries m\+\_\+flexible\+Height} = -\/1f
+\item 
+float {\bfseries m\+\_\+flexible\+Width} = -\/1f
+\item 
+float {\bfseries m\+\_\+min\+Width}
+\item 
+float {\bfseries m\+\_\+min\+Height}
+\item 
+float {\bfseries m\+\_\+max\+Width}
+\item 
+float {\bfseries m\+\_\+max\+Height}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_element}{Layout\+Element}} {\bfseries m\+\_\+\+Layout\+Element}
+\item 
+float {\bfseries m\+\_\+preferred\+Width}
+\item 
+float {\bfseries m\+\_\+rendered\+Width}
+\item 
+bool {\bfseries m\+\_\+is\+Preferred\+Width\+Dirty}
+\item 
+float {\bfseries m\+\_\+preferred\+Height}
+\item 
+float {\bfseries m\+\_\+rendered\+Height}
+\item 
+bool {\bfseries m\+\_\+is\+Preferred\+Height\+Dirty}
+\item 
+bool {\bfseries m\+\_\+is\+Calculating\+Preferred\+Values}
+\item 
+int {\bfseries m\+\_\+layout\+Priority} = 0
+\item 
+bool {\bfseries m\+\_\+is\+Layout\+Dirty}
+\item 
+bool {\bfseries m\+\_\+is\+Awake}
+\item 
+float {\bfseries m\+\_\+font\+Scale\+Multiplier}
+\item 
+float {\bfseries tag\+\_\+\+Line\+Indent} = 0
+\item 
+float {\bfseries tag\+\_\+\+Indent} = 0
+\item 
+\mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$ float $>$ {\bfseries m\+\_\+indent\+Stack} = new \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$float$>$(new float\mbox{[}16\mbox{]})
+\item 
+bool {\bfseries tag\+\_\+\+No\+Parsing}
+\item 
+bool {\bfseries m\+\_\+is\+Parsing\+Text}
+\item 
+Matrix4x4 {\bfseries m\+\_\+\+FXMatrix}
+\item 
+bool {\bfseries m\+\_\+is\+FXMatrix\+Set}
+\item 
+int {\bfseries m\+\_\+total\+Character\+Count}
+\item 
+int {\bfseries m\+\_\+character\+Count}
+\item 
+int {\bfseries m\+\_\+first\+Character\+Of\+Line}
+\item 
+int {\bfseries m\+\_\+first\+Visible\+Character\+Of\+Line}
+\item 
+int {\bfseries m\+\_\+last\+Character\+Of\+Line}
+\item 
+int {\bfseries m\+\_\+last\+Visible\+Character\+Of\+Line}
+\item 
+int {\bfseries m\+\_\+line\+Number}
+\item 
+int {\bfseries m\+\_\+line\+Visible\+Character\+Count}
+\item 
+int {\bfseries m\+\_\+page\+Number}
+\item 
+float {\bfseries m\+\_\+\+Page\+Ascender}
+\item 
+float {\bfseries m\+\_\+max\+Text\+Ascender}
+\item 
+float {\bfseries m\+\_\+max\+Cap\+Height}
+\item 
+float {\bfseries m\+\_\+\+Element\+Ascender}
+\item 
+float {\bfseries m\+\_\+\+Element\+Descender}
+\item 
+float {\bfseries m\+\_\+max\+Line\+Ascender}
+\item 
+float {\bfseries m\+\_\+max\+Line\+Descender}
+\item 
+float {\bfseries m\+\_\+start\+Of\+Line\+Ascender}
+\item 
+float {\bfseries m\+\_\+start\+Of\+Line\+Descender}
+\item 
+float {\bfseries m\+\_\+line\+Offset}
+\item 
+\mbox{\hyperlink{struct_t_m_pro_1_1_extents}{Extents}} {\bfseries m\+\_\+mesh\+Extents}
+\item 
+Color32 {\bfseries m\+\_\+html\+Color} = new Color(255, 255, 255, 128)
+\item 
+\mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$ Color32 $>$ {\bfseries m\+\_\+color\+Stack} = new \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$Color32$>$(new Color32\mbox{[}16\mbox{]})
+\item 
+\mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$ Color32 $>$ {\bfseries m\+\_\+underline\+Color\+Stack} = new \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$Color32$>$(new Color32\mbox{[}16\mbox{]})
+\item 
+\mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$ Color32 $>$ {\bfseries m\+\_\+strikethrough\+Color\+Stack} = new \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$Color32$>$(new Color32\mbox{[}16\mbox{]})
+\item 
+\mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$ \mbox{\hyperlink{struct_t_m_pro_1_1_highlight_state}{Highlight\+State}} $>$ {\bfseries m\+\_\+\+Highlight\+State\+Stack} = new \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$\mbox{\hyperlink{struct_t_m_pro_1_1_highlight_state}{Highlight\+State}}$>$(new \mbox{\hyperlink{struct_t_m_pro_1_1_highlight_state}{Highlight\+State}}\mbox{[}16\mbox{]})
+\item 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___color_gradient}{TMP\+\_\+\+Color\+Gradient}} {\bfseries m\+\_\+color\+Gradient\+Preset}
+\item 
+\mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$ \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___color_gradient}{TMP\+\_\+\+Color\+Gradient}} $>$ {\bfseries m\+\_\+color\+Gradient\+Stack} = new \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___color_gradient}{TMP\+\_\+\+Color\+Gradient}}$>$(new \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___color_gradient}{TMP\+\_\+\+Color\+Gradient}}\mbox{[}16\mbox{]})
+\item 
+bool {\bfseries m\+\_\+color\+Gradient\+Preset\+Is\+Tinted}
+\item 
+float {\bfseries m\+\_\+tab\+Spacing} = 0
+\item 
+float {\bfseries m\+\_\+spacing} = 0
+\item 
+\mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$ int $>$\mbox{[}$\,$\mbox{]} {\bfseries m\+\_\+\+Text\+Style\+Stacks} = new \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$int$>$\mbox{[}8\mbox{]}
+\item 
+int {\bfseries m\+\_\+\+Text\+Style\+Stack\+Depth} = 0
+\item 
+\mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$ int $>$ {\bfseries m\+\_\+\+Italic\+Angle\+Stack} = new \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$int$>$(new int\mbox{[}16\mbox{]})
+\item 
+int {\bfseries m\+\_\+\+Italic\+Angle}
+\item 
+\mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$ int $>$ {\bfseries m\+\_\+action\+Stack} = new \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$int$>$(new int\mbox{[}16\mbox{]})
+\item 
+float {\bfseries m\+\_\+padding} = 0
+\item 
+float {\bfseries m\+\_\+baseline\+Offset}
+\item 
+\mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$ float $>$ {\bfseries m\+\_\+baseline\+Offset\+Stack} = new \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$float$>$(new float\mbox{[}16\mbox{]})
+\item 
+float {\bfseries m\+\_\+x\+Advance}
+\item 
+TMP\+\_\+\+Text\+Element\+Type {\bfseries m\+\_\+text\+Element\+Type}
+\item 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_element}{TMP\+\_\+\+Text\+Element}} {\bfseries m\+\_\+cached\+\_\+\+Text\+Element}
+\item 
+\mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_1_1_special_character}{Special\+Character}} {\bfseries m\+\_\+\+Ellipsis}
+\item 
+\mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_1_1_special_character}{Special\+Character}} {\bfseries m\+\_\+\+Underline}
+\item 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset}{TMP\+\_\+\+Sprite\+Asset}} {\bfseries m\+\_\+default\+Sprite\+Asset}
+\item 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset}{TMP\+\_\+\+Sprite\+Asset}} {\bfseries m\+\_\+current\+Sprite\+Asset}
+\item 
+int {\bfseries m\+\_\+sprite\+Count} = 0
+\item 
+int {\bfseries m\+\_\+sprite\+Index}
+\item 
+int {\bfseries m\+\_\+sprite\+Animation\+ID}
+\item 
+bool {\bfseries m\+\_\+ignore\+Active\+State}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic}{Unity\+Engine.\+UI.\+Maskable\+Graphic}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries m\+\_\+\+Should\+Recalculate\+Stencil} = true
+\item 
+Material {\bfseries m\+\_\+\+Mask\+Material}
+\item 
+bool {\bfseries m\+\_\+\+Include\+For\+Masking} = false
+\item 
+bool {\bfseries m\+\_\+\+Should\+Recalculate} = true
+\item 
+int {\bfseries m\+\_\+\+Stencil\+Value}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_ace5f88e44a4fd41741e50b0b9adb2944}\label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_ace5f88e44a4fd41741e50b0b9adb2944} 
+override Material {\bfseries material\+For\+Rendering}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the material that will be used for rendering. \end{DoxyCompactList}\item 
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a72ed4179b22cde1a87b5c6282d6dfd4c}\label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a72ed4179b22cde1a87b5c6282d6dfd4c} 
+override bool {\bfseries auto\+Size\+Text\+Container}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Determines if the size of the text container will be adjusted to fit the text object when it is first created. \end{DoxyCompactList}\item 
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a0c6c3fd5daff551039308552d0e9fa3c}\label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a0c6c3fd5daff551039308552d0e9fa3c} 
+override Mesh {\bfseries mesh}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Reference to the Mesh used by the text object. \end{DoxyCompactList}\item 
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a8410ad5e8c69c64d5e1df5a722390526}\label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a8410ad5e8c69c64d5e1df5a722390526} 
+new Canvas\+Renderer {\bfseries canvas\+Renderer}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Reference to the Canvas\+Renderer used by the text object. \end{DoxyCompactList}\item 
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_aa3493316f1488b2f92d0f7edb56b1c56}\label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_aa3493316f1488b2f92d0f7edb56b1c56} 
+Vector4 {\bfseries mask\+Offset}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sets the masking offset from the bounds of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text}{TMPro.\+TMP\+\_\+\+Text}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string {\bfseries text}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A string containing the text to be displayed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_t_m_pro_1_1_i_text_preprocessor}{IText\+Preprocessor}} {\bfseries text\+Preprocessor}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The \doxylink{interface_t_m_pro_1_1_i_text_preprocessor}{IText\+Preprocessor} component referenced by the text object (if any) \end{DoxyCompactList}\item 
+bool {\bfseries is\+Right\+To\+Left\+Text}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}} {\bfseries font}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Font Asset to be assigned to this text object. \end{DoxyCompactList}\item 
+virtual Material {\bfseries font\+Shared\+Material}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The material to be assigned to this text object. \end{DoxyCompactList}\item 
+virtual Material\mbox{[}$\,$\mbox{]} {\bfseries font\+Shared\+Materials}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An array containing the materials used by the text object. \end{DoxyCompactList}\item 
+Material {\bfseries font\+Material}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The material to be assigned to this text object. An instance of the material will be assigned to the object\textquotesingle{}s renderer. \end{DoxyCompactList}\item 
+virtual Material\mbox{[}$\,$\mbox{]} {\bfseries font\+Materials}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The materials to be assigned to this text object. An instance of the materials will be assigned. \end{DoxyCompactList}\item 
+override Color {\bfseries color}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This is the default vertex color assigned to each vertices. Color tags will override vertex colors unless the override\+Color\+Tags is set. \end{DoxyCompactList}\item 
+float {\bfseries alpha}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sets the vertex color alpha value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a5965d900f445c01580bb9bba25160959}{enable\+Vertex\+Gradient}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Determines if Vertex Color Gradient should be used. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_t_m_pro_1_1_vertex_gradient}{Vertex\+Gradient}} \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a9e388e5afbcba8e72a65cd00ca7001b4}{color\+Gradient}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sets the vertex colors for each of the 4 vertices of the character quads. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___color_gradient}{TMP\+\_\+\+Color\+Gradient}} {\bfseries color\+Gradient\+Preset}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Set the vertex colors of the 4 vertices of each character quads. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset}{TMP\+\_\+\+Sprite\+Asset}} {\bfseries sprite\+Asset}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sprite Asset used by the text object. \end{DoxyCompactList}\item 
+bool {\bfseries tint\+All\+Sprites}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Determines whether or not the sprite color is multiplies by the vertex color of the text. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___style_sheet}{TMP\+\_\+\+Style\+Sheet}} {\bfseries style\+Sheet}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Style sheet used by the text object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___style}{TMP\+\_\+\+Style}} {\bfseries text\+Style}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool {\bfseries override\+Color\+Tags}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em This overrides the color tags forcing the vertex colors to be the default font color. \end{DoxyCompactList}\item 
+Color32 {\bfseries face\+Color}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sets the color of the \+\_\+\+Face\+Color property of the assigned material. Changing face color will result in an instance of the material. \end{DoxyCompactList}\item 
+Color32 {\bfseries outline\+Color}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sets the color of the \+\_\+\+Outline\+Color property of the assigned material. Changing outline color will result in an instance of the material. \end{DoxyCompactList}\item 
+float {\bfseries outline\+Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sets the thickness of the outline of the font. Setting this value will result in an instance of the material. \end{DoxyCompactList}\item 
+float {\bfseries font\+Size}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The point size of the font. \end{DoxyCompactList}\item 
+Font\+Weight {\bfseries font\+Weight}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Control the weight of the font if an alternative font asset is assigned for the given weight in the font asset editor. \end{DoxyCompactList}\item 
+float {\bfseries pixels\+Per\+Unit}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries enable\+Auto\+Sizing}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enable text auto-\/sizing. \end{DoxyCompactList}\item 
+float {\bfseries font\+Size\+Min}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Minimum point size of the font when text auto-\/sizing is enabled. \end{DoxyCompactList}\item 
+float {\bfseries font\+Size\+Max}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Maximum point size of the font when text auto-\/sizing is enabled. \end{DoxyCompactList}\item 
+Font\+Styles {\bfseries font\+Style}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The style of the text. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Using\+Bold}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Property used in conjunction with padding calculation for the geometry. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_t_m_pro_a48bf77c46bd71c8b9748573d436953d1}{Horizontal\+Alignment\+Options}} {\bfseries horizontal\+Alignment}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Horizontal alignment options. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_t_m_pro_a338a80617042b3c70d3ede20fe5ae80b}{Vertical\+Alignment\+Options}} {\bfseries vertical\+Alignment}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Vertical alignment options. \end{DoxyCompactList}\item 
+Text\+Alignment\+Options {\bfseries alignment}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Text alignment options. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a4f58b974821506bd6443e8771306eaf1}{character\+Spacing}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Use the extents of the text geometry for alignment instead of font metrics. \end{DoxyCompactList}\item 
+float {\bfseries word\+Spacing}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The amount of additional spacing between words. \end{DoxyCompactList}\item 
+float {\bfseries line\+Spacing}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The amount of additional spacing to add between each lines of text. \end{DoxyCompactList}\item 
+float {\bfseries line\+Spacing\+Adjustment}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The amount of potential line spacing adjustment before text auto sizing kicks in. \end{DoxyCompactList}\item 
+float {\bfseries paragraph\+Spacing}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The amount of additional spacing to add between each lines of text. \end{DoxyCompactList}\item 
+float {\bfseries character\+Width\+Adjustment}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Percentage the width of characters can be adjusted before text auto-\/sizing begins to reduce the point size. \end{DoxyCompactList}\item 
+bool {\bfseries enable\+Word\+Wrapping}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Controls whether or not word wrapping is applied. When disabled, the text will be displayed on a single line. \end{DoxyCompactList}\item 
+float {\bfseries word\+Wrapping\+Ratios}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Controls the blending between using character and word spacing to fill-\/in the space for justified text. \end{DoxyCompactList}\item 
+Text\+Overflow\+Modes {\bfseries overflow\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Controls the Text Overflow Mode. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Text\+Overflowing}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates if the text exceeds the vertical bounds of its text container. \end{DoxyCompactList}\item 
+int {\bfseries first\+Overflow\+Character\+Index}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The first character which exceeds the vertical bounds of its text container. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text}{TMP\+\_\+\+Text}} {\bfseries linked\+Text\+Component}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The linked text component used for flowing the text from one text component to another. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Text\+Truncated}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Property indicating whether the text is Truncated or using Ellipsis. \end{DoxyCompactList}\item 
+bool {\bfseries enable\+Kerning}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Determines if kerning is enabled or disabled. \end{DoxyCompactList}\item 
+bool {\bfseries extra\+Padding}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Adds extra padding around each character. This may be necessary when the displayed text is very small to prevent clipping. \end{DoxyCompactList}\item 
+bool {\bfseries rich\+Text}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enables or Disables Rich Text Tags. \end{DoxyCompactList}\item 
+bool {\bfseries parse\+Ctrl\+Characters}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enables or Disables parsing of CTRL characters in input text. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Overlay}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sets the Render\+Queue along with Ztest to force the text to be drawn last and on top of scene elements. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Orthographic}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sets Perspective Correction to Zero for Orthographic Camera mode \& 0.\+875f for Perspective Camera mode. \end{DoxyCompactList}\item 
+bool {\bfseries enable\+Culling}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sets the culling on the shaders. Note changing this value will result in an instance of the material. \end{DoxyCompactList}\item 
+bool {\bfseries ignore\+Visibility}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Forces objects that are not visible to get refreshed. \end{DoxyCompactList}\item 
+Texture\+Mapping\+Options {\bfseries horizontal\+Mapping}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Controls how the face and outline textures will be applied to the text object. \end{DoxyCompactList}\item 
+Texture\+Mapping\+Options {\bfseries vertical\+Mapping}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Controls how the face and outline textures will be applied to the text object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a09c20ff5fa1b5a03b0c9d996449668da}{mapping\+Uv\+Line\+Offset}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Controls the UV Offset for the various texture mapping mode on the text object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_t_m_pro_ac5a571bdd8e4873a73f2c05b62feff0e}{Text\+Render\+Flags}} {\bfseries render\+Mode}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Determines if the Mesh will be rendered. \end{DoxyCompactList}\item 
+Vertex\+Sorting\+Order {\bfseries geometry\+Sorting\+Order}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Determines the sorting order of the geometry of the text object. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Text\+Object\+Scale\+Static}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Determines if a text object will be excluded from the Internal\+Update callback used to handle updates of SDF Scale when the scale of the text object or parent(s) changes. \end{DoxyCompactList}\item 
+bool {\bfseries vertex\+Buffer\+Auto\+Size\+Reduction}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Determines if the data structures allocated to contain the geometry of the text object will be reduced in size if the number of characters required to display the text is reduced by more than 256 characters. This reduction has the benefit of reducing the amount of vertex data being submitted to the graphic device but results in GC when it occurs. \end{DoxyCompactList}\item 
+int {\bfseries first\+Visible\+Character}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The first character which should be made visible in conjunction with the Text Overflow Linked mode. \end{DoxyCompactList}\item 
+int {\bfseries max\+Visible\+Characters}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Allows to control how many characters are visible from the input. \end{DoxyCompactList}\item 
+int {\bfseries max\+Visible\+Words}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Allows to control how many words are visible from the input. \end{DoxyCompactList}\item 
+int {\bfseries max\+Visible\+Lines}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Allows control over how many lines of text are displayed. \end{DoxyCompactList}\item 
+bool {\bfseries use\+Max\+Visible\+Descender}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Determines if the text\textquotesingle{}s vertical alignment will be adjusted based on visible descender of the text. \end{DoxyCompactList}\item 
+int {\bfseries page\+To\+Display}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Controls which page of text is shown. \end{DoxyCompactList}\item 
+virtual Vector4 {\bfseries margin}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The margins of the text object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_info}{TMP\+\_\+\+Text\+Info}} {\bfseries text\+Info}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns data about the text object which includes information about each character, word, line, link, etc. \end{DoxyCompactList}\item 
+bool {\bfseries have\+Properties\+Changed}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Property tracking if any of the text properties have changed. Flag is set before the text is regenerated. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Using\+Legacy\+Animation\+Component}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Property to handle legacy animation component. \end{DoxyCompactList}\item 
+new Transform {\bfseries transform}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns are reference to the Transform. \end{DoxyCompactList}\item 
+new Rect\+Transform \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_adf46752eab5ab6c5c0d0d7b58e3bf847}{rect\+Transform}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns are reference to the Rect\+Transform. \end{DoxyCompactList}\item 
+virtual bool {\bfseries auto\+Size\+Text\+Container}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enables control over setting the size of the text container to match the text object. \end{DoxyCompactList}\item 
+virtual Mesh {\bfseries mesh}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The mesh used by the font asset and material assigned to the text object. \end{DoxyCompactList}\item 
+bool {\bfseries is\+Volumetric\+Text}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Determines if the geometry of the characters will be quads or volumetric (cubes). \end{DoxyCompactList}\item 
+Bounds {\bfseries bounds}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the bounds of the mesh of the text object in world space. \end{DoxyCompactList}\item 
+Bounds {\bfseries text\+Bounds}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the bounds of the text of the text object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_animator}{TMP\+\_\+\+Sprite\+Animator}} \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a013a80598d678447ae8104c50d3203cf}{sprite\+Animator}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Component used to control wrapping of text following some arbitrary shape. \end{DoxyCompactList}\item 
+float {\bfseries flexible\+Height}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+float {\bfseries flexible\+Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+float {\bfseries min\+Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+float {\bfseries min\+Height}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+float {\bfseries max\+Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+float {\bfseries max\+Height}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_element}{Layout\+Element}} {\bfseries layout\+Element}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+virtual float {\bfseries preferred\+Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Computed preferred width of the text object. \end{DoxyCompactList}\item 
+virtual float {\bfseries preferred\+Height}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Computed preferred height of the text object. \end{DoxyCompactList}\item 
+virtual float {\bfseries rendered\+Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Compute the rendered width of the text object. \end{DoxyCompactList}\item 
+virtual float {\bfseries rendered\+Height}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Compute the rendered height of the text object. \end{DoxyCompactList}\item 
+int {\bfseries layout\+Priority}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic}{Unity\+Engine.\+UI.\+Maskable\+Graphic}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_1_1_cull_state_changed_event}{Cull\+State\+Changed\+Event}} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_a254747bd8a339db2f8e86525fe5e6ad9}{on\+Cull\+State\+Changed}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Callback issued when culling changes. \end{DoxyCompactList}\item 
+bool {\bfseries maskable}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Does this graphic allow masking. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_a538bce32c79e9f767c9ee6fbdacffe24}{is\+Masking\+Graphic}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Is this graphic the graphic on the same object as a \doxylink{class_unity_engine_1_1_u_i_1_1_mask}{Mask} that is enabled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{Unity\+Engine.\+UI.\+IClippable}}}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object {\bfseries game\+Object}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Game\+Object of the \doxylink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{IClippable} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element}{Unity\+Engine.\+UI.\+ILayout\+Element}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a61f430b52f90f43b91f9ded0fcee43d6}{min\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The minimum width this layout element may be allocated. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a69c7300cf30f5787cbb8e6750cf9a035}{preferred\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The preferred width this layout element should be allocated if there is sufficient space. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a8c4aaed207092d7d625b40c383e21816}{flexible\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The extra relative width this layout element should be allocated if there is additional available space. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a05bfb63b5a7eb646ba6576af07060333}{min\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The minimum height this layout element may be allocated. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a103a61023ccb5bc93fbb3cc8c3460531}{preferred\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The preferred height this layout element should be allocated if there is sufficient space. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a98516af90dc6529d486803b6774dc798}{flexible\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The extra relative height this layout element should be allocated if there is additional available space. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a13e5c560042cac2db6ddfd22143f1be9}{layout\+Priority}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The layout priority of this component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a34fc3388c12295c62d5dcc62028f2b91}\label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a34fc3388c12295c62d5dcc62028f2b91} 
+override Action$<$ \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_info}{TMP\+\_\+\+Text\+Info}} $>$ {\bfseries On\+Pre\+Render\+Text}
+\begin{DoxyCompactList}\small\item\em Event to allow users to modify the content of the text info before the text is rendered. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Events inherited from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text}{TMPro.\+TMP\+\_\+\+Text}}}
+\begin{DoxyCompactItemize}
+\item 
+static Func$<$ int, string, \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset}} $>$ {\bfseries On\+Font\+Asset\+Request}
+\begin{DoxyCompactList}\small\item\em Event delegate to allow custom loading of \doxylink{class_t_m_pro_1_1_t_m_p___font_asset}{TMP\+\_\+\+Font\+Asset} when using the \texorpdfstring{$<$}{<}font="{}\+Font Asset Name"{}\texorpdfstring{$>$}{>} tag. \end{DoxyCompactList}\item 
+static Func$<$ int, string, \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset}{TMP\+\_\+\+Sprite\+Asset}} $>$ {\bfseries On\+Sprite\+Asset\+Request}
+\begin{DoxyCompactList}\small\item\em Event delegate to allow custom loading of \doxylink{class_t_m_pro_1_1_t_m_p___sprite_asset}{TMP\+\_\+\+Sprite\+Asset} when using the \texorpdfstring{$<$}{<}sprite="{}\+Sprite Asset Name"{}\texorpdfstring{$>$}{>} tag. \end{DoxyCompactList}\item 
+virtual Action$<$ \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_info}{TMP\+\_\+\+Text\+Info}} $>$ {\bfseries On\+Pre\+Render\+Text} = delegate \{ \}
+\begin{DoxyCompactList}\small\item\em Event delegate to allow modifying the text geometry before it is uploaded to the mesh and rendered. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text}{TMPro.\+TMP\+\_\+\+Text}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{struct_t_m_pro_1_1_material_reference}{Material\+Reference}}\mbox{[}$\,$\mbox{]} {\bfseries m\+\_\+material\+References} = new \mbox{\hyperlink{struct_t_m_pro_1_1_material_reference}{Material\+Reference}}\mbox{[}4\mbox{]}
+\item 
+static Dictionary$<$ int, int $>$ {\bfseries m\+\_\+material\+Reference\+Index\+Lookup} = new Dictionary$<$int, int$>$()
+\item 
+static \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$ \mbox{\hyperlink{struct_t_m_pro_1_1_material_reference}{Material\+Reference}} $>$ {\bfseries m\+\_\+material\+Reference\+Stack} = new \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___text_processing_stack}{TMP\+\_\+\+Text\+Processing\+Stack}}$<$\mbox{\hyperlink{struct_t_m_pro_1_1_material_reference}{Material\+Reference}}$>$(new \mbox{\hyperlink{struct_t_m_pro_1_1_material_reference}{Material\+Reference}}\mbox{[}16\mbox{]})
+\item 
+static Color32 {\bfseries s\+\_\+color\+White} = new Color32(255, 255, 255, 255)
+\item 
+static \mbox{\hyperlink{struct_t_m_pro_1_1_word_wrap_state}{Word\+Wrap\+State}} {\bfseries m\+\_\+\+Saved\+Word\+Wrap\+State} = new \mbox{\hyperlink{struct_t_m_pro_1_1_word_wrap_state}{Word\+Wrap\+State}}()
+\item 
+static \mbox{\hyperlink{struct_t_m_pro_1_1_word_wrap_state}{Word\+Wrap\+State}} {\bfseries m\+\_\+\+Saved\+Line\+State} = new \mbox{\hyperlink{struct_t_m_pro_1_1_word_wrap_state}{Word\+Wrap\+State}}()
+\item 
+static \mbox{\hyperlink{struct_t_m_pro_1_1_word_wrap_state}{Word\+Wrap\+State}} {\bfseries m\+\_\+\+Saved\+Ellipsis\+State} = new \mbox{\hyperlink{struct_t_m_pro_1_1_word_wrap_state}{Word\+Wrap\+State}}()
+\item 
+static \mbox{\hyperlink{struct_t_m_pro_1_1_word_wrap_state}{Word\+Wrap\+State}} {\bfseries m\+\_\+\+Saved\+Last\+Valid\+State} = new \mbox{\hyperlink{struct_t_m_pro_1_1_word_wrap_state}{Word\+Wrap\+State}}()
+\item 
+static \mbox{\hyperlink{struct_t_m_pro_1_1_word_wrap_state}{Word\+Wrap\+State}} {\bfseries m\+\_\+\+Saved\+Soft\+Line\+Break\+State} = new \mbox{\hyperlink{struct_t_m_pro_1_1_word_wrap_state}{Word\+Wrap\+State}}()
+\item 
+static Vector2 {\bfseries k\+\_\+\+Large\+Positive\+Vector2} = new Vector2(TMP\+\_\+\+Math.\+INT\+\_\+\+MAX, TMP\+\_\+\+Math.\+INT\+\_\+\+MAX)
+\item 
+static Vector2 {\bfseries k\+\_\+\+Large\+Negative\+Vector2} = new Vector2(TMP\+\_\+\+Math.\+INT\+\_\+\+MIN, TMP\+\_\+\+Math.\+INT\+\_\+\+MIN)
+\item 
+static float {\bfseries k\+\_\+\+Large\+Positive\+Float} = TMP\+\_\+\+Math.\+FLOAT\+\_\+\+MAX
+\item 
+static float {\bfseries k\+\_\+\+Large\+Negative\+Float} = TMP\+\_\+\+Math.\+FLOAT\+\_\+\+MIN
+\item 
+static int {\bfseries k\+\_\+\+Large\+Positive\+Int} = TMP\+\_\+\+Math.\+INT\+\_\+\+MAX
+\item 
+static int {\bfseries k\+\_\+\+Large\+Negative\+Int} = TMP\+\_\+\+Math.\+INT\+\_\+\+MIN
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a2a8879e4aa818ad1338e1cbf2ca31b6d}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!CalculateLayoutInputHorizontal@{CalculateLayoutInputHorizontal}}
+\index{CalculateLayoutInputHorizontal@{CalculateLayoutInputHorizontal}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{CalculateLayoutInputHorizontal()}{CalculateLayoutInputHorizontal()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a2a8879e4aa818ad1338e1cbf2ca31b6d} 
+void TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Calculate\+Layout\+Input\+Horizontal (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function called by \doxylink{namespace_unity}{Unity} when the horizontal layout needs to be recalculated. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a38e697b28b30f3ff350c0c43d9c29441}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a5d1d50b2bf96c764e4decc60c0b5762c}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!CalculateLayoutInputVertical@{CalculateLayoutInputVertical}}
+\index{CalculateLayoutInputVertical@{CalculateLayoutInputVertical}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{CalculateLayoutInputVertical()}{CalculateLayoutInputVertical()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a5d1d50b2bf96c764e4decc60c0b5762c} 
+void TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Calculate\+Layout\+Input\+Vertical (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function called by \doxylink{namespace_unity}{Unity} when the vertical layout needs to be recalculated. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a1e0f42ff8a350a7996b1ebfacdac2b0b}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a2b3b3a1a8d320d9f39751e7f05b1b2be}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!ClearMesh@{ClearMesh}}
+\index{ClearMesh@{ClearMesh}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{ClearMesh()}{ClearMesh()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a2b3b3a1a8d320d9f39751e7f05b1b2be} 
+override void TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Clear\+Mesh (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Function to clear the geometry of the Primary and Sub Text objects. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a9bd7b659f2a1b2feb48f3b3008d09ee6}{TMPro.\+TMP\+\_\+\+Text}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a585823ae58e0b54f1497ced737567a03}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!ComputeMarginSize@{ComputeMarginSize}}
+\index{ComputeMarginSize@{ComputeMarginSize}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{ComputeMarginSize()}{ComputeMarginSize()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a585823ae58e0b54f1497ced737567a03} 
+override void TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Compute\+Margin\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Update the margin width and height. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a9e380bad2a5506d96b7c1d3b0b12d013}{TMPro.\+TMP\+\_\+\+Text}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_aa56357c3d3127f3a3662889ec65118f4}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!Cull@{Cull}}
+\index{Cull@{Cull}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{Cull()}{Cull()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_aa56357c3d3127f3a3662889ec65118f4} 
+override void TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Cull (\begin{DoxyParamCaption}\item[{Rect}]{clip\+Rect}{, }\item[{bool}]{valid\+Rect}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Method called when Stencil Mask needs to be updated on this element and parents. 
+
+Override of the Cull function to provide for the ability to override the culling of the text object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em clip\+Rect} & \\
+\hline
+{\em valid\+Rect} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_adc5580730216425ec6da811c9dbca08e}{Unity\+Engine.\+UI.\+Maskable\+Graphic}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a81bcb90df1634077ddd2dd754efb73c1}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!DestroySubMeshObjects@{DestroySubMeshObjects}}
+\index{DestroySubMeshObjects@{DestroySubMeshObjects}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{DestroySubMeshObjects()}{DestroySubMeshObjects()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a81bcb90df1634077ddd2dd754efb73c1} 
+override void TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Destroy\+Sub\+Mesh\+Objects (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Destroy Sub Mesh Objects. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a4bc69de27e49aa6f3b12d16b689ac27b}{TMPro.\+TMP\+\_\+\+Text}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a6d4c78ad7fcebc7cd040a2ce85dce2d8}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!ForceMeshUpdate@{ForceMeshUpdate}}
+\index{ForceMeshUpdate@{ForceMeshUpdate}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{ForceMeshUpdate()}{ForceMeshUpdate()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a6d4c78ad7fcebc7cd040a2ce85dce2d8} 
+override void TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Force\+Mesh\+Update (\begin{DoxyParamCaption}\item[{bool}]{ignore\+Active\+State}{ = {\ttfamily false}, }\item[{bool}]{force\+Text\+Reparsing}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Function to force regeneration of the text object before its normal process time. This is useful when changes to the text object properties need to be applied immediately. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ignore\+Active\+State} & Ignore Active State of text objects. Inactive objects are ignored by default.\\
+\hline
+{\em force\+Text\+Reparsing} & Force re-\/parsing of the text.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_acc79714f2b21eff7b784d8282a6f7756}{TMPro.\+TMP\+\_\+\+Text}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_aec6bee5f25f07eaeeefaa5f6cd6ad35c}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!GetCompoundBounds@{GetCompoundBounds}}
+\index{GetCompoundBounds@{GetCompoundBounds}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{GetCompoundBounds()}{GetCompoundBounds()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_aec6bee5f25f07eaeeefaa5f6cd6ad35c} 
+override Bounds TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Get\+Compound\+Bounds (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Method returning the compound bounds of the text object and child sub objects. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a0628c368c630a855a7001344fca270ba}{TMPro.\+TMP\+\_\+\+Text}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a51ff5f00ca136e0cb8c8865bb6e6ede9}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!GetMaterial@{GetMaterial}}
+\index{GetMaterial@{GetMaterial}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{GetMaterial()}{GetMaterial()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a51ff5f00ca136e0cb8c8865bb6e6ede9} 
+override Material TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Get\+Material (\begin{DoxyParamCaption}\item[{Material}]{mat}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Function called internally when a new material is assigned via the font\+Material property. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a0a573365fce6e2d9e49b0f7d6679834b}{TMPro.\+TMP\+\_\+\+Text}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a9aa332d87cf676f233ff75c8443aff1a}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!GetMaterials@{GetMaterials}}
+\index{GetMaterials@{GetMaterials}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{GetMaterials()}{GetMaterials()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a9aa332d87cf676f233ff75c8443aff1a} 
+override Material\mbox{[}$\,$\mbox{]} TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Get\+Materials (\begin{DoxyParamCaption}\item[{Material\mbox{[}$\,$\mbox{]}}]{mats}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Method returning instances of the materials used by the text object. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a3b32113909941395ba3dfe07286ca9fc}{TMPro.\+TMP\+\_\+\+Text}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_ad9e0ee518fca96a5879709f7e2c378f1}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!GetModifiedMaterial@{GetModifiedMaterial}}
+\index{GetModifiedMaterial@{GetModifiedMaterial}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{GetModifiedMaterial()}{GetModifiedMaterial()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_ad9e0ee518fca96a5879709f7e2c378f1} 
+override Material TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Get\+Modified\+Material (\begin{DoxyParamCaption}\item[{Material}]{base\+Material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Material} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_a08cdd6ba228d1c72132a5c7dbdfa4958}{Unity\+Engine.\+UI.\+Maskable\+Graphic}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_aece3c4629f22272369454f77accd8dbd}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!GetSharedMaterials@{GetSharedMaterials}}
+\index{GetSharedMaterials@{GetSharedMaterials}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{GetSharedMaterials()}{GetSharedMaterials()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_aece3c4629f22272369454f77accd8dbd} 
+override Material\mbox{[}$\,$\mbox{]} TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Get\+Shared\+Materials (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Method returning an array containing the materials used by the text object. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_ad3f4f4c5404bfb231ae5fe59017c7b40}{TMPro.\+TMP\+\_\+\+Text}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_ae66c4b8d29e8168cdf94197a6323baa2}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!GetTextContainerLocalCorners@{GetTextContainerLocalCorners}}
+\index{GetTextContainerLocalCorners@{GetTextContainerLocalCorners}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{GetTextContainerLocalCorners()}{GetTextContainerLocalCorners()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_ae66c4b8d29e8168cdf94197a6323baa2} 
+override Vector3\mbox{[}$\,$\mbox{]} TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Get\+Text\+Container\+Local\+Corners (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Method to return the local corners of the Text Container or Rect\+Transform. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a9c7d25c2478fca93a3aa554cecc68c00}{TMPro.\+TMP\+\_\+\+Text}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a8232388d078ad69a9ea241fa15bd2fab}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!GetTextInfo@{GetTextInfo}}
+\index{GetTextInfo@{GetTextInfo}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{GetTextInfo()}{GetTextInfo()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a8232388d078ad69a9ea241fa15bd2fab} 
+override \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_info}{TMP\+\_\+\+Text\+Info}} TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Get\+Text\+Info (\begin{DoxyParamCaption}\item[{string}]{text}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Function used to evaluate the length of a text string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a6818c7aebeca52a9e5205ec1225481c6}{TMPro.\+TMP\+\_\+\+Text}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a198b9bf0fea8a41b2c76259db7f5baff}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!InternalCrossFadeAlpha@{InternalCrossFadeAlpha}}
+\index{InternalCrossFadeAlpha@{InternalCrossFadeAlpha}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{InternalCrossFadeAlpha()}{InternalCrossFadeAlpha()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a198b9bf0fea8a41b2c76259db7f5baff} 
+override void TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Internal\+Cross\+Fade\+Alpha (\begin{DoxyParamCaption}\item[{float}]{alpha}{, }\item[{float}]{duration}{, }\item[{bool}]{ignore\+Time\+Scale}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Tweens the alpha of the Canvas\+Renderer color associated with this Graphic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em alpha} & Target alpha.\\
+\hline
+{\em duration} & Duration of the tween in seconds.\\
+\hline
+{\em ignore\+Time\+Scale} & Should ignore Time.\+scale?\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_af04bfde9fe669030330b18e59d3743cd}{TMPro.\+TMP\+\_\+\+Text}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_aaab93e2d40e730d419c60310f0b55605}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!InternalCrossFadeColor@{InternalCrossFadeColor}}
+\index{InternalCrossFadeColor@{InternalCrossFadeColor}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{InternalCrossFadeColor()}{InternalCrossFadeColor()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_aaab93e2d40e730d419c60310f0b55605} 
+override void TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Internal\+Cross\+Fade\+Color (\begin{DoxyParamCaption}\item[{Color}]{target\+Color}{, }\item[{float}]{duration}{, }\item[{bool}]{ignore\+Time\+Scale}{, }\item[{bool}]{use\+Alpha}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Tweens the Canvas\+Renderer color associated with this Graphic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Color} & Target color.\\
+\hline
+{\em duration} & Tween duration.\\
+\hline
+{\em ignore\+Time\+Scale} & Should ignore Time.\+scale?\\
+\hline
+{\em use\+Alpha} & Should also Tween the alpha channel?\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a22998506360d8760ae4e7df770e0f3fb}{TMPro.\+TMP\+\_\+\+Text}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_aedbf6c9aaf6c104ac7c81e85d99498b4}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!LoadFontAsset@{LoadFontAsset}}
+\index{LoadFontAsset@{LoadFontAsset}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{LoadFontAsset()}{LoadFontAsset()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_aedbf6c9aaf6c104ac7c81e85d99498b4} 
+override void TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Load\+Font\+Asset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Method which derived classes need to override to load Font Assets. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a02b60cb23d3eceb1ea52a61f194d8bec}{TMPro.\+TMP\+\_\+\+Text}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a963457c98b96eb2387dd43d40a7dcc57}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!Rebuild@{Rebuild}}
+\index{Rebuild@{Rebuild}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{Rebuild()}{Rebuild()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a963457c98b96eb2387dd43d40a7dcc57} 
+override void TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Rebuild (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_unity_engine_1_1_u_i_a76b804cb1978e6dc1162615deaa710e9}{Canvas\+Update}}}]{update}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em update} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_ada791339448a5b531f1bf276108b2b8c}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!RecalculateClipping@{RecalculateClipping}}
+\index{RecalculateClipping@{RecalculateClipping}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{RecalculateClipping()}{RecalculateClipping()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_ada791339448a5b531f1bf276108b2b8c} 
+override void TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Recalculate\+Clipping (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Method called when the state of a parent changes. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_a50a7c755855aaac608d6dd1f3b674f1d}{Unity\+Engine.\+UI.\+Maskable\+Graphic}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a955de616cf76ff0886112394b6289d85}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!SetActiveSubMeshes@{SetActiveSubMeshes}}
+\index{SetActiveSubMeshes@{SetActiveSubMeshes}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{SetActiveSubMeshes()}{SetActiveSubMeshes()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a955de616cf76ff0886112394b6289d85} 
+override void TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Set\+Active\+Sub\+Meshes (\begin{DoxyParamCaption}\item[{bool}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Method to Enable or Disable child Sub\+Mesh objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a83493a2f045f78defb9e86c92d1b3792}{TMPro.\+TMP\+\_\+\+Text}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a1042bb0fdc0289c8d159570b9ee3bb5e}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!SetCulling@{SetCulling}}
+\index{SetCulling@{SetCulling}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{SetCulling()}{SetCulling()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a1042bb0fdc0289c8d159570b9ee3bb5e} 
+override void TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Set\+Culling (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Set the culling mode on the material. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_afd461774563d324758a3d21f5085edf1}{TMPro.\+TMP\+\_\+\+Text}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_ab485c4e2bf309a9485360a19de950fa2}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!SetFaceColor@{SetFaceColor}}
+\index{SetFaceColor@{SetFaceColor}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{SetFaceColor()}{SetFaceColor()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_ab485c4e2bf309a9485360a19de950fa2} 
+override void TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Set\+Face\+Color (\begin{DoxyParamCaption}\item[{Color32}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Function called internally to set the face color of the material. This will results in an instance of the material. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a7737931333692ee9f01dd1e94cf68a45}{TMPro.\+TMP\+\_\+\+Text}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_ab6bfded8873a3c3aea4639932ec6f4b7}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!SetOutlineColor@{SetOutlineColor}}
+\index{SetOutlineColor@{SetOutlineColor}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{SetOutlineColor()}{SetOutlineColor()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_ab6bfded8873a3c3aea4639932ec6f4b7} 
+override void TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Set\+Outline\+Color (\begin{DoxyParamCaption}\item[{Color32}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Function called internally to set the outline color of the material. This will results in an instance of the material. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a726c0894801737f281ecf5656e9ee4d0}{TMPro.\+TMP\+\_\+\+Text}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a2f3dda7925344d1798b83d85e8c81361}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!SetOutlineThickness@{SetOutlineThickness}}
+\index{SetOutlineThickness@{SetOutlineThickness}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{SetOutlineThickness()}{SetOutlineThickness()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a2f3dda7925344d1798b83d85e8c81361} 
+override void TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Set\+Outline\+Thickness (\begin{DoxyParamCaption}\item[{float}]{thickness}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Function called internally to set the outline thickness property of the material. This will results in an instance of the material. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em thickness} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a64858ad286418942ec69bc438eec39d4}{TMPro.\+TMP\+\_\+\+Text}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a764d47b0d54909e0e981e6ab50e95191}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!SetShaderDepth@{SetShaderDepth}}
+\index{SetShaderDepth@{SetShaderDepth}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{SetShaderDepth()}{SetShaderDepth()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a764d47b0d54909e0e981e6ab50e95191} 
+override void TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Set\+Shader\+Depth (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Set the Render Queue and ZTest mode on the current material. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a311f4fd9aa77c8cd143b686f555aa579}{TMPro.\+TMP\+\_\+\+Text}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a37642717b05a3ef8cb0eaa004b2f00bc}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!SetSharedMaterial@{SetSharedMaterial}}
+\index{SetSharedMaterial@{SetSharedMaterial}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{SetSharedMaterial()}{SetSharedMaterial()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a37642717b05a3ef8cb0eaa004b2f00bc} 
+override void TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Set\+Shared\+Material (\begin{DoxyParamCaption}\item[{Material}]{mat}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Function called internally when a new shared material is assigned via the font\+Shared\+Material property. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_abccb3148b9e3fceee9b80807d75c0196}{TMPro.\+TMP\+\_\+\+Text}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a9ca66d291221a6ee6a9aeaf7944a647d}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!SetSharedMaterials@{SetSharedMaterials}}
+\index{SetSharedMaterials@{SetSharedMaterials}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{SetSharedMaterials()}{SetSharedMaterials()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a9ca66d291221a6ee6a9aeaf7944a647d} 
+override void TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Set\+Shared\+Materials (\begin{DoxyParamCaption}\item[{Material\mbox{[}$\,$\mbox{]}}]{materials}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Method used to assign new materials to the text and sub text objects. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text}{TMPro.\+TMP\+\_\+\+Text}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a111121630f131c81af75f55f31e392e2}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!UpdateGeometry@{UpdateGeometry}}
+\index{UpdateGeometry@{UpdateGeometry}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{UpdateGeometry()}{UpdateGeometry()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a111121630f131c81af75f55f31e392e2} 
+override void TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Update\+Geometry (\begin{DoxyParamCaption}\item[{Mesh}]{mesh}{, }\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Function to update the geometry of the main and sub text objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & \\
+\hline
+{\em index} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a555f26eef9b5a5e51d27217c4c8adb8a}{TMPro.\+TMP\+\_\+\+Text}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a7a55d8c0461e66d88ab71cd27bea397f}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!UpdateMeshPadding@{UpdateMeshPadding}}
+\index{UpdateMeshPadding@{UpdateMeshPadding}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{UpdateMeshPadding()}{UpdateMeshPadding()}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a7a55d8c0461e66d88ab71cd27bea397f} 
+override void TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Update\+Mesh\+Padding (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Function to be used to force recomputing of character padding when Shader / Material properties have been changed via script. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a874daa5045c407a26694d92f855c0761}{TMPro.\+TMP\+\_\+\+Text}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a3f32882137aab111603158a4452bc53b}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!UpdateVertexData@{UpdateVertexData}}
+\index{UpdateVertexData@{UpdateVertexData}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{UpdateVertexData()}{UpdateVertexData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a3f32882137aab111603158a4452bc53b} 
+override void TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Update\+Vertex\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Function to upload the updated vertex data and renderer. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_a63f0f98478ef7b8c9a314f74c9836e39}{TMPro.\+TMP\+\_\+\+Text}}.
+
+\Hypertarget{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a2fb671e18fda5d2e996ed13347fefffa}\index{TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}!UpdateVertexData@{UpdateVertexData}}
+\index{UpdateVertexData@{UpdateVertexData}!TMPro.TextMeshProUGUI@{TMPro.TextMeshProUGUI}}
+\doxysubsubsection{\texorpdfstring{UpdateVertexData()}{UpdateVertexData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_t_m_pro_1_1_text_mesh_pro_u_g_u_i_a2fb671e18fda5d2e996ed13347fefffa} 
+override void TMPro.\+Text\+Mesh\+Pro\+UGUI.\+Update\+Vertex\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_t_m_pro_a517464fab2ef7ff5b9658d2acaf49a57}{TMP\+\_\+\+Vertex\+Data\+Update\+Flags}}}]{flags}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Function to upload the updated vertex data and renderer. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___text_ae4079b9679758f2a086a0e9f63893475}{TMPro.\+TMP\+\_\+\+Text}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+textmeshpro@3.\+0.\+6/\+Scripts/\+Runtime/Text\+Mesh\+Pro\+UGUI.\+cs\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+textmeshpro@3.\+0.\+6/\+Scripts/\+Runtime/TMPro\+\_\+\+UGUI\+\_\+\+Private.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,360 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Input\+Control\+Scheme Struct Reference}
+\hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{}\label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}\index{UnityEngine.InputSystem.InputControlScheme@{UnityEngine.InputSystem.InputControlScheme}}
+
+
+A named set of zero or more device requirements along with an associated binding group.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Input\+Control\+Scheme\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_device_requirement}{Device\+Requirement}}
+\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result}{Match\+Result}}
+\begin{DoxyCompactList}\small\item\em The result of matching a list of \doxylink{class_unity_engine_1_1_input_system_1_1_input_device}{devices} against a list of \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_device_requirement}{requirements} in an \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme}. \end{DoxyCompactList}\item 
+struct {\bfseries Scheme\+Json}
+\begin{DoxyCompactList}\small\item\em JSON-\/serialized form of a control scheme. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a096b1c548ed4e07bbc8aebc555fc9ac6}{Input\+Control\+Scheme}} (string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a551b311839929fc399fb68eff87be3a0}{name}}, IEnumerable$<$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_device_requirement}{Device\+Requirement}} $>$ devices=null, string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a5711a16a90d917c90ea23119b8327cf6}{binding\+Group}}=null)
+\begin{DoxyCompactList}\small\item\em Initialize the control scheme with the given name, device requirements, and binding group. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a2e7e925c1adf59174d4a167642fcb5ee}{Supports\+Device}} (\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}} device)
+\begin{DoxyCompactList}\small\item\em Whether the control scheme has a requirement in \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a2807a510868ff60d21c76b2fde901a1e}{device\+Requirements} that targets the given device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result}{Match\+Result}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_ac5c98ed3b50fb8be0fb2d8007225a9a7}{Pick\+Devices\+From$<$ TDevices $>$}} (TDevices devices, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}} favor\+Device=null)
+\begin{DoxyCompactList}\small\item\em Based on a list of devices, make a selection that matches the \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a2807a510868ff60d21c76b2fde901a1e}{requirements} imposed by the control scheme. \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_ac965f5a562d5fd248396c1ec9d3412a3}\label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_ac965f5a562d5fd248396c1ec9d3412a3} 
+bool {\bfseries Equals} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme}} other)
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a6df749ed13e73d1ff27b92dd4983df38}\label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a6df749ed13e73d1ff27b92dd4983df38} 
+override bool {\bfseries Equals} (object obj)
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a3d54f45c3a45d27296b5246e685db4eb}\label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a3d54f45c3a45d27296b5246e685db4eb} 
+override int {\bfseries Get\+Hash\+Code} ()
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a1d8d48da64b74a25eaae68acdd616be0}\label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a1d8d48da64b74a25eaae68acdd616be0} 
+override string {\bfseries To\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static ? \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a81b657486e65349ba459c8e519ae1c26}{Find\+Control\+Scheme\+For\+Devices$<$ TDevices, TSchemes $>$}} (TDevices devices, TSchemes schemes, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}} must\+Include\+Device=null, bool allow\+Unsuccesful\+Match=false)
+\begin{DoxyCompactList}\small\item\em Given a list of devices and a list of control schemes, find the most suitable control scheme to use with the devices. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a6951c0d7855cbd64a501fa036428058d}{Find\+Control\+Scheme\+For\+Devices$<$ TDevices, TSchemes $>$}} (TDevices devices, TSchemes schemes, out \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme}} control\+Scheme, out \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result}{Match\+Result}} match\+Result, \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}} must\+Include\+Device=null, bool allow\+Unsuccessful\+Match=false)
+\item 
+static ? \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a8aa3c118bcc3c845504ae4a4fe0b6509}{Find\+Control\+Scheme\+For\+Device$<$ TSchemes $>$}} (\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}} device, TSchemes schemes)
+\begin{DoxyCompactList}\small\item\em Return the first control schemes from the given list that supports the given device (see \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a2e7e925c1adf59174d4a167642fcb5ee}{Supports\+Device}). \end{DoxyCompactList}\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a78ccd27a2a865064dd95aef432fb596d}\label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a78ccd27a2a865064dd95aef432fb596d} 
+static bool {\bfseries operator==} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme}} left, \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme}} right)
+\item 
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_acbdb65781c8c3efeb055cf473cfe2a62}\label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_acbdb65781c8c3efeb055cf473cfe2a62} 
+static bool {\bfseries operator!=} (\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme}} left, \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme}} right)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a551b311839929fc399fb68eff87be3a0}{name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Name of the control scheme. Not {\ttfamily null} or empty except if \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme} instance is invalid (i.\+e. default-\/initialized). \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a5711a16a90d917c90ea23119b8327cf6}{binding\+Group}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Binding group that is associated with the control scheme. Not {\ttfamily null} or empty except if \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme} is invalid (i.\+e. default-\/initialized). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_device_requirement}{Device\+Requirement}} $>$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a2807a510868ff60d21c76b2fde901a1e}{device\+Requirements}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Devices used by the control scheme. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A named set of zero or more device requirements along with an associated binding group. 
+
+Control schemes provide an additional layer on top of binding groups. While binding groups allow differentiating sets of bindings (e.\+g. a "{}\+Keyboard\&\+Mouse"{} group versus a "{}\+Gamepad"{} group), control schemes impose a set of devices requirements that must be met in order for a specific set of bindings to be usable.
+
+Note that control schemes can only be defined at the \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset} level. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset_af40f839c42f5119c08e408ce01deec78}{Input\+Action\+Asset.\+control\+Schemes}, Input\+Action\+Setup\+Extensions.\+Add\+Control\+Scheme(\+Input\+Action\+Asset,string)
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a096b1c548ed4e07bbc8aebc555fc9ac6}\index{UnityEngine.InputSystem.InputControlScheme@{UnityEngine.InputSystem.InputControlScheme}!InputControlScheme@{InputControlScheme}}
+\index{InputControlScheme@{InputControlScheme}!UnityEngine.InputSystem.InputControlScheme@{UnityEngine.InputSystem.InputControlScheme}}
+\doxysubsubsection{\texorpdfstring{InputControlScheme()}{InputControlScheme()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a096b1c548ed4e07bbc8aebc555fc9ac6} 
+Unity\+Engine.\+Input\+System.\+Input\+Control\+Scheme.\+Input\+Control\+Scheme (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{IEnumerable$<$ \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_device_requirement}{Device\+Requirement}} $>$}]{devices}{ = {\ttfamily null}, }\item[{string}]{binding\+Group}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialize the control scheme with the given name, device requirements, and binding group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name to use for the scheme. Required.\\
+\hline
+{\em devices} & List of device requirements.\\
+\hline
+{\em binding\+Group} & Name to use for the binding group (see \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89}{Input\+Binding.\+groups}) associated with the control scheme. If this is {\ttfamily null} or empty, {\itshape name}  is used instead (with \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a33e4f6dbf1be8f943137ffacc0438bed}{Input\+Binding.\+Separator} characters stripped from the name).\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & {\itshape name}  is {\ttfamily null} or empty.\\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a8aa3c118bcc3c845504ae4a4fe0b6509}\index{UnityEngine.InputSystem.InputControlScheme@{UnityEngine.InputSystem.InputControlScheme}!FindControlSchemeForDevice$<$ TSchemes $>$@{FindControlSchemeForDevice$<$ TSchemes $>$}}
+\index{FindControlSchemeForDevice$<$ TSchemes $>$@{FindControlSchemeForDevice$<$ TSchemes $>$}!UnityEngine.InputSystem.InputControlScheme@{UnityEngine.InputSystem.InputControlScheme}}
+\doxysubsubsection{\texorpdfstring{FindControlSchemeForDevice$<$ TSchemes $>$()}{FindControlSchemeForDevice< TSchemes >()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a8aa3c118bcc3c845504ae4a4fe0b6509} 
+static ? \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme}} Unity\+Engine.\+Input\+System.\+Input\+Control\+Scheme.\+Find\+Control\+Scheme\+For\+Device$<$ TSchemes $>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}}}]{device}{, }\item[{TSchemes}]{schemes}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Return the first control schemes from the given list that supports the given device (see \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a2e7e925c1adf59174d4a167642fcb5ee}{Supports\+Device}). 
+
+FIXME\+: docs are wrong now
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & An input device.\\
+\hline
+{\em schemes} & A list of control schemes. Can be empty.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TSchemes} & Collection type to use for the list of schemes.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The first schemes from {\itshape schemes}  that supports {\itshape device}  or {\ttfamily null} if none of the schemes is usable with the device.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & {\itshape device}  is {\ttfamily null} -\/or-\/ {\itshape schemes}  is {\ttfamily null}.\\
+\hline
+\end{DoxyExceptions}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TSchemes} : {\em IEnumerable$<$Input\+Control\+Scheme$>$}]\end{description}
+\end{Desc}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a81b657486e65349ba459c8e519ae1c26}\index{UnityEngine.InputSystem.InputControlScheme@{UnityEngine.InputSystem.InputControlScheme}!FindControlSchemeForDevices$<$ TDevices, TSchemes $>$@{FindControlSchemeForDevices$<$ TDevices, TSchemes $>$}}
+\index{FindControlSchemeForDevices$<$ TDevices, TSchemes $>$@{FindControlSchemeForDevices$<$ TDevices, TSchemes $>$}!UnityEngine.InputSystem.InputControlScheme@{UnityEngine.InputSystem.InputControlScheme}}
+\doxysubsubsection{\texorpdfstring{FindControlSchemeForDevices$<$ TDevices, TSchemes $>$()}{FindControlSchemeForDevices< TDevices, TSchemes >()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a81b657486e65349ba459c8e519ae1c26} 
+static ? \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme}} Unity\+Engine.\+Input\+System.\+Input\+Control\+Scheme.\+Find\+Control\+Scheme\+For\+Devices$<$ TDevices, TSchemes $>$ (\begin{DoxyParamCaption}\item[{TDevices}]{devices}{, }\item[{TSchemes}]{schemes}{, }\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}}}]{must\+Include\+Device}{ = {\ttfamily null}, }\item[{bool}]{allow\+Unsuccesful\+Match}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Given a list of devices and a list of control schemes, find the most suitable control scheme to use with the devices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em devices} & A list of devices. If the list is empty, only schemes with empty \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a2807a510868ff60d21c76b2fde901a1e}{device\+Requirements} lists will get matched.\\
+\hline
+{\em schemes} & A list of control schemes.\\
+\hline
+{\em must\+Include\+Device} & If not {\ttfamily null}, a successful match has to include the given device.\\
+\hline
+{\em allow\+Unsuccesful\+Match} & If true, then allow returning a match that has unsatisfied requirements but still matched at least some requirement. If there are several unsuccessful matches, the returned scheme is still the highest scoring one among those.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TDevices} & Collection type to use for the list of devices.\\
+\hline
+{\em TSchemes} & Collection type to use for the list of schemes.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The control scheme that best matched the given devices or {\ttfamily null} if no scheme was found suitable.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & {\itshape devices}  is {\ttfamily null} -\/or-\/ {\itshape schemes}  is {\ttfamily null}.\\
+\hline
+\end{DoxyExceptions}
+
+
+Any successful match (see \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_aad767c41d0350dc0297124bcf1dfd2ef}{Match\+Result.\+is\+Successful\+Match}) will be considered. The one that matches the most amount of devices (see \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_a93d06d077f1db06d92ed330d80830313}{Match\+Result.\+devices}) will be returned. If more than one schemes matches equally well, the first one encountered in the list is returned.
+
+Note that schemes are not required to match all devices available in the list. The result will simply be the scheme that matched the most devices of what was devices. Use \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_ac5c98ed3b50fb8be0fb2d8007225a9a7}{Pick\+Devices\+From$<$\+TDevices$>$} to find the devices that a control scheme selects.
+
+This method is parameterized over {\itshape TDevices}  and {\itshape TSchemes}  to allow avoiding GC heap allocations from boxing of structs such as Read\+Only\+Array$<$\+TValue$>$.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ an\ .inputactions\ asset.}}
+\DoxyCodeLine{var\ asset\ =\ ScriptableObject.CreateInstance<InputActionAsset>();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Add\ some\ control\ schemes\ to\ the\ asset.}}
+\DoxyCodeLine{asset.AddControlScheme(\textcolor{stringliteral}{"{}KeyboardMouse"{}})}
+\DoxyCodeLine{\ \ \ \ .WithRequiredDevice<Keyboard>()}
+\DoxyCodeLine{\ \ \ \ .WithRequiredDevice<Mouse>());}
+\DoxyCodeLine{asset.AddControlScheme(\textcolor{stringliteral}{"{}Gamepad"{}})}
+\DoxyCodeLine{\ \ \ \ .WithRequiredDevice<Gamepad>());}
+\DoxyCodeLine{asset.AddControlScheme(\textcolor{stringliteral}{"{}DualGamepad"{}})}
+\DoxyCodeLine{\ \ \ \ .WithRequiredDevice<Gamepad>())}
+\DoxyCodeLine{\ \ \ \ .WithOptionalGamepad<Gamepad>());}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Add\ some\ devices\ that\ we\ can\ test\ with.}}
+\DoxyCodeLine{var\ keyboard\ =\ InputSystem.AddDevice<Keyboard>();}
+\DoxyCodeLine{var\ mouse\ =\ InputSystem.AddDevice<Mouse>();}
+\DoxyCodeLine{var\ gamepad1\ =\ InputSystem.AddDevice<Gamepad>();}
+\DoxyCodeLine{var\ gamepad2\ =\ InputSystem.AddDevice<Gamepad>();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Matching\ with\ just\ a\ keyboard\ won't\ match\ any\ scheme.}}
+\DoxyCodeLine{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a096b1c548ed4e07bbc8aebc555fc9ac6}{InputControlScheme}}.FindControlSchemeForDevices(}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{new}\ InputDevice[]\ \{\ keyboard\ \},\ asset.controlSchemes);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Matching\ with\ a\ keyboard\ and\ mouse\ with\ match\ the\ "{}KeyboardMouse"{}\ scheme.}}
+\DoxyCodeLine{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a096b1c548ed4e07bbc8aebc555fc9ac6}{InputControlScheme}}.FindControlSchemeForDevices(}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{new}\ InputDevice[]\ \{\ keyboard,\ mouse\ \},\ asset.controlSchemes);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Matching\ with\ a\ single\ gamepad\ will\ match\ the\ "{}Gamepad"{}\ scheme.}}
+\DoxyCodeLine{\textcolor{comment}{//\ Note\ that\ since\ the\ second\ gamepad\ is\ optional\ in\ "{}DualGamepad"{}\ could}}
+\DoxyCodeLine{\textcolor{comment}{//\ match\ the\ same\ set\ of\ devices\ but\ it\ doesn't\ match\ any\ better\ than}}
+\DoxyCodeLine{\textcolor{comment}{//\ "{}Gamepad"{}\ and\ that\ one\ comes\ first\ in\ the\ list.}}
+\DoxyCodeLine{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a096b1c548ed4e07bbc8aebc555fc9ac6}{InputControlScheme}}.FindControlSchemeForDevices(}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{new}\ InputDevice[]\ \{\ gamepad1\ \},\ asset.controlSchemes);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Matching\ with\ two\ gamepads\ will\ match\ the\ "{}DualGamepad"{}\ scheme.}}
+\DoxyCodeLine{\textcolor{comment}{//\ Note\ that\ "{}Gamepad"{}\ will\ match\ this\ device\ list\ as\ well.\ If\ "{}DualGamepad"{}}}
+\DoxyCodeLine{\textcolor{comment}{//\ didn't\ exist,\ "{}Gamepad"{}\ would\ be\ the\ result\ here.\ However,\ "{}DualGamepad"{}}}
+\DoxyCodeLine{\textcolor{comment}{//\ matches\ the\ list\ better\ than\ "{}Gamepad"{}\ so\ that's\ what\ gets\ returned\ here.}}
+\DoxyCodeLine{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a096b1c548ed4e07bbc8aebc555fc9ac6}{InputControlScheme}}.FindControlSchemeForDevices(}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{new}\ InputDevice[]\ \{\ gamepad1,\ gamepad2\ \},\ asset.controlSchemes);}
+
+\end{DoxyCode}
+ \begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TDevices} : {\em IRead\+Only\+List$<$Input\+Device$>$}]\item[{\em TSchemes} : {\em IEnumerable$<$Input\+Control\+Scheme$>$}]\end{description}
+\end{Desc}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a6951c0d7855cbd64a501fa036428058d}\index{UnityEngine.InputSystem.InputControlScheme@{UnityEngine.InputSystem.InputControlScheme}!FindControlSchemeForDevices$<$ TDevices, TSchemes $>$@{FindControlSchemeForDevices$<$ TDevices, TSchemes $>$}}
+\index{FindControlSchemeForDevices$<$ TDevices, TSchemes $>$@{FindControlSchemeForDevices$<$ TDevices, TSchemes $>$}!UnityEngine.InputSystem.InputControlScheme@{UnityEngine.InputSystem.InputControlScheme}}
+\doxysubsubsection{\texorpdfstring{FindControlSchemeForDevices$<$ TDevices, TSchemes $>$()}{FindControlSchemeForDevices< TDevices, TSchemes >()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a6951c0d7855cbd64a501fa036428058d} 
+static bool Unity\+Engine.\+Input\+System.\+Input\+Control\+Scheme.\+Find\+Control\+Scheme\+For\+Devices$<$ TDevices, TSchemes $>$ (\begin{DoxyParamCaption}\item[{TDevices}]{devices}{, }\item[{TSchemes}]{schemes}{, }\item[{out \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme}}}]{control\+Scheme}{, }\item[{out \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result}{Match\+Result}}}]{match\+Result}{, }\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}}}]{must\+Include\+Device}{ = {\ttfamily null}, }\item[{bool}]{allow\+Unsuccessful\+Match}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TDevices} : {\em IRead\+Only\+List$<$Input\+Device$>$}]\item[{\em TSchemes} : {\em IEnumerable$<$Input\+Control\+Scheme$>$}]\end{description}
+\end{Desc}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_ac5c98ed3b50fb8be0fb2d8007225a9a7}\index{UnityEngine.InputSystem.InputControlScheme@{UnityEngine.InputSystem.InputControlScheme}!PickDevicesFrom$<$ TDevices $>$@{PickDevicesFrom$<$ TDevices $>$}}
+\index{PickDevicesFrom$<$ TDevices $>$@{PickDevicesFrom$<$ TDevices $>$}!UnityEngine.InputSystem.InputControlScheme@{UnityEngine.InputSystem.InputControlScheme}}
+\doxysubsubsection{\texorpdfstring{PickDevicesFrom$<$ TDevices $>$()}{PickDevicesFrom< TDevices >()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_ac5c98ed3b50fb8be0fb2d8007225a9a7} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result}{Match\+Result}} Unity\+Engine.\+Input\+System.\+Input\+Control\+Scheme.\+Pick\+Devices\+From$<$ TDevices $>$ (\begin{DoxyParamCaption}\item[{TDevices}]{devices}{, }\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}}}]{favor\+Device}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Based on a list of devices, make a selection that matches the \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a2807a510868ff60d21c76b2fde901a1e}{requirements} imposed by the control scheme. 
+
+as we can get? (could be useful for single-\/player)
+
+
+\begin{DoxyParams}{Parameters}
+{\em devices} & A list of devices to choose from.\\
+\hline
+{\em favor\+Device} & If not null, the device will be favored over other devices in {\itshape devices} . Note that the device must be present in the list also.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result}{Match\+Result} structure containing the result of the pick. Note that this structure must be manually \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_match_result_a58e23c496a90b424ac9cbf2f6d13fc98}{disposed} or unmanaged memory will be leaked.
+\end{DoxyReturn}
+
+
+Does not allocate managed memory. \begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TDevices} : {\em IRead\+Only\+List$<$Input\+Device$>$}]\end{description}
+\end{Desc}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a2e7e925c1adf59174d4a167642fcb5ee}\index{UnityEngine.InputSystem.InputControlScheme@{UnityEngine.InputSystem.InputControlScheme}!SupportsDevice@{SupportsDevice}}
+\index{SupportsDevice@{SupportsDevice}!UnityEngine.InputSystem.InputControlScheme@{UnityEngine.InputSystem.InputControlScheme}}
+\doxysubsubsection{\texorpdfstring{SupportsDevice()}{SupportsDevice()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a2e7e925c1adf59174d4a167642fcb5ee} 
+bool Unity\+Engine.\+Input\+System.\+Input\+Control\+Scheme.\+Supports\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}}}]{device}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Whether the control scheme has a requirement in \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a2807a510868ff60d21c76b2fde901a1e}{device\+Requirements} that targets the given device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & An input device.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the control scheme has a device requirement matching the device.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & {\itshape device}  is {\ttfamily null}.\\
+\hline
+\end{DoxyExceptions}
+
+
+Note that both optional (see \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_device_requirement_a2b1ca7b1009e8f63b7ac2191075e815b}{Device\+Requirement.\+is\+Optional}) and non-\/optional device requirements are taken into account.
+
+\doxysubsection{Property Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a5711a16a90d917c90ea23119b8327cf6}\index{UnityEngine.InputSystem.InputControlScheme@{UnityEngine.InputSystem.InputControlScheme}!bindingGroup@{bindingGroup}}
+\index{bindingGroup@{bindingGroup}!UnityEngine.InputSystem.InputControlScheme@{UnityEngine.InputSystem.InputControlScheme}}
+\doxysubsubsection{\texorpdfstring{bindingGroup}{bindingGroup}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a5711a16a90d917c90ea23119b8327cf6} 
+string Unity\+Engine.\+Input\+System.\+Input\+Control\+Scheme.\+binding\+Group\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Binding group that is associated with the control scheme. Not {\ttfamily null} or empty except if \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme} is invalid (i.\+e. default-\/initialized). 
+
+Binding group for the scheme.
+
+All bindings in this group are considered to be part of the control scheme. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89}{Input\+Binding.\+groups}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a2807a510868ff60d21c76b2fde901a1e}\index{UnityEngine.InputSystem.InputControlScheme@{UnityEngine.InputSystem.InputControlScheme}!deviceRequirements@{deviceRequirements}}
+\index{deviceRequirements@{deviceRequirements}!UnityEngine.InputSystem.InputControlScheme@{UnityEngine.InputSystem.InputControlScheme}}
+\doxysubsubsection{\texorpdfstring{deviceRequirements}{deviceRequirements}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a2807a510868ff60d21c76b2fde901a1e} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_utilities_1_1_read_only_array}{Read\+Only\+Array}}$<$\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_device_requirement}{Device\+Requirement}}$>$ Unity\+Engine.\+Input\+System.\+Input\+Control\+Scheme.\+device\+Requirements\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Devices used by the control scheme. 
+
+Device requirements of the scheme.
+
+No two entries will be allowed to match the same control or device at runtime in order for the requirements of the control scheme to be considered satisfied. If, for example, one entry requires a "{}<\+Gamepad>"{} and another entry requires a "{}<\+Gamepad>"{}, then at runtime two gamepads will be required even though a single one will match both requirements individually. However, if, for example, one entry requires "{}<\+Gamepad>/left\+Stick"{} and another requires "{}<\+Gamepad>, the same device can match both requirements as each one resolves to a different control.  \+It it allowed to define control schemes without device requirements, i.\+e. for which this property will be an empty array. Note, however, that features such as automatic control scheme switching in $<$see cref="{}\doxylink{class_unity_engine_1_1_input_system_1_1_player_input}{Player\+Input}"{}/\texorpdfstring{$>$}{>} will not work with such control schemes. \Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a551b311839929fc399fb68eff87be3a0}\index{UnityEngine.InputSystem.InputControlScheme@{UnityEngine.InputSystem.InputControlScheme}!name@{name}}
+\index{name@{name}!UnityEngine.InputSystem.InputControlScheme@{UnityEngine.InputSystem.InputControlScheme}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_a551b311839929fc399fb68eff87be3a0} 
+string Unity\+Engine.\+Input\+System.\+Input\+Control\+Scheme.\+name\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Name of the control scheme. Not {\ttfamily null} or empty except if \doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme} instance is invalid (i.\+e. default-\/initialized). 
+
+Name of the scheme.
+
+May be empty or null except if the control scheme is part of an \doxylink{class_unity_engine_1_1_input_system_1_1_input_action_asset}{Input\+Action\+Asset}. 
+
+\begin{DoxySeeAlso}{See also}
+Input\+Action\+Setup\+Extensions.\+Add\+Control\+Scheme(\+Input\+Action\+Asset,string)
+
+
+\end{DoxySeeAlso}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Actions/Input\+Control\+Scheme.\+cs\end{DoxyCompactItemize}

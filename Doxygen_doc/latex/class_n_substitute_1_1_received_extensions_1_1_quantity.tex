@@ -1,0 +1,127 @@
+\doxysection{NSubstitute.\+Received\+Extensions.\+Quantity Class Reference}
+\hypertarget{class_n_substitute_1_1_received_extensions_1_1_quantity}{}\label{class_n_substitute_1_1_received_extensions_1_1_quantity}\index{NSubstitute.ReceivedExtensions.Quantity@{NSubstitute.ReceivedExtensions.Quantity}}
+
+
+Represents a quantity. Primarily used for specifying a required amount of calls to a member.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_n_substitute_1_1_received_extensions_1_1_quantity_aab83568b9f7d02c84b3eec86c67c3b3b}{Matches$<$ T $>$}} (IEnumerable$<$ T $>$ items)
+\begin{DoxyCompactList}\small\item\em Returns whether the given collection contains the required quantity of items. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_n_substitute_1_1_received_extensions_1_1_quantity_ae8db6e3592b212e9e3bb33387647f56a}{Requires\+More\+Than$<$ T $>$}} (IEnumerable$<$ T $>$ items)
+\begin{DoxyCompactList}\small\item\em Returns whether the given collections needs more items to satisfy the required quantity. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_n_substitute_1_1_received_extensions_1_1_quantity_ad0a872b36f741813ae936c521779fc9f}{Describe}} (string singular\+Noun, string plural\+Noun)
+\begin{DoxyCompactList}\small\item\em Describe this quantity using the given noun variants. For example, {\ttfamily Describe("{}item"{}, "{}items"{})} could return the description\+: "{}more than 1 item, but less than 10 items"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_n_substitute_1_1_received_extensions_1_1_quantity_a5a54df86b57468798d4df818329428d0}\label{class_n_substitute_1_1_received_extensions_1_1_quantity_a5a54df86b57468798d4df818329428d0} 
+static \mbox{\hyperlink{class_n_substitute_1_1_received_extensions_1_1_quantity}{Quantity}} {\bfseries Exactly} (int number)
+\item 
+\Hypertarget{class_n_substitute_1_1_received_extensions_1_1_quantity_ab43d8c9fdb09ae920a9c98925d76cd42}\label{class_n_substitute_1_1_received_extensions_1_1_quantity_ab43d8c9fdb09ae920a9c98925d76cd42} 
+static \mbox{\hyperlink{class_n_substitute_1_1_received_extensions_1_1_quantity}{Quantity}} {\bfseries At\+Least\+One} ()
+\item 
+\Hypertarget{class_n_substitute_1_1_received_extensions_1_1_quantity_ac434a19066fc08c69bd74591b0b87be4}\label{class_n_substitute_1_1_received_extensions_1_1_quantity_ac434a19066fc08c69bd74591b0b87be4} 
+static \mbox{\hyperlink{class_n_substitute_1_1_received_extensions_1_1_quantity}{Quantity}} {\bfseries None} ()
+\item 
+static \mbox{\hyperlink{class_n_substitute_1_1_received_extensions_1_1_quantity}{Quantity}} \mbox{\hyperlink{class_n_substitute_1_1_received_extensions_1_1_quantity_aea8eb249f90da049bf38301d1eafe7a8}{Within}} (int min\+Inclusive, int max\+Inclusive)
+\begin{DoxyCompactList}\small\item\em A non-\/zero quantity between the given minimum and maximum numbers (inclusive). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a quantity. Primarily used for specifying a required amount of calls to a member. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_n_substitute_1_1_received_extensions_1_1_quantity_ad0a872b36f741813ae936c521779fc9f}\index{NSubstitute.ReceivedExtensions.Quantity@{NSubstitute.ReceivedExtensions.Quantity}!Describe@{Describe}}
+\index{Describe@{Describe}!NSubstitute.ReceivedExtensions.Quantity@{NSubstitute.ReceivedExtensions.Quantity}}
+\doxysubsubsection{\texorpdfstring{Describe()}{Describe()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_received_extensions_1_1_quantity_ad0a872b36f741813ae936c521779fc9f} 
+string NSubstitute.\+Received\+Extensions.\+Quantity.\+Describe (\begin{DoxyParamCaption}\item[{string}]{singular\+Noun}{, }\item[{string}]{plural\+Noun}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Describe this quantity using the given noun variants. For example, {\ttfamily Describe("{}item"{}, "{}items"{})} could return the description\+: "{}more than 1 item, but less than 10 items"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em singular\+Noun} & \\
+\hline
+{\em plural\+Noun} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string describing the required quantity of items identified by the provided noun forms.
+\end{DoxyReturn}
+\Hypertarget{class_n_substitute_1_1_received_extensions_1_1_quantity_aab83568b9f7d02c84b3eec86c67c3b3b}\index{NSubstitute.ReceivedExtensions.Quantity@{NSubstitute.ReceivedExtensions.Quantity}!Matches$<$ T $>$@{Matches$<$ T $>$}}
+\index{Matches$<$ T $>$@{Matches$<$ T $>$}!NSubstitute.ReceivedExtensions.Quantity@{NSubstitute.ReceivedExtensions.Quantity}}
+\doxysubsubsection{\texorpdfstring{Matches$<$ T $>$()}{Matches< T >()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_received_extensions_1_1_quantity_aab83568b9f7d02c84b3eec86c67c3b3b} 
+bool NSubstitute.\+Received\+Extensions.\+Quantity.\+Matches$<$ T $>$ (\begin{DoxyParamCaption}\item[{IEnumerable$<$ T $>$}]{items}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Returns whether the given collection contains the required quantity of items. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em items} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the collection has the required quantity; otherwise false.
+\end{DoxyReturn}
+\Hypertarget{class_n_substitute_1_1_received_extensions_1_1_quantity_ae8db6e3592b212e9e3bb33387647f56a}\index{NSubstitute.ReceivedExtensions.Quantity@{NSubstitute.ReceivedExtensions.Quantity}!RequiresMoreThan$<$ T $>$@{RequiresMoreThan$<$ T $>$}}
+\index{RequiresMoreThan$<$ T $>$@{RequiresMoreThan$<$ T $>$}!NSubstitute.ReceivedExtensions.Quantity@{NSubstitute.ReceivedExtensions.Quantity}}
+\doxysubsubsection{\texorpdfstring{RequiresMoreThan$<$ T $>$()}{RequiresMoreThan< T >()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_received_extensions_1_1_quantity_ae8db6e3592b212e9e3bb33387647f56a} 
+bool NSubstitute.\+Received\+Extensions.\+Quantity.\+Requires\+More\+Than$<$ T $>$ (\begin{DoxyParamCaption}\item[{IEnumerable$<$ T $>$}]{items}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Returns whether the given collections needs more items to satisfy the required quantity. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em items} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the collection needs more items to match this quantity; otherwise false.
+\end{DoxyReturn}
+\Hypertarget{class_n_substitute_1_1_received_extensions_1_1_quantity_aea8eb249f90da049bf38301d1eafe7a8}\index{NSubstitute.ReceivedExtensions.Quantity@{NSubstitute.ReceivedExtensions.Quantity}!Within@{Within}}
+\index{Within@{Within}!NSubstitute.ReceivedExtensions.Quantity@{NSubstitute.ReceivedExtensions.Quantity}}
+\doxysubsubsection{\texorpdfstring{Within()}{Within()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_received_extensions_1_1_quantity_aea8eb249f90da049bf38301d1eafe7a8} 
+static \mbox{\hyperlink{class_n_substitute_1_1_received_extensions_1_1_quantity}{Quantity}} NSubstitute.\+Received\+Extensions.\+Quantity.\+Within (\begin{DoxyParamCaption}\item[{int}]{min\+Inclusive}{, }\item[{int}]{max\+Inclusive}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+A non-\/zero quantity between the given minimum and maximum numbers (inclusive). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min\+Inclusive} & Minimum quantity (inclusive). Must be greater than or equal to 0.\\
+\hline
+{\em max\+Inclusive} & Maximum quantity (inclusive). Must be greater than min\+Inclusive.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/net.\+tnrd.\+nsubstitute@449712b25a/\+Runtime/\+Extensions/Received\+Extensions.\+cs\end{DoxyCompactItemize}

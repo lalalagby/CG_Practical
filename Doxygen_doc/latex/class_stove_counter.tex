@@ -1,0 +1,133 @@
+\doxysection{Stove\+Counter Class Reference}
+\hypertarget{class_stove_counter}{}\label{class_stove_counter}\index{StoveCounter@{StoveCounter}}
+
+
+The \doxylink{class_stove_counter}{Stove\+Counter} class is responsible for handling interactions with the stove, including cooking progress and managing objects on the stove.  
+
+
+Inheritance diagram for Stove\+Counter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_stove_counter}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_stove_counter_1_1_on_state_changed_event_args}{On\+State\+Changed\+Event\+Args}}
+\begin{DoxyCompactList}\small\item\em Event arguments for the On\+State\+Changed event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_stove_counter_af67228be9e9e60bf54921a5ddb1531c9}{Interact}} (\mbox{\hyperlink{class_player}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Handles interactions between the \doxylink{class_player}{Player} and the \doxylink{class_stove_counter}{Stove\+Counter}. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_stove_counter_a8523bbd4ab00c082572e88b9b14e263c}{Operation}} (\mbox{\hyperlink{class_player}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Initiates or stops the cooking process on the \doxylink{class_stove_counter}{Stove\+Counter}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_base_counter}{Base\+Counter}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Operation\+Hold} (\mbox{\hyperlink{class_player}{Player}} player, float time\+Interval)
+\item 
+Transform \mbox{\hyperlink{class_base_counter_aef711fd957bb65d383b266e859c904da}{Get\+Hey\+Tea\+Object\+Follow\+Transform}} ()
+\item 
+void \mbox{\hyperlink{class_base_counter_a50c91e74e2ee5a0ca592aec5a8c76347}{Set\+Hey\+Tea\+Object}} (\mbox{\hyperlink{class_hey_tea_object}{Hey\+Tea\+Object}} hey\+Tea\+Object)
+\item 
+\mbox{\hyperlink{class_hey_tea_object}{Hey\+Tea\+Object}} \mbox{\hyperlink{class_base_counter_a7b03993b7b621d711eec505f8111637e}{Get\+Hey\+Tea\+Object}} ()
+\item 
+void \mbox{\hyperlink{class_base_counter_aa82e71b4dad767f73bb2b80df0edb8fd}{Clear\+Hey\+Tea\+Object}} ()
+\item 
+bool \mbox{\hyperlink{class_base_counter_a931724759c1b4d3188a3cefc627cc3b6}{Has\+Hey\+Tea\+Object}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_stove_counter_a26d7a3b8b304d44d2f4f0739fd8ad147}\label{class_stove_counter_a26d7a3b8b304d44d2f4f0739fd8ad147} 
+Event\+Handler$<$ \mbox{\hyperlink{class_stove_counter_1_1_on_state_changed_event_args}{On\+State\+Changed\+Event\+Args}} $>$ {\bfseries On\+State\+Changed}
+\begin{DoxyCompactList}\small\item\em Event triggered when the cooking state changes. \end{DoxyCompactList}\item 
+\Hypertarget{class_stove_counter_af741c4dbf60e05ec81249bddeb1ede4f}\label{class_stove_counter_af741c4dbf60e05ec81249bddeb1ede4f} 
+Event\+Handler$<$ \mbox{\hyperlink{class_i_has_progress_1_1_on_progress_changed_event_args}{IHas\+Progress.\+On\+Progress\+Changed\+Event\+Args}} $>$ {\bfseries On\+Progress\+Changed}
+\begin{DoxyCompactList}\small\item\em Event triggered when the cooking progress changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Events inherited from \mbox{\hyperlink{interface_i_has_progress}{IHas\+Progress}}}
+\begin{DoxyCompactItemize}
+\item 
+Event\+Handler$<$ \mbox{\hyperlink{class_i_has_progress_1_1_on_progress_changed_event_args}{On\+Progress\+Changed\+Event\+Args}} $>$ {\bfseries On\+Progress\+Changed}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_base_counter}{Base\+Counter}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_hey_tea_object}{Hey\+Tea\+Object}} {\bfseries hey\+Tea\+Object}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_stove_counter}{Stove\+Counter} class is responsible for handling interactions with the stove, including cooking progress and managing objects on the stove. 
+
+\begin{DoxyAuthor}{Author}
+Yong Wu, Bingyu Guo
+\end{DoxyAuthor}
+
+
+This class extends the \doxylink{class_base_counter}{Base\+Counter} and implements the \doxylink{interface_i_has_progress}{IHas\+Progress} interface. It manages the cooking process, handles player interactions, and updates the progress state.
+
+\begin{DoxyNote}{Note}
+milk\+Tea\+Material\+Type contains six types\+: tea\+Base, basic\+Add, ingredients, fruit, none, un treat. \doxylink{class_hey_tea_object}{Hey\+Tea\+Object} includes the objects contained in tea\+Base, basic\+Add, ingredients, fruit, none, un treat.
+\begin{DoxyItemize}
+\item tea\+Base\+: tea, milk, milktea
+\item basic\+Add\+: sugar, ice
+\item ingredients\+: red bean cooked, pearl cooked
+\item fruit\+: orange slice, grape slice, strawberry slice
+\item none\+: pot, cup
+\item un treat\+: bagged pearl, bagged red bean, bagged sugar, grape, orange, strawberry 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_stove_counter_af67228be9e9e60bf54921a5ddb1531c9}\index{StoveCounter@{StoveCounter}!Interact@{Interact}}
+\index{Interact@{Interact}!StoveCounter@{StoveCounter}}
+\doxysubsubsection{\texorpdfstring{Interact()}{Interact()}}
+{\footnotesize\ttfamily \label{class_stove_counter_af67228be9e9e60bf54921a5ddb1531c9} 
+override void Stove\+Counter.\+Interact (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles interactions between the \doxylink{class_player}{Player} and the \doxylink{class_stove_counter}{Stove\+Counter}. 
+
+This method manages different interaction scenarios, such as when both the \doxylink{class_player}{Player} and \doxylink{class_stove_counter}{Stove\+Counter} have Het\+Tea\+Objects, the \doxylink{class_player}{Player} has a Pot, or \doxylink{class_stove_counter}{Stove\+Counter} has a Pot.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The player interacting with the stove counter. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_base_counter}{Base\+Counter}}.
+
+\Hypertarget{class_stove_counter_a8523bbd4ab00c082572e88b9b14e263c}\index{StoveCounter@{StoveCounter}!Operation@{Operation}}
+\index{Operation@{Operation}!StoveCounter@{StoveCounter}}
+\doxysubsubsection{\texorpdfstring{Operation()}{Operation()}}
+{\footnotesize\ttfamily \label{class_stove_counter_a8523bbd4ab00c082572e88b9b14e263c} 
+override void Stove\+Counter.\+Operation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initiates or stops the cooking process on the \doxylink{class_stove_counter}{Stove\+Counter}. 
+
+This method checks if the \doxylink{class_stove_counter}{Stove\+Counter} has a Pot and if the food can be cooked. It toggles the cooking state and triggers the corresponding events.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The player initiating the cooking process. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_base_counter}{Base\+Counter}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Scripts/\+Counters/Stove\+Counter.\+cs\end{DoxyCompactItemize}

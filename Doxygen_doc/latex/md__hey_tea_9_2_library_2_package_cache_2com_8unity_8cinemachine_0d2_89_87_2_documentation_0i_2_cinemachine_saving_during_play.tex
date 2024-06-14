@@ -1,0 +1,11 @@
+\chapter{Saving in Play Mode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_saving_during_play}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_saving_during_play}\index{Saving in Play Mode@{Saving in Play Mode}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_saving_during_play_autotoc_md715}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_saving_during_play_autotoc_md715}%
+ It’s often most convenient to adjust camera settings while the game is playing. But normally, \doxylink{namespace_unity}{Unity} does not save your changes to the Scene when you exit Play Mode. \doxylink{namespace_cinemachine}{Cinemachine} has a special feature to preserve the tweaks you make during Play Mode. It doesn’t save structural changes, like adding or removing a behavior. With the exception of certain properties, \doxylink{namespace_cinemachine}{Cinemachine} preserves most of the settings in your Virtual Cameras when you exit Play Mode.
+
+When you exit Play Mode, \doxylink{namespace_cinemachine}{Cinemachine} scans the Scene to collect any changed properties in the Virtual Cameras. \doxylink{namespace_cinemachine}{Cinemachine} saves these changes a second or so after exiting. Use the {\bfseries{Edit \texorpdfstring{$>$}{>} Undo}} command to revert these changes.
+
+Check {\bfseries{Save During Play}} on any Virtual Camera in the \href{https://docs.unity3d.com/Manual/UsingTheInspector.html}{\texttt{ Inspector}} to enable this feature. This is a global property, not per-\/camera, so you only need to check or uncheck it once.
+
+\doxylink{namespace_cinemachine}{Cinemachine} components have the special attribute {\ttfamily \mbox{[}\doxylink{namespace_save_during_play}{Save\+During\+Play}\mbox{]}} to enable this functionality. Feel free to use it on classes within your own custom scripts too if you need it. To exclude a field in a class with the {\ttfamily \mbox{[}\doxylink{namespace_save_during_play}{Save\+During\+Play}\mbox{]}} attribute, add the {\ttfamily \mbox{[}No\+Save\+During\+Play\mbox{]}} attribute to the field. 

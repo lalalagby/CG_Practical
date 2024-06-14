@@ -1,0 +1,335 @@
+\chapter{Blend Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blend-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blend-_node}\index{Blend Node@{Blend Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blend-_node_autotoc_md2968}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blend-_node_autotoc_md2968}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blend-_node_autotoc_md2969}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blend-_node_autotoc_md2969}
+Blends the value of input {\bfseries{Blend}} onto input {\bfseries{Base}} using the blending mode defined by the {\bfseries{Mode}} parameter. The strength of the blend is defined by input {\bfseries{Opacity}}. An {\bfseries{Opacity}} value of 0 will return the input {\bfseries{Base}}, unaltered.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blend-_node_autotoc_md2970}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blend-_node_autotoc_md2970}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+Base   &Input   &Dynamic Vector   &None   &Base layer value    \\\cline{1-5}
+Blend   &Input   &Dynamic Vector   &None   &Blend layer value    \\\cline{1-5}
+Opacity   &Input   &Float   &None   &Strength of blend    \\\cline{1-5}
+Out   &Output   &Dynamic Vector   &None   &Output value   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blend-_node_autotoc_md2971}{}\doxysection{\texorpdfstring{Controls}{Controls}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blend-_node_autotoc_md2971}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endhead
+Mode   &Dropdown   &Burn, Darken, Difference, Dodge, Divide, Exclusion, Hard\+Light, Hard\+Mix, Lighten, Linear\+Burn, Linear\+Dodge, Linear\+Light, Linear\+Light\+Add\+Sub, Multiply, Negation, Overlay, Pin\+Light, Screen, Soft\+Light, Subtract, Vivid\+Light, Overwrite   &Blend mode to apply   \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blend-_node_autotoc_md2972}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_blend-_node_autotoc_md2972}
+The following example code represents one possible outcome of this node per blend mode.
+
+{\bfseries{Burn}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Blend\_Burn\_float4(float4\ Base,\ float4\ Blend,\ float\ Opacity,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ \ 1.0\ -\/\ (1.0\ -\/\ Blend)/Base;}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(Base,\ Out,\ Opacity);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Darken}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Blend\_Darken\_float4(float4\ Base,\ float4\ Blend,\ float\ Opacity,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ min(Blend,\ Base);}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(Base,\ Out,\ Opacity);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Difference}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Blend\_Difference\_float4(float4\ Base,\ float4\ Blend,\ float\ Opacity,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ abs(Blend\ -\/\ Base);}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(Base,\ Out,\ Opacity);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Dodge}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Blend\_Dodge\_float4(float4\ Base,\ float4\ Blend,\ float\ Opacity,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ Base\ /\ (1.0\ -\/\ Blend);}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(Base,\ Out,\ Opacity);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Divide}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Blend\_Divide\_float4(float4\ Base,\ float4\ Blend,\ float\ Opacity,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ Base\ /\ (Blend\ +\ 0.000000000001);}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(Base,\ Out,\ Opacity);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Exclusion}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Blend\_Exclusion\_float4(float4\ Base,\ float4\ Blend,\ float\ Opacity,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ Blend\ +\ Base\ -\/\ (2.0\ *\ Blend\ *\ Base);}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(Base,\ Out,\ Opacity);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Hard\+Light}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Blend\_HardLight\_float4(float4\ Base,\ float4\ Blend,\ float\ Opacity,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ float4\ result1\ =\ 1.0\ -\/\ 2.0\ *\ (1.0\ -\/\ Base)\ *\ (1.0\ -\/\ Blend);}
+\DoxyCodeLine{\ \ \ \ float4\ result2\ =\ 2.0\ *\ Base\ *\ Blend;}
+\DoxyCodeLine{\ \ \ \ float4\ zeroOrOne\ =\ step(Blend,\ 0.5);}
+\DoxyCodeLine{\ \ \ \ Out\ =\ result2\ *\ zeroOrOne\ +\ (1\ -\/\ zeroOrOne)\ *\ result1;}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(Base,\ Out,\ Opacity);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Hard\+Mix}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Blend\_HardMix\_float4(float4\ Base,\ float4\ Blend,\ float\ Opacity,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ step(1\ -\/\ Base,\ Blend);}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(Base,\ Out,\ Opacity);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Lighten}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Blend\_Lighten\_float4(float4\ Base,\ float4\ Blend,\ float\ Opacity,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ max(Blend,\ Base);}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(Base,\ Out,\ Opacity);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Linear\+Burn}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Blend\_LinearBurn\_float4(float4\ Base,\ float4\ Blend,\ float\ Opacity,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ Base\ +\ Blend\ -\/\ 1.0;}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(Base,\ Out,\ Opacity);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Linear\+Dodge}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Blend\_LinearDodge\_float4(float4\ Base,\ float4\ Blend,\ float\ Opacity,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ Base\ +\ Blend;}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(Base,\ Out,\ Opacity);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Linear\+Light}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Blend\_LinearLight\_float4(float4\ Base,\ float4\ Blend,\ float\ Opacity,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ Blend\ <\ 0.5\ ?\ max(Base\ +\ (2\ *\ Blend)\ -\/\ 1,\ 0)\ :\ min(Base\ +\ 2\ *\ (Blend\ -\/\ 0.5),\ 1);}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(Base,\ Out,\ Opacity);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Linear\+Light\+Add\+Sub}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Blend\_LinearLightAddSub\_float4(float4\ Base,\ float4\ Blend,\ float\ Opacity,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ Blend\ +\ 2.0\ *\ Base\ -\/\ 1.0;}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(Base,\ Out,\ Opacity);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Multiply}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Blend\_Multiply\_float4(float4\ Base,\ float4\ Blend,\ float\ Opacity,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ Base\ *\ Blend;}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(Base,\ Out,\ Opacity);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Negation}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Blend\_Negation\_float4(float4\ Base,\ float4\ Blend,\ float\ Opacity,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ 1.0\ -\/\ abs(1.0\ -\/\ Blend\ -\/\ Base);}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(Base,\ Out,\ Opacity);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Overlay}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Blend\_Overlay\_float4(float4\ Base,\ float4\ Blend,\ float\ Opacity,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ float4\ result1\ =\ 1.0\ -\/\ 2.0\ *\ (1.0\ -\/\ Base)\ *\ (1.0\ -\/\ Blend);}
+\DoxyCodeLine{\ \ \ \ float4\ result2\ =\ 2.0\ *\ Base\ *\ Blend;}
+\DoxyCodeLine{\ \ \ \ float4\ zeroOrOne\ =\ step(Base,\ 0.5);}
+\DoxyCodeLine{\ \ \ \ Out\ =\ result2\ *\ zeroOrOne\ +\ (1\ -\/\ zeroOrOne)\ *\ result1;}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(Base,\ Out,\ Opacity);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Pin\+Light}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Blend\_PinLight\_float4(float4\ Base,\ float4\ Blend,\ float\ Opacity,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ float4\ check\ =\ step\ (0.5,\ Blend);}
+\DoxyCodeLine{\ \ \ \ float4\ result1\ =\ check\ *\ max(2.0\ *\ (Base\ -\/\ 0.5),\ Blend);}
+\DoxyCodeLine{\ \ \ \ Out\ =\ result1\ +\ (1.0\ -\/\ check)\ *\ min(2.0\ *\ Base,\ Blend);}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(Base,\ Out,\ Opacity);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Screen}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Blend\_Screen\_float4(float4\ Base,\ float4\ Blend,\ float\ Opacity,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ 1.0\ -\/\ (1.0\ -\/\ Blend)\ *\ (1.0\ -\/\ Base);}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(Base,\ Out,\ Opacity);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Soft\+Light}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Blend\_SoftLight\_float4(float4\ Base,\ float4\ Blend,\ float\ Opacity,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ float4\ result1\ =\ 2.0\ *\ Base\ *\ Blend\ +\ Base\ *\ Base\ *\ (1.0\ -\/\ 2.0\ *\ Blend);}
+\DoxyCodeLine{\ \ \ \ float4\ result2\ =\ sqrt(Base)\ *\ (2.0\ *\ Blend\ -\/\ 1.0)\ +\ 2.0\ *\ Base\ *\ (1.0\ -\/\ Blend);}
+\DoxyCodeLine{\ \ \ \ float4\ zeroOrOne\ =\ step(0.5,\ Blend);}
+\DoxyCodeLine{\ \ \ \ Out\ =\ result2\ *\ zeroOrOne\ +\ (1\ -\/\ zeroOrOne)\ *\ result1;}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(Base,\ Out,\ Opacity);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Subtract}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Blend\_Subtract\_float4(float4\ Base,\ float4\ Blend,\ float\ Opacity,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ Base\ -\/\ Blend;}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(Base,\ Out,\ Opacity);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Vivid\+Light}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Blend\_VividLight\_float4(float4\ Base,\ float4\ Blend,\ float\ Opacity,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ float4\ result1\ =\ 1.0\ -\/\ (1.0\ -\/\ Blend)\ /\ (2.0\ *\ Base);}
+\DoxyCodeLine{\ \ \ \ float4\ result2\ =\ Blend\ /\ (2.0\ *\ (1.0\ -\/\ Base));}
+\DoxyCodeLine{\ \ \ \ float4\ zeroOrOne\ =\ step(0.5,\ Base);}
+\DoxyCodeLine{\ \ \ \ Out\ =\ result2\ *\ zeroOrOne\ +\ (1\ -\/\ zeroOrOne)\ *\ result1;}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(Base,\ Out,\ Opacity);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\bfseries{Overwrite}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{void\ Unity\_Blend\_Overwrite\_float4(float4\ Base,\ float4\ Blend,\ float\ Opacity,\ out\ float4\ Out)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Out\ =\ lerp(Base,\ Blend,\ Opacity);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

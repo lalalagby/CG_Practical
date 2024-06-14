@@ -1,0 +1,74 @@
+\doxysection{Unity\+Engine.\+Experimental.\+Rendering.\+XRLayout Class Reference}
+\hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_layout}{}\label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_layout}\index{UnityEngine.Experimental.Rendering.XRLayout@{UnityEngine.Experimental.Rendering.XRLayout}}
+
+
+Used by render pipelines to store information about the XR device layout.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_layout_ad825f84fd43e849a4ef65ee87ded21fb}{Add\+Camera}} (Camera camera, bool enable\+XR)
+\begin{DoxyCompactList}\small\item\em Configure the layout to render from the specified camera by generating passes from the the connected XR device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_layout_a529980c12fcd69c8b9f620e90fed547c}{Reconfigure\+Pass}} (\mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass}{XRPass}} xr\+Pass, Camera camera)
+\begin{DoxyCompactList}\small\item\em Used by render pipelines to reconfigure a pass from a camera. \end{DoxyCompactList}\item 
+List$<$(Camera, \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass}{XRPass}})$>$ \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_layout_aee6ae793c40d42107c95be485eead3ed}{Get\+Active\+Passes}} ()
+\begin{DoxyCompactList}\small\item\em Used by render pipelines to access all registered passes on this layout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Used by render pipelines to store information about the XR device layout. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_layout_ad825f84fd43e849a4ef65ee87ded21fb}\index{UnityEngine.Experimental.Rendering.XRLayout@{UnityEngine.Experimental.Rendering.XRLayout}!AddCamera@{AddCamera}}
+\index{AddCamera@{AddCamera}!UnityEngine.Experimental.Rendering.XRLayout@{UnityEngine.Experimental.Rendering.XRLayout}}
+\doxysubsubsection{\texorpdfstring{AddCamera()}{AddCamera()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_layout_ad825f84fd43e849a4ef65ee87ded21fb} 
+void Unity\+Engine.\+Experimental.\+Rendering.\+XRLayout.\+Add\+Camera (\begin{DoxyParamCaption}\item[{Camera}]{camera}{, }\item[{bool}]{enable\+XR}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Configure the layout to render from the specified camera by generating passes from the the connected XR device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & \\
+\hline
+{\em enable\+XR} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_layout_aee6ae793c40d42107c95be485eead3ed}\index{UnityEngine.Experimental.Rendering.XRLayout@{UnityEngine.Experimental.Rendering.XRLayout}!GetActivePasses@{GetActivePasses}}
+\index{GetActivePasses@{GetActivePasses}!UnityEngine.Experimental.Rendering.XRLayout@{UnityEngine.Experimental.Rendering.XRLayout}}
+\doxysubsubsection{\texorpdfstring{GetActivePasses()}{GetActivePasses()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_layout_aee6ae793c40d42107c95be485eead3ed} 
+List$<$(Camera, \mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass}{XRPass}})$>$ Unity\+Engine.\+Experimental.\+Rendering.\+XRLayout.\+Get\+Active\+Passes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Used by render pipelines to access all registered passes on this layout. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_layout_a529980c12fcd69c8b9f620e90fed547c}\index{UnityEngine.Experimental.Rendering.XRLayout@{UnityEngine.Experimental.Rendering.XRLayout}!ReconfigurePass@{ReconfigurePass}}
+\index{ReconfigurePass@{ReconfigurePass}!UnityEngine.Experimental.Rendering.XRLayout@{UnityEngine.Experimental.Rendering.XRLayout}}
+\doxysubsubsection{\texorpdfstring{ReconfigurePass()}{ReconfigurePass()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_layout_a529980c12fcd69c8b9f620e90fed547c} 
+void Unity\+Engine.\+Experimental.\+Rendering.\+XRLayout.\+Reconfigure\+Pass (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_experimental_1_1_rendering_1_1_x_r_pass}{XRPass}}}]{xr\+Pass}{, }\item[{Camera}]{camera}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Used by render pipelines to reconfigure a pass from a camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xr\+Pass} & \\
+\hline
+{\em camera} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+XR/XRLayout.\+cs\end{DoxyCompactItemize}

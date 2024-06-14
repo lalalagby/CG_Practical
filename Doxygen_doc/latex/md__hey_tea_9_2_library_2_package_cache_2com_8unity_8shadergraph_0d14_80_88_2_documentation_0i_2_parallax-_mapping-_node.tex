@@ -1,0 +1,33 @@
+\chapter{Parallax Mapping Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_parallax-_mapping-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_parallax-_mapping-_node}\index{Parallax Mapping Node@{Parallax Mapping Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_parallax-_mapping-_node_autotoc_md3580}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_parallax-_mapping-_node_autotoc_md3580}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_parallax-_mapping-_node_autotoc_md3581}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_parallax-_mapping-_node_autotoc_md3581}
+The Parallax Mapping node lets you create a parallax effect that displaces a Material\textquotesingle{}s UVs to create the illusion of depth inside a Material. This implementation uses the single step process that does not account for occlusion. For information on how the effect looks, see the \href{https://docs.unity3d.com/Manual/StandardShaderMaterialParameterHeightMap.html}{\texttt{ Height Map}} page.
+
+If you experience texture sampling errors while using this node in a graph which includes Custom Function Nodes or Sub Graphs, you can resolve them by upgrading to version 10.\+3 or later.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_parallax-_mapping-_node_autotoc_md3582}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_parallax-_mapping-_node_autotoc_md3582}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Direction}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Name   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Direction}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endhead
+{\bfseries{Heightmap}}   &Input   &Texture2D   &The Texture that specifies the depth of the displacement.    \\\cline{1-4}
+{\bfseries{Heightmap Sampler}}   &Input   &Sampler State   &The Sampler to sample {\bfseries{Heightmap}} with.    \\\cline{1-4}
+{\bfseries{Amplitude}}   &Input   &Float   &A multiplier to apply to the height of the Heightmap (in centimeters).    \\\cline{1-4}
+{\bfseries{UVs}}   &Input   &Vector2   &The UVs that the sampler uses to sample the Texture.    \\\cline{1-4}
+{\bfseries{Parallax UVs}}   &Output   &Vector2   &The UVs after adding the parallax offset.   \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_parallax-_mapping-_node_autotoc_md3583}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_parallax-_mapping-_node_autotoc_md3583}
+The following example code represents one possible outcome of this node.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float2\ \_ParallaxMapping\_ParallaxUVs\ =\ UVs.xy\ +\ ParallaxMapping(Heightmap,\ Heightmap\_Sampler,\ IN.TangentSpaceViewDirection,\ Amplitude\ *\ 0.01,\ UVs.xy);}
+
+\end{DoxyCode}
+ 

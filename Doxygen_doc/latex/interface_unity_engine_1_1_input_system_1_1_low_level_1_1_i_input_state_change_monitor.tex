@@ -1,0 +1,91 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Low\+Level.\+IInput\+State\+Change\+Monitor Interface Reference}
+\hypertarget{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_state_change_monitor}{}\label{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_state_change_monitor}\index{UnityEngine.InputSystem.LowLevel.IInputStateChangeMonitor@{UnityEngine.InputSystem.LowLevel.IInputStateChangeMonitor}}
+
+
+Interface used to monitor input state changes.  
+
+
+Inheritance diagram for Unity\+Engine.\+Input\+System.\+Low\+Level.\+IInput\+State\+Change\+Monitor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.928690cm]{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_state_change_monitor}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_state_change_monitor_a47b282ef18316c6ac0e947bfcbdeddd7}{Notify\+Control\+State\+Changed}} (\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control, double time, \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr}{Input\+Event\+Ptr}} event\+Ptr, long monitor\+Index)
+\begin{DoxyCompactList}\small\item\em Called when the state monitored by a state change monitor has been modified. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_state_change_monitor_ae8a7c1e9f0e21b57de93d69ec7db922f}{Notify\+Timer\+Expired}} (\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}} control, double time, long monitor\+Index, int timer\+Index)
+\begin{DoxyCompactList}\small\item\em Called when a timeout set on a state change monitor has expired. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface used to monitor input state changes. 
+
+Use Input\+State.\+Add\+Change\+Monitor(\+Input\+Control,\+IInput\+State\+Change\+Monitor,long,uint) to install a state change monitor receiving state change callbacks for a specific control. 
+
+\begin{DoxySeeAlso}{See also}
+Input\+State.\+Add\+Change\+Monitor(\+Input\+Control,\+IInput\+State\+Change\+Monitor,long,uint)
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_state_change_monitor_a47b282ef18316c6ac0e947bfcbdeddd7}\index{UnityEngine.InputSystem.LowLevel.IInputStateChangeMonitor@{UnityEngine.InputSystem.LowLevel.IInputStateChangeMonitor}!NotifyControlStateChanged@{NotifyControlStateChanged}}
+\index{NotifyControlStateChanged@{NotifyControlStateChanged}!UnityEngine.InputSystem.LowLevel.IInputStateChangeMonitor@{UnityEngine.InputSystem.LowLevel.IInputStateChangeMonitor}}
+\doxysubsubsection{\texorpdfstring{NotifyControlStateChanged()}{NotifyControlStateChanged()}}
+{\footnotesize\ttfamily \label{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_state_change_monitor_a47b282ef18316c6ac0e947bfcbdeddd7} 
+void Unity\+Engine.\+Input\+System.\+Low\+Level.\+IInput\+State\+Change\+Monitor.\+Notify\+Control\+State\+Changed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}}]{control}{, }\item[{double}]{time}{, }\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr}{Input\+Event\+Ptr}}}]{event\+Ptr}{, }\item[{long}]{monitor\+Index}{}\end{DoxyParamCaption})}
+
+
+
+Called when the state monitored by a state change monitor has been modified. 
+
+REVIEW\+: For v2, consider changing the signature of this to put the "{}was consumed"{} signal {\itshape outside} the event\+Ptr
+
+
+\begin{DoxyParams}{Parameters}
+{\em control} & Control that is being monitored by the state change monitor and that had its state memory changed.\\
+\hline
+{\em time} & Time on the \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_aecd74f290d3607a00f3eb34d9bf93366}{Input\+Event.\+time} timeline at which the control state change was received.\\
+\hline
+{\em event\+Ptr} & If the state change was initiated by a state event (either a \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event}{State\+Event} or \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_delta_state_event}{Delta\+State\+Event}), this is the pointer to that event. Otherwise it is pointer that is still \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr_a738151a10782979f7b419ee1b404981e}{Input\+Event\+Ptr.\+valid}, but refers a "{}dummy"{} event that is not a \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event}{State\+Event} or \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_delta_state_event}{Delta\+State\+Event}.\\
+\hline
+{\em monitor\+Index} & Index of the monitor as passed to Input\+State.\+Add\+Change\+Monitor(\+Input\+Control,\+IInput\+State\+Change\+Monitor,long,uint). \\
+\hline
+\end{DoxyParams}
+
+
+To signal that the state change has been processed by the monitor and that no other pending notifications on the same monitor instance should be sent, set the \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr_a7af1476ff2b045d0573d57619c3af9c4}{Input\+Event\+Ptr.\+handled} flag to {\ttfamily true} on {\itshape event\+Ptr} . Note, however, that aside from only silencing change monitors on the same \doxylink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_state_change_monitor}{IInput\+State\+Change\+Monitor} instance, it also only silences change monitors with the same {\ttfamily group\+Index} value as supplied to Input\+State.\+Add\+Change\+Monitor(\+Input\+Control,\+IInput\+State\+Change\+Monitor,long,uint). \Hypertarget{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_state_change_monitor_ae8a7c1e9f0e21b57de93d69ec7db922f}\index{UnityEngine.InputSystem.LowLevel.IInputStateChangeMonitor@{UnityEngine.InputSystem.LowLevel.IInputStateChangeMonitor}!NotifyTimerExpired@{NotifyTimerExpired}}
+\index{NotifyTimerExpired@{NotifyTimerExpired}!UnityEngine.InputSystem.LowLevel.IInputStateChangeMonitor@{UnityEngine.InputSystem.LowLevel.IInputStateChangeMonitor}}
+\doxysubsubsection{\texorpdfstring{NotifyTimerExpired()}{NotifyTimerExpired()}}
+{\footnotesize\ttfamily \label{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_state_change_monitor_ae8a7c1e9f0e21b57de93d69ec7db922f} 
+void Unity\+Engine.\+Input\+System.\+Low\+Level.\+IInput\+State\+Change\+Monitor.\+Notify\+Timer\+Expired (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}}]{control}{, }\item[{double}]{time}{, }\item[{long}]{monitor\+Index}{, }\item[{int}]{timer\+Index}{}\end{DoxyParamCaption})}
+
+
+
+Called when a timeout set on a state change monitor has expired. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em control} & Control on which the timeout expired.\\
+\hline
+{\em time} & Input time at which the timer expired. This is the time at which an Input\+System.\+Update is being run whose Input\+State.\+current\+Time is past the time of expiration.\\
+\hline
+{\em monitor\+Index} & Index of the monitor as given to Input\+State.\+Add\+Change\+Monitor(\+Input\+Control,\+IInput\+State\+Change\+Monitor,long,uint).\\
+\hline
+{\em timer\+Index} & Index of the timer as given to Input\+State.\+Add\+Change\+Monitor\+Timeout.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Input\+State.\+Add\+Change\+Monitor\+Timeout
+
+
+\end{DoxySeeAlso}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+State/IInput\+State\+Change\+Monitor.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,146 @@
+\chapter{Touch support}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_touch}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_touch}\index{Touch support@{Touch support}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_touch_autotoc_md1579}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_touch_autotoc_md1579}%
+
+\begin{DoxyItemize}
+\item Touch support
+\begin{DoxyItemize}
+\item \`{}\+Touchscreen\`{} Device
+\begin{DoxyItemize}
+\item Controls
+\item Using touch with Actions
+\end{DoxyItemize}
+\item \`{}\+Enhanced\+Touch.Touch\`{} Class
+\item Touch Simulation
+\item Reading all touches
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Touch support is divided into\+:
+\begin{DoxyItemize}
+\item low-\/level support implemented in the \`{}\+Touchscreen\`{} class.
+\item high-\/level support implemented in the \`{}\+Enhanced\+Touch.Touch\`{} class.
+\end{DoxyItemize}
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: You should not use \`{}\+Touchscreen\`{} for polling. If you want to read out touches similar to \href{https://docs.unity3d.com/ScriptReference/Input-touches.html}{\texttt{ {\ttfamily Unity\+Engine.\+Input.\+touches}}}, see \`{}\+Enhanced\+Touch\`{}. If you read out touch state from \`{}\+Touchscreen\`{} directly inside of the {\ttfamily Update} or {\ttfamily Fixed\+Update} methods, your app will miss changes in touch state.
+
+Touch input is supported on Android, i\+OS, Windows, and the Universal Windows Platform (UWP).
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: To test your app on i\+OS or Android in the editor with touch input from your mobile device, you can use the \doxylink{namespace_unity}{Unity} Remote as described \href{Debugging.md\#unity-remote}{\texttt{ here}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_touch_autotoc_md1580}{}\doxysection{\texorpdfstring{{\ttfamily Touchscreen} Device}{{\ttfamily Touchscreen} Device}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_touch_autotoc_md1580}
+At the lowest level, a touch screen is represented by an \href{../api/UnityEngine.InputSystem.Touchscreen.html}{\texttt{ {\ttfamily Input\+System.\+Touchscreen}}} Device which captures the touch screen\textquotesingle{}s raw state. Touch screens are based on the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_pointers}{{\ttfamily Pointer}}{0} layout.
+
+To query the touch screen that was last used or last added, use \href{../api/UnityEngine.InputSystem.Touchscreen.html\#UnityEngine_InputSystem_Touchscreen_current}{\texttt{ {\ttfamily Touchscreen.\+current}}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_touch_autotoc_md1581}{}\doxysubsection{\texorpdfstring{Controls}{Controls}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_touch_autotoc_md1581}
+Additional to the \href{Pointers.md\#controls}{\texttt{ Controls inherited from {\ttfamily Pointer}}}, touch screen Devices implement the following Controls\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Control   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Control   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+\href{../api/UnityEngine.InputSystem.Touchscreen.html\#UnityEngine_InputSystem_Touchscreen_primaryTouch}{\texttt{ {\ttfamily primary\+Touch}}}   &\href{../api/UnityEngine.InputSystem.Controls.TouchControl.html}{\texttt{ {\ttfamily Touch\+Control}}}   &A touch Control that represents the primary touch of the screen. The primary touch drives the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_pointers}{{\ttfamily Pointer}}{0} representation on the Device.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Touchscreen.html\#UnityEngine_InputSystem_Touchscreen_touches}{\texttt{ {\ttfamily touches}}}   &\href{../api/UnityEngine.InputSystem.Controls.TouchControl.html}{\texttt{ {\ttfamily Read\+Only\+Array\texorpdfstring{$<$}{<}Touch\+Control\texorpdfstring{$>$}{>}}}}   &An array of touch Controls that represents all the touches on the Device.   \\\cline{1-3}
+\end{longtabu}
+
+
+A touch screen Device consists of multiple \href{../api/UnityEngine.InputSystem.Controls.TouchControl.html}{\texttt{ {\ttfamily Touch\+Controls}}}. Each of these represents a potential finger touching the Device. The \href{../api/UnityEngine.InputSystem.Touchscreen.html\#UnityEngine_InputSystem_Touchscreen_primaryTouch}{\texttt{ {\ttfamily primary\+Touch}}} Control represents the touch which is currently driving the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_pointers}{{\ttfamily Pointer}}{0} representation, and which should be used to interact with the UI. This is usually the first finger that touches the screen.
+
+\href{../api/UnityEngine.InputSystem.Touchscreen.html\#UnityEngine_InputSystem_Touchscreen_primaryTouch}{\texttt{ {\ttfamily primary\+Touch}}} is always identical to one of the entries in the \href{../api/UnityEngine.InputSystem.Touchscreen.html\#UnityEngine_InputSystem_Touchscreen_touches}{\texttt{ {\ttfamily touches}}} array. The \href{../api/UnityEngine.InputSystem.Touchscreen.html\#UnityEngine_InputSystem_Touchscreen_touches}{\texttt{ {\ttfamily touches}}} array contains all the touches that the system can track. This array has a fixed size, regardless of how many touches are currently active. If you need an API that only represents active touches, see the higher-\/level \`{}\+Enhanced\+Touch.Touch\`{} class.
+
+Each \href{../api/UnityEngine.InputSystem.Controls.TouchControl.html}{\texttt{ {\ttfamily Touch\+Control}}} on the Device, including \href{../api/UnityEngine.InputSystem.Touchscreen.html\#UnityEngine_InputSystem_Touchscreen_primaryTouch}{\texttt{ {\ttfamily primary\+Touch}}}, is made up of the following child Controls\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Control   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Control   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+\href{../api/UnityEngine.InputSystem.Controls.TouchControl.html\#UnityEngine_InputSystem_Controls_TouchControl_position}{\texttt{ {\ttfamily position}}}   &\href{../api/UnityEngine.InputSystem.Controls.Vector2Control.html}{\texttt{ {\ttfamily Vector2\+Control}}}   &Absolute position on the touch surface.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Controls.TouchControl.html\#UnityEngine_InputSystem_Controls_TouchControl_delta}{\texttt{ {\ttfamily delta}}}   &\href{../api/UnityEngine.InputSystem.Controls.Vector2Control.html}{\texttt{ {\ttfamily Vector2\+Control}}}   &The difference in {\ttfamily position} since the last frame.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Controls.TouchControl.html\#UnityEngine_InputSystem_Controls_TouchControl_startPosition}{\texttt{ {\ttfamily start\+Position}}}   &\href{../api/UnityEngine.InputSystem.Controls.Vector2Control.html}{\texttt{ {\ttfamily Vector2\+Control}}}   &The {\ttfamily position} where the finger first touched the surface.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Controls.TouchControl.html\#UnityEngine_InputSystem_Controls_TouchControl_startTime}{\texttt{ {\ttfamily start\+Time}}}   &\href{../api/UnityEngine.InputSystem.Controls.IntegerControl.html}{\texttt{ {\ttfamily Double\+Control}}}   &The time when the finger first touched the surface.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Controls.TouchControl.html\#UnityEngine_InputSystem_Controls_TouchControl_press}{\texttt{ {\ttfamily press}}}   &\href{../api/UnityEngine.InputSystem.Controls.ButtonControl.html}{\texttt{ {\ttfamily Button\+Control}}}   &Whether the finger is pressed down.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Controls.TouchControl.html\#UnityEngine_InputSystem_Controls_TouchControl_pressure}{\texttt{ {\ttfamily pressure}}}   &\href{../api/UnityEngine.InputSystem.Controls.AxisControl.html}{\texttt{ {\ttfamily Axis\+Control}}}   &Normalized pressure with which the finger is currently pressed while in contact with the pointer surface.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Controls.TouchControl.html\#UnityEngine_InputSystem_Controls_TouchControl_radius}{\texttt{ {\ttfamily radius}}}   &\href{../api/UnityEngine.InputSystem.Controls.Vector2Control.html}{\texttt{ {\ttfamily Vector2\+Control}}}   &The size of the area where the finger touches the surface.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Controls.TouchControl.html\#UnityEngine_InputSystem_Controls_TouchControl_touchId}{\texttt{ {\ttfamily touch\+Id}}}   &\href{../api/UnityEngine.InputSystem.Controls.IntegerControl.html}{\texttt{ {\ttfamily Integer\+Control}}}   &The ID of the touch. This allows you to distinguish individual touches.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Controls.TouchControl.html\#UnityEngine_InputSystem_Controls_TouchControl_phase}{\texttt{ {\ttfamily phase}}}   &\href{../api/UnityEngine.InputSystem.Controls.TouchPhaseControl.html}{\texttt{ {\ttfamily Touch\+Phase\+Control}}}   &A Control that reports the current \href{../api/UnityEngine.InputSystem.TouchPhase.html}{\texttt{ {\ttfamily Touch\+Phase}}} of the touch.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Controls.TouchControl.html\#UnityEngine_InputSystem_Controls_TouchControl_tap}{\texttt{ {\ttfamily tap}}}   &\href{../api/UnityEngine.InputSystem.Controls.ButtonControl.html}{\texttt{ {\ttfamily Button\+Control}}}   &A button Control that reports whether the OS recognizes a tap gesture from this touch.    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Controls.TouchControl.html\#UnityEngine_InputSystem_Controls_TouchControl_tapCount}{\texttt{ {\ttfamily tap\+Count}}}   &\href{../api/UnityEngine.InputSystem.Controls.ButtonControl.html}{\texttt{ {\ttfamily Integer\+Control}}}   &Reports the number of consecutive \href{../api/UnityEngine.InputSystem.Controls.TouchControl.html\#UnityEngine_InputSystem_Controls_TouchControl_tap}{\texttt{ {\ttfamily tap}}} reports from the OS. You can use this to detect double-\/ and multi-\/tap gestures.   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_touch_autotoc_md1582}{}\doxysubsection{\texorpdfstring{Using touch with Actions}{Using touch with Actions}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_touch_autotoc_md1582}
+You can use touch input with Actions, like any other \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_pointers}{{\ttfamily Pointer}}{0} Device. To do this, \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings}{bind}{0} to the \href{Pointers.md\#controls}{\texttt{ pointer Controls}}, like {\ttfamily \texorpdfstring{$<$}{<}Pointer\texorpdfstring{$>$}{>}/press} or {\ttfamily \texorpdfstring{$<$}{<}Pointer\texorpdfstring{$>$}{>}/delta}. This gets input from the primary touch, and any other non-\/touch pointer Devices.
+
+However, if you want to get input from multiple touches in your Action, you can bind to individual touches by using Bindings like {\ttfamily \texorpdfstring{$<$}{<}Touchscreen\texorpdfstring{$>$}{>}/touch3/press}. Alternatively, use a wildcard Binding to bind one Action to all touches\+: {\ttfamily \texorpdfstring{$<$}{<}Touchscreen\texorpdfstring{$>$}{>}/touch\texorpdfstring{$\ast$}{*}/press}.
+
+If you bind a single Action to input from multiple touches, you should set the Action type to \href{Actions.md\#pass-through}{\texttt{ pass-\/through}} so the Action gets callbacks for each touch, instead of just one.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_touch_autotoc_md1583}{}\doxysection{\texorpdfstring{{\ttfamily Enhanced\+Touch.\+Touch} Class}{{\ttfamily Enhanced\+Touch.\+Touch} Class}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_touch_autotoc_md1583}
+The \href{../api/UnityEngine.InputSystem.EnhancedTouch.Touch.html}{\texttt{ {\ttfamily Enhanced\+Touch.\+Touch}}} class provides a polling API for touches similar to \href{https://docs.unity3d.com/ScriptReference/Input-touches.html}{\texttt{ {\ttfamily Unity\+Engine.\+Input.\+touches}}}. You can use it to query touches on a frame-\/by-\/frame basis.
+
+Because the API comes with a certain overhead due to having to record touches as they happen, you must explicitly enable it. To do this, call \href{../api/UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport.html\#UnityEngine_InputSystem_EnhancedTouch_EnhancedTouchSupport_Enable}{\texttt{ {\ttfamily Enhanced\+Touch\+Support.\+Enable()}}}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{using\ UnityEngine.InputSystem.EnhancedTouch;}
+\DoxyCodeLine{//\ ...}
+\DoxyCodeLine{//\ Can\ be\ called\ from\ MonoBehaviour.Awake(),\ for\ example.\ Also\ from\ any}
+\DoxyCodeLine{//\ RuntimeInitializeOnLoadMethod\ code.}
+\DoxyCodeLine{EnhancedTouchSupport.Enable();}
+
+\end{DoxyCode}
+
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: \href{../api/UnityEngine.InputSystem.Touchscreen.html}{\texttt{ {\ttfamily Touchscreen}}} does not require \href{../api/UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport.html}{\texttt{ {\ttfamily Enhanced\+Touch\+Support}}} to be enabled. You only need to call \href{../api/UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport.html\#UnityEngine_InputSystem_EnhancedTouch_EnhancedTouchSupport_Enable}{\texttt{ {\ttfamily Enhanced\+Touch\+Support.\+Enable()}}} if you want to use the \href{../api/UnityEngine.InputSystem.EnhancedTouch.Touch.html}{\texttt{ {\ttfamily Enhanced\+Touch.\+Touch}}} API.
+
+The \href{../api/UnityEngine.InputSystem.EnhancedTouch.Touch.html}{\texttt{ {\ttfamily Enhanced\+Touch.\+Touch}}} API is designed to provide access to touch information along two dimensions\+:
+
+
+\begin{DoxyEnumerate}
+\item By finger\+: Each finger is defined as the Nth contact source on a \href{../api/UnityEngine.InputSystem.Touchscreen.html}{\texttt{ {\ttfamily Touchscreen}}}. You can use \href{../api/UnityEngine.InputSystem.EnhancedTouch.Touch.html\#UnityEngine_InputSystem_EnhancedTouch_Touch_activeFingers}{\texttt{ Touch.\+active\+Fingers}} to get an array of all currently active fingers.
+\item By touch\+: Each touch is a single finger contact with at least a beginning point (\href{../api/UnityEngine.InputSystem.TouchPhase.html}{\texttt{ {\ttfamily Pointer\+Phase.\+Began}}}) and an endpoint (\href{../api/UnityEngine.InputSystem.TouchPhase.html}{\texttt{ {\ttfamily Pointer\+Phase.\+Ended}}} or \href{../api/UnityEngine.InputSystem.TouchPhase.html}{\texttt{ {\ttfamily Pointer\+Phase.\+Cancelled}}}). Between those two points, an arbitrary number of \href{../api/UnityEngine.InputSystem.TouchPhase.html}{\texttt{ {\ttfamily Pointer\+Phase.\+Moved}}} and/or \href{../api/UnityEngine.InputSystem.TouchPhase.html}{\texttt{ {\ttfamily Pointer\+Phase.\+Stationary}}} records exist. All records in a touch have the same \href{../api/UnityEngine.InputSystem.Controls.TouchControl.html\#UnityEngine_InputSystem_Controls_TouchControl_touchId}{\texttt{ {\ttfamily touch\+Id}}}. You can use \href{../api/UnityEngine.InputSystem.EnhancedTouch.Touch.html\#UnityEngine_InputSystem_EnhancedTouch_Touch_activeTouches}{\texttt{ Touch.\+active\+Touches}} to get an array of all currently active touches. This lets you track how a specific touch moves over the screen, which is useful if you want to implement recognition of specific gestures.
+\end{DoxyEnumerate}
+
+See \href{../api/UnityEngine.InputSystem.EnhancedTouch.Touch.html}{\texttt{ {\ttfamily Enhanced\+Touch.\+Touch} API documentation}} for more details.
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: The \href{../api/UnityEngine.InputSystem.EnhancedTouch.Touch.html}{\texttt{ {\ttfamily Touch}}} and \href{../api/UnityEngine.InputSystem.EnhancedTouch.Finger.html}{\texttt{ {\ttfamily Finger}}} APIs don\textquotesingle{}t generate GC garbage. The bulk of the data is stored in unmanaged memory that is indexed by wrapper structs. All arrays are pre-\/allocated.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_touch_autotoc_md1584}{}\doxysection{\texorpdfstring{Touch Simulation}{Touch Simulation}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_touch_autotoc_md1584}
+Touch input can be simulated from input on other kinds of \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_pointers}{Pointer}{0} devices such as \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_mouse}{Mouse}{0} and \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_pen}{Pen}{0} devices. To enable this, you can either add the \href{../api/UnityEngine.InputSystem.EnhancedTouch.TouchSimulation.html}{\texttt{ {\ttfamily Touch\+Simulation}}} {\ttfamily Mono\+Behaviour} to a {\ttfamily Game\+Object} in your scene or simply call \href{../api/UnityEngine.InputSystem.EnhancedTouch.TouchSimulation.html\#UnityEngine_InputSystem_EnhancedTouch_TouchSimulation_Enable}{\texttt{ {\ttfamily Touch\+Simulation.\+Enable}}} somewhere in your startup code.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ OnEnable()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ TouchSimulation.Enable();}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+In the editor, you can also enable touch simulation by toggling "{}\+Simulate Touch Input From Mouse or Pen"{} on in the "{}\+Options"{} dropdown of the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_debugging}{Input Debugger}{0}.
+
+\href{../api/UnityEngine.InputSystem.EnhancedTouch.TouchSimulation.html}{\texttt{ {\ttfamily Touch\+Simulation}}} will add a \href{../api/UnityEngine.InputSystem.Touchscreen.html}{\texttt{ {\ttfamily Touchscreen}}} device and automatically mirror input on any \href{../api/UnityEngine.InputSystem.Pointer.html}{\texttt{ {\ttfamily Pointer}}} device to the virtual touchscreen device.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_touch_autotoc_md1585}{}\doxysection{\texorpdfstring{Reading all touches}{Reading all touches}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_touch_autotoc_md1585}
+To get all current touches from the touchscreen, use \href{../api/UnityEngine.InputSystem.EnhancedTouch.Touch.html\#UnityEngine_InputSystem_EnhancedTouch_Touch_activeTouches}{\texttt{ {\ttfamily Enhanced\+Touch.\+Touch.\+active\+Touches}}}, as in this example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#}}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }Touch\ =\ \mbox{\hyperlink{namespace_unity_engine}{UnityEngine}}.\mbox{\hyperlink{namespace_unity_engine_1_1_input_system}{InputSystem}}.\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_enhanced_touch}{EnhancedTouch}}.\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_enhanced_touch_1_1_touch}{Touch}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Update()}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ touch\ \textcolor{keywordflow}{in}\ Touch.activeTouches)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}\{touch.touchId\}:\ \{touch.screenPosition\},\{touch.phase\}"{}});}
+\DoxyCodeLine{\ \ \ \}}
+
+\end{DoxyCode}
+
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: You must first enable enhanced touch support by calling \href{../api/UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport.html\#UnityEngine_InputSystem_EnhancedTouch_EnhancedTouchSupport_Enable}{\texttt{ {\ttfamily Input\+System.\+Enhanced\+Touch.\+Enable()}}}.
+
+You can also use the lower-\/level \href{../api/UnityEngine.InputSystem.Touchscreen.html\#UnityEngine_InputSystem_Touchscreen_touches}{\texttt{ {\ttfamily Touchscreen.\+current.\+touches}}} API. 

@@ -1,0 +1,286 @@
+\chapter{Controls}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls}\index{Controls@{Controls}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1297}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1297}%
+
+\begin{DoxyItemize}
+\item Hierarchies
+\item Types
+\item Usages
+\item Paths
+\item State
+\item Actuation
+\item Noisy Controls
+\item Synthetic Controls
+\item Performance Optimization
+\end{DoxyItemize}
+
+An Input Control represents a source of values. These values can be of any structured or primitive type. The only requirement is that the type is \href{https://docs.microsoft.com/en-us/dotnet/framework/interop/blittable-and-non-blittable-types}{\texttt{ blittable}}.
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: Controls are for input only. Output and configuration items on Input Devices are not represented as Controls.
+
+Each Control is identified by a name (\href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_name}{\texttt{ {\ttfamily Input\+Control.\+name}}}) and can optionally have a display name (\href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_displayName}{\texttt{ {\ttfamily Input\+Control.\+display\+Name}}}) that differs from the Control name. For example, the right-\/hand face button closest to the touchpad on a Play\+Station Dual\+Shock 4 controller has the control name "{}button\+West"{} and the display name "{}\+Square"{}.
+
+Additionally, a Control might have one or more aliases which provide alternative names for the Control. You can access the aliases for a specific Control through its \href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_aliases}{\texttt{ {\ttfamily Input\+Control.\+aliases}}} property.
+
+Finally, a Control might also have a short display name which can be accessed through the \href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_shortDisplayName}{\texttt{ {\ttfamily Input\+Control.\+short\+Display\+Name}}} property. For example, the short display name for the left mouse button is "{}\+LMB"{}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1298}{}\doxysection{\texorpdfstring{Control hierarchies}{Control hierarchies}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1298}
+Controls can form hierarchies. The root of a Control hierarchy is always a \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_devices}{Device}{0}.
+
+The setup of hierarchies is exclusively controlled through \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_layouts}{layouts}{0}.
+
+You can access the parent of a Control using \href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_parent}{\texttt{ {\ttfamily Input\+Control.\+parent}}}, and its children using \href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_children}{\texttt{ {\ttfamily Input\+Control.\+children}}}. To access the flattened hierarchy of all Controls on a Device, use \href{../api/UnityEngine.InputSystem.InputDevice.html\#UnityEngine_InputSystem_InputDevice_allControls}{\texttt{ {\ttfamily Input\+Device.\+all\+Controls}}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1299}{}\doxysection{\texorpdfstring{Control types}{Control types}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1299}
+All controls are based on the \href{../api/UnityEngine.InputSystem.InputControl.html}{\texttt{ {\ttfamily Input\+Control}}} base class. Most concrete implementations are based on \href{../api/UnityEngine.InputSystem.InputControl-1.html}{\texttt{ {\ttfamily Input\+Control\texorpdfstring{$<$}{<}TValue\texorpdfstring{$>$}{>}}}}.
+
+The Input \doxylink{namespace_system}{System} provides the following types of controls out of the box\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Control Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Example    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Control Type   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Example    }\\\cline{1-3}
+\endhead
+\href{../api/UnityEngine.InputSystem.Controls.AxisControl.html}{\texttt{ {\ttfamily Axis\+Control}}}   &A 1D floating-\/point axis.   &\href{../api/UnityEngine.InputSystem.Controls.Vector2Control.html\#UnityEngine_InputSystem_Controls_Vector2Control_x}{\texttt{ {\ttfamily Gamepad.\+left\+Stick.\+x}}}    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Controls.ButtonControl.html}{\texttt{ {\ttfamily Button\+Control}}}   &A button expressed as a floating-\/point value. Whether the button can have a value other than 0 or 1 depends on the underlying representation. For example, gamepad trigger buttons can have values other than 0 and 1, but gamepad face buttons generally can\textquotesingle{}t.   &\href{../api/UnityEngine.InputSystem.Mouse.html\#UnityEngine_InputSystem_Mouse_leftButton}{\texttt{ {\ttfamily Mouse.\+left\+Button}}}    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Controls.KeyControl.html}{\texttt{ {\ttfamily Key\+Control}}}   &A specialized button that represents a key on a \href{../api/UnityEngine.InputSystem.Keyboard.html}{\texttt{ {\ttfamily Keyboard}}}. Keys have an associated \href{../api/UnityEngine.InputSystem.Controls.KeyControl.html\#UnityEngine_InputSystem_Controls_KeyControl_keyCode}{\texttt{ {\ttfamily key\+Code}}} and, unlike other types of Controls, change their display name in accordance to the currently active system-\/wide keyboard layout. See the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_keyboard}{Keyboard}{0} documentation for details.   &\href{../api/UnityEngine.InputSystem.Keyboard.html\#UnityEngine_InputSystem_Keyboard_aKey}{\texttt{ {\ttfamily Keyboard.\+a\+Key}}}    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Controls.Vector2Control.html}{\texttt{ {\ttfamily Vector2\+Control}}}   &A 2D floating-\/point vector.   &\href{../api/UnityEngine.InputSystem.Pointer.html\#UnityEngine_InputSystem_Pointer_position}{\texttt{ {\ttfamily Pointer.\+position}}}    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Controls.Vector3Control.html}{\texttt{ {\ttfamily Vector3\+Control}}}   &A 3D floating-\/point vector.   &\href{../api/UnityEngine.InputSystem.Accelerometer.html\#UnityEngine_InputSystem_Accelerometer_acceleration}{\texttt{ {\ttfamily Accelerometer.\+acceleration}}}    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Controls.QuaternionControl.html}{\texttt{ {\ttfamily Quaternion\+Control}}}   &A 3D rotation.   &\href{../api/UnityEngine.InputSystem.AttitudeSensor.html\#UnityEngine_InputSystem_AttitudeSensor_attitude}{\texttt{ {\ttfamily Attitude\+Sensor.\+attitude}}}    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Controls.IntegerControl.html}{\texttt{ {\ttfamily Integer\+Control}}}   &An integer value.   &\href{../api/UnityEngine.InputSystem.Controls.TouchControl.html\#UnityEngine_InputSystem_Controls_TouchControl_touchId}{\texttt{ {\ttfamily Touchscreen.\+primary\+Touch.\+touch\+Id}}}    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Controls.StickControl.html}{\texttt{ {\ttfamily Stick\+Control}}}   &A 2D stick control like the thumbsticks on gamepads or the stick control of a joystick.   &\href{../api/UnityEngine.InputSystem.Gamepad.html\#UnityEngine_InputSystem_Gamepad_rightStick}{\texttt{ {\ttfamily Gamepad.\+right\+Stick}}}    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Controls.DpadControl.html}{\texttt{ {\ttfamily Dpad\+Control}}}   &A 4-\/way button control like the D-\/pad on gamepads or hatswitches on joysticks.   &\href{../api/UnityEngine.InputSystem.Gamepad.html\#UnityEngine_InputSystem_Gamepad_dpad}{\texttt{ {\ttfamily Gamepad.\+dpad}}}    \\\cline{1-3}
+\href{../api/UnityEngine.InputSystem.Controls.TouchControl.html}{\texttt{ {\ttfamily Touch\+Control}}}   &A control that represents all the properties of a touch on a \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_touch}{touch screen}{0}.   &\href{../api/UnityEngine.InputSystem.Touchscreen.html\#UnityEngine_InputSystem_Touchscreen_primaryTouch}{\texttt{ {\ttfamily Touchscreen.\+primary\+Touch}}}   \\\cline{1-3}
+\end{longtabu}
+
+
+You can browse the set of all registered control layouts in the \href{Debugging.md\#debugging-layouts}{\texttt{ input debugger}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1300}{}\doxysection{\texorpdfstring{Control usages}{Control usages}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1300}
+A Control can have one or more associated usages. A usage is a string that denotes the Control\textquotesingle{}s intended use. An example of a Control usage is {\ttfamily Submit}, which labels a Control that is commonly used to confirm a selection in the UI. On a gamepad, this usage is commonly found on the {\ttfamily button\+South} Control.
+
+You can access a Control\textquotesingle{}s usages using the \href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_usages}{\texttt{ {\ttfamily Input\+Control.\+usages}}} property.
+
+Usages can be arbitrary strings. However, a certain set of usages is very commonly used and comes predefined in the API in the form of the \href{../api/UnityEngine.InputSystem.CommonUsages.html}{\texttt{ {\ttfamily Common\+Usages}}} static class. Check out the \href{../api/UnityEngine.InputSystem.CommonUsages.html}{\texttt{ {\ttfamily Common\+Usages} scripting API page}} for an overview.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1301}{}\doxysection{\texorpdfstring{Control paths}{Control paths}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1301}
+\texorpdfstring{$>$}{>}Example\+: {\ttfamily \texorpdfstring{$<$}{<}Gamepad\texorpdfstring{$>$}{>}/left\+Stick/x} means "{}\+X Control on left stick of gamepad"{}.
+
+The Input \doxylink{namespace_system}{System} can look up Controls using textual paths. \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_action_bindings}{Bindings}{0} on Input Actions rely on this feature to identify the Control(s) they read input from. However, you can also use them for lookup directly on Controls and Devices, or to let the Input \doxylink{namespace_system}{System} search for Controls among all devices using \href{../api/UnityEngine.InputSystem.InputSystem.html\#UnityEngine_InputSystem_InputSystem_FindControls_System_String_}{\texttt{ {\ttfamily Input\+System.\+Find\+Controls}}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ gamepad\ =\ Gamepad.all[0];}
+\DoxyCodeLine{var\ leftStickX\ =\ gamepad[\textcolor{stringliteral}{"{}leftStick/x"{}}];}
+\DoxyCodeLine{var\ submitButton\ =\ gamepad[\textcolor{stringliteral}{"{}\{Submit\}"{}}];}
+\DoxyCodeLine{var\ allSubmitButtons\ =\ InputSystem.FindControls(\textcolor{stringliteral}{"{}*/\{Submit\}"{}});}
+
+\end{DoxyCode}
+
+
+Control paths resemble file system paths. Each path consists of one or more components separated by a forward slash\+: \begin{DoxyVerb}component/component...
+\end{DoxyVerb}
+ Each component uses a similar syntax made up of multiple fields. Each field is optional, but at least one field must be present. All fields are case-\/insensitive. \begin{DoxyVerb}<layoutName>{usageName}controlName#(displayName)
+\end{DoxyVerb}
+ The following table explains the use of each field\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Field   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Example    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Field   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Example    }\\\cline{1-3}
+\endhead
+{\ttfamily \texorpdfstring{$<$}{<}layout\+Name\texorpdfstring{$>$}{>}}   &Requires the Control at the current level to be based on the given layout. The actual layout of the Control may be the same or a layout {\itshape based} on the given layout.   &{\ttfamily \texorpdfstring{$<$}{<}Gamepad\texorpdfstring{$>$}{>}/button\+South}    \\\cline{1-3}
+{\ttfamily \{usage\+Name\}}   &Works differently for Controls and Devices.~\newline
+~\newline
+When used on a Device (the first component of a path), it requires the device to have the given usage. See \href{Devices.md\#device-usages}{\texttt{ Device usages}} for more details.~\newline
+~\newline
+For looking up a Control, the usage field is currently restricted to the path component immediately following the Device (the second component in the path). It finds the Control on the Device that has the given usage. The Control can be anywhere in the Control hierarchy of the Device.   &Device\+:~\newline
+~\newline
+{\ttfamily \texorpdfstring{$<$}{<}XRController\texorpdfstring{$>$}{>}\{Left\+Hand\}/trigger}~\newline
+~\newline
+Control\+:~\newline
+~\newline
+{\ttfamily \texorpdfstring{$<$}{<}Gamepad\texorpdfstring{$>$}{>}/\{Submit\}}    \\\cline{1-3}
+{\ttfamily control\+Name}   &Requires the Control at the current level to have the given name. Takes both "{}proper"{} names (\href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_name}{\texttt{ {\ttfamily Input\+Control.\+name}}}) and aliases (\href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_aliases}{\texttt{ {\ttfamily Input\+Control.\+aliases}}}) into account.~\newline
+~\newline
+This field can also be a wildcard ({\ttfamily \texorpdfstring{$\ast$}{*}}) to match any name.   &{\ttfamily My\+Gamepad/button\+South}~\newline
+~\newline
+{\ttfamily \texorpdfstring{$\ast$}{*}/\{Primary\+Action\}} (match {\ttfamily Primary\+Action} usage on Devices with any name)    \\\cline{1-3}
+{\ttfamily \#(display\+Name)}   &Requires the Control at the current level to have the given display name (i.\+e. \href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_displayName}{\texttt{ {\ttfamily Input\+Control.\+display\+Name}}}). The display name may contain whitespace and symbols.   &{\ttfamily \texorpdfstring{$<$}{<}Keyboard\texorpdfstring{$>$}{>}/\#(a)} (matches the key that generates the "{}a"{} character, if any, according to the current keyboard layout).~\newline
+~\newline
+{\ttfamily \texorpdfstring{$<$}{<}Gamepad\texorpdfstring{$>$}{>}/\#(Cross)}   \\\cline{1-3}
+\end{longtabu}
+
+
+You can access the literal path of a given control via its \href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_path}{\texttt{ {\ttfamily Input\+Control.\+path}}} property.
+
+If needed, you can manually parse a control path into its components using the \href{../api/UnityEngine.InputSystem.InputControlPath.html\#UnityEngine_InputSystem_InputControlPath_Parse_System_String_}{\texttt{ {\ttfamily Input\+Control\+Path.\+Parse(path)}}} API.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ parsed\ =\ InputControlPath.Parse(\textcolor{stringliteral}{"{}<XRController>\{LeftHand\}/trigger"{}}).ToArray();}
+\DoxyCodeLine{}
+\DoxyCodeLine{Debug.Log(parsed.Length);\ \textcolor{comment}{//\ Prints\ 2.}}
+\DoxyCodeLine{Debug.Log(parsed[0].layout);\ \textcolor{comment}{//\ Prints\ "{}XRController"{}.}}
+\DoxyCodeLine{Debug.Log(parsed[0].name);\ \textcolor{comment}{//\ Prints\ an\ empty\ string.}}
+\DoxyCodeLine{Debug.Log(parsed[0].usages.First());\ \textcolor{comment}{//\ Prints\ "{}LeftHand"{}.}}
+\DoxyCodeLine{Debug.Log(parsed[1].layout);\ \textcolor{comment}{//\ Prints\ null.}}
+\DoxyCodeLine{Debug.Log(parsed[1].name);\ \textcolor{comment}{//\ Prints\ "{}trigger"{}.}}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1302}{}\doxysection{\texorpdfstring{Control state}{Control state}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1302}
+Each Control is connected to a block of memory that is considered the Control\textquotesingle{}s "{}state"{}. You can query the size, format, and location of this block of memory from a Control through the \href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_stateBlock}{\texttt{ {\ttfamily Input\+Control.\+state\+Block}}} property.
+
+The state of Controls is stored in unmanaged memory that the Input \doxylink{namespace_system}{System} handles internally. All Devices added to the system share one block of unmanaged memory that contains the state of all the Controls on the Devices.
+
+A Control\textquotesingle{}s state might not be stored in the natural format for that Control. For example, the system often represents buttons as bitfields, and axis controls as 8-\/bit or 16-\/bit integer values. This format is determined by the combination of platform, hardware, and drivers. Each Control knows the format of its storage and how to translate the values as needed. The Input \doxylink{namespace_system}{System} uses \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_layouts}{layouts}{0} to understand this representation.
+
+You can access the current state of a Control through its \href{../api/UnityEngine.InputSystem.InputControl-1.html\#UnityEngine_InputSystem_InputControl_1_ReadValue}{\texttt{ {\ttfamily Read\+Value}}} method.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Gamepad.current.leftStick.x.ReadValue();}
+
+\end{DoxyCode}
+
+
+Each type of Control has a specific type of values that it returns, regardless of how many different types of formats it supports for its state. You can access this value type through the \href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_valueType}{\texttt{ {\ttfamily Input\+Control.\+value\+Type}}} property.
+
+Reading a value from a Control might apply one or more value Processors. See documentation on \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_processors}{Processors}{0} for more information.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1303}{}\doxysubsubsection{\texorpdfstring{Recording state history}{Recording state history}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1303}
+You might want to access the history of value changes on a Control (for example, in order to compute exit velocity on a touch release).
+
+To record state changes over time, you can use \href{../api/UnityEngine.InputSystem.LowLevel.InputStateHistory.html}{\texttt{ {\ttfamily Input\+State\+History}}} or \href{../api/UnityEngine.InputSystem.LowLevel.InputStateHistory-1.html}{\texttt{ {\ttfamily Input\+State\+History\texorpdfstring{$<$}{<}TValue\texorpdfstring{$>$}{>}}}}. The latter restricts Controls to those of a specific value type, which in turn simplifies some of the API.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ history\ that\ records\ Vector2\ control\ value\ changes.}}
+\DoxyCodeLine{\textcolor{comment}{//\ NOTE:\ You\ can\ also\ pass\ controls\ directly\ or\ use\ paths\ that\ match\ multiple}}
+\DoxyCodeLine{\textcolor{comment}{//\ \ \ \ \ \ \ controls\ (e.g.\ "{}<Gamepad>/<Button>"{}).}}
+\DoxyCodeLine{\textcolor{comment}{//\ NOTE:\ The\ unconstrained\ InputStateHistory\ class\ can\ record\ changes\ on\ controls}}
+\DoxyCodeLine{\textcolor{comment}{//\ \ \ \ \ \ \ \ of\ different\ value\ types.}}
+\DoxyCodeLine{var\ history\ =\ \textcolor{keyword}{new}\ InputStateHistory<Vector2>(\textcolor{stringliteral}{"{}<Touchscreen>/primaryTouch/position"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ To\ start\ recording\ state\ changes\ of\ the\ controls\ to\ which\ the\ history}}
+\DoxyCodeLine{\textcolor{comment}{//\ is\ attached,\ call\ StartRecording.}}
+\DoxyCodeLine{history.StartRecording();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ To\ stop\ recording\ state\ changes,\ call\ StopRecording.}}
+\DoxyCodeLine{history.StopRecording();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Recorded\ history\ can\ be\ accessed\ like\ an\ array.}}
+\DoxyCodeLine{\textcolor{keywordflow}{for}\ (var\ i\ =\ 0;\ i\ <\ history.Count;\ ++i)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Each\ recorded\ value\ provides\ information\ about\ which\ control\ changed}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ value\ (in\ cases\ state\ from\ multiple\ controls\ is\ recorded\ concurrently}}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ by\ the\ same\ InputStateHistory)\ and\ when\ it\ did\ so.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ var\ time\ =\ history[i].time;}
+\DoxyCodeLine{\ \ \ \ var\ control\ =\ history[i].control;}
+\DoxyCodeLine{\ \ \ \ var\ value\ =\ history[i].ReadValue();}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Recorded\ history\ can\ also\ be\ iterated\ over.}}
+\DoxyCodeLine{\textcolor{keywordflow}{foreach}\ (var\ record\ \textcolor{keywordflow}{in}\ history)}
+\DoxyCodeLine{\ \ \ \ Debug.Log(record.ReadValue());}
+\DoxyCodeLine{Debug.Log(\textcolor{keywordtype}{string}.Join(\textcolor{stringliteral}{"{},\(\backslash\)n"{}},\ history));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ You\ can\ also\ record\ state\ changes\ manually,\ which\ allows}}
+\DoxyCodeLine{\textcolor{comment}{//\ storing\ arbitrary\ histories\ in\ InputStateHistory.}}
+\DoxyCodeLine{\textcolor{comment}{//\ NOTE:\ This\ records\ a\ value\ change\ that\ didn't\ actually\ happen\ on\ the\ control.}}
+\DoxyCodeLine{history.RecordStateChange(Touchscreen.current.primaryTouch.position,}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{new}\ Vector2(0.123f,\ 0.234f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ State\ histories\ allocate\ unmanaged\ memory\ and\ need\ to\ be\ disposed.}}
+\DoxyCodeLine{history.Dispose();}
+
+\end{DoxyCode}
+
+
+For example, if you want to have the last 100 samples of the left stick on the gamepad available, you can use this code\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{var\ history\ =\ \textcolor{keyword}{new}\ InputStateHistory<Vector2>(Gamepad.current.leftStick);}
+\DoxyCodeLine{history.historyDepth\ =\ 100;}
+\DoxyCodeLine{history.StartRecording();}
+
+\end{DoxyCode}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1304}{}\doxysection{\texorpdfstring{Control actuation}{Control actuation}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1304}
+A Control is considered actuated when it has moved away from its default state in such a way that it affects the actual value of the Control. You can query whether a Control is currently actuated using \href{../api/UnityEngine.InputSystem.InputControlExtensions.html\#UnityEngine_InputSystem_InputControlExtensions_IsActuated_UnityEngine_InputSystem_InputControl_System_Single_}{\texttt{ {\ttfamily Is\+Actuated}}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Check\ if\ leftStick\ is\ currently\ actuated.}}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (Gamepad.current.leftStick.IsActuated())}
+\DoxyCodeLine{\ \ \ \ Debug.Log(\textcolor{stringliteral}{"{}Left\ Stick\ is\ actuated"{}});}
+
+\end{DoxyCode}
+
+
+It can be useful to determine not just whether a Control is actuated at all, but also the amount by which it is actuated (that is, its magnitude). For example, for a \href{../api/UnityEngine.InputSystem.Controls.Vector2Control.html}{\texttt{ {\ttfamily Vector2\+Control}}} this would be the length of the vector, whereas for a button it is the raw, absolute floating-\/point value.
+
+In general, the current magnitude of a Control is always \texorpdfstring{$>$}{>}= 0. However, a Control might not have a meaningful magnitude, in which case it returns -\/1. Any negative value should be considered an invalid magnitude.
+
+You can query the current amount of actuation using \href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_EvaluateMagnitude}{\texttt{ {\ttfamily Evaluate\+Magnitude}}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Check\ if\ left\ stick\ is\ actuated\ more\ than\ a\ quarter\ of\ its\ motion\ range.}}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (Gamepad.current.leftStick.EvaluateMagnitude()\ >\ 0.25f)}
+\DoxyCodeLine{\ \ \ \ Debug.Log(\textcolor{stringliteral}{"{}Left\ Stick\ actuated\ past\ 25\%"{}});}
+
+\end{DoxyCode}
+
+
+There are two mechanisms that most notably make use of Control actuation\+:
+
+
+\begin{DoxyItemize}
+\item \href{ActionBindings.md\#interactive-rebinding}{\texttt{ Interactive rebinding}} ({\ttfamily Input\+Action\+Rebinding\+Exceptions.\+Rebind\+Operation}) uses it to select between multiple suitable Controls to find the one that is actuated the most.
+\item \href{ActionBindings.md\#conflicting-inputs}{\texttt{ Conflict resolution}} between multiple Controls that are bound to the same action uses it to decide which Control gets to drive the action.
+\end{DoxyItemize}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1305}{}\doxysection{\texorpdfstring{Noisy Controls}{Noisy Controls}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1305}
+The Input \doxylink{namespace_system}{System} can label a Control as "{}noisy"{}. You can query this using the \href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_noisy}{\texttt{ {\ttfamily Input\+Control.\+noisy}}} property.
+
+Noisy Controls are those that can change value without any actual or intentional user interaction required. A good example of this is a gravity sensor in a cellphone. Even if the cellphone is perfectly still, there are usually fluctuations in gravity readings. Another example are orientation readings from an HMD.
+
+If a Control is marked as noisy, it means that\+:
+
+
+\begin{DoxyEnumerate}
+\item The Control is not considered for \href{ActionBindings.md\#interactive-rebinding}{\texttt{ interactive rebinding}}. \href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.html}{\texttt{ {\ttfamily Input\+Action\+Rebinding\+Exceptions.\+Rebinding\+Operation}}} ignores the Control by default (you can bypass this using \href{../api/UnityEngine.InputSystem.InputActionRebindingExtensions.RebindingOperation.html\#UnityEngine_InputSystem_InputActionRebindingExtensions_RebindingOperation_WithoutIgnoringNoisyControls}{\texttt{ {\ttfamily Without\+Ignoring\+Noisy\+Controls}}}).
+\item If enabled in the Project Settings, the system performs additional event filtering, then calls \href{../api/UnityEngine.InputSystem.InputDevice.html\#UnityEngine_InputSystem_InputDevice_MakeCurrent}{\texttt{ {\ttfamily Input\+Device.\+Make\+Current}}}. If an input event for a Device contains no state change on a Control that is not marked noisy, then the Device will not be made current based on the event. This avoids, for example, a plugged in PS4 controller constantly making itself the current gamepad (\href{../api/UnityEngine.InputSystem.Gamepad.html\#UnityEngine_InputSystem_Gamepad_current}{\texttt{ {\ttfamily Gamepad.\+current}}}) due to its sensors constantly feeding data into the system.
+\item When the application loses focus and Devices are \href{Devices.md\#device-resets}{\texttt{ reset}} as a result, the state of noisy Controls will be preserved as is. This ensures that sensor readinds will remain at their last value rather than being reset to default values.
+\end{DoxyEnumerate}
+
+\texorpdfstring{$>$}{>}{\bfseries{Note}}\+: If any Control on a Device is noisy, the Device itself is flagged as noisy.
+
+Parallel to the \href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_currentStatePtr}{\texttt{ {\ttfamily input state}}} and the \href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_defaultStatePtr}{\texttt{ {\ttfamily default state}}} that the Input \doxylink{namespace_system}{System} keeps for all Devices currently present, it also maintains a \href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_noiseMaskPtr}{\texttt{ {\ttfamily noise mask}}} in which only bits for state that is {\bfseries{not}} noise are set. This can be used to very efficiently mask out noise in input.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1306}{}\doxysection{\texorpdfstring{Synthetic Controls}{Synthetic Controls}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1306}
+A synthetic Control is a Control that doesn\textquotesingle{}t correspond to an actual physical control on a device (for example the {\ttfamily left}, {\ttfamily right}, {\ttfamily up}, and {\ttfamily down} child Controls on a \href{../api/UnityEngine.InputSystem.Controls.StickControl.html}{\texttt{ {\ttfamily Stick\+Control}}}). These Controls synthesize input from other, actual physical Controls and present it in a different way (in this example, they allow you to treat the individual directions of a stick as buttons).
+
+Whether a given Control is synthetic is indicated by its \href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_synthetic}{\texttt{ {\ttfamily Input\+Control.\+synthetic}}} property.
+
+The system considers synthetic Controls for \href{ActionBindings.md\#interactive-rebinding}{\texttt{ interactive rebinding}} but always favors non-\/synthetic Controls. If both a synthetic and a non-\/synthetic Control that are a potential match exist, the non-\/synthetic Control wins by default. This makes it possible to interactively bind to {\ttfamily \texorpdfstring{$<$}{<}Gamepad\texorpdfstring{$>$}{>}/left\+Stick/left}, for example, but also makes it possible to bind to {\ttfamily \texorpdfstring{$<$}{<}Gamepad\texorpdfstring{$>$}{>}/left\+Stick\+Press} without getting interference from the synthetic buttons on the stick.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1307}{}\doxysection{\texorpdfstring{Performance Optimization}{Performance Optimization}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1307}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1308}{}\doxysubsection{\texorpdfstring{Avoiding defensive copies}{Avoiding defensive copies}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1308}
+Use \href{../api/UnityEngine.InputSystem.InputControl-1.html\#UnityEngine_InputSystem_InputControl_1_value}{\texttt{ {\ttfamily Input\+Control\texorpdfstring{$<$}{<}T\texorpdfstring{$>$}{>}.value}}} instead of \href{../api/UnityEngine.InputSystem.InputControl-1.html\#UnityEngine_InputSystem_InputControl_1_ReadValue}{\texttt{ {\ttfamily Input\+Control\texorpdfstring{$<$}{<}T\texorpdfstring{$>$}{>}.Read\+Value}}} to avoid creating a copy of the control state on every call, as the former returns the value as {\ttfamily ref readonly} while the latter always makes a copy. Note that this optimization only applies if the call site assigns the return value to a variable that has been declared \textquotesingle{}ref readonly\textquotesingle{}. Otherwise a copy will be made as before. Additionally, be aware of defensive copies that can be allocated by the compiler when it is unable to determine that it can safely use the readonly reference i.\+e. if it can\textquotesingle{}t determine that the reference won\textquotesingle{}t be changed, it will create a defensive copy for you. For more details, see \href{https://learn.microsoft.com/en-us/dotnet/csharp/write-safe-efficient-code\#use-ref-readonly-return-statements}{\texttt{ https\+://learn.\+microsoft.\+com/en-\/us/dotnet/csharp/write-\/safe-\/efficient-\/code\#use-\/ref-\/readonly-\/return-\/statements}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1309}{}\doxysubsection{\texorpdfstring{Control Value Caching}{Control Value Caching}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1309}
+When the \textquotesingle{}USE\+\_\+\+READ\+\_\+\+VALUE\+\_\+\+CACHING\textquotesingle{} internal feature flag is set, the Input \doxylink{namespace_system}{System} will switch to an optimized path for reading control values. This path efficiently marks controls as \textquotesingle{}stale\textquotesingle{} when they have been actuated and subsequent calls to \href{../api/UnityEngine.InputSystem.InputControl-1.html\#UnityEngine_InputSystem_InputControl_1_ReadValue}{\texttt{ {\ttfamily Input\+Control\texorpdfstring{$<$}{<}T\texorpdfstring{$>$}{>}.Read\+Value}}} will only apply control processing when absolutely necessary. Control processing in this case can mean any hard-\/coded processing that might exist on the control, such as with \href{../api/UnityEngine.InputSystem.Controls.AxisControl.html}{\texttt{ {\ttfamily Axis\+Control}}} which has built-\/in inversion, normalisation, scaling etc, or any processors that have been applied to the controls\textquotesingle{} \href{Processors.md\#processors-on-controls}{\texttt{ processor stack}}. This can have a significant positive impact on performance, especially when using complex composite input actions with many composite parts, such as a movement input action that could be bound to W, A, S, and D on the keyboard, two gamepad sticks and a DPad.
+
+This feature is not enabled by default as it can result in the following minor behavioural changes\+:
+\begin{DoxyItemize}
+\item Some control processors use global state. Without cached value optimizations, it is possible to read the control value, change the global state, read the control value again, and get a new value due to the fact that the control processor runs on every call. With cached value optimizations, reading the control value will only ever return a new value if the physical control has been actuated. Changing the global state of a control processor will have no effect otherwise.
+\item Writing to device state using low-\/level APIs like \href{../api/UnityEngine.InputSystem.InputControl-1.html\#UnityEngine_InputSystem_InputControl_1_WriteValueIntoState__0_System_Void__}{\texttt{ {\ttfamily Input\+Control\texorpdfstring{$<$}{<}T\texorpdfstring{$>$}{>}.Write\+Value\+Into\+State}}} does not set the stale flag and subsequent calls to \href{../api/UnityEngine.InputSystem.InputControl-1.html\#UnityEngine_InputSystem_InputControl_1_value}{\texttt{ {\ttfamily Input\+Control\texorpdfstring{$<$}{<}T\texorpdfstring{$>$}{>}.value}}} will not reflect those changes.
+\item After changing properties on \href{../api/UnityEngine.InputSystem.Controls.AxisControl.html}{\texttt{ {\ttfamily Axis\+Control}}} the \href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_ApplyParameterChanges}{\texttt{ {\ttfamily Apply\+Parameter\+Changes}}} has to be called to invalidate cached value.
+\end{DoxyItemize}
+
+Processors that need to run on every read can set their respective caching policy to Evaluate\+On\+Every\+Read. That will disable caching on controls that are using such processor.
+
+If there are any non-\/obvious inconsistencies, \textquotesingle{}PARANOID\+\_\+\+READ\+\_\+\+VALUE\+\_\+\+CACHING\+\_\+\+CHECKS\textquotesingle{} internal feature flag can be enabled to compare cached and uncached value on every read and log an error if they don\textquotesingle{}t match.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1310}{}\doxysubsection{\texorpdfstring{Optimized control read value}{Optimized control read value}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_controls_autotoc_md1310}
+When the \textquotesingle{}USE\+\_\+\+OPTIMIZED\+\_\+\+CONTROLS\textquotesingle{} internal feature flag is set, the Input \doxylink{namespace_system}{System} will use faster way to use state memory for some controls instances.
+
+Most controls are flexible with regards to memory representation, like \href{../api/UnityEngine.InputSystem.Controls.AxisControl.html}{\texttt{ {\ttfamily Axis\+Control}}} can be one bit, multiple bits, a float, etc, or in \href{../api/UnityEngine.InputSystem.Controls.Vector2Control.html}{\texttt{ {\ttfamily Vector2\+Control}}} where x and y can have different memory representation. Yet for most controls there are common memory representation patterns, for example \href{../api/UnityEngine.InputSystem.Controls.AxisControl.html}{\texttt{ {\ttfamily Axis\+Control}}} are floats or single bytes, or some \href{../api/UnityEngine.InputSystem.Controls.Vector2Control.html}{\texttt{ {\ttfamily Vector2\+Control}}} are two consequitive floats in memory. If a control is matching a common representation we can bypass reading children control and cast memory directly to the common representation. For example if \href{../api/UnityEngine.InputSystem.Controls.Vector2Control.html}{\texttt{ {\ttfamily Vector2\+Control}}} is two consequitive floats in memory we can bypass reading {\ttfamily x} and {\ttfamily y} separately and just cast whole state memory to {\ttfamily Vector2}, this only works if {\ttfamily x} and {\ttfamily y} don\textquotesingle{}t need any processing applied to them.
+
+Optimized controls compute a potential memory representation in \href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_CalculateOptimizedControlDataType}{\texttt{ {\ttfamily Input\+Control.\+Calculate\+Optimized\+Control\+Data\+Type()}}}, store it \href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_optimizedControlDataType}{\texttt{ {\ttfamily Input\+Control.\+optimized\+Control\+Data\+Type}}} and then inside \href{../api/UnityEngine.InputSystem.InputControl-1.html\#UnityEngine_InputSystem_InputControl_1_ReadUnprocessedValueFromState_}{\texttt{ {\ttfamily Read\+Unprocessed\+Value\+From\+State}}} used it to decide to cast memory directly instead of reading every children control on it\textquotesingle{}s own to reconstruct the controls state.
+
+\href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_ApplyParameterChanges}{\texttt{ {\ttfamily Input\+Control.\+Apply\+Parameter\+Changes()}}} should be called after changes to ensure \href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_optimizedControlDataType}{\texttt{ {\ttfamily Input\+Control.\+optimized\+Control\+Data\+Type}}} is updated to the correct value when configuration changes after \href{../api/UnityEngine.InputSystem.InputControl.html\#UnityEngine_InputSystem_InputControl_FinishSetup_}{\texttt{ {\ttfamily Input\+Control.\+Finish\+Setup()}}} was called, like value of \href{../api/UnityEngine.InputSystem.Controls.AxisControl.html\#UnityEngine_InputSystem_Controls_AxisControl_invert}{\texttt{ {\ttfamily Axis\+Control.\+invert}}} flips or other cases. 

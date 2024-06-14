@@ -1,0 +1,455 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Volume\+Parameter\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_volume_parameter}{}\label{class_unity_engine_1_1_rendering_1_1_volume_parameter}\index{UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}}
+
+
+The base class for all parameters types stored in a \doxylink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component}.  
+
+
+Inheritance diagram for Unity\+Engine.\+Rendering.\+Volume\+Parameter\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.971831cm]{class_unity_engine_1_1_rendering_1_1_volume_parameter}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter_a960ddb883899b152767111551fc4d6c0}{Get\+Value$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em Casts and gets the typed value of this parameter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter_ac9929a552b941984c4c70ab430c74af3}{Set\+Value}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}} parameter)
+\begin{DoxyCompactList}\small\item\em Sets the value of this parameter to the value in {\itshape parameter} . \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter_ab725b93650d8b4910b4bb561b6742d9d}{Release}} ()
+\begin{DoxyCompactList}\small\item\em Override this method to free all allocated resources. \end{DoxyCompactList}\item 
+object \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter_a5afb056a7139e9be25739bc539d36237}{Clone}} ()
+\begin{DoxyCompactList}\small\item\em Clones the current instance of the \doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter} \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_parameter_a92f6b1ad6be72319ee5cdf1c23c0eb9d}\label{class_unity_engine_1_1_rendering_1_1_volume_parameter_a92f6b1ad6be72319ee5cdf1c23c0eb9d} 
+{\bfseries Volume\+Parameter} ()
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter_a92f6b1ad6be72319ee5cdf1c23c0eb9d}{Volume\+Parameter$<$\+T$>$} instance. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter_a7fb7a96afde5ba8df6cd91ba40a1a8a3}{Interp}} (T from, T to, float t)
+\begin{DoxyCompactList}\small\item\em Interpolates two values using a factor {\itshape t} . \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter_a36e6eea7134f2fc4c2c496af572d796f}{Override}} (T x)
+\begin{DoxyCompactList}\small\item\em Sets the value for this parameter and sets its override state to {\ttfamily true}. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter_a2a0d39d37bf80a3024f9ae40e4f031ed}{Set\+Value}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}} parameter)
+\begin{DoxyCompactList}\small\item\em Sets the value of this parameter to the value in {\itshape parameter} . \end{DoxyCompactList}\item 
+override int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter_af0aa6d7275c061a7057c96b087844c0d}{Get\+Hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Returns a hash code for the current object. \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter_a9b7dc00ddd5b81128eec913667a7f266}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Returns a string that represents the current object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter_a63347e0444b4a5fa41f9e8a26deacb42}{Equals}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}}$<$ T $>$ other)
+\begin{DoxyCompactList}\small\item\em Checks if this parameter is equal to another. \end{DoxyCompactList}\item 
+override bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter_a7490bd8328450805a847604d2b7f5d6b}{Equals}} (object obj)
+\begin{DoxyCompactList}\small\item\em Determines whether two object instances are equal. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_parameter_a194f34819e11f3ff462984d07f3677bc}\label{class_unity_engine_1_1_rendering_1_1_volume_parameter_a194f34819e11f3ff462984d07f3677bc} 
+override object {\bfseries Clone} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter_a7df1877fd759c7dcbe65900135f00773}{Is\+Object\+Parameter}} (Type type)
+\begin{DoxyCompactList}\small\item\em Checks if a given type is an Object\+Parameter$<$\+T$>$. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter_a698995b141522f43b5c7619ba506f042}{operator==}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}}$<$ T $>$ lhs, T rhs)
+\begin{DoxyCompactList}\small\item\em Compares the value in a parameter with another value of the same type. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter_a86274610816d3a1d2d2f769dbf6746ca}{operator!=}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}}$<$ T $>$ lhs, T rhs)
+\begin{DoxyCompactList}\small\item\em Compares the value store in a parameter with another value of the same type. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter_a132358e63fabf64c461ac0097989da1d}{operator T}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}}$<$ T $>$ prop)
+\begin{DoxyCompactList}\small\item\em Explicitly downcast a \doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter_a92f6b1ad6be72319ee5cdf1c23c0eb9d}{Volume\+Parameter$<$\+T$>$} to a value of type {\itshape T} . \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_parameter_a6da60707ce31dc41842aa71a4d3ff317}\label{class_unity_engine_1_1_rendering_1_1_volume_parameter_a6da60707ce31dc41842aa71a4d3ff317} 
+const string {\bfseries k\+\_\+\+Debugger\+Display} = "{}\{m\+\_\+\+Value\} (\{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter_a3332a8817ed94c580948e819a52ea7ed}{m\+\_\+\+Override\+State}}\})"{}
+\begin{DoxyCompactList}\small\item\em A beautified string for debugger output. This is set on a {\ttfamily Debugger\+Display} on every parameter types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter_a7581fc4d660a2bb17c4427413ff2f147}{Volume\+Parameter}} (T \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter_a639af72d9e66c5e46fe08b43c0e5f8d6}{value}}, bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter_ac34edb743c75c1d597d6155bd087f0da}{override\+State}})
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter_a92f6b1ad6be72319ee5cdf1c23c0eb9d}{Volume\+Parameter$<$\+T$>$} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter_a3332a8817ed94c580948e819a52ea7ed}{m\+\_\+\+Override\+State}}
+\begin{DoxyCompactList}\small\item\em The current override state for this parameter. The \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} system considers overriden parameters for blending, and ignores non-\/overriden ones. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_parameter_a299543212ff5976e2fefd64b2345afa9}\label{class_unity_engine_1_1_rendering_1_1_volume_parameter_a299543212ff5976e2fefd64b2345afa9} 
+T {\bfseries m\+\_\+\+Value}
+\begin{DoxyCompactList}\small\item\em The value stored and serialized by this parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter_ac34edb743c75c1d597d6155bd087f0da}{override\+State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The current override state for this parameter. The \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} system considers overriden parameters for blending, and ignores non-\/overriden ones. \end{DoxyCompactList}\item 
+virtual T \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter_a639af72d9e66c5e46fe08b43c0e5f8d6}{value}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The value that this parameter stores. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The base class for all parameters types stored in a \doxylink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component}. 
+
+A generic implementation of \doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}. Custom parameters should derive from this class and implement their own behavior.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter_a92f6b1ad6be72319ee5cdf1c23c0eb9d}{Volume\+Parameter$<$\+T$>$}
+
+
+\end{DoxySeeAlso}
+
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of value to hold in this parameter.\\
+\hline
+\end{DoxyTemplParams}
+
+
+{\itshape T}  should a serializable type. Due to limitations with the serialization system in \doxylink{namespace_unity}{Unity}, you should not use this class directly to declare parameters in a \doxylink{class_unity_engine_1_1_rendering_1_1_volume_component}{Volume\+Component}. Instead, use one of the pre-\/flatten types (like \doxylink{class_unity_engine_1_1_rendering_1_1_float_parameter}{Float\+Parameter}, or make your own by extending this class. 
+
+This sample code shows how to make a custom parameter holding a {\ttfamily float}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine_1_1_rendering}{UnityEngine.Rendering}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{[Serializable]}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{sealed}\ \textcolor{keyword}{class\ }MyFloatParameter\ :\ VolumeParameter<float>}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ MyFloatParameter(\textcolor{keywordtype}{float}\ value,\ \textcolor{keywordtype}{bool}\ overrideState\ =\ \textcolor{keyword}{false})}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ :\ base(value,\ overrideState)\ \{\ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{sealed}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Interp(\textcolor{keywordtype}{float}\ from,\ \textcolor{keywordtype}{float}\ to,\ \textcolor{keywordtype}{float}\ t)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_Value\ =\ from\ +\ (to\ -\/\ from)\ *\ t;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_parameter_a7581fc4d660a2bb17c4427413ff2f147}\index{UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}!VolumeParameter@{VolumeParameter}}
+\index{VolumeParameter@{VolumeParameter}!UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{VolumeParameter()}{VolumeParameter()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_parameter_a7581fc4d660a2bb17c4427413ff2f147} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Unity\+Engine.\+Rendering.\+Volume\+Parameter}}$<$ T $>$.\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}} (\begin{DoxyParamCaption}\item[{T}]{value}{, }\item[{bool}]{override\+State}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Creates a new \doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter_a92f6b1ad6be72319ee5cdf1c23c0eb9d}{Volume\+Parameter$<$\+T$>$} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The initial value to store in the parameter.\\
+\hline
+{\em override\+State} & The initial override state for the parameter.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_parameter_a5afb056a7139e9be25739bc539d36237}\index{UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}!Clone@{Clone}}
+\index{Clone@{Clone}!UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_parameter_a5afb056a7139e9be25739bc539d36237} 
+object \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Unity\+Engine.\+Rendering.\+Volume\+Parameter}}$<$ T $>$.Clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Clones the current instance of the \doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter} 
+
+\begin{DoxyReturn}{Returns}
+A new created instance with the same values as the current instance of \doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_parameter_a7490bd8328450805a847604d2b7f5d6b}\index{UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}!Equals@{Equals}}
+\index{Equals@{Equals}!UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_parameter_a7490bd8328450805a847604d2b7f5d6b} 
+override bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Unity\+Engine.\+Rendering.\+Volume\+Parameter}}$<$ T $>$.Equals (\begin{DoxyParamCaption}\item[{object}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Determines whether two object instances are equal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to compare with the current object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the specified object is equal to the current object, {\ttfamily false} otherwise.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_parameter_a63347e0444b4a5fa41f9e8a26deacb42}\index{UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}!Equals@{Equals}}
+\index{Equals@{Equals}!UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_parameter_a63347e0444b4a5fa41f9e8a26deacb42} 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Unity\+Engine.\+Rendering.\+Volume\+Parameter}}$<$ T $>$.Equals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}}$<$ T $>$}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if this parameter is equal to another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other parameter to check against.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if both parameters are equal, {\ttfamily false} otherwise
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_parameter_af0aa6d7275c061a7057c96b087844c0d}\index{UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}!GetHashCode@{GetHashCode}}
+\index{GetHashCode@{GetHashCode}!UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetHashCode()}{GetHashCode()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_parameter_af0aa6d7275c061a7057c96b087844c0d} 
+override int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Unity\+Engine.\+Rendering.\+Volume\+Parameter}}$<$ T $>$.Get\+Hash\+Code (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a hash code for the current object. 
+
+\begin{DoxyReturn}{Returns}
+A hash code for the current object.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_parameter_a960ddb883899b152767111551fc4d6c0}\index{UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}!GetValue$<$ T $>$@{GetValue$<$ T $>$}}
+\index{GetValue$<$ T $>$@{GetValue$<$ T $>$}!UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetValue$<$ T $>$()}{GetValue< T >()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_parameter_a960ddb883899b152767111551fc4d6c0} 
+T \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Unity\+Engine.\+Rendering.\+Volume\+Parameter}}$<$ T $>$.Get\+Value$<$ T $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Casts and gets the typed value of this parameter. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the value stored in this parameter\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+A value of type {\itshape T} .
+\end{DoxyReturn}
+
+
+This method is unsafe and does not do any type checking. \Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_parameter_a7fb7a96afde5ba8df6cd91ba40a1a8a3}\index{UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}!Interp@{Interp}}
+\index{Interp@{Interp}!UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Interp()}{Interp()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_parameter_a7fb7a96afde5ba8df6cd91ba40a1a8a3} 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Unity\+Engine.\+Rendering.\+Volume\+Parameter}}$<$ T $>$.Interp (\begin{DoxyParamCaption}\item[{T}]{from}{, }\item[{T}]{to}{, }\item[{float}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Interpolates two values using a factor {\itshape t} . 
+
+By default, this method does a "{}snap"{} interpolation, meaning it returns the value {\itshape to}  if {\itshape t}  is higher than 0, and {\itshape from}  otherwise. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The start value.\\
+\hline
+{\em to} & The end value.\\
+\hline
+{\em t} & The interpolation factor in range \mbox{[}0,1\mbox{]}.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_parameter_a7df1877fd759c7dcbe65900135f00773}\index{UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}!IsObjectParameter@{IsObjectParameter}}
+\index{IsObjectParameter@{IsObjectParameter}!UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IsObjectParameter()}{IsObjectParameter()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_parameter_a7df1877fd759c7dcbe65900135f00773} 
+static bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Unity\+Engine.\+Rendering.\+Volume\+Parameter}}$<$ T $>$.Is\+Object\+Parameter (\begin{DoxyParamCaption}\item[{Type}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Checks if a given type is an Object\+Parameter$<$\+T$>$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type to check.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if {\itshape type}  is an Object\+Parameter$<$\+T$>$, {\ttfamily false} otherwise.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_parameter_a132358e63fabf64c461ac0097989da1d}\index{UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}!operator T@{operator T}}
+\index{operator T@{operator T}!UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator T()}{operator T()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_parameter_a132358e63fabf64c461ac0097989da1d} 
+static \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Unity\+Engine.\+Rendering.\+Volume\+Parameter}}$<$ T $>$.operator T (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}}$<$ T $>$}]{prop}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [static]}}
+
+
+
+Explicitly downcast a \doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter_a92f6b1ad6be72319ee5cdf1c23c0eb9d}{Volume\+Parameter$<$\+T$>$} to a value of type {\itshape T} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prop} & The parameter to downcast.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A value of type {\itshape T} .
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_parameter_a86274610816d3a1d2d2f769dbf6746ca}\index{UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_parameter_a86274610816d3a1d2d2f769dbf6746ca} 
+static bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Unity\+Engine.\+Rendering.\+Volume\+Parameter}}$<$ T $>$.operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}}$<$ T $>$}]{lhs}{, }\item[{T}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Compares the value store in a parameter with another value of the same type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & The first value in a \doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}.\\
+\hline
+{\em rhs} & The second value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily false} if both values are equal, {\ttfamily true} otherwise
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_parameter_a698995b141522f43b5c7619ba506f042}\index{UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_parameter_a698995b141522f43b5c7619ba506f042} 
+static bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Unity\+Engine.\+Rendering.\+Volume\+Parameter}}$<$ T $>$.operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}}$<$ T $>$}]{lhs}{, }\item[{T}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Compares the value in a parameter with another value of the same type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lhs} & The first value in a \doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}.\\
+\hline
+{\em rhs} & The second value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if both values are equal, {\ttfamily false} otherwise.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_parameter_a36e6eea7134f2fc4c2c496af572d796f}\index{UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}!Override@{Override}}
+\index{Override@{Override}!UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Override()}{Override()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_parameter_a36e6eea7134f2fc4c2c496af572d796f} 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Unity\+Engine.\+Rendering.\+Volume\+Parameter}}$<$ T $>$.Override (\begin{DoxyParamCaption}\item[{T}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the value for this parameter and sets its override state to {\ttfamily true}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The value to assign to this parameter.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_parameter_ab725b93650d8b4910b4bb561b6742d9d}\index{UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}!Release@{Release}}
+\index{Release@{Release}!UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_parameter_ab725b93650d8b4910b4bb561b6742d9d} 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Unity\+Engine.\+Rendering.\+Volume\+Parameter}}$<$ T $>$.Release (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Override this method to free all allocated resources. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_texture_curve_parameter_aa4d8d96c2b5850da1f63bfcc82b79a2a}{Unity\+Engine.\+Rendering.\+Texture\+Curve\+Parameter}}.
+
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_parameter_ac9929a552b941984c4c70ab430c74af3}\index{UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}!SetValue@{SetValue}}
+\index{SetValue@{SetValue}!UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetValue()}{SetValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_parameter_ac9929a552b941984c4c70ab430c74af3} 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Unity\+Engine.\+Rendering.\+Volume\+Parameter}}$<$ T $>$.Set\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}}$<$ T $>$}]{parameter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Sets the value of this parameter to the value in {\itshape parameter} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & The \doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter} to copy the value from.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_parameter_a2a0d39d37bf80a3024f9ae40e4f031ed}\index{UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}!SetValue@{SetValue}}
+\index{SetValue@{SetValue}!UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetValue()}{SetValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_parameter_a2a0d39d37bf80a3024f9ae40e4f031ed} 
+override void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Unity\+Engine.\+Rendering.\+Volume\+Parameter}}$<$ T $>$.Set\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter}}$<$ T $>$}]{parameter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the value of this parameter to the value in {\itshape parameter} . 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & The \doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Volume\+Parameter} to copy the value from.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_parameter_a9b7dc00ddd5b81128eec913667a7f266}\index{UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}!ToString@{ToString}}
+\index{ToString@{ToString}!UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_parameter_a9b7dc00ddd5b81128eec913667a7f266} 
+override string \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Unity\+Engine.\+Rendering.\+Volume\+Parameter}}$<$ T $>$.To\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns a string that represents the current object. 
+
+\begin{DoxyReturn}{Returns}
+A string that represents the current object.
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_parameter_a3332a8817ed94c580948e819a52ea7ed}\index{UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}!m\_OverrideState@{m\_OverrideState}}
+\index{m\_OverrideState@{m\_OverrideState}!UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_OverrideState}{m\_OverrideState}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_parameter_a3332a8817ed94c580948e819a52ea7ed} 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Unity\+Engine.\+Rendering.\+Volume\+Parameter}}$<$ T $>$.m\+\_\+\+Override\+State\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The current override state for this parameter. The \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} system considers overriden parameters for blending, and ignores non-\/overriden ones. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter_ac34edb743c75c1d597d6155bd087f0da}{override\+State}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_parameter_ac34edb743c75c1d597d6155bd087f0da}\index{UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}!overrideState@{overrideState}}
+\index{overrideState@{overrideState}!UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{overrideState}{overrideState}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_parameter_ac34edb743c75c1d597d6155bd087f0da} 
+virtual bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Unity\+Engine.\+Rendering.\+Volume\+Parameter}}$<$ T $>$.override\+State\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The current override state for this parameter. The \doxylink{class_unity_engine_1_1_rendering_1_1_volume}{Volume} system considers overriden parameters for blending, and ignores non-\/overriden ones. 
+
+You can override this property to define custom behaviors when the override state changes. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_rendering_1_1_volume_parameter_a3332a8817ed94c580948e819a52ea7ed}{m\+\_\+\+Override\+State}
+
+
+\end{DoxySeeAlso}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_volume_parameter_a639af72d9e66c5e46fe08b43c0e5f8d6}\index{UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}!value@{value}}
+\index{value@{value}!UnityEngine.Rendering.VolumeParameter$<$ T $>$@{UnityEngine.Rendering.VolumeParameter$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_volume_parameter_a639af72d9e66c5e46fe08b43c0e5f8d6} 
+virtual T \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_volume_parameter}{Unity\+Engine.\+Rendering.\+Volume\+Parameter}}$<$ T $>$.value\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The value that this parameter stores. 
+
+You can override this property to define custom behaviors when the value is changed. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Volume/Volume\+Parameter.\+cs\end{DoxyCompactItemize}

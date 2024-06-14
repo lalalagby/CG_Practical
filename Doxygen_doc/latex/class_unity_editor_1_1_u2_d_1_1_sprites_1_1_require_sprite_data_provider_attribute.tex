@@ -1,0 +1,83 @@
+\doxysection{Unity\+Editor.\+U2\+D.\+Sprites.\+Require\+Sprite\+Data\+Provider\+Attribute Class Reference}
+\hypertarget{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_require_sprite_data_provider_attribute}{}\label{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_require_sprite_data_provider_attribute}\index{UnityEditor.U2D.Sprites.RequireSpriteDataProviderAttribute@{UnityEditor.U2D.Sprites.RequireSpriteDataProviderAttribute}}
+
+
+Use this attribute on a class that inherits from \doxylink{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base}{Sprite\+Editor\+Module\+Base} to indicate what data provider it needs.  
+
+
+Inheritance diagram for Unity\+Editor.\+U2\+D.\+Sprites.\+Require\+Sprite\+Data\+Provider\+Attribute\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_require_sprite_data_provider_attribute}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_require_sprite_data_provider_attribute_abc1f2c26a56cbd5e83a3bd9b1985c4bf}{Require\+Sprite\+Data\+Provider\+Attribute}} (params Type\mbox{[}$\,$\mbox{]} types)
+\begin{DoxyCompactList}\small\item\em Use the attribute to indicate the custom data provider that Sprite\+Editor\+Base\+Module needs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Use this attribute on a class that inherits from \doxylink{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_sprite_editor_module_base}{Sprite\+Editor\+Module\+Base} to indicate what data provider it needs. 
+
+When you use this attribute, Sprite Editor Window will only make the module available for selection if \doxylink{interface_unity_editor_1_1_u2_d_1_1_sprites_1_1_i_sprite_editor_data_provider_a4794967bceb0fbebd3f814853a316a52}{ISprite\+Editor\+Data\+Provider.\+Has\+Data\+Provider} returns true for all the data providers the module needs. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_editor_1_1_u2_d}{UnityEditor.U2D}};}
+\DoxyCodeLine{\textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{[RequireSpriteDataProvider(typeof(ISpriteOutlineDataProvider),\ typeof(ITextureDataProvider))]}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MySpriteEditorCustomModule\ :\ SpriteEditorModuleBase}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{string}\ moduleName}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ \{\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}MySpriteEditorCustomModule"{}};\ \}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{bool}\ ApplyRevert(\textcolor{keywordtype}{bool}\ apply)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{bool}\ CanBeActivated()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ DoMainGUI()\ \{\ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ DoToolbarGUI(Rect\ drawArea)\ \{\ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnModuleActivate()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ outlineProvider\ =\ spriteEditor.GetDataProvider<ISpriteOutlineDataProvider>();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ spriteRects\ =\ spriteEditor.GetDataProvider<ISpriteEditorDataProvider>().GetSpriteRects();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ spriteRect\ \textcolor{keywordflow}{in}\ spriteRects)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Access\ outline\ data}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(outlineProvider.GetOutlines(spriteRect.spriteID));}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnModuleDeactivate()\ \{\ \}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ DoPostGUI()\ \{\ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_require_sprite_data_provider_attribute_abc1f2c26a56cbd5e83a3bd9b1985c4bf}\index{UnityEditor.U2D.Sprites.RequireSpriteDataProviderAttribute@{UnityEditor.U2D.Sprites.RequireSpriteDataProviderAttribute}!RequireSpriteDataProviderAttribute@{RequireSpriteDataProviderAttribute}}
+\index{RequireSpriteDataProviderAttribute@{RequireSpriteDataProviderAttribute}!UnityEditor.U2D.Sprites.RequireSpriteDataProviderAttribute@{UnityEditor.U2D.Sprites.RequireSpriteDataProviderAttribute}}
+\doxysubsubsection{\texorpdfstring{RequireSpriteDataProviderAttribute()}{RequireSpriteDataProviderAttribute()}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_u2_d_1_1_sprites_1_1_require_sprite_data_provider_attribute_abc1f2c26a56cbd5e83a3bd9b1985c4bf} 
+Unity\+Editor.\+U2\+D.\+Sprites.\+Require\+Sprite\+Data\+Provider\+Attribute.\+Require\+Sprite\+Data\+Provider\+Attribute (\begin{DoxyParamCaption}\item[{params Type\mbox{[}$\,$\mbox{]}}]{types}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Use the attribute to indicate the custom data provider that Sprite\+Editor\+Base\+Module needs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em types} & Data provider type.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+2d.\+sprite@1.\+0.\+0/\+Editor/\+Sprite\+Editor\+Module/ISprite\+Editor\+Module.\+cs\end{DoxyCompactItemize}

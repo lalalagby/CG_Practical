@@ -1,0 +1,54 @@
+\doxysection{Unity\+Editor.\+Shader\+Graph.\+Unit\+Tests.\+Test\+Message\+Manager Class Reference}
+\hypertarget{class_unity_editor_1_1_shader_graph_1_1_unit_tests_1_1_test_message_manager}{}\label{class_unity_editor_1_1_shader_graph_1_1_unit_tests_1_1_test_message_manager}\index{UnityEditor.ShaderGraph.UnitTests.TestMessageManager@{UnityEditor.ShaderGraph.UnitTests.TestMessageManager}}
+Inheritance diagram for Unity\+Editor.\+Shader\+Graph.\+Unit\+Tests.\+Test\+Message\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_shader_graph_1_1_unit_tests_1_1_test_message_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_shader_graph_1_1_unit_tests_1_1_test_message_manager_a91997c30a73a3f67f8b467d4729a90c2}\label{class_unity_editor_1_1_shader_graph_1_1_unit_tests_1_1_test_message_manager_a91997c30a73a3f67f8b467d4729a90c2} 
+Dictionary$<$ object, Dictionary$<$ string, List$<$ Shader\+Message $>$ $>$ $>$ {\bfseries Messages}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager}{Unity\+Editor.\+Graphing.\+Util.\+Message\+Manager}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries node\+Messages\+Changed}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager}{Unity\+Editor.\+Graphing.\+Util.\+Message\+Manager}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Add\+Or\+Append\+Error} (object error\+Provider, string node\+Id, Shader\+Message error)
+\item 
+IEnumerable$<$ Key\+Value\+Pair$<$ string, List$<$ Shader\+Message $>$ $>$ $>$ {\bfseries Get\+Node\+Messages} ()
+\item 
+void {\bfseries Remove\+Node} (string node\+Id)
+\item 
+void {\bfseries Clear\+All\+From\+Provider} (object message\+Provider)
+\item 
+void {\bfseries Clear\+Nodes\+From\+Provider} (object message\+Provider, IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_abstract_material_node}{Abstract\+Material\+Node}} $>$ nodes)
+\item 
+void {\bfseries Clear\+All} ()
+\item 
+bool {\bfseries Any\+Error} (Func$<$ string, bool $>$ node\+Filter=null)
+\item 
+IEnumerable$<$ string $>$ {\bfseries Error\+Strings} (Func$<$ string, bool $>$ node\+Filter=null, Shader\+Compiler\+Message\+Severity severity=Shader\+Compiler\+Message\+Severity.\+Error)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager}{Unity\+Editor.\+Graphing.\+Util.\+Message\+Manager}}}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bfseries Log} (string path, Shader\+Message message, Object context, \mbox{\hyperlink{interface_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_1_1_i_error_log}{IError\+Log}} log)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager}{Unity\+Editor.\+Graphing.\+Util.\+Message\+Manager}}}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ object, Dictionary$<$ string, List$<$ Shader\+Message $>$ $>$ $>$ \mbox{\hyperlink{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_a772bee1acc5e944107361bbed8f36c94}{m\+\_\+\+Messages}}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+shadergraph@14.\+0.\+8/\+Tests/\+Editor/\+Unit\+Tests/Message\+Manager\+Tests.\+cs\end{DoxyCompactItemize}

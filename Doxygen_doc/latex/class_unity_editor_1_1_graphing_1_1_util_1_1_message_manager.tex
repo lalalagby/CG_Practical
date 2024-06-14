@@ -1,0 +1,77 @@
+\doxysection{Unity\+Editor.\+Graphing.\+Util.\+Message\+Manager Class Reference}
+\hypertarget{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager}{}\label{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager}\index{UnityEditor.Graphing.Util.MessageManager@{UnityEditor.Graphing.Util.MessageManager}}
+Inheritance diagram for Unity\+Editor.\+Graphing.\+Util.\+Message\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+interface \mbox{\hyperlink{interface_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_1_1_i_error_log}{IError\+Log}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_ad28a4200b15b0ae01555a1c96e5633a3}\label{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_ad28a4200b15b0ae01555a1c96e5633a3} 
+void {\bfseries Add\+Or\+Append\+Error} (object error\+Provider, string node\+Id, Shader\+Message error)
+\item 
+\Hypertarget{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_ac7d3df21a57987dd6ba0d4c0491a2024}\label{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_ac7d3df21a57987dd6ba0d4c0491a2024} 
+IEnumerable$<$ Key\+Value\+Pair$<$ string, List$<$ Shader\+Message $>$ $>$ $>$ {\bfseries Get\+Node\+Messages} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_af2c79f2acf1cb2cf0d9fdf8fa12a28e7}\label{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_af2c79f2acf1cb2cf0d9fdf8fa12a28e7} 
+void {\bfseries Remove\+Node} (string node\+Id)
+\item 
+\Hypertarget{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_a5366c07ca183cfac91312b47e3736d34}\label{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_a5366c07ca183cfac91312b47e3736d34} 
+void {\bfseries Clear\+All\+From\+Provider} (object message\+Provider)
+\item 
+\Hypertarget{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_afa8bd2e31cd71eb51eee388c799ff7da}\label{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_afa8bd2e31cd71eb51eee388c799ff7da} 
+void {\bfseries Clear\+Nodes\+From\+Provider} (object message\+Provider, IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_shader_graph_1_1_abstract_material_node}{Abstract\+Material\+Node}} $>$ nodes)
+\item 
+\Hypertarget{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_a03d65f74f5b4a10567a11ded81522425}\label{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_a03d65f74f5b4a10567a11ded81522425} 
+void {\bfseries Clear\+All} ()
+\item 
+\Hypertarget{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_abf80850f5e94acb05719891aa400263d}\label{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_abf80850f5e94acb05719891aa400263d} 
+bool {\bfseries Any\+Error} (Func$<$ string, bool $>$ node\+Filter=null)
+\item 
+\Hypertarget{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_a8413b183579e56c1bd834a1e884f8a64}\label{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_a8413b183579e56c1bd834a1e884f8a64} 
+IEnumerable$<$ string $>$ {\bfseries Error\+Strings} (Func$<$ string, bool $>$ node\+Filter=null, Shader\+Compiler\+Message\+Severity severity=Shader\+Compiler\+Message\+Severity.\+Error)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_adbd2796095be2d015a74eaba0158a557}\label{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_adbd2796095be2d015a74eaba0158a557} 
+static void {\bfseries Log} (string path, Shader\+Message message, Object context, \mbox{\hyperlink{interface_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_1_1_i_error_log}{IError\+Log}} log)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ object, Dictionary$<$ string, List$<$ Shader\+Message $>$ $>$ $>$ \mbox{\hyperlink{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_a772bee1acc5e944107361bbed8f36c94}{m\+\_\+\+Messages}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_a475e38bf383f5d524b198a9585245815}\label{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_a475e38bf383f5d524b198a9585245815} 
+bool {\bfseries node\+Messages\+Changed}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_a772bee1acc5e944107361bbed8f36c94}\index{UnityEditor.Graphing.Util.MessageManager@{UnityEditor.Graphing.Util.MessageManager}!m\_Messages@{m\_Messages}}
+\index{m\_Messages@{m\_Messages}!UnityEditor.Graphing.Util.MessageManager@{UnityEditor.Graphing.Util.MessageManager}}
+\doxysubsubsection{\texorpdfstring{m\_Messages}{m\_Messages}}
+{\footnotesize\ttfamily \label{class_unity_editor_1_1_graphing_1_1_util_1_1_message_manager_a772bee1acc5e944107361bbed8f36c94} 
+Dictionary$<$object, Dictionary$<$string, List$<$Shader\+Message$>$ $>$ $>$ Unity\+Editor.\+Graphing.\+Util.\+Message\+Manager.\+m\+\_\+\+Messages\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Dictionary<object,\ Dictionary<string,\ List<ShaderMessage>>>()}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+shadergraph@14.\+0.\+8/\+Editor/\+Util/Message\+Manager.\+cs\end{DoxyCompactItemize}

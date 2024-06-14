@@ -1,0 +1,36 @@
+\chapter{Cinemachine Volume Settings Extension}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_volume_settings}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_volume_settings}\index{Cinemachine Volume Settings Extension@{Cinemachine Volume Settings Extension}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_volume_settings_autotoc_md740}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_volume_settings_autotoc_md740}%
+ Use the \doxylink{namespace_cinemachine}{Cinemachine} Volume Settings \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_414e015286be387e4fe85aa25dd01df7}{extension}{0} to attach an HDRP/\+URP Volume\+Settings profile to a Virtual Camera.
+
+The \doxylink{namespace_cinemachine}{Cinemachine} Volume Settings extension holds a Volume Settings Profile asset to apply to a Virtual Camera when it is activated. If the camera is blending with another Virtual Camera, then the blend weight is applied to the Volume Settings effects also.
+
+To add a Volume Settings profile to a Virtual Camera
+
+
+\begin{DoxyEnumerate}
+\item Select your Virtual Camera in the \href{https://docs.unity3d.com/Manual/UsingTheSceneView.html}{\texttt{ Scene}} view or \href{https://docs.unity3d.com/Manual/Hierarchy.html}{\texttt{ Hierarchy}} window.
+\item In the \href{https://docs.unity3d.com/Manual/UsingTheInspector.html}{\texttt{ Inspector}}, choose {\bfseries{Add Extension \texorpdfstring{$>$}{>} Cinemachine\+Volume\+Settings}}, then configure the Profile asset to have the effects you want when this virtual camera is live.
+\end{DoxyEnumerate}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_volume_settings_autotoc_md741}{}\doxysection{\texorpdfstring{Properties\+:}{Properties\+:}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_volume_settings_autotoc_md741}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }}&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\multicolumn{2}{|l|}{\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }}&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-3}
+\endhead
+\multicolumn{2}{|l|}{{\bfseries{Profile}}   }&The Volume Settings profile to activate when this Virtual Camera is live.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Focus Tracks Target}}   }&This is obsolete, please use {\bfseries{Focus Tracking}}.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Focus Tracking}}   }&If the profile has the appropriate overrides, will set the base focus distance to be the distance from the selected target to the camera. The {\bfseries{Focus Offset}} field will then modify that distance.    \\\cline{1-3}
+&{\itshape None}   &No focus tracking    \\\cline{1-3}
+&{\itshape Look At Target}   &Focus offset is relative to the Look\+At target    \\\cline{1-3}
+&{\itshape Follow Target}   &Focus offset is relative to the Follow target    \\\cline{1-3}
+&{\itshape Custom Target}   &Focus offset is relative to the Custom target    \\\cline{1-3}
+&{\itshape Camera}   &Focus offset is relative to the camera    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Focus Target}}   }&The target to use if {\bfseries{Focus Tracks Target}} is set to {\itshape Custom Target}    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Focus Offset}}   }&Used when {\bfseries{Focus Tracking}} is not {\itshape None}. Offsets the sharpest point away from the location of the focus target.   \\\cline{1-3}
+\end{longtabu}

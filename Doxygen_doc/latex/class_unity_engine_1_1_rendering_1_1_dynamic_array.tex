@@ -1,0 +1,407 @@
+\doxysection{Unity\+Engine.\+Rendering.\+Dynamic\+Array\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_unity_engine_1_1_rendering_1_1_dynamic_array}{}\label{class_unity_engine_1_1_rendering_1_1_dynamic_array}\index{UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}}
+
+
+Generic growable array.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_dynamic_array_1_1_iterator}{Iterator}}
+\begin{DoxyCompactList}\small\item\em IEnumerator-\/like struct used to loop over this entire array. See the IEnumerator docs for more info\+: {\ttfamily IEnumerator} \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_dynamic_array_1_1_range_enumerable}{Range\+Enumerable}}
+\begin{DoxyCompactList}\small\item\em IEnumerable-\/like struct used to iterate through a subsection of this array. See the IEnumerable docs for more info\+: {\ttfamily IEnumarable} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_dynamic_array_a8f5d0a56b37670404dad001749f98876}\label{class_unity_engine_1_1_rendering_1_1_dynamic_array_a8f5d0a56b37670404dad001749f98876} 
+{\bfseries Dynamic\+Array} ()
+\begin{DoxyCompactList}\small\item\em Constructor. Defaults to a size of 32 elements. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array_afa7dd15bed9b6e7bd0d887969a48d53f}{Dynamic\+Array}} (int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array_aaf4e10f4d59770f85f9e03fadc5180a1}{size}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_dynamic_array_a6bbbb097e08d5175852e3b57bcca0514}\label{class_unity_engine_1_1_rendering_1_1_dynamic_array_a6bbbb097e08d5175852e3b57bcca0514} 
+void {\bfseries Clear} ()
+\begin{DoxyCompactList}\small\item\em Clear the array of all elements. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array_a30e416d0b1d533f6586127fd025e8837}{Contains}} (T item)
+\begin{DoxyCompactList}\small\item\em Determines whether the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array} contains a specific value. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array_a20f75fd1856845f3f01589b5a4b2459c}{Add}} (in T value)
+\begin{DoxyCompactList}\small\item\em Add an element to the array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array_ab25c826c707b3ceec56b89487f5566ae}{Add\+Range}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}}$<$ T $>$ array)
+\begin{DoxyCompactList}\small\item\em Adds the elements of the specified collection to the end of the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array_a66c121695cf11c5e5a670c26011869b3}{Remove}} (T item)
+\begin{DoxyCompactList}\small\item\em Removes the first occurrence of a specific object from the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array_afee9325836dbec84c0e211c810f17622}{Remove\+At}} (int index)
+\begin{DoxyCompactList}\small\item\em Removes the element at the specified index of the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array_aa1f425a0bec22db8b64c7c7b42783318}{Remove\+Range}} (int index, int count)
+\begin{DoxyCompactList}\small\item\em Removes a range of elements from the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array_a6273628c394ee5de170147d0aea2d4b0}{Find\+Index}} (int start\+Index, int count, Predicate$<$ T $>$ match)
+\begin{DoxyCompactList}\small\item\em Searches for an element that matches the conditions defined by the specified predicate, and returns the zero-\/based index of the first occurrence within the range of elements in the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array} that starts at the specified index and contains the specified number of elements. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array_ad5de0a2966a330c22d989408e108e1de}{Index\+Of}} (T item, int index, int count)
+\begin{DoxyCompactList}\small\item\em Searches for the specified object and returns the zero-\/based index of the first occurrence within the range of elements in the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array} that starts at the specified index and contains the specified number of elements. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array_a88b74d627cf1d448314e99314e3f7d60}{Index\+Of}} (T item, int index)
+\begin{DoxyCompactList}\small\item\em Searches for the specified object and returns the zero-\/based index of the first occurrence within the range of elements in the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array} that extends from the specified index to the last element. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array_a72205e644748ea5a1a7f8fafc327930e}{Index\+Of}} (T item)
+\begin{DoxyCompactList}\small\item\em Searches for the specified object and returns the zero-\/based index of the first occurrence within the entire \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array_a13d2758c1faec43ad92a1fd2e1b3fe74}{Resize}} (int new\+Size, bool keep\+Content=false)
+\begin{DoxyCompactList}\small\item\em Resize the Dynamic Array. This will reallocate memory if necessary and set the current size of the array to the provided size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array_a8e15fe327c01ed5ffcc5815f50bd7a47}{Reserve}} (int new\+Capacity, bool keep\+Content=false)
+\begin{DoxyCompactList}\small\item\em Sets the total number of elements the internal data structure can hold without resizing. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_dynamic_array_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array_a964f38e345d376948aa84223a6ac073c}{Get\+Enumerator}} ()
+\begin{DoxyCompactList}\small\item\em Returns an enumerator that iterates through of this array. See the IEnumerable docs for more info\+: {\ttfamily IEnumarable} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_dynamic_array_1_1_range_enumerable}{Range\+Enumerable}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array_a7d4ef45d538431d5c30de311f3058034}{Sub\+Range}} (int first, int num\+Items)
+\begin{DoxyCompactList}\small\item\em Returns an IEnumeralbe-\/\+Like object that iterates through a subsection of this array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static implicit \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array_ae4f3266792dc4c9e110de4fe1662e7df}{operator T\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}}$<$ T $>$ array)
+\begin{DoxyCompactList}\small\item\em Implicit conversion to regular array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_dynamic_array_aaf4e10f4d59770f85f9e03fadc5180a1}\label{class_unity_engine_1_1_rendering_1_1_dynamic_array_aaf4e10f4d59770f85f9e03fadc5180a1} 
+int {\bfseries size}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Number of elements in the array. \end{DoxyCompactList}\item 
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_dynamic_array_a7555446d737d7e6edff48a010bb63f6a}\label{class_unity_engine_1_1_rendering_1_1_dynamic_array_a7555446d737d7e6edff48a010bb63f6a} 
+int {\bfseries capacity}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Allocated size of the array. \end{DoxyCompactList}\item 
+ref T \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array_ac0fba4eebdd9dfdf772d5ee64744bd12}{this\mbox{[}int index\mbox{]}}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em ref access to an element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generic growable array. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the array.\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_dynamic_array_afa7dd15bed9b6e7bd0d887969a48d53f}\index{UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}!DynamicArray@{DynamicArray}}
+\index{DynamicArray@{DynamicArray}!UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{DynamicArray()}{DynamicArray()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_dynamic_array_afa7dd15bed9b6e7bd0d887969a48d53f} 
+\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Unity\+Engine.\+Rendering.\+Dynamic\+Array}}$<$ T $>$.\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}} (\begin{DoxyParamCaption}\item[{int}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Number of elements.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_dynamic_array_a20f75fd1856845f3f01589b5a4b2459c}\index{UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_dynamic_array_a20f75fd1856845f3f01589b5a4b2459c} 
+int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Unity\+Engine.\+Rendering.\+Dynamic\+Array}}$<$ T $>$.Add (\begin{DoxyParamCaption}\item[{in T}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add an element to the array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Element to add to the array.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the element.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_dynamic_array_ab25c826c707b3ceec56b89487f5566ae}\index{UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}!AddRange@{AddRange}}
+\index{AddRange@{AddRange}!UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AddRange()}{AddRange()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_dynamic_array_ab25c826c707b3ceec56b89487f5566ae} 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Unity\+Engine.\+Rendering.\+Dynamic\+Array}}$<$ T $>$.Add\+Range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}}$<$ T $>$}]{array}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds the elements of the specified collection to the end of the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & The array whose elements should be added to the end of the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}. The array itself cannot be null, but it can contain elements that are null, if type T is a reference type.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_dynamic_array_a30e416d0b1d533f6586127fd025e8837}\index{UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}!Contains@{Contains}}
+\index{Contains@{Contains}!UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Contains()}{Contains()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_dynamic_array_a30e416d0b1d533f6586127fd025e8837} 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Unity\+Engine.\+Rendering.\+Dynamic\+Array}}$<$ T $>$.Contains (\begin{DoxyParamCaption}\item[{T}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Determines whether the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array} contains a specific value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The object to locate in the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if item is found in the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}; otherwise, false.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_dynamic_array_a6273628c394ee5de170147d0aea2d4b0}\index{UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}!FindIndex@{FindIndex}}
+\index{FindIndex@{FindIndex}!UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{FindIndex()}{FindIndex()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_dynamic_array_a6273628c394ee5de170147d0aea2d4b0} 
+int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Unity\+Engine.\+Rendering.\+Dynamic\+Array}}$<$ T $>$.Find\+Index (\begin{DoxyParamCaption}\item[{int}]{start\+Index}{, }\item[{int}]{count}{, }\item[{Predicate$<$ T $>$}]{match}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Searches for an element that matches the conditions defined by the specified predicate, and returns the zero-\/based index of the first occurrence within the range of elements in the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array} that starts at the specified index and contains the specified number of elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Index} & The zero-\/based starting index of the search.\\
+\hline
+{\em count} & The number of elements in the section to search.\\
+\hline
+{\em match} & The Predicate delegate that defines the conditions of the element to search for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The zero-\/based index of the first occurrence of an element that matches the conditions defined by match, if found; otherwise, -\/1.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_dynamic_array_a964f38e345d376948aa84223a6ac073c}\index{UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}!GetEnumerator@{GetEnumerator}}
+\index{GetEnumerator@{GetEnumerator}!UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetEnumerator()}{GetEnumerator()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_dynamic_array_a964f38e345d376948aa84223a6ac073c} 
+\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_dynamic_array_1_1_iterator}{Iterator}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Unity\+Engine.\+Rendering.\+Dynamic\+Array}}$<$ T $>$.Get\+Enumerator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns an enumerator that iterates through of this array. See the IEnumerable docs for more info\+: {\ttfamily IEnumarable} 
+
+The returned struct intentionally does not explicitly implement the IEnumarable/\+IEnumerator interfaces it just follows the same function signatures. This means the duck typing used by {\ttfamily foreach} on the compiler level will pick it up as IEnumerable but at the same time avoids generating Garbage. For more info, see the C\# language specification of the {\ttfamily foreach} statement. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{struct_unity_engine_1_1_rendering_1_1_dynamic_array_1_1_iterator}{Iterator} pointing before the first element in the array.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_dynamic_array_a72205e644748ea5a1a7f8fafc327930e}\index{UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}!IndexOf@{IndexOf}}
+\index{IndexOf@{IndexOf}!UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IndexOf()}{IndexOf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_dynamic_array_a72205e644748ea5a1a7f8fafc327930e} 
+int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Unity\+Engine.\+Rendering.\+Dynamic\+Array}}$<$ T $>$.Index\+Of (\begin{DoxyParamCaption}\item[{T}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Searches for the specified object and returns the zero-\/based index of the first occurrence within the entire \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The object to locate in the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}. The value can be null for reference types.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+he zero-\/based index of the first occurrence of item within the entire \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}, if found; otherwise, -\/1.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_dynamic_array_a88b74d627cf1d448314e99314e3f7d60}\index{UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}!IndexOf@{IndexOf}}
+\index{IndexOf@{IndexOf}!UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IndexOf()}{IndexOf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_dynamic_array_a88b74d627cf1d448314e99314e3f7d60} 
+int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Unity\+Engine.\+Rendering.\+Dynamic\+Array}}$<$ T $>$.Index\+Of (\begin{DoxyParamCaption}\item[{T}]{item}{, }\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Searches for the specified object and returns the zero-\/based index of the first occurrence within the range of elements in the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array} that extends from the specified index to the last element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The object to locate in the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}. The value can be null for reference types.\\
+\hline
+{\em index} & The zero-\/based starting index of the search. 0 (zero) is valid in an empty list.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The zero-\/based index of the first occurrence of item within the range of elements in the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array} that extends from index to the last element, if found; otherwise, -\/1.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_dynamic_array_ad5de0a2966a330c22d989408e108e1de}\index{UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}!IndexOf@{IndexOf}}
+\index{IndexOf@{IndexOf}!UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IndexOf()}{IndexOf()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_dynamic_array_ad5de0a2966a330c22d989408e108e1de} 
+int \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Unity\+Engine.\+Rendering.\+Dynamic\+Array}}$<$ T $>$.Index\+Of (\begin{DoxyParamCaption}\item[{T}]{item}{, }\item[{int}]{index}{, }\item[{int}]{count}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Searches for the specified object and returns the zero-\/based index of the first occurrence within the range of elements in the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array} that starts at the specified index and contains the specified number of elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The object to locate in the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}. The value can be null for reference types.\\
+\hline
+{\em index} & The zero-\/based starting index of the search. 0 (zero) is valid in an empty list.\\
+\hline
+{\em count} & The number of elements in the section to search.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_dynamic_array_ae4f3266792dc4c9e110de4fe1662e7df}\index{UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}!operator T\mbox{[}\mbox{]}@{operator T[]}}
+\index{operator T\mbox{[}\mbox{]}@{operator T[]}!UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator T[]()}{operator T[]()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_dynamic_array_ae4f3266792dc4c9e110de4fe1662e7df} 
+static implicit \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Unity\+Engine.\+Rendering.\+Dynamic\+Array}}$<$ T $>$.operator T\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}}$<$ T $>$}]{array}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Implicit conversion to regular array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & Input \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The internal array.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_dynamic_array_a66c121695cf11c5e5a670c26011869b3}\index{UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_dynamic_array_a66c121695cf11c5e5a670c26011869b3} 
+bool \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Unity\+Engine.\+Rendering.\+Dynamic\+Array}}$<$ T $>$.Remove (\begin{DoxyParamCaption}\item[{T}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes the first occurrence of a specific object from the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The object to remove from the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}. The value can be null for reference types.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if item is successfully removed; otherwise, false. This method also returns false if item was not found in the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}.
+\end{DoxyReturn}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_dynamic_array_afee9325836dbec84c0e211c810f17622}\index{UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}!RemoveAt@{RemoveAt}}
+\index{RemoveAt@{RemoveAt}!UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{RemoveAt()}{RemoveAt()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_dynamic_array_afee9325836dbec84c0e211c810f17622} 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Unity\+Engine.\+Rendering.\+Dynamic\+Array}}$<$ T $>$.Remove\+At (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes the element at the specified index of the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The zero-\/based index of the element to remove.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_dynamic_array_aa1f425a0bec22db8b64c7c7b42783318}\index{UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}!RemoveRange@{RemoveRange}}
+\index{RemoveRange@{RemoveRange}!UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{RemoveRange()}{RemoveRange()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_dynamic_array_aa1f425a0bec22db8b64c7c7b42783318} 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Unity\+Engine.\+Rendering.\+Dynamic\+Array}}$<$ T $>$.Remove\+Range (\begin{DoxyParamCaption}\item[{int}]{index}{, }\item[{int}]{count}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes a range of elements from the \doxylink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Dynamic\+Array}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The zero-\/based starting index of the range of elements to remove.\\
+\hline
+{\em count} & The number of elements to remove.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_dynamic_array_a8e15fe327c01ed5ffcc5815f50bd7a47}\index{UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}!Reserve@{Reserve}}
+\index{Reserve@{Reserve}!UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Reserve()}{Reserve()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_dynamic_array_a8e15fe327c01ed5ffcc5815f50bd7a47} 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Unity\+Engine.\+Rendering.\+Dynamic\+Array}}$<$ T $>$.Reserve (\begin{DoxyParamCaption}\item[{int}]{new\+Capacity}{, }\item[{bool}]{keep\+Content}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the total number of elements the internal data structure can hold without resizing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Capacity} & New capacity for the array.\\
+\hline
+{\em keep\+Content} & Set to true if you want the current content of the array to be kept.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_dynamic_array_a13d2758c1faec43ad92a1fd2e1b3fe74}\index{UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}!Resize@{Resize}}
+\index{Resize@{Resize}!UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Resize()}{Resize()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_dynamic_array_a13d2758c1faec43ad92a1fd2e1b3fe74} 
+void \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Unity\+Engine.\+Rendering.\+Dynamic\+Array}}$<$ T $>$.Resize (\begin{DoxyParamCaption}\item[{int}]{new\+Size}{, }\item[{bool}]{keep\+Content}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Resize the Dynamic Array. This will reallocate memory if necessary and set the current size of the array to the provided size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Size} & New size for the array.\\
+\hline
+{\em keep\+Content} & Set to true if you want the current content of the array to be kept.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_dynamic_array_a7d4ef45d538431d5c30de311f3058034}\index{UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}!SubRange@{SubRange}}
+\index{SubRange@{SubRange}!UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SubRange()}{SubRange()}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_dynamic_array_a7d4ef45d538431d5c30de311f3058034} 
+\mbox{\hyperlink{struct_unity_engine_1_1_rendering_1_1_dynamic_array_1_1_range_enumerable}{Range\+Enumerable}} \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Unity\+Engine.\+Rendering.\+Dynamic\+Array}}$<$ T $>$.Sub\+Range (\begin{DoxyParamCaption}\item[{int}]{first}{, }\item[{int}]{num\+Items}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns an IEnumeralbe-\/\+Like object that iterates through a subsection of this array. 
+
+The returned struct intentionally does not explicitly implement the IEnumarable/\+IEnumerator interfaces it just follows the same function signatures. This means the duck typing used by {\ttfamily foreach} on the compiler level will pick it up as IEnumerable but at the same time avoids generating Garbage. For more info, see the C\# language specification of the {\ttfamily foreach} statement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & The index of the first item\\
+\hline
+{\em num\+Items} & The number of items to iterate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily \doxylink{struct_unity_engine_1_1_rendering_1_1_dynamic_array_1_1_range_enumerable}{Range\+Enumerable}} that can be used to enumerate the given range.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Range\+Iterator
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_rendering_1_1_dynamic_array_ac0fba4eebdd9dfdf772d5ee64744bd12}\index{UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}!this\mbox{[}int index\mbox{]}@{this[int index]}}
+\index{this\mbox{[}int index\mbox{]}@{this[int index]}!UnityEngine.Rendering.DynamicArray$<$ T $>$@{UnityEngine.Rendering.DynamicArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{this[int index]}{this[int index]}}
+{\footnotesize\ttfamily \label{class_unity_engine_1_1_rendering_1_1_dynamic_array_ac0fba4eebdd9dfdf772d5ee64744bd12} 
+ref T \mbox{\hyperlink{class_unity_engine_1_1_rendering_1_1_dynamic_array}{Unity\+Engine.\+Rendering.\+Dynamic\+Array}}$<$ T $>$.this\mbox{[}int index\mbox{]}\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+ref access to an element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Element index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The requested element.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+render-\/pipelines.\+core@14.\+0.\+8/\+Runtime/\+Common/Dynamic\+Array.\+cs\end{DoxyCompactItemize}

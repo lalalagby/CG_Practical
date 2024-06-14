@@ -1,0 +1,149 @@
+\chapter{Capture input with the Input Manager}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_04207b134ff1932100b4ca02aecd16606}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_04207b134ff1932100b4ca02aecd16606}\index{Capture input with the Input Manager@{Capture input with the Input Manager}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_04207b134ff1932100b4ca02aecd16606_autotoc_md5192}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_04207b134ff1932100b4ca02aecd16606_autotoc_md5192}%
+ \begin{DoxyNote}{Note}
+You must configure your Project Settings to use the Input Manager with Visual Scripting. For more information, see \href{vs-capture-player-input.md\#input-manager-prerequisites}{\texttt{ Input Manager prerequisites}}.
+\end{DoxyNote}
+To create a basic Script Graph that uses the Input Manager to capture input\+:
+
+
+\begin{DoxyEnumerate}
+\item 
+
+\href{vs-open-graph-edit.md}{\texttt{ Open}} or \href{vs-create-graph.md}{\texttt{ create}} a Script Graph attached to the Game\+Object that you want your users to move.
+
+
+\item 
+
+If there isn\textquotesingle{}t an {\bfseries{On Update}} or similar Event node in your graph\+:
+
+
+\begin{DoxyEnumerate}[label=\enumalphalphcnt*]
+
+\item 
+
+\mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0e129af79c68762283d74b648822ac987}{open-\/fuzzy-\/finder}{0}\mbox{]}
+
+
+\item 
+
+Go to {\bfseries{Events}} \texorpdfstring{$>$}{>} {\bfseries{Lifecycle}}, or enter {\bfseries{On Update}} in the search field.
+
+
+\item 
+
+Select the {\bfseries{On Update}} Event node to add it to the graph.
+
+
+\end{DoxyEnumerate}
+\item 
+
+\mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0e129af79c68762283d74b648822ac987}{open-\/fuzzy-\/finder}{0}\mbox{]}
+
+\doxysubsubsubsubsection*{TIP}
+
+
+
+If you right-\/click and the context menu appears, select {\bfseries{Add Node}} to open the fuzzy finder.
+
+ 
+\item 
+
+Go to {\bfseries{Codebase}} \texorpdfstring{$>$}{>} {\bfseries{\doxylink{namespace_unity}{Unity} Engine}} \texorpdfstring{$>$}{>} {\bfseries{Input}}, or enter {\bfseries{Get Axis}} in the search field.
+
+
+\item 
+
+Select {\bfseries{Get Axis (Axis Name)}} to add the Get Axis node to the graph.
+
+
+\item 
+
+Repeat Steps 3 through 5 to create a second {\bfseries{Get Axis (Axis Name)}} node.
+
+
+\item 
+
+On the first Get Axis node, in the {\bfseries{Axis Name}} input field, enter {\ttfamily Horizontal}.
+
+
+\item 
+
+On the second Get Axis node, in the {\bfseries{Axis Name}} input field, enter {\ttfamily Vertical}.
+
+\doxysubsubsubsubsection*{NOTE}
+
+
+
+If an Axis Name doesn\textquotesingle{}t match the name in the Input Manager\textquotesingle{}s Project Settings, Visual Scripting displays an error in the Graph Inspector. When you enter Play mode, the \doxylink{namespace_unity}{Unity} Editor also displays an error in the Console window.
+
+ 
+\item 
+
+\mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0e129af79c68762283d74b648822ac987}{open-\/fuzzy-\/finder}{0}\mbox{]}
+
+
+\item 
+
+Go to {\bfseries{Codebase}} \texorpdfstring{$>$}{>} {\bfseries{\doxylink{namespace_unity}{Unity} Engine}} \texorpdfstring{$>$}{>} {\bfseries{Transform}} or search for {\bfseries{Translate}}.
+
+
+\item 
+
+Select {\bfseries{Translate (X, Y, Z)}} to add a Translate node to the graph.
+
+
+\item 
+
+Select the {\bfseries{Result}} float output port on the {\ttfamily Horizontal} Get Axis node.
+
+
+\item 
+
+\href{vs-creating-connections.md}{\texttt{ Make a connection}} to the {\bfseries{X}} input port on the {\bfseries{Translate}} node.
+
+
+\item 
+
+Select the {\bfseries{Result}} float output port on the {\ttfamily Vertical} Get Axis node.
+
+
+\item 
+
+\href{vs-creating-connections.md}{\texttt{ Make a connection}} to the {\bfseries{Z}} input port on the {\bfseries{Translate}} node. ~\newline
+The finished graph looks similar to the following image\+:
+
+
+
+
+
+
+\item 
+
+To enter Play mode, select {\bfseries{Play}} from the \href{https://docs.unity3d.com/Manual/Toolbar.html}{\texttt{ Unity Editor\textquotesingle{}s Toolbar}}.
+
+
+\item 
+
+While in the \href{https://docs.unity3d.com/Manual/GameView.html}{\texttt{ Game view}}, press a key mapped as a {\bfseries{Negative Button}} or {\bfseries{Positive Button}} from the \href{https://docs.unity3d.com/Documentation/Manual/class-InputManager.html}{\texttt{ Input Manager\textquotesingle{}s virtual axes}}.
+
+
+\end{DoxyEnumerate}
+
+The Game\+Object moves along the X or Z axis in the Game view, based on the key pressed and the \href{https://docs.unity3d.com/Documentation/Manual/class-InputManager.html}{\texttt{ Input Manager Project Settings}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_04207b134ff1932100b4ca02aecd16606_autotoc_md5193}{}\doxysection{\texorpdfstring{Additional resources}{Additional resources}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_04207b134ff1932100b4ca02aecd16606_autotoc_md5193}
+
+\begin{DoxyItemize}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-capture-player-input}{Capture user input in an application}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0fbe94d4545502568515763862878ce37}{Capture input with the Input System package}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_01e28d77d1c2ddcce643bb97e9d282a71}{On Button Input node}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_082ffb08dc4c16bf3775203162c14b1c8}{On Keyboard Input node}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0363502f640b93f8cae99afef7198a811}{On Mouse Down node}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0271ea5fc025d525af72c9e5249216538}{On Mouse Drag node}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_026476a4595e3c6bbd99201d4e87c8469}{On Mouse Enter node}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_08b28bb7a2170a49f1fada8ad78986a40}{On Mouse Exit node}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0c42d2de1350dd7f30b2c628ab3eab7dc}{On Mouse Input node}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0f225af1829fd6f0419f4dbfa3865ecb2}{On Mouse Over node}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_07ec4fc19ef4fa8bac0155678344c87f8}{On Mouse Up As Button node}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8visualscripting_0d1_88_80_2_documentation_0i_2vs-nodes-events-on-mouse-up}{On Mouse Up node}{0} 
+\end{DoxyItemize}

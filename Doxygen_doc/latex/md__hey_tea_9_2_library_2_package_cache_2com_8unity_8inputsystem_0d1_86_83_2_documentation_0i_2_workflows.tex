@@ -1,0 +1,38 @@
+\chapter{Input System Workflows}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_workflows}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_workflows}\index{Input System Workflows@{Input System Workflows}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_workflows_autotoc_md1612}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8inputsystem_0d1_86_83_2_documentation_0i_2_workflows_autotoc_md1612}%
+ There are multiple ways to use the Input \doxylink{namespace_system}{System}, and the workflow that’s right for you depends on how quickly you want to get up and running, how flexible you want your input code to be, and whether you prefer to set things up in the \doxylink{namespace_unity}{Unity} Editor, or in code.
+
+To understand the different workflows so that you can choose between them, it’s important to first understand the \href{Concepts.html}{\texttt{ concepts and terms}} used to describe them.
+
+Each of the four main workflows described below offers different levels of flexibility and abstraction. They are listed in an order of abstraction from least to most, where each adds a layer of abstraction, and therefore flexibility, to the previous.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-2}
+\endhead
+\href{Workflow-Direct.html}{\texttt{ {\bfseries{Directly Reading Device States}}}}~\newline
+~\newline
+Your script explicitly refers to device controls and reads the values directly.~\newline
+~\newline
+Can be the fastest way to set up input for one device, but it is the least flexible workflow. \href{Workflow-Direct.html}{\texttt{ Read more}}   &    \\\cline{1-2}
+\href{Workflow-Embedded.html}{\texttt{ {\bfseries{Using Embedded Actions}}}}~\newline
+~\newline
+Your script uses the Input\+Action class directly. The actions display in your script’s inspector, and allow you to configure them in the editor. \href{Workflow-Embedded.html}{\texttt{ Read more}}   &    \\\cline{1-2}
+\href{Workflow-ActionsAsset.html}{\texttt{ {\bfseries{Using an Actions Asset}}}}~\newline
+~\newline
+Your script does not define actions directly. Instead your script references an Input Actions asset which defines your actions. The Input Actions window provides a UI to define, configure, and organize all your Actions into useful groupings. \href{Workflow-ActionsAsset.html}{\texttt{ Read more}}   &    \\\cline{1-2}
+\href{Workflow-PlayerInput.html}{\texttt{ {\bfseries{Using an Actions Asset and a Player\+Input component}}}}~\newline
+~\newline
+In addition to using an Actions Asset, the Player\+Input component provides a UI in the inspector to connect actions to event handlers in your script, removing the need for any intermediary code between the Input \doxylink{namespace_system}{System} and your Action Methods. \href{Workflow-PlayerInput.html}{\texttt{ Read more}}   &   \\\cline{1-2}
+\end{longtabu}
+
+
+\texorpdfstring{$>$}{>}\mbox{[}!\+Note\mbox{]} \texorpdfstring{$>$}{>}Because the Input \doxylink{namespace_system}{System} has multiple workflows, the code samples used throughout this documentation also vary, demonstrating techniques using various workflows. For example, some code samples may use embedded actions, and others might use an action asset. 

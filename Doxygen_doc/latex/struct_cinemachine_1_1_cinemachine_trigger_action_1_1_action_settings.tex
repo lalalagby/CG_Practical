@@ -1,0 +1,153 @@
+\doxysection{Cinemachine.\+Cinemachine\+Trigger\+Action.\+Action\+Settings Struct Reference}
+\hypertarget{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings}{}\label{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings}\index{Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}}
+
+
+Defines what action to take on trigger enter/exit.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_1_1_trigger_event}{Trigger\+Event}}
+\begin{DoxyCompactList}\small\item\em Serializable parameterless game event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371}{Mode}} \{ \newline
+\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371a90589c47f06eb971d548591f23c285af}{Custom}}
+, \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371a1efb8d5ded85408e90af7cef856abe43}{Priority\+Boost}}
+, \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371aa13367a8e2a3f3bf4f3409079e3fdf87}{Activate}}
+, \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371a109fec06829bd79d222cfc8af52aaaf1}{Deactivate}}
+, \newline
+\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371a2faec1f9f8cc7f8f40d521c4dd574f49}{Enable}}
+, \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371abcfaccebf745acfd5e75351095a5394a}{Disable}}
+ \}
+\begin{DoxyCompactList}\small\item\em What action to take. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a1b2f26f58e5a550e4f843eb4fc4b2e35}{Time\+Mode}} \{ \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a1b2f26f58e5a550e4f843eb4fc4b2e35afa58efb1328943accf4e96797d956f96}{From\+Start}}
+, \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a1b2f26f58e5a550e4f843eb4fc4b2e35a93e939401468cf4c5fad1edaa9b410d8}{From\+End}}
+, \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a1b2f26f58e5a550e4f843eb4fc4b2e35a9503d2595a9767e02b25435083e7909f}{Before\+Now}}
+, \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a1b2f26f58e5a550e4f843eb4fc4b2e35a58fea7bf1e14eed186109181e64b23fb}{After\+Now}}
+ \}
+\begin{DoxyCompactList}\small\item\em How to interpret the start time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_abe4081873612e27ed8d896b04ec2149c}{Action\+Settings}} (\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371}{Mode}} action)
+\begin{DoxyCompactList}\small\item\em Standard Constructor. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_af1c3c339015469653a8abeb15269d7ed}\label{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_af1c3c339015469653a8abeb15269d7ed} 
+void {\bfseries Invoke} ()
+\begin{DoxyCompactList}\small\item\em Invoke the action. Depending on the mode, different action will be performed. The embedded event will always be invoked, in addition to the action specified by the Mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_abd6e8fca8199bf9efaaecea63dadf4ba}\label{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_abd6e8fca8199bf9efaaecea63dadf4ba} 
+\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371}{Mode}} {\bfseries m\+\_\+\+Action}
+\begin{DoxyCompactList}\small\item\em What action to take. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a486685a96ff1b71b611321596b91d20c}\label{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a486685a96ff1b71b611321596b91d20c} 
+Unity\+Engine.\+Object {\bfseries m\+\_\+\+Target}
+\begin{DoxyCompactList}\small\item\em The target object on which to operate. If null, then the current behaviour/\+Game\+Object will be used. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a6c1e29e540d8b6da1a420a534176300f}\label{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a6c1e29e540d8b6da1a420a534176300f} 
+int {\bfseries m\+\_\+\+Boost\+Amount}
+\begin{DoxyCompactList}\small\item\em If Priority\+Boost, this amount will be added to the virtual camera\textquotesingle{}s priority. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_af41e1ef5aff68f48910e95b98e0649bb}\label{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_af41e1ef5aff68f48910e95b98e0649bb} 
+float {\bfseries m\+\_\+\+Start\+Time}
+\begin{DoxyCompactList}\small\item\em If playing a timeline, start at this time. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a6ce1ffee46ba1a9dc534dab29858b799}\label{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a6ce1ffee46ba1a9dc534dab29858b799} 
+\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a1b2f26f58e5a550e4f843eb4fc4b2e35}{Time\+Mode}} {\bfseries m\+\_\+\+Mode}
+\begin{DoxyCompactList}\small\item\em How to interpret the start time. \end{DoxyCompactList}\item 
+\Hypertarget{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a9fe231b77db156a3760a958e70cf9b43}\label{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a9fe231b77db156a3760a958e70cf9b43} 
+\mbox{\hyperlink{class_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_1_1_trigger_event}{Trigger\+Event}} {\bfseries m\+\_\+\+Event}
+\begin{DoxyCompactList}\small\item\em This event will be invoked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines what action to take on trigger enter/exit. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371}\index{Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}!Mode@{Mode}}
+\index{Mode@{Mode}!Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}}
+\doxysubsubsection{\texorpdfstring{Mode}{Mode}}
+{\footnotesize\ttfamily \label{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371} 
+enum \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371}{Cinemachine.\+Cinemachine\+Trigger\+Action.\+Action\+Settings.\+Mode}}}
+
+
+
+What action to take. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Custom@{Custom}!Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}}\index{Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}!Custom@{Custom}}}\Hypertarget{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371a90589c47f06eb971d548591f23c285af}\label{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371} 
+Custom&Use the event only. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PriorityBoost@{PriorityBoost}!Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}}\index{Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}!PriorityBoost@{PriorityBoost}}}\Hypertarget{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371a1efb8d5ded85408e90af7cef856abe43}\label{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371} 
+Priority\+Boost&Boost priority of virtual camera target. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Activate@{Activate}!Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}}\index{Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}!Activate@{Activate}}}\Hypertarget{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371aa13367a8e2a3f3bf4f3409079e3fdf87}\label{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371} 
+Activate&Activate the target Game\+Object. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Deactivate@{Deactivate}!Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}}\index{Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}!Deactivate@{Deactivate}}}\Hypertarget{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371a109fec06829bd79d222cfc8af52aaaf1}\label{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371} 
+Deactivate&Decativate target Game\+Object. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Enable@{Enable}!Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}}\index{Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}!Enable@{Enable}}}\Hypertarget{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371a2faec1f9f8cc7f8f40d521c4dd574f49}\label{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371} 
+Enable&Enable a component. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Disable@{Disable}!Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}}\index{Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}!Disable@{Disable}}}\Hypertarget{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371abcfaccebf745acfd5e75351095a5394a}\label{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371} 
+Disable&Disable a component. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a1b2f26f58e5a550e4f843eb4fc4b2e35}\index{Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}!TimeMode@{TimeMode}}
+\index{TimeMode@{TimeMode}!Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}}
+\doxysubsubsection{\texorpdfstring{TimeMode}{TimeMode}}
+{\footnotesize\ttfamily \label{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a1b2f26f58e5a550e4f843eb4fc4b2e35} 
+enum \mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a1b2f26f58e5a550e4f843eb4fc4b2e35}{Cinemachine.\+Cinemachine\+Trigger\+Action.\+Action\+Settings.\+Time\+Mode}}}
+
+
+
+How to interpret the start time. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FromStart@{FromStart}!Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}}\index{Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}!FromStart@{FromStart}}}\Hypertarget{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a1b2f26f58e5a550e4f843eb4fc4b2e35afa58efb1328943accf4e96797d956f96}\label{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a1b2f26f58e5a550e4f843eb4fc4b2e35} 
+From\+Start&Offset after the start of the timeline. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FromEnd@{FromEnd}!Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}}\index{Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}!FromEnd@{FromEnd}}}\Hypertarget{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a1b2f26f58e5a550e4f843eb4fc4b2e35a93e939401468cf4c5fad1edaa9b410d8}\label{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a1b2f26f58e5a550e4f843eb4fc4b2e35} 
+From\+End&Offset before the end of the timeline. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BeforeNow@{BeforeNow}!Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}}\index{Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}!BeforeNow@{BeforeNow}}}\Hypertarget{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a1b2f26f58e5a550e4f843eb4fc4b2e35a9503d2595a9767e02b25435083e7909f}\label{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a1b2f26f58e5a550e4f843eb4fc4b2e35} 
+Before\+Now&Offset before the current timeline time. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AfterNow@{AfterNow}!Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}}\index{Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}!AfterNow@{AfterNow}}}\Hypertarget{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a1b2f26f58e5a550e4f843eb4fc4b2e35a58fea7bf1e14eed186109181e64b23fb}\label{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a1b2f26f58e5a550e4f843eb4fc4b2e35} 
+After\+Now&Offset after the current timeline time. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_abe4081873612e27ed8d896b04ec2149c}\index{Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}!ActionSettings@{ActionSettings}}
+\index{ActionSettings@{ActionSettings}!Cinemachine.CinemachineTriggerAction.ActionSettings@{Cinemachine.CinemachineTriggerAction.ActionSettings}}
+\doxysubsubsection{\texorpdfstring{ActionSettings()}{ActionSettings()}}
+{\footnotesize\ttfamily \label{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_abe4081873612e27ed8d896b04ec2149c} 
+Cinemachine.\+Cinemachine\+Trigger\+Action.\+Action\+Settings.\+Action\+Settings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_trigger_action_1_1_action_settings_a00f93f27e40fa8954ee6049a157ca371}{Mode}}}]{action}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Standard Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & Action to set\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Helpers/Cinemachine\+Trigger\+Action.\+cs\end{DoxyCompactItemize}

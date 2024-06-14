@@ -1,0 +1,252 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Input\+Action\+Setup\+Extensions.\+Control\+Scheme\+Syntax Struct Reference}
+\hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax}{}\label{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax}\index{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax@{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax}}
+
+
+Write accessor to a control scheme.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax}{Control\+Scheme\+Syntax}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a67f9cadb1753e159ac8dffb4f91e1def}{With\+Binding\+Group}} (string binding\+Group)
+\begin{DoxyCompactList}\small\item\em Sets or overwrite the binding group for control scheme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax}{Control\+Scheme\+Syntax}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a2ae63100018bc5c92aab07c2e7e1b263}{With\+Required\+Device$<$ TDevice $>$}} ()
+\begin{DoxyCompactList}\small\item\em Adds a required device to control scheme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax}{Control\+Scheme\+Syntax}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a308867ca1882eb5c70969cae41bf8ff4}{With\+Optional\+Device$<$ TDevice $>$}} ()
+\begin{DoxyCompactList}\small\item\em Adds an optional device to control scheme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax}{Control\+Scheme\+Syntax}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a6612bfe7bf4e92498a7a4b129b67c9d2}{Or\+With\+Required\+Device$<$ TDevice $>$}} ()
+\begin{DoxyCompactList}\small\item\em Combines another required device with the previous device using boolean OR logic such that either the previous device or this device are required to be present. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax}{Control\+Scheme\+Syntax}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a3e116d61365265878b9b1731c8a2fd91}{Or\+With\+Optional\+Device$<$ TDevice $>$}} ()
+\begin{DoxyCompactList}\small\item\em Combines another optional device with the previous device using boolean OR logic such that either the previous device or this device are required to be present. If this is the last device in a chain of OR\textquotesingle{}d devices, the entire chain of devices becomes optional. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax}{Control\+Scheme\+Syntax}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a40fa6f66c8f7ec40786ceed48824b13e}{With\+Required\+Device}} (string control\+Path)
+\begin{DoxyCompactList}\small\item\em Adds a required device to control scheme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax}{Control\+Scheme\+Syntax}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a43dc013c5f6be1ad8eb1794bff67660f}{With\+Optional\+Device}} (string control\+Path)
+\begin{DoxyCompactList}\small\item\em Add an optional device to the control scheme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax}{Control\+Scheme\+Syntax}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a7e77d34bdb31e326d9642b8b83ca9425}{Or\+With\+Required\+Device}} (string control\+Path)
+\begin{DoxyCompactList}\small\item\em Adds another possible required device to the control scheme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax}{Control\+Scheme\+Syntax}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_aa7fe1915286711f879495af86a78a53e}{Or\+With\+Optional\+Device}} (string control\+Path)
+\begin{DoxyCompactList}\small\item\em Adds another possible optional device to control scheme. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_abc3d6feb2f376607e15f2f966b1c6d6b}{Done}} ()
+\begin{DoxyCompactList}\small\item\em Call this method when done building out the control scheme to return the associated instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Write accessor to a control scheme. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_abc3d6feb2f376607e15f2f966b1c6d6b}\index{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax@{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax}!Done@{Done}}
+\index{Done@{Done}!UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax@{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax}}
+\doxysubsubsection{\texorpdfstring{Done()}{Done()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_abc3d6feb2f376607e15f2f966b1c6d6b} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme}{Input\+Control\+Scheme}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Setup\+Extensions.\+Control\+Scheme\+Syntax.\+Done (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Call this method when done building out the control scheme to return the associated instance. 
+
+\begin{DoxyReturn}{Returns}
+The associated control scheme
+\end{DoxyReturn}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_aa7fe1915286711f879495af86a78a53e}\index{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax@{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax}!OrWithOptionalDevice@{OrWithOptionalDevice}}
+\index{OrWithOptionalDevice@{OrWithOptionalDevice}!UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax@{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax}}
+\doxysubsubsection{\texorpdfstring{OrWithOptionalDevice()}{OrWithOptionalDevice()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_aa7fe1915286711f879495af86a78a53e} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax}{Control\+Scheme\+Syntax}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Setup\+Extensions.\+Control\+Scheme\+Syntax.\+Or\+With\+Optional\+Device (\begin{DoxyParamCaption}\item[{string}]{control\+Path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds another possible optional device to control scheme. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em control\+Path} & Device path, like \texorpdfstring{$<$}{<}\doxylink{class_unity_engine_1_1_input_system_1_1_gamepad}{Gamepad}\texorpdfstring{$>$}{>}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The same control scheme syntax for further configuration.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a3e116d61365265878b9b1731c8a2fd91}\index{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax@{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax}!OrWithOptionalDevice$<$ TDevice $>$@{OrWithOptionalDevice$<$ TDevice $>$}}
+\index{OrWithOptionalDevice$<$ TDevice $>$@{OrWithOptionalDevice$<$ TDevice $>$}!UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax@{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax}}
+\doxysubsubsection{\texorpdfstring{OrWithOptionalDevice$<$ TDevice $>$()}{OrWithOptionalDevice< TDevice >()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a3e116d61365265878b9b1731c8a2fd91} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax}{Control\+Scheme\+Syntax}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_aa7fe1915286711f879495af86a78a53e}{Unity\+Engine.\+Input\+System.\+Input\+Action\+Setup\+Extensions.\+Control\+Scheme\+Syntax.\+Or\+With\+Optional\+Device}}$<$ TDevice $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Combines another optional device with the previous device using boolean OR logic such that either the previous device or this device are required to be present. If this is the last device in a chain of OR\textquotesingle{}d devices, the entire chain of devices becomes optional. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TDevice} & Type of device.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The same control scheme syntax for further configuration.
+\end{DoxyReturn}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_device_requirement_a45f76a7e7fe614e8bb87eeeaec03f76b}{Input\+Control\+Scheme.\+Device\+Requirement.\+is\+OR} \begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TDevice} : {\em Input\+Device}]\end{description}
+\end{Desc}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a7e77d34bdb31e326d9642b8b83ca9425}\index{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax@{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax}!OrWithRequiredDevice@{OrWithRequiredDevice}}
+\index{OrWithRequiredDevice@{OrWithRequiredDevice}!UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax@{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax}}
+\doxysubsubsection{\texorpdfstring{OrWithRequiredDevice()}{OrWithRequiredDevice()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a7e77d34bdb31e326d9642b8b83ca9425} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax}{Control\+Scheme\+Syntax}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Setup\+Extensions.\+Control\+Scheme\+Syntax.\+Or\+With\+Required\+Device (\begin{DoxyParamCaption}\item[{string}]{control\+Path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds another possible required device to the control scheme. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em control\+Path} & Device path, like \texorpdfstring{$<$}{<}\doxylink{class_unity_engine_1_1_input_system_1_1_gamepad}{Gamepad}\texorpdfstring{$>$}{>}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The same control scheme syntax for further configuration.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a6612bfe7bf4e92498a7a4b129b67c9d2}\index{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax@{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax}!OrWithRequiredDevice$<$ TDevice $>$@{OrWithRequiredDevice$<$ TDevice $>$}}
+\index{OrWithRequiredDevice$<$ TDevice $>$@{OrWithRequiredDevice$<$ TDevice $>$}!UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax@{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax}}
+\doxysubsubsection{\texorpdfstring{OrWithRequiredDevice$<$ TDevice $>$()}{OrWithRequiredDevice< TDevice >()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a6612bfe7bf4e92498a7a4b129b67c9d2} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax}{Control\+Scheme\+Syntax}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a7e77d34bdb31e326d9642b8b83ca9425}{Unity\+Engine.\+Input\+System.\+Input\+Action\+Setup\+Extensions.\+Control\+Scheme\+Syntax.\+Or\+With\+Required\+Device}}$<$ TDevice $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Combines another required device with the previous device using boolean OR logic such that either the previous device or this device are required to be present. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TDevice} & Type of device.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The same control scheme syntax for further configuration.
+\end{DoxyReturn}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Create\ an\ .inputactions\ asset.}}
+\DoxyCodeLine{var\ asset\ =\ ScriptableObject.CreateInstance<InputActionAsset>();}
+\DoxyCodeLine{}
+\DoxyCodeLine{asset.AddControlScheme(\textcolor{stringliteral}{"{}KeyboardAndMouseOrPen"{}})}
+\DoxyCodeLine{\ \ \ \ .WithRequiredDevice(\textcolor{stringliteral}{"{}<Keyboard>"{}})}
+\DoxyCodeLine{\ \ \ \ .WithRequiredDevice(\textcolor{stringliteral}{"{}<Mouse>"{}})}
+\DoxyCodeLine{\ \ \ \ .OrWithRequiredDevice(\textcolor{stringliteral}{"{}<Pen>"{}})}
+
+\end{DoxyCode}
+ 
+
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_device_requirement_a45f76a7e7fe614e8bb87eeeaec03f76b}{Input\+Control\+Scheme.\+Device\+Requirement.\+is\+OR} \begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TDevice} : {\em Input\+Device}]\end{description}
+\end{Desc}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a67f9cadb1753e159ac8dffb4f91e1def}\index{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax@{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax}!WithBindingGroup@{WithBindingGroup}}
+\index{WithBindingGroup@{WithBindingGroup}!UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax@{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax}}
+\doxysubsubsection{\texorpdfstring{WithBindingGroup()}{WithBindingGroup()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a67f9cadb1753e159ac8dffb4f91e1def} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax}{Control\+Scheme\+Syntax}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Setup\+Extensions.\+Control\+Scheme\+Syntax.\+With\+Binding\+Group (\begin{DoxyParamCaption}\item[{string}]{binding\+Group}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets or overwrite the binding group for control scheme. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em binding\+Group} & A binding group. See \doxylink{struct_unity_engine_1_1_input_system_1_1_input_binding_a718d4735f0458bbc689951a64ba25a89}{Input\+Binding.\+groups}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The same control scheme syntax for further configuration.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & If provided name is null or empty.\\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a43dc013c5f6be1ad8eb1794bff67660f}\index{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax@{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax}!WithOptionalDevice@{WithOptionalDevice}}
+\index{WithOptionalDevice@{WithOptionalDevice}!UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax@{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax}}
+\doxysubsubsection{\texorpdfstring{WithOptionalDevice()}{WithOptionalDevice()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a43dc013c5f6be1ad8eb1794bff67660f} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax}{Control\+Scheme\+Syntax}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Setup\+Extensions.\+Control\+Scheme\+Syntax.\+With\+Optional\+Device (\begin{DoxyParamCaption}\item[{string}]{control\+Path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add an optional device to the control scheme. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em control\+Path} & The device path, like \texorpdfstring{$<$}{<}\doxylink{class_unity_engine_1_1_input_system_1_1_gamepad}{Gamepad}\texorpdfstring{$>$}{>}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The same control scheme syntax for further configuration.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a308867ca1882eb5c70969cae41bf8ff4}\index{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax@{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax}!WithOptionalDevice$<$ TDevice $>$@{WithOptionalDevice$<$ TDevice $>$}}
+\index{WithOptionalDevice$<$ TDevice $>$@{WithOptionalDevice$<$ TDevice $>$}!UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax@{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax}}
+\doxysubsubsection{\texorpdfstring{WithOptionalDevice$<$ TDevice $>$()}{WithOptionalDevice< TDevice >()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a308867ca1882eb5c70969cae41bf8ff4} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax}{Control\+Scheme\+Syntax}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a43dc013c5f6be1ad8eb1794bff67660f}{Unity\+Engine.\+Input\+System.\+Input\+Action\+Setup\+Extensions.\+Control\+Scheme\+Syntax.\+With\+Optional\+Device}}$<$ TDevice $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds an optional device to control scheme. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TDevice} & Type of device.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The same control scheme syntax for further configuration.
+\end{DoxyReturn}
+\doxylink{struct_unity_engine_1_1_input_system_1_1_input_control_scheme_1_1_device_requirement_a2b1ca7b1009e8f63b7ac2191075e815b}{Input\+Control\+Scheme.\+Device\+Requirement.\+is\+Optional} \begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TDevice} : {\em Input\+Device}]\end{description}
+\end{Desc}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a40fa6f66c8f7ec40786ceed48824b13e}\index{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax@{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax}!WithRequiredDevice@{WithRequiredDevice}}
+\index{WithRequiredDevice@{WithRequiredDevice}!UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax@{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax}}
+\doxysubsubsection{\texorpdfstring{WithRequiredDevice()}{WithRequiredDevice()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a40fa6f66c8f7ec40786ceed48824b13e} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax}{Control\+Scheme\+Syntax}} Unity\+Engine.\+Input\+System.\+Input\+Action\+Setup\+Extensions.\+Control\+Scheme\+Syntax.\+With\+Required\+Device (\begin{DoxyParamCaption}\item[{string}]{control\+Path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a required device to control scheme. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em control\+Path} & Device path, like \texorpdfstring{$<$}{<}\doxylink{class_unity_engine_1_1_input_system_1_1_gamepad}{Gamepad}\texorpdfstring{$>$}{>}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The same control scheme syntax for further configuration.
+\end{DoxyReturn}
+\Hypertarget{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a2ae63100018bc5c92aab07c2e7e1b263}\index{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax@{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax}!WithRequiredDevice$<$ TDevice $>$@{WithRequiredDevice$<$ TDevice $>$}}
+\index{WithRequiredDevice$<$ TDevice $>$@{WithRequiredDevice$<$ TDevice $>$}!UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax@{UnityEngine.InputSystem.InputActionSetupExtensions.ControlSchemeSyntax}}
+\doxysubsubsection{\texorpdfstring{WithRequiredDevice$<$ TDevice $>$()}{WithRequiredDevice< TDevice >()}}
+{\footnotesize\ttfamily \label{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a2ae63100018bc5c92aab07c2e7e1b263} 
+\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax}{Control\+Scheme\+Syntax}} \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_input_action_setup_extensions_1_1_control_scheme_syntax_a40fa6f66c8f7ec40786ceed48824b13e}{Unity\+Engine.\+Input\+System.\+Input\+Action\+Setup\+Extensions.\+Control\+Scheme\+Syntax.\+With\+Required\+Device}}$<$ TDevice $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a required device to control scheme. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TDevice} & Type of device.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The same control scheme syntax for further configuration.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TDevice} : {\em Input\+Device}]\end{description}
+\end{Desc}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+inputsystem@1.\+6.\+3/\+Input\+System/\+Actions/Input\+Action\+Setup\+Extensions.\+cs\end{DoxyCompactItemize}

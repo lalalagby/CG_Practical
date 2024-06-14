@@ -1,0 +1,117 @@
+\doxysection{NSubstitute.\+Core.\+Call\+Info Class Reference}
+\hypertarget{class_n_substitute_1_1_core_1_1_call_info}{}\label{class_n_substitute_1_1_core_1_1_call_info}\index{NSubstitute.Core.CallInfo@{NSubstitute.Core.CallInfo}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_n_substitute_1_1_core_1_1_call_info_aebbe5239f56e976d4e5bb021d236ad0d}\label{class_n_substitute_1_1_core_1_1_call_info_aebbe5239f56e976d4e5bb021d236ad0d} 
+{\bfseries Call\+Info} (\mbox{\hyperlink{class_n_substitute_1_1_core_1_1_argument}{Argument}}\mbox{[}$\,$\mbox{]} call\+Arguments)
+\item 
+object\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_call_info_a8f6ee41e6f29d64717d89d11b7917693}{Args}} ()
+\begin{DoxyCompactList}\small\item\em Get the arguments passed to this call. \end{DoxyCompactList}\item 
+Type\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_call_info_aab33fd563affcd21c02baa8b20c55008}{Arg\+Types}} ()
+\begin{DoxyCompactList}\small\item\em Gets the types of all the arguments passed to this call. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_call_info_a30f529e870efc1ef4aa2a25e81f85ee2}{Arg$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em Gets the argument of type {\ttfamily T} passed to this call. This will throw if there are no arguments of this type, or if there is more than one matching argument. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_call_info_a399ecc9712dad04e5d7d817d7ab5020e}{Arg\+At$<$ T $>$}} (int position)
+\begin{DoxyCompactList}\small\item\em Gets the argument passed to this call at the specified zero-\/based position, converted to type {\ttfamily T}. This will throw if there are no arguments, if the argument is out of range or if it cannot be converted to the specified type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+object \mbox{\hyperlink{class_n_substitute_1_1_core_1_1_call_info_a4bc996cfaa9eb8bb09bba6ca61d837d0}{this\mbox{[}int index\mbox{]}}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the nth argument to this call. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_n_substitute_1_1_core_1_1_call_info_a30f529e870efc1ef4aa2a25e81f85ee2}\index{NSubstitute.Core.CallInfo@{NSubstitute.Core.CallInfo}!Arg$<$ T $>$@{Arg$<$ T $>$}}
+\index{Arg$<$ T $>$@{Arg$<$ T $>$}!NSubstitute.Core.CallInfo@{NSubstitute.Core.CallInfo}}
+\doxysubsubsection{\texorpdfstring{Arg$<$ T $>$()}{Arg< T >()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_call_info_a30f529e870efc1ef4aa2a25e81f85ee2} 
+T NSubstitute.\+Core.\+Call\+Info.\+Arg$<$ T $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the argument of type {\ttfamily T} passed to this call. This will throw if there are no arguments of this type, or if there is more than one matching argument. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the argument to retrieve\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The argument passed to the call, or throws if there is not exactly one argument of this type
+\end{DoxyReturn}
+\Hypertarget{class_n_substitute_1_1_core_1_1_call_info_a399ecc9712dad04e5d7d817d7ab5020e}\index{NSubstitute.Core.CallInfo@{NSubstitute.Core.CallInfo}!ArgAt$<$ T $>$@{ArgAt$<$ T $>$}}
+\index{ArgAt$<$ T $>$@{ArgAt$<$ T $>$}!NSubstitute.Core.CallInfo@{NSubstitute.Core.CallInfo}}
+\doxysubsubsection{\texorpdfstring{ArgAt$<$ T $>$()}{ArgAt< T >()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_call_info_a399ecc9712dad04e5d7d817d7ab5020e} 
+T NSubstitute.\+Core.\+Call\+Info.\+Arg\+At$<$ T $>$ (\begin{DoxyParamCaption}\item[{int}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the argument passed to this call at the specified zero-\/based position, converted to type {\ttfamily T}. This will throw if there are no arguments, if the argument is out of range or if it cannot be converted to the specified type. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the argument to retrieve\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The zero-\/based position of the argument to retrieve\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The argument passed to the call, or throws if there is not exactly one argument of this type
+\end{DoxyReturn}
+\Hypertarget{class_n_substitute_1_1_core_1_1_call_info_a8f6ee41e6f29d64717d89d11b7917693}\index{NSubstitute.Core.CallInfo@{NSubstitute.Core.CallInfo}!Args@{Args}}
+\index{Args@{Args}!NSubstitute.Core.CallInfo@{NSubstitute.Core.CallInfo}}
+\doxysubsubsection{\texorpdfstring{Args()}{Args()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_call_info_a8f6ee41e6f29d64717d89d11b7917693} 
+object\mbox{[}$\,$\mbox{]} NSubstitute.\+Core.\+Call\+Info.\+Args (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get the arguments passed to this call. 
+
+\begin{DoxyReturn}{Returns}
+Array of all arguments passed to this call
+\end{DoxyReturn}
+\Hypertarget{class_n_substitute_1_1_core_1_1_call_info_aab33fd563affcd21c02baa8b20c55008}\index{NSubstitute.Core.CallInfo@{NSubstitute.Core.CallInfo}!ArgTypes@{ArgTypes}}
+\index{ArgTypes@{ArgTypes}!NSubstitute.Core.CallInfo@{NSubstitute.Core.CallInfo}}
+\doxysubsubsection{\texorpdfstring{ArgTypes()}{ArgTypes()}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_call_info_aab33fd563affcd21c02baa8b20c55008} 
+Type\mbox{[}$\,$\mbox{]} NSubstitute.\+Core.\+Call\+Info.\+Arg\+Types (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the types of all the arguments passed to this call. 
+
+\begin{DoxyReturn}{Returns}
+Array of types of all arguments passed to this call
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_n_substitute_1_1_core_1_1_call_info_a4bc996cfaa9eb8bb09bba6ca61d837d0}\index{NSubstitute.Core.CallInfo@{NSubstitute.Core.CallInfo}!this\mbox{[}int index\mbox{]}@{this[int index]}}
+\index{this\mbox{[}int index\mbox{]}@{this[int index]}!NSubstitute.Core.CallInfo@{NSubstitute.Core.CallInfo}}
+\doxysubsubsection{\texorpdfstring{this[int index]}{this[int index]}}
+{\footnotesize\ttfamily \label{class_n_substitute_1_1_core_1_1_call_info_a4bc996cfaa9eb8bb09bba6ca61d837d0} 
+object NSubstitute.\+Core.\+Call\+Info.\+this\mbox{[}int index\mbox{]}\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Gets the nth argument to this call. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Index of argument\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the argument at the given index
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/net.\+tnrd.\+nsubstitute@449712b25a/\+Runtime/\+Core/Call\+Info.\+cs\end{DoxyCompactItemize}

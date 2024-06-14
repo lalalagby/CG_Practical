@@ -1,0 +1,465 @@
+\doxysection{Unity\+Engine.\+Input\+System.\+Low\+Level Namespace Reference}
+\hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level}{}\label{namespace_unity_engine_1_1_input_system_1_1_low_level}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries Accelerometer\+State}
+\item 
+struct {\bfseries Action\+Event}
+\begin{DoxyCompactList}\small\item\em A variable-\/size event that captures the triggering of an action. \end{DoxyCompactList}\item 
+struct {\bfseries Attitude\+State}
+\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_delta_state_event}{Delta\+State\+Event}}
+\begin{DoxyCompactList}\small\item\em Partial state update for an input device. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_device_configuration_event}{Device\+Configuration\+Event}}
+\begin{DoxyCompactList}\small\item\em Indicates that the configuration of a device has changed. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_device_remove_event}{Device\+Remove\+Event}}
+\begin{DoxyCompactList}\small\item\em Notifies about the removal of an input device. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_device_reset_event}{Device\+Reset\+Event}}
+\begin{DoxyCompactList}\small\item\em Event that causes the state of an \doxylink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device} to be reset (see Input\+System.\+Reset\+Device). \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_disable_device_command}{Disable\+Device\+Command}}
+\begin{DoxyCompactList}\small\item\em Command to tell the runtime to no longer send events for the given device. \end{DoxyCompactList}\item 
+struct {\bfseries Dual\+Motor\+Rumble\+Command}
+\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_enable_device_command}{Enable\+Device\+Command}}
+\begin{DoxyCompactList}\small\item\em Command to re-\/enable a device that has been disabled with \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_disable_device_command}{Disable\+Device\+Command}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_enable_i_m_e_composition_command}{Enable\+IMEComposition\+Command}}
+\begin{DoxyCompactList}\small\item\em Device Command that enables IME Composition within the application. Primarily handled by \doxylink{class_unity_engine_1_1_input_system_1_1_keyboard}{Keyboard} devices. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_gamepad_state}{Gamepad\+State}}
+\begin{DoxyCompactList}\small\item\em Default state layout for gamepads. \end{DoxyCompactList}\item 
+struct {\bfseries Gravity\+State}
+\item 
+struct {\bfseries Gyroscope\+State}
+\item 
+interface {\bfseries ICustom\+Device\+Reset}
+\begin{DoxyCompactList}\small\item\em A device that implements its own reset logic for when Input\+System.\+Reset\+Device is called. \end{DoxyCompactList}\item 
+interface {\bfseries IEvent\+Merger}
+\item 
+interface {\bfseries IEvent\+Pre\+Processor}
+\begin{DoxyCompactList}\small\item\em Gives an opportunity for device to modify event data in-\/place before it gets propagated to the rest of the system. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_device_command_info}{IInput\+Device\+Command\+Info}}
+\begin{DoxyCompactList}\small\item\em Interface implemented by all input device command structs which reports the data format identifier of the command. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_event_type_info}{IInput\+Event\+Type\+Info}}
+\begin{DoxyCompactList}\small\item\em Interface implemented by all input event structs which reports the data format identifier of the command. \end{DoxyCompactList}\item 
+interface {\bfseries IInput\+Runtime}
+\begin{DoxyCompactList}\small\item\em Input functions that have to be performed by the underlying input runtime. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_state_callback_receiver}{IInput\+State\+Callback\+Receiver}}
+\begin{DoxyCompactList}\small\item\em Interface for devices that implement their own state update handling. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_state_change_monitor}{IInput\+State\+Change\+Monitor}}
+\begin{DoxyCompactList}\small\item\em Interface used to monitor input state changes. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_state_type_info}{IInput\+State\+Type\+Info}}
+\begin{DoxyCompactList}\small\item\em Interface implemented by all input device state structs which reports the data format identifier of the state. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_input_update_callback_receiver}{IInput\+Update\+Callback\+Receiver}}
+\begin{DoxyCompactList}\small\item\em Interface to allow custom input devices to receive callbacks when the input system is updated. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_i_m_e_composition_event}{IMEComposition\+Event}}
+\begin{DoxyCompactList}\small\item\em A specialized event that contains the current IME Composition string, if IME is enabled and active. This event contains the entire current string to date, and once a new composition is submitted will send a blank string event. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_i_m_e_composition_string}{IMEComposition\+String}}
+\begin{DoxyCompactList}\small\item\em A struct representing an string of characters generated by an IME for text input. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_initiate_user_account_pairing_command}{Initiate\+User\+Account\+Pairing\+Command}}
+\begin{DoxyCompactList}\small\item\em Device command to instruct the underlying platform to pair a user account to the targeted device. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_device_command}{Input\+Device\+Command}}
+\begin{DoxyCompactList}\small\item\em Data header for a command send to an \doxylink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event}{Input\+Event}}
+\begin{DoxyCompactList}\small\item\em A chunk of memory signaling a data transfer in the input system. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_buffer}{Input\+Event\+Buffer}}
+\begin{DoxyCompactList}\small\item\em A buffer of raw memory holding a sequence of \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event}{input events}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_listener}{Input\+Event\+Listener}}
+\begin{DoxyCompactList}\small\item\em Wraps around mechanisms for listening in on the \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event}{Input\+Event} stream made available through Input\+System.\+on\+Event. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr}{Input\+Event\+Ptr}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_unity_engine_1_1_input_system_1_1_pointer}{Pointer} to an \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event}{Input\+Event}. Makes it easier to work with Input\+Events and hides the unsafe operations necessary to work with them. \end{DoxyCompactList}\item 
+struct {\bfseries Input\+Event\+Stream}
+\begin{DoxyCompactList}\small\item\em The input event stream is a combination of the input event buffer passed from native code and an append buffer that is owned by the managed side. Events queued during update are added to the append buffer. To calling code, the two buffers look like a single coherent stream of events. Calling Advance will first step through the events from the native side, followed by any events that have been appended. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace}{Input\+Event\+Trace}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_trace}{Input\+Event\+Trace} lets you record input events for later processing. It also has features for writing traces to disk, for loading them from disk, and for playing back previously recorded traces. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_metrics}{Input\+Metrics}}
+\begin{DoxyCompactList}\small\item\em Provides information on the level of throughput going through the system. \end{DoxyCompactList}\item 
+class {\bfseries Input\+Runtime}
+\item 
+class {\bfseries Input\+Runtime\+Extensions}
+\item 
+class {\bfseries Input\+State}
+\begin{DoxyCompactList}\small\item\em Low-\/level APIs for working with input state memory. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_block}{Input\+State\+Block}}
+\begin{DoxyCompactList}\small\item\em Information about a memory region storing input state. \end{DoxyCompactList}\item 
+struct {\bfseries Input\+State\+Buffers}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history}{Input\+State\+History}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_state_history_1_1_record}{Record} a history of state changes applied to one or more controls. \end{DoxyCompactList}\item 
+class {\bfseries Input\+Update}
+\item 
+interface \mbox{\hyperlink{interface_unity_engine_1_1_input_system_1_1_low_level_1_1_i_text_input_receiver}{IText\+Input\+Receiver}}
+\begin{DoxyCompactList}\small\item\em Interface for \doxylink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device} classes that can receive text input events. \end{DoxyCompactList}\item 
+struct {\bfseries Joystick\+State}
+\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_keyboard_state}{Keyboard\+State}}
+\begin{DoxyCompactList}\small\item\em Default state layout for keyboards. \end{DoxyCompactList}\item 
+struct {\bfseries Linear\+Acceleration\+State}
+\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_mouse_state}{Mouse\+State}}
+\begin{DoxyCompactList}\small\item\em Combine a single pointer with buttons and a scroll wheel. \end{DoxyCompactList}\item 
+class {\bfseries Native\+Input\+Runtime}
+\begin{DoxyCompactList}\small\item\em Implements IInput\+Runtime based on Native\+Input\+System. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_pen_state}{Pen\+State}}
+\begin{DoxyCompactList}\small\item\em Default state layout for pen devices. \end{DoxyCompactList}\item 
+struct {\bfseries Pointer\+State}
+\begin{DoxyCompactList}\small\item\em Default state structure for pointer devices. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_query_can_run_in_background}{Query\+Can\+Run\+In\+Background}}
+\begin{DoxyCompactList}\small\item\em Queries to see if this device is able to continue to send updates and state changes when the application is not if focus. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_query_dimensions_command}{Query\+Dimensions\+Command}}
+\begin{DoxyCompactList}\small\item\em Query dimensions of a device. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_query_enabled_state_command}{Query\+Enabled\+State\+Command}}
+\begin{DoxyCompactList}\small\item\em Command to find out whether a device is currently enabled or not. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_query_keyboard_layout_command}{Query\+Keyboard\+Layout\+Command}}
+\begin{DoxyCompactList}\small\item\em Command to query the name of the current keyboard layout from a device. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_query_key_name_command}{Query\+Key\+Name\+Command}}
+\begin{DoxyCompactList}\small\item\em Command to query the current name of a key according to the current keyboard layout. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_query_paired_user_account_command}{Query\+Paired\+User\+Account\+Command}}
+\begin{DoxyCompactList}\small\item\em Query the ID and the name of the user paired to the device the command is sent to. \end{DoxyCompactList}\item 
+struct {\bfseries Query\+Sampling\+Frequency\+Command}
+\item 
+struct {\bfseries Query\+User\+Id\+Command}
+\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_request_reset_command}{Request\+Reset\+Command}}
+\begin{DoxyCompactList}\small\item\em A command to tell the runtime to reset the device to it\textquotesingle{}s default state. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_request_sync_command}{Request\+Sync\+Command}}
+\begin{DoxyCompactList}\small\item\em A command to tell the runtime to sync the device to it\textquotesingle{}s last known state. \end{DoxyCompactList}\item 
+class {\bfseries Select\+Observable}
+\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_set_i_m_e_cursor_position_command}{Set\+IMECursor\+Position\+Command}}
+\begin{DoxyCompactList}\small\item\em Sets the position for IME dialogs. This is in pixels, from the upper left corner going down and to the right. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_set_sampling_frequency_command}{Set\+Sampling\+Frequency\+Command}}
+\begin{DoxyCompactList}\small\item\em For a device that is sampled periodically, set the frequency at which the device is sampled. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_state_event}{State\+Event}}
+\begin{DoxyCompactList}\small\item\em A complete state snapshot for an entire input device. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_text_event}{Text\+Event}}
+\begin{DoxyCompactList}\small\item\em A single character text input event. \end{DoxyCompactList}\item 
+struct {\bfseries Touchscreen\+State}
+\begin{DoxyCompactList}\small\item\em Default state layout for touch devices. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_touch_state}{Touch\+State}}
+\begin{DoxyCompactList}\small\item\em State layout for a single touch. \end{DoxyCompactList}\item 
+struct {\bfseries Use\+Windows\+Gaming\+Input\+Command}
+\item 
+struct {\bfseries Warp\+Mouse\+Position\+Command}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_ad6c1c7cf64a87e551f213fc74a44ce09}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_ad6c1c7cf64a87e551f213fc74a44ce09} 
+using {\bfseries Notify\+Control\+Value\+Change\+Action} = Action$<$\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}, double, \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_event_ptr}{Input\+Event\+Ptr}}, long$>$
+\item 
+\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a5bde008f9b03ee51beef3d4159f55649}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a5bde008f9b03ee51beef3d4159f55649} 
+using {\bfseries Notify\+Timer\+Expired\+Action} = Action$<$\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_control}{Input\+Control}}, double, long, int$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36}{Gamepad\+Button}} \{ \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36ad3ca4590094b47dd5e7ddfd4679a1139}{Dpad\+Up}} = 0
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36af926cb67913be40219a97ec3889f90d9}{Dpad\+Down}} = 1
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a126eb11514ec5936a690e24fce06a075}{Dpad\+Left}} = 2
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36ad3c7cfd48048567e4d093aaad0bbcb7a}{Dpad\+Right}} = 3
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a601560b94fbb188919dd1d36c8ab70a4}{North}} = 4
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36aa99dc62d017d04cf67266593f9c3761e}{East}} = 5
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a263d7b2cf53802c9ed127b718c0bf9fd}{South}} = 6
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36abf495fc048d8d44b7f32536df5cf3930}{West}} = 7
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a78dfae506443f078a68242fa3989e7d2}{Left\+Stick}} = 8
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a8e2f56dca504cbbdf54b6ba95989aed7}{Right\+Stick}} = 9
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a36131cbdc50218d923d0bcb0d9870e1c}{Left\+Shoulder}} = 10
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a27a5390f2d1b44a43f74d57703f8d354}{Right\+Shoulder}} = 11
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36aa6122a65eaa676f700ae68d393054a37}{Start}} = 12
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36ae0626222614bdee31951d84c64e5e9ff}{Select}} = 13
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36ac412c6d19da2afaf2dc8891f5bcb8901}{Left\+Trigger}} = 32
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a837ed99a897594cef0d37403a18f0df0}{Right\+Trigger}} = 33
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a02129bb861061d1a052c592e2dc6b383}{X}} = West
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a57cec4137b614c87cb4e24a3d003a3e0}{Y}} = North
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a7fc56270e7a70fa81a5935b72eacbe29}{A}} = South
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a9d5ed678fe57bcca610140957afab571}{B}} = East
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36ae76b449b9fc8536af7557ffa6321d269}{Cross}} = South
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36aceb46ca115d05c51aa5a16a8867c3304}{Square}} = West
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a5e5500cb2b82eb72d550de644bd1b64b}{Triangle}} = North
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a30954d90085f6eaaf5817917fc5fecb3}{Circle}} = East
+ \}
+\begin{DoxyCompactList}\small\item\em Enum of common gamepad buttons. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a78bbc5a0bf51f5b52356b8760ac7b9f3}{Mouse\+Button}} \{ \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a78bbc5a0bf51f5b52356b8760ac7b9f3a945d5e233cf7d6240f6b783b36a374ff}{Left}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a78bbc5a0bf51f5b52356b8760ac7b9f3a92b09c7c48c520c3c55e497875da437c}{Right}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a78bbc5a0bf51f5b52356b8760ac7b9f3ab1ca34f82e83c52b010f86955f264e05}{Middle}}
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a78bbc5a0bf51f5b52356b8760ac7b9f3a67d2f6740a8eaebf4d5c6f79be8da481}{Forward}}
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a78bbc5a0bf51f5b52356b8760ac7b9f3a0557fa923dcee4d0f86b1409f5c2167f}{Back}}
+ \}
+\begin{DoxyCompactList}\small\item\em Button indices for \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_mouse_state_a840523825d8fc2f8995553d950b895a5}{Mouse\+State.\+buttons}. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789}{Input\+Update\+Type}} \{ \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789a6adf97f83acf6453d4a6a4b1070f3754}{None}} = 0
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789a971fd8cc345d8bd9f92e9f7d88fdf20c}{Dynamic}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789a4457d440870ad6d42bab9082d9bf9b61}{Fixed}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 1
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789adc18627d8298782478d7588b8223702e}{Before\+Render}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 2
+, \newline
+\mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789a344a7f427fb765610ef96eb7bce95257}{Editor}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 3
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789ae1ba155a9f2e8c3be94020eef32a0301}{Manual}} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 4
+, \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789a7a1920d61156abc05a60135aefe8bc67}{Default}} = Dynamic \texorpdfstring{$\vert$}{|} Fixed \texorpdfstring{$\vert$}{|} Editor
+ \}
+\begin{DoxyCompactList}\small\item\em Enum of different player loop positions where the input system can invoke its update mechanism. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsafe delegate? long \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a496f1a6ffda074d85be12046359731ba}{Input\+Device\+Command\+Delegate}} (\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}} device, \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_device_command}{Input\+Device\+Command}} \texorpdfstring{$\ast$}{*}command)
+\begin{DoxyCompactList}\small\item\em Delegate used by Input\+System.\+on\+Device\+Command. \end{DoxyCompactList}\item 
+delegate long \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a053ac8b1ddaebd46723a56cedf517ad9}{Input\+Device\+Execute\+Command\+Delegate}} (ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_device_command}{Input\+Device\+Command}} command)
+\begin{DoxyCompactList}\small\item\em Delegate for executing \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_device_command}{Input\+Device\+Command}s inside Input\+System.\+on\+Find\+Layout\+For\+Device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!GamepadButton@{GamepadButton}}
+\index{GamepadButton@{GamepadButton}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}
+\doxysubsubsection{\texorpdfstring{GamepadButton}{GamepadButton}}
+{\footnotesize\ttfamily \label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36}{Unity\+Engine.\+Input\+System.\+Low\+Level.\+Gamepad\+Button}}}
+
+
+
+Enum of common gamepad buttons. 
+
+NOTE\+: The bit positions here based on the enum value are also used in native.
+
+Can be used as an array indexer on the \doxylink{class_unity_engine_1_1_input_system_1_1_gamepad}{Gamepad} class to get individual button controls. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DpadUp@{DpadUp}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!DpadUp@{DpadUp}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36ad3ca4590094b47dd5e7ddfd4679a1139}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+Dpad\+Up&The up button on a gamepad\textquotesingle{}s dpad. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DpadDown@{DpadDown}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!DpadDown@{DpadDown}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36af926cb67913be40219a97ec3889f90d9}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+Dpad\+Down&The down button on a gamepad\textquotesingle{}s dpad. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DpadLeft@{DpadLeft}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!DpadLeft@{DpadLeft}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a126eb11514ec5936a690e24fce06a075}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+Dpad\+Left&The left button on a gamepad\textquotesingle{}s dpad. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DpadRight@{DpadRight}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!DpadRight@{DpadRight}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36ad3c7cfd48048567e4d093aaad0bbcb7a}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+Dpad\+Right&The right button on a gamepad\textquotesingle{}s dpad. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{North@{North}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!North@{North}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a601560b94fbb188919dd1d36c8ab70a4}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+North&The upper action button on a gamepad. Identical to \doxylink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a57cec4137b614c87cb4e24a3d003a3e0}{Y} and \doxylink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a5e5500cb2b82eb72d550de644bd1b64b}{Triangle} which are the Xbox and Play\+Station controller names for this button. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{East@{East}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!East@{East}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36aa99dc62d017d04cf67266593f9c3761e}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+East&The right action button on a gamepad. Identical to \doxylink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a9d5ed678fe57bcca610140957afab571}{B} and \doxylink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a30954d90085f6eaaf5817917fc5fecb3}{Circle} which are the Xbox and Play\+Station controller names for this button. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{South@{South}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!South@{South}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a263d7b2cf53802c9ed127b718c0bf9fd}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+South&The lower action button on a gamepad. Identical to \doxylink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a7fc56270e7a70fa81a5935b72eacbe29}{A} and \doxylink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36ae76b449b9fc8536af7557ffa6321d269}{Cross} which are the Xbox and Play\+Station controller names for this button. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{West@{West}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!West@{West}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36abf495fc048d8d44b7f32536df5cf3930}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+West&The left action button on a gamepad. Identical to \doxylink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a02129bb861061d1a052c592e2dc6b383}{X} and \doxylink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36aceb46ca115d05c51aa5a16a8867c3304}{Square} which are the Xbox and Play\+Station controller names for this button. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LeftStick@{LeftStick}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!LeftStick@{LeftStick}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a78dfae506443f078a68242fa3989e7d2}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+Left\+Stick&The button pressed by pressing down the left stick on a gamepad. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RightStick@{RightStick}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!RightStick@{RightStick}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a8e2f56dca504cbbdf54b6ba95989aed7}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+Right\+Stick&The button pressed by pressing down the right stick on a gamepad. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LeftShoulder@{LeftShoulder}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!LeftShoulder@{LeftShoulder}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a36131cbdc50218d923d0bcb0d9870e1c}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+Left\+Shoulder&The left shoulder button on a gamepad. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RightShoulder@{RightShoulder}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!RightShoulder@{RightShoulder}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a27a5390f2d1b44a43f74d57703f8d354}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+Right\+Shoulder&The right shoulder button on a gamepad. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Start@{Start}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!Start@{Start}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36aa6122a65eaa676f700ae68d393054a37}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+Start&The start button. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Select@{Select}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!Select@{Select}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36ae0626222614bdee31951d84c64e5e9ff}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+Select&The select button. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LeftTrigger@{LeftTrigger}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!LeftTrigger@{LeftTrigger}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36ac412c6d19da2afaf2dc8891f5bcb8901}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+Left\+Trigger&The left trigger button on a gamepad. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RightTrigger@{RightTrigger}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!RightTrigger@{RightTrigger}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a837ed99a897594cef0d37403a18f0df0}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+Right\+Trigger&The right trigger button on a gamepad. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X@{X}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!X@{X}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a02129bb861061d1a052c592e2dc6b383}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+X&The X button on an Xbox controller. Identical to \doxylink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36abf495fc048d8d44b7f32536df5cf3930}{West}, which is the generic name of this button. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Y@{Y}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!Y@{Y}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a57cec4137b614c87cb4e24a3d003a3e0}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+Y&The Y button on an Xbox controller. Identical to \doxylink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a601560b94fbb188919dd1d36c8ab70a4}{North}, which is the generic name of this button. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A@{A}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!A@{A}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a7fc56270e7a70fa81a5935b72eacbe29}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+A&The A button on an Xbox controller. Identical to \doxylink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a263d7b2cf53802c9ed127b718c0bf9fd}{South}, which is the generic name of this button. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B@{B}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!B@{B}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a9d5ed678fe57bcca610140957afab571}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+B&The B button on an Xbox controller. Identical to \doxylink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36aa99dc62d017d04cf67266593f9c3761e}{East}, which is the generic name of this button. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Cross@{Cross}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!Cross@{Cross}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36ae76b449b9fc8536af7557ffa6321d269}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+Cross&The cross button on a Play\+Station controller. Identical to \doxylink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a263d7b2cf53802c9ed127b718c0bf9fd}{South}, which is the generic name of this button. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Square@{Square}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!Square@{Square}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36aceb46ca115d05c51aa5a16a8867c3304}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+Square&The square button on a Play\+Station controller. Identical to \doxylink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36abf495fc048d8d44b7f32536df5cf3930}{West}, which is the generic name of this button. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Triangle@{Triangle}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!Triangle@{Triangle}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a5e5500cb2b82eb72d550de644bd1b64b}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+Triangle&The triangle button on a Play\+Station controller. Identical to \doxylink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a601560b94fbb188919dd1d36c8ab70a4}{North}, which is the generic name of this button. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Circle@{Circle}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!Circle@{Circle}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36a30954d90085f6eaaf5817917fc5fecb3}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36} 
+Circle&The circle button on a Play\+Station controller. Identical to \doxylink{namespace_unity_engine_1_1_input_system_1_1_low_level_a90bda7942e6235f77d48fbc1e2a42a36aa99dc62d017d04cf67266593f9c3761e}{East}, which is the generic name of this button. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!InputUpdateType@{InputUpdateType}}
+\index{InputUpdateType@{InputUpdateType}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}
+\doxysubsubsection{\texorpdfstring{InputUpdateType}{InputUpdateType}}
+{\footnotesize\ttfamily \label{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789} 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789}{Unity\+Engine.\+Input\+System.\+Low\+Level.\+Input\+Update\+Type}}}
+
+
+
+Enum of different player loop positions where the input system can invoke its update mechanism. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!None@{None}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789a6adf97f83acf6453d4a6a4b1070f3754}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789} 
+None&Performs no actual update but still allows devices to reset themselves. Usually occurs immediately after domain reload. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Dynamic@{Dynamic}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!Dynamic@{Dynamic}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789a971fd8cc345d8bd9f92e9f7d88fdf20c}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789} 
+Dynamic&Update corresponding to \href{https://docs.unity3d.com/ScriptReference/MonoBehaviour.Update.html}{\texttt{ Update}}. Every frame has exactly one dynamic update. If not reconfigured using Player\+Loop, the dynamic update happens after all the fixed updates for the frame have run (which can be zero or more).
+
+Input updates run before script callbacks on Mono\+Behaviours are fired. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Fixed@{Fixed}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!Fixed@{Fixed}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789a4457d440870ad6d42bab9082d9bf9b61}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789} 
+Fixed&Update corresponding to \href{https://docs.unity3d.com/ScriptReference/MonoBehaviour.FixedUpdate.html}{\texttt{ Fixed\+Update}}. Every frame has zero or more fixed updates. These are run before the dynamic update for the frame.
+
+Input updates run before script callbacks on Mono\+Behaviours are fired. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BeforeRender@{BeforeRender}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!BeforeRender@{BeforeRender}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789adc18627d8298782478d7588b8223702e}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789} 
+Before\+Render&Input update that happens right before rendering. REVIEW\+: Axe this update type from the public API? 
+
+The Before\+Render update affects only devices that have before-\/render updates enabled. This has to be done through a device\textquotesingle{}s layout (Input\+Control\+Layout.\+update\+Before\+Render and is visible through \doxylink{class_unity_engine_1_1_input_system_1_1_input_device_a8582d897119e1524b4f695447afbc6c1}{Input\+Device.\+update\+Before\+Render}.
+
+Before\+Render updates are useful to minimize lag of transform data that is used in rendering but is coming from external tracking devices. An example are HMDs. If the head transform used for the render camera is not synchronized right before rendering, it can result in a noticeable lag between head and camera movement. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Editor@{Editor}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!Editor@{Editor}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789a344a7f427fb765610ef96eb7bce95257}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789} 
+Editor&Input update that happens right before Unity\+Editor.\+Editor\+Windows are updated. This update only occurs in the editor. It is triggered right before Unity\+Editor.\+Editor\+Application.\+update. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Manual@{Manual}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!Manual@{Manual}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789ae1ba155a9f2e8c3be94020eef32a0301}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789} 
+Manual&Input updates do not happen automatically but have to be triggered manually by calling Input\+System.\+Update. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Default@{Default}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!Default@{Default}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789a7a1920d61156abc05a60135aefe8bc67}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789} 
+Default&Default update mask. Combines \doxylink{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789a971fd8cc345d8bd9f92e9f7d88fdf20c}{Dynamic}, \doxylink{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789a4457d440870ad6d42bab9082d9bf9b61}{Fixed}, and \doxylink{namespace_unity_engine_1_1_input_system_1_1_low_level_a94e8bcbb88906e3040ec5413bd368789a344a7f427fb765610ef96eb7bce95257}{Editor}. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a78bbc5a0bf51f5b52356b8760ac7b9f3}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!MouseButton@{MouseButton}}
+\index{MouseButton@{MouseButton}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}
+\doxysubsubsection{\texorpdfstring{MouseButton}{MouseButton}}
+{\footnotesize\ttfamily \label{namespace_unity_engine_1_1_input_system_1_1_low_level_a78bbc5a0bf51f5b52356b8760ac7b9f3} 
+enum \mbox{\hyperlink{namespace_unity_engine_1_1_input_system_1_1_low_level_a78bbc5a0bf51f5b52356b8760ac7b9f3}{Unity\+Engine.\+Input\+System.\+Low\+Level.\+Mouse\+Button}}}
+
+
+
+Button indices for \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_mouse_state_a840523825d8fc2f8995553d950b895a5}{Mouse\+State.\+buttons}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Left@{Left}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!Left@{Left}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a78bbc5a0bf51f5b52356b8760ac7b9f3a945d5e233cf7d6240f6b783b36a374ff}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a78bbc5a0bf51f5b52356b8760ac7b9f3} 
+Left&Left mouse button. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_mouse_a595f9a73e9c41d4565d0d0742448b09c}{Mouse.\+left\+Button}
+
+
+\end{DoxySeeAlso}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Right@{Right}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!Right@{Right}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a78bbc5a0bf51f5b52356b8760ac7b9f3a92b09c7c48c520c3c55e497875da437c}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a78bbc5a0bf51f5b52356b8760ac7b9f3} 
+Right&Right mouse button. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_mouse_a991be121f531145ba1c0f3bded17170c}{Mouse.\+right\+Button}
+
+
+\end{DoxySeeAlso}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Middle@{Middle}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!Middle@{Middle}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a78bbc5a0bf51f5b52356b8760ac7b9f3ab1ca34f82e83c52b010f86955f264e05}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a78bbc5a0bf51f5b52356b8760ac7b9f3} 
+Middle&Middle mouse button. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_mouse_ac63e1158a6eb834f35991ed1a92914f4}{Mouse.\+middle\+Button}
+
+
+\end{DoxySeeAlso}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Forward@{Forward}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!Forward@{Forward}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a78bbc5a0bf51f5b52356b8760ac7b9f3a67d2f6740a8eaebf4d5c6f79be8da481}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a78bbc5a0bf51f5b52356b8760ac7b9f3} 
+Forward&Second side button. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_mouse_a2799a4b183ee5705f7c0204a0741c7d2}{Mouse.\+forward\+Button}
+
+
+\end{DoxySeeAlso}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Back@{Back}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!Back@{Back}}}\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a78bbc5a0bf51f5b52356b8760ac7b9f3a0557fa923dcee4d0f86b1409f5c2167f}\label{namespace_unity_engine_1_1_input_system_1_1_low_level_a78bbc5a0bf51f5b52356b8760ac7b9f3} 
+Back&First side button. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_input_system_1_1_mouse_a7cdabfa515cb2c0b8f1496ac610ea1fd}{Mouse.\+back\+Button}
+
+
+\end{DoxySeeAlso}
+\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a496f1a6ffda074d85be12046359731ba}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!InputDeviceCommandDelegate@{InputDeviceCommandDelegate}}
+\index{InputDeviceCommandDelegate@{InputDeviceCommandDelegate}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}
+\doxysubsubsection{\texorpdfstring{InputDeviceCommandDelegate()}{InputDeviceCommandDelegate()}}
+{\footnotesize\ttfamily \label{namespace_unity_engine_1_1_input_system_1_1_low_level_a496f1a6ffda074d85be12046359731ba} 
+unsafe delegate? long Unity\+Engine.\+Input\+System.\+Low\+Level.\+Input\+Device\+Command\+Delegate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_input_system_1_1_input_device}{Input\+Device}}}]{device}{, }\item[{\mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_device_command}{Input\+Device\+Command}} \texorpdfstring{$\ast$}{*}}]{command}{}\end{DoxyParamCaption})}
+
+
+
+Delegate used by Input\+System.\+on\+Device\+Command. 
+
+REVIEW\+: why is this passing the command by pointer instead of by ref? \Hypertarget{namespace_unity_engine_1_1_input_system_1_1_low_level_a053ac8b1ddaebd46723a56cedf517ad9}\index{UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}!InputDeviceExecuteCommandDelegate@{InputDeviceExecuteCommandDelegate}}
+\index{InputDeviceExecuteCommandDelegate@{InputDeviceExecuteCommandDelegate}!UnityEngine.InputSystem.LowLevel@{UnityEngine.InputSystem.LowLevel}}
+\doxysubsubsection{\texorpdfstring{InputDeviceExecuteCommandDelegate()}{InputDeviceExecuteCommandDelegate()}}
+{\footnotesize\ttfamily \label{namespace_unity_engine_1_1_input_system_1_1_low_level_a053ac8b1ddaebd46723a56cedf517ad9} 
+delegate long Unity\+Engine.\+Input\+System.\+Low\+Level.\+Input\+Device\+Execute\+Command\+Delegate (\begin{DoxyParamCaption}\item[{ref \mbox{\hyperlink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_device_command}{Input\+Device\+Command}}}]{command}{}\end{DoxyParamCaption})}
+
+
+
+Delegate for executing \doxylink{struct_unity_engine_1_1_input_system_1_1_low_level_1_1_input_device_command}{Input\+Device\+Command}s inside Input\+System.\+on\+Find\+Layout\+For\+Device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & Command to execute.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Input\+System.\+on\+Find\+Layout\+For\+Device, \doxylink{namespace_unity_engine_1_1_input_system_1_1_layouts_a840347314e91824d457ae0bd681a24ae}{Layouts.\+Input\+Device\+Find\+Control\+Layout\+Delegate}
+
+
+\end{DoxySeeAlso}

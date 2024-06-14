@@ -1,0 +1,44 @@
+\chapter{Tracked Dolly}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_body_tracked_dolly}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_body_tracked_dolly}\index{Tracked Dolly@{Tracked Dolly}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_body_tracked_dolly_autotoc_md656}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_body_tracked_dolly_autotoc_md656}%
+ This Virtual Camera {\bfseries{Body}} algorithm restricts the Virtual Camera to move along a predefined \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_dolly}{path}{0}. Use the {\bfseries{Path Position}} property to specify where to put the Virtual Camera on the path.
+
+Use {\bfseries{Auto-\/\+Dolly}} mode to move the Virtual Camera to a position on the path that is closest to the {\bfseries{Follow}} target. When enabled, {\bfseries{Auto-\/\+Dolly}} automatically animates the position of the Virtual Camera to the position on the path that’s closest to the target.
+
+{\bfseries{Tip}}\+: Choose your path shapes with care when using Auto-\/\+Dolly mode. This becomes problematic on paths that form an arc around some point. As an extreme example, consider a perfectly circular path with the {\bfseries{Follow}} target at the center. The closest point on the path becomes unstable because all points on the circular path are equally close to the target. In this situation, moving the {\bfseries{Follow}} target small distances can cause the camera to move large distances on the track.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_body_tracked_dolly_autotoc_md657}{}\doxysection{\texorpdfstring{Properties\+:}{Properties\+:}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_body_tracked_dolly_autotoc_md657}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\multicolumn{2}{|l|}{\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }}&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\multicolumn{2}{|l|}{\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }}&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-3}
+\endhead
+\multicolumn{2}{|l|}{{\bfseries{Path}}   }&The path that the camera moves along. This property must refer to a \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_path}{Cinemachine Path}{0} or \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8cinemachine_0d2_89_87_2_documentation_0i_2_cinemachine_smooth_path}{Cinemachine Smooth Path}{0}.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Path Position}}   }&The position along the path to place the camera. Animate this property directly or enable Auto-\/\+Dolly. The value is in the units specified by Position Units.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Position Units}}   }&The unit of measure for Path Position.    \\\cline{1-3}
+&{\itshape Path Units}   &Use waypoints along the path. The value 0 represents the first waypoint on the path, 1 is the second waypoint, and so on.    \\\cline{1-3}
+&{\itshape Distance}   &Use distance along the path. The path is sampled according to the Resolution property of the path. \doxylink{namespace_cinemachine}{Cinemachine} creates a distance lookup table, which it stores in an internal cache.    \\\cline{1-3}
+&{\itshape Normalized}   &Use the beginning and end of the path. The value 0 represents the beginning of the path, 1 is the end of the path.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Path Offset}}   }&The position of the camera relative to the path. X is perpendicular to the path, Y is up, and Z is parallel to the path. Use this property to offset the camera from the path itself.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{X Damping}}   }&How responsively the camera tries to maintain its position in a direction perpendicular to the path. Small numbers make the camera more responsive. Larger numbers make the camera respond more slowly. Using different settings per axis can yield a wide range of camera behaviors.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Y Damping}}   }&How responsively the camera tries to maintain its position in the path-\/local up direction. Small numbers make the camera more responsive. Larger numbers make the camera respond more slowly.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Z Damping}}   }&How responsively the camera tries to maintain its position in a direction parallel to the path. Small numbers make the camera more responsive. Larger numbers make the camera respond more slowly.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Camera Up}}   }&How to set the up vector for the Virtual Camera. This affects the screen composition because the camera Aim algorithms try to respect the up direction.    \\\cline{1-3}
+&{\itshape Default}   &Do not modify the up direction of the Virtual Camera. Instead, use the World Up Override property in \doxylink{namespace_cinemachine}{Cinemachine} Brain.    \\\cline{1-3}
+&{\itshape Path}   &Use the path’s up vector at the current point.    \\\cline{1-3}
+&{\itshape Path No Roll}   &Use the path’s up vector at the current point, but with the roll set to zero.    \\\cline{1-3}
+&{\itshape Follow Target}   &Use the up vector from the Follow target’s transform.    \\\cline{1-3}
+&{\itshape Follow Target No Roll}   &Use the up vector from the Follow target’s transform, but with the roll zeroed out.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Pitch Damping}}   }&How responsively the camera tracks the target rotation’s x angle. Small numbers make the camera more responsive. Larger numbers make the camera respond more slowly.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Yaw Damping}}   }&How responsively the camera tracks the target rotation’s y angle. Small numbers make the camera more responsive. Larger numbers make the camera respond more slowly.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Roll Damping}}   }&How responsively the camera tracks the target rotation’s z angle. Small numbers make the camera more responsive. Larger numbers make the camera respond more slowly.    \\\cline{1-3}
+\multicolumn{2}{|l|}{{\bfseries{Auto Dolly}}   }&Controls how automatic dollying occurs. A Follow target is necessary to use this feature.    \\\cline{1-3}
+&{\itshape Enabled}   &Check to enable the automatic dolly. Note\+: this can have some performance impact, depending on the search resolution.    \\\cline{1-3}
+&{\itshape Position Offset}   &Offset, in position units, from the closest point on the path to the follow target.    \\\cline{1-3}
+&{\itshape Search Radius}   &The number of segments on either side of the current segment. Use 0 for the entire path. Use a lower number when the path’s shape relative to the target position causes the closest point on the path to become unstable.    \\\cline{1-3}
+&{\itshape Search Resolution}   &\doxylink{namespace_cinemachine}{Cinemachine} searches a segment by dividing it into many straight pieces. The higher the number, the more accurate the result. However, performance is proportionally slower for higher numbers.   \\\cline{1-3}
+\end{longtabu}

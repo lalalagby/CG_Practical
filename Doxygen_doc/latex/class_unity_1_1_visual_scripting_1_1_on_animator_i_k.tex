@@ -1,0 +1,70 @@
+\doxysection{Unity.\+Visual\+Scripting.\+On\+Animator\+IK Class Reference}
+\hypertarget{class_unity_1_1_visual_scripting_1_1_on_animator_i_k}{}\label{class_unity_1_1_visual_scripting_1_1_on_animator_i_k}\index{Unity.VisualScripting.OnAnimatorIK@{Unity.VisualScripting.OnAnimatorIK}}
+
+
+Called by the Animator Component immediately before it updates its internal IK system. \doxylink{class_unity_1_1_visual_scripting_1_1_this}{This} callback can be used to set the positions of the IK goals and their respective weights.  
+
+
+Inheritance diagram for Unity.\+Visual\+Scripting.\+On\+Animator\+IK\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_1_1_visual_scripting_1_1_on_animator_i_k}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_on_animator_i_k_a62a6e6315a483addfde9a01d0204b901}\label{class_unity_1_1_visual_scripting_1_1_on_animator_i_k_a62a6e6315a483addfde9a01d0204b901} 
+override void {\bfseries Definition} ()
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_on_animator_i_k_ab01f502e0259180a4a8efe2829af7350}\label{class_unity_1_1_visual_scripting_1_1_on_animator_i_k_ab01f502e0259180a4a8efe2829af7350} 
+override void {\bfseries Assign\+Arguments} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow}{Flow}} flow, int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_on_animator_i_k_a23067f70b42ae02058f62f8d44ae2be2}{layer\+Index}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_game_object_event_unit}{Unity.\+Visual\+Scripting.\+Game\+Object\+Event\+Unit$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+override void {\bfseries Definition} ()
+\item 
+void {\bfseries Start\+Listening} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_stack}{Graph\+Stack}} stack, bool update\+Target)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_on_animator_i_k_a58bd8295adec23ee4616d592b5daa2a8}\label{class_unity_1_1_visual_scripting_1_1_on_animator_i_k_a58bd8295adec23ee4616d592b5daa2a8} 
+override Type {\bfseries Message\+Listener\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_on_animator_i_k_af8a4b35b6a2b67852601c4f4b4724ad9}\label{class_unity_1_1_visual_scripting_1_1_on_animator_i_k_af8a4b35b6a2b67852601c4f4b4724ad9} 
+override string {\bfseries hook\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_on_animator_i_k_a23067f70b42ae02058f62f8d44ae2be2}\label{class_unity_1_1_visual_scripting_1_1_on_animator_i_k_a23067f70b42ae02058f62f8d44ae2be2} 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_output}{Value\+Output}} {\bfseries layer\+Index}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The index of the layer on which the IK solver is called. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_game_object_event_unit}{Unity.\+Visual\+Scripting.\+Game\+Object\+Event\+Unit$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+override bool {\bfseries register}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Type {\bfseries Message\+Listener\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{Value\+Input}} {\bfseries target}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The game object that listens for the event. \end{DoxyCompactList}\item 
+virtual string {\bfseries hook\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_game_object_event_unit}{Unity.\+Visual\+Scripting.\+Game\+Object\+Event\+Unit$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+override \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_data}{IGraph\+Element\+Data}} {\bfseries Create\+Data} ()
+\item 
+override \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_event_hook}{Event\+Hook}} {\bfseries Get\+Hook} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} reference)
+\item 
+override void {\bfseries Start\+Listening} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_stack}{Graph\+Stack}} stack)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Called by the Animator Component immediately before it updates its internal IK system. \doxylink{class_unity_1_1_visual_scripting_1_1_this}{This} callback can be used to set the positions of the IK goals and their respective weights. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+8.\+0/\+Runtime/\+Visual\+Scripting.\+Flow/\+Framework/\+Events/\+Animation/On\+Animator\+IK.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,96 @@
+\chapter{Branch On Input Connection node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_24e9175110cf81d5539e8b984eb9dd562}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_24e9175110cf81d5539e8b984eb9dd562}\index{Branch On Input Connection node@{Branch On Input Connection node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_24e9175110cf81d5539e8b984eb9dd562_autotoc_md2987}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_24e9175110cf81d5539e8b984eb9dd562_autotoc_md2987}%
+ The Branch On Input Connection node allows you to change the behavior of a Subgraph based on the connected state of an input property in the parent Shader Graph. You should use the Branch On Input Connection node when you want to create a default input for a port
+
+Shader Graph determines whether the property in the parent Shader Graph is connected, or not connected, and chooses a value to use as an output based on that connection state.
+
+
+
+Shader Graph uses two ports when it determines the node\textquotesingle{}s connection state\+:
+
+
+\begin{DoxyItemize}
+\item The Branch On Input Connection node\textquotesingle{}s {\bfseries{Input}} port.
+\item The Subgraph node\textquotesingle{}s matching Property port in the parent Shader Graph. For more information on Subgraph nodes, see \mbox{[}Subgraph node\mbox{]}(Sub-\/graph-\/\+Node).
+\end{DoxyItemize}
+
+The Branch On Input Connection node\textquotesingle{}s functionality is based on the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_branch-_node}{Branch node}{0}.
+
+\begin{DoxyNote}{Note}
+You can\textquotesingle{}t use the Branch On Input Connection node with a Streaming Virtual Texture Property. For more information on Streaming Virtual Texturing, see \href{https://docs.unity3d.com/Documentation/Manual/svt-use-in-shader-graph.html}{\texttt{ Using Streaming Virtual Texturing in Shader Graph}}.
+\end{DoxyNote}
+The Branch On Input Connection node generates branching HLSL source code, but during compilation, the branch is optimized out of your shader.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_24e9175110cf81d5539e8b984eb9dd562_autotoc_md2988}{}\doxysection{\texorpdfstring{Create Node menu category}{Create Node menu category}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_24e9175110cf81d5539e8b984eb9dd562_autotoc_md2988}
+The Branch On Input Connection node is under the {\bfseries{Utility}} \texorpdfstring{$>$}{>} {\bfseries{Logic}} category in the Create Node menu. You can only use it in a Shader Subgraph.
+
+To use the Branch On Input Connection node in a Subgraph\+:
+
+
+\begin{DoxyEnumerate}
+\item Open the Subgraph where you want to add a Branch On Input Connection node.
+\item In the Blackboard, do one of the following\+:
+\begin{DoxyItemize}
+\item To add a new property, select {\bfseries{Add}} (+), then select a property type from the menu. Enter a name for your new property and press Enter. Then, select your property in the Blackboard and drag it onto your graph to create a Property node.
+\item Select an existing property in the Blackboard and drag it onto your graph to create a Property node.
+\end{DoxyItemize}
+\item With your Property node selected, in the Graph Inspector, enable {\bfseries{Use Custom Binding}}.
+\end{DoxyEnumerate}
+
+\begin{DoxyNote}{Note}
+If you disable {\bfseries{Use Custom Binding}}, you can\textquotesingle{}t connect your Property node to the Branch On Input Connection node. If you\textquotesingle{}ve already made a connection, the \doxylink{namespace_unity}{Unity} Editor breaks the connection and displays a warning on the node.
+\end{DoxyNote}
+
+\begin{DoxyEnumerate}
+\item In the {\bfseries{Label}} field, enter the label for the default value that displays on your Subgraph node\textquotesingle{}s port binding in its parent Shader Graph. For more information on port bindings, see \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_port-_bindings}{Port Bindings}{0}.
+\item Press Spacebar or right-\/click and select {\bfseries{Create Node}}. Find the {\bfseries{Branch On Input Connection}} node in the Create Node Menu, then double-\/click or press Enter with the node selected to add it to your Subgraph.
+\item On your Property node, select the output port and drag its new connection to the Branch On Connection node\textquotesingle{}s {\bfseries{Input}} port.
+\item To specify the value Shader Graph uses when the {\bfseries{Input}} port is connected on the Subgraph node in the parent Shader Graph, connect a node to the {\bfseries{Connected}} port. To specify the value that Shader Graph uses when the {\bfseries{Input}} port isn\textquotesingle{}t connected, connect another node to the {\bfseries{Not\+Connected}} port.
+\item To specify how Shader Graph uses your {\bfseries{Connected}} or {\bfseries{Not\+Connected}} values in your shader, connect any valid node to the {\bfseries{Output}} port on the Branch On Input Connection node.
+\end{DoxyEnumerate}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_24e9175110cf81d5539e8b984eb9dd562_autotoc_md2989}{}\doxysection{\texorpdfstring{Compatibility}{Compatibility}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_24e9175110cf81d5539e8b984eb9dd562_autotoc_md2989}
+The Branch On Input Connection \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2ab9f2417f09a36f21697511583f6bf1b}{nodes-\/compatibility-\/all}{0}\mbox{]}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_24e9175110cf81d5539e8b984eb9dd562_autotoc_md2990}{}\doxysection{\texorpdfstring{Inputs}{Inputs}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_24e9175110cf81d5539e8b984eb9dd562_autotoc_md2990}
+The Branch On Input Connection \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2snippets_2nodes-inputs}{nodes-\/inputs}{0}\mbox{]}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-3}
+\endhead
+{\bfseries{Input}}   &Property   &The property that determines the branching logic in the node, based on its connection state in the parent Shader Graph.    \\\cline{1-3}
+{\bfseries{Connected}}   &Dynamic Vector   &The value to send to the {\bfseries{Out}} port when {\bfseries{Input}} is connected in the parent Shader Graph.    \\\cline{1-3}
+{\bfseries{Not\+Connected}}   &Dynamic Vector   &The value to send to the {\bfseries{Out}} port when {\bfseries{Input}} isn\textquotesingle{}t connected in the parent Shader Graph.   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_24e9175110cf81d5539e8b984eb9dd562_autotoc_md2991}{}\doxysection{\texorpdfstring{Outputs}{Outputs}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_24e9175110cf81d5539e8b984eb9dd562_autotoc_md2991}
+The Branch On Input Connection \mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2snippets_2nodes-single-output}{nodes-\/single-\/output}{0}\mbox{]}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-3}
+\endhead
+{\bfseries{Out}}   &Dynamic Vector   &Outputs the value of either {\bfseries{Connected}} or {\bfseries{Not\+Connected}}, based on the {\bfseries{Input}} property\textquotesingle{}s connection state in the parent Shader Graph.   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_24e9175110cf81d5539e8b984eb9dd562_autotoc_md2992}{}\doxysection{\texorpdfstring{Example Subgraph usage}{Example Subgraph usage}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_24e9175110cf81d5539e8b984eb9dd562_autotoc_md2992}
+In the following example, a Branch On Input Connection node specifies the default behavior for a UV Subgraph input property. When a value for the {\bfseries{UV}} property is connected in the parent graph, then the value from that property is passed to the Checkerboard node to determine the UV coordinates for the checkerboard pattern. When the {\bfseries{UV}} property isn\textquotesingle{}t connected, then the Branch On Input Connection node uses the {\bfseries{UV0}} channel from the UV node for the Checkerboard node\textquotesingle{}s UV coordinates\+:
+
+\begin{DoxyNote}{Note}
+When you preview a Subgraph, the Branch On Input Connection node always uses its Not\+Connected value.
+\end{DoxyNote}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_24e9175110cf81d5539e8b984eb9dd562_autotoc_md2993}{}\doxysection{\texorpdfstring{Related nodes}{Related nodes}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_24e9175110cf81d5539e8b984eb9dd562_autotoc_md2993}
+\mbox{[}!include\doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2snippets_2nodes-related}{nodes-\/related}{0}\mbox{]} Branch On Input Connection node\+:
+
+
+\begin{DoxyItemize}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_branch-_node}{Branch node}{0}
+\item \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_sub-graph-_node}{Subgraph node}{0} 
+\end{DoxyItemize}

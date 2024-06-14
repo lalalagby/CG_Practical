@@ -1,0 +1,55 @@
+\chapter{Burst Inspector window reference}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2editor-burst-inspector}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2editor-burst-inspector}\index{Burst Inspector window reference@{Burst Inspector window reference}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2editor-burst-inspector_autotoc_md395}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2editor-burst-inspector_autotoc_md395}%
+ The \doxylink{namespace_burst}{Burst} Inspector window displays all the jobs and other \doxylink{namespace_burst}{Burst} compile targets in the project. To open the \doxylink{namespace_burst}{Burst} Inspector window, go to {\bfseries{Jobs}} \texorpdfstring{$>$}{>} {\bfseries{\doxylink{namespace_burst}{Burst}}} \texorpdfstring{$>$}{>} {\bfseries{Open Inspector}}.
+
+The \doxylink{namespace_burst}{Burst} Inspector displays all the Jobs that it can compile. It also displays the generated intermediate and native assembly code.
+
+When opening a new target job in the \doxylink{namespace_burst}{Burst} Inspector, it will try to focus the assembly directly related to the chosen bursted job. Furthermore, if branch flow arrows are shown, and they fill more than half of the assembly view, the inspector will scroll horizontally rightwards to focus the code instead of the branches.
+
+~\newline
+{\itshape \doxylink{namespace_burst}{Burst} Inspector with Branch Flow enabled}\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2editor-burst-inspector_autotoc_md396}{}\doxysection{\texorpdfstring{Burst Inspector panes}{Burst Inspector panes}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8burst_0d1_88_87_2_documentation_0i_2editor-burst-inspector_autotoc_md396}
+The {\bfseries{Compile Targets}} pane on the left of the window displays an alphabetical list of the jobs in the project that \doxylink{namespace_burst}{Burst} can compile. By default jobs either in the \doxylink{namespace_unity}{Unity} namespace or with "{}.\+Generated"{} in the name are excluded. This can be changed via the toggles {\bfseries{Show \doxylink{namespace_unity}{Unity} Namespace}} and {\bfseries{Show "{}.\+Generated"{}}} respectively. Disabled jobs in the list don\textquotesingle{}t have the {\ttfamily \mbox{[}Burst\+Compile\mbox{]}} attribute.
+
+The right output pane of the \doxylink{namespace_burst}{Burst} Inspector window displays options to view the assembly and intermediate code for the job you\textquotesingle{}ve selected in the {\bfseries{Compile Targets}} list. To expand or collapse elements of the code, select the colored boxes (some with ellipses) . By default. the \doxylink{namespace_burst}{Burst} Inspector automatically collapses blocks that it considers non-\/essential, such as most directives and data.
+
+It is possible to select lines of assembly. This will highlight the selected line, by underlining it. If this line contains any registers, the usage of these registers will be highlighted throughout the code; note that implicit registers are ignored for this feature.
+
+To select and copy the text in this pane, either click and drag with your mouse, or use Shift + arrow keys to select the text. To copy the text, either right-\/click and select {\bfseries{Copy Selection}}, or press Ctrl + C (Command + C on mac\+OS). Default behavior for the \doxylink{namespace_burst}{Burst} Inspector\textquotesingle{}s copy is to include underlying color tags. To change this, right-\/click with the mouse on the right pane, to open up the context menu, and untick {\bfseries{Copy Color Tags}}.
+
+At the top of the window, the following display options are available\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Display option}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Display option}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Output dropdown}}   &Use the dropdown to select how to output the information in the \doxylink{namespace_burst}{Burst} Inspector window    \\\cline{1-2}
+Plain Without Debug Information   &Displays the raw output.    \\\cline{1-2}
+Plain With Debug Information   &Displays the raw output with debug information.    \\\cline{1-2}
+Enhanced with Minimal Debug Information~\newline
+(Only available in {\bfseries{Assembly}} view)   &Displays the line information interweaved with the assembly to guide you to what line in your code matches what assembly output. If you\textquotesingle{}ve enabled {\bfseries{Show Branch Flow}}, the branch flow indicates where jump instruction might branch off to.    \\\cline{1-2}
+Enhanced With Full Debug Information~\newline
+(Only available in {\bfseries{Assembly}} view)   &Displays the same information as Enhanced with Minimal Debug Information but with debug information included.    \\\cline{1-2}
+Coloured With Minimal Debug Information~\newline
+(Only available in {\bfseries{Assembly}} view)   &Displays the same information as Enhanced with Minimal Debug Information, but displays the output in color.    \\\cline{1-2}
+Coloured With Full Debug Information~\newline
+(Only available in {\bfseries{Assembly}} view)   &Displays the same information as Enhanced with Full Debug Information, but displays the output in color.    \\\cline{1-2}
+{\bfseries{Safety Checks}}   &Enable this option to generate code that includes container access safety checks, for example, to check if a job is attempting to write to a read-\/only native container.    \\\cline{1-2}
+{\bfseries{Font Size}}   &Select the size of the text in the output pane.    \\\cline{1-2}
+{\bfseries{Architecture dropdown}}   &Select the target architecture for your build.    \\\cline{1-2}
+{\bfseries{Focus on Code}}~\newline
+(Only available in {\bfseries{Enhanced}} or {\bfseries{Coloured}} output)   &Collapses the least important blocks of the disassembly. When you select this, \doxylink{namespace_unity}{Unity} hides most of the assembly language directives and non code segments, allowing you to focus on the code itself.    \\\cline{1-2}
+{\bfseries{Expand all}} ~\newline
+(Only available in {\bfseries{Enhanced}} or {\bfseries{Coloured}} output)   &Expands all collapsed blocks of disassembly and displays all the hidden assembly language directives and data elements.    \\\cline{1-2}
+{\bfseries{Show Branch Flow}}~\newline
+(Only available in {\bfseries{Enhanced}} or {\bfseries{Coloured}} output)   &Enable this option to display arrows that show branch flow in the code. When enabled, the code moves to the right, to make space to display the arrows.   \\\cline{1-2}
+\end{longtabu}
+\texorpdfstring{$\vert$}{|} {\bfseries{Highlight SIMD Scalar vs Packed}}~\newline
+(Only available in {\bfseries{Enhanced}} or {\bfseries{Coloured}} output) \texorpdfstring{$\vert$}{|} Enable this option to display SIMD instruction differently depending on their nature (Whether they work on packed or scalar inputs). This can be used to quickly assess the quality of the generated vectorized code (see \href{https://youtu.be/BpwvXkoFcp8?t=447}{\texttt{ SIMD smell test by Andreas Fredriksson}}). \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} {\bfseries{Assembly}} \texorpdfstring{$\vert$}{|} Displays the final optimized native code that \doxylink{namespace_burst}{Burst} generated. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}.NET IL\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \texorpdfstring{$\vert$}{|} Displays the original .NET IL extracted from the job method. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} {\bfseries{LLVM IR (Unoptimized)}} \texorpdfstring{$\vert$}{|} Displays the internal LLVM IR before optimizations. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} {\bfseries{LLVM IR (Optimized)}} \texorpdfstring{$\vert$}{|} Displays the internal LLVM IR after optimizations. \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} {\bfseries{LLVM IR Optimization Diagnostics}} \texorpdfstring{$\vert$}{|} Displays LLVM diagnostics of the optimizations, such as if they succeeded or failed. \texorpdfstring{$\vert$}{|} 

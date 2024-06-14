@@ -1,0 +1,44 @@
+\doxysection{Cinemachine.\+Cinemachine\+Independent\+Impulse\+Listener Class Reference}
+\hypertarget{class_cinemachine_1_1_cinemachine_independent_impulse_listener}{}\label{class_cinemachine_1_1_cinemachine_independent_impulse_listener}\index{Cinemachine.CinemachineIndependentImpulseListener@{Cinemachine.CinemachineIndependentImpulseListener}}
+
+
+This behaviour can be attached to any object to make it shake in response to Impulses.  
+
+
+Inheritance diagram for Cinemachine.\+Cinemachine\+Independent\+Impulse\+Listener\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cinemachine_1_1_cinemachine_independent_impulse_listener}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_independent_impulse_listener_a53c47a1ffd2d629eed5a1978308ac790}\label{class_cinemachine_1_1_cinemachine_independent_impulse_listener_a53c47a1ffd2d629eed5a1978308ac790} 
+int {\bfseries m\+\_\+\+Channel\+Mask}
+\begin{DoxyCompactList}\small\item\em Impulse events on channels not included in the mask will be ignored. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_independent_impulse_listener_aa5c101edd3859f487e0988f07118a9fc}\label{class_cinemachine_1_1_cinemachine_independent_impulse_listener_aa5c101edd3859f487e0988f07118a9fc} 
+float {\bfseries m\+\_\+\+Gain}
+\begin{DoxyCompactList}\small\item\em Gain to apply to the Impulse signal. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_independent_impulse_listener_a7e762dcecbee86217c5772cb57da4b25}\label{class_cinemachine_1_1_cinemachine_independent_impulse_listener_a7e762dcecbee86217c5772cb57da4b25} 
+bool {\bfseries m\+\_\+\+Use2\+DDistance}
+\begin{DoxyCompactList}\small\item\em Enable this to perform distance calculation in 2D (ignore Z). \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_independent_impulse_listener_a55e6f6f795482285d629464c11987d9f}\label{class_cinemachine_1_1_cinemachine_independent_impulse_listener_a55e6f6f795482285d629464c11987d9f} 
+bool {\bfseries m\+\_\+\+Use\+Local\+Space}
+\begin{DoxyCompactList}\small\item\em Enable this to process all impulse signals in camera space. \end{DoxyCompactList}\item 
+\Hypertarget{class_cinemachine_1_1_cinemachine_independent_impulse_listener_a74e6fe80233596276ff7fac305f3105f}\label{class_cinemachine_1_1_cinemachine_independent_impulse_listener_a74e6fe80233596276ff7fac305f3105f} 
+\mbox{\hyperlink{struct_cinemachine_1_1_cinemachine_impulse_listener_1_1_impulse_reaction}{Cinemachine\+Impulse\+Listener.\+Impulse\+Reaction}} {\bfseries m\+\_\+\+Reaction\+Settings}
+\begin{DoxyCompactList}\small\item\em This controls the secondary reaction of the listener to the incoming impulse. ~\newline
+ The impulse might be for example a sharp shock, and the secondary reaction could be a vibration whose amplitude and duration is controlled by the size of the original impulse. This allows different listeners to respond in different ways to the same impulse signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This behaviour can be attached to any object to make it shake in response to Impulses. 
+
+This behaviour can be attached to the main Camera with the \doxylink{class_cinemachine_1_1_cinemachine_brain}{Cinemachine\+Brain}, to allow the main camera to shake without putting Listeners on the virtual cameras. In this case, camera shake is not dependent on the active virtual camera.
+
+It is also possible to put this behaviour on other scene objects to shake them in response to impulses. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hey\+Tea!/\+Library/\+Package\+Cache/com.\+unity.\+cinemachine@2.\+9.\+7/\+Runtime/\+Impulse/Cinemachine\+Independent\+Impulse\+Listener.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,83 @@
+\chapter{Dielectric Specular Node}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_dielectric-_specular-_node}{}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_dielectric-_specular-_node}\index{Dielectric Specular Node@{Dielectric Specular Node}}
+\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_dielectric-_specular-_node_autotoc_md3157}%
+\Hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_dielectric-_specular-_node_autotoc_md3157}%
+ \hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_dielectric-_specular-_node_autotoc_md3158}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_dielectric-_specular-_node_autotoc_md3158}
+Returns a {\bfseries{Dielectric Specular}} F0 value for a physically based material. The material to use can be selected with the {\bfseries{Material}} dropdown parameter on the \doxysectlink{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_node}{Node}{0}.
+
+A {\bfseries{Common}} {\bfseries{Material}} type defines a range between 0.\+034 and 0.\+048 s\+RGB values. The value between this range can be selected with the {\bfseries{Range}} parameter. This {\bfseries{Material}} type should be used for various materials such as plastics and fabrics.
+
+You can use {\bfseries{Custom}} material type to define your own physically based material value. The output value in this case is defined by its index of refraction. This can be set by the parameter {\bfseries{IOR}}.\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_dielectric-_specular-_node_autotoc_md3159}{}\doxysection{\texorpdfstring{Ports}{Ports}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_dielectric-_specular-_node_autotoc_md3159}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Direction   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Binding   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-5}
+\endhead
+Out   &Output   &Float   &None   &Output value   \\\cline{1-5}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_dielectric-_specular-_node_autotoc_md3160}{}\doxysection{\texorpdfstring{Controls}{Controls}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_dielectric-_specular-_node_autotoc_md3160}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Type   }&\cellcolor{\tableheadbgcolor}\textbf{ Options   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-4}
+\endhead
+Material   &Dropdown   &Common, Rusted\+Metal, Water, Ice, Glass, Custom   &Selects the material value to output.    \\\cline{1-4}
+Range   &Slider   &&Controls output value for {\bfseries{Common}} material type.    \\\cline{1-4}
+IOR   &Slider   &&Controls index of refraction for {\bfseries{Custom}} material type.   \\\cline{1-4}
+\end{longtabu}
+\hypertarget{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_dielectric-_specular-_node_autotoc_md3161}{}\doxysection{\texorpdfstring{Generated Code Example}{Generated Code Example}}\label{md__hey_tea_9_2_library_2_package_cache_2com_8unity_8shadergraph_0d14_80_88_2_documentation_0i_2_dielectric-_specular-_node_autotoc_md3161}
+The following example code represents one possible outcome of this node per {\bfseries{Material}} mode.
+
+{\bfseries{Common}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float\ \_DielectricSpecular\_Range\ =\ 0.5;}
+\DoxyCodeLine{float\ \_DielectricSpecular\_Out\ =\ lerp(0.034,\ 0.048,\ \_DielectricSpecular\_Range);}
+
+\end{DoxyCode}
+
+
+{\bfseries{Rusted\+Metal}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float\ \_DielectricSpecular\_Out\ =\ 0.030;}
+
+\end{DoxyCode}
+
+
+{\bfseries{Water}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float\ \_DielectricSpecular\_Out\ =\ 0.020;}
+
+\end{DoxyCode}
+
+
+{\bfseries{Ice}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float\ \_DielectricSpecular\_Out\ =\ 0.018;}
+
+\end{DoxyCode}
+
+
+{\bfseries{Glass}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float\ \_DielectricSpecular\_Out\ =\ 0.040;}
+
+\end{DoxyCode}
+
+
+{\bfseries{Custom}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{float\ \_DielectricSpecular\_IOR\ =\ 1;}
+\DoxyCodeLine{float\ \_DielectricSpecular\_Out\ =\ pow(\_Node\_IOR\ -\/\ 1,\ 2)\ /\ pow(\_DielectricSpecular\_IOR\ +\ 1,\ 2);}
+
+\end{DoxyCode}
+ 
