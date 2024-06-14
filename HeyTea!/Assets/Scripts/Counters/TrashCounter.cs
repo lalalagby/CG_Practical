@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 /**
@@ -25,11 +26,22 @@ public class TrashCounter : BaseCounter
     public override void Interact(Player player) {
         if (player.HasHeyTeaObject()) {
             PotObject potObject = player.GetHeyTeaObject() as PotObject;
-            if (potObject != null) {
-                potObject.DestroySelf();
-            } else {
+            if(potObject == null) {
                 player.GetHeyTeaObject().DestroySelf();
+            }else if (potObject.CheckTotalInpotNum() > 0) {
+                potObject.GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO);
+                potObject.DestroyChild(heyTeaObjectSO);
+                //potObject.DestroySelf();
             }
+            //if (potObject != null) {
+            //    HeyTeaObjectSO heyTeaObjectSO;
+            //    print("Potobject: " + potObject);
+            //    print("CheckTotalInpotNum():  " + potObject.CheckTotalInpotNum());
+            //    //print("heyteaobjectso: " + heyTeaObjectSO);
+            //    potObject.DestroySelf();
+            //} else {
+            //    player.GetHeyTeaObject().DestroySelf();
+            //}
         }
     }
 }
