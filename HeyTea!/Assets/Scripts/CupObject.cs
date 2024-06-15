@@ -5,39 +5,78 @@ using System.Linq;
 using UnityEngine;
 using static IKichenwareObejct;
 
+/**
+ * @brief Represents a cup object that can hold ingredients and manage their visual and logical representation.
+ * @details This class extends HeyTeaObject and implements IKichenwareObejct. It manages adding ingredients,
+ * combining them, and updating the visual representation of the cup's contents.
+ * 
+ * @date 01.09.2023
+ */
+
+/**
+ * @class CupObject
+ * @brief A class for handling cup objects in the game.
+ * 
+ * This class allows for adding ingredients to the cup, managing their layers, and updating the visual representation.
+ * It also handles events for when ingredients are added.
+ */
 [System.Serializable]
-public class CupObject : HeyTeaObject,IKichenwareObejct {
+public class CupObject : HeyTeaObject, IKichenwareObejct
+{
+    /**
+     * @brief Event triggered when an ingredient is added to the cup.
+     */
     public event EventHandler OnIngredinetAdded;
 
-    
+    /**
+     * @brief List of milk tea material quotas for the cup.
+     */
     [SerializeField] public List<MilkTeaMaterialQuota> milkTeaMaterialQuotaList;
+
+    /**
+     * @brief List of transforms for positioning the objects within the cup.
+     */
     [SerializeField] private List<HeyTeaObjectTransform> heyTeaObjectTransformList;
 
-    // try to add something in the cup
-    public bool TryAddIngredient(HeyTeaObjectSO heyTeaObjectSO, MilkTeaMaterialType milkTeaMaterialType) { 
-        for (int i = 0; i < milkTeaMaterialQuotaList.Count(); i++) {
-            if(milkTeaMaterialType== milkTeaMaterialQuotaList[i].milkTeaMaterialType) {
-                if (milkTeaMaterialQuotaList[i].CanAdd(heyTeaObjectSO)) {
+    /**
+     * @brief Tries to add an ingredient to the cup.
+     * @param heyTeaObjectSO The HeyTeaObjectSO representing the ingredient to be added.
+     * @param milkTeaMaterialType The type of milk tea material.
+     * @return True if the ingredient was successfully added, otherwise false.
+     */
+    public bool TryAddIngredient(HeyTeaObjectSO heyTeaObjectSO, MilkTeaMaterialType milkTeaMaterialType)
+    {
+        for (int i = 0; i < milkTeaMaterialQuotaList.Count(); i++)
+        {
+            if (milkTeaMaterialType == milkTeaMaterialQuotaList[i].milkTeaMaterialType)
+            {
+                if (milkTeaMaterialQuotaList[i].CanAdd(heyTeaObjectSO))
+                {
                     HeyTeaObject heyTeaObject = SpawnHeyTeaObejct(heyTeaObjectSO, milkTeaMaterialType);
-                    if (heyTeaObject == null) {
+                    if (heyTeaObject == null)
+                    {
                         Debug.Log("Create object failed");
                         return false;
                     }
-                    if (milkTeaMaterialQuotaList[i].AddHeyTeaObject(heyTeaObject)) {
-                        if (milkTeaMaterialQuotaList[i].CheckMixed()) {
-                            heyTeaObject=CombineObject(milkTeaMaterialQuotaList[i]);
-                            if (!milkTeaMaterialQuotaList[i].AddHeyTeaObject(heyTeaObject)) {
+                    if (milkTeaMaterialQuotaList[i].AddHeyTeaObject(heyTeaObject))
+                    {
+                        if (milkTeaMaterialQuotaList[i].CheckMixed())
+                        {
+                            heyTeaObject = CombineObject(milkTeaMaterialQuotaList[i]);
+                            if (!milkTeaMaterialQuotaList[i].AddHeyTeaObject(heyTeaObject))
+                            {
                                 Debug.LogError("Mixed Failed");
-                            }    
+                            }
                         }
 
-                        for(int j = 0; j < heyTeaObjectTransformList.Count; j++) {
+                        for (int j = 0; j < heyTeaObjectTransformList.Count; j++)
+                        {
                             heyTeaObjectTransformList[j].ResetLayer(GetLayer());
                         }
-                        
+
                         OnIngredinetAdded?.Invoke(this, EventArgs.Empty);
                         Debug.Log("add success");
-                        return true; 
+                        return true;
                     }
                 }
             }
@@ -46,13 +85,22 @@ public class CupObject : HeyTeaObject,IKichenwareObejct {
         return false;
     }
 
-    public void DestroyChild(HeyTeaObjectSO heyTeaObjectSO) {
-        if (heyTeaObjectSO == null) {
+    /**
+     * @brief Destroys the child objects of a given HeyTeaObjectSO.
+     * @param heyTeaObjectSO The HeyTeaObjectSO whose child objects need to be destroyed.
+     */
+    public void DestroyChild(HeyTeaObjectSO heyTeaObjectSO)
+    {
+        if (heyTeaObjectSO == null)
+        {
             return;
         }
-        for (int i = 0; i < milkTeaMaterialQuotaList.Count; i++) {
-            for (int j = 0; j < milkTeaMaterialQuotaList[i].heyTeaObejctStructArray.Count(); j++) {
-                if (milkTeaMaterialQuotaList[i].heyTeaObejctStructArray[j].heyTeaObjectSO == heyTeaObjectSO && milkTeaMaterialQuotaList[i].heyTeaObejctStructArray[j].heyTeaObject != null) {
+        for (int i = 0; i < milkTeaMaterialQuotaList.Count; i++)
+        {
+            for (int j = 0; j < milkTeaMaterialQuotaList[i].heyTeaObejctStructArray.Count(); j++)
+            {
+                if (milkTeaMaterialQuotaList[i].heyTeaObejctStructArray[j].heyTeaObjectSO == heyTeaObjectSO && milkTeaMaterialQuotaList[i].heyTeaObejctStructArray[j].heyTeaObject != null)
+                {
                     DestroyImmediate(milkTeaMaterialQuotaList[i].heyTeaObejctStructArray[j].heyTeaObject.transform.gameObject);
                     milkTeaMaterialQuotaList[i].heyTeaObejctStructArray[j].heyTeaObject = null;
                     milkTeaMaterialQuotaList[i].heyTeaObejctStructArray[j].currentNum = 0;
@@ -61,15 +109,23 @@ public class CupObject : HeyTeaObject,IKichenwareObejct {
         }
     }
 
-    //Get layer to set the child objects transform
-    //four layer: teabase milk tea milktea 
-    private int GetLayer() {
+    /**
+     * @brief Gets the current layer to set the child objects transform.
+     * @details This method calculates the layer based on the current ingredients in the cup.
+     * @return The current layer.
+     */
+    private int GetLayer()
+    {
         int layer = 0;
-        foreach(MilkTeaMaterialQuota milkTeaMaterialQuota in milkTeaMaterialQuotaList) {
-            if (milkTeaMaterialQuota.canMixed) {
-                for(int i = 0; i < milkTeaMaterialQuota.heyTeaObejctStructArray.Count(); i++) {
-                    if (milkTeaMaterialQuota.heyTeaObejctStructArray[i].currentNum >0) {
-                        layer = i+1;
+        foreach (MilkTeaMaterialQuota milkTeaMaterialQuota in milkTeaMaterialQuotaList)
+        {
+            if (milkTeaMaterialQuota.canMixed)
+            {
+                for (int i = 0; i < milkTeaMaterialQuota.heyTeaObejctStructArray.Count(); i++)
+                {
+                    if (milkTeaMaterialQuota.heyTeaObejctStructArray[i].currentNum > 0)
+                    {
+                        layer = i + 1;
                     }
                 }
             }
@@ -77,24 +133,38 @@ public class CupObject : HeyTeaObject,IKichenwareObejct {
         return layer;
     }
 
-    //if the cup have milk and tea, it will delete the milk and tea and generate milketea prefab
-    private HeyTeaObject CombineObject(MilkTeaMaterialQuota milkTeaMaterialQuota) {
-        for (int i = 0; i < milkTeaMaterialQuota.heyTeaObejctStructArray.Count() - 1;i++) {
+    /**
+     * @brief Combines the objects in the given MilkTeaMaterialQuota to create a new object.
+     * @param milkTeaMaterialQuota The MilkTeaMaterialQuota to combine.
+     * @return The new HeyTeaObject created from the combination.
+     */
+    private HeyTeaObject CombineObject(MilkTeaMaterialQuota milkTeaMaterialQuota)
+    {
+        for (int i = 0; i < milkTeaMaterialQuota.heyTeaObejctStructArray.Count() - 1; i++)
+        {
             DestroyImmediate(milkTeaMaterialQuota.heyTeaObejctStructArray[i].heyTeaObject.gameObject);
         }
         milkTeaMaterialQuota.ClearAll();
 
-        return SpawnHeyTeaObejct(milkTeaMaterialQuota.heyTeaObejctStructArray[milkTeaMaterialQuota.heyTeaObejctStructArray.Count()-1].heyTeaObjectSO,milkTeaMaterialQuota.milkTeaMaterialType);
+        return SpawnHeyTeaObejct(milkTeaMaterialQuota.heyTeaObejctStructArray[milkTeaMaterialQuota.heyTeaObejctStructArray.Count() - 1].heyTeaObjectSO, milkTeaMaterialQuota.milkTeaMaterialType);
     }
 
-    //when we put object into cup,we will generate a new object and delete the old object.
-    public HeyTeaObject SpawnHeyTeaObejct(HeyTeaObjectSO heyTeaObjectSO, MilkTeaMaterialType milkTeaMaterialType) {
+    /**
+     * @brief Spawns a new HeyTeaObject and sets its parent transform.
+     * @param heyTeaObjectSO The HeyTeaObjectSO to spawn.
+     * @param milkTeaMaterialType The type of milk tea material.
+     * @return The newly spawned HeyTeaObject.
+     */
+    public HeyTeaObject SpawnHeyTeaObejct(HeyTeaObjectSO heyTeaObjectSO, MilkTeaMaterialType milkTeaMaterialType)
+    {
         Transform transform = Instantiate(heyTeaObjectSO.prefab);
 
         HeyTeaObject heyTeaObject = transform.GetComponent<HeyTeaObject>();
 
-        for(int i=0;i< heyTeaObjectTransformList.Count(); i++) {
-            if (heyTeaObjectTransformList[i].CanSetParent(milkTeaMaterialType)) {
+        for (int i = 0; i < heyTeaObjectTransformList.Count(); i++)
+        {
+            if (heyTeaObjectTransformList[i].CanSetParent(milkTeaMaterialType))
+            {
                 heyTeaObjectTransformList[i].SetTransform(heyTeaObject.transform);
                 return heyTeaObject;
             }
@@ -103,18 +173,29 @@ public class CupObject : HeyTeaObject,IKichenwareObejct {
         return null;
     }
 
-    //return the object list in the cup.
-    public List<MilkTeaMaterialQuota> GetMilkTeaMaterialQuota() {
+    /**
+     * @brief Gets the list of milk tea material quotas.
+     * @return The list of milk tea material quotas.
+     */
+    public List<MilkTeaMaterialQuota> GetMilkTeaMaterialQuota()
+    {
         return milkTeaMaterialQuotaList;
     }
 
-    // Get HeyTeaObjectSO from this(Cup)
-    public List<HeyTeaObjectSO> GetOutputHeyTeaObejctSOList()  {
+    /**
+     * @brief Gets the list of HeyTeaObjectSO from the cup.
+     * @return The list of HeyTeaObjectSO in the cup.
+     */
+    public List<HeyTeaObjectSO> GetOutputHeyTeaObejctSOList()
+    {
         List<HeyTeaObjectSO> heyTeaObjectSOList = new List<HeyTeaObjectSO>();
 
-        foreach (MilkTeaMaterialQuota milkTeaMaterialQuota in milkTeaMaterialQuotaList)  {
-            foreach (HeyTeaObejctStruct heyTeaObejctStruct in milkTeaMaterialQuota.heyTeaObejctStructArray)  {
-                if (heyTeaObejctStruct.currentNum > 0)  {
+        foreach (MilkTeaMaterialQuota milkTeaMaterialQuota in milkTeaMaterialQuotaList)
+        {
+            foreach (HeyTeaObejctStruct heyTeaObejctStruct in milkTeaMaterialQuota.heyTeaObejctStructArray)
+            {
+                if (heyTeaObejctStruct.currentNum > 0)
+                {
                     heyTeaObjectSOList.Add(heyTeaObejctStruct.heyTeaObjectSO);
                 }
             }

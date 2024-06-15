@@ -6,7 +6,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 /**
- * @file SoupContainerCounter.cs
  * @brief Container interaction class
  * 
  * @details This class handles interactions between the player and the SoupContainerCounter.

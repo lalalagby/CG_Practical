@@ -2,6 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * @brief Handles the animation for the soup container counter interactions.
+ * @details This class manages the visual animations for the soup container counter interactions,
+ * including triggering the open/close animation when a player grabs an object.
+ * 
+ * @author Yong Wu
+ * @date 01.09.2023
+ */
 public class SoupContainerCounterVisual : MonoBehaviour
 {
     private const string OPEN_CLOSE = "OpenClose";

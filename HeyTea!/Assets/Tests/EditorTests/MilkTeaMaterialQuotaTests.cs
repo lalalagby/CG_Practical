@@ -5,8 +5,19 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using static IKichenwareObejct;
 
+/**
+ * @class MilkTeaMaterialQuotaTests
+ * @brief Unit tests for the MilkTeaMaterialQuota class, which handles the functionalities related to managing quotas of milk tea materials.
+ * @author Xinyue Cheng
+ * @details
+ * The MilkTeaMaterialQuotaTests class includes various test cases to validate the functionalities of the MilkTeaMaterialQuota class,
+ * such as adding ingredients, checking mix status, and clearing all objects.
+ */
 public class MilkTeaMaterialQuotaTests
 {
+    /**
+     * @brief [TC0301] Test case to validate if CanAdd returns true when canMixed is true and the current number is below the max limit.
+     */
     [Test]
     public void CanAdd_WhenCanMixedIsTrueAndCurrentNumberIsBelowMax_ReturnsTrue()
     {
@@ -30,6 +41,9 @@ public class MilkTeaMaterialQuotaTests
         Assert.IsTrue(result);
     }
 
+    /**
+     * @brief [TC0302] Test case to validate if CanAdd returns false when canMixed is true and the current number is at the max limit.
+     */
     [Test]
     public void CanAdd_WhenCanMixedIsTrueAndCurrentNumberIsAtMax_ReturnsFalse()
     {
@@ -53,6 +67,9 @@ public class MilkTeaMaterialQuotaTests
         Assert.IsFalse(result);
     }
 
+    /**
+     * @brief [TC0303] Test case to validate if CanAdd returns true when canMixed is false and the current number is below the max limit.
+     */
     [Test]
     public void CanAdd_WhenCanMixedIsFalseAndCurrentNumberIsBelowMax_ReturnsTrue()
     {
@@ -76,6 +93,9 @@ public class MilkTeaMaterialQuotaTests
         Assert.IsTrue(result);
     }
 
+    /**
+     * @brief [TC0304] Test case to validate if CanAdd returns false when the total sum is reached.
+     */
     [Test]
     public void CanAdd_WhenTotalSumIsReached_ReturnsFalse()
     {
@@ -98,6 +118,9 @@ public class MilkTeaMaterialQuotaTests
         Assert.IsFalse(result);
     }
 
+    /**
+     * @brief [TC0305] Test case to validate if CheckMixed returns true when canMixed is true and all current numbers equal max number.
+     */
     [Test]
     public void CheckMixed_WhenCanMixedIsTrueAndAllCurrentNumsEqualMaxNum_ReturnsTrue()
     {
@@ -119,6 +142,9 @@ public class MilkTeaMaterialQuotaTests
         Assert.IsTrue(result);
     }
 
+    /**
+     * @brief [TC0306] Test case to validate if CheckMixed returns false when canMixed is true and not all current numbers equal max number.
+     */
     [Test]
     public void CheckMixed_WhenCanMixedIsTrueAndNotAllCurrentNumsEqualMaxNum_ReturnsFalse()
     {
@@ -140,6 +166,9 @@ public class MilkTeaMaterialQuotaTests
         Assert.IsFalse(result);
     }
 
+    /**
+     * @brief [TC0307] Test case to validate if CheckMixed returns false when canMixed is false.
+     */
     [Test]
     public void CheckMixed_WhenCanMixedIsFalse_ReturnsFalse()
     {
@@ -161,6 +190,9 @@ public class MilkTeaMaterialQuotaTests
         Assert.IsFalse(result);
     }
 
+    /**
+     * @brief [TC0308] Test case to validate if ClearAll clears all HeyTeaObjects and resets current numbers to zero.
+     */
     [Test]
     public void ClearAll_ClearsAllHeyTeaObjectsAndResetsCurrentNumbersToZero()
     {
@@ -185,6 +217,9 @@ public class MilkTeaMaterialQuotaTests
         }
     }
 
+    /**
+     * @brief [TC0309] Test case to validate if AddHeyTeaObject adds the HeyTeaObject and updates the current number when HeyTeaObjectSO exists in the array.
+     */
     [Test]
     public void AddHeyTeaObject_AddsHeyTeaObjectAndUpdateCurrentNum_WhenHeyTeaObjectSOExistsInArray()
     {

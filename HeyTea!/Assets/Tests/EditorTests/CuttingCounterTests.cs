@@ -5,7 +5,14 @@ using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.TestTools;
-
+/**
+ * @class CuttingCounterTests
+ * @brief Unit tests for the CuttingCounter class, which handles the interaction between the player and the cutting counter.
+ * @author Xinyue Cheng
+ * @details
+ * The CuttingCounterTests class includes various test cases to validate the interactions and functionalities of the CuttingCounter class,
+ * such as handling HeyTeaObject instances and their states during interactions.
+ */
 public class CuttingCounterTests
 {
     private CuttingCounter cuttingCounter;
@@ -16,15 +23,31 @@ public class CuttingCounterTests
     private CuttingRecipeSO cuttingRecipeSO;
     private CupObject cup;
 
+    /**
+     * @brief Instantiates a prefab from a given path.
+     * @param prefabPath The path to the prefab asset.
+     * @return The instantiated GameObject.
+     */
     private GameObject InstantiatePrefab(string prefabPath)
     {
         var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(prefabPath);
         return GameObject.Instantiate(prefab);
     }
+
+    /**
+     * @brief Loads a HeyTeaObjectSO from a given path.
+     * @param path The path to the HeyTeaObjectSO asset.
+     * @return The loaded HeyTeaObjectSO.
+     */
     private HeyTeaObjectSO CreateHeyTeaObjectSO(string path)
     {
         return AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>(path);
     }
+
+    /**
+     * @brief Creates a CupObject instance.
+     * @return The created CupObject.
+     */
     private CupObject CreateCupObject()
     {
         var cupPrefab = AssetDatabase.LoadAssetAtPath<Transform>("Assets/Prefabs/HeyTeaObjects/Cup.prefab");
@@ -33,6 +56,9 @@ public class CuttingCounterTests
         return cupInstance.GetComponent<CupObject>();
     }
 
+    /**
+     * @brief Sets up the test environment by initializing player, cutting counter, and necessary objects.
+     */
     [SetUp]
     public void Setup()
     {
@@ -44,6 +70,10 @@ public class CuttingCounterTests
         cup = CreateCupObject();
     }
 
+    /**
+     * @brief [TC1401] Test case to validate interaction when both player and cutting counter have nothing.
+     * @param cuttingCounterPath The path to the cutting counter prefab.
+     */
     [TestCase("Assets/Prefabs/Counters/FunctionCounter/CuttingCounter.prefab")]
     public void PlayerHasNothingCuttingCounterHasNothing(string cuttingCounterPath)
     {
@@ -56,6 +86,11 @@ public class CuttingCounterTests
         Assert.IsFalse(player.HasHeyTeaObject());
     }
 
+    /**
+     * @brief [TC1402] Test case to validate interaction when player takes an object from the cutting counter.
+     * @param expectedSOPath The path to the expected HeyTeaObjectSO asset.
+     * @param cuttingCounterPath The path to the cutting counter prefab.
+     */
     [TestCase("Assets/ScriptableObjectSO/HeyTeaObjectSO/Grape.asset", "Assets/Prefabs/Counters/FunctionCounter/CuttingCounter.prefab")]
     [TestCase("Assets/ScriptableObjectSO/HeyTeaObjectSO/Orange.asset", "Assets/Prefabs/Counters/FunctionCounter/CuttingCounter.prefab")]
     [TestCase("Assets/ScriptableObjectSO/HeyTeaObjectSO/Strawberry.asset", "Assets/Prefabs/Counters/FunctionCounter/CuttingCounter.prefab")]
@@ -79,6 +114,11 @@ public class CuttingCounterTests
         Assert.AreEqual(heyTeaObject, player.GetHeyTeaObject());
     }
 
+    /**
+     * @brief [TC1403] Test case to validate interaction when player cannot take an object from the cutting counter.
+     * @param expectedSOPath The path to the expected HeyTeaObjectSO asset.
+     * @param cuttingCounterPath The path to the cutting counter prefab.
+     */
     [TestCase("Assets/ScriptableObjectSO/HeyTeaObjectSO/Grape.asset", "Assets/Prefabs/Counters/FunctionCounter/CuttingCounter.prefab")]
     [TestCase("Assets/ScriptableObjectSO/HeyTeaObjectSO/Orange.asset", "Assets/Prefabs/Counters/FunctionCounter/CuttingCounter.prefab")]
     [TestCase("Assets/ScriptableObjectSO/HeyTeaObjectSO/Strawberry.asset", "Assets/Prefabs/Counters/FunctionCounter/CuttingCounter.prefab")]
@@ -101,6 +141,11 @@ public class CuttingCounterTests
         Assert.IsTrue(player.HasHeyTeaObject());
     }
 
+    /**
+     * @brief [TC1404] Test case to validate interaction when player puts an object on the cutting counter.
+     * @param expectedSOPath The path to the expected HeyTeaObjectSO asset.
+     * @param cuttingCounterPath The path to the cutting counter prefab.
+     */
     [TestCase("Assets/ScriptableObjectSO/HeyTeaObjectSO/Grape.asset", "Assets/Prefabs/Counters/FunctionCounter/CuttingCounter.prefab")]
     [TestCase("Assets/ScriptableObjectSO/HeyTeaObjectSO/Orange.asset", "Assets/Prefabs/Counters/FunctionCounter/CuttingCounter.prefab")]
     [TestCase("Assets/ScriptableObjectSO/HeyTeaObjectSO/Strawberry.asset", "Assets/Prefabs/Counters/FunctionCounter/CuttingCounter.prefab")]
@@ -116,6 +161,11 @@ public class CuttingCounterTests
         Assert.AreEqual(heyTeaObject, cuttingCounter.GetHeyTeaObject());
     }
 
+    /**
+     * @brief [TC1405] Test case to validate interaction when player has an object that cannot be put on the cutting counter.
+     * @param expectedSOPath The path to the expected HeyTeaObjectSO asset.
+     * @param cuttingCounterPath The path to the cutting counter prefab.
+     */
     [TestCase("Assets/ScriptableObjectSO/HeyTeaObjectSO/BaggedSugar.asset", "Assets/Prefabs/Counters/FunctionCounter/CuttingCounter.prefab")]
     [TestCase("Assets/ScriptableObjectSO/HeyTeaObjectSO/BaggedPearl.asset", "Assets/Prefabs/Counters/FunctionCounter/CuttingCounter.prefab")]
     [TestCase("Assets/ScriptableObjectSO/HeyTeaObjectSO/BaggedRedBean.asset", "Assets/Prefabs/Counters/FunctionCounter/CuttingCounter.prefab")]
@@ -132,8 +182,11 @@ public class CuttingCounterTests
         Assert.IsTrue(player.HasHeyTeaObject());
     }
 
-
-
+    /**
+     * @brief [TC1406] Test case to validate interaction when player cannot take an object with a cup from the cutting counter.
+     * @param expectedSOPath The path to the expected HeyTeaObjectSO asset.
+     * @param cuttingCounterPath The path to the cutting counter prefab.
+     */
     [TestCase("Assets/ScriptableObjectSO/HeyTeaObjectSO/Grape.asset", "Assets/Prefabs/Counters/FunctionCounter/CuttingCounter.prefab")]
     [TestCase("Assets/ScriptableObjectSO/HeyTeaObjectSO/Orange.asset", "Assets/Prefabs/Counters/FunctionCounter/CuttingCounter.prefab")]
     [TestCase("Assets/ScriptableObjectSO/HeyTeaObjectSO/Strawberry.asset", "Assets/Prefabs/Counters/FunctionCounter/CuttingCounter.prefab")]
@@ -155,6 +208,7 @@ public class CuttingCounterTests
         Assert.AreEqual(heyTeaObject, cuttingCounter.GetHeyTeaObject());
     }
 
+    //[TC1407]
     //[TestCase("Assets/ScriptableObjectSO/HeyTeaObjectSO/GrapeSlice.asset", "Assets/Prefabs/Counters/FunctionCounter/CuttingCounter.prefab")]
     //[TestCase("Assets/ScriptableObjectSO/HeyTeaObjectSO/OrangeSlice.asset", "Assets/Prefabs/Counters/FunctionCounter/CuttingCounter.prefab")]
     //[TestCase("Assets/ScriptableObjectSO/HeyTeaObjectSO/StrawberrySlice.asset", "Assets/Prefabs/Counters/FunctionCounter/CuttingCounter.prefab")]
@@ -178,3 +232,5 @@ public class CuttingCounterTests
     //    //Assert.IsTrue(cup.GetMilkTeaMaterialQuota().Any(q => q.heyTeaObejctStructArray.Any(s => s.heyTeaObjectSO == heyTeaObjectSO)));
     //}
 }
+
+

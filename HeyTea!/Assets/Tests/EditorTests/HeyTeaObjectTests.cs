@@ -4,8 +4,19 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 
+/**
+ * @class HeyTeaObjectTests
+ * @brief Unit tests for the HeyTeaObject class, which handles various functionalities of HeyTeaObject instances.
+ * @author Xinyue Cheng
+ * @details
+ * The HeyTeaObjectTests class includes various test cases to validate the functionalities of the HeyTeaObject class,
+ * such as setting parents, interface implementations, and other interactions.
+ */
 public class HeyTeaObjectTests
 {
+    /**
+     * @brief [TC0201] Test case to validate if SetHeyTeaObjectParents sets the parent correctly.
+     */
     [Test]
     public void SetHeyTeaObjectParents_SetsParentCorrectly()
     {
@@ -24,6 +35,9 @@ public class HeyTeaObjectTests
         Assert.AreEqual(parentObject.transform, heyTeaObject.transform.parent);
     }
 
+    /**
+     * @brief [TC0202] Test case to validate if TryGetKichenware returns true and sets the value correctly when implementing the interface.
+     */
     [Test]
     public void TryGetKichenware_WhenImplementingInterface_ReturnsTrueAndSetsValue()
     {
@@ -45,6 +59,9 @@ public class HeyTeaObjectTests
         Assert.AreEqual(kichenwareObject, result);
     }
 
+    /**
+     * @brief [TC0203] Test case to validate if TryGetKichenware returns false and sets the value to null when not implementing the interface.
+     */
     [Test]
     public void TryGetKichenware_WhenNotImplementingInterface_ReturnsFalseAndSetsNull()
     {
@@ -62,39 +79,71 @@ public class HeyTeaObjectTests
         Assert.IsNull(result);
     }
 
+    /**
+     * @class MockHeyTeaObjectParent
+     * @brief Mock implementation of the IHeyTeaObjectParents interface for testing purposes.
+     */
     public class MockHeyTeaObjectParent : MonoBehaviour, IHeyTeaObjectParents
     {
         private HeyTeaObject heyTeaObject;
 
+        /**
+         * @brief Clears the HeyTeaObject reference.
+         */
         public void ClearHeyTeaObject()
         {
             heyTeaObject = null;
         }
 
+        /**
+         * @brief Gets the transform to follow for HeyTeaObject.
+         * @return The transform of the parent object.
+         */
         public Transform GetHeyTeaObjectFollowTransform()
         {
             return transform;
         }
 
+        /**
+         * @brief Checks if the parent has a HeyTeaObject.
+         * @return True if the parent has a HeyTeaObject, false otherwise.
+         */
         public bool HasHeyTeaObject()
         {
             return heyTeaObject != null;
         }
 
+        /**
+         * @brief Sets the HeyTeaObject reference.
+         * @param heyTeaObject The HeyTeaObject to set.
+         */
         public void SetHeyTeaObject(HeyTeaObject heyTeaObject)
         {
             this.heyTeaObject = heyTeaObject;
         }
 
+        /**
+         * @brief Gets the HeyTeaObject reference.
+         * @return The HeyTeaObject instance.
+         */
         public HeyTeaObject GetHeyTeaObject()
         {
             return heyTeaObject;
         }
     }
 
-    // Mock implementation of IKichenwareObejct interface
+    /**
+     * @class MockKichenwareObject
+     * @brief Mock implementation of the IKichenwareObejct interface for testing purposes.
+     */
     public class MockKichenwareObject : HeyTeaObject, IKichenwareObejct
     {
+        /**
+         * @brief Tries to add an ingredient to the kitchenware object.
+         * @param heyTeaObjectSO The HeyTeaObjectSO to add.
+         * @param materialType The material type of the ingredient.
+         * @return True if the ingredient was added successfully, false otherwise.
+         */
         public bool TryAddIngredient(HeyTeaObjectSO heyTeaObjectSO, IKichenwareObejct.MilkTeaMaterialType materialType)
         {
             return true;

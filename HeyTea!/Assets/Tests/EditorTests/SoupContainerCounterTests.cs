@@ -7,6 +7,14 @@ using UnityEngine.TestTools;
 using static IKichenwareObejct;
 using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
+/**
+ * @class SoupContainerCounterTests
+ * @brief Unit tests for the SoupContainerCounter class, which handles interactions between the player and the soup container counter.
+ * @author Xinyue Cheng
+ * @details
+ * The SoupContainerCounterTests class includes various test cases to validate the functionalities of the SoupContainerCounter class,
+ * such as adding ingredients to kitchenware objects, and ensuring correct interactions based on the player's held objects.
+ */
 public class SoupContainerCounterTests
 {
     private SoupContainerCounter soupContainerCounter;
@@ -16,15 +24,32 @@ public class SoupContainerCounterTests
     private IKichenwareObejct kichenwareObject;
     private PotObject pot;
     private CupObject cup;
+
+    /**
+     * @brief Instantiates a prefab from a given path.
+     * @param prefabPath The path of the prefab to instantiate.
+     * @return The instantiated GameObject.
+     */
     private GameObject InstantiatePrefab(string prefabPath)
     {
         var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(prefabPath);
         return GameObject.Instantiate(prefab);
     }
+
+    /**
+     * @brief Creates a HeyTeaObjectSO from a given path.
+     * @param path The path of the HeyTeaObjectSO to create.
+     * @return The created HeyTeaObjectSO.
+     */
     private HeyTeaObjectSO CreateHeyTeaObjectSO(string path)
     {
         return AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>(path);
     }
+
+    /**
+     * @brief Creates a PotObject from a predefined path.
+     * @return The created PotObject.
+     */
     private PotObject CreatePotObject()
     {
         var potPrefab = AssetDatabase.LoadAssetAtPath<Transform>("Assets/Prefabs/HeyTeaObjects/Pot.prefab");
@@ -33,6 +58,10 @@ public class SoupContainerCounterTests
         return potInstance.GetComponent<PotObject>();
     }
 
+    /**
+     * @brief Creates a CupObject from a predefined path.
+     * @return The created CupObject.
+     */
     private CupObject CreateCupObject()
     {
         var cupPrefab = AssetDatabase.LoadAssetAtPath<Transform>("Assets/Prefabs/HeyTeaObjects/Cup.prefab");
@@ -41,6 +70,9 @@ public class SoupContainerCounterTests
         return cupInstance.GetComponent<CupObject>();
     }
 
+    /**
+     * @brief Sets up the test environment before each test.
+     */
     [SetUp]
     public void Setup()
     {
@@ -49,10 +81,11 @@ public class SoupContainerCounterTests
         heyTeaObject = new GameObject().AddComponent<HeyTeaObject>();
         pot = CreatePotObject();
         cup = CreateCupObject();
-
     }
 
-    //player has no object, cannot grab object from soup container counter
+    /**
+     * @brief [TC0901] Tests that the player cannot grab an object from the soup container counter when not holding any object.
+     */
     [Test]
     public void PlayerHasNoObject_CannotGrabObjectFromSoupContainerCounter()
     {
@@ -66,7 +99,11 @@ public class SoupContainerCounterTests
         LogAssert.Expect(LogType.Log, "Player is not holding any object.");
     }
 
-    //player has cup and can add ingredient to cup
+    /**
+     * @brief [TC0902] Tests that the player can add an ingredient to the cup when holding a cup.
+     * @param containerCounterPath The path of the container counter prefab.
+     * @param expectedSOPath The path of the expected HeyTeaObjectSO.
+     */
     [TestCase("Assets/Prefabs/Counters/SoupCounter/MilkCounter.prefab", "Assets/ScriptableObjectSO/HeyTeaObjectSO/LiquidMilk.asset")]
     [TestCase("Assets/Prefabs/Counters/SoupCounter/TeaCounter.prefab", "Assets/ScriptableObjectSO/HeyTeaObjectSO/LiquidTea.asset")]
     public void PlayerHasCup_CanAddIngredientToCup(string containerCounterPath, string expectedSOPath)
@@ -92,33 +129,39 @@ public class SoupContainerCounterTests
         LogAssert.Expect(LogType.Log, "Add ingredient to the cup.");
     }
 
-    ////player has pot and cannot add ingredient to pot
-    //[TestCase("Assets/Prefabs/Counters/SoupCounter/MilkCounter.prefab", "Assets/ScriptableObjectSO/HeyTeaObjectSO/LiquidMilk.asset")]
-    //[TestCase("Assets/Prefabs/Counters/SoupCounter/TeaCounter.prefab", "Assets/ScriptableObjectSO/HeyTeaObjectSO/LiquidTea.asset")]
-    //public void PlayerHasPot_CannotAddIngredientToPot(string containerCounterPath, string expectedSOPath)
-    //{
-    //    // Arrange
-    //    player.ClearHeyTeaObject();
-    //    heyTeaObjectSO = CreateHeyTeaObjectSO(expectedSOPath);
-    //    heyTeaObject.SetHeyTeaObjectSO(heyTeaObjectSO);
-    //    heyTeaObjectSO.materialType = HeyTeaObjectSO.MilkTeaMaterialType.teaBase;
-    //    player.SetHeyTeaObject(pot);
-    //    soupContainerCounter = InstantiatePrefab(containerCounterPath).GetComponent<SoupContainerCounter>();
-    //    // Act
-    //    soupContainerCounter.Interact(player);
+    /**
+     * @brief [TC0903] Tests that the player cannot add an ingredient to the pot when holding a pot.
+     * @param containerCounterPath The path of the container counter prefab.
+     * @param expectedSOPath The path of the expected HeyTeaObjectSO.
+     */
+    [TestCase("Assets/Prefabs/Counters/SoupCounter/MilkCounter.prefab", "Assets/ScriptableObjectSO/HeyTeaObjectSO/LiquidMilk.asset")]
+    [TestCase("Assets/Prefabs/Counters/SoupCounter/TeaCounter.prefab", "Assets/ScriptableObjectSO/HeyTeaObjectSO/LiquidTea.asset")]
+    public void PlayerHasPot_CannotAddIngredientToPot(string containerCounterPath, string expectedSOPath)
+    {
+        // Arrange
+        player.ClearHeyTeaObject();
+        heyTeaObjectSO = CreateHeyTeaObjectSO(expectedSOPath);
+        heyTeaObject.SetHeyTeaObjectSO(heyTeaObjectSO);
+        heyTeaObjectSO.materialType = HeyTeaObjectSO.MilkTeaMaterialType.teaBase;
+        player.SetHeyTeaObject(pot);
+        soupContainerCounter = InstantiatePrefab(containerCounterPath).GetComponent<SoupContainerCounter>();
+        // Act
+        soupContainerCounter.Interact(player);
 
-    //    // Assert
-    //    //player has pot object
-    //    Assert.IsTrue(player.HasHeyTeaObject());
-    //    Assert.AreEqual(player.GetHeyTeaObject(), pot);
+        // Assert
+        //player has pot object
+        Assert.IsTrue(player.HasHeyTeaObject());
+        Assert.AreEqual(player.GetHeyTeaObject(), pot);
 
-    //    //the ingredient cannot be added in pot object
-    //    Assert.IsFalse(pot.GetOutputHeyTeaObejct(out heyTeaObjectSO));
-    //    LogAssert.Expect(LogType.Log, "Cannot add ingredient to the pot.");
+        //the ingredient cannot be added in pot object
+        Assert.IsFalse(pot.GetOutputHeyTeaObejct(out heyTeaObjectSO));
+    }
 
-    //}
-
-    //player has no cup and cannot add ingredient
+    /**
+     * @brief [TC0904] Tests that the player cannot add an ingredient when holding a non-kitchenware object.
+     * @param containerCounterPath The path of the container counter prefab.
+     * @param expectedSOPath The path of the expected HeyTeaObjectSO.
+     */
     [TestCase("Assets/Prefabs/Counters/SoupCounter/MilkCounter.prefab", "Assets/ScriptableObjectSO/HeyTeaObjectSO/Orange.asset")]
     [TestCase("Assets/Prefabs/Counters/SoupCounter/TeaCounter.prefab", "Assets/ScriptableObjectSO/HeyTeaObjectSO/Orange.asset")]
     public void PlayerHasNonKitchenwareObject_CannotAddIngredient(string containerCounterPath, string expectedSOPath)
@@ -137,9 +180,8 @@ public class SoupContainerCounterTests
         // Assert
         //player has heytea object
         Assert.IsTrue(player.HasHeyTeaObject());
-        Assert.AreEqual(player.GetHeyTeaObject(),heyTeaObject);
+        Assert.AreEqual(player.GetHeyTeaObject(), heyTeaObject);
 
         LogAssert.Expect(LogType.Log, "Player is not holding a cup. Cannot interact with SoupContainerCounter.");
     }
-
 }

@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
-File Name : CuttingCounterVisual.cs
-Function  : CuttingCounter interaction animation class
-Author    : Yong Wu
-Data      : 01.09.2023
-
-*/
+/**
+ * @brief Handles the cutting counter interaction animations.
+ * @details This class manages the visual animations for the cutting counter interactions,
+ * including triggering the cutting animation when a cut event occurs.
+ * 
+ * @author Yong Wu
+ * @date 01.09.2023
+ */
 
 public class CuttingCounterVisual : MonoBehaviour
 {

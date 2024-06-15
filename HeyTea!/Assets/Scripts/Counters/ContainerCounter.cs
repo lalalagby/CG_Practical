@@ -6,7 +6,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 /**
- * @file ContainerCounter.cs
  * @brief Container interaction class
  * 
  * @details This class handles the interaction logic between the ContainerCounter and the Player.
@@ -15,7 +14,6 @@ using UnityEngine.EventSystems;
  * 
  * @date 28.08.2023
  * @author Yong Wu, Xinyue Cheng
- * @last modification date 18.05.2024
  */
 
 public class ContainerCounter : BaseCounter
