@@ -8,9 +8,12 @@ using static CuttingCounter;
 /**
  * @author Yong Wu, Bingyu Guo
  * 
- * @brief The StoveCounter class is responsible for handling interactions with the stove, including cooking progress and managing objects on the stove.
+ * @brief The StoveCounter class is responsible for handling interactions with the stove, 
+ *        including cooking progress and managing objects on the stove.
  * 
- * @details This class extends the BaseCounter and implements the IHasProgress interface. It manages the cooking process, handles player interactions, and updates the progress state.
+ * @details This class extends the BaseCounter and implements the IHasProgress interface. 
+ *          It manages the cooking process, handles player interactions, and updates the progress state.
+ *          It can reset to the initial state when notified.
  * 
  * @note
  *      milkTeaMaterialType contains six types: teaBase, basicAdd, ingredients, fruit, none, un treat.
@@ -40,17 +43,38 @@ public class StoveCounter : BaseCounter,IHasProgress {
     private bool isCooking;
     private float setInterval = 0.2f;
     private float allTime;
+    private float cookingProgress;
 
     /**
      * @brief Initializes the StoveCounter at the start of the game.
      * 
      * @details This method spawns a Pot on the StoveCounter and sets the initial cooking state to false.
+     *          It also subscribes to the OnItemDisposed event of TrashCounter to reset the cooking state 
+     *          when an item is disposed.
      */
     private void Start() {
         HeyTeaObject.SpawnHeyTeaObejct(heyTeaObjectSO, this);
         isCooking = false;
         OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { isCooking = false });
         OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { isProcessing = isCooking });
+        
+        TrashCounter trashCounter = FindObjectOfType<TrashCounter>();
+        if (trashCounter != null) {
+            trashCounter.OnItemDisposed += ResetCookingState;
+        }
+    }
+
+    /**
+     * @brief Resets the cooking state to initial values.
+     * 
+     * @details This method sets the cooking state to false and the cooking progress to 0. 
+     *          It also triggers the appropriate events.
+     */
+    private void ResetCookingState() {
+        isCooking = false;
+        cookingProgress = 0f;
+        OnStateChanged?.Invoke(this, new OnStateChangedEventArgs { isCooking = false });
+        OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { isProcessing = false });
     }
 
     /**
