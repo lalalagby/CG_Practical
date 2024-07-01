@@ -202,4 +202,6 @@ public class CupObject : HeyTeaObject, IKichenwareObejct
         }
         return heyTeaObjectSOList;
     }
+
+    public List<HeyTeaObjectTransform> GetHeyTeaObjectTransformList() { return heyTeaObjectTransformList; }
 }
