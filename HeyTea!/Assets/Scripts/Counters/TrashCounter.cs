@@ -28,11 +28,13 @@ public class TrashCounter : BaseCounter
      * @param player The Player interacting with the TrashCounter.
      */
     public override void Interact(Player player) {
+        // If Player has HeyTeaObject
         if (player.HasHeyTeaObject()) {
             PotObject potObject = player.GetHeyTeaObject() as PotObject;
+            // If the HeyTeaObject is not Pot.
             if(potObject == null) {
                 player.GetHeyTeaObject().DestroySelf();
-            }else if (potObject.CheckTotalInpotNum() > 0) {
+            }else if (potObject.CheckTotalInpotNum() > 0) { 
                 potObject.GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO);
                 potObject.DestroyChild(heyTeaObjectSO);
                 OnItemDisposed?.Invoke();
