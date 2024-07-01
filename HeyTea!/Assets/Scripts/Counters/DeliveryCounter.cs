@@ -27,6 +27,12 @@ public class DeliveryCounter : BaseCounter
         if (player.GetHeyTeaObject() is CupObject)
         {
             player.GetHeyTeaObject().DestroySelf();
+            Debug.Log('1');
+        }
+        else
+        {
+            this.ClearHeyTeaObject();
+            Debug.Log('2');
         }
         return;
     }
