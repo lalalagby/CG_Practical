@@ -5,32 +5,48 @@ using UnityEditor;
 using UnityEngine;
 using static IKichenwareObejct;
 
-
+/**
+ * @author Bingyu Guo
+ * 
+ * @date 2024-06-30
+ * 
+ * @brief Unit tests for the OrderListManager class.
+ * 
+ * @details This class contains unit tests for the OrderListManager class, 
+ *          testing the behavior of order delivery and order list management.
+ */
 public class OrderListManagerEditorTests{
-    public static OrderListManager Instance { get; private set; }
     private OrderListManager orderListManager;
     private CupObject cupObject;
     private OrderListSO orderListSO;
 
+    /**
+     * @brief Sets up the test environment.
+     * 
+     * @details This method initializes the OrderListManager, OrderListSO, and CupObject instances for testing.
+     */
     [SetUp]
     public void Setup() {
-    // 创建OrderListManager对象
         orderListManager = new GameObject().AddComponent<OrderListManager>();
 
-        // 创建OrderListSO
         orderListSO = ScriptableObject.CreateInstance<OrderListSO>();
         orderListSO.orderSOList = new List<OrderSO>();
 
-        // 创建CupObject对象
         var cupPrefab = AssetDatabase.LoadAssetAtPath<Transform>("Assets/Prefabs/HeyTeaObjects/Cup.prefab");
         Transform cupInstance = Transform.Instantiate(cupPrefab);
         cupObject = cupInstance.GetComponent<CupObject>();
 
-        // 设置OrderListManager的OrderListSO
         orderListManager.SetOrderListSO(orderListSO);
     }
 
-    // 生成一个真正的订单
+    /**
+     * @brief Creates a correct order for waiting order list.
+     * 
+     * @details This method generates a correct OrderSO instance based on the specified type.
+     * 
+     * @param type The type of order to create.
+     * @return The created OrderSO instance.
+     */
     private OrderSO CreateCorrectOrderSO(int type) {
         HeyTeaObjectSO heyTeaObjectSO;
         OrderSO orderSO = ScriptableObject.CreateInstance<OrderSO>();
@@ -64,6 +80,14 @@ public class OrderListManagerEditorTests{
         return orderSO;
     }
 
+    /**
+     * @brief Creates a correct CupObject for delivery.
+     * 
+     * @details This method generates a correct CupObject instance based on the specified type.
+     * 
+     * @param type The type of CupObject to create.
+     * @return The created CupObject instance.
+     */
     private CupObject CreateCorrectOrder(int type) {
         HeyTeaObjectSO heyTeaObjectSO;
         if (type == 1) {
@@ -93,7 +117,15 @@ public class OrderListManagerEditorTests{
 
         return cupObject;
     }
-    
+
+    /**
+     * @brief Creates a wrong CupObject for delivery.
+     * 
+     * @details This method generates a wrong CupObject instance based on the specified type.
+     * 
+     * @param type The type of CupObject to create.
+     * @return The created CupObject instance.
+     */
     private CupObject CreateWrongOrder(int type) {
         HeyTeaObjectSO heyTeaObjectSO;
 
@@ -120,9 +152,15 @@ public class OrderListManagerEditorTests{
 
         return cupObject;
     }
-    
-    
-    // 提交错误的订单：订单列表没有订单被移除。
+
+
+    /**
+     * @brief [TC1601] Test case for delivering a wrong order.
+     * 
+     * @details This test verifies that delivering a wrong order does not change the order list.
+     * 
+     * @param type The type of order to create.
+     */
     [TestCase(1)]
     [TestCase(2)]
     [TestCase(3)]
@@ -142,7 +180,7 @@ public class OrderListManagerEditorTests{
         orderListManager.GetWaitingOrderSOList().Add(correctOrder3);
         orderListManager.SetOrdersGenerated();
 
-        // Generate an order to be delivered
+        // Generate a wrong order to be delivered
         cupObject = CreateWrongOrder(type);
 
         // Get the number of orders in the current waiting order list.
@@ -158,17 +196,26 @@ public class OrderListManagerEditorTests{
         // The number of orders in the waiting order list does not change.
         Assert.AreEqual(waitingOrderNum, orderListManager.GetWaitingOrderSOList().Count);
 
-        // Check if there is a new order generated after 3 seconds
-        Task.Delay(3000).ContinueWith(_ => {
+        // Check if there is a new order generated after 2 seconds
+        Task.Delay(2000).ContinueWith(_ => {
             // No new orders were generated.
             Assert.AreEqual(orderListManager.GetOrdersGenerated(), initialOrderCount);
         });
     }
 
 
-    // 提交正确的订单：该订单从订单列表中删除。
-    [Test]
-    public void DeliverCorrectOrder_RemoveOrderAndGenerateNewOrder() {
+    /**
+     * @brief [TC1602] Test case for delivering a correct order.
+     * 
+     * @details This test verifies that delivering a correct order 
+     *          removes the order from the order list and generates a new order after 2 seconds.
+     * 
+     * @param type The type of order to create.
+     */
+    [TestCase(1)]
+    [TestCase(2)]
+    [TestCase(3)]
+    public void DeliverCorrectOrder_RemoveOrderAndGenerateNewOrder(int type) {
         // Generate waiting order list
         OrderSO correctOrder1 = CreateCorrectOrderSO(1);
         OrderSO correctOrder2 = CreateCorrectOrderSO(2);
@@ -184,8 +231,8 @@ public class OrderListManagerEditorTests{
         orderListManager.GetWaitingOrderSOList().Add(correctOrder3);
         orderListManager.SetOrdersGenerated();
 
-        // Generate an order to be delivered
-        cupObject = CreateCorrectOrder(2);
+        // Generate a correct order to be delivered
+        cupObject = CreateCorrectOrder(type);
 
         // Get the number of orders in the current waiting order list.
         int waitingOrderNum = orderListManager.GetWaitingOrderSOList().Count;
@@ -199,8 +246,8 @@ public class OrderListManagerEditorTests{
         // The number of orders in the waiting order list is reduced by 1.
         Assert.AreEqual(waitingOrderNum - 1, orderListManager.GetWaitingOrderSOList().Count);
 
-        // Wait for 3 seconds to generate a new order (Question? )
-        Task.Delay(3000).ContinueWith(_ => {
+        // Wait for 2 seconds to generate a new order
+        Task.Delay(2000).ContinueWith(_ => {
             // Add 1 to the number of orders generated
             Assert.AreEqual(orderListManager.GetOrdersGenerated(), initialOrderCount + 1);
 
