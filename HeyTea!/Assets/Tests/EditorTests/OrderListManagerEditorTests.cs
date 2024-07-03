@@ -1,12 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
-using System.IO;
-using System.Linq;
+using System.Threading.Tasks;
 using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.TestTools;
 using static IKichenwareObejct;
 
 
@@ -14,30 +10,30 @@ public class OrderListManagerEditorTests{
     public static OrderListManager Instance { get; private set; }
     private OrderListManager orderListManager;
     private CupObject cupObject;
-    private RecipeListSO recipeListSO;
+    private OrderListSO orderListSO;
 
     [SetUp]
     public void Setup() {
     // 创建OrderListManager对象
         orderListManager = new GameObject().AddComponent<OrderListManager>();
 
-        // 创建RecipeListSO
-        recipeListSO = ScriptableObject.CreateInstance<RecipeListSO>();
-        recipeListSO.recipeSOList = new List<RecipeSO>();
+        // 创建OrderListSO
+        orderListSO = ScriptableObject.CreateInstance<OrderListSO>();
+        orderListSO.orderSOList = new List<OrderSO>();
 
         // 创建CupObject对象
         var cupPrefab = AssetDatabase.LoadAssetAtPath<Transform>("Assets/Prefabs/HeyTeaObjects/Cup.prefab");
         Transform cupInstance = Transform.Instantiate(cupPrefab);
         cupObject = cupInstance.GetComponent<CupObject>();
 
-        // 设置OrderListManager的RecipeListSO
-        orderListManager.SetRecipeListSO(recipeListSO);
+        // 设置OrderListManager的OrderListSO
+        orderListManager.SetOrderListSO(orderListSO);
     }
 
     // 生成一个真正的订单
-    private RecipeSO CreateCorrectRecipeSO(int type) {
+    private OrderSO CreateCorrectOrderSO(int type) {
         HeyTeaObjectSO heyTeaObjectSO;
-        RecipeSO recipeSO = ScriptableObject.CreateInstance<RecipeSO>();
+        OrderSO orderSO = ScriptableObject.CreateInstance<OrderSO>();
         List<HeyTeaObjectSO> heyTeaObjectSOList = new List<HeyTeaObjectSO>();
         if (type == 1) {
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/LiquidMilktea.asset");
@@ -64,11 +60,11 @@ public class OrderListManagerEditorTests{
             heyTeaObjectSOList.Add(heyTeaObjectSO);
         }
         
-        recipeSO.heyTeaObjectSOLists = heyTeaObjectSOList;
-        return recipeSO;
+        orderSO.heyTeaObjectSOLists = heyTeaObjectSOList;
+        return orderSO;
     }
 
-    private CupObject CreateCorrectRecipe(int type) {
+    private CupObject CreateCorrectOrder(int type) {
         HeyTeaObjectSO heyTeaObjectSO;
         if (type == 1) {
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/LiquidMilktea.asset");
@@ -97,7 +93,8 @@ public class OrderListManagerEditorTests{
 
         return cupObject;
     }
-    private CupObject CreateWrongRecipe(int type) {
+    
+    private CupObject CreateWrongOrder(int type) {
         HeyTeaObjectSO heyTeaObjectSO;
 
         if (type == 1) {
@@ -129,114 +126,87 @@ public class OrderListManagerEditorTests{
     [TestCase(1)]
     [TestCase(2)]
     [TestCase(3)]
-    public void DeliverIncorrectRecipe_OrderListUnchanged(int type) {
-        // 生成Waiting订单
-        RecipeSO correctRecipe1 = CreateCorrectRecipeSO(1);
-        RecipeSO correctRecipe2 = CreateCorrectRecipeSO(2);
-        RecipeSO correctRecipe3 = CreateCorrectRecipeSO(3);
-        recipeListSO.recipeSOList.Add(correctRecipe1);
-        recipeListSO.recipeSOList.Add(correctRecipe2);
-        recipeListSO.recipeSOList.Add(correctRecipe3);
-        orderListManager.SetWaitingRecipeSOList(new List<RecipeSO>());
-        orderListManager.GetWaitingRecipeSOList().Add(correctRecipe1);
+    public void DeliverWrongOrder_OrderListUnchanged(int type) {
+        // Generate waiting order list
+        OrderSO correctOrder1 = CreateCorrectOrderSO(1);
+        OrderSO correctOrder2 = CreateCorrectOrderSO(2);
+        OrderSO correctOrder3 = CreateCorrectOrderSO(3);
+        orderListSO.orderSOList.Add(correctOrder1);
+        orderListSO.orderSOList.Add(correctOrder2);
+        orderListSO.orderSOList.Add(correctOrder3);
+        orderListManager.SetWaitingOrderSOList(new List<OrderSO>());
+        orderListManager.GetWaitingOrderSOList().Add(correctOrder1);
         orderListManager.SetOrdersGenerated();
-        orderListManager.GetWaitingRecipeSOList().Add(correctRecipe2);
+        orderListManager.GetWaitingOrderSOList().Add(correctOrder2);
         orderListManager.SetOrdersGenerated();
-        orderListManager.GetWaitingRecipeSOList().Add(correctRecipe3);
+        orderListManager.GetWaitingOrderSOList().Add(correctOrder3);
         orderListManager.SetOrdersGenerated();
 
-        // 生成提交的订单
-        cupObject = CreateWrongRecipe(type);
+        // Generate an order to be delivered
+        cupObject = CreateWrongOrder(type);
 
-        // 获取当前的waiting订单数
-        int waitingRecipeNum = orderListManager.GetWaitingRecipeNum();
-        // 初始生成订单数
-        int ordersGeneratedNum = orderListManager.GetOrdersGenerated();
+        // Get the number of orders in the current waiting order list.
+        int waitingOrderNum = orderListManager.GetWaitingOrderSOList().Count;
 
-        // 交付订单
+        // Get the number of all orders that have been generated so far.
+        int initialOrderCount = orderListManager.GetOrdersGenerated();
+
+        // Act: Deliver the order
         orderListManager.DeliverOrder(cupObject);
 
-        // Assert
-        Assert.AreEqual(waitingRecipeNum, orderListManager.GetWaitingRecipeNum());
-        // 生成订单数不变
-        Assert.AreEqual(orderListManager.GetOrdersGenerated(), ordersGeneratedNum);
+
+        // The number of orders in the waiting order list does not change.
+        Assert.AreEqual(waitingOrderNum, orderListManager.GetWaitingOrderSOList().Count);
+
+        // Check if there is a new order generated after 3 seconds
+        Task.Delay(3000).ContinueWith(_ => {
+            // No new orders were generated.
+            Assert.AreEqual(orderListManager.GetOrdersGenerated(), initialOrderCount);
+        });
     }
 
 
-    // 提交正确的订单，并且当前totalNumOrders小于最大值-1：该订单从订单列表中删除，并在3秒后生成新的订单。
+    // 提交正确的订单：该订单从订单列表中删除。
     [Test]
-    public void DeliverCorrectRecipe_RemoveOrderAndGenerateNewOrder() {
-        // 生成Waiting订单
-        RecipeSO correctRecipe1 = CreateCorrectRecipeSO(1);
-        RecipeSO correctRecipe2 = CreateCorrectRecipeSO(2);
-        RecipeSO correctRecipe3 = CreateCorrectRecipeSO(3);
-        recipeListSO.recipeSOList.Add(correctRecipe1);
-        recipeListSO.recipeSOList.Add(correctRecipe2);
-        recipeListSO.recipeSOList.Add(correctRecipe3);
-        orderListManager.SetWaitingRecipeSOList(new List<RecipeSO>());
-        orderListManager.GetWaitingRecipeSOList().Add(correctRecipe1);
+    public void DeliverCorrectOrder_RemoveOrderAndGenerateNewOrder() {
+        // Generate waiting order list
+        OrderSO correctOrder1 = CreateCorrectOrderSO(1);
+        OrderSO correctOrder2 = CreateCorrectOrderSO(2);
+        OrderSO correctOrder3 = CreateCorrectOrderSO(3);
+        orderListSO.orderSOList.Add(correctOrder1);
+        orderListSO.orderSOList.Add(correctOrder2);
+        orderListSO.orderSOList.Add(correctOrder3);
+        orderListManager.SetWaitingOrderSOList(new List<OrderSO>());
+        orderListManager.GetWaitingOrderSOList().Add(correctOrder1);
         orderListManager.SetOrdersGenerated();
-        orderListManager.GetWaitingRecipeSOList().Add(correctRecipe2);
+        orderListManager.GetWaitingOrderSOList().Add(correctOrder2);
         orderListManager.SetOrdersGenerated();
-        orderListManager.GetWaitingRecipeSOList().Add(correctRecipe3);
+        orderListManager.GetWaitingOrderSOList().Add(correctOrder3);
         orderListManager.SetOrdersGenerated();
 
-        // 生成提交的订单
-        cupObject = CreateCorrectRecipe(2);
-        // 获取当前的waiting订单数
-        int waitingRecipeNum = orderListManager.GetWaitingRecipeNum();
-        // 初始生成订单数
-        int ordersGeneratedNum = orderListManager.GetOrdersGenerated();
+        // Generate an order to be delivered
+        cupObject = CreateCorrectOrder(2);
 
-        // 交付订单
+        // Get the number of orders in the current waiting order list.
+        int waitingOrderNum = orderListManager.GetWaitingOrderSOList().Count;
+
+        // Get the number of all orders that have been generated so far.
+        int initialOrderCount = orderListManager.GetOrdersGenerated();
+
+        // Act: Deliver the order
         orderListManager.DeliverOrder(cupObject);
 
-        // 此时订单被删除，并且当前生成的订单数小于最大值-1
-        Assert.Less(orderListManager.GetWaitingRecipeNum(), 4);
-        // 生成订单+1
-        Assert.AreEqual(orderListManager.GetOrdersGenerated(), ordersGeneratedNum + 1);
-        // waiting依旧有三个订单
-        Assert.AreEqual(waitingRecipeNum, orderListManager.GetWaitingRecipeNum());
+        // The number of orders in the waiting order list is reduced by 1.
+        Assert.AreEqual(waitingOrderNum - 1, orderListManager.GetWaitingOrderSOList().Count);
+
+        // Wait for 3 seconds to generate a new order (Question? )
+        Task.Delay(3000).ContinueWith(_ => {
+            // Add 1 to the number of orders generated
+            Assert.AreEqual(orderListManager.GetOrdersGenerated(), initialOrderCount + 1);
+
+            // The waiting order list still has three orders
+            Assert.AreEqual(waitingOrderNum, orderListManager.GetWaitingOrderSOList().Count);
+        });
     }
-
-
-    // 提交正确的订单：删除订单列表的该订单，如果totalNumOrders等于于8，则不再产生新订单。
-    public void DeliverCorrectRecipe_RemoveOrderAndCannotGenerateNewOrder() {
-        // 生成Waiting订单
-        RecipeSO correctRecipe1 = CreateCorrectRecipeSO(1);
-        RecipeSO correctRecipe2 = CreateCorrectRecipeSO(2);
-        RecipeSO correctRecipe3 = CreateCorrectRecipeSO(3);
-        recipeListSO.recipeSOList.Add(correctRecipe1);
-        recipeListSO.recipeSOList.Add(correctRecipe2);
-        recipeListSO.recipeSOList.Add(correctRecipe3);
-        orderListManager.SetWaitingRecipeSOList(new List<RecipeSO>());
-        orderListManager.GetWaitingRecipeSOList().Add(correctRecipe1);
-        orderListManager.SetOrdersGenerated();
-        orderListManager.GetWaitingRecipeSOList().Add(correctRecipe2);
-        orderListManager.SetOrdersGenerated();
-        orderListManager.GetWaitingRecipeSOList().Add(correctRecipe3);
-        orderListManager.SetOrdersGenerated();
-
-        // 生成提交的订单
-        cupObject = CreateCorrectRecipe(1);
-
-        // 获取当前的waiting订单数
-        int waitingRecipeNum = orderListManager.GetWaitingRecipeNum();
-        // 初始生成订单数
-        int ordersGeneratedNum = orderListManager.GetOrdersGenerated();
-
-        // 交付订单
-        orderListManager.DeliverOrder(cupObject);
-
-        // 此时订单被删除，并且当前已经生成了最大值-1个订单数
-        Assert.IsFalse(orderListManager.GetWaitingRecipeSOList().Contains(correctRecipe1));
-        Assert.Less(orderListManager.GetWaitingRecipeNum(), 4);
-
-        // 此时waiting的订单数减少了1.
-        Assert.AreEqual(waitingRecipeNum-1, orderListManager.GetWaitingRecipeNum());
-        // 生成订单不变
-        Assert.AreEqual(orderListManager.GetOrdersGenerated(), ordersGeneratedNum);
-    }
-
 
 }

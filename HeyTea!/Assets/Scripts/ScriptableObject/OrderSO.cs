@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu()]
-public class RecipeSO : ScriptableObject
+public class OrderSO : ScriptableObject
 {
     public List<HeyTeaObjectSO> heyTeaObjectSOLists;
 
-    public string recipeName;
+    public string orderName;
 }

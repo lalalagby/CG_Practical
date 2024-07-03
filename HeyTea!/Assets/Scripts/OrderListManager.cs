@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Profiling;
 
 
 
@@ -8,112 +10,91 @@ public class OrderListManager : MonoBehaviour
 {
     public static OrderListManager Instance { get; private set; }
 
-    [SerializeField] private RecipeListSO recipeListSO;
-    [SerializeField] private float orderGenerationInterval = 3f; // Interval for generating new orders
+    public event EventHandler OnOrderSpawned;
+    public event EventHandler OnOrderCompleted;
 
-    private List<RecipeSO> waitingRecipeSOList;
-    private float spawnRecipeTimer;
-    //private float spawnRecipeTimerMax = 3f;
-    private int waitingRecipesMax = 3;
-    private int totalNumOrders = 5;
+
+    [SerializeField] private OrderListSO orderListSO;
+    [SerializeField] private float spawnOrderInterval = 3f; // Interval for generating new orders
+
+    private List<OrderSO> waitingOrderSOList;
+    private float spawnOrderTimer;
+    private int waitingOrdersMax = 3;
     private int ordersGenerated = 0;
 
-    private void Awake()
-    {
+
+
+    private void Awake() {
         Instance = this;
-        waitingRecipeSOList = new List<RecipeSO>();
+        waitingOrderSOList = new List<OrderSO>();
     }
 
-    public void Start()
-    {
-        // Start generating orders
-        for (int i = 0; i < 3 && ordersGenerated < totalNumOrders; i++)
-        {
-            AddNewRecipe();
-        }
-    }
+    private void Update() {
+        // Only generate a new order when the number of the waiting order list is less than 3.
+        spawnOrderTimer -= Time.deltaTime;
 
-    private void AddNewRecipe()
-    {
-        //if (ordersGenerated >= totalNumOrders) return;
+        if (spawnOrderTimer <= 0f) {
+            print("spawnOrderTimer is: " + spawnOrderTimer);
 
-        RecipeSO newRecipe = recipeListSO.recipeSOList[Random.Range(0, recipeListSO.recipeSOList.Count)];
-        Debug.Log("生成新订单：" + newRecipe.recipeName);
+            spawnOrderTimer += spawnOrderInterval;
 
-        waitingRecipeSOList.Add(newRecipe);
-        ordersGenerated++;
-    }
+            if (waitingOrderSOList.Count < waitingOrdersMax) {
+                OrderSO newOrder = orderListSO.orderSOList[UnityEngine.Random.Range(0, orderListSO.orderSOList.Count)];
+                Debug.Log("生成新订单：" + newOrder.orderName);
 
-    private void Update()
-    {
-        if (waitingRecipeSOList.Count < 3 && ordersGenerated < totalNumOrders)
-        {
-            spawnRecipeTimer -= Time.deltaTime;
-
-            if (spawnRecipeTimer <= 0f)
-            {
-                spawnRecipeTimer += orderGenerationInterval;
-                AddNewRecipe();
+                waitingOrderSOList.Add(newOrder);
+                ordersGenerated++;
+                OnOrderSpawned?.Invoke(this, EventArgs.Empty);
             }
         }
     }
 
-    public void DeliverOrder(CupObject cupObject)
-    {
+    public void DeliverOrder(CupObject cupObject)  {
         int i = 0;
-        foreach (RecipeSO waitingRecipeSO in waitingRecipeSOList)
-        {
+        foreach (OrderSO waitingOrderSO in waitingOrderSOList) {
             print("i: " + i);
-            // 订单匹配成功
-            if (IsMatchingRecipe(waitingRecipeSO, cupObject))
-            {
+            // The order is matched successfully.
+            if (IsMatchingOrder(waitingOrderSO, cupObject)) {
+                print("Player delivered the correct order!");
 
-                Debug.Log("Player delivered the correct recipe!");
-                // 删除订单
-                waitingRecipeSOList.Remove(waitingRecipeSO);
-                Debug.Log("删除订单：" + waitingRecipeSOList.Count);                
+                // Remove the order from the waiting order list.
+                waitingOrderSOList.Remove(waitingOrderSO);
 
-                // 添加新订单
-                if (ordersGenerated < totalNumOrders)
-                {
-                    AddNewRecipe();
-                }
-                Debug.Log("订单：" + ordersGenerated + "," + totalNumOrders + "," + waitingRecipeSOList.Count);
+                print("删除订单：" + waitingOrderSOList.Count);
+                OnOrderCompleted?.Invoke(this, EventArgs.Empty);
                 return;
             }
         }
-        Debug.Log("Player did not deliver a correct recipe!");
+        print("Player did not deliver a correct order!");
     }
 
-    // 判断提交的订单是否和当前取得的订单匹配
-    private bool IsMatchingRecipe(RecipeSO recipe, CupObject cupObject)
-    {
+    // Determine whether the delivered order matches the currently acquired order.
+    private bool IsMatchingOrder(OrderSO order, CupObject cupObject) {
         List<HeyTeaObjectSO> cupObjects = cupObject.GetOutputHeyTeaObejctSOList();
 
-        // 如果两个订单包含的物品的数量不一致
-        if (recipe.heyTeaObjectSOLists.Count != cupObjects.Count)
-        {
-            Debug.Log("数量不一致");
+        // If two orders contain different quantities of items.
+        if (order.heyTeaObjectSOLists.Count != cupObjects.Count) {
             return false;
         }
 
-        // 判断订单中包含的物品是否能匹配上
-        foreach (HeyTeaObjectSO recipeObject in recipe.heyTeaObjectSOLists)  {
-            print(recipeObject + ", " + cupObjects.Contains(recipeObject));
-            if (!cupObjects.Contains(recipeObject)) {
+        // Determine if the items included in the order can be matched up
+        foreach (HeyTeaObjectSO orderObject in order.heyTeaObjectSOLists)  {
+            print(orderObject + ", " + cupObjects.Contains(orderObject));
+            if (!cupObjects.Contains(orderObject)) {
                 return false;
             }
         }
         return true;
     }
-    public void SetRecipeListSO(RecipeListSO recipeListSO) { this.recipeListSO = recipeListSO; }
 
-    public RecipeListSO GetRecipeListSO() { return this.recipeListSO; }
+    public void SetOrderListSO(OrderListSO orderListSO) { this.orderListSO = orderListSO; }
 
-    public void SetWaitingRecipeSOList(List<RecipeSO> waitingRecipeSOList) { this.waitingRecipeSOList = waitingRecipeSOList; }
-    public List<RecipeSO> GetWaitingRecipeSOList() { return waitingRecipeSOList; }
+    public void SetWaitingOrderSOList(List<OrderSO> waitingOrderSOList) { this.waitingOrderSOList = waitingOrderSOList; }
+    
+    public List<OrderSO> GetWaitingOrderSOList() { return waitingOrderSOList; }
 
     public void SetOrdersGenerated() { ordersGenerated++; }
+
     public int GetOrdersGenerated() { return ordersGenerated; }
-    public int GetWaitingRecipeNum() { return waitingRecipeSOList.Count; }
+    //public int GetWaitingOrderNum() { return waitingOrderSOList.Count; }
 }
