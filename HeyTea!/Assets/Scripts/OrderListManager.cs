@@ -49,7 +49,7 @@ public class OrderListManager : MonoBehaviour
 
             if (waitingOrderSOList.Count < waitingOrdersMax) {
                 OrderSO newOrder = orderListSO.orderSOList[UnityEngine.Random.Range(0, orderListSO.orderSOList.Count)];
-                print("new order£º" + newOrder.orderName);
+                print("new orderï¿½ï¿½" + newOrder.orderName);
 
                 waitingOrderSOList.Add(newOrder);
                 ordersGenerated++;
