@@ -10,7 +10,8 @@ using static IKichenwareObejct;
  * @details This class extends HeyTeaObject and implements IKichenwareObejct. It manages adding ingredients,
  * combining them, and updating the visual representation of the cup's contents.
  * 
- * @date 01.09.2023
+ * @date 05.07.2024
+ * @author Yong Wu, Xinyue Cheng
  */
 
 /**
@@ -27,6 +28,11 @@ public class CupObject : HeyTeaObject, IKichenwareObejct
      * @brief Event triggered when an ingredient is added to the cup.
      */
     public event EventHandler OnIngredinetAdded;
+
+    /**
+     * @brief Array of adding recipes for the cup.
+     */
+    [SerializeField] public List<AddingRecipeSO> AddingRecipeSOArray;
 
     /**
      * @brief List of milk tea material quotas for the cup.
@@ -52,6 +58,10 @@ public class CupObject : HeyTeaObject, IKichenwareObejct
             {
                 if (milkTeaMaterialQuotaList[i].CanAdd(heyTeaObjectSO))
                 {
+                    if (HasRecipeWithInput(heyTeaObjectSO))
+                    {
+                        heyTeaObjectSO = GetOutputForInput(heyTeaObjectSO);
+                    }
                     HeyTeaObject heyTeaObject = SpawnHeyTeaObejct(heyTeaObjectSO, milkTeaMaterialType);
                     if (heyTeaObject == null)
                     {
@@ -203,5 +213,50 @@ public class CupObject : HeyTeaObject, IKichenwareObejct
         return heyTeaObjectSOList;
     }
 
-    public List<HeyTeaObjectTransform> GetHeyTeaObjectTransformList() { return heyTeaObjectTransformList; }
+    /**
+     * @brief Gets the list of HeyTeaObjectTransform from the cup.
+     * @return The list of HeyTeaObjectTransform in the cup.
+     */
+    public List<HeyTeaObjectTransform> GetHeyTeaObjectTransformList()
+    {
+        return heyTeaObjectTransformList;
+    }
+
+    /**
+     * @brief Checks if there is an adding recipe for the given input HeyTeaObjectSO.
+     * @param inputHeyTeaObjectSO The input HeyTeaObjectSO to check.
+     * @return True if a recipe exists, otherwise false.
+     */
+    private bool HasRecipeWithInput(HeyTeaObjectSO inputHeyTeaObjectSO)
+    {
+        AddingRecipeSO addingRecipeSO = GetAddingRecipeSOWithInput(inputHeyTeaObjectSO);
+        return addingRecipeSO != null;
+    }
+
+    /**
+     * @brief Gets the AddingRecipeSO for a given input HeyTeaObjectSO.
+     * @param inputHeyTeaObjectSO The input HeyTeaObjectSO to check.
+     * @return The AddingRecipeSO if a recipe exists, otherwise null.
+     */
+    private AddingRecipeSO GetAddingRecipeSOWithInput(HeyTeaObjectSO inputHeyTeaObjectSO)
+    {
+        foreach (AddingRecipeSO addingRecipeSO in AddingRecipeSOArray)
+        {
+            if (addingRecipeSO.input == inputHeyTeaObjectSO)
+            {
+                return addingRecipeSO;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * @brief Gets the output HeyTeaObjectSO for a given input HeyTeaObjectSO.
+     * @param heyTeaObjectSO The input HeyTeaObjectSO.
+     * @return The output HeyTeaObjectSO if a recipe exists, otherwise null.
+     */
+    private HeyTeaObjectSO GetOutputForInput(HeyTeaObjectSO heyTeaObjectSO)
+    {
+        return GetAddingRecipeSOWithInput(heyTeaObjectSO).output;
+    }
 }
