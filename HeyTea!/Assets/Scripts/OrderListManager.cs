@@ -14,7 +14,7 @@ using UnityEngine.Profiling;
  * @author Bingyu Guo
  * @date 2024-06-30
  */
-
+[ExecuteInEditMode]
 public class OrderListManager : MonoBehaviour
 {
     public event EventHandler OnOrderSpawned;       //!< Event triggered when a new order is spawned.
@@ -29,18 +29,24 @@ public class OrderListManager : MonoBehaviour
     private float spawnOrderInterval = 2f; //!< Interval for generating new orders
     private int waitingOrdersMax = 3;   //!< Maximum number of orders that can be waiting to be delivered.
     private int ordersGenerated = 0;    //!< Total number of orders that have been generated.
-
+    private bool isGameOver = false;
 
     private void Awake() {
         Instance = this;
         waitingOrderSOList = new List<OrderSO>();
     }
 
+    private void Start() {
+        ScoreSystem.Instance.OnTargetScoreReached += HandleTargetScoreReached;
+    }
+
     /**
      * @brief Updates the order generation timer and spawns new orders 
      *        if there is less than three orders in the waitingOrderSOList.
      */
-    private void Update() {
+    public void Update() {
+        if (isGameOver) return;
+
         // Only generate a new order when the number of the waiting order list is less than 3.
         spawnOrderTimer -= Time.deltaTime;
 
@@ -49,7 +55,7 @@ public class OrderListManager : MonoBehaviour
 
             if (waitingOrderSOList.Count < waitingOrdersMax) {
                 OrderSO newOrder = orderListSO.orderSOList[UnityEngine.Random.Range(0, orderListSO.orderSOList.Count)];
-                print("new order��" + newOrder.orderName);
+                print("new order: " + newOrder.orderName);
 
                 waitingOrderSOList.Add(newOrder);
                 ordersGenerated++;
@@ -59,7 +65,7 @@ public class OrderListManager : MonoBehaviour
     }
 
     /**
-     * @brief Delivers an order and checks if it matches any waiting orders.
+     * @brief Delivers an order and checks if it matches any waiting orders. Add ten points if it matches.
      * 
      * @param cupObject The delivered CupObject to check against the waiting orders.
      */
@@ -71,7 +77,12 @@ public class OrderListManager : MonoBehaviour
 
                 // Remove the order from the waiting order list.
                 waitingOrderSOList.Remove(waitingOrderSO);
+
+                // Add scores
+                //ScoreSystem.Instance.AddScore(10);
+
                 OnOrderCompleted?.Invoke(this, EventArgs.Empty);
+
                 return;
             }
         }
@@ -103,6 +114,9 @@ public class OrderListManager : MonoBehaviour
         return true;
     }
 
+    private void HandleTargetScoreReached() {
+        isGameOver = true;
+    }
 
     public void SetOrderListSO(OrderListSO orderListSO) { this.orderListSO = orderListSO; }
 

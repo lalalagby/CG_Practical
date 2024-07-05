@@ -1,31 +1,29 @@
+using System.Collections;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using NUnit.Framework;
 using UnityEditor;
 using UnityEngine;
+using System.Threading.Tasks;
+using UnityEngine.TestTools;
 using static IKichenwareObejct;
+using UnityEngine.SocialPlatforms.Impl;
 
 /**
  * @author Bingyu Guo
+ * @date 2024-07-05
  * 
- * @date 2024-06-30
+ * @brief Unit tests for the ScoreSystem class and its interaction with OrderListManager.
  * 
- * @brief Unit tests for the OrderListManager class.
- * 
- * @details This class contains unit tests for the OrderListManager class, 
- *          testing the behavior of order delivery and order list management.
+ * @details This class contains unit tests to verify the behavior of the ScoreSystem 
+ *          when orders are delivered correctly or incorrectly.
  */
-public class OrderListManagerEditorTests{
+public class ScoreSystemEditorTest
+{
+    private ScoreSystem scoreSystem;
     private OrderListManager orderListManager;
     private CupObject cupObject;
     private OrderListSO orderListSO;
-    private ScoreSystem scoreSystem;
 
-    /**
-     * @brief Sets up the test environment.
-     * 
-     * @details This method initializes the OrderListManager, OrderListSO, and CupObject instances for testing.
-     */
     [SetUp]
     public void Setup() {
         orderListManager = new GameObject().AddComponent<OrderListManager>();
@@ -38,9 +36,13 @@ public class OrderListManagerEditorTests{
         cupObject = cupInstance.GetComponent<CupObject>();
 
         orderListManager.SetOrderListSO(orderListSO);
+
+        // Initialize ScoreSystem
         scoreSystem = new GameObject().AddComponent<ScoreSystem>();
+        scoreSystem.AddScore(0);
         orderListManager.OnOrderCompleted += scoreSystem.HandleOrderCompleted;
     }
+
 
     /**
      * @brief Creates a correct order for waiting order list.
@@ -50,25 +52,31 @@ public class OrderListManagerEditorTests{
      * @param type The type of order to create.
      * @return The created OrderSO instance.
      */
-    private OrderSO CreateCorrectOrderSO(int type) {
+    private OrderSO CreateCorrectOrderSO(int type)
+    {
         HeyTeaObjectSO heyTeaObjectSO;
         OrderSO orderSO = ScriptableObject.CreateInstance<OrderSO>();
         List<HeyTeaObjectSO> heyTeaObjectSOList = new List<HeyTeaObjectSO>();
-        if (type == 1) {
+        if (type == 1)
+        {
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/LiquidMilktea.asset");
             heyTeaObjectSOList.Add(heyTeaObjectSO);
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/RedBeanCooked.asset");
             heyTeaObjectSOList.Add(heyTeaObjectSO);
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/Sugar.asset");
             heyTeaObjectSOList.Add(heyTeaObjectSO);
-        } else if(type == 2){
+        }
+        else if (type == 2)
+        {
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/LiquidTea.asset");
             heyTeaObjectSOList.Add(heyTeaObjectSO);
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/PearlCooked.asset");
             heyTeaObjectSOList.Add(heyTeaObjectSO);
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/GrapeSlice.asset");
             heyTeaObjectSOList.Add(heyTeaObjectSO);
-        } else {
+        }
+        else
+        {
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/LiquidTea.asset");
             heyTeaObjectSOList.Add(heyTeaObjectSO);
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/Ice.asset");
@@ -78,7 +86,7 @@ public class OrderListManagerEditorTests{
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/OrangeSlice.asset");
             heyTeaObjectSOList.Add(heyTeaObjectSO);
         }
-        
+
         orderSO.heyTeaObjectSOLists = heyTeaObjectSOList;
         return orderSO;
     }
@@ -91,23 +99,29 @@ public class OrderListManagerEditorTests{
      * @param type The type of CupObject to create.
      * @return The created CupObject instance.
      */
-    private CupObject CreateCorrectOrder(int type) {
+    private CupObject CreateCorrectOrder(int type)
+    {
         HeyTeaObjectSO heyTeaObjectSO;
-        if (type == 1) {
+        if (type == 1)
+        {
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/LiquidMilktea.asset");
             cupObject.TryAddIngredient(heyTeaObjectSO, (MilkTeaMaterialType)heyTeaObjectSO.materialType);
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/RedBeanCooked.asset");
             cupObject.TryAddIngredient(heyTeaObjectSO, (MilkTeaMaterialType)heyTeaObjectSO.materialType);
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/Sugar.asset");
             cupObject.TryAddIngredient(heyTeaObjectSO, (MilkTeaMaterialType)heyTeaObjectSO.materialType);
-        } else if (type == 2) {
+        }
+        else if (type == 2)
+        {
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/LiquidTea.asset");
             cupObject.TryAddIngredient(heyTeaObjectSO, (MilkTeaMaterialType)heyTeaObjectSO.materialType);
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/PearlCooked.asset");
             cupObject.TryAddIngredient(heyTeaObjectSO, (MilkTeaMaterialType)heyTeaObjectSO.materialType);
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/GrapeSlice.asset");
             cupObject.TryAddIngredient(heyTeaObjectSO, (MilkTeaMaterialType)heyTeaObjectSO.materialType);
-        } else {
+        }
+        else
+        {
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/LiquidTea.asset");
             cupObject.TryAddIngredient(heyTeaObjectSO, (MilkTeaMaterialType)heyTeaObjectSO.materialType);
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/Ice.asset");
@@ -129,22 +143,28 @@ public class OrderListManagerEditorTests{
      * @param type The type of CupObject to create.
      * @return The created CupObject instance.
      */
-    private CupObject CreateWrongOrder(int type) {
+    private CupObject CreateWrongOrder(int type)
+    {
         HeyTeaObjectSO heyTeaObjectSO;
 
-        if (type == 1) {
+        if (type == 1)
+        {
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/LiquidMilktea.asset");
             cupObject.TryAddIngredient(heyTeaObjectSO, (MilkTeaMaterialType)heyTeaObjectSO.materialType);
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/RedBeanCooked.asset");
             cupObject.TryAddIngredient(heyTeaObjectSO, (MilkTeaMaterialType)heyTeaObjectSO.materialType);
-        } else if (type == 2) {
+        }
+        else if (type == 2)
+        {
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/LiquidTea.asset");
             cupObject.TryAddIngredient(heyTeaObjectSO, (MilkTeaMaterialType)heyTeaObjectSO.materialType);
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/RedBeanCooked.asset");
             cupObject.TryAddIngredient(heyTeaObjectSO, (MilkTeaMaterialType)heyTeaObjectSO.materialType);
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/GrapeSlice.asset");
             cupObject.TryAddIngredient(heyTeaObjectSO, (MilkTeaMaterialType)heyTeaObjectSO.materialType);
-        } else {
+        }
+        else
+        {
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/LiquidTea.asset");
             cupObject.TryAddIngredient(heyTeaObjectSO, (MilkTeaMaterialType)heyTeaObjectSO.materialType);
             heyTeaObjectSO = AssetDatabase.LoadAssetAtPath<HeyTeaObjectSO>("Assets/ScriptableObjectSO/HeyTeaObjectSO/Ice.asset");
@@ -158,16 +178,54 @@ public class OrderListManagerEditorTests{
 
 
     /**
-     * @brief [TC1601] Test case for delivering a wrong order.
+     * @brief [TC17001] Test case for delivering a correct order.
      * 
-     * @details This test verifies that delivering a wrong order does not change the order list.
+     * @details This test verifies that delivering a correct order adds 10 points to the score.
      * 
      * @param type The type of order to create.
      */
     [TestCase(1)]
     [TestCase(2)]
     [TestCase(3)]
-    public void DeliverWrongOrder_OrderListUnchanged(int type) {
+    public void DiliverCorrectOrder_AddScore(int type) {
+        // Generate waiting order list
+        OrderSO correctOrder1 = CreateCorrectOrderSO(1);
+        OrderSO correctOrder2 = CreateCorrectOrderSO(2);
+        OrderSO correctOrder3 = CreateCorrectOrderSO(3);
+        orderListSO.orderSOList.Add(correctOrder1);
+        orderListSO.orderSOList.Add(correctOrder2);
+        orderListSO.orderSOList.Add(correctOrder3);
+        orderListManager.SetWaitingOrderSOList(new List<OrderSO>());
+        orderListManager.GetWaitingOrderSOList().Add(correctOrder1);
+        orderListManager.SetOrdersGenerated();
+        orderListManager.GetWaitingOrderSOList().Add(correctOrder2);
+        orderListManager.SetOrdersGenerated();
+        orderListManager.GetWaitingOrderSOList().Add(correctOrder3);
+        orderListManager.SetOrdersGenerated();
+
+        // Generate a wrong order to be delivered
+        cupObject = CreateCorrectOrder(type);
+
+        int initialScore = scoreSystem.GetCurrentScore();
+
+        // Act
+        orderListManager.DeliverOrder(cupObject);
+
+        // Assert
+        Assert.AreEqual(initialScore + 10, scoreSystem.GetCurrentScore());
+    }
+
+    /**
+     * @brief [TC17002] Test case for delivering a wrong order.
+     * 
+     * @details This test verifies that delivering a wrong order does not change the score.
+     * 
+     * @param type The type of order to create.
+     */
+    [TestCase(1)]
+    [TestCase(2)]
+    [TestCase(3)]
+    public void DiliverWrongOrder_NoChange(int type) {
         // Generate waiting order list
         OrderSO correctOrder1 = CreateCorrectOrderSO(1);
         OrderSO correctOrder2 = CreateCorrectOrderSO(2);
@@ -186,81 +244,12 @@ public class OrderListManagerEditorTests{
         // Generate a wrong order to be delivered
         cupObject = CreateWrongOrder(type);
 
-        // Get the number of orders in the current waiting order list.
-        int waitingOrderNum = orderListManager.GetWaitingOrderSOList().Count;
+        int initialScore = scoreSystem.GetCurrentScore();
 
-        // Get the number of all orders that have been generated so far.
-        int initialOrderCount = orderListManager.GetOrdersGenerated();
-
-        // Act: Deliver the order
+        // Act
         orderListManager.DeliverOrder(cupObject);
 
-
-        // The number of orders in the waiting order list does not change.
-        Assert.AreEqual(waitingOrderNum, orderListManager.GetWaitingOrderSOList().Count);
-
-        // Check if there is a new order generated after 2 seconds
-        for (int i = 0; i < 120; i++) {
-            orderListManager.Update();
-        }
-
-        // No new orders were generated.
-        Assert.AreEqual(orderListManager.GetOrdersGenerated(), initialOrderCount);
+        // Assert
+        Assert.AreEqual(initialScore, scoreSystem.GetCurrentScore());
     }
-
-
-    /**
-     * @brief [TC1602] Test case for delivering a correct order.
-     * 
-     * @details This test verifies that delivering a correct order 
-     *          removes the order from the order list and generates a new order after 2 seconds.
-     * 
-     * @param type The type of order to create.
-     */
-    [TestCase(1)]
-    [TestCase(2)]
-    [TestCase(3)]
-    public void DeliverCorrectOrder_RemoveOrderAndGenerateNewOrder(int type) {
-        // Generate waiting order list
-        OrderSO correctOrder1 = CreateCorrectOrderSO(1);
-        OrderSO correctOrder2 = CreateCorrectOrderSO(2);
-        OrderSO correctOrder3 = CreateCorrectOrderSO(3);
-        orderListSO.orderSOList.Add(correctOrder1);
-        orderListSO.orderSOList.Add(correctOrder2);
-        orderListSO.orderSOList.Add(correctOrder3);
-        orderListManager.SetWaitingOrderSOList(new List<OrderSO>());
-        orderListManager.GetWaitingOrderSOList().Add(correctOrder1);
-        orderListManager.SetOrdersGenerated();
-        orderListManager.GetWaitingOrderSOList().Add(correctOrder2);
-        orderListManager.SetOrdersGenerated();
-        orderListManager.GetWaitingOrderSOList().Add(correctOrder3);
-        orderListManager.SetOrdersGenerated();
-
-        // Generate a correct order to be delivered
-        cupObject = CreateCorrectOrder(type);
-
-        // Get the number of orders in the current waiting order list.
-        int waitingOrderNum = orderListManager.GetWaitingOrderSOList().Count;
-
-        // Get the number of all orders that have been generated so far.
-        int initialOrderCount = orderListManager.GetOrdersGenerated();
-
-        // Act: Deliver the order
-        orderListManager.DeliverOrder(cupObject);
-
-        // The number of orders in the waiting order list is reduced by 1.
-        Assert.AreEqual(waitingOrderNum - 1, orderListManager.GetWaitingOrderSOList().Count);
-
-        // Wait for 2 seconds to generate a new order
-        for (int i = 0; i < 120; i++) {
-            orderListManager.Update();
-        }
-
-        // Add 1 to the number of orders generated
-        Assert.AreEqual(orderListManager.GetOrdersGenerated(), initialOrderCount + 1);
-
-        // The waiting order list has three orders
-        Assert.AreEqual(waitingOrderNum, orderListManager.GetWaitingOrderSOList().Count);
-    }
-
 }
