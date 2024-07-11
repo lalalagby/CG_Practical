@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,21 +19,20 @@ public class DeliveryCounter : BaseCounter
      * @brief Interacts with the player.
      * 
      * @details This method handles the interaction between the player and the delivery counter. If the
-     * player is holding a CupObject, the CupObject is destroyed upon interaction.
+     * player is holding a CupObject, the CupObject is delivered and destroyed. Otherwise, it clears the HeyTeaObject from the counter.
      * 
      * @param player The player interacting with the delivery counter.
      */
     public override void Interact(Player player)
     {
-        if (player.GetHeyTeaObject() is CupObject)
+        if (player.GetHeyTeaObject() is CupObject cup)
         {
+            OrderListManager.Instance.DeliverOrder(cup);
             player.GetHeyTeaObject().DestroySelf();
-            Debug.Log('1');
         }
         else
         {
             this.ClearHeyTeaObject();
-            Debug.Log('2');
         }
         return;
     }
