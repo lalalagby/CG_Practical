@@ -6,7 +6,7 @@ using UnityEngine;
 
 
 /**
- * @author Yong Wu, Bingyu Guo
+ * @author Yong Wu, Bingyu Guo, Xinyue Cheng
  * 
  * @brief Controls the Player's behavior and interactions.
  * 
@@ -75,6 +75,7 @@ public class Player : MonoBehaviour,IHeyTeaObjectParents
      */
     private void GameInput_OnInteractionAction(object sender, System.EventArgs e) {
         //receive the board message, and take actions
+        if (!KitchenGameManager.Instance.IsGamePlaying()) return;
         if (selectedCounter != null) {
             selectedCounter.Interact(this);
         }

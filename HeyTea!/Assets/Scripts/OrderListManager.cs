@@ -78,9 +78,6 @@ public class OrderListManager : MonoBehaviour
                 // Remove the order from the waiting order list.
                 waitingOrderSOList.Remove(waitingOrderSO);
 
-                // Add scores
-                //ScoreSystem.Instance.AddScore(10);
-
                 OnOrderCompleted?.Invoke(this, EventArgs.Empty);
 
                 return;
