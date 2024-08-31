@@ -45,7 +45,8 @@ public class KitchenGameManager : MonoBehaviour
     private State state; ///< The current state of the game.
     private float waitingToStartTimer = 1f; ///< Timer for the WaitingToStart state.
     private float countdownToStartTimer = 3f; ///< Timer for the CountdownToStart state.
-    private float gamePlayingTimer = 10f; ///< Timer for the GamePlaying state.
+    private float gamePlayingTimer; ///< Timer for the GamePlaying state.
+    private float gamePlayingTimerMax = 10f;
 
     /**
      * @brief Initializes the singleton instance and sets the initial game state.
@@ -83,6 +84,7 @@ public class KitchenGameManager : MonoBehaviour
                 if (countdownToStartTimer < 0f)
                 {
                     state = State.GamePlaying;
+                    gamePlayingTimer = gamePlayingTimerMax;
                     OnStateChanged?.Invoke(this, EventArgs.Empty);
                 }
                 break;
@@ -132,5 +134,15 @@ public class KitchenGameManager : MonoBehaviour
     public float GetCountdownToStartTimer()
     {
         return countdownToStartTimer;
+    }
+
+    public bool IsGameOver()
+    {
+        return state == State.GameOver;
+    }
+
+    public float GetGamePlayingTimerNormalized()
+    {
+        return 1 - gamePlayingTimer / gamePlayingTimerMax;
     }
 }

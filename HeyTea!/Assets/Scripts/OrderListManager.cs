@@ -74,7 +74,6 @@ public class OrderListManager : MonoBehaviour
             // The order is matched successfully.
             if (IsMatchingOrder(waitingOrderSO, cupObject)) {
                 print("Player delivered the correct order!");
-
                 // Remove the order from the waiting order list.
                 waitingOrderSOList.Remove(waitingOrderSO);
 
@@ -124,4 +123,5 @@ public class OrderListManager : MonoBehaviour
     public void SetOrdersGenerated() { ordersGenerated++; }
 
     public int GetOrdersGenerated() { return ordersGenerated; }
+
 }
