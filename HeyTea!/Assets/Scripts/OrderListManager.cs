@@ -19,6 +19,8 @@ public class OrderListManager : MonoBehaviour
 {
     public event EventHandler OnOrderSpawned;       //!< Event triggered when a new order is spawned.
     public event EventHandler OnOrderCompleted;     //!< Event triggered when an order is completed.
+    public event EventHandler OnRecipeSuccess;
+    public event EventHandler OnRecipeFailed;
 
     public static OrderListManager Instance { get; private set; }   //!< Singleton instance of the OrderListManager class.
 
@@ -36,9 +38,9 @@ public class OrderListManager : MonoBehaviour
         waitingOrderSOList = new List<OrderSO>();
     }
 
-    private void Start() {
-        ScoreSystem.Instance.OnTargetScoreReached += HandleTargetScoreReached;
-    }
+    //private void Start() {
+    //    ScoreSystem.Instance.OnTargetScoreReached += HandleTargetScoreReached;
+    //}
 
     /**
      * @brief Updates the order generation timer and spawns new orders 
@@ -78,10 +80,13 @@ public class OrderListManager : MonoBehaviour
                 waitingOrderSOList.Remove(waitingOrderSO);
 
                 OnOrderCompleted?.Invoke(this, EventArgs.Empty);
-
+                // 找到了匹配的订单，送餐成功
+                OnRecipeSuccess?.Invoke(this, EventArgs.Empty);
                 return;
             }
         }
+        // 遍历了所有订单，没有找到匹配的订单
+        OnRecipeFailed?.Invoke(this, EventArgs.Empty);
         print("Player did not deliver a correct order!");
     }
 
@@ -110,9 +115,9 @@ public class OrderListManager : MonoBehaviour
         return true;
     }
 
-    private void HandleTargetScoreReached() {
-        isGameOver = true;
-    }
+    //private void HandleTargetScoreReached() {
+    //    isGameOver = true;
+    //}
 
     public void SetOrderListSO(OrderListSO orderListSO) { this.orderListSO = orderListSO; }
 

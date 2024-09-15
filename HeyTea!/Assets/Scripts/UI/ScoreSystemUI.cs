@@ -17,7 +17,7 @@ using UnityEngine.UI;
 public class ScoreSystemUI : MonoBehaviour {
     [SerializeField] private Text scoreText;    //!< The UI Text component that displays the current score.
     [SerializeField] private Image backgroundCircle;    //!< The UI Image component representing the background circle.
-    [SerializeField] private GameObject gameOverPanel; //!< A panel to display when the game is over
+    //[SerializeField] private GameObject gameOverPanel; //!< A panel to display when the game is over
 
     /**
      * @brief Initializes the ScoreSystemUI.
@@ -27,10 +27,10 @@ public class ScoreSystemUI : MonoBehaviour {
      *          and updates the score display.
      */
     private void Start() {
-        gameOverPanel.SetActive(false);
+        //gameOverPanel.SetActive(false);
 
         ScoreSystem.Instance.OnScoreChanged += UpdateScoreDisplay;
-        ScoreSystem.Instance.OnTargetScoreReached += HandleTargetScoreReached;
+        //ScoreSystem.Instance.OnTargetScoreReached += HandleTargetScoreReached;
 
         UpdateScoreDisplay(ScoreSystem.Instance.GetCurrentScore());
     }
@@ -46,17 +46,17 @@ public class ScoreSystemUI : MonoBehaviour {
         scoreText.text = score.ToString();
     }
 
-    /**
-     * @brief Handles the game over logic when the target score is reached.
-     * 
-     * @details This method is called when the target score is reached.
-     *          It handles the game over logic and displays the game over panel.
-     */
-    private void HandleTargetScoreReached() {
-        // Handle game over logic here
-        Debug.Log("Target score reached! Game over!");
+    ///**
+    // * @brief Handles the game over logic when the target score is reached.
+    // * 
+    // * @details This method is called when the target score is reached.
+    // *          It handles the game over logic and displays the game over panel.
+    // */
+    //private void HandleTargetScoreReached() {
+    //    // Handle game over logic here
+    //    Debug.Log("Target score reached! Game over!");
 
-        // Show game over panel
-        gameOverPanel.SetActive(true);
-    }
+    //    // Show game over panel
+    //    gameOverPanel.SetActive(true);
+    //}
 }

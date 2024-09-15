@@ -16,10 +16,10 @@ public class ScoreSystem : MonoBehaviour
     public static ScoreSystem Instance { get; private set; }    //!< Singleton instance of the ScoreSystem class.
 
     private int currentScore;   //!< The current score of the player.
-    private int targetScore = 50;   //!< The target score to reach to end the game.
+    //private int targetScore = 50;   //!< The target score to reach to end the game.
 
     public event System.Action<int> OnScoreChanged;     //!< Event triggered when the score changes.
-    public event System.Action OnTargetScoreReached;    //!< Event triggered when the target score is reached.
+    //public event System.Action OnTargetScoreReached;    //!< Event triggered when the target score is reached.
 
     private void Awake() {  
         Instance = this;
@@ -63,9 +63,9 @@ public class ScoreSystem : MonoBehaviour
         OnScoreChanged?.Invoke(currentScore);
 
         // Reach the target score and the game ends.
-        if (currentScore >= targetScore)  {
-            OnTargetScoreReached?.Invoke();
-        }
+        //if (currentScore >= targetScore)  {
+        //    OnTargetScoreReached?.Invoke();
+        //}
     }
 
     public int GetCurrentScore() {

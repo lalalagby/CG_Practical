@@ -21,6 +21,7 @@ using UnityEngine;
  */
 public class CuttingCounter : BaseCounter, IHasProgress
 {
+    public static EventHandler OnAnyCut;
     /**
      * @brief Event triggered when the progress of cutting changes.
      */
@@ -73,6 +74,8 @@ public class CuttingCounter : BaseCounter, IHasProgress
                     animationTime = 0;
 
                     OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { isProcessing = false, progressNormalized = (float)cuttingProgress / GetCuttingRecipeSOWithInput(GetHeyTeaObject().GetHeyTeaObjectSO()).cuttingProgressMax });
+                    // 柜子上有物品，开始切菜
+                    OnAnyCut?.Invoke(this, EventArgs.Empty);
                 }
             }
             else

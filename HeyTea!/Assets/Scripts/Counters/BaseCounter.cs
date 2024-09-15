@@ -13,6 +13,8 @@ using UnityEngine;
  */
 public class BaseCounter : MonoBehaviour, IHeyTeaObjectParents {
 
+    public static event EventHandler OnAnyObjectPlacedHere;
+
     [SerializeField] private Transform counterTopPoint; //!< The coordinate points of items on the cabinet.
 
     //Unified category of items
@@ -63,6 +65,11 @@ public class BaseCounter : MonoBehaviour, IHeyTeaObjectParents {
      */
     public void SetHeyTeaObject(HeyTeaObject heyTeaObject) {
         this.heyTeaObject = heyTeaObject;
+
+        if (heyTeaObject != null)
+        {
+            OnAnyObjectPlacedHere?.Invoke(this, EventArgs.Empty);
+        }
     }
 
     /**

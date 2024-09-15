@@ -15,6 +15,7 @@ using UnityEngine;
  */
 public class Player : MonoBehaviour,IHeyTeaObjectParents
 {
+    public event EventHandler OnPickUpSomething;
     public static Player Instance {get;private set; }    //!< Singleton instance of the Player class.
 
     //! Event triggered when the selected counter changes.
@@ -247,6 +248,11 @@ public class Player : MonoBehaviour,IHeyTeaObjectParents
      */
     public void SetHeyTeaObject(HeyTeaObject heyTeaObject) {
         this.heyTeaObject = heyTeaObject;
+        if (heyTeaObject != null)
+        {
+            OnPickUpSomething?.Invoke(this, EventArgs.Empty);
+        }
+
     }
 
     /**

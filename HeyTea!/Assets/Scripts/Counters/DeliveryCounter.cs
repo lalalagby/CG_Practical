@@ -15,6 +15,13 @@ using UnityEngine;
  */
 public class DeliveryCounter : BaseCounter
 {
+    public static DeliveryCounter Instance { get; private set; }
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     /**
      * @brief Interacts with the player.
      * 

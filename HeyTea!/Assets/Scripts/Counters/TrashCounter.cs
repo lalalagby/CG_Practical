@@ -15,6 +15,8 @@ using UnityEngine;
  */
 public class TrashCounter : BaseCounter
 {
+    public static event EventHandler OnAnyObjectTrashed;
+
     public event Action OnItemDisposed; //!< Event triggered when an item is disposed.
     /**
      * @brief Interacts with the player to dispose of HeyTeaObjects.
@@ -38,6 +40,7 @@ public class TrashCounter : BaseCounter
                 potObject.GetOutputHeyTeaObejct(out HeyTeaObjectSO heyTeaObjectSO);
                 potObject.DestroyChild(heyTeaObjectSO);
                 OnItemDisposed?.Invoke();
+                OnAnyObjectTrashed?.Invoke(this, EventArgs.Empty);
                 //potObject.DestroySelf();
             }
         }
