@@ -27,6 +27,8 @@ public class KitchenGameManager : MonoBehaviour
      * @details Components can subscribe to this event to be notified whenever the game state changes.
      */
     public event EventHandler OnStateChanged;
+    public event EventHandler OnGamePaused;
+    public event EventHandler OnGameUnpaused;
 
     /**
      * @brief Represents the different states of the game.
@@ -47,6 +49,7 @@ public class KitchenGameManager : MonoBehaviour
     private float countdownToStartTimer = 3f; ///< Timer for the CountdownToStart state.
     private float gamePlayingTimer; ///< Timer for the GamePlaying state.
     private float gamePlayingTimerMax = 10f;
+    private bool isGamePaused = false;
 
     /**
      * @brief Initializes the singleton instance and sets the initial game state.
@@ -54,6 +57,31 @@ public class KitchenGameManager : MonoBehaviour
      * @details The Awake method is called when the script instance is being loaded. It initializes
      * the singleton instance and sets the initial game state to WaitingToStart.
      */
+    private void Start()
+    {
+        GameInput.Instance.OnPauseAction += GameInput_OnPauseAction; 
+    }
+    private void GameInput_OnPauseAction(object sender,EventArgs e)
+    {
+        TogglePauseGame();
+    }
+
+    public void TogglePauseGame()
+    {
+        isGamePaused = !isGamePaused;
+        if (isGamePaused)
+        {
+            Time.timeScale = 0f;
+            OnGamePaused?.Invoke(this, EventArgs.Empty);
+        }
+        else
+        {
+            Time.timeScale = 1f;
+            OnGameUnpaused?.Invoke(this, EventArgs.Empty);
+        }
+
+    }
+
     private void Awake()
     {
         Instance = this;

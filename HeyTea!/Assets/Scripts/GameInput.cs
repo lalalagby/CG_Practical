@@ -23,8 +23,10 @@ public class GameInput : MonoBehaviour
     /** 
      * @brief Event triggered when the interact action is performed.
      */
-    public event EventHandler OnInteractAction;
+    public static GameInput Instance { get; private set; }
 
+    public event EventHandler OnInteractAction;
+    public event EventHandler OnPauseAction;
     /**
      * @brief Event triggered when the operation hold action is performed.
      */
@@ -68,6 +70,7 @@ public class GameInput : MonoBehaviour
      */
     private void Awake()
     {
+        Instance = this;
         playerInputActions = new PlayerInputActions();
         playerInputActions.Player.Enable();
 
@@ -75,6 +78,21 @@ public class GameInput : MonoBehaviour
         playerInputActions.Player.Interact.performed += Interact_Performed;
         playerInputActions.Player.Operation.performed += Operation_Performed;
         playerInputActions.Player.Operation.canceled += Operation_Canceled;
+        playerInputActions.Player.Pause.performed += Pause_Performed;
+    }
+
+    private void OnDestroy()
+    {
+        playerInputActions.Player.Interact.performed -= Interact_Performed;
+        playerInputActions.Player.Operation.performed -= Operation_Performed;
+        playerInputActions.Player.Pause.performed -= Pause_Performed;
+
+        playerInputActions.Dispose();
+    }
+
+    private void Pause_Performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        OnPauseAction?.Invoke(this, EventArgs.Empty);
     }
 
     /**

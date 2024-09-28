@@ -17,6 +17,14 @@ public class TrashCounter : BaseCounter
 {
     public static event EventHandler OnAnyObjectTrashed;
 
+    /**
+     * @brief Resets static data for the class.
+     */
+    new public static void ResetStaticData()
+    {
+        OnAnyObjectTrashed = null;
+    }
+
     public event Action OnItemDisposed; //!< Event triggered when an item is disposed.
     /**
      * @brief Interacts with the player to dispose of HeyTeaObjects.

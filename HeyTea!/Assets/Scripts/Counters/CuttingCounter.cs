@@ -22,6 +22,14 @@ using UnityEngine;
 public class CuttingCounter : BaseCounter, IHasProgress
 {
     public static EventHandler OnAnyCut;
+
+    /**
+     * @brief Resets static data for the class.
+     */
+    new public static void ResetStaticData()
+    {
+        OnAnyCut = null;
+    }
     /**
      * @brief Event triggered when the progress of cutting changes.
      */
@@ -74,7 +82,7 @@ public class CuttingCounter : BaseCounter, IHasProgress
                     animationTime = 0;
 
                     OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { isProcessing = false, progressNormalized = (float)cuttingProgress / GetCuttingRecipeSOWithInput(GetHeyTeaObject().GetHeyTeaObjectSO()).cuttingProgressMax });
-                    // ¹ñ×ÓÉÏÓÐÎïÆ·£¬¿ªÊ¼ÇÐ²Ë
+                    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½Ð²ï¿½
                     OnAnyCut?.Invoke(this, EventArgs.Empty);
                 }
             }
