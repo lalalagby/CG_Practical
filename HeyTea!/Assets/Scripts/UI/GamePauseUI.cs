@@ -33,6 +33,11 @@ public class GamePauseUI : MonoBehaviour
     [SerializeField] private Button mainMenuButton;
 
     /**
+     * @brief The button to setting.
+     */
+    [SerializeField] private Button settingsButton;
+
+    /**
      * @brief Initializes button click listeners and subscribes to game pause events.
      * 
      * @details Sets up listeners for the resume button and main menu button. The resume button calls 
@@ -50,6 +55,12 @@ public class GamePauseUI : MonoBehaviour
         mainMenuButton.onClick.AddListener(() =>
         {
             SceneManager.LoadScene(0);
+        });
+
+        settingsButton.onClick.AddListener(() =>
+        {
+            Hide();
+            SettingsUI.Instance.Show(Show);
         });
     }
 

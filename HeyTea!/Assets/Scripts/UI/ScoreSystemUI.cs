@@ -9,9 +9,8 @@ using UnityEngine.UI;
  * 
  * @brief Manages the display of the score and handles the game over UI in the game.
  * 
- * @details This class is responsible for updating the score display in the UI 
- *          and handling the game over logic when the target score is reached. 
- *          It subscribes to the ScoreSystem events to update the score text and show the game over panel.
+ * @details This class is responsible for updating the score display in the UI. 
+ *          It subscribes to the ScoreSystem events to update the score text.
  * 
  */
 public class ScoreSystemUI : MonoBehaviour {
@@ -23,8 +22,7 @@ public class ScoreSystemUI : MonoBehaviour {
      * @brief Initializes the ScoreSystemUI.
      * 
      * @details This method is called when the script instance is being loaded. 
-     *          It sets the game over panel to inactive, subscribes to the ScoreSystem events, 
-     *          and updates the score display.
+     *          It subscribes to the ScoreSystem events, and updates the score display.
      */
     private void Start() {
         //gameOverPanel.SetActive(false);

@@ -8,7 +8,7 @@ using UnityEngine;
  * 
  * @brief Manages the scoring system in the game.
  * 
- * This class handles the player's score, tracks when the target score is reached, and triggers relevant events.
+ * This class handles the player's score and triggers relevant events.
  */
 [ExecuteInEditMode]
 public class ScoreSystem : MonoBehaviour
@@ -53,8 +53,7 @@ public class ScoreSystem : MonoBehaviour
      * @brief Adds score to the current score.
      * 
      * @details This method adds the specified score to the current score 
-     *          and triggers the OnScoreChanged event. If the target score is reached, 
-     *          it triggers the OnTargetScoreReached event.
+     *          and triggers the OnScoreChanged event. 
      * 
      * @param score The score to be added.
      */
@@ -68,6 +67,9 @@ public class ScoreSystem : MonoBehaviour
         //}
     }
 
+    /**
+     * @brief Gets the current score.
+     */
     public int GetCurrentScore() {
         return currentScore;
     }
