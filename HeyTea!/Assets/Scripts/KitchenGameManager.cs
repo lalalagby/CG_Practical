@@ -48,7 +48,7 @@ public class KitchenGameManager : MonoBehaviour
     private float waitingToStartTimer = 1f; ///< Timer for the WaitingToStart state.
     private float countdownToStartTimer = 3f; ///< Timer for the CountdownToStart state.
     private float gamePlayingTimer; ///< Timer for the GamePlaying state.
-    private float gamePlayingTimerMax = 10f;
+    private float gamePlayingTimerMax = 100f;
     private bool isGamePaused = false;
 
     /**
