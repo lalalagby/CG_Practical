@@ -41,7 +41,7 @@ public class HeyTeaObjectSO : ScriptableObject
      * @return A new instance of HeyTeaObjectSO with the same properties as the current object.
      */
     public object Clone() {
-        // 实现深拷贝
+        // Implement deep copy.
         HeyTeaObjectSO heyTeaObjectSOClone = new HeyTeaObjectSO();
         heyTeaObjectSOClone.prefab = prefab;
         heyTeaObjectSOClone.sprite = sprite;

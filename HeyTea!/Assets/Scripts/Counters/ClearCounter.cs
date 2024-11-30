@@ -33,7 +33,7 @@ public class ClearCounter : BaseCounter {
      * 2. Player has HeyTeaObject, but ClearCounter has nothing. Then put HeyTeaObject from Player to ClearCounter.
      * 3. Player and ClearCounter both have HeyTeaObject. execute HandleBothHaveObjects function.
      * 
-     * @param Player that interact with the ClearCounter.
+     * @param player that interact with the ClearCounter.
      * 
      * Interact has no return value.
      */
@@ -69,7 +69,7 @@ public class ClearCounter : BaseCounter {
      * 2. The HeyTeaObject held by ClearCounter is Cup, try to put the HeyTeaObject held by Player into Cup. 
      *      If successful, destroy the HeyTeaObject held by Player.
      * 
-     * @param Player that interact with the ClearCounter.
+     * @param player that interact with the ClearCounter.
      * 
      * HandleBothHaveObjects has no return value.
      */

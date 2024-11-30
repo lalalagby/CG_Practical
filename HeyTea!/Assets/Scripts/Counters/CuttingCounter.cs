@@ -82,7 +82,7 @@ public class CuttingCounter : BaseCounter, IHasProgress
                     animationTime = 0;
 
                     OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { isProcessing = false, progressNormalized = (float)cuttingProgress / GetCuttingRecipeSOWithInput(GetHeyTeaObject().GetHeyTeaObjectSO()).cuttingProgressMax });
-                    // ����������Ʒ����ʼ�в�
+                    // Items on the counter. Start chopping.
                     OnAnyCut?.Invoke(this, EventArgs.Empty);
                 }
             }

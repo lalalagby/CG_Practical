@@ -9,7 +9,6 @@ using UnityEngine;
  * @date 28.08.2023
  * @author Yong Wu
  * @date Last Modified 14.05.2024
- * @last Modified by Bingyu Guo
  */
 
 /**

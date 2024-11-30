@@ -29,7 +29,7 @@ public class BaseCounter : MonoBehaviour, IHeyTeaObjectParents {
     /**
      * @brief Virtual function for interacting with Player.
      * 
-     * @detailed This function is intended to be overridden by derived classes to implement specific interaction behavior.
+     * @details This function is intended to be overridden by derived classes to implement specific interaction behavior.
      * 
      * @param player The Player interacting with the counter.
      */

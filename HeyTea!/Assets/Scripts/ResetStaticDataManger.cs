@@ -1,7 +1,7 @@
 
 using UnityEngine;
 /**
- * @class ResetStaticDataManager
+ * @class ResetStaticDataManger
  * @brief Manages the resetting of static data in various counters at the start of the game.
  *
  * @details This class is responsible for calling reset functions on various static data held in 
