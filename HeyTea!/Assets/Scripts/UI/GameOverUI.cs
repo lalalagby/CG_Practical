@@ -19,7 +19,7 @@ public class GameOverUI : MonoBehaviour
      * @details This serialized field references the TextMeshProUGUI component that
      * will display the number of recipes delivered by the player when the game ends.
      */
-    [SerializeField] private TextMeshProUGUI recipesDeliveredText;
+    //[SerializeField] private TextMeshProUGUI recipesDeliveredText;
 
     /**
      * @brief Initializes the GameOverUI by subscribing to the game state change event.
