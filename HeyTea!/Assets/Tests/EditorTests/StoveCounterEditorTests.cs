@@ -124,7 +124,7 @@ public class StoveCounterEditorTests {
     /**
      * @brief [TC0702] Tests the scenario where the StoveCounter has a Pot with an Ingredient, but the Player has nothing.
      * 
-     * @detials This test case checks if the Player correctly takes the Pot with the ingredient from the StoveCounter.
+     * @details This test case checks if the Player correctly takes the Pot with the ingredient from the StoveCounter.
      * 
      * @param potIngredientSOPath The path to the ingredient in the Pot.
      */
@@ -179,7 +179,7 @@ public class StoveCounterEditorTests {
     /**
      * @brief [TC0704] Tests the scenario where the StoveCounter has nothing, but the Player has a Pot with an Ingredient.
      * 
-     * @detials This test case checks if the StoveCounter correctly takes the Pot with the Ingredient from the Player.
+     * @details This test case checks if the StoveCounter correctly takes the Pot with the Ingredient from the Player.
      * 
      * @param potIngredientSOPath The path to the ingredient in the player's pot.
      */

@@ -80,12 +80,12 @@ public class OrderListManager : MonoBehaviour
                 waitingOrderSOList.Remove(waitingOrderSO);
 
                 OnOrderCompleted?.Invoke(this, EventArgs.Empty);
-                // 找到了匹配的订单，送餐成功
+                // Found a matching order and delivered it successfully.
                 OnRecipeSuccess?.Invoke(this, EventArgs.Empty);
                 return;
             }
         }
-        // 遍历了所有订单，没有找到匹配的订单
+        // Iterated through all the orders and did not find a match.
         OnRecipeFailed?.Invoke(this, EventArgs.Empty);
         print("Player did not deliver a correct order!");
     }
