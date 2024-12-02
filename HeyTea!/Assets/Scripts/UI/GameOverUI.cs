@@ -19,7 +19,7 @@ public class GameOverUI : MonoBehaviour
      * @details This serialized field references the TextMeshProUGUI component that
      * will display the number of recipes delivered by the player when the game ends.
      */
-    //[SerializeField] private TextMeshProUGUI recipesDeliveredText;
+    [SerializeField] private TextMeshProUGUI RecipeDeliveredText;
 
     /**
      * @brief Initializes the GameOverUI by subscribing to the game state change event.
@@ -47,6 +47,10 @@ public class GameOverUI : MonoBehaviour
         if (KitchenGameManager.Instance.IsGameOver())
         {
             Show();
+            if (ScoreSystem.Instance.GameWin() == false)
+                RecipeDeliveredText.text = "Player Loses!";
+            else
+                RecipeDeliveredText.text = "Player Wins!";
         }
         else
         {
@@ -63,6 +67,7 @@ public class GameOverUI : MonoBehaviour
     {
         gameObject.SetActive(true);
     }
+
 
     /**
      * @brief Hides the Game Over UI.

@@ -16,7 +16,7 @@ public class ScoreSystem : MonoBehaviour
     public static ScoreSystem Instance { get; private set; }    //!< Singleton instance of the ScoreSystem class.
 
     private int currentScore;   //!< The current score of the player.
-    //private int targetScore = 50;   //!< The target score to reach to end the game.
+    private int targetScore = 30;   //!< The target score to reach to end the game.
 
     public event System.Action<int> OnScoreChanged;     //!< Event triggered when the score changes.
     //public event System.Action OnTargetScoreReached;    //!< Event triggered when the target score is reached.
@@ -72,5 +72,16 @@ public class ScoreSystem : MonoBehaviour
      */
     public int GetCurrentScore() {
         return currentScore;
+    }
+
+    /**
+     * @brief Based on the score to decide if the player win the game.
+     */
+    public bool GameWin()
+    {
+        if (currentScore < targetScore)
+            return false;
+        else
+            return true;
     }
 }
